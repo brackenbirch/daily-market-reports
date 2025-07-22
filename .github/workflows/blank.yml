@@ -1,36 +1,168 @@
-# This is a basic workflow to help you get started with Actions
+name: Daily Market Summary
 
-name: CI
-
-# Controls when the workflow will run
 on:
-  # Triggers the workflow on push or pull request events but only for the "main" branch
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
-
-  # Allows you to run this workflow manually from the Actions tab
+  schedule:
+    - cron: '0 11 * * 1-5'
   workflow_dispatch:
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
-  build:
-    # The type of runner that the job will run on
+  generate-report:
     runs-on: ubuntu-latest
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
+    
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v4
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+        
+    - name: Install dependencies
+      run: |
+        pip install anthropic requests python-dateutil pytz
+        
+    - name: Generate Market Report
+      env:
+        ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+      run: |
+        python << 'EOF'
+        print("🔄 Starting report generation...")
+        
+        import anthropic
+        import os
+        from datetime import datetime
+        import pytz
+        
+        try:
+            print("✅ Imports successful")
+            
+            # Check API key
+            api_key = os.environ.get('ANTHROPIC_API_KEY')
+            if not api_key:
+                raise Exception("ANTHROPIC_API_KEY not found in environment")
+            print(f"✅ API key found (starts with: {api_key[:10]}...)")
+            
+            # Initialize Claude client
+            client = anthropic.Anthropic(api_key=api_key)
+            print("✅ Anthropic client initialized")
+            
+            # Get current date
+            est = pytz.timezone('US/Eastern')
+            current_date = datetime.now(est).strftime('%B %d, %Y')
+            print(f"✅ Current date: {current_date}")
+            
+            # Your full market summary prompt
+            prompt = f"""You are a financial analyst creating a daily market summary. Please search the web for current information and create a professional report with these exact sections:
+            **EXECUTIVE SUMMARY**
+            [2-sentence overview of global market sentiment]
+            **ASIAN MARKETS OVERNIGHT**
+            Search for and report on:
+            - Nikkei 225, Hang Seng, Shanghai Composite, ASX 200 performance
+            - Major Asian corporate news or earnings
+            - Key economic data releases from Asia
+            - USD/JPY, USD/CNY, AUD/USD currency movements
+            - Any central bank communications from Asia
+            [Target: 150 words]
+            **EUROPEAN MARKETS SUMMARY**
+            Search for and report on:
+            - FTSE 100, DAX, CAC 40, Euro Stoxx 50 performance
+            - Major European corporate news
+            - ECB policy updates or eurozone economic data
+            - EUR/USD, GBP/USD movements
+            - Any significant political/economic developments in Europe
+            [Target: 150 words]
+            **US MARKET OUTLOOK**
+            Search for and report on:
+            - Current S&P 500, NASDAQ, DOW futures
+            - Key economic releases scheduled for today
+            - Major US earnings announcements expected
+            - Federal Reserve speakers or policy implications
+            - Any overnight developments affecting US markets
+            [Target: 150 words]
+            **KEY TAKEAWAYS**
+            [2-sentence summary of main trading themes for the day]
+            Use current market data from today's date: {current_date}. Include specific percentage moves and index levels. Write in professional financial language suitable for institutional clients."""
+            
+            print("🔄 Sending request to Claude...")
+            response = client.messages.create(
+                model="claude-3-5-sonnet-20241022",
+                max_tokens=4000,
+                messages=[{"role": "user", "content": prompt}]
+            )
+            print("✅ Response received from Claude")
+            
+            # Create reports directory
+            os.makedirs('reports', exist_ok=True)
+            print("✅ Reports directory created")
+            
+            # Save the report
+            report_content = response.content[0].text
+            filename = f"reports/market-summary-{datetime.now(est).strftime('%Y-%m-%d')}.md"
+            
+            with open(filename, 'w') as f:
+                f.write(f"# Daily Market Summary - {current_date}\n\n")
+                f.write(report_content)
+            
+            print(f"✅ Report saved: {filename}")
+            print(f"📝 Report preview: {report_content[:200]}...")
+            
+        except Exception as e:
+            print(f"❌ Error: {str(e)}")
+            import traceback
+            traceback.print_exc()
+            exit(1)
+        EOF
+        
+    - name: Check if report was created
+      run: |
+        echo "Checking reports directory:"
+        ls -la reports/ || echo "Reports directory not found"
+        if [ -f reports/*.md ]; then
+          echo "Report file found:"
+          ls -la reports/*.md
+          echo "First few lines:"
+          head -10 reports/*.md
+        else
+          echo "No report files found"
+        fi
+        
+    - name: Commit and push report
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add reports/ || echo "No reports to add"
+        git commit -m "Daily market summary - $(date '+%Y-%m-%d')" || echo "Nothing to commit"
+        git push || echo "Nothing to push"
 
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: echo Hello, world!
-
-      # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
-        run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
+    - name: Create Issue with Report Summary
+      if: success()
+      uses: actions/github-script@v6
+      with:
+        script: |
+          const fs = require('fs');
+          const path = require('path');
+          
+          try {
+            const reportsDir = 'reports';
+            const files = fs.readdirSync(reportsDir);
+            const latestFile = files
+              .filter(f => f.startsWith('market-summary-'))
+              .sort()
+              .pop();
+            
+            if (latestFile) {
+              const content = fs.readFileSync(path.join(reportsDir, latestFile), 'utf8');
+              const preview = content.substring(0, 500) + '...';
+              
+              await github.rest.issues.create({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                title: `📊 Daily Market Summary - ${new Date().toLocaleDateString()}`,
+                body: `## Your daily market report is ready!\n\n**File:** \`${latestFile}\`\n\n**Preview:**\n\`\`\`\n${preview}\n\`\`\`\n\n[View Full Report](https://github.com/${context.repo.owner}/${context.repo.repo}/blob/main/reports/${latestFile})`
+              });
+              console.log('✅ GitHub issue created successfully');
+            }
+          } catch (error) {
+            console.log('❌ Error creating issue:', error.message);
+          }
