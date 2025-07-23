@@ -1,0 +1,170 @@
+{
+  "indices": {
+    "SPY": {
+      "01. symbol": "SPY",
+      "02. open": "629.1000",
+      "03. high": "629.7300",
+      "04. low": "626.1900",
+      "05. price": "628.8600",
+      "06. volume": "60046288",
+      "07. latest trading day": "2025-07-22",
+      "08. previous close": "628.7700",
+      "09. change": "0.0900",
+      "10. change percent": "0.0143%"
+    },
+    "QQQ": {
+      "01. symbol": "QQQ",
+      "02. open": "564.3000",
+      "03. high": "564.3500",
+      "04. low": "558.6100",
+      "05. price": "561.2500",
+      "06. volume": "43270647",
+      "07. latest trading day": "2025-07-22",
+      "08. previous close": "564.1700",
+      "09. change": "-2.9200",
+      "10. change percent": "-0.5176%"
+    },
+    "DIA": {
+      "01. symbol": "DIA",
+      "02. open": "442.8600",
+      "03. high": "445.4500",
+      "04. low": "442.8400",
+      "05. price": "444.9600",
+      "06. volume": "3091574",
+      "07. latest trading day": "2025-07-22",
+      "08. previous close": "443.4400",
+      "09. change": "1.5200",
+      "10. change percent": "0.3428%"
+    },
+    "^GSPC": {
+      "error": "Market data subscription required for CFD indices."
+    },
+    "^IXIC": {
+      "error": "Market data subscription required for CFD indices."
+    },
+    "^DJI": {
+      "error": "Market data subscription required for CFD indices."
+    },
+    "^N225": {
+      "error": "Market data subscription required for CFD indices."
+    },
+    "^HSI": {
+      "error": "Market data subscription required for CFD indices."
+    }
+  },
+  "currencies": {},
+  "news": [
+    {
+      "category": "top news",
+      "datetime": 1753291500,
+      "headline": "Trump’s AI action plan: Why it ‘answers a call’ in one area and falls short in another",
+      "id": 7500197,
+      "image": "https://static2.finnhub.io/file/publicdatany/finnhubimage/market_watch_logo.png",
+      "related": "",
+      "source": "MarketWatch",
+      "summary": "It’s AI Day in Washington, D.C., as President Donald Trump rolls out an “action plan” for artificial intelligence and gives a speech on the fast-growing field.",
+      "url": "https://www.marketwatch.com/story/trumps-ai-action-plan-why-it-answers-a-call-in-one-area-and-falls-short-in-another-99915cbe"
+    },
+    {
+      "category": "top news",
+      "datetime": 1753288012,
+      "headline": "Jim Cramer says stay away from the revived meme trade — plus, GE Vernova soars",
+      "id": 7500187,
+      "image": "https://image.cnbcfm.com/api/v1/image/107090852-1658244731556-NUP_198367_00786_copy.jpg?v=1686153061&w=1920&h=1080",
+      "related": "",
+      "source": "CNBC",
+      "summary": "The Investing Club holds its \"Morning Meeting\" every weekday at 10:20 a.m. ET.",
+      "url": "https://www.cnbc.com/2025/07/23/jim-cramer-says-stay-away-from-the-revived-meme-trade-plus-ge-vernova-soars.html"
+    },
+    {
+      "category": "top news",
+      "datetime": 1753287360,
+      "headline": "Will the WNBA expanding to 18 teams help or hurt the players saying ‘Pay Us What You Owe Us’?",
+      "id": 7500185,
+      "image": "https://static2.finnhub.io/file/publicdatany/finnhubimage/market_watch_logo.png",
+      "related": "",
+      "source": "MarketWatch",
+      "summary": "The WNBA has reportedly agreed to collect $925 million worth of expansion team fees by 2030.",
+      "url": "https://www.marketwatch.com/story/will-the-wnba-expanding-to-18-teams-help-or-hurt-the-players-saying-pay-us-what-you-owe-us-747f8539"
+    },
+    {
+      "category": "top news",
+      "datetime": 1753286880,
+      "headline": "Trump’s trade deals: Here are the countries that have made agreements, and those that haven’t",
+      "id": 7500172,
+      "image": "https://static2.finnhub.io/file/publicdatany/finnhubimage/market_watch_logo.png",
+      "related": "",
+      "source": "MarketWatch",
+      "summary": "U.S. President Donald Trump’s trade deal with Japan has sparked fresh optimism that the global economy will manage to avoid getting hit with extremely elevated tariffs, even as many U.S. trading partners still don’t have agreements.",
+      "url": "https://www.marketwatch.com/story/trumps-trade-deals-here-are-the-countries-that-have-made-agreements-and-those-that-havent-2b368a2f"
+    },
+    {
+      "category": "business",
+      "datetime": 1753285824,
+      "headline": "U.S. to remove mercury preservative from flu shots following RFK Jr. vaccine panel vote",
+      "id": 7500169,
+      "image": "https://image.cnbcfm.com/api/v1/image/108172097-17525894162025-07-15t141859z_1124638250_rc21nfa3cs34_rtrmadp_0_usa-farm-food.jpeg?v=1752589458&w=1920&h=1080",
+      "related": "",
+      "source": "CNBC",
+      "summary": "While few shots still contain thimerosal, the move eliminates a vaccine option for Americans and is a win for the anti-vaccine movement.",
+      "url": "https://www.cnbc.com/2025/07/23/rfk-jr-to-remove-mercury-preservative-thimerosal-from-flu-shots.html"
+    },
+    {
+      "category": "top news",
+      "datetime": 1753284540,
+      "headline": "Earnings push Fiserv’s stock toward its worst year since 2008. Here’s what worries Wall Street.",
+      "id": 7500159,
+      "image": "https://static2.finnhub.io/file/publicdatany/finnhubimage/market_watch_logo.png",
+      "related": "",
+      "source": "MarketWatch",
+      "summary": "The fintech company’s disappointing growth trends in its merchant business have one analyst concerned that competition is dogging the Clover brand.",
+      "url": "https://www.marketwatch.com/story/earnings-push-fiservs-stock-toward-its-worst-year-since-2008-heres-what-worries-wall-street-025d67b5"
+    },
+    {
+      "category": "top news",
+      "datetime": 1753283940,
+      "headline": "Wall Street braces for more than a half-trillion dollars in net Treasury-bill issuance during third quarter",
+      "id": 7500157,
+      "image": "https://static2.finnhub.io/file/publicdatany/finnhubimage/market_watch_logo.png",
+      "related": "",
+      "source": "MarketWatch",
+      "summary": "The Treasury Department is gearing up to deliver its first big plans for borrowing during the current quarter since President Donald Trump signed his sweeping package of tax cuts and spending into law on July 4.",
+      "url": "https://www.marketwatch.com/story/wall-street-braces-for-more-than-a-half-trillion-dollars-in-net-treasury-bill-issuance-during-third-quarter-16c89257"
+    },
+    {
+      "category": "top news",
+      "datetime": 1753283520,
+      "headline": "Trump administration eyeing a ‘long list’ of candidates to replace Powell, Bessent says",
+      "id": 7500151,
+      "image": "https://static2.finnhub.io/file/publicdatany/finnhubimage/market_watch_logo.png",
+      "related": "",
+      "source": "MarketWatch",
+      "summary": "The White House is “not in a rush” to find a new Fed chair, the Treasury secretary said Wednesday.",
+      "url": "https://www.marketwatch.com/story/trump-administration-eyeing-a-long-list-of-candidates-to-replace-powell-bessent-says-2c5b4e36"
+    },
+    {
+      "category": "top news",
+      "datetime": 1753280940,
+      "headline": "European Central Bank likely to put rate cuts on pause amid trade uncertainty",
+      "id": 7500140,
+      "image": "https://static2.finnhub.io/file/publicdatany/finnhubimage/market_watch_logo.png",
+      "related": "",
+      "source": "MarketWatch",
+      "summary": "Inflation at the ECB’s 2% target encourages a wait-and-see approach.",
+      "url": "https://www.marketwatch.com/story/european-central-bank-to-put-rate-cuts-on-pause-amid-trade-uncertainty-9e7f4c4f"
+    },
+    {
+      "category": "top news",
+      "datetime": 1753280160,
+      "headline": "GE Vernova says tariff impact will be less than thought, and the stock soars toward two records",
+      "id": 7500137,
+      "image": "https://static2.finnhub.io/file/publicdatany/finnhubimage/market_watch_logo.png",
+      "related": "",
+      "source": "MarketWatch",
+      "summary": "GE Vernova’s stock was heading for a record high after an earnings beat, a raised full-year outlook and a lowered estimate of tariff impact.",
+      "url": "https://www.marketwatch.com/story/ge-vernova-says-tariff-impact-will-be-less-than-thought-and-the-stock-soars-toward-two-records-89bff53c"
+    }
+  ],
+  "futures": {},
+  "timestamp": "2025-07-23T17:44:54.566Z"
+}
