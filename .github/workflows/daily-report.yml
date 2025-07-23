@@ -69,16 +69,16 @@ jobs:
       with:
         status: success
         text: |
-          📊 *Comprehensive Daily Market Analysis Ready!*
+          Comprehensive Daily Market Analysis Ready!
           
-          📈 *Market Highlights:*
+          Market Highlights:
           • Professional analysis of 40+ instruments
           • Technical indicators and cross-asset themes
           • Enhanced with RSI, moving averages, and volume analysis
           
-          🔗 <https://github.com/${{ github.repository }}/blob/main/reports/comprehensive-market-analysis-$(date '+%Y-%m-%d').md|View Full Report>
+          View Full Report: https://github.com/${{ github.repository }}/blob/main/reports/comprehensive-market-analysis-$(date '+%Y-%m-%d').md
           
-          📱 <https://github.com/${{ github.repository }}/issues|Check GitHub Issues>
+          Check GitHub Issues: https://github.com/${{ github.repository }}/issues
         webhook_url: ${{ secrets.SLACK_WEBHOOK_URL }}
 
     - name: Create enhanced GitHub issue
@@ -90,11 +90,52 @@ jobs:
           try {
             const info = JSON.parse(fs.readFileSync('report_info.json', 'utf8'));
             const content = fs.readFileSync(info.filename, 'utf8');
-            const preview = content.substring(0, 800) + '...';
+            const preview = content.substring(0, 600) + '...';
             
-            const issueBody = `## 🚀 Your Comprehensive Market Analysis is Ready!
+            const issueBody = `## Your Comprehensive Market Analysis is Ready!
 
-**📊 Enhanced Analysis Highlights:**
+**Analysis Highlights:**
+- Instruments Analyzed: ${info.count} (Equities, FX, Commodities, Bonds, Crypto)
+- Top Performer: ${info.top_performer[0]} (+${info.top_performer[1]}%)
+- Biggest Decline: ${info.biggest_decline[0]} (${info.biggest_decline[1]}%)
+
+**Technical Analysis Summary:**
+- Above 20-day MA: ${info.above_ma20} instruments
+- Below 20-day MA: ${info.below_ma20} instruments  
+- RSI Oversold: ${info.oversold} instruments
+- RSI Overbought: ${info.overbought} instruments
+
+**Enhanced Features:**
+- 40+ global instruments (vs 15 previously)
+- Technical indicators (RSI, Moving Averages, Volume)
+- US Sector analysis (XLF, XLK, XLE, XLV)
+- Cryptocurrency coverage (Bitcoin, Ethereum)
+- Enhanced bond analysis (yield curve)
+- Cross-asset correlation insights
+- Professional technical analysis section
+
+### Report Preview:
+\`\`\`
+${preview}
+\`\`\`
+
+**View Full Report:** https://github.com/${context.repo.owner}/${context.repo.repo}/blob/main/${info.filename}
+
+This enhanced report provides institutional-grade analysis with technical indicators, perfect for professional trading and investment decisions.`;
+
+            await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: `Comprehensive Market Analysis - ${new Date().toLocaleDateString()}`,
+              body: issueBody,
+              labels: ['market-analysis', 'comprehensive-report', 'technical-analysis']
+            });
+            console.log('Enhanced GitHub issue created successfully');
+          } catch (error) {
+            console.log('Error creating issue:', error.message);
+          }
+
+**Enhanced Analysis Highlights:**
 - **Instruments Analyzed:** ${info.count} (Equities, FX, Commodities, Bonds, Crypto)
 - **Top Performer:** ${info.top_performer[0]} (+${info.top_performer[1]}%)
 - **Biggest Decline:** ${info.biggest_decline[0]} (${info.biggest_decline[1]}%)
