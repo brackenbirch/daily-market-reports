@@ -45,7 +45,7 @@ jobs:
                     previous = float(hist['Close'].iloc[-2])
                     change_pct = ((current - previous) / previous) * 100
                     data[name] = {'price': round(current, 2), 'change': round(change_pct, 2)}
-                    print(f"✅ {name}: {current:.2f} ({change_pct:+.2f}%)")
+                    print(f"Success: {name}: {current:.2f} ({change_pct:+.2f}%)")
             except:
                 pass
         
@@ -197,13 +197,12 @@ jobs:
             
             f.write(f"\n\n*Generated: {datetime.now().strftime('%Y-%m-%d %H:%M:%S UTC')}*\n")
         
-        # Save summary for GitHub issue
+        # Save simple summary for GitHub issue
         with open('report_info.json', 'w') as f:
             json.dump({
                 'filename': filename,
                 'count': len(data),
-                'top_performer': max(data.items(), key=lambda x: x[1]['change']),
-                'biggest_decline': min(data.items(), key=lambda x: x[1]['change'])
+                'success': True
             }, f)
         
         print(f"Enhanced report saved: {filename}")
@@ -222,10 +221,10 @@ jobs:
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
         git add reports/
-        git commit -m "📊 Enhanced market summary - $(date '+%Y-%m-%d')" || echo "Nothing to commit"
+        git commit -m "Enhanced market summary - $(date '+%Y-%m-%d')" || echo "Nothing to commit"
         git push
 
-    - name: Create GitHub issue
+    - name: Create simple GitHub issue
       if: success()
       uses: actions/github-script@v6
       with:
@@ -234,30 +233,15 @@ jobs:
           try {
             const info = JSON.parse(fs.readFileSync('report_info.json', 'utf8'));
             const content = fs.readFileSync(info.filename, 'utf8');
-            const preview = content.substring(0, 500) + '...';
-            
-            const topPerformer = info.top_performer;
-            const biggestDecline = info.biggest_decline;
+            const preview = content.substring(0, 400);
             
             await github.rest.issues.create({
               owner: context.repo.owner,
               repo: context.repo.repo,
-              title: `📊 Enhanced Market Summary - ${new Date().toLocaleDateString()}`,
-              body: `## 🎉 Your Enhanced Market Report is Ready!
-
-**📈 Market Highlights:**
-- **Top Performer:** ${topPerformer[0]} (${topPerformer[1].change > 0 ? '+' : ''}${topPerformer[1].change}%)
-- **Biggest Decline:** ${biggestDecline[0]} (${biggestDecline[1].change}%)
-- **Total Instruments:** ${info.count}
-
-### Preview:
-\`\`\`
-${preview}
-\`\`\`
-
-**[📄 View Full Report](https://github.com/${context.repo.owner}/${context.repo.repo}/blob/main/${info.filename})**`
+              title: `Daily Market Summary - ${new Date().toLocaleDateString()}`,
+              body: `Your enhanced market report is ready!\n\nInstruments analyzed: ${info.count}\n\nPreview:\n\`\`\`\n${preview}...\n\`\`\`\n\nView full report: https://github.com/${context.repo.owner}/${context.repo.repo}/blob/main/${info.filename}`
             });
-            console.log('✅ GitHub issue created');
+            console.log('GitHub issue created successfully');
           } catch (error) {
-            console.log('❌ Issue creation error:', error.message);
+            console.log('Error creating issue:', error.message);
           }
