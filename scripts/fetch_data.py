@@ -29,10 +29,10 @@ for ticker, name in instruments.items():
             previous = float(hist['Close'].iloc[-2])
             change_pct = ((current - previous) / previous) * 100
             data[name] = {'price': round(current, 2), 'change': round(change_pct, 2)}
-            print(f"Success: {name}: {current:.2f} ({change_pct:+.2f}%)")
+            print("Success: " + name + ": " + str(round(current, 2)) + " (" + str(round(change_pct, 2)) + "%)")
     except Exception as e:
-        print(f"Error {name}: {e}")
+        print("Error " + name + ": " + str(e))
 
 with open('market_data.json', 'w') as f:
     json.dump(data, f)
-print(f"Fetched {len(data)} instruments")
+print("Fetched " + str(len(data)) + " instruments")
