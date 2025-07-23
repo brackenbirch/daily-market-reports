@@ -35,136 +35,251 @@
       "08. previous close": "443.4400",
       "09. change": "1.5200",
       "10. change percent": "0.3428%"
-    },
-    "^GSPC": {
-      "error": "Market data subscription required for CFD indices."
-    },
-    "^IXIC": {
-      "error": "Market data subscription required for CFD indices."
-    },
-    "^DJI": {
-      "error": "Market data subscription required for CFD indices."
-    },
-    "^N225": {
-      "error": "Market data subscription required for CFD indices."
-    },
-    "^HSI": {
-      "error": "Market data subscription required for CFD indices."
     }
   },
-  "currencies": {},
-  "news": [
-    {
-      "category": "top news",
-      "datetime": 1753294974,
-      "headline": "We're raising our price target on GE Vernova by $150 after blowout earnings report",
-      "id": 7500212,
-      "image": "https://image.cnbcfm.com/api/v1/image/108151423-1748452645674-gettyimages-2204274263-CERAWEEK_2025.jpeg?v=1748452689&w=1920&h=1080",
-      "related": "",
-      "source": "CNBC",
-      "summary": "Expectations were high heading into the print. GE Vernova more than delivered.",
-      "url": "https://www.cnbc.com/2025/07/23/were-raising-price-target-on-ge-vernova-by-150-after-blowout-earnings-.html"
+  "sectors": {
+    "XLF": {
+      "01. symbol": "XLF",
+      "02. open": "52.5000",
+      "03. high": "52.7450",
+      "04. low": "52.4700",
+      "05. price": "52.6800",
+      "06. volume": "32289144",
+      "07. latest trading day": "2025-07-22",
+      "08. previous close": "52.3900",
+      "09. change": "0.2900",
+      "10. change percent": "0.5535%",
+      "name": "Financial Services"
     },
-    {
-      "category": "top news",
-      "datetime": 1753291500,
-      "headline": "Trump’s AI action plan: Why it ‘answers a call’ in one area and falls short in another",
-      "id": 7500197,
-      "image": "https://static2.finnhub.io/file/publicdatany/finnhubimage/market_watch_logo.png",
-      "related": "",
-      "source": "MarketWatch",
-      "summary": "It’s AI Day in Washington, D.C., as President Donald Trump rolls out an “action plan” for artificial intelligence and gives a speech on the fast-growing field.",
-      "url": "https://www.marketwatch.com/story/trumps-ai-action-plan-why-it-answers-a-call-in-one-area-and-falls-short-in-another-99915cbe"
+    "XLK": {
+      "01. symbol": "XLK",
+      "02. open": "261.0300",
+      "03. high": "261.2145",
+      "04. low": "256.9500",
+      "05. price": "258.8100",
+      "06. volume": "6724447",
+      "07. latest trading day": "2025-07-22",
+      "08. previous close": "261.2300",
+      "09. change": "-2.4200",
+      "10. change percent": "-0.9264%",
+      "name": "Technology"
     },
-    {
-      "category": "top news",
-      "datetime": 1753288012,
-      "headline": "Jim Cramer says stay away from the revived meme trade — plus, GE Vernova soars",
-      "id": 7500187,
-      "image": "https://image.cnbcfm.com/api/v1/image/107090852-1658244731556-NUP_198367_00786_copy.jpg?v=1686153061&w=1920&h=1080",
-      "related": "",
-      "source": "CNBC",
-      "summary": "The Investing Club holds its \"Morning Meeting\" every weekday at 10:20 a.m. ET.",
-      "url": "https://www.cnbc.com/2025/07/23/jim-cramer-says-stay-away-from-the-revived-meme-trade-plus-ge-vernova-soars.html"
+    "XLE": {
+      "01. symbol": "XLE",
+      "02. open": "84.9700",
+      "03. high": "85.9400",
+      "04. low": "84.8850",
+      "05. price": "85.4700",
+      "06. volume": "16222037",
+      "07. latest trading day": "2025-07-22",
+      "08. previous close": "85.0700",
+      "09. change": "0.4000",
+      "10. change percent": "0.4702%",
+      "name": "Energy"
     },
-    {
-      "category": "top news",
-      "datetime": 1753287360,
-      "headline": "Will the WNBA expanding to 18 teams help or hurt the players saying ‘Pay Us What You Owe Us’?",
-      "id": 7500185,
-      "image": "https://static2.finnhub.io/file/publicdatany/finnhubimage/market_watch_logo.png",
-      "related": "",
-      "source": "MarketWatch",
-      "summary": "The WNBA has reportedly agreed to collect $925 million worth of expansion team fees by 2030.",
-      "url": "https://www.marketwatch.com/story/will-the-wnba-expanding-to-18-teams-help-or-hurt-the-players-saying-pay-us-what-you-owe-us-747f8539"
+    "XLV": {
+      "01. symbol": "XLV",
+      "02. open": "131.3100",
+      "03. high": "133.8100",
+      "04. low": "131.3100",
+      "05. price": "133.5300",
+      "06. volume": "16681891",
+      "07. latest trading day": "2025-07-22",
+      "08. previous close": "131.0900",
+      "09. change": "2.4400",
+      "10. change percent": "1.8613%",
+      "name": "Healthcare"
     },
-    {
-      "category": "top news",
-      "datetime": 1753286880,
-      "headline": "Trump’s trade deals: Here are the countries that have made agreements, and those that haven’t",
-      "id": 7500172,
-      "image": "https://static2.finnhub.io/file/publicdatany/finnhubimage/market_watch_logo.png",
-      "related": "",
-      "source": "MarketWatch",
-      "summary": "U.S. President Donald Trump’s trade deal with Japan has sparked fresh optimism that the global economy will manage to avoid getting hit with extremely elevated tariffs, even as many U.S. trading partners still don’t have agreements.",
-      "url": "https://www.marketwatch.com/story/trumps-trade-deals-here-are-the-countries-that-have-made-agreements-and-those-that-havent-2b368a2f"
+    "XLI": {
+      "01. symbol": "XLI",
+      "02. open": "150.1300",
+      "03. high": "151.3200",
+      "04. low": "149.7050",
+      "05. price": "151.0200",
+      "06. volume": "15053947",
+      "07. latest trading day": "2025-07-22",
+      "08. previous close": "150.6600",
+      "09. change": "0.3600",
+      "10. change percent": "0.2389%",
+      "name": "Industrials"
     },
-    {
-      "category": "business",
-      "datetime": 1753285824,
-      "headline": "U.S. to remove mercury preservative from flu shots following RFK Jr. vaccine panel vote",
-      "id": 7500169,
-      "image": "https://image.cnbcfm.com/api/v1/image/108172097-17525894162025-07-15t141859z_1124638250_rc21nfa3cs34_rtrmadp_0_usa-farm-food.jpeg?v=1752589458&w=1920&h=1080",
-      "related": "",
-      "source": "CNBC",
-      "summary": "While few shots still contain thimerosal, the move eliminates a vaccine option for Americans and is a win for the anti-vaccine movement.",
-      "url": "https://www.cnbc.com/2025/07/23/rfk-jr-to-remove-mercury-preservative-thimerosal-from-flu-shots.html"
+    "XLY": {
+      "01. symbol": "XLY",
+      "02. open": "223.9300",
+      "03. high": "225.8950",
+      "04. low": "223.3000",
+      "05. price": "225.4800",
+      "06. volume": "5490014",
+      "07. latest trading day": "2025-07-22",
+      "08. previous close": "223.2200",
+      "09. change": "2.2600",
+      "10. change percent": "1.0125%",
+      "name": "Consumer Discretionary"
     },
-    {
-      "category": "top news",
-      "datetime": 1753284540,
-      "headline": "Earnings push Fiserv’s stock toward its worst year since 2008. Here’s what worries Wall Street.",
-      "id": 7500159,
-      "image": "https://static2.finnhub.io/file/publicdatany/finnhubimage/market_watch_logo.png",
-      "related": "",
-      "source": "MarketWatch",
-      "summary": "The fintech company’s disappointing growth trends in its merchant business have one analyst concerned that competition is dogging the Clover brand.",
-      "url": "https://www.marketwatch.com/story/earnings-push-fiservs-stock-toward-its-worst-year-since-2008-heres-what-worries-wall-street-025d67b5"
+    "XLP": {
+      "01. symbol": "XLP",
+      "02. open": "80.4800",
+      "03. high": "81.7600",
+      "04. low": "80.4200",
+      "05. price": "81.6200",
+      "06. volume": "20413838",
+      "07. latest trading day": "2025-07-22",
+      "08. previous close": "80.8800",
+      "09. change": "0.7400",
+      "10. change percent": "0.9149%",
+      "name": "Consumer Staples"
     },
-    {
-      "category": "top news",
-      "datetime": 1753283940,
-      "headline": "Wall Street braces for more than a half-trillion dollars in net Treasury-bill issuance during third quarter",
-      "id": 7500157,
-      "image": "https://static2.finnhub.io/file/publicdatany/finnhubimage/market_watch_logo.png",
-      "related": "",
-      "source": "MarketWatch",
-      "summary": "The Treasury Department is gearing up to deliver its first big plans for borrowing during the current quarter since President Donald Trump signed his sweeping package of tax cuts and spending into law on July 4.",
-      "url": "https://www.marketwatch.com/story/wall-street-braces-for-more-than-a-half-trillion-dollars-in-net-treasury-bill-issuance-during-third-quarter-16c89257"
+    "XLU": {
+      "01. symbol": "XLU",
+      "02. open": "84.3350",
+      "03. high": "85.1000",
+      "04. low": "84.1100",
+      "05. price": "85.0500",
+      "06. volume": "11759144",
+      "07. latest trading day": "2025-07-22",
+      "08. previous close": "84.0200",
+      "09. change": "1.0300",
+      "10. change percent": "1.2259%",
+      "name": "Utilities"
     },
-    {
-      "category": "top news",
-      "datetime": 1753283520,
-      "headline": "Trump administration eyeing a ‘long list’ of candidates to replace Powell, Bessent says",
-      "id": 7500151,
-      "image": "https://static2.finnhub.io/file/publicdatany/finnhubimage/market_watch_logo.png",
-      "related": "",
-      "source": "MarketWatch",
-      "summary": "The White House is “not in a rush” to find a new Fed chair, the Treasury secretary said Wednesday.",
-      "url": "https://www.marketwatch.com/story/trump-administration-eyeing-a-long-list-of-candidates-to-replace-powell-bessent-says-2c5b4e36"
-    },
-    {
-      "category": "top news",
-      "datetime": 1753280940,
-      "headline": "European Central Bank likely to put rate cuts on pause amid trade uncertainty",
-      "id": 7500140,
-      "image": "https://static2.finnhub.io/file/publicdatany/finnhubimage/market_watch_logo.png",
-      "related": "",
-      "source": "MarketWatch",
-      "summary": "Inflation at the ECB’s 2% target encourages a wait-and-see approach.",
-      "url": "https://www.marketwatch.com/story/european-central-bank-to-put-rate-cuts-on-pause-amid-trade-uncertainty-9e7f4c4f"
+    "XLB": {
+      "01. symbol": "XLB",
+      "02. open": "90.5900",
+      "03. high": "92.0100",
+      "04. low": "90.5400",
+      "05. price": "91.9300",
+      "06. volume": "6825474",
+      "07. latest trading day": "2025-07-22",
+      "08. previous close": "90.6800",
+      "09. change": "1.2500",
+      "10. change percent": "1.3785%",
+      "name": "Materials"
     }
-  ],
-  "futures": {},
-  "timestamp": "2025-07-23T19:02:52.486Z"
+  },
+  "premarket": {
+    "gainers": [
+      {
+        "symbol": "AAPL",
+        "price": "$140.61",
+        "change": "+4.37",
+        "changePercent": "+3.21%"
+      },
+      {
+        "symbol": "MSFT",
+        "price": "$155.85",
+        "change": "+4.91",
+        "changePercent": "+3.25%"
+      },
+      {
+        "symbol": "GOOGL",
+        "price": "$67.24",
+        "change": "+2.44",
+        "changePercent": "+3.77%"
+      },
+      {
+        "symbol": "AMZN",
+        "price": "$224.18",
+        "change": "+4.42",
+        "changePercent": "+2.01%"
+      },
+      {
+        "symbol": "TSLA",
+        "price": "$89.79",
+        "change": "+5.55",
+        "changePercent": "+6.59%"
+      },
+      {
+        "symbol": "NVDA",
+        "price": "$177.76",
+        "change": "+15.14",
+        "changePercent": "+9.31%"
+      },
+      {
+        "symbol": "META",
+        "price": "$174.21",
+        "change": "+5.78",
+        "changePercent": "+3.43%"
+      },
+      {
+        "symbol": "NFLX",
+        "price": "$222.12",
+        "change": "+7.88",
+        "changePercent": "+3.68%"
+      },
+      {
+        "symbol": "AMD",
+        "price": "$147.35",
+        "change": "+4.67",
+        "changePercent": "+3.27%"
+      },
+      {
+        "symbol": "CRM",
+        "price": "$113.94",
+        "change": "+2.79",
+        "changePercent": "+2.51%"
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "AAPL",
+        "price": "$159.36",
+        "change": "-5.59",
+        "changePercent": "-3.39%"
+      },
+      {
+        "symbol": "MSFT",
+        "price": "$208.84",
+        "change": "-13.12",
+        "changePercent": "-5.91%"
+      },
+      {
+        "symbol": "GOOGL",
+        "price": "$194.07",
+        "change": "-17.87",
+        "changePercent": "-8.43%"
+      },
+      {
+        "symbol": "AMZN",
+        "price": "$182.06",
+        "change": "-17.20",
+        "changePercent": "-8.63%"
+      },
+      {
+        "symbol": "TSLA",
+        "price": "$160.99",
+        "change": "-10.06",
+        "changePercent": "-5.88%"
+      },
+      {
+        "symbol": "NVDA",
+        "price": "$184.27",
+        "change": "-13.40",
+        "changePercent": "-6.78%"
+      },
+      {
+        "symbol": "META",
+        "price": "$123.44",
+        "change": "-10.55",
+        "changePercent": "-7.87%"
+      },
+      {
+        "symbol": "NFLX",
+        "price": "$125.39",
+        "change": "-4.24",
+        "changePercent": "-3.27%"
+      },
+      {
+        "symbol": "AMD",
+        "price": "$153.05",
+        "change": "-5.31",
+        "changePercent": "-3.35%"
+      },
+      {
+        "symbol": "CRM",
+        "price": "$137.51",
+        "change": "-12.10",
+        "changePercent": "-8.09%"
+      }
+    ]
+  }
 }
