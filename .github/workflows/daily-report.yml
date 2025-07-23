@@ -1,0 +1,101 @@
+name: Daily Market Summary
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 11 * * 1-5'
+
+jobs:
+  generate-report:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+      
+    - name: Setup Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+        
+    - name: Install packages
+      run: pip install anthropic yfinance
+        
+    - name: Create market report
+      env:
+        ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+      run: |
+        cat > generate_report.py << 'EOF'
+        import yfinance as yf
+        import anthropic
+        import os
+        from datetime import datetime
+        
+        # Get basic market data
+        print("Fetching S&P 500 data...")
+        try:
+            ticker = yf.Ticker("^GSPC")
+            data = ticker.history(period="5d")
+            current = round(data['Close'].iloc[-1], 2)
+            previous = round(data['Close'].iloc[-2], 2)
+            change_pct = round(((current - previous) / previous) * 100, 2)
+            sp500_info = f"S&P 500: {current} ({change_pct:+.2f}%)"
+        except Exception as e:
+            print(f"Market data error: {e}")
+            sp500_info = "S&P 500: Data temporarily unavailable"
+        
+        # Generate report
+        print("Generating report with Claude...")
+        client = anthropic.Anthropic(api_key=os.environ['ANTHROPIC_API_KEY'])
+        
+        prompt = f"""Create a professional daily market summary for institutional clients.
+        
+        Available market data: {sp500_info}
+        
+        Structure your report with these exact sections:
+        
+        **EXECUTIVE SUMMARY**
+        [2-sentence overview of market sentiment]
+        
+        **ASIAN MARKETS OVERNIGHT**
+        [Professional analysis of Asian market performance - 150 words]
+        
+        **EUROPEAN MARKETS SUMMARY**
+        [Analysis of European market trends - 150 words]
+        
+        **US MARKET OUTLOOK**
+        [US market analysis incorporating the S&P 500 data provided - 150 words]
+        
+        **KEY TAKEAWAYS**
+        [2-sentence summary of main themes]
+        
+        Use professional financial language suitable for portfolio managers."""
+        
+        response = client.messages.create(
+            model="claude-3-5-sonnet-20241022",
+            max_tokens=3000,
+            messages=[{"role": "user", "content": prompt}]
+        )
+        
+        # Save report
+        os.makedirs('reports', exist_ok=True)
+        today = datetime.now().strftime('%Y-%m-%d')
+        filename = f'reports/market-summary-{today}.md'
+        
+        with open(filename, 'w') as f:
+            f.write(f"# Daily Market Summary - {datetime.now().strftime('%B %d, %Y')}\n\n")
+            f.write(response.content[0].text)
+            f.write(f"\n\n---\n*Report generated: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}*")
+        
+        print(f"Report saved successfully: {filename}")
+        EOF
+        
+        python generate_report.py
+        
+    - name: Commit report
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add reports/
+        git commit -m "Daily market summary - $(date '+%Y-%m-%d')" || echo "Nothing new to commit"
+        git push
