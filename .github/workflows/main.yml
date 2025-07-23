@@ -1,0 +1,275 @@
+name: Daily Market Summary
+
+on:
+  schedule:
+    - cron: '0 11 * * 1-5'
+  workflow_dispatch:
+
+jobs:
+  generate-report:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+        
+    - name: Install dependencies
+      run: |
+        pip install anthropic requests python-dateutil pytz yfinance pandas
+        
+    - name: Fetch Market Data
+      run: |
+        python << 'EOF'
+        import yfinance as yf
+        import json
+        from datetime import datetime, timedelta
+        import pytz
+        import pandas as pd
+        
+        print("🔄 Fetching real market data...")
+        
+        # Define market instruments
+        tickers = {
+            # US Markets
+            '^GSPC': 'S&P 500',
+            '^IXIC': 'NASDAQ Composite', 
+            '^DJI': 'Dow Jones',
+            # Asian Markets  
+            '^N225': 'Nikkei 225',
+            '^HSI': 'Hang Seng',
+            '000001.SS': 'Shanghai Composite',
+            '^AXJO': 'ASX 200',
+            # European Markets
+            '^FTSE': 'FTSE 100',
+            '^GDAXI': 'DAX',
+            '^FCHI': 'CAC 40',
+            '^STOXX50E': 'Euro Stoxx 50',
+            # Major Currencies
+            'EURUSD=X': 'EUR/USD',
+            'GBPUSD=X': 'GBP/USD', 
+            'JPY=X': 'USD/JPY',
+            'AUDUSD=X': 'AUD/USD',
+            'CNY=X': 'USD/CNY'
+        }
+        
+        market_data = {}
+        successful_fetches = 0
+        
+        for ticker, name in tickers.items():
+            try:
+                stock = yf.Ticker(ticker)
+                # Get last 5 days of data
+                hist = stock.history(period="5d", interval="1d")
+                
+                if not hist.empty and len(hist) >= 2:
+                    current = hist['Close'].iloc[-1]
+                    previous = hist['Close'].iloc[-2]
+                    change = current - previous
+                    change_pct = (change / previous) * 100
+                    
+                    market_data[name] = {
+                        'current': round(float(current), 2),
+                        'previous': round(float(previous), 2),
+                        'change': round(float(change), 2),
+                        'change_pct': round(float(change_pct), 2),
+                        'ticker': ticker
+                    }
+                    
+                    print(f"✅ {name}: {current:.2f} ({change_pct:+.2f}%)")
+                    successful_fetches += 1
+                else:
+                    print(f"⚠️  {name}: No recent data available")
+                    
+            except Exception as e:
+                print(f"❌ Failed to fetch {name}: {str(e)}")
+        
+        # Save market data to file
+        with open('market_data.json', 'w') as f:
+            json.dump(market_data, f, indent=2)
+            
+        print(f"✅ Successfully fetched data for {successful_fetches}/{len(tickers)} instruments")
+        
+        if successful_fetches == 0:
+            raise Exception("No market data could be fetched")
+        EOF
+        
+    - name: Generate Market Report
+      env:
+        ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+      run: |
+        python << 'EOF'
+        import anthropic
+        import os
+        import json
+        from datetime import datetime
+        import pytz
+        
+        print("🔄 Loading market data...")
+        
+        # Load market data
+        try:
+            with open('market_data.json', 'r') as f:
+                market_data = json.load(f)
+        except:
+            raise Exception("Could not load market data file")
+        
+        # Format market data for prompt
+        market_summary = "REAL MARKET DATA (Latest Available):\n\n"
+        
+        # Group by regions
+        regions = {
+            'US MARKETS': ['S&P 500', 'NASDAQ Composite', 'Dow Jones'],
+            'ASIAN MARKETS': ['Nikkei 225', 'Hang Seng', 'Shanghai Composite', 'ASX 200'],
+            'EUROPEAN MARKETS': ['FTSE 100', 'DAX', 'CAC 40', 'Euro Stoxx 50'],
+            'CURRENCIES': ['EUR/USD', 'GBP/USD', 'USD/JPY', 'AUD/USD', 'USD/CNY']
+        }
+        
+        for region, instruments in regions.items():
+            market_summary += f"{region}:\n"
+            for instrument in instruments:
+                if instrument in market_data:
+                    data = market_data[instrument]
+                    market_summary += f"- {instrument}: {data['current']} ({data['change_pct']:+.2f}%)\n"
+            market_summary += "\n"
+        
+        # Initialize Claude client
+        api_key = os.environ.get('ANTHROPIC_API_KEY')
+        if not api_key:
+            raise Exception("ANTHROPIC_API_KEY not found")
+            
+        client = anthropic.Anthropic(api_key=api_key)
+        
+        # Get current date
+        est = pytz.timezone('US/Eastern')
+        current_date = datetime.now(est).strftime('%B %d, %Y')
+        
+        # Create comprehensive prompt with real data
+        prompt = f"""You are a senior financial analyst creating a daily market summary for institutional clients on {current_date}.
+
+{market_summary}
+
+Using the REAL market data above, create a professional institutional-quality report with these exact sections:
+
+**EXECUTIVE SUMMARY**
+Provide a 2-sentence overview of global market sentiment based on the actual performance data shown above. Focus on the overall directional moves and key themes.
+
+**ASIAN MARKETS OVERNIGHT**
+Analyze the real performance of Asian markets shown in the data:
+- Comment specifically on Nikkei 225, Hang Seng, Shanghai Composite, and ASX 200 using the actual numbers
+- Discuss USD/JPY movement with the real data
+- Provide professional context for these moves (monetary policy, trade, earnings, etc.)
+- Keep analysis realistic and avoid speculation beyond what the numbers suggest
+[Target: 150 words]
+
+**EUROPEAN MARKETS SUMMARY**
+Analyze the real performance of European markets:
+- Comment specifically on FTSE 100, DAX, CAC 40, Euro Stoxx 50 using actual numbers
+- Discuss EUR/USD and GBP/USD movements with real data
+- Provide context for the performance (ECB policy, economic data, political developments)
+- Focus on what the actual numbers tell us
+[Target: 150 words]
+
+**US MARKET OUTLOOK**
+Based on the real US market data provided:
+- Analyze S&P 500, NASDAQ, and Dow Jones actual performance 
+- Discuss what this recent performance suggests for current trading sentiment
+- Comment on any notable patterns in the data
+- Provide professional outlook based on the momentum shown in the numbers
+[Target: 150 words]
+
+**KEY TAKEAWAYS**
+Provide a 2-sentence summary of the main trading themes evident from the actual market data provided.
+
+IMPORTANT: Use the specific numbers and percentages from the real data. Write in professional financial language suitable for institutional portfolio managers. Do not speculate beyond what the data shows."""
+        
+        print("🔄 Generating report with real market data...")
+        
+        try:
+            response = client.messages.create(
+                model="claude-3-5-sonnet-20241022",
+                max_tokens=4000,
+                messages=[{"role": "user", "content": prompt}]
+            )
+            
+            print("✅ Report generated successfully")
+            
+        except Exception as e:
+            raise Exception(f"Claude API error: {str(e)}")
+        
+        # Save the report
+        os.makedirs('reports', exist_ok=True)
+        filename = f"reports/market-summary-{datetime.now(est).strftime('%Y-%m-%d')}.md"
+        
+        report_content = response.content[0].text
+        
+        with open(filename, 'w') as f:
+            f.write(f"# Daily Market Summary - {current_date}\n")
+            f.write(f"*Generated with real market data*\n\n")
+            f.write("---\n\n")
+            f.write(report_content)
+            f.write(f"\n\n---\n*Report generated: {datetime.now(est).strftime('%Y-%m-%d %H:%M:%S EST')}*")
+        
+        print(f"✅ Report saved: {filename}")
+        print(f"📝 Report length: {len(report_content)} characters")
+        EOF
+        
+    - name: Verify Report Creation
+      run: |
+        echo "📊 Checking generated report..."
+        if [ -f reports/*.md ]; then
+          echo "✅ Report file found:"
+          ls -la reports/*.md
+          echo ""
+          echo "📖 Report preview (first 10 lines):"
+          head -10 reports/*.md
+        else
+          echo "❌ No report file found"
+          exit 1
+        fi
+        
+    - name: Commit and push report
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add reports/
+        git commit -m "Daily market summary with real data - $(date '+%Y-%m-%d')"
+        git push
+
+    - name: Create Issue with Report Summary  
+      if: success()
+      uses: actions/github-script@v6
+      with:
+        script: |
+          const fs = require('fs');
+          
+          try {
+            const reportsDir = 'reports';
+            const files = fs.readdirSync(reportsDir);
+            const latestFile = files
+              .filter(f => f.startsWith('market-summary-'))
+              .sort()
+              .pop();
+            
+            if (latestFile) {
+              const content = fs.readFileSync(`${reportsDir}/${latestFile}`, 'utf8');
+              const preview = content.substring(0, 600) + '...';
+              
+              await github.rest.issues.create({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                title: `📊 Daily Market Summary - ${new Date().toLocaleDateString()}`,
+                body: `## 📈 Your daily market report is ready!\n\n**File:** \`${latestFile}\`\n**Generated with:** Real market data from Yahoo Finance\n\n### Preview:\n\`\`\`markdown\n${preview}\n\`\`\`\n\n**[📖 View Full Report](https://github.com/${context.repo.owner}/${context.repo.repo}/blob/main/reports/${latestFile})**`
+              });
+              
+              console.log('✅ GitHub issue created successfully');
+            } else {
+              console.log('❌ No report file found for issue creation');
+            }
+          } catch (error) {
+            console.log('❌ Error creating issue:', error.message);
+          }
