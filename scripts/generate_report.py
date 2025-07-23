@@ -47,12 +47,13 @@ response = client.messages.create(
 # Create enhanced report file
 os.makedirs('reports', exist_ok=True)
 today = datetime.now().strftime('%Y-%m-%d')
-filename = f'reports/market-summary-{today}.md'
+filename = 'reports/market-summary-' + today + '.md'
 
 with open(filename, 'w') as f:
     f.write("# Enhanced Daily Market Summary\n")
-    f.write(f"**{datetime.now().strftime('%A, %B %d, %Y')}**\n\n")
-    f.write(f"*Analysis of {len(data)} global instruments*\n\n")
+    current_date = datetime.now().strftime('%A, %B %d, %Y')
+    f.write("**" + current_date + "**\n\n")
+    f.write("*Analysis of " + str(len(data)) + " global instruments*\n\n")
     f.write("---\n\n")
     f.write(response.content[0].text)
     f.write("\n\n---\n\n")
@@ -63,19 +64,22 @@ with open(filename, 'w') as f:
         for instrument in instruments:
             if instrument in data:
                 info = data[instrument]
-                table_data.append([instrument, f"{info['price']:.2f}", f"{info['change']:+.2f}%"])
+                price_str = str(round(info['price'], 2))
+                change_str = "+" + str(info['change']) + "%" if info['change'] >= 0 else str(info['change']) + "%"
+                table_data.append([instrument, price_str, change_str])
         
         if table_data:
-            f.write(f"### {title}\n\n")
+            f.write("### " + title + "\n\n")
             headers = ['Instrument', 'Level', 'Change %']
             table = tabulate(table_data, headers=headers, tablefmt='pipe')
             f.write(table)
             f.write("\n\n")
     
-    f.write(f"\n*Generated: {datetime.now().strftime('%Y-%m-%d %H:%M:%S UTC')}*\n")
+    timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S UTC')
+    f.write("\n*Generated: " + timestamp + "*\n")
 
 # Save info for GitHub issue
 with open('report_info.json', 'w') as f:
     json.dump({'filename': filename, 'count': len(data)}, f)
 
-print(f"Report saved: {filename}")
+print("Report saved: " + filename)
