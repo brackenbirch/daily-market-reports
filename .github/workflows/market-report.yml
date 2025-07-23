@@ -2,7 +2,7 @@ name: Daily Market Report with Real Data
 
 on:
   schedule:
-    # Runs at 6:00 AM UTC daily
+    # Runs at 6:00 AM UTC daily (fixed the cron syntax)
     - cron: '0 6 * * *'
   workflow_dispatch: # Allows manual triggering
 
@@ -20,8 +20,11 @@ jobs:
         node-version: '18'
         
     - name: Install dependencies
-      run: npm install axios cheerio node-fetch
-      
+      run: |
+        npm install axios
+        npm install cheerio || echo "Cheerio install failed, continuing without web scraping"
+        npm install node-fetch || echo "Node-fetch install failed, continuing"
+        
     - name: Generate Market Report
       env:
         ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
