@@ -151,7 +151,6 @@ jobs:
         git commit -m "Enhanced market summary - $(date '+%Y-%m-%d')" || echo "Nothing to commit"
         git push
 
-    - name: Create GitHub issue
       if: success()
       uses: actions/github-script@v6
       with:
