@@ -1,4 +1,4 @@
-name: Daily Market Summary
+name: Comprehensive Daily Market Analysis
 
 on:
   workflow_dispatch:
@@ -6,7 +6,7 @@ on:
     - cron: '0 11 * * 1-5'
 
 jobs:
-  generate-report:
+  generate-comprehensive-report:
     runs-on: ubuntu-latest
     
     steps:
@@ -19,25 +19,69 @@ jobs:
         python-version: '3.11'
         
     - name: Install packages
-      run: pip install anthropic yfinance pandas tabulate
+      run: pip install anthropic yfinance pandas tabulate numpy
 
-    - name: Fetch market data
+    - name: Fetch comprehensive market data
       run: python scripts/fetch_data.py
         
-    - name: Generate enhanced report
+    - name: Generate comprehensive report
       env:
         ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
       run: python scripts/generate_report.py
         
-    - name: Commit report
+    - name: Commit comprehensive report
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
         git add reports/
-        git commit -m "Enhanced market summary - $(date '+%Y-%m-%d')" || echo "Nothing to commit"
+        git commit -m "Comprehensive market analysis with technical indicators - $(date '+%Y-%m-%d')" || echo "Nothing to commit"
         git push
 
-    - name: Create GitHub issue
+    - name: Send email notification
+      if: success() && (secrets.EMAIL_USERNAME != '' && secrets.EMAIL_PASSWORD != '')
+      uses: dawidd6/action-send-mail@v3
+      with:
+        server_address: smtp.gmail.com
+        server_port: 465
+        username: ${{ secrets.EMAIL_USERNAME }}
+        password: ${{ secrets.EMAIL_PASSWORD }}
+        subject: "📊 Comprehensive Market Analysis - $(date '+%B %d, %Y')"
+        body: |
+          Your comprehensive daily market analysis is ready!
+          
+          📈 Enhanced Features:
+          • 40+ global instruments analyzed
+          • Technical indicators (RSI, Moving Averages)
+          • Cross-asset analysis
+          • Sector performance breakdown
+          • Cryptocurrency coverage
+          • Bond market analysis
+          
+          🔗 View Report: https://github.com/${{ github.repository }}/blob/main/reports/comprehensive-market-analysis-$(date '+%Y-%m-%d').md
+          
+          📊 GitHub Issue: https://github.com/${{ github.repository }}/issues
+        to: ${{ secrets.EMAIL_TO }}
+        from: Market Analysis Bot <${{ secrets.EMAIL_USERNAME }}>
+
+    - name: Send Slack notification
+      if: success() && secrets.SLACK_WEBHOOK_URL != ''
+      uses: 8398a7/action-slack@v3
+      with:
+        status: success
+        text: |
+          📊 *Comprehensive Daily Market Analysis Ready!*
+          
+          📈 *Market Highlights:*
+          • Professional analysis of 40+ instruments
+          • Technical indicators and cross-asset themes
+          • Enhanced with RSI, moving averages, and volume analysis
+          
+          🔗 <https://github.com/${{ github.repository }}/blob/main/reports/comprehensive-market-analysis-$(date '+%Y-%m-%d').md|View Full Report>
+          
+          📱 <https://github.com/${{ github.repository }}/issues|Check GitHub Issues>
+        webhook_url: ${{ secrets.SLACK_WEBHOOK_URL }}
+
+    - name: Create enhanced GitHub issue
       if: success()
       uses: actions/github-script@v6
       with:
@@ -45,14 +89,49 @@ jobs:
           const fs = require('fs');
           try {
             const info = JSON.parse(fs.readFileSync('report_info.json', 'utf8'));
+            const content = fs.readFileSync(info.filename, 'utf8');
+            const preview = content.substring(0, 800) + '...';
             
+            const issueBody = `## 🚀 Your Comprehensive Market Analysis is Ready!
+
+**📊 Enhanced Analysis Highlights:**
+- **Instruments Analyzed:** ${info.count} (Equities, FX, Commodities, Bonds, Crypto)
+- **Top Performer:** ${info.top_performer[0]} (+${info.top_performer[1]}%)
+- **Biggest Decline:** ${info.biggest_decline[0]} (${info.biggest_decline[1]}%)
+
+**🔬 Technical Analysis Summary:**
+- **Above 20-day MA:** ${info.above_ma20} instruments
+- **Below 20-day MA:** ${info.below_ma20} instruments  
+- **RSI Oversold:** ${info.oversold} instruments
+- **RSI Overbought:** ${info.overbought} instruments
+
+**📈 What's New in This Enhanced Report:**
+- ✅ 40+ global instruments (vs 15 previously)
+- ✅ Technical indicators (RSI, Moving Averages, Volume)
+- ✅ US Sector analysis (XLF, XLK, XLE, XLV)
+- ✅ Cryptocurrency coverage (Bitcoin, Ethereum)
+- ✅ Enhanced bond analysis (yield curve)
+- ✅ Cross-asset correlation insights
+- ✅ Professional technical analysis section
+
+### 📖 Report Preview:
+\`\`\`markdown
+${preview}
+\`\`\`
+
+**[📄 View Full Comprehensive Report](https://github.com/${context.repo.owner}/${context.repo.repo}/blob/main/${info.filename})**
+
+---
+*This enhanced report now provides institutional-grade analysis with technical indicators, perfect for professional trading and investment decisions.*`;
+
             await github.rest.issues.create({
               owner: context.repo.owner,
               repo: context.repo.repo,
-              title: `Daily Market Summary - ${new Date().toLocaleDateString()}`,
-              body: `Your enhanced market report is ready!\n\nInstruments analyzed: ${info.count}\n\nView report: https://github.com/${context.repo.owner}/${context.repo.repo}/blob/main/${info.filename}`
+              title: `📊 Comprehensive Market Analysis - ${new Date().toLocaleDateString()}`,
+              body: issueBody,
+              labels: ['market-analysis', 'comprehensive-report', 'technical-analysis']
             });
-            console.log('Issue created successfully');
+            console.log('Enhanced GitHub issue created successfully');
           } catch (error) {
-            console.log('Error:', error.message);
+            console.log('Error creating issue:', error.message);
           }
