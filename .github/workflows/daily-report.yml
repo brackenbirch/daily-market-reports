@@ -21,18 +21,17 @@ jobs:
     - name: Install packages
       run: pip install anthropic yfinance pandas tabulate
         
-    - name: Fetch market data
+    - name: Create data fetcher
       run: |
-        python << 'EOF'
+        cat > fetch_data.py << 'PYEOF'
         import yfinance as yf
         import json
-        from datetime import datetime
         
         print("Fetching market data...")
         
         instruments = {
             '^GSPC': 'S&P 500',
-            '^IXIC': 'NASDAQ',
+            '^IXIC': 'NASDAQ', 
             '^DJI': 'Dow Jones',
             '^N225': 'Nikkei 225',
             '^HSI': 'Hang Seng',
@@ -49,51 +48,40 @@ jobs:
         }
         
         data = {}
-        success_count = 0
-        
         for ticker, name in instruments.items():
             try:
                 stock = yf.Ticker(ticker)
                 hist = stock.history(period="5d")
-                
                 if len(hist) >= 2:
                     current = float(hist['Close'].iloc[-1])
                     previous = float(hist['Close'].iloc[-2])
                     change_pct = ((current - previous) / previous) * 100
-                    
-                    data[name] = {
-                        'price': round(current, 2),
-                        'change': round(change_pct, 2)
-                    }
-                    
-                    print(f"Success: {name}: {current:.2f} ({change_pct:+.2f}%)")
-                    success_count += 1
-                    
+                    data[name] = {'price': round(current, 2), 'change': round(change_pct, 2)}
+                    print(f"✅ {name}: {current:.2f} ({change_pct:+.2f}%)")
             except Exception as e:
-                print(f"Error {name}: {e}")
+                print(f"❌ {name}: {e}")
         
-        print(f"Fetched {success_count} instruments")
-        
-        # Save data to file
         with open('market_data.json', 'w') as f:
             json.dump(data, f, indent=2)
+        print(f"Saved {len(data)} instruments")
+        PYEOF
         
-        print("Market data saved to file")
-        EOF
-        
-    - name: Create data summary file
+    - name: Create report generator
       run: |
-        python << 'EOF'
+        cat > generate_report.py << 'PYEOF'
+        import anthropic
         import json
+        import os
+        from datetime import datetime
+        from tabulate import tabulate
         
         # Load market data
         with open('market_data.json', 'r') as f:
             data = json.load(f)
         
-        # Create summary text
-        summary_lines = ["CURRENT MARKET DATA:", ""]
+        # Create data summary
+        summary_parts = ["CURRENT MARKET DATA:", ""]
         
-        # Group instruments
         groups = [
             ("US MARKETS", ['S&P 500', 'NASDAQ', 'Dow Jones']),
             ("ASIAN MARKETS", ['Nikkei 225', 'Hang Seng', 'Shanghai Composite', 'ASX 200']),
@@ -103,49 +91,22 @@ jobs:
         ]
         
         for group_name, instruments in groups:
-            summary_lines.append(f"{group_name}:")
+            summary_parts.append(f"{group_name}:")
             for instrument in instruments:
                 if instrument in data:
                     info = data[instrument]
-                    line = f"- {instrument}: {info['price']} ({info['change']:+.2f}%)"
-                    summary_lines.append(line)
-            summary_lines.append("")
+                    summary_parts.append(f"- {instrument}: {info['price']} ({info['change']:+.2f}%)")
+            summary_parts.append("")
         
-        # Save summary to file
-        with open('market_summary.txt', 'w') as f:
-            f.write('\n'.join(summary_lines))
+        market_summary = "\n".join(summary_parts)
         
-        print("Market summary saved to file")
-        EOF
-        
-    - name: Generate report with Claude
-      env:
-        ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-      run: |
-        python << 'EOF'
-        import anthropic
-        import os
-        import json
-        from datetime import datetime
-        
-        # Load market summary from file
-        with open('market_summary.txt', 'r') as f:
-            market_summary = f.read()
-        
-        print("Generating report with Claude...")
-        
+        # Generate report with Claude
+        print("Generating report...")
         client = anthropic.Anthropic(api_key=os.environ['ANTHROPIC_API_KEY'])
         
-        # Create prompt by reading from file
-        base_prompt = """You are a senior financial analyst creating a comprehensive daily market summary for institutional portfolio managers.
-
-Here is the current market data:
-
-"""
-        
-        analysis_request = """
-
-Create a professional, detailed report with these sections:
+        prompt_start = "You are a senior financial analyst creating a comprehensive daily market summary for institutional portfolio managers.\n\n"
+        prompt_data = market_summary + "\n\n"
+        prompt_instructions = """Create a professional, detailed report with these sections:
 
 **EXECUTIVE SUMMARY**
 Provide a compelling 3-sentence overview highlighting the most significant market moves and themes from the data above.
@@ -153,7 +114,7 @@ Provide a compelling 3-sentence overview highlighting the most significant marke
 **ASIAN MARKETS OVERNIGHT**
 Analyze Asian market performance using the real data:
 - Focus on Nikkei 225, Hang Seng, Shanghai Composite, ASX 200
-- Discuss USD/JPY movement and implications  
+- Discuss USD/JPY movement and implications
 - Highlight key themes (central bank policy, trade, earnings)
 - Be specific about the actual numbers shown
 [Target: 200 words]
@@ -166,7 +127,7 @@ Analyze European market performance:
 - Connect moves to broader market themes
 [Target: 200 words]
 
-**US MARKET OUTLOOK**
+**US MARKET OUTLOOK** 
 Comprehensive US market analysis:
 - Detailed analysis of S&P 500, NASDAQ, Dow Jones performance
 - Federal Reserve policy considerations
@@ -187,36 +148,13 @@ Brief analysis of:
 
 Use the specific numbers from the data. Write in sophisticated financial language appropriate for institutional clients."""
         
-        # Combine prompt parts
-        full_prompt = base_prompt + market_summary + analysis_request
+        full_prompt = prompt_start + prompt_data + prompt_instructions
         
         response = client.messages.create(
             model="claude-3-5-sonnet-20241022",
             max_tokens=4000,
             messages=[{"role": "user", "content": full_prompt}]
         )
-        
-        # Save Claude's response
-        with open('claude_report.txt', 'w') as f:
-            f.write(response.content[0].text)
-        
-        print("Claude report generated and saved")
-        EOF
-        
-    - name: Create enhanced report file
-      run: |
-        python << 'EOF'
-        import json
-        from datetime import datetime
-        from tabulate import tabulate
-        import os
-        
-        # Load data
-        with open('market_data.json', 'r') as f:
-            data = json.load(f)
-        
-        with open('claude_report.txt', 'r') as f:
-            claude_content = f.read()
         
         # Create enhanced report
         os.makedirs('reports', exist_ok=True)
@@ -226,34 +164,21 @@ Use the specific numbers from the data. Write in sophisticated financial languag
         with open(filename, 'w') as f:
             f.write("# Enhanced Daily Market Summary\n")
             f.write(f"**{datetime.now().strftime('%A, %B %d, %Y')}**\n\n")
-            f.write(f"*Comprehensive analysis of {len(data)} global instruments*\n\n")
+            f.write(f"*Analysis of {len(data)} global instruments*\n\n")
             f.write("---\n\n")
-            
-            # Add Claude's analysis
-            f.write(claude_content)
+            f.write(response.content[0].text)
             f.write("\n\n---\n\n")
+            f.write("## MARKET DATA TABLES\n\n")
             
-            # Add data tables
-            f.write("## MARKET DATA SUMMARY\n\n")
-            
-            # Create tables by group
-            groups = [
-                ("### US MARKETS", ['S&P 500', 'NASDAQ', 'Dow Jones']),
-                ("### ASIAN MARKETS", ['Nikkei 225', 'Hang Seng', 'Shanghai Composite', 'ASX 200']),
-                ("### EUROPEAN MARKETS", ['FTSE 100', 'DAX', 'CAC 40']),
-                ("### CURRENCIES", ['EUR/USD', 'GBP/USD', 'USD/JPY']),
-                ("### COMMODITIES", ['Gold', 'Crude Oil'])
-            ]
-            
+            # Add tables
             for title, instruments in groups:
                 table_data = []
                 for instrument in instruments:
                     if instrument in data:
                         info = data[instrument]
                         table_data.append([instrument, f"{info['price']:.2f}", f"{info['change']:+.2f}%"])
-                
                 if table_data:
-                    f.write(f"{title}\n\n")
+                    f.write(f"### {title}\n\n")
                     headers = ['Instrument', 'Level', 'Change %']
                     table = tabulate(table_data, headers=headers, tablefmt='pipe')
                     f.write(table)
@@ -261,80 +186,73 @@ Use the specific numbers from the data. Write in sophisticated financial languag
             
             # Performance highlights
             sorted_data = sorted(data.items(), key=lambda x: x[1]['change'], reverse=True)
-            
             f.write("## PERFORMANCE HIGHLIGHTS\n\n")
             f.write("**Top Performers:**\n")
             for name, info in sorted_data[:5]:
                 f.write(f"- {name}: {info['change']:+.2f}%\n")
-            
             f.write("\n**Biggest Declines:**\n")
             for name, info in sorted_data[-3:]:
                 f.write(f"- {name}: {info['change']:+.2f}%\n")
-            
-            f.write(f"\n\n*Report generated: {datetime.now().strftime('%Y-%m-%d %H:%M:%S UTC')}*\n")
+            f.write(f"\n\n*Generated: {datetime.now().strftime('%Y-%m-%d %H:%M:%S UTC')}*")
         
-        print(f"Enhanced report saved: {filename}")
-        
-        # Save info for GitHub issue
+        # Save info for issue
         with open('report_info.json', 'w') as f:
             json.dump({
                 'filename': filename,
                 'count': len(data),
-                'top_performer': max(data.items(), key=lambda x: x[1]['change']),
-                'biggest_decline': min(data.items(), key=lambda x: x[1]['change'])
+                'top': max(data.items(), key=lambda x: x[1]['change']),
+                'bottom': min(data.items(), key=lambda x: x[1]['change'])
             }, f)
-        EOF
         
-    - name: Commit enhanced report
+        print(f"Report saved: {filename}")
+        PYEOF
+        
+    - name: Fetch market data
+      run: python fetch_data.py
+        
+    - name: Generate enhanced report
+      env:
+        ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+      run: python generate_report.py
+        
+    - name: Commit report
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
         git add reports/
-        git commit -m "Enhanced market summary - $(date '+%Y-%m-%d')" || echo "Nothing to commit"
+        git commit -m "📊 Enhanced market summary - $(date '+%Y-%m-%d')" || echo "Nothing to commit"
         git push
 
-    - name: Create GitHub issue
+    - name: Create issue notification
       if: success()
       uses: actions/github-script@v6
       with:
         script: |
           const fs = require('fs');
-          
           try {
             const info = JSON.parse(fs.readFileSync('report_info.json', 'utf8'));
-            const reportContent = fs.readFileSync(info.filename, 'utf8');
-            const preview = reportContent.substring(0, 600) + '...';
-            
-            const topPerformer = info.top_performer;
-            const biggestDecline = info.biggest_decline;
+            const content = fs.readFileSync(info.filename, 'utf8');
+            const preview = content.substring(0, 500) + '...';
             
             await github.rest.issues.create({
               owner: context.repo.owner,
               repo: context.repo.repo,
-              title: `📊 Enhanced Daily Market Summary - ${new Date().toLocaleDateString()}`,
+              title: `📊 Enhanced Market Summary - ${new Date().toLocaleDateString()}`,
               body: `## 🎉 Your Enhanced Market Report is Ready!
 
-**📈 Market Highlights:**
-- **Top Performer:** ${topPerformer[0]} (${topPerformer[1].change > 0 ? '+' : ''}${topPerformer[1].change}%)
-- **Biggest Decline:** ${biggestDecline[0]} (${biggestDecline[1].change}%)
-- **Instruments Analyzed:** ${info.count}
+**📈 Highlights:**
+- **Top Performer:** ${info.top[0]} (${info.top[1].change > 0 ? '+' : ''}${info.top[1].change}%)
+- **Biggest Decline:** ${info.bottom[0]} (${info.bottom[1].change}%)
+- **Total Instruments:** ${info.count}
 
-**📊 What's Included:**
-- Professional analysis across all major markets
-- Real-time data with percentage changes
-- Formatted tables by region
-- Performance highlights and trading themes
-
-### 📖 Report Preview:
-\`\`\`markdown
+### Preview:
+\`\`\`
 ${preview}
 \`\`\`
 
-**[📄 View Full Enhanced Report](https://github.com/${context.repo.owner}/${context.repo.repo}/blob/main/${info.filename})**`
+**[📄 View Full Report](https://github.com/${context.repo.owner}/${context.repo.repo}/blob/main/${info.filename})**`
             });
-            
-            console.log('✅ GitHub issue created successfully');
-            
+            console.log('✅ Issue created');
           } catch (error) {
-            console.log('❌ Error creating issue:', error.message);
+            console.log('❌ Issue error:', error.message);
           }
