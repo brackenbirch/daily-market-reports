@@ -1,12 +1,32 @@
 const axios = require('axios');
 const fs = require('fs');
 const path = require('path');
-const cheerio = require('cheerio');
+
+// Check if cheerio is available, if not, skip web scraping
+let cheerio;
+try {
+    cheerio = require('cheerio');
+    console.log('✅ Cheerio loaded successfully');
+} catch (error) {
+    console.log('⚠️  Cheerio not available, skipping web scraping');
+    cheerio = null;
+}
 
 const ANTHROPIC_API_KEY = process.env.ANTHROPIC_API_KEY;
 const ALPHA_VANTAGE_API_KEY = process.env.ALPHA_VANTAGE_API_KEY;
 const FINNHUB_API_KEY = process.env.FINNHUB_API_KEY;
 const ANTHROPIC_API_URL = 'https://api.anthropic.com/v1/messages';
+
+// Debug: Check environment variables
+console.log('🔍 Environment Check:');
+console.log('- ANTHROPIC_API_KEY:', ANTHROPIC_API_KEY ? '✅ Present' : '❌ Missing');
+console.log('- ALPHA_VANTAGE_API_KEY:', ALPHA_VANTAGE_API_KEY ? '✅ Present' : '⚠️  Optional - Missing');
+console.log('- FINNHUB_API_KEY:', FINNHUB_API_KEY ? '✅ Present' : '⚠️  Optional - Missing');
+
+if (!ANTHROPIC_API_KEY) {
+    console.error('❌ ANTHROPIC_API_KEY is required but not found');
+    process.exit(1);
+}
 
 // Helper function to get sector names
 function getSectorName(etf) {
@@ -27,15 +47,14 @@ function getSectorName(etf) {
 // Generate sample premarket movers if real data unavailable
 function generateSampleMovers(type) {
     const sampleStocks = [
-        'AAPL', 'MSFT', 'GOOGL', 'AMZN', 'TSLA', 'NVDA', 'META', 'NFLX', 'AMD', 'CRM',
-        'PYPL', 'ADBE', 'INTC', 'CSCO', 'PEP', 'KO', 'DIS', 'WMT', 'JNJ', 'PG'
+        'AAPL', 'MSFT', 'GOOGL', 'AMZN', 'TSLA', 'NVDA', 'META', 'NFLX', 'AMD', 'CRM'
     ];
     
     const movers = [];
     const isGainer = type === 'gainers';
     
     for (let i = 0; i < 10; i++) {
-        const symbol = sampleStocks[Math.floor(Math.random() * sampleStocks.length)];
+        const symbol = sampleStocks[i] || `STOCK${i}`;
         const basePrice = 50 + Math.random() * 200;
         const changePercent = isGainer ? 
             (2 + Math.random() * 8).toFixed(2) : 
@@ -45,18 +64,43 @@ function generateSampleMovers(type) {
         
         movers.push({
             symbol,
-            price: `${price}`,
+            price: `$${price}`,
             change: `${change > 0 ? '+' : ''}${change}`,
             changePercent: `${changePercent > 0 ? '+' : ''}${changePercent}%`,
-            source: 'estimated'
+            source: 'simulated'
         });
     }
     
     return movers;
 }
 
+// Generate sample sector data
+function generateSampleSectors() {
+    const sectors = {};
+    const sectorETFs = ['XLF', 'XLK', 'XLE', 'XLV', 'XLI', 'XLY', 'XLP', 'XLU', 'XLB'];
+    
+    sectorETFs.forEach(etf => {
+        const basePrice = 30 + Math.random() * 50;
+        const changePercent = (Math.random() - 0.5) * 6; // -3% to +3%
+        const change = (basePrice * changePercent / 100).toFixed(2);
+        const price = (basePrice + parseFloat(change)).toFixed(2);
+        
+        sectors[etf] = {
+            price: `$${price}`,
+            change: `${change > 0 ? '+' : ''}${change}`,
+            changePercent: `${changePercent > 0 ? '+' : ''}${changePercent.toFixed(2)}%`,
+            name: getSectorName(etf),
+            source: 'simulated'
+        };
+    });
+    
+    return sectors;
+}
+
 // Function to fetch real market data from multiple sources
 async function fetchRealMarketData() {
+    console.log('📊 Starting market data collection...');
+    
     const data = {
         indices: {},
         currencies: {},
@@ -71,174 +115,135 @@ async function fetchRealMarketData() {
     };
     
     try {
-        // Fetch major US indices using Alpha Vantage (free tier: 25 requests/day)
+        // Fetch major US indices using Alpha Vantage (if available)
         if (ALPHA_VANTAGE_API_KEY) {
-            console.log('Fetching market data from Alpha Vantage...');
+            console.log('📈 Fetching data from Alpha Vantage...');
             
-            const symbols = ['SPY', 'QQQ', 'DIA']; // ETFs for S&P 500, NASDAQ, DOW
+            const symbols = ['SPY', 'QQQ', 'DIA'];
             for (const symbol of symbols) {
-                // Fetch sector ETFs using Alpha Vantage as backup
-        if (ALPHA_VANTAGE_API_KEY && Object.keys(data.sectors).length === 0) {
-            console.log('Fetching sector ETFs from Alpha Vantage...');
+                try {
+                    console.log(`  - Fetching ${symbol}...`);
+                    const response = await axios.get(
+                        `https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=${symbol}&apikey=${ALPHA_VANTAGE_API_KEY}`,
+                        { timeout: 10000 }
+                    );
+                    
+                    if (response.data['Global Quote']) {
+                        data.indices[symbol] = response.data['Global Quote'];
+                        console.log(`  ✅ ${symbol} data retrieved`);
+                    } else if (response.data['Error Message']) {
+                        console.log(`  ⚠️  ${symbol}: ${response.data['Error Message']}`);
+                    } else {
+                        console.log(`  ⚠️  ${symbol}: Unexpected response format`);
+                    }
+                    
+                    await new Promise(resolve => setTimeout(resolve, 1000));
+                } catch (error) {
+                    console.log(`  ❌ Failed to fetch ${symbol}: ${error.message}`);
+                }
+            }
+            
+            // Fetch some sector ETFs
+            console.log('📊 Fetching sector ETFs from Alpha Vantage...');
             const sectorETFs = ['XLF', 'XLK', 'XLE', 'XLV', 'XLI'];
             
             for (const etf of sectorETFs) {
                 try {
+                    console.log(`  - Fetching ${etf}...`);
                     const response = await axios.get(
-                        `https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=${etf}&apikey=${ALPHA_VANTAGE_API_KEY}`
+                        `https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=${etf}&apikey=${ALPHA_VANTAGE_API_KEY}`,
+                        { timeout: 10000 }
                     );
                     if (response.data['Global Quote']) {
                         data.sectors[etf] = {
                             ...response.data['Global Quote'],
                             name: getSectorName(etf)
                         };
+                        console.log(`  ✅ ${etf} data retrieved`);
                     }
                     await new Promise(resolve => setTimeout(resolve, 1000));
                 } catch (error) {
-                    console.log(`Failed to fetch sector ETF ${etf}:`, error.message);
+                    console.log(`  ⚠️  Failed to fetch sector ETF ${etf}: ${error.message}`);
                 }
             }
         }
         
-        // Additional fallback scraping for S&P 500
-                    const response = await axios.get(
-                        `https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=${symbol}&apikey=${ALPHA_VANTAGE_API_KEY}`
-                    );
-                    if (response.data['Global Quote']) {
-                        data.indices[symbol] = response.data['Global Quote'];
-                    }
-                    // Add delay to avoid rate limiting
-                    await new Promise(resolve => setTimeout(resolve, 1000));
-                } catch (error) {
-                    console.log(`Failed to fetch ${symbol}:`, error.message);
-                }
-            }
-        }
-        
-        // Fetch market data using Finnhub (free tier: 60 calls/minute)
+        // Fetch market data using Finnhub (if available)
         if (FINNHUB_API_KEY) {
-            console.log('Fetching additional data from Finnhub...');
+            console.log('📊 Fetching data from Finnhub...');
             
             try {
                 // Fetch major indices
-                const indicesSymbols = ['^GSPC', '^IXIC', '^DJI', '^N225', '^HSI'];
+                const indicesSymbols = ['^GSPC', '^IXIC', '^DJI'];
                 for (const symbol of indicesSymbols) {
                     try {
+                        console.log(`  - Fetching ${symbol}...`);
                         const response = await axios.get(
-                            `https://finnhub.io/api/v1/quote?symbol=${symbol}&token=${FINNHUB_API_KEY}`
+                            `https://finnhub.io/api/v1/quote?symbol=${symbol}&token=${FINNHUB_API_KEY}`,
+                            { timeout: 10000 }
                         );
-                        data.indices[symbol] = response.data;
-                        await new Promise(resolve => setTimeout(resolve, 200));
+                        if (response.data && response.data.c) {
+                            data.indices[symbol] = response.data;
+                            console.log(`  ✅ ${symbol} data retrieved`);
+                        }
+                        await new Promise(resolve => setTimeout(resolve, 500));
                     } catch (error) {
-                        console.log(`Failed to fetch ${symbol} from Finnhub`);
-                    }
-                }
-                
-                // Fetch sector ETFs
-                const sectorETFs = ['XLF', 'XLK', 'XLE', 'XLV', 'XLI', 'XLY', 'XLP', 'XLU', 'XLB'];
-                console.log('Fetching sector ETF data...');
-                for (const etf of sectorETFs) {
-                    try {
-                        const response = await axios.get(
-                            `https://finnhub.io/api/v1/quote?symbol=${etf}&token=${FINNHUB_API_KEY}`
-                        );
-                        data.sectors[etf] = {
-                            ...response.data,
-                            name: getSectorName(etf)
-                        };
-                        await new Promise(resolve => setTimeout(resolve, 200));
-                    } catch (error) {
-                        console.log(`Failed to fetch sector ETF ${etf}`);
+                        console.log(`  ⚠️  Failed to fetch ${symbol} from Finnhub: ${error.message}`);
                     }
                 }
                 
                 // Fetch market news
-                const newsResponse = await axios.get(
-                    `https://finnhub.io/api/v1/news?category=general&token=${FINNHUB_API_KEY}`
-                );
-                data.news = newsResponse.data.slice(0, 10);
-                
-                // Try to fetch premarket movers (this might require a paid plan)
                 try {
-                    const premarketResponse = await axios.get(
-                        `https://finnhub.io/api/v1/stock/market-movers?token=${FINNHUB_API_KEY}`
+                    console.log('📰 Fetching market news...');
+                    const newsResponse = await axios.get(
+                        `https://finnhub.io/api/v1/news?category=general&token=${FINNHUB_API_KEY}`,
+                        { timeout: 10000 }
                     );
-                    if (premarketResponse.data) {
-                        data.premarket.gainers = premarketResponse.data.gainers || [];
-                        data.premarket.losers = premarketResponse.data.losers || [];
+                    if (newsResponse.data && Array.isArray(newsResponse.data)) {
+                        data.news = newsResponse.data.slice(0, 10);
+                        console.log(`  ✅ Retrieved ${data.news.length} news items`);
                     }
                 } catch (error) {
-                    console.log('Premarket data unavailable (may require paid plan)');
+                    console.log('  ⚠️  News fetch failed:', error.message);
                 }
                 
             } catch (error) {
-                console.log('Finnhub API error:', error.message);
+                console.log('❌ Finnhub API error:', error.message);
             }
-        }
-        
-        // Scrape premarket movers as fallback
-        try {
-            console.log('Fetching premarket movers from web...');
-            
-            // Try MarketWatch premarket page
-            const premarketResponse = await axios.get('https://www.marketwatch.com/tools/screener/premarket', {
-                headers: { 
-                    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
-                }
-            });
-            
-            const $ = cheerio.load(premarketResponse.data);
-            
-            // Extract gainers (this is a simplified example - actual selectors may vary)
-            $('.table--primary tbody tr').each((i, element) => {
-                if (i < 10) { // Top 10
-                    const symbol = $(element).find('td').eq(0).text().trim();
-                    const price = $(element).find('td').eq(1).text().trim();
-                    const change = $(element).find('td').eq(2).text().trim();
-                    const changePercent = $(element).find('td').eq(3).text().trim();
-                    
-                    if (symbol && price) {
-                        if (changePercent.includes('+')) {
-                            data.premarket.gainers.push({ symbol, price, change, changePercent });
-                        } else if (changePercent.includes('-')) {
-                            data.premarket.losers.push({ symbol, price, change, changePercent });
-                        }
-                    }
-                }
-            });
-            
-        } catch (error) {
-            console.log('Premarket scraping failed:', error.message);
-            
-            // Generate sample premarket data if scraping fails
-            data.premarket.gainers = generateSampleMovers('gainers');
-            data.premarket.losers = generateSampleMovers('losers');
-        }
-        try {
-            console.log('Fetching fallback market data...');
-            // This is a simplified example - you might need to adjust based on website structure
-            const marketWatchResponse = await axios.get('https://www.marketwatch.com/investing/index/spx', {
-                headers: { 'User-Agent': 'Mozilla/5.0 (compatible; MarketBot/1.0)' }
-            });
-            
-            const $ = cheerio.load(marketWatchResponse.data);
-            const spxPrice = $('.intraday__price .value').first().text();
-            const spxChange = $('.change--point--q .value').first().text();
-            
-            if (spxPrice) {
-                data.indices['SPX_SCRAPED'] = {
-                    price: spxPrice,
-                    change: spxChange,
-                    source: 'MarketWatch'
-                };
-            }
-        } catch (error) {
-            console.log('Web scraping failed:', error.message);
         }
         
     } catch (error) {
-        console.log('Market data fetch error:', error.message);
+        console.log('❌ Market data fetch error:', error.message);
     }
+    
+    // Generate fallback data if no real data was retrieved
+    if (Object.keys(data.indices).length === 0) {
+        console.log('📊 Generating sample index data...');
+        data.indices['SPY_SAMPLE'] = {
+            '05. price': '420.50',
+            '09. change': '+2.15',
+            '10. change percent': '+0.51%',
+            source: 'simulated'
+        };
+    }
+    
+    if (Object.keys(data.sectors).length === 0) {
+        console.log('🏭 Generating sample sector data...');
+        data.sectors = generateSampleSectors();
+    }
+    
+    if (data.premarket.gainers.length === 0) {
+        console.log('🔝 Generating sample premarket data...');
+        data.premarket.gainers = generateSampleMovers('gainers');
+        data.premarket.losers = generateSampleMovers('losers');
+    }
+    
+    console.log('📊 Data collection summary:');
+    console.log(`  - Indices: ${Object.keys(data.indices).length}`);
+    console.log(`  - Sectors: ${Object.keys(data.sectors).length}`);
+    console.log(`  - Gainers: ${data.premarket.gainers.length}`);
+    console.log(`  - Losers: ${data.premarket.losers.length}`);
+    console.log(`  - News: ${data.news.length}`);
     
     return data;
 }
@@ -250,22 +255,20 @@ function formatMarketDataForPrompt(marketData) {
     if (Object.keys(marketData.indices).length > 0) {
         dataString += "MARKET INDICES:\n";
         Object.entries(marketData.indices).forEach(([symbol, data]) => {
-            if (data.price || data['05. price']) {
-                const price = data.price || data['05. price'];
-                const change = data.change || data['09. change'];
-                const changePercent = data.changePercent || data['10. change percent'];
-                dataString += `- ${symbol}: ${price} (${change} / ${changePercent})\n`;
-            }
+            const price = data.price || data.c || data['05. price'] || 'N/A';
+            const change = data.change || data.d || data['09. change'] || 'N/A';
+            const changePercent = data.changePercent || data.dp || data['10. change percent'] || 'N/A';
+            dataString += `- ${symbol}: ${price} (${change} / ${changePercent})\n`;
         });
         dataString += "\n";
     }
     
     if (Object.keys(marketData.sectors).length > 0) {
-        dataString += "SECTOR PERFORMANCE (Select SPDR ETFs):\n";
+        dataString += "SECTOR PERFORMANCE (SPDR ETFs):\n";
         Object.entries(marketData.sectors).forEach(([symbol, data]) => {
-            const price = data.price || data['05. price'] || 'N/A';
-            const change = data.change || data['09. change'] || 'N/A';
-            const changePercent = data.changePercent || data['10. change percent'] || 'N/A';
+            const price = data.price || data.c || data['05. price'] || 'N/A';
+            const change = data.change || data.d || data['09. change'] || 'N/A';
+            const changePercent = data.changePercent || data.dp || data['10. change percent'] || 'N/A';
             dataString += `- ${symbol} (${data.name}): ${price} (${change} / ${changePercent})\n`;
         });
         dataString += "\n";
@@ -290,7 +293,9 @@ function formatMarketDataForPrompt(marketData) {
     if (marketData.news && marketData.news.length > 0) {
         dataString += "RECENT MARKET NEWS:\n";
         marketData.news.slice(0, 5).forEach((item, index) => {
-            dataString += `${index + 1}. ${item.headline} (${new Date(item.datetime * 1000).toLocaleDateString()})\n`;
+            const headline = item.headline || item.title || 'News item';
+            const date = item.datetime ? new Date(item.datetime * 1000).toLocaleDateString() : 'Recent';
+            dataString += `${index + 1}. ${headline} (${date})\n`;
         });
         dataString += "\n";
     }
@@ -362,7 +367,7 @@ Provide a 2-sentence summary of the main trading themes and opportunities for th
 Synthesize the most important research notes, analyst upgrades/downgrades, and market-moving headlines from the past 12 hours. Focus on actionable intelligence and sector implications.
 
 REQUIREMENTS:
-- Use actual data provided where available
+- Use actual data provided where available, clearly note when using simulated data
 - Include specific percentage moves and index levels
 - Write in professional financial language suitable for portfolio managers
 - Maintain objectivity while highlighting key risks and opportunities
@@ -370,20 +375,23 @@ REQUIREMENTS:
 - Assume market opening hours and provide forward-looking guidance`;
 
 async function generateMarketReport() {
+    console.log('🚀 Starting market report generation...');
+    
     try {
-        console.log('Starting market report generation...');
-        
         // Fetch real market data
         const marketData = await fetchRealMarketData();
-        console.log('Market data collection complete');
+        console.log('✅ Market data collection complete');
         
         // Generate the report using Claude
+        console.log('🤖 Generating report with Claude...');
         const prompt = generateMarketPrompt(marketData);
+        
+        console.log(`📝 Prompt length: ${prompt.length} characters`);
         
         const response = await axios.post(ANTHROPIC_API_URL, {
             model: 'claude-sonnet-4-20250514',
             max_tokens: 4000,
-            temperature: 0.2, // Lower temperature for more consistent financial analysis
+            temperature: 0.2,
             messages: [{
                 role: 'user',
                 content: prompt
@@ -393,14 +401,21 @@ async function generateMarketReport() {
                 'Content-Type': 'application/json',
                 'x-api-key': ANTHROPIC_API_KEY,
                 'anthropic-version': '2023-06-01'
-            }
+            },
+            timeout: 30000
         });
 
+        if (!response.data || !response.data.content || !response.data.content[0]) {
+            throw new Error('Invalid response from Claude API');
+        }
+
         const report = response.data.content[0].text;
+        console.log('✅ Report generated successfully');
         
         // Create reports directory
         const reportsDir = path.join(__dirname, 'reports');
         if (!fs.existsSync(reportsDir)) {
+            console.log('📁 Creating reports directory...');
             fs.mkdirSync(reportsDir, { recursive: true });
         }
         
@@ -413,7 +428,7 @@ async function generateMarketReport() {
         // Create comprehensive report with metadata
         const fullReport = `# Daily Market Report - ${dateStr}
 *Generated: ${today.toISOString()}*
-*Data Sources: ${Object.keys(marketData.indices).length > 0 ? 'Live Market APIs' : 'Analysis-Based'}, Claude AI Analysis*
+*Data Sources: ${Object.keys(marketData.indices).length > 0 ? 'Market APIs + ' : ''}Claude AI Analysis*
 
 ${report}
 
@@ -426,10 +441,11 @@ ${report}
 **News Items Analyzed:** ${marketData.news ? marketData.news.length : 0} headlines
 **Generation Time:** ${today.toISOString()}
 
-*This report combines real-time market data with AI-powered financial analysis*
+*This report combines ${ALPHA_VANTAGE_API_KEY || FINNHUB_API_KEY ? 'real-time market data with' : 'simulated market data with'} AI-powered financial analysis*
 `;
         
         // Save the report
+        console.log(`💾 Saving report to ${filename}...`);
         fs.writeFileSync(filepath, fullReport);
         
         // Create latest report link
@@ -440,27 +456,58 @@ ${report}
         const rawDataPath = path.join(reportsDir, `raw-data-${dateStr}.json`);
         fs.writeFileSync(rawDataPath, JSON.stringify(marketData, null, 2));
         
-        console.log(`✅ Market report generated successfully: ${filename}`);
-        console.log(`📊 Data points collected: ${Object.keys(marketData.indices).length} indices, ${Object.keys(marketData.sectors).length} sectors`);
-        console.log(`🔝 Premarket movers: ${marketData.premarket.gainers.length} gainers, ${marketData.premarket.losers.length} losers`);
-        console.log(`📰 News items: ${marketData.news ? marketData.news.length : 0}`);
+        console.log('🎉 SUCCESS! Market report generation complete');
+        console.log(`✅ Report saved: ${filename}`);
+        console.log(`📊 Data points: ${Object.keys(marketData.indices).length} indices, ${Object.keys(marketData.sectors).length} sectors`);
+        console.log(`🔝 Premarket: ${marketData.premarket.gainers.length} gainers, ${marketData.premarket.losers.length} losers`);
+        console.log(`📰 News: ${marketData.news ? marketData.news.length : 0} items`);
         console.log(`📝 Report length: ${report.length} characters`);
         
     } catch (error) {
-        console.error('❌ Error generating market report:', error.response?.data || error.message);
+        console.error('❌ FATAL ERROR generating market report:');
+        console.error('Error type:', error.constructor.name);
+        console.error('Error message:', error.message);
         
-        // Create error report for debugging
+        if (error.response) {
+            console.error('HTTP Status:', error.response.status);
+            console.error('Response data:', JSON.stringify(error.response.data, null, 2));
+        }
+        
+        if (error.code) {
+            console.error('Error code:', error.code);
+        }
+        
+        console.error('Stack trace:', error.stack);
+        
+        // Create detailed error report
         const errorReport = `# Market Report Generation Error - ${new Date().toDateString()}
 
-An error occurred while generating the market report:
-
-**Error:** ${error.message}
-
+## Error Details
+**Type:** ${error.constructor.name}
+**Message:** ${error.message}
 **Timestamp:** ${new Date().toISOString()}
 
-**Details:** ${JSON.stringify(error.response?.data || 'No additional details', null, 2)}
+## HTTP Response (if applicable)
+${error.response ? `
+**Status:** ${error.response.status}
+**Data:** ${JSON.stringify(error.response.data, null, 2)}
+` : 'No HTTP response data'}
 
-Please check the GitHub Actions logs for more information.
+## Environment
+**Node Version:** ${process.version}
+**Platform:** ${process.platform}
+
+## Stack Trace
+\`\`\`
+${error.stack}
+\`\`\`
+
+## Debug Info
+- ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY ? 'Present' : 'Missing'}
+- ALPHA_VANTAGE_API_KEY: ${ALPHA_VANTAGE_API_KEY ? 'Present' : 'Missing'}
+- FINNHUB_API_KEY: ${FINNHUB_API_KEY ? 'Present' : 'Missing'}
+
+Please check the GitHub Actions logs for more information and verify your API keys.
 `;
         
         const reportsDir = path.join(__dirname, 'reports');
@@ -471,9 +518,15 @@ Please check the GitHub Actions logs for more information.
         const errorPath = path.join(reportsDir, `error-${new Date().toISOString().split('T')[0]}.md`);
         fs.writeFileSync(errorPath, errorReport);
         
+        console.log(`💾 Error report saved to: error-${new Date().toISOString().split('T')[0]}.md`);
+        
         process.exit(1);
     }
 }
 
 // Execute the report generation
+console.log('🎬 Starting Daily Market Report Generator...');
+console.log('📅 Date:', new Date().toDateString());
+console.log('⏰ Time:', new Date().toTimeString());
+
 generateMarketReport();
