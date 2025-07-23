@@ -1,0 +1,16 @@
+{
+  "name": "automated-market-report",
+  "version": "1.0.0",
+  "description": "Automated daily market report generator using Claude AI",
+  "main": "generate-report.js",
+  "scripts": {
+    "generate": "node generate-report.js",
+    "test": "echo \"No tests specified\" && exit 0"
+  },
+  "dependencies": {
+    "axios": "^1.6.0"
+  },
+  "keywords": ["market", "report", "automation", "claude", "ai"],
+  "author": "Your Name",
+  "license": "MIT"
+}
