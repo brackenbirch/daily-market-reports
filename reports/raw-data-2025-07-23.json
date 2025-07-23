@@ -56,6 +56,17 @@
   "news": [
     {
       "category": "top news",
+      "datetime": 1753294974,
+      "headline": "We're raising our price target on GE Vernova by $150 after blowout earnings report",
+      "id": 7500212,
+      "image": "https://image.cnbcfm.com/api/v1/image/108151423-1748452645674-gettyimages-2204274263-CERAWEEK_2025.jpeg?v=1748452689&w=1920&h=1080",
+      "related": "",
+      "source": "CNBC",
+      "summary": "Expectations were high heading into the print. GE Vernova more than delivered.",
+      "url": "https://www.cnbc.com/2025/07/23/were-raising-price-target-on-ge-vernova-by-150-after-blowout-earnings-.html"
+    },
+    {
+      "category": "top news",
       "datetime": 1753291500,
       "headline": "Trump’s AI action plan: Why it ‘answers a call’ in one area and falls short in another",
       "id": 7500197,
@@ -152,19 +163,8 @@
       "source": "MarketWatch",
       "summary": "Inflation at the ECB’s 2% target encourages a wait-and-see approach.",
       "url": "https://www.marketwatch.com/story/european-central-bank-to-put-rate-cuts-on-pause-amid-trade-uncertainty-9e7f4c4f"
-    },
-    {
-      "category": "top news",
-      "datetime": 1753280160,
-      "headline": "GE Vernova says tariff impact will be less than thought, and the stock soars toward two records",
-      "id": 7500137,
-      "image": "https://static2.finnhub.io/file/publicdatany/finnhubimage/market_watch_logo.png",
-      "related": "",
-      "source": "MarketWatch",
-      "summary": "GE Vernova’s stock was heading for a record high after an earnings beat, a raised full-year outlook and a lowered estimate of tariff impact.",
-      "url": "https://www.marketwatch.com/story/ge-vernova-says-tariff-impact-will-be-less-than-thought-and-the-stock-soars-toward-two-records-89bff53c"
     }
   ],
   "futures": {},
-  "timestamp": "2025-07-23T17:44:54.566Z"
+  "timestamp": "2025-07-23T19:02:52.486Z"
 }
