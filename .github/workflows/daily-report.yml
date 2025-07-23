@@ -21,119 +21,134 @@ jobs:
     - name: Install packages
       run: pip install anthropic yfinance pandas tabulate
       
-    - name: Create all files
+    - name: Create data fetcher
       run: |
-        # Create the data fetcher
-        echo 'import yfinance as yf' > fetch_data.py
-        echo 'import json' >> fetch_data.py
-        echo '' >> fetch_data.py
-        echo 'instruments = {' >> fetch_data.py
-        echo '    "^GSPC": "S&P 500",' >> fetch_data.py
-        echo '    "^IXIC": "NASDAQ",' >> fetch_data.py
-        echo '    "^DJI": "Dow Jones",' >> fetch_data.py
-        echo '    "^N225": "Nikkei 225",' >> fetch_data.py
-        echo '    "^HSI": "Hang Seng",' >> fetch_data.py
-        echo '    "000001.SS": "Shanghai Composite",' >> fetch_data.py
-        echo '    "^AXJO": "ASX 200",' >> fetch_data.py
-        echo '    "^FTSE": "FTSE 100",' >> fetch_data.py
-        echo '    "^GDAXI": "DAX",' >> fetch_data.py
-        echo '    "^FCHI": "CAC 40",' >> fetch_data.py
-        echo '    "EURUSD=X": "EUR/USD",' >> fetch_data.py
-        echo '    "GBPUSD=X": "GBP/USD",' >> fetch_data.py
-        echo '    "JPY=X": "USD/JPY",' >> fetch_data.py
-        echo '    "GC=F": "Gold",' >> fetch_data.py
-        echo '    "CL=F": "Crude Oil"' >> fetch_data.py
-        echo '}' >> fetch_data.py
-        echo '' >> fetch_data.py
-        echo 'data = {}' >> fetch_data.py
-        echo 'for ticker, name in instruments.items():' >> fetch_data.py
-        echo '    try:' >> fetch_data.py
-        echo '        stock = yf.Ticker(ticker)' >> fetch_data.py
-        echo '        hist = stock.history(period="5d")' >> fetch_data.py
-        echo '        if len(hist) >= 2:' >> fetch_data.py
-        echo '            current = float(hist["Close"].iloc[-1])' >> fetch_data.py
-        echo '            previous = float(hist["Close"].iloc[-2])' >> fetch_data.py
-        echo '            change_pct = ((current - previous) / previous) * 100' >> fetch_data.py
-        echo '            data[name] = {"price": round(current, 2), "change": round(change_pct, 2)}' >> fetch_data.py
-        echo '            print(f"Success: {name}: {current:.2f} ({change_pct:+.2f}%)")' >> fetch_data.py
-        echo '    except:' >> fetch_data.py
-        echo '        pass' >> fetch_data.py
-        echo '' >> fetch_data.py
-        echo 'with open("market_data.json", "w") as f:' >> fetch_data.py
-        echo '    json.dump(data, f)' >> fetch_data.py
-        echo 'print(f"Fetched {len(data)} instruments")' >> fetch_data.py
-        
-        # Create the report generator (line by line to avoid issues)
-        echo 'import anthropic' > generate_report.py
-        echo 'import json' >> generate_report.py
-        echo 'import os' >> generate_report.py
-        echo 'from datetime import datetime' >> generate_report.py
-        echo 'from tabulate import tabulate' >> generate_report.py
-        echo '' >> generate_report.py
-        echo 'with open("market_data.json", "r") as f:' >> generate_report.py
-        echo '    data = json.load(f)' >> generate_report.py
-        echo '' >> generate_report.py
-        echo 'summary_parts = ["CURRENT MARKET DATA:", ""]' >> generate_report.py
-        echo '' >> generate_report.py
-        echo 'groups = [' >> generate_report.py
-        echo '    ("US MARKETS", ["S&P 500", "NASDAQ", "Dow Jones"]),' >> generate_report.py
-        echo '    ("ASIAN MARKETS", ["Nikkei 225", "Hang Seng", "Shanghai Composite", "ASX 200"]),' >> generate_report.py
-        echo '    ("EUROPEAN MARKETS", ["FTSE 100", "DAX", "CAC 40"]),' >> generate_report.py
-        echo '    ("CURRENCIES", ["EUR/USD", "GBP/USD", "USD/JPY"]),' >> generate_report.py
-        echo '    ("COMMODITIES", ["Gold", "Crude Oil"])' >> generate_report.py
-        echo ']' >> generate_report.py
-        echo '' >> generate_report.py
-        echo 'for group_name, instruments in groups:' >> generate_report.py
-        echo '    summary_parts.append(f"{group_name}:")' >> generate_report.py
-        echo '    for instrument in instruments:' >> generate_report.py
-        echo '        if instrument in data:' >> generate_report.py
-        echo '            info = data[instrument]' >> generate_report.py
-        echo '            summary_parts.append(f"- {instrument}: {info[\\"price\\"]} ({info[\\"change\\"]:+.2f}%)")' >> generate_report.py
-        echo '    summary_parts.append("")' >> generate_report.py
-        echo '' >> generate_report.py
-        echo 'market_summary = "\\n".join(summary_parts)' >> generate_report.py
-        echo '' >> generate_report.py
-        echo 'print("Generating report with Claude...")' >> generate_report.py
-        echo 'client = anthropic.Anthropic(api_key=os.environ["ANTHROPIC_API_KEY"])' >> generate_report.py
-        echo '' >> generate_report.py
-        echo 'prompt = "You are a senior financial analyst. Create a professional daily market summary using this data:\\n\\n" + market_summary + "\\n\\nInclude sections: EXECUTIVE SUMMARY, ASIAN MARKETS OVERNIGHT, EUROPEAN MARKETS SUMMARY, US MARKET OUTLOOK, CURRENCY & COMMODITIES WATCH, KEY TAKEAWAYS. Use sophisticated financial language for institutional clients."' >> generate_report.py
-        echo '' >> generate_report.py
-        echo 'response = client.messages.create(' >> generate_report.py
-        echo '    model="claude-3-5-sonnet-20241022",' >> generate_report.py
-        echo '    max_tokens=4000,' >> generate_report.py
-        echo '    messages=[{"role": "user", "content": prompt}]' >> generate_report.py
-        echo ')' >> generate_report.py
-        echo '' >> generate_report.py
-        echo 'os.makedirs("reports", exist_ok=True)' >> generate_report.py
-        echo 'today = datetime.now().strftime("%Y-%m-%d")' >> generate_report.py
-        echo 'filename = f"reports/market-summary-{today}.md"' >> generate_report.py
-        echo '' >> generate_report.py
-        echo 'with open(filename, "w") as f:' >> generate_report.py
-        echo '    f.write("# Enhanced Daily Market Summary\\n")' >> generate_report.py
-        echo '    f.write(f"**{datetime.now().strftime(\"%A, %B %d, %Y\")}**\\n\\n")' >> generate_report.py
-        echo '    f.write(f"*Analysis of {len(data)} global instruments*\\n\\n")' >> generate_report.py
-        echo '    f.write("---\\n\\n")' >> generate_report.py
-        echo '    f.write(response.content[0].text)' >> generate_report.py
-        echo '    f.write("\\n\\n---\\n\\n")' >> generate_report.py
-        echo '    f.write("## MARKET DATA\\n\\n")' >> generate_report.py
-        echo '    for title, instruments in groups:' >> generate_report.py
-        echo '        table_data = []' >> generate_report.py
-        echo '        for instrument in instruments:' >> generate_report.py
-        echo '            if instrument in data:' >> generate_report.py
-        echo '                info = data[instrument]' >> generate_report.py
-        echo '                table_data.append([instrument, f"{info[\\"price\\"]:.2f}", f"{info[\\"change\\"]:+.2f}%"])' >> generate_report.py
-        echo '        if table_data:' >> generate_report.py
-        echo '            f.write(f"### {title}\\n\\n")' >> generate_report.py
-        echo '            headers = ["Instrument", "Level", "Change %"]' >> generate_report.py
-        echo '            table = tabulate(table_data, headers=headers, tablefmt="pipe")' >> generate_report.py
-        echo '            f.write(table)' >> generate_report.py
-        echo '            f.write("\\n\\n")' >> generate_report.py
-        echo '    f.write(f"\\n*Generated: {datetime.now().strftime(\"%Y-%m-%d %H:%M:%S UTC\")}*\\n")' >> generate_report.py
-        echo '' >> generate_report.py
-        echo 'with open("report_info.json", "w") as f:' >> generate_report.py
-        echo '    json.dump({"filename": filename, "count": len(data)}, f)' >> generate_report.py
-        echo '' >> generate_report.py
-        echo 'print(f"Report saved: {filename}")' >> generate_report.py
+        cat << 'ENDOFFILE' > fetch_data.py
+        import yfinance as yf
+        import json
+
+        instruments = {
+            "^GSPC": "S&P 500",
+            "^IXIC": "NASDAQ", 
+            "^DJI": "Dow Jones",
+            "^N225": "Nikkei 225",
+            "^HSI": "Hang Seng",
+            "000001.SS": "Shanghai Composite",
+            "^AXJO": "ASX 200",
+            "^FTSE": "FTSE 100",
+            "^GDAXI": "DAX",
+            "^FCHI": "CAC 40",
+            "EURUSD=X": "EUR/USD",
+            "GBPUSD=X": "GBP/USD",
+            "JPY=X": "USD/JPY",
+            "GC=F": "Gold",
+            "CL=F": "Crude Oil"
+        }
+
+        data = {}
+        for ticker, name in instruments.items():
+            try:
+                stock = yf.Ticker(ticker)
+                hist = stock.history(period="5d")
+                if len(hist) >= 2:
+                    current = float(hist['Close'].iloc[-1])
+                    previous = float(hist['Close'].iloc[-2])
+                    change_pct = ((current - previous) / previous) * 100
+                    data[name] = {'price': round(current, 2), 'change': round(change_pct, 2)}
+                    print(f"Success: {name}: {current:.2f} ({change_pct:+.2f}%)")
+            except Exception as e:
+                print(f"Error {name}: {e}")
+
+        with open('market_data.json', 'w') as f:
+            json.dump(data, f)
+        print(f"Fetched {len(data)} instruments")
+        ENDOFFILE
+
+    - name: Create report generator
+      run: |
+        cat << 'ENDOFFILE' > generate_report.py
+        import anthropic
+        import json
+        import os
+        from datetime import datetime
+        from tabulate import tabulate
+
+        # Load market data
+        with open('market_data.json', 'r') as f:
+            data = json.load(f)
+
+        # Create market data summary
+        summary_parts = ["CURRENT MARKET DATA:", ""]
+
+        groups = [
+            ("US MARKETS", ["S&P 500", "NASDAQ", "Dow Jones"]),
+            ("ASIAN MARKETS", ["Nikkei 225", "Hang Seng", "Shanghai Composite", "ASX 200"]),
+            ("EUROPEAN MARKETS", ["FTSE 100", "DAX", "CAC 40"]),
+            ("CURRENCIES", ["EUR/USD", "GBP/USD", "USD/JPY"]),
+            ("COMMODITIES", ["Gold", "Crude Oil"])
+        ]
+
+        for group_name, instruments in groups:
+            summary_parts.append(group_name + ":")
+            for instrument in instruments:
+                if instrument in data:
+                    info = data[instrument]
+                    line = "- " + instrument + ": " + str(info['price']) + " (" + str(info['change']) + "%)"
+                    summary_parts.append(line)
+            summary_parts.append("")
+
+        market_summary = "\n".join(summary_parts)
+
+        # Generate report with Claude
+        print("Generating report with Claude...")
+        client = anthropic.Anthropic(api_key=os.environ['ANTHROPIC_API_KEY'])
+
+        prompt_text = "You are a senior financial analyst. Create a professional daily market summary using this data:\n\n"
+        prompt_text += market_summary
+        prompt_text += "\n\nInclude sections: EXECUTIVE SUMMARY, ASIAN MARKETS OVERNIGHT, EUROPEAN MARKETS SUMMARY, US MARKET OUTLOOK, CURRENCY & COMMODITIES WATCH, KEY TAKEAWAYS. Use sophisticated financial language for institutional clients."
+
+        response = client.messages.create(
+            model="claude-3-5-sonnet-20241022",
+            max_tokens=4000,
+            messages=[{"role": "user", "content": prompt_text}]
+        )
+
+        # Create enhanced report file
+        os.makedirs('reports', exist_ok=True)
+        today = datetime.now().strftime('%Y-%m-%d')
+        filename = f'reports/market-summary-{today}.md'
+
+        with open(filename, 'w') as f:
+            f.write("# Enhanced Daily Market Summary\n")
+            f.write(f"**{datetime.now().strftime('%A, %B %d, %Y')}**\n\n")
+            f.write(f"*Analysis of {len(data)} global instruments*\n\n")
+            f.write("---\n\n")
+            f.write(response.content[0].text)
+            f.write("\n\n---\n\n")
+            f.write("## MARKET DATA TABLES\n\n")
+            
+            for title, instruments in groups:
+                table_data = []
+                for instrument in instruments:
+                    if instrument in data:
+                        info = data[instrument]
+                        table_data.append([instrument, f"{info['price']:.2f}", f"{info['change']:+.2f}%"])
+                
+                if table_data:
+                    f.write(f"### {title}\n\n")
+                    headers = ['Instrument', 'Level', 'Change %']
+                    table = tabulate(table_data, headers=headers, tablefmt='pipe')
+                    f.write(table)
+                    f.write("\n\n")
+            
+            f.write(f"\n*Generated: {datetime.now().strftime('%Y-%m-%d %H:%M:%S UTC')}*\n")
+
+        # Save info for GitHub issue
+        with open('report_info.json', 'w') as f:
+            json.dump({'filename': filename, 'count': len(data)}, f)
+
+        print(f"Report saved: {filename}")
+        ENDOFFILE
 
     - name: Fetch market data
       run: python fetch_data.py
@@ -143,29 +158,4 @@ jobs:
         ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
       run: python generate_report.py
         
-    - name: Commit report
-      run: |
-        git config --local user.email "action@github.com"
-        git config --local user.name "GitHub Action"
-        git add reports/
-        git commit -m "Enhanced market summary - $(date '+%Y-%m-%d')" || echo "Nothing to commit"
-        git push
-
-      if: success()
-      uses: actions/github-script@v6
-      with:
-        script: |
-          const fs = require('fs');
-          try {
-            const info = JSON.parse(fs.readFileSync('report_info.json', 'utf8'));
-            
-            await github.rest.issues.create({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              title: `Daily Market Summary - ${new Date().toLocaleDateString()}`,
-              body: `Your enhanced market report is ready!\n\nInstruments analyzed: ${info.count}\n\nView report: https://github.com/${context.repo.owner}/${context.repo.repo}/blob/main/${info.filename}`
-            });
-            console.log('Issue created successfully');
-          } catch (error) {
-            console.log('Error:', error.message);
-          }
+    - n
