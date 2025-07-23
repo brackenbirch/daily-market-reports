@@ -1,0 +1,36 @@
+name: Daily Market Report
+
+on:
+  schedule:
+    # Runs at 6:00 AM UTC daily (adjust timezone as needed)
+    - cron: '0 6 * * *'
+  workflow_dispatch: # Allows manual triggering
+
+jobs:
+  generate-market-report:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      
+    - name: Set up Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        
+    - name: Install dependencies
+      run: npm install axios fs path
+      
+    - name: Generate Market Report
+      env:
+        ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+      run: node generate-report.js
+      
+    - name: Commit and push report
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add reports/
+        git commit -m "Daily market report - $(date +'%Y-%m-%d')" || exit 0
+        git push
