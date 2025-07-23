@@ -1,12 +1,13 @@
-name: Minimal Market Report (Guaranteed Working)
+name: Daily Market Report with Real Data
 
 on:
   schedule:
-    - cron: '0 6 * * *'  # 6 AM UTC daily
-  workflow_dispatch: # Manual trigger
+    # Runs at 6:00 AM UTC daily
+    - cron: '0 6 * * *'
+  workflow_dispatch: # Allows manual triggering
 
 jobs:
-  generate-report:
+  generate-market-report:
     runs-on: ubuntu-latest
     
     steps:
@@ -18,13 +19,15 @@ jobs:
       with:
         node-version: '18'
         
-    - name: Install only required dependencies
-      run: npm install axios
+    - name: Install dependencies
+      run: npm install axios cheerio node-fetch
       
     - name: Generate Market Report
       env:
         ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-      run: node generate-report-minimal.js
+        ALPHA_VANTAGE_API_KEY: ${{ secrets.ALPHA_VANTAGE_API_KEY }}
+        FINNHUB_API_KEY: ${{ secrets.FINNHUB_API_KEY }}
+      run: node generate-report-enhanced.js
       
     - name: Commit and push report
       run: |
