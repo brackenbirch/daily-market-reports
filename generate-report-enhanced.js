@@ -64,10 +64,10 @@ async function sendMarketReportEmail(reportContent, dateStr) {
     }
     
     try {
-        console.log('📧 Setting up email transporter...');
+        console.log('📧 Setting up email transport...');
         
-        // Create transporter for Outlook/Hotmail
-        const transporter = nodemailer.createTransporter({
+        // Create transport for Outlook/Hotmail
+        const transport = nodemailer.createTransport({
             service: 'hotmail', // This works for outlook.com, hotmail.com, live.com
             auth: {
                 user: EMAIL_USERNAME,
@@ -106,7 +106,7 @@ async function sendMarketReportEmail(reportContent, dateStr) {
         };
         
         console.log('📤 Sending email...');
-        const info = await transporter.sendMail(mailOptions);
+        const info = await transport.sendMail(mailOptions);
         console.log('✅ Email sent successfully:', info.messageId);
         console.log('📧 Recipients:', EMAIL_TO);
         
