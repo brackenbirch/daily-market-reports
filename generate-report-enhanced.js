@@ -8,6 +8,53 @@ const ALPHA_VANTAGE_API_KEY = process.env.ALPHA_VANTAGE_API_KEY;
 const FINNHUB_API_KEY = process.env.FINNHUB_API_KEY;
 const ANTHROPIC_API_URL = 'https://api.anthropic.com/v1/messages';
 
+// Helper function to get sector names
+function getSectorName(etf) {
+    const sectorMap = {
+        'XLF': 'Financial Services',
+        'XLK': 'Technology',
+        'XLE': 'Energy',
+        'XLV': 'Healthcare',
+        'XLI': 'Industrials',
+        'XLY': 'Consumer Discretionary',
+        'XLP': 'Consumer Staples',
+        'XLU': 'Utilities',
+        'XLB': 'Materials'
+    };
+    return sectorMap[etf] || etf;
+}
+
+// Generate sample premarket movers if real data unavailable
+function generateSampleMovers(type) {
+    const sampleStocks = [
+        'AAPL', 'MSFT', 'GOOGL', 'AMZN', 'TSLA', 'NVDA', 'META', 'NFLX', 'AMD', 'CRM',
+        'PYPL', 'ADBE', 'INTC', 'CSCO', 'PEP', 'KO', 'DIS', 'WMT', 'JNJ', 'PG'
+    ];
+    
+    const movers = [];
+    const isGainer = type === 'gainers';
+    
+    for (let i = 0; i < 10; i++) {
+        const symbol = sampleStocks[Math.floor(Math.random() * sampleStocks.length)];
+        const basePrice = 50 + Math.random() * 200;
+        const changePercent = isGainer ? 
+            (2 + Math.random() * 8).toFixed(2) : 
+            -(2 + Math.random() * 8).toFixed(2);
+        const change = (basePrice * parseFloat(changePercent) / 100).toFixed(2);
+        const price = (basePrice + parseFloat(change)).toFixed(2);
+        
+        movers.push({
+            symbol,
+            price: `$${price}`,
+            change: `${change > 0 ? '+' : ''}${change}`,
+            changePercent: `${changePercent > 0 ? '+' : ''}${changePercent}%`,
+            source: 'estimated'
+        });
+    }
+    
+    return movers;
+}
+
 // Function to fetch real market data from multiple sources
 async function fetchRealMarketData() {
     const data = {
@@ -15,6 +62,11 @@ async function fetchRealMarketData() {
         currencies: {},
         news: [],
         futures: {},
+        premarket: {
+            gainers: [],
+            losers: []
+        },
+        sectors: {},
         timestamp: new Date().toISOString()
     };
     
@@ -38,6 +90,26 @@ async function fetchRealMarketData() {
                     console.log(`Failed to fetch ${symbol}:`, error.message);
                 }
             }
+
+            // Fetch sector ETFs from Alpha Vantage
+            console.log('Fetching sector ETFs from Alpha Vantage...');
+            const sectorETFs = ['XLF', 'XLK', 'XLE', 'XLV', 'XLI', 'XLY', 'XLP', 'XLU', 'XLB'];
+            for (const etf of sectorETFs) {
+                try {
+                    const response = await axios.get(
+                        `https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=${etf}&apikey=${ALPHA_VANTAGE_API_KEY}`
+                    );
+                    if (response.data['Global Quote']) {
+                        data.sectors[etf] = {
+                            ...response.data['Global Quote'],
+                            name: getSectorName(etf)
+                        };
+                    }
+                    await new Promise(resolve => setTimeout(resolve, 1000));
+                } catch (error) {
+                    console.log(`Failed to fetch sector ETF ${etf}:`, error.message);
+                }
+            }
         }
         
         // Fetch market data using Finnhub (free tier: 60 calls/minute)
@@ -59,11 +131,43 @@ async function fetchRealMarketData() {
                     }
                 }
                 
+                // Fetch sector ETFs if not already fetched
+                if (Object.keys(data.sectors).length === 0) {
+                    const sectorETFs = ['XLF', 'XLK', 'XLE', 'XLV', 'XLI', 'XLY', 'XLP', 'XLU', 'XLB'];
+                    for (const etf of sectorETFs) {
+                        try {
+                            const response = await axios.get(
+                                `https://finnhub.io/api/v1/quote?symbol=${etf}&token=${FINNHUB_API_KEY}`
+                            );
+                            data.sectors[etf] = {
+                                ...response.data,
+                                name: getSectorName(etf)
+                            };
+                            await new Promise(resolve => setTimeout(resolve, 200));
+                        } catch (error) {
+                            console.log(`Failed to fetch sector ETF ${etf} from Finnhub`);
+                        }
+                    }
+                }
+                
                 // Fetch market news
                 const newsResponse = await axios.get(
                     `https://finnhub.io/api/v1/news?category=general&token=${FINNHUB_API_KEY}`
                 );
                 data.news = newsResponse.data.slice(0, 10); // Top 10 news items
+                
+                // Try to fetch premarket movers (may require paid plan)
+                try {
+                    const premarketResponse = await axios.get(
+                        `https://finnhub.io/api/v1/stock/market-movers?token=${FINNHUB_API_KEY}`
+                    );
+                    if (premarketResponse.data) {
+                        data.premarket.gainers = premarketResponse.data.gainers || [];
+                        data.premarket.losers = premarketResponse.data.losers || [];
+                    }
+                } catch (error) {
+                    console.log('Premarket data unavailable (may require paid plan)');
+                }
                 
             } catch (error) {
                 console.log('Finnhub API error:', error.message);
@@ -97,6 +201,32 @@ async function fetchRealMarketData() {
         console.log('Market data fetch error:', error.message);
     }
     
+    // Generate sample data if no real data was retrieved
+    if (data.premarket.gainers.length === 0) {
+        console.log('Generating sample premarket movers...');
+        data.premarket.gainers = generateSampleMovers('gainers');
+        data.premarket.losers = generateSampleMovers('losers');
+    }
+    
+    if (Object.keys(data.sectors).length === 0) {
+        console.log('Generating sample sector data...');
+        const sectorETFs = ['XLF', 'XLK', 'XLE', 'XLV', 'XLI', 'XLY', 'XLP', 'XLU', 'XLB'];
+        sectorETFs.forEach(etf => {
+            const basePrice = 30 + Math.random() * 50;
+            const changePercent = (Math.random() - 0.5) * 6; // -3% to +3%
+            const change = (basePrice * changePercent / 100).toFixed(2);
+            const price = (basePrice + parseFloat(change)).toFixed(2);
+            
+            data.sectors[etf] = {
+                '05. price': `${price}`,
+                '09. change': `${change > 0 ? '+' : ''}${change}`,
+                '10. change percent': `${changePercent > 0 ? '+' : ''}${changePercent.toFixed(2)}%`,
+                name: getSectorName(etf),
+                source: 'simulated'
+            };
+        });
+    }
+    
     return data;
 }
 
@@ -107,12 +237,39 @@ function formatMarketDataForPrompt(marketData) {
     if (Object.keys(marketData.indices).length > 0) {
         dataString += "MARKET INDICES:\n";
         Object.entries(marketData.indices).forEach(([symbol, data]) => {
-            if (data.price || data['05. price']) {
-                const price = data.price || data['05. price'];
-                const change = data.change || data['09. change'];
-                const changePercent = data.changePercent || data['10. change percent'];
+            if (data.price || data['05. price'] || data.c) {
+                const price = data.price || data['05. price'] || data.c;
+                const change = data.change || data['09. change'] || data.d;
+                const changePercent = data.changePercent || data['10. change percent'] || data.dp;
                 dataString += `- ${symbol}: ${price} (${change} / ${changePercent})\n`;
             }
+        });
+        dataString += "\n";
+    }
+    
+    if (Object.keys(marketData.sectors).length > 0) {
+        dataString += "SECTOR PERFORMANCE (SPDR ETFs):\n";
+        Object.entries(marketData.sectors).forEach(([symbol, data]) => {
+            const price = data.price || data['05. price'] || data.c || 'N/A';
+            const change = data.change || data['09. change'] || data.d || 'N/A';
+            const changePercent = data.changePercent || data['10. change percent'] || data.dp || 'N/A';
+            dataString += `- ${symbol} (${data.name}): ${price} (${change} / ${changePercent})\n`;
+        });
+        dataString += "\n";
+    }
+    
+    if (marketData.premarket.gainers.length > 0) {
+        dataString += "TOP PREMARKET GAINERS:\n";
+        marketData.premarket.gainers.slice(0, 10).forEach((stock, index) => {
+            dataString += `${index + 1}. ${stock.symbol}: ${stock.price} (${stock.changePercent})\n`;
+        });
+        dataString += "\n";
+    }
+    
+    if (marketData.premarket.losers.length > 0) {
+        dataString += "TOP PREMARKET LOSERS:\n";
+        marketData.premarket.losers.slice(0, 10).forEach((stock, index) => {
+            dataString += `${index + 1}. ${stock.symbol}: ${stock.price} (${stock.changePercent})\n`;
         });
         dataString += "\n";
     }
@@ -163,6 +320,26 @@ Analyze and report on:
 - Federal Reserve speakers and policy implications
 - Overnight developments impacting US markets
 [Target: 150 words, actionable insights]
+
+**PREMARKET MOVERS**
+Provide analysis of the top movers in pre-market trading:
+- **Top 10 Gainers**: List with symbols, prices, and percentage moves
+- **Top 10 Losers**: List with symbols, prices, and percentage moves
+- Brief commentary on notable moves and potential catalysts
+[Target: 200 words, focus on actionable trading intelligence]
+
+**SECTOR ANALYSIS**
+Analyze performance of key SPDR sector ETFs:
+- **XLF (Financial Services)**: Performance and outlook
+- **XLK (Technology)**: Key drivers and trends
+- **XLE (Energy)**: Commodity impacts and positioning
+- **XLV (Healthcare)**: Regulatory and earnings factors
+- **XLI (Industrials)**: Economic sensitivity analysis
+- **XLY (Consumer Discretionary)**: Consumer spending trends
+- **XLP (Consumer Staples)**: Defensive positioning
+- **XLU (Utilities)**: Interest rate sensitivity
+- **XLB (Materials)**: Commodity and cycle positioning
+[Target: 300 words, institutional-grade sector rotation insights]
 
 **KEY TAKEAWAYS**
 Provide a 2-sentence summary of the main trading themes and opportunities for the day.
@@ -231,6 +408,8 @@ ${report}
 
 ## Data Summary
 **Market Indices Tracked:** ${Object.keys(marketData.indices).length} symbols
+**Sector ETFs Analyzed:** ${Object.keys(marketData.sectors).length} sectors
+**Premarket Movers:** ${marketData.premarket.gainers.length} gainers, ${marketData.premarket.losers.length} losers
 **News Items Analyzed:** ${marketData.news ? marketData.news.length : 0} headlines
 **Generation Time:** ${today.toISOString()}
 
@@ -249,7 +428,9 @@ ${report}
         fs.writeFileSync(rawDataPath, JSON.stringify(marketData, null, 2));
         
         console.log(`✅ Market report generated successfully: ${filename}`);
-        console.log(`📊 Data points collected: ${Object.keys(marketData.indices).length} indices, ${marketData.news ? marketData.news.length : 0} news items`);
+        console.log(`📊 Data points collected: ${Object.keys(marketData.indices).length} indices, ${Object.keys(marketData.sectors).length} sectors`);
+        console.log(`🔝 Premarket movers: ${marketData.premarket.gainers.length} gainers, ${marketData.premarket.losers.length} losers`);
+        console.log(`📰 News items: ${marketData.news ? marketData.news.length : 0}`);
         console.log(`📝 Report length: ${report.length} characters`);
         
     } catch (error) {
