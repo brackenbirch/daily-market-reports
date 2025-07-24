@@ -329,6 +329,10 @@ Analyze the SPDR sector ETF performance using the data provided:
 - **XLB (Materials)**: Commodity and cycle positioning
 [Target: 300 words, institutional-grade sector rotation insights]
 
+**LONGS/SHORTS**
+Use current market data from today's date and market closure information to give a high level report on the coming days longs and shorts and analyst level recommendations. Write in professional financial language suitable for institutional clients.
+[Target: 150 words]
+
 **KEY TAKEAWAYS**
 [2-sentence summary of main trading themes for the day]
 
