@@ -1,7 +1,7 @@
 # Daily Market Report - 2025-07-24
 
 📊 DAILY MARKET SUMMARY
-Generated: July 24, 2025 at 09:57 AM EDT
+Generated: July 24, 2025 at 10:14 AM EDT
 
 📈 MARKET PERFORMANCE
 🟢 SPY: $634.21 (+0.8507%)
@@ -10,9 +10,9 @@ Generated: July 24, 2025 at 09:57 AM EDT
 🟢 IWM: $226.68 (+1.5273%)
 
 💱 CURRENCY MARKETS
-EURUSD: 1.1779
-GBPUSD: 1.3553
-USDJPY: 146.5000
+EURUSD: 1.1787
+GBPUSD: 1.3559
+USDJPY: 146.3860
 
 📰 TOP HEADLINES
 1. The most surprising benefits of a 4-day workweek, from a researcher who's studied thousands of cases: 'We never expected' it
