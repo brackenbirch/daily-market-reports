@@ -128,9 +128,6 @@ async function sendOvernightReportEmail(reportContent, dateStr) {
         
         const emailContent = `
         <div style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; max-width: 900px; margin: 0 auto; background-color: white; padding: 20px;">
-            <div style="background-color: white; color: #2c3e50; padding: 20px; text-align: center; border-radius: 10px; margin-bottom: 20px; border: 2px solid #d4af37;">
-                <h1 style="margin: 0; font-size: 24px; color: #2c3e50;">MORNING MARKET INTELLIGENCE</h1>
-            </div>
             <div style="background-color: white; padding: 30px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
                 ${emailHtml}
                 
