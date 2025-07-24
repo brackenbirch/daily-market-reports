@@ -160,125 +160,125 @@
     "gainers": [
       {
         "symbol": "AAPL",
-        "price": "$255.35",
-        "change": "+21.98",
-        "changePercent": "+9.42%"
+        "price": "$171.58",
+        "change": "+8.74",
+        "changePercent": "+5.37%"
       },
       {
         "symbol": "MSFT",
-        "price": "$160.40",
-        "change": "+3.45",
-        "changePercent": "+2.20%"
+        "price": "$152.74",
+        "change": "+3.83",
+        "changePercent": "+2.57%"
       },
       {
         "symbol": "GOOGL",
-        "price": "$261.17",
-        "change": "+12.96",
-        "changePercent": "+5.22%"
+        "price": "$253.01",
+        "change": "+8.22",
+        "changePercent": "+3.36%"
       },
       {
         "symbol": "AMZN",
-        "price": "$72.51",
-        "change": "+2.10",
-        "changePercent": "+2.98%"
+        "price": "$203.79",
+        "change": "+9.28",
+        "changePercent": "+4.77%"
       },
       {
         "symbol": "TSLA",
-        "price": "$158.36",
-        "change": "+14.12",
-        "changePercent": "+9.79%"
+        "price": "$251.01",
+        "change": "+9.79",
+        "changePercent": "+4.06%"
       },
       {
         "symbol": "NVDA",
-        "price": "$265.89",
-        "change": "+18.94",
-        "changePercent": "+7.67%"
+        "price": "$120.51",
+        "change": "+8.47",
+        "changePercent": "+7.56%"
       },
       {
         "symbol": "META",
-        "price": "$147.94",
-        "change": "+5.43",
-        "changePercent": "+3.81%"
+        "price": "$202.54",
+        "change": "+7.19",
+        "changePercent": "+3.68%"
       },
       {
         "symbol": "NFLX",
-        "price": "$243.17",
-        "change": "+10.56",
-        "changePercent": "+4.54%"
+        "price": "$145.16",
+        "change": "+10.27",
+        "changePercent": "+7.61%"
       },
       {
         "symbol": "AMD",
-        "price": "$104.69",
-        "change": "+6.32",
-        "changePercent": "+6.43%"
+        "price": "$228.11",
+        "change": "+8.73",
+        "changePercent": "+3.98%"
       },
       {
         "symbol": "CRM",
-        "price": "$206.47",
-        "change": "+13.16",
-        "changePercent": "+6.81%"
+        "price": "$110.39",
+        "change": "+3.88",
+        "changePercent": "+3.64%"
       }
     ],
     "losers": [
       {
         "symbol": "AAPL",
-        "price": "$136.08",
-        "change": "-9.99",
-        "changePercent": "-6.84%"
+        "price": "$229.42",
+        "change": "-12.92",
+        "changePercent": "-5.33%"
       },
       {
         "symbol": "MSFT",
-        "price": "$213.24",
-        "change": "-21.89",
-        "changePercent": "-9.31%"
+        "price": "$130.06",
+        "change": "-7.53",
+        "changePercent": "-5.47%"
       },
       {
         "symbol": "GOOGL",
-        "price": "$73.56",
-        "change": "-1.89",
-        "changePercent": "-2.51%"
+        "price": "$208.10",
+        "change": "-11.93",
+        "changePercent": "-5.42%"
       },
       {
         "symbol": "AMZN",
-        "price": "$112.19",
-        "change": "-5.54",
-        "changePercent": "-4.71%"
+        "price": "$176.58",
+        "change": "-5.33",
+        "changePercent": "-2.93%"
       },
       {
         "symbol": "TSLA",
-        "price": "$147.46",
-        "change": "-7.13",
-        "changePercent": "-4.61%"
+        "price": "$223.34",
+        "change": "-17.72",
+        "changePercent": "-7.35%"
       },
       {
         "symbol": "NVDA",
-        "price": "$200.79",
-        "change": "-21.94",
-        "changePercent": "-9.85%"
-      },
-      {
-        "symbol": "META",
-        "price": "$148.39",
-        "change": "-12.50",
-        "changePercent": "-7.77%"
-      },
-      {
-        "symbol": "NFLX",
-        "price": "$176.15",
-        "change": "-5.97",
-        "changePercent": "-3.28%"
-      },
-      {
-        "symbol": "AMD",
-        "price": "$197.06",
-        "change": "-15.47",
+        "price": "$157.33",
+        "change": "-12.35",
         "changePercent": "-7.28%"
       },
       {
+        "symbol": "META",
+        "price": "$68.12",
+        "change": "-6.72",
+        "changePercent": "-8.98%"
+      },
+      {
+        "symbol": "NFLX",
+        "price": "$176.58",
+        "change": "-19.44",
+        "changePercent": "-9.92%"
+      },
+      {
+        "symbol": "AMD",
+        "price": "$185.72",
+        "change": "-11.02",
+        "changePercent": "-5.6%"
+      },
+      {
         "symbol": "CRM",
-        "price": "$125.75",
-        "change": "-6.20",
-        "changePercent": "-4.7%"
+        "price": "$139.01",
+        "change": "-7.38",
+        "changePercent": "-5.04%"
       }
     ]
   }
