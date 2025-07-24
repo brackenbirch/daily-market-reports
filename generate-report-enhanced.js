@@ -66,9 +66,9 @@ async function sendMarketReportEmail(reportContent, dateStr) {
     try {
         console.log('📧 Setting up email transport...');
         
-        // Create transport for Outlook/Hotmail
+        // Create transport for Gmail
         const transport = nodemailer.createTransport({
-            service: 'hotmail', // This works for outlook.com, hotmail.com, live.com
+            service: 'gmail', // Changed from 'hotmail' to 'gmail'
             auth: {
                 user: GMAIL_USER,
                 pass: GMAIL_PASSWORD
