@@ -309,6 +309,14 @@ Create a professional summary covering:
 - Overnight developments affecting US markets
 [Target: 150 words]
 
+**KEY HEADLINES**
+Use current market data from today's date and information from overnight/premarket developments to provide comprehensive coverage of major market-moving headlines. Include breaking news, corporate developments, geopolitical events, regulatory announcements, and central bank communications that are impacting global markets. Analyze the immediate market implications and institutional investor reactions. Write in professional financial language suitable for institutional clients.
+[Target: 250 words]
+
+**MARKET RESEARCH & ANALYSIS**
+Use current market data and recent market trends to provide in-depth institutional research analysis. Cover analyst upgrades/downgrades, sector rotation themes, institutional positioning changes, cross-asset correlation analysis, and emerging market themes. Include research from major investment banks, hedge fund positioning, and professional trading strategies. Focus on actionable insights for portfolio managers and institutional traders. Write in professional financial language suitable for institutional clients.
+[Target: 250 words]
+
 **ECONOMIC AND EARNINGS CALENDAR**
 Use current market data from today's date and previous market information to give a high level report on an economic calendar and an earnings calendar and an analyst level summary. Write in professional financial language suitable for institutional clients.
 [Target: 150 words]
@@ -351,10 +359,6 @@ Use current market data from today's date and information from the previous day 
 
 **KEY TAKEAWAYS**
 [2-sentence summary of main trading themes for the day]
-
-**KEY HEADLINES AND RESEARCH**
-[Target: 200 words]
-Summary of typical research themes and market headlines that would be relevant during market closure hours and their potential impacts.
 
 Write in professional financial language suitable for institutional clients. Use the market data provided above where available, and realistic market scenarios for other sections. Include today's date: ${new Date().toDateString()}.
 
