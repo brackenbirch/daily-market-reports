@@ -1,0 +1,285 @@
+{
+  "indices": {
+    "SPY": {
+      "01. symbol": "SPY",
+      "02. open": "631.5500",
+      "03. high": "634.2100",
+      "04. low": "629.7300",
+      "05. price": "634.2100",
+      "06. volume": "70511036",
+      "07. latest trading day": "2025-07-23",
+      "08. previous close": "628.8600",
+      "09. change": "5.3500",
+      "10. change percent": "0.8507%"
+    },
+    "QQQ": {
+      "01. symbol": "QQQ",
+      "02. open": "562.3400",
+      "03. high": "563.8500",
+      "04. low": "559.5800",
+      "05. price": "563.8100",
+      "06. volume": "40215259",
+      "07. latest trading day": "2025-07-23",
+      "08. previous close": "561.2500",
+      "09. change": "2.5600",
+      "10. change percent": "0.4561%"
+    },
+    "DIA": {
+      "01. symbol": "DIA",
+      "02. open": "447.2500",
+      "03. high": "450.2500",
+      "04. low": "446.3500",
+      "05. price": "450.2100",
+      "06. volume": "5486453",
+      "07. latest trading day": "2025-07-23",
+      "08. previous close": "444.9600",
+      "09. change": "5.2500",
+      "10. change percent": "1.1799%"
+    }
+  },
+  "sectors": {
+    "XLF": {
+      "01. symbol": "XLF",
+      "02. open": "52.8000",
+      "03. high": "53.1000",
+      "04. low": "52.5600",
+      "05. price": "53.1000",
+      "06. volume": "32111308",
+      "07. latest trading day": "2025-07-23",
+      "08. previous close": "52.6800",
+      "09. change": "0.4200",
+      "10. change percent": "0.7973%",
+      "name": "Financial Services"
+    },
+    "XLK": {
+      "01. symbol": "XLK",
+      "02. open": "259.4800",
+      "03. high": "260.6300",
+      "04. low": "257.9400",
+      "05. price": "260.2900",
+      "06. volume": "5045896",
+      "07. latest trading day": "2025-07-23",
+      "08. previous close": "258.8100",
+      "09. change": "1.4800",
+      "10. change percent": "0.5718%",
+      "name": "Technology"
+    },
+    "XLE": {
+      "01. symbol": "XLE",
+      "02. open": "85.8200",
+      "03. high": "86.8600",
+      "04. low": "85.6000",
+      "05. price": "86.8100",
+      "06. volume": "14023041",
+      "07. latest trading day": "2025-07-23",
+      "08. previous close": "85.4700",
+      "09. change": "1.3400",
+      "10. change percent": "1.5678%",
+      "name": "Energy"
+    },
+    "XLV": {
+      "01. symbol": "XLV",
+      "02. open": "135.2600",
+      "03. high": "136.3150",
+      "04. low": "134.8000",
+      "05. price": "136.2700",
+      "06. volume": "16623992",
+      "07. latest trading day": "2025-07-23",
+      "08. previous close": "133.5300",
+      "09. change": "2.7400",
+      "10. change percent": "2.0520%",
+      "name": "Healthcare"
+    },
+    "XLI": {
+      "01. symbol": "XLI",
+      "02. open": "152.2800",
+      "03. high": "153.8100",
+      "04. low": "152.0400",
+      "05. price": "153.7300",
+      "06. volume": "14747528",
+      "07. latest trading day": "2025-07-23",
+      "08. previous close": "151.0200",
+      "09. change": "2.7100",
+      "10. change percent": "1.7945%",
+      "name": "Industrials"
+    },
+    "XLY": {
+      "01. symbol": "XLY",
+      "02. open": "226.0000",
+      "03. high": "226.8900",
+      "04. low": "225.7300",
+      "05. price": "226.5500",
+      "06. volume": "5041597",
+      "07. latest trading day": "2025-07-23",
+      "08. previous close": "225.4800",
+      "09. change": "1.0700",
+      "10. change percent": "0.4745%",
+      "name": "Consumer Discretionary"
+    },
+    "XLP": {
+      "01. symbol": "XLP",
+      "02. open": "81.6500",
+      "03. high": "81.8600",
+      "04. low": "81.3900",
+      "05. price": "81.6500",
+      "06. volume": "13808933",
+      "07. latest trading day": "2025-07-23",
+      "08. previous close": "81.6200",
+      "09. change": "0.0300",
+      "10. change percent": "0.0368%",
+      "name": "Consumer Staples"
+    },
+    "XLU": {
+      "01. symbol": "XLU",
+      "02. open": "85.8100",
+      "03. high": "86.0200",
+      "04. low": "84.0650",
+      "05. price": "84.4100",
+      "06. volume": "20166514",
+      "07. latest trading day": "2025-07-23",
+      "08. previous close": "85.0500",
+      "09. change": "-0.6400",
+      "10. change percent": "-0.7525%",
+      "name": "Utilities"
+    },
+    "XLB": {
+      "01. symbol": "XLB",
+      "02. open": "92.2900",
+      "03. high": "92.7400",
+      "04. low": "92.0800",
+      "05. price": "92.2400",
+      "06. volume": "6747213",
+      "07. latest trading day": "2025-07-23",
+      "08. previous close": "91.9300",
+      "09. change": "0.3100",
+      "10. change percent": "0.3372%",
+      "name": "Materials"
+    }
+  },
+  "premarket": {
+    "gainers": [
+      {
+        "symbol": "AAPL",
+        "price": "$79.62",
+        "change": "+5.71",
+        "changePercent": "+7.73%"
+      },
+      {
+        "symbol": "MSFT",
+        "price": "$247.68",
+        "change": "+21.22",
+        "changePercent": "+9.37%"
+      },
+      {
+        "symbol": "GOOGL",
+        "price": "$234.94",
+        "change": "+20.42",
+        "changePercent": "+9.52%"
+      },
+      {
+        "symbol": "AMZN",
+        "price": "$211.35",
+        "change": "+10.45",
+        "changePercent": "+5.20%"
+      },
+      {
+        "symbol": "TSLA",
+        "price": "$74.78",
+        "change": "+4.05",
+        "changePercent": "+5.73%"
+      },
+      {
+        "symbol": "NVDA",
+        "price": "$64.84",
+        "change": "+2.92",
+        "changePercent": "+4.71%"
+      },
+      {
+        "symbol": "META",
+        "price": "$155.99",
+        "change": "+12.76",
+        "changePercent": "+8.91%"
+      },
+      {
+        "symbol": "NFLX",
+        "price": "$173.79",
+        "change": "+14.29",
+        "changePercent": "+8.96%"
+      },
+      {
+        "symbol": "AMD",
+        "price": "$161.85",
+        "change": "+6.43",
+        "changePercent": "+4.14%"
+      },
+      {
+        "symbol": "CRM",
+        "price": "$221.56",
+        "change": "+12.48",
+        "changePercent": "+5.97%"
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "AAPL",
+        "price": "$107.24",
+        "change": "-7.09",
+        "changePercent": "-6.2%"
+      },
+      {
+        "symbol": "MSFT",
+        "price": "$122.28",
+        "change": "-11.99",
+        "changePercent": "-8.93%"
+      },
+      {
+        "symbol": "GOOGL",
+        "price": "$83.23",
+        "change": "-1.91",
+        "changePercent": "-2.24%"
+      },
+      {
+        "symbol": "AMZN",
+        "price": "$208.93",
+        "change": "-14.45",
+        "changePercent": "-6.47%"
+      },
+      {
+        "symbol": "TSLA",
+        "price": "$185.76",
+        "change": "-5.39",
+        "changePercent": "-2.82%"
+      },
+      {
+        "symbol": "NVDA",
+        "price": "$200.17",
+        "change": "-22.07",
+        "changePercent": "-9.93%"
+      },
+      {
+        "symbol": "META",
+        "price": "$109.00",
+        "change": "-7.66",
+        "changePercent": "-6.57%"
+      },
+      {
+        "symbol": "NFLX",
+        "price": "$94.49",
+        "change": "-3.43",
+        "changePercent": "-3.5%"
+      },
+      {
+        "symbol": "AMD",
+        "price": "$57.51",
+        "change": "-3.64",
+        "changePercent": "-5.96%"
+      },
+      {
+        "symbol": "CRM",
+        "price": "$198.73",
+        "change": "-5.89",
+        "changePercent": "-2.88%"
+      }
+    ]
+  }
+}
