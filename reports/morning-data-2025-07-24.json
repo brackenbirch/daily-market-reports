@@ -172,169 +172,180 @@
     "topGainers": [
       {
         "symbol": "AAPL",
-        "price": "$230.18",
-        "change": "+21.70",
-        "changePercent": "+10.41%",
-        "volume": "166K",
+        "price": "$201.05",
+        "change": "+15.89",
+        "changePercent": "+8.58%",
+        "volume": "142K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "MSFT",
-        "price": "$76.44",
-        "change": "+9.37",
-        "changePercent": "+13.97%",
-        "volume": "184K",
+        "price": "$211.37",
+        "change": "+9.87",
+        "changePercent": "+4.90%",
+        "volume": "223K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "GOOGL",
-        "price": "$199.33",
-        "change": "+6.22",
-        "changePercent": "+3.22%",
-        "volume": "104K",
+        "price": "$206.41",
+        "change": "+1.68",
+        "changePercent": "+0.82%",
+        "volume": "145K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "AMZN",
-        "price": "$63.15",
-        "change": "+6.19",
-        "changePercent": "+10.87%",
-        "volume": "174K",
+        "price": "$234.39",
+        "change": "+28.50",
+        "changePercent": "+13.84%",
+        "volume": "200K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "TSLA",
-        "price": "$220.09",
-        "change": "+10.46",
-        "changePercent": "+4.99%",
-        "volume": "206K",
+        "price": "$213.44",
+        "change": "+18.36",
+        "changePercent": "+9.41%",
+        "volume": "102K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "NVDA",
-        "price": "$179.97",
-        "change": "+9.77",
-        "changePercent": "+5.74%",
-        "volume": "201K",
+        "price": "$242.78",
+        "change": "+30.37",
+        "changePercent": "+14.30%",
+        "volume": "49K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "META",
-        "price": "$227.03",
-        "change": "+15.09",
-        "changePercent": "+7.12%",
-        "volume": "124K",
+        "price": "$234.74",
+        "change": "+21.65",
+        "changePercent": "+10.16%",
+        "volume": "165K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "NFLX",
-        "price": "$203.52",
-        "change": "+21.69",
-        "changePercent": "+11.93%",
-        "volume": "173K",
+        "price": "$108.62",
+        "change": "+14.25",
+        "changePercent": "+15.10%",
+        "volume": "215K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "AMD",
-        "price": "$72.21",
-        "change": "+6.15",
-        "changePercent": "+9.31%",
-        "volume": "76K",
+        "price": "$91.27",
+        "change": "+4.57",
+        "changePercent": "+5.27%",
+        "volume": "207K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "CRM",
-        "price": "$146.71",
-        "change": "+9.75",
-        "changePercent": "+7.12%",
-        "volume": "155K",
+        "price": "$148.21",
+        "change": "+16.53",
+        "changePercent": "+12.55%",
+        "volume": "26K",
         "timeframe": "After-Hours"
       }
     ],
     "topLosers": [
       {
         "symbol": "AAPL",
-        "price": "$92.67",
-        "change": "-7.83",
-        "changePercent": "-7.79%",
-        "volume": "108K",
+        "price": "$136.41",
+        "change": "-6.44",
+        "changePercent": "-4.51%",
+        "volume": "47K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "MSFT",
-        "price": "$154.96",
-        "change": "-12.20",
-        "changePercent": "-7.3%",
-        "volume": "101K",
+        "price": "$185.82",
+        "change": "-25.17",
+        "changePercent": "-11.93%",
+        "volume": "77K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "GOOGL",
-        "price": "$103.40",
-        "change": "-10.94",
-        "changePercent": "-9.57%",
-        "volume": "89K",
+        "price": "$141.37",
+        "change": "-11.60",
+        "changePercent": "-7.58%",
+        "volume": "201K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "AMZN",
-        "price": "$197.60",
-        "change": "-24.75",
-        "changePercent": "-11.13%",
-        "volume": "222K",
+        "price": "$78.01",
+        "change": "-12.64",
+        "changePercent": "-13.94%",
+        "volume": "86K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "TSLA",
-        "price": "$194.05",
-        "change": "-18.52",
-        "changePercent": "-8.71%",
-        "volume": "131K",
+        "price": "$87.13",
+        "change": "-15.27",
+        "changePercent": "-14.91%",
+        "volume": "106K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "NVDA",
-        "price": "$166.92",
-        "change": "-23.17",
-        "changePercent": "-12.19%",
-        "volume": "72K",
+        "price": "$162.30",
+        "change": "-8.49",
+        "changePercent": "-4.97%",
+        "volume": "216K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "META",
-        "price": "$171.69",
-        "change": "-30.89",
-        "changePercent": "-15.25%",
-        "volume": "159K",
+        "price": "$130.67",
+        "change": "-17.65",
+        "changePercent": "-11.9%",
+        "volume": "118K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "NFLX",
-        "price": "$192.94",
-        "change": "-3.56",
-        "changePercent": "-1.81%",
-        "volume": "214K",
+        "price": "$110.37",
+        "change": "-13.79",
+        "changePercent": "-11.11%",
+        "volume": "132K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "AMD",
-        "price": "$149.25",
-        "change": "-16.22",
-        "changePercent": "-9.8%",
-        "volume": "55K",
+        "price": "$119.21",
+        "change": "-7.74",
+        "changePercent": "-6.1%",
+        "volume": "170K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "CRM",
-        "price": "$124.88",
-        "change": "-11.96",
-        "changePercent": "-8.74%",
-        "volume": "179K",
+        "price": "$167.98",
+        "change": "-3.18",
+        "changePercent": "-1.86%",
+        "volume": "222K",
         "timeframe": "After-Hours"
       }
     ]
   },
   "overnightNews": [
+    {
+      "category": "top news",
+      "datetime": 1753381620,
+      "headline": "How Hulk Hogan helped transform pro wrestling from a sideshow to the main event",
+      "id": 7500600,
+      "image": "https://static2.finnhub.io/file/publicdatany/finnhubimage/market_watch_logo.png",
+      "related": "",
+      "source": "MarketWatch",
+      "summary": "When Hogan burst onto the pro wrestling scene, it was a collection of fly-by-night regional promotions. By the time he was done, it had become a multibillion-dollar global business.",
+      "url": "https://www.marketwatch.com/story/how-hulk-hogan-helped-transform-wrestling-from-a-sideshow-to-the-main-event-a9a1bc7d"
+    },
     {
       "category": "top news",
       "datetime": 1753381140,
@@ -411,34 +422,23 @@
       "source": "CNBC",
       "summary": "The Investing Club holds its \"Morning Meeting\" every weekday at 10:20 a.m. ET.",
       "url": "https://www.cnbc.com/2025/07/24/jim-cramer-says-pullbacks-in-2-stocks-after-earnings-give-new-investors-chances-to-buy.html"
-    },
-    {
-      "category": "top news",
-      "datetime": 1753372440,
-      "headline": "The ECB just pressed pause on rate cuts. The next move isn’t clear.",
-      "id": 7500557,
-      "image": "https://static2.finnhub.io/file/publicdatany/finnhubimage/market_watch_logo.png",
-      "related": "",
-      "source": "MarketWatch",
-      "summary": "ECB President Christine Lagarde left economists and investors a little less certain as to when, or perhaps even whether, further easing will arrive.",
-      "url": "https://www.marketwatch.com/story/the-ecb-just-pressed-pause-on-rate-cuts-the-next-move-isnt-clear-b2af26d4"
     }
   ],
   "globalMarkets": {},
   "currencyMoves": {
     "EURUSD": {
-      "rate": "1.1769",
-      "lastRefreshed": "2025-07-24 18:41:23",
+      "rate": "1.1770",
+      "lastRefreshed": "2025-07-24 18:52:40",
       "session": "Overnight"
     },
     "GBPUSD": {
-      "rate": "1.3519",
-      "lastRefreshed": "2025-07-24 18:41:18",
+      "rate": "1.3518",
+      "lastRefreshed": "2025-07-24 18:52:46",
       "session": "Overnight"
     },
     "USDJPY": {
-      "rate": "146.8960",
-      "lastRefreshed": "2025-07-24 18:41:16",
+      "rate": "146.8860",
+      "lastRefreshed": "2025-07-24 18:52:42",
       "session": "Overnight"
     }
   }
