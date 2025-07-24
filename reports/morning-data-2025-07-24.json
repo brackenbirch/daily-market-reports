@@ -172,164 +172,164 @@
     "topGainers": [
       {
         "symbol": "AAPL",
-        "price": "$81.87",
-        "change": "+10.69",
-        "changePercent": "+15.02%",
-        "volume": "166K",
+        "price": "$251.02",
+        "change": "+6.55",
+        "changePercent": "+2.68%",
+        "volume": "69K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "MSFT",
-        "price": "$155.41",
-        "change": "+3.66",
-        "changePercent": "+2.41%",
-        "volume": "74K",
+        "price": "$118.88",
+        "change": "+1.37",
+        "changePercent": "+1.17%",
+        "volume": "120K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "GOOGL",
-        "price": "$63.38",
-        "change": "+3.06",
-        "changePercent": "+5.07%",
-        "volume": "188K",
+        "price": "$209.21",
+        "change": "+20.63",
+        "changePercent": "+10.94%",
+        "volume": "147K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "AMZN",
-        "price": "$114.40",
-        "change": "+14.96",
-        "changePercent": "+15.04%",
-        "volume": "165K",
+        "price": "$65.22",
+        "change": "+1.52",
+        "changePercent": "+2.38%",
+        "volume": "95K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "TSLA",
-        "price": "$189.15",
-        "change": "+3.56",
-        "changePercent": "+1.92%",
-        "volume": "42K",
+        "price": "$228.22",
+        "change": "+24.47",
+        "changePercent": "+12.01%",
+        "volume": "92K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "NVDA",
-        "price": "$222.87",
-        "change": "+3.40",
-        "changePercent": "+1.55%",
-        "volume": "160K",
+        "price": "$159.48",
+        "change": "+10.45",
+        "changePercent": "+7.01%",
+        "volume": "118K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "META",
-        "price": "$245.58",
-        "change": "+24.30",
-        "changePercent": "+10.98%",
-        "volume": "33K",
+        "price": "$99.80",
+        "change": "+12.60",
+        "changePercent": "+14.45%",
+        "volume": "48K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "NFLX",
-        "price": "$264.45",
-        "change": "+21.34",
-        "changePercent": "+8.78%",
-        "volume": "123K",
+        "price": "$261.10",
+        "change": "+17.40",
+        "changePercent": "+7.14%",
+        "volume": "175K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "AMD",
-        "price": "$163.37",
-        "change": "+11.37",
-        "changePercent": "+7.48%",
-        "volume": "66K",
+        "price": "$262.97",
+        "change": "+27.78",
+        "changePercent": "+11.81%",
+        "volume": "113K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "CRM",
-        "price": "$198.46",
-        "change": "+16.92",
-        "changePercent": "+9.32%",
-        "volume": "81K",
+        "price": "$134.01",
+        "change": "+8.01",
+        "changePercent": "+6.36%",
+        "volume": "119K",
         "timeframe": "After-Hours"
       }
     ],
     "topLosers": [
       {
         "symbol": "AAPL",
-        "price": "$232.26",
-        "change": "-1.28",
-        "changePercent": "-0.55%",
-        "volume": "161K",
+        "price": "$105.52",
+        "change": "-4.48",
+        "changePercent": "-4.07%",
+        "volume": "82K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "MSFT",
-        "price": "$180.63",
-        "change": "-9.63",
-        "changePercent": "-5.06%",
-        "volume": "46K",
+        "price": "$98.11",
+        "change": "-5.14",
+        "changePercent": "-4.98%",
+        "volume": "91K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "GOOGL",
-        "price": "$134.18",
-        "change": "-3.64",
-        "changePercent": "-2.64%",
-        "volume": "55K",
+        "price": "$194.22",
+        "change": "-24.30",
+        "changePercent": "-11.12%",
+        "volume": "110K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "AMZN",
-        "price": "$66.83",
-        "change": "-12.02",
-        "changePercent": "-15.24%",
-        "volume": "214K",
+        "price": "$129.64",
+        "change": "-9.07",
+        "changePercent": "-6.54%",
+        "volume": "84K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "TSLA",
-        "price": "$51.86",
-        "change": "-5.47",
-        "changePercent": "-9.54%",
-        "volume": "185K",
+        "price": "$233.01",
+        "change": "-7.88",
+        "changePercent": "-3.27%",
+        "volume": "26K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "NVDA",
-        "price": "$113.30",
-        "change": "-7.54",
-        "changePercent": "-6.24%",
-        "volume": "71K",
+        "price": "$119.80",
+        "change": "-0.78",
+        "changePercent": "-0.65%",
+        "volume": "78K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "META",
-        "price": "$47.56",
-        "change": "-4.30",
-        "changePercent": "-8.3%",
-        "volume": "101K",
+        "price": "$123.03",
+        "change": "-7.24",
+        "changePercent": "-5.56%",
+        "volume": "120K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "NFLX",
-        "price": "$45.13",
-        "change": "-6.90",
-        "changePercent": "-13.27%",
-        "volume": "140K",
+        "price": "$172.61",
+        "change": "-8.34",
+        "changePercent": "-4.61%",
+        "volume": "116K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "AMD",
-        "price": "$115.93",
-        "change": "-7.60",
-        "changePercent": "-6.15%",
-        "volume": "148K",
+        "price": "$173.89",
+        "change": "-24.21",
+        "changePercent": "-12.22%",
+        "volume": "160K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "CRM",
-        "price": "$68.63",
-        "change": "-7.55",
-        "changePercent": "-9.91%",
-        "volume": "221K",
+        "price": "$211.27",
+        "change": "-4.53",
+        "changePercent": "-2.1%",
+        "volume": "197K",
         "timeframe": "After-Hours"
       }
     ]
@@ -427,18 +427,18 @@
   "globalMarkets": {},
   "currencyMoves": {
     "EURUSD": {
-      "rate": "1.1769",
-      "lastRefreshed": "2025-07-24 19:14:27",
+      "rate": "1.1770",
+      "lastRefreshed": "2025-07-24 19:21:07",
       "session": "Overnight"
     },
     "GBPUSD": {
-      "rate": "1.3514",
-      "lastRefreshed": "2025-07-24 19:14:07",
+      "rate": "1.3516",
+      "lastRefreshed": "2025-07-24 19:21:03",
       "session": "Overnight"
     },
     "USDJPY": {
-      "rate": "146.9400",
-      "lastRefreshed": "2025-07-24 19:14:24",
+      "rate": "146.9100",
+      "lastRefreshed": "2025-07-24 19:21:08",
       "session": "Overnight"
     }
   }
