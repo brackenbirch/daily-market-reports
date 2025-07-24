@@ -13,8 +13,8 @@ class MarketReportGenerator {
         this.workEmails = process.env.WORK_EMAIL_LIST ? 
             process.env.WORK_EMAIL_LIST.split(',').map(email => email.trim()) : [];
         
-        // Setup email transporter
-        this.transporter = nodemailer.createTransporter({
+        // Setup email transport
+        this.transport = nodemailer.createTransport({
             service: 'gmail',
             auth: {
                 user: this.gmailUser,
@@ -245,7 +245,7 @@ Report generated: ${currentTime}`;
 
         try {
             // Send to your Gmail
-            await this.transporter.sendMail(mailOptions);
+            await this.transport.sendMail(mailOptions);
             console.log(`✅ Report sent to ${this.gmailUser}`);
 
             // Send to work emails if configured
@@ -253,7 +253,7 @@ Report generated: ${currentTime}`;
                 for (const workEmail of this.workEmails) {
                     if (workEmail) {
                         mailOptions.to = workEmail;
-                        await this.transporter.sendMail(mailOptions);
+                        await this.transport.sendMail(mailOptions);
                         console.log(`✅ Report sent to ${workEmail}`);
                         // Small delay between emails
                         await this.sleep(1000);
