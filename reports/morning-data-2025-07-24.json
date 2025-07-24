@@ -172,169 +172,180 @@
     "topGainers": [
       {
         "symbol": "AAPL",
-        "price": "$133.66",
-        "change": "+16.03",
-        "changePercent": "+13.63%",
-        "volume": "52K",
+        "price": "$140.84",
+        "change": "+14.85",
+        "changePercent": "+11.79%",
+        "volume": "152K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "MSFT",
-        "price": "$115.66",
-        "change": "+3.55",
-        "changePercent": "+3.17%",
-        "volume": "70K",
+        "price": "$254.15",
+        "change": "+14.25",
+        "changePercent": "+5.94%",
+        "volume": "168K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "GOOGL",
-        "price": "$234.33",
-        "change": "+25.74",
-        "changePercent": "+12.34%",
-        "volume": "114K",
+        "price": "$61.92",
+        "change": "+7.54",
+        "changePercent": "+13.87%",
+        "volume": "132K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "AMZN",
-        "price": "$229.50",
-        "change": "+25.23",
-        "changePercent": "+12.35%",
-        "volume": "151K",
+        "price": "$117.31",
+        "change": "+10.86",
+        "changePercent": "+10.20%",
+        "volume": "145K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "TSLA",
-        "price": "$86.16",
-        "change": "+1.97",
-        "changePercent": "+2.34%",
-        "volume": "118K",
+        "price": "$206.25",
+        "change": "+19.33",
+        "changePercent": "+10.34%",
+        "volume": "145K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "NVDA",
-        "price": "$115.05",
-        "change": "+7.11",
-        "changePercent": "+6.59%",
-        "volume": "173K",
+        "price": "$148.87",
+        "change": "+17.95",
+        "changePercent": "+13.71%",
+        "volume": "205K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "META",
-        "price": "$208.88",
-        "change": "+15.04",
-        "changePercent": "+7.76%",
-        "volume": "86K",
+        "price": "$113.44",
+        "change": "+12.69",
+        "changePercent": "+12.60%",
+        "volume": "171K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "NFLX",
-        "price": "$241.97",
-        "change": "+15.70",
-        "changePercent": "+6.94%",
-        "volume": "106K",
+        "price": "$251.65",
+        "change": "+12.05",
+        "changePercent": "+5.03%",
+        "volume": "173K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "AMD",
-        "price": "$261.58",
-        "change": "+34.95",
-        "changePercent": "+15.42%",
-        "volume": "198K",
+        "price": "$204.32",
+        "change": "+27.33",
+        "changePercent": "+15.44%",
+        "volume": "38K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "CRM",
-        "price": "$168.75",
-        "change": "+16.83",
-        "changePercent": "+11.08%",
-        "volume": "76K",
+        "price": "$68.05",
+        "change": "+8.35",
+        "changePercent": "+13.99%",
+        "volume": "163K",
         "timeframe": "After-Hours"
       }
     ],
     "topLosers": [
       {
         "symbol": "AAPL",
-        "price": "$96.94",
-        "change": "-7.55",
-        "changePercent": "-7.23%",
-        "volume": "198K",
+        "price": "$161.38",
+        "change": "-19.44",
+        "changePercent": "-10.75%",
+        "volume": "54K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "MSFT",
-        "price": "$179.39",
-        "change": "-9.54",
-        "changePercent": "-5.05%",
-        "volume": "134K",
+        "price": "$149.91",
+        "change": "-8.14",
+        "changePercent": "-5.15%",
+        "volume": "68K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "GOOGL",
-        "price": "$230.37",
-        "change": "-6.81",
-        "changePercent": "-2.87%",
-        "volume": "61K",
+        "price": "$143.49",
+        "change": "-15.01",
+        "changePercent": "-9.47%",
+        "volume": "41K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "AMZN",
-        "price": "$154.13",
-        "change": "-13.15",
-        "changePercent": "-7.86%",
-        "volume": "70K",
+        "price": "$113.21",
+        "change": "-1.05",
+        "changePercent": "-0.92%",
+        "volume": "157K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "TSLA",
-        "price": "$55.30",
-        "change": "-2.73",
-        "changePercent": "-4.71%",
-        "volume": "211K",
+        "price": "$164.59",
+        "change": "-14.92",
+        "changePercent": "-8.31%",
+        "volume": "114K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "NVDA",
-        "price": "$177.39",
-        "change": "-22.74",
-        "changePercent": "-11.36%",
-        "volume": "197K",
+        "price": "$130.57",
+        "change": "-22.93",
+        "changePercent": "-14.94%",
+        "volume": "173K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "META",
-        "price": "$85.92",
-        "change": "-2.10",
-        "changePercent": "-2.39%",
-        "volume": "107K",
+        "price": "$184.67",
+        "change": "-5.50",
+        "changePercent": "-2.89%",
+        "volume": "203K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "NFLX",
-        "price": "$54.95",
-        "change": "-1.40",
-        "changePercent": "-2.48%",
-        "volume": "148K",
+        "price": "$135.91",
+        "change": "-6.14",
+        "changePercent": "-4.32%",
+        "volume": "224K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "AMD",
-        "price": "$91.45",
-        "change": "-4.07",
-        "changePercent": "-4.26%",
-        "volume": "107K",
+        "price": "$201.47",
+        "change": "-14.12",
+        "changePercent": "-6.55%",
+        "volume": "124K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "CRM",
-        "price": "$76.96",
-        "change": "-2.21",
-        "changePercent": "-2.79%",
-        "volume": "218K",
+        "price": "$78.99",
+        "change": "-6.56",
+        "changePercent": "-7.67%",
+        "volume": "128K",
         "timeframe": "After-Hours"
       }
     ]
   },
   "overnightNews": [
+    {
+      "category": "top news",
+      "datetime": 1753380527,
+      "headline": "S&P 500 and the Dow go different ways — plus, Google gives our chip names a lift",
+      "id": 7500597,
+      "image": "https://image.cnbcfm.com/api/v1/image/108169493-17520658522025-07-09t125051z_974449402_rc20jfapo14t_rtrmadp_0_israel-tech-nvidia.jpeg?v=1752065899&w=1920&h=1080",
+      "related": "",
+      "source": "CNBC",
+      "summary": "Every weekday, the Investing Club releases the Homestretch; an actionable afternoon update just in time for the last hour of trading.",
+      "url": "https://www.cnbc.com/2025/07/24/sp-500-and-the-dow-go-different-ways-plus-google-gives-our-chip-names-a-lift.html"
+    },
     {
       "category": "top news",
       "datetime": 1753378980,
@@ -411,34 +422,23 @@
       "source": "CNBC",
       "summary": "Attempts to destroy AI to stop a superintelligence from taking over the world are unlikely to work. Humans may have to persuade AI into saving us.",
       "url": "https://www.cnbc.com/2025/07/24/in-ai-attempt-to-take-over-world-theres-no-kill-switch-to-save-us.html"
-    },
-    {
-      "category": "top news",
-      "datetime": 1753368720,
-      "headline": "S&P economic PMIs find stronger but uneven growth, higher inflation in July",
-      "id": 7500535,
-      "image": "https://static2.finnhub.io/file/publicdatany/finnhubimage/market_watch_logo.png",
-      "related": "",
-      "source": "MarketWatch",
-      "summary": "U.S. economic activity grew at a sharply higher rate in July, a pair of S&P surveys of purchasing managers found — though the growth was concentrated in the services sector, while manufacturing struggled.",
-      "url": "https://www.marketwatch.com/story/service-sector-fuels-stronger-growth-in-july-while-manufacturing-stumbles-s-p-pmi-surveys-find-79fceb30"
     }
   ],
   "globalMarkets": {},
   "currencyMoves": {
     "EURUSD": {
-      "rate": "1.1767",
-      "lastRefreshed": "2025-07-24 18:17:10",
+      "rate": "1.1769",
+      "lastRefreshed": "2025-07-24 18:29:00",
       "session": "Overnight"
     },
     "GBPUSD": {
-      "rate": "1.3517",
-      "lastRefreshed": "2025-07-24 18:17:08",
+      "rate": "1.3519",
+      "lastRefreshed": "2025-07-24 18:28:47",
       "session": "Overnight"
     },
     "USDJPY": {
-      "rate": "146.8790",
-      "lastRefreshed": "2025-07-24 18:17:24",
+      "rate": "146.8670",
+      "lastRefreshed": "2025-07-24 18:28:47",
       "session": "Overnight"
     }
   }
