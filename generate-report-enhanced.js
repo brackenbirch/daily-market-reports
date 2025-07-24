@@ -119,7 +119,7 @@ async function sendOvernightReportEmail(reportContent, dateStr) {
         const emailHtml = reportContent
             .replace(/^# (.*$)/gm, '<h1 style="color: #2c3e50; border-bottom: 3px solid #d4af37; padding-bottom: 10px;">$1</h1>')
             .replace(/^## (.*$)/gm, '<h2 style="color: #2c3e50; margin-top: 25px;">$1</h2>')
-            .replace(/^\*\*(.*?)\*\*/gm, '<hr style="border: none; border-top: 1px solid #d4af37; margin: 30px 0 20px 0;"><h3 style="color: #2c3e50; margin-top: 20px; margin-bottom: 10px; border-left: 3px solid #d4af37; padding-left: 10px; border-bottom: 2px solid #d4af37; padding-bottom: 8px;">$1</h3>')
+            .replace(/^\*\*(.*?)\*\*/gm, '<h3 style="color: #2c3e50; margin-top: 30px; margin-bottom: 15px; border-bottom: 2px solid #d4af37; padding-bottom: 10px; font-weight: bold;">$1</h3>')
             .replace(/^\*(.*$)/gm, '<p style="font-style: italic; color: #7f8c8d;">$1</p>')
             .replace(/^([^<\n].*$)/gm, '<p style="line-height: 1.6; margin-bottom: 10px; color: #000000;">$1</p>')
             .replace(/\n\n/g, '<br><br>')
