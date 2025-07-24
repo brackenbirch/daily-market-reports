@@ -27,7 +27,7 @@ function getSectorName(etf) {
     return sectorMap[etf] || etf;
 }
 
-// Generate sample premarket movers
+// Generate sample premarket movers with enhanced data for charts
 function generateSampleMovers(type) {
     const sampleStocks = [
         'AAPL', 'MSFT', 'GOOGL', 'AMZN', 'TSLA', 'NVDA', 'META', 'NFLX', 'AMD', 'CRM'
@@ -44,16 +44,54 @@ function generateSampleMovers(type) {
             -(2 + Math.random() * 8).toFixed(2);
         const change = (basePrice * parseFloat(changePercent) / 100).toFixed(2);
         const price = (basePrice + parseFloat(change)).toFixed(2);
+        const volume = Math.floor(Math.random() * 1000000) + 100000;
         
         movers.push({
             symbol,
             price: `$${price}`,
             change: `${change > 0 ? '+' : ''}${change}`,
-            changePercent: `${changePercent > 0 ? '+' : ''}${changePercent}%`
+            changePercent: `${changePercent > 0 ? '+' : ''}${changePercent}%`,
+            volume: volume.toLocaleString()
         });
     }
     
     return movers;
+}
+
+// Generate sample commodities and bonds data
+function generateSampleCommodities() {
+    const commodities = [
+        { symbol: 'GOLD', name: 'Gold (oz)', basePrice: 2000 },
+        { symbol: 'OIL', name: 'WTI Crude', basePrice: 75 },
+        { symbol: 'SILVER', name: 'Silver (oz)', basePrice: 25 },
+        { symbol: 'COPPER', name: 'Copper', basePrice: 3.8 },
+        { symbol: 'NATGAS', name: 'Natural Gas', basePrice: 2.5 }
+    ];
+    
+    const bonds = [
+        { symbol: 'US10Y', name: '10-Year Treasury', basePrice: 4.2 },
+        { symbol: 'US2Y', name: '2-Year Treasury', basePrice: 4.8 },
+        { symbol: 'US30Y', name: '30-Year Treasury', basePrice: 4.4 },
+        { symbol: 'DXY', name: 'Dollar Index', basePrice: 103.5 }
+    ];
+    
+    const data = [];
+    
+    [...commodities, ...bonds].forEach(item => {
+        const changePercent = (Math.random() - 0.5) * 4; // -2% to +2%
+        const change = (item.basePrice * changePercent / 100).toFixed(2);
+        const price = (item.basePrice + parseFloat(change)).toFixed(2);
+        
+        data.push({
+            symbol: item.symbol,
+            name: item.name,
+            price: `$${price}`,
+            change: `${change > 0 ? '+' : ''}${change}`,
+            changePercent: `${changePercent > 0 ? '+' : ''}${changePercent.toFixed(2)}%`
+        });
+    });
+    
+    return data;
 }
 
 // Function to send email with the market report
@@ -68,7 +106,7 @@ async function sendMarketReportEmail(reportContent, dateStr) {
         
         // Create transport for Gmail
         const transport = nodemailer.createTransport({
-            service: 'gmail', // Changed from 'hotmail' to 'gmail'
+            service: 'gmail',
             auth: {
                 user: GMAIL_USER,
                 pass: GMAIL_PASSWORD
@@ -78,9 +116,13 @@ async function sendMarketReportEmail(reportContent, dateStr) {
         // Convert markdown to a more email-friendly format
         const emailHtml = reportContent
             .replace(/^# (.*$)/gm, '<h1 style="color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 10px;">$1</h1>')
-            .replace(/^## (.*$)/gm, '<h2 style="color: #34495e; margin-top: 25px;">$1</h2>')
+            .replace(/^## (.*$)/gm, '<h2 style="color: #34495e; margin-top: 25px;">$2</h2>')
             .replace(/^\*\*(.*?)\*\*/gm, '<h3 style="color: #e74c3c; margin-top: 20px; margin-bottom: 10px;">$1</h3>')
             .replace(/^\*(.*$)/gm, '<p style="font-style: italic; color: #7f8c8d;">$1</p>')
+            .replace(/```([^`]+)```/g, '<pre style="background: #f8f9fa; padding: 15px; border-radius: 5px; font-family: monospace; border-left: 4px solid #007bff; overflow-x: auto;">$1</pre>')
+            .replace(/┌[─┬┐]+/g, '<div style="font-family: monospace; background: #f8f9fa; padding: 10px; border-radius: 5px; margin: 10px 0;">')
+            .replace(/└[─┴┘]+/g, '</div>')
+            .replace(/│([^│\n]+)│/g, '<span style="display: inline-block; min-width: 80px; text-align: center; border-right: 1px solid #ddd; padding: 2px 8px;">$1</span>')
             .replace(/^([^<\n].*$)/gm, '<p style="line-height: 1.6; margin-bottom: 10px;">$1</p>')
             .replace(/\n\n/g, '<br><br>')
             .replace(/\n/g, '<br>');
@@ -147,7 +189,8 @@ async function fetchMarketData() {
         premarket: {
             gainers: [],
             losers: []
-        }
+        },
+        commodities: []
     };
     
     try {
@@ -227,6 +270,11 @@ async function fetchMarketData() {
         marketData.premarket.losers = generateSampleMovers('losers');
     }
     
+    if (marketData.commodities.length === 0) {
+        console.log('Generating sample commodities data...');
+        marketData.commodities = generateSampleCommodities();
+    }
+    
     return marketData;
 }
 
@@ -259,7 +307,7 @@ function formatMarketDataForPrompt(marketData) {
     if (marketData.premarket.gainers.length > 0) {
         dataString += "TOP PREMARKET GAINERS:\n";
         marketData.premarket.gainers.forEach((stock, index) => {
-            dataString += `${index + 1}. ${stock.symbol}: ${stock.price} (${stock.changePercent})\n`;
+            dataString += `${index + 1}. ${stock.symbol}: ${stock.price} (${stock.changePercent}) Vol: ${stock.volume}\n`;
         });
         dataString += "\n";
     }
@@ -267,7 +315,15 @@ function formatMarketDataForPrompt(marketData) {
     if (marketData.premarket.losers.length > 0) {
         dataString += "TOP PREMARKET LOSERS:\n";
         marketData.premarket.losers.forEach((stock, index) => {
-            dataString += `${index + 1}. ${stock.symbol}: ${stock.price} (${stock.changePercent})\n`;
+            dataString += `${index + 1}. ${stock.symbol}: ${stock.price} (${stock.changePercent}) Vol: ${stock.volume}\n`;
+        });
+        dataString += "\n";
+    }
+    
+    if (marketData.commodities.length > 0) {
+        dataString += "BONDS & COMMODITIES DATA:\n";
+        marketData.commodities.forEach(item => {
+            dataString += `- ${item.symbol} (${item.name}): ${item.price} (${item.change} / ${item.changePercent})\n`;
         });
         dataString += "\n";
     }
@@ -310,11 +366,31 @@ Create a professional summary covering:
 [Target: 150 words]
 
 **PREMARKET MOVERS**
-Analyze the premarket trading data provided above:
-- **Top 10 Gainers**: Use the data provided, with commentary on notable moves
-- **Top 10 Losers**: Use the data provided, with commentary on notable moves
-- Brief analysis of potential catalysts and trading implications
-[Target: 200 words, focus on actionable insights]
+Analyze the premarket trading data provided above and create a professional formatted table/chart:
+
+Create two formatted tables using ASCII characters like this example format:
+\`\`\`
+TOP PREMARKET GAINERS
+┌──────┬─────────┬─────────┬──────────┬──────────┐
+│Symbol│  Price  │ Change  │ % Change │  Volume  │
+├──────┼─────────┼─────────┼──────────┼──────────┤
+│ TSLA │ $245.67 │ +$26.89 │  +12.3%  │  2.1M    │
+│ NVDA │ $892.45 │ +$71.23 │   +8.7%  │  1.8M    │
+│ AAPL │ $187.23 │ +$10.95 │   +6.2%  │  3.2M    │
+└──────┴─────────┴─────────┴──────────┴──────────┘
+
+TOP PREMARKET LOSERS
+┌──────┬─────────┬─────────┬──────────┬──────────┐
+│Symbol│  Price  │ Change  │ % Change │  Volume  │
+├──────┼─────────┼─────────┼──────────┼──────────┤
+│ META │ $298.45 │ -$32.15 │   -9.8%  │  1.9M    │
+│ AMZN │ $142.67 │ -$11.39 │   -7.4%  │  2.4M    │
+│ MSFT │ $378.91 │ -$20.41 │   -5.1%  │  1.6M    │
+└──────┴─────────┴─────────┴──────────┴──────────┘
+\`\`\`
+
+Include brief analysis of potential catalysts and trading implications.
+[Target: 250 words total including tables, focus on actionable insights with visual data presentation]
 
 **SECTOR ANALYSIS**
 Analyze the SPDR sector ETF performance using the data provided:
@@ -333,6 +409,27 @@ Analyze the SPDR sector ETF performance using the data provided:
 Use current market data from today's date and market closure information to give a high level report on the coming days longs and shorts and analyst level recommendations. Write in professional financial language suitable for institutional clients.
 [Target: 150 words]
 
+**BONDS & COMMODITIES**
+Use the bonds and commodities data provided above to create a professional analysis with formatted table:
+
+Create a formatted table using ASCII characters like this example:
+\`\`\`
+BONDS & COMMODITIES DASHBOARD
+┌──────────┬─────────────────┬─────────┬─────────┬──────────┐
+│ Symbol   │      Asset      │  Price  │ Change  │ % Change │
+├──────────┼─────────────────┼─────────┼─────────┼──────────┤
+│ GOLD     │ Gold (oz)       │ $2,034  │ +$12.45 │  +0.62%  │
+│ OIL      │ WTI Crude       │ $76.23  │ -$1.34  │  -1.73%  │
+│ SILVER   │ Silver (oz)     │ $25.67  │ +$0.43  │  +1.70%  │
+│ US10Y    │ 10-Year Treasury│  4.18%  │ +0.05   │    --    │
+│ US2Y     │ 2-Year Treasury │  4.82%  │ +0.03   │    --    │
+│ DXY      │ Dollar Index    │ 103.21  │ -0.18   │  -0.17%  │
+└──────────┴─────────────────┴─────────┴─────────┴──────────┘
+\`\`\`
+
+Include analyst-level summary of key trends and implications. Write in professional financial language suitable for institutional clients.
+[Target: 200 words total including table]
+
 **KEY TAKEAWAYS**
 [2-sentence summary of main trading themes for the day]
 
@@ -342,7 +439,7 @@ Summary of typical research themes and market headlines that would be relevant d
 
 Write in professional financial language suitable for institutional clients. Use the market data provided above where available, and realistic market scenarios for other sections. Include today's date: ${new Date().toDateString()}.
 
-IMPORTANT: Create a realistic, professional report using the market data provided and your knowledge of current market trends.`;
+IMPORTANT: Create a realistic, professional report using the market data provided and your knowledge of current market trends. Make sure to use the exact ASCII table format shown in the examples with proper box-drawing characters.`;
 
 async function generateMarketReport() {
     try {
@@ -350,7 +447,7 @@ async function generateMarketReport() {
         
         // Fetch available market data
         const marketData = await fetchMarketData();
-        console.log('Market data fetched - Indices:', Object.keys(marketData.indices).length, 'Sectors:', Object.keys(marketData.sectors).length);
+        console.log('Market data fetched - Indices:', Object.keys(marketData.indices).length, 'Sectors:', Object.keys(marketData.sectors).length, 'Commodities:', marketData.commodities.length);
         
         const response = await axios.post(ANTHROPIC_API_URL, {
             model: 'claude-sonnet-4-20250514',
@@ -395,6 +492,7 @@ ${report}
 **Market Indices:** ${Object.keys(marketData.indices).length} tracked
 **Sector ETFs:** ${Object.keys(marketData.sectors).length} analyzed
 **Premarket Movers:** ${marketData.premarket.gainers.length} gainers, ${marketData.premarket.losers.length} losers
+**Bonds & Commodities:** ${marketData.commodities.length} instruments tracked
 
 *This report was automatically generated using Claude AI via GitHub Actions*
 `;
@@ -404,7 +502,7 @@ ${report}
         
         console.log(`Market report generated successfully: ${filename}`);
         console.log(`Report length: ${report.length} characters`);
-        console.log(`Data: ${Object.keys(marketData.indices).length} indices, ${Object.keys(marketData.sectors).length} sectors`);
+        console.log(`Data: ${Object.keys(marketData.indices).length} indices, ${Object.keys(marketData.sectors).length} sectors, ${marketData.commodities.length} commodities`);
         
         // Also create/update latest report for easy access
         const latestFilepath = path.join(reportsDir, 'latest-market-report.md');
@@ -419,7 +517,7 @@ ${report}
         await sendMarketReportEmail(reportWithMetadata, dateStr);
         
         console.log('✅ Report generation and email sending completed!');
-        console.log('📧 Email contains exact copy of GitHub report');
+        console.log('📧 Email contains exact copy of GitHub report with enhanced text charts');
         
     } catch (error) {
         console.error('Error generating market report:', error.response?.data || error.message);
