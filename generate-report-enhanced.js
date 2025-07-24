@@ -526,30 +526,7 @@ async function generateOvernightMarketReport() {
         const filepath = path.join(reportsDir, filename);
         
         // Add metadata header focused on morning period
-        const reportWithMetadata = `# MORNING MARKET REPORT - ${dateStr}
-*Data Sources: ${ALPHA_VANTAGE_API_KEY || FINNHUB_API_KEY ? 'Market APIs + ' : ''}Claude AI Analysis*
-
----
-
-## MORNING PERIOD ANALYSIS
-**Analysis Window:** ${timing.lastClose} → ${timing.nextOpen}  
-**Duration:** ${timing.hoursSinceClose} hours  
-**Global Markets:** Asian close → European close → US pre-market  
-**Focus:** Close-to-open positioning and gap analysis  
-
----
-
-${report}
-
----
-
-## DATA SUMMARY
-**After-Hours Indices:** ${Object.keys(overnightData.afterHoursFutures).length} major ETFs tracked  
-**Sectors:** ${Object.keys(overnightData.overnightSectors).length} sector ETFs analyzed  
-**After-Hours Gainers:** ${overnightData.afterHoursMovers.topGainers.length} stocks  
-**After-Hours Losers:** ${overnightData.afterHoursMovers.topLosers.length} stocks  
-**Currency Moves:** ${Object.keys(overnightData.currencyMoves).length} major pairs  
-**News:** ${overnightData.overnightNews.length} market-moving headlines  
+        const reportWithMetadata = `${report}
 
 ---
 
