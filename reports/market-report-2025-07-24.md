@@ -1,7 +1,7 @@
 # Daily Market Report - 2025-07-24
 
 📊 DAILY MARKET SUMMARY
-Generated: July 24, 2025 at 10:33 AM EDT
+Generated: July 24, 2025 at 10:36 AM EDT
 
 📈 MARKET PERFORMANCE
 🟢 SPY: $634.21 (+0.8507%)
@@ -10,9 +10,9 @@ Generated: July 24, 2025 at 10:33 AM EDT
 🟢 IWM: $226.68 (+1.5273%)
 
 💱 CURRENCY MARKETS
-EURUSD: 1.1776
+EURUSD: 1.1780
 GBPUSD: 1.3543
-USDJPY: 146.6410
+USDJPY: 146.6570
 
 📰 TOP HEADLINES
 1. Commerce Sec. Lutnick says TikTok will go dark if China won't agree to U.S. control of the social media app
