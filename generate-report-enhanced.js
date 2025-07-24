@@ -13,8 +13,8 @@ class MarketReportGenerator {
         this.workEmails = process.env.WORK_EMAIL_LIST ? 
             process.env.WORK_EMAIL_LIST.split(',').map(email => email.trim()) : [];
         
-        // Setup email transport
-        this.transport = nodemailer.createTransport({
+        // Setup email transporter
+        this.transporter = nodemailer.createTransporter({
             service: 'gmail',
             auth: {
                 user: this.gmailUser,
@@ -44,6 +44,7 @@ class MarketReportGenerator {
                             volume: quote['06. volume']
                         };
                     }
+                    // Rate limit - wait 12 seconds between API calls
                     await this.sleep(12000);
                 } catch (error) {
                     console.log(`⚠️ Error fetching ${symbol}: ${error.message}`);
@@ -85,6 +86,7 @@ class MarketReportGenerator {
     async getNewsHeadlines() {
         console.log('📰 Fetching news headlines...');
         try {
+            // Using Finnhub for financial news
             const url = `https://finnhub.io/api/v1/news?category=general&token=${this.finnhubKey}`;
             const response = await axios.get(url, { timeout: 10000 });
             
@@ -163,6 +165,7 @@ Keep the tone professional but accessible. Focus on actionable insights for fina
 Report generated: ${currentTime}`;
 
         try {
+            // Using Anthropic Claude API
             const response = await axios.post('https://api.anthropic.com/v1/messages', {
                 model: 'claude-3-sonnet-20240229',
                 max_tokens: 1500,
@@ -184,6 +187,7 @@ Report generated: ${currentTime}`;
             }
         } catch (error) {
             console.log(`⚠️ AI analysis failed: ${error.message}`);
+            // Fallback to basic summary
             return this.generateBasicSummary(marketData, newsData, currentTime);
         }
 
@@ -219,74 +223,9 @@ Report generated: ${currentTime}`;
         return summary;
     }
 
-    // THE KEY METHOD: Generate once, use for both email and GitHub
-    async generateCompleteReport() {
-    console.log('🚀 Starting market report generation...');
-    
-    try {
-        // Get market data (using your original method)
-        const marketData = await this.getMarketData();
-        console.log(`📊 Retrieved data for ${Object.keys(marketData).length} instruments`);
-
-        // Get news data (using your original method)
-        const newsData = await this.getNewsHeadlines();
-        console.log(`📰 Retrieved ${newsData.length} news articles`);
-
-        // Generate AI analysis ONCE (using your original method)
-        const report = await this.generateAIAnalysis(marketData, newsData);
-        console.log('🤖 AI analysis completed');
-
-        // Save to GitHub file FIRST (using your original method)
-        const fileSaved = await this.saveReportToFile(report);
-        
-        // Email the EXACT same report content (not regenerated)
-        const emailSent = await this.sendEmailReport(report);
-
-        if (emailSent && fileSaved) {
-            console.log('✅ Market report generation completed successfully!');
-            console.log('📧 Email contains exact copy of GitHub report');
-            return true;
-        } else {
-            console.log('⚠️ Market report completed with some issues');
-            return false;
-        }
-
-    } catch (error) {
-        console.log(`❌ Fatal error in report generation: ${error.message}`);
-        console.error(error.stack);
-        return false;
-    }
-}
-
-        } catch (error) {
-            console.log(`❌ Fatal error in report generation: ${error.message}`);
-            console.error(error.stack);
-            return false;
-        }
-    }
-
-    async saveExactReport(completeReport, timestamp) {
-        console.log('💾 Saving exact report to GitHub...');
-        try {
-            const reportsDir = path.join(process.cwd(), 'reports');
-            await fs.mkdir(reportsDir, { recursive: true });
-
-            const filename = `market-report-${timestamp}.md`;
-            const filepath = path.join(reportsDir, filename);
-            
-            // Save the complete report exactly as-is
-            await fs.writeFile(filepath, completeReport, 'utf8');
-            console.log(`✅ Saved exact report to ${filepath}`);
-            console.log(`📄 GitHub file length: ${completeReport.length} characters`);
-            return true;
-        } catch (error) {
-            console.log(`❌ Save failed: ${error.message}`);
-            return false;
-        }
-    }
-
-    async emailExactReport(completeReport) {
-        console.log('📧 Emailing exact same report...');
+    // FIXED: This method now uses the same report content passed to it
+    async sendEmailReport(report) {
+        console.log('📧 Sending email report...');
         
         const currentDate = new Date().toLocaleDateString('en-US', {
             year: 'numeric',
@@ -294,29 +233,29 @@ Report generated: ${currentTime}`;
             day: 'numeric'
         });
 
-        const htmlVersion = this.convertToHTML(completeReport);
+        const htmlReport = this.convertToHTML(report);
 
         const mailOptions = {
             from: this.gmailUser,
-            to: this.gmailUser,
-            subject: `📊 Daily Market Summary - ${currentDate} (Exact GitHub Copy)`,
-            text: completeReport, // EXACT same as GitHub file
-            html: htmlVersion
+            to: this.gmailUser, // Always send to your Gmail first
+            subject: `🔔 Daily Market Summary - ${currentDate}`,
+            text: report, // Use the exact report passed in
+            html: htmlReport
         };
 
         try {
             // Send to your Gmail
-            await this.transport.sendMail(mailOptions);
-            console.log(`✅ Exact report emailed to ${this.gmailUser}`);
-            console.log(`📧 Email content length: ${completeReport.length} characters`);
+            await this.transporter.sendMail(mailOptions);
+            console.log(`✅ Report sent to ${this.gmailUser}`);
 
             // Send to work emails if configured
             if (this.workEmails.length > 0) {
                 for (const workEmail of this.workEmails) {
                     if (workEmail) {
                         mailOptions.to = workEmail;
-                        await this.transport.sendMail(mailOptions);
-                        console.log(`✅ Exact report emailed to ${workEmail}`);
+                        await this.transporter.sendMail(mailOptions);
+                        console.log(`✅ Report sent to ${workEmail}`);
+                        // Small delay between emails
                         await this.sleep(1000);
                     }
                 }
@@ -324,19 +263,18 @@ Report generated: ${currentTime}`;
 
             return true;
         } catch (error) {
-            console.log(`❌ Error emailing exact report: ${error.message}`);
+            console.log(`❌ Error sending email: ${error.message}`);
             return false;
         }
     }
 
     convertToHTML(report) {
+        // Convert plain text report to HTML for better email formatting
         let html = report
-            .replace(/^# (.*$)/gm, '<h1 style="color: #2c3e50; border-bottom: 3px solid #3498db; padding-bottom: 10px;">$1</h1>')
-            .replace(/^\*\*(.*?)\*\*/gm, '<h2 style="color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 5px;">$1</h2>')
+            .replace(/\*\*(.*?)\*\*/g, '<h2 style="color: #2c3e50; border-bottom: 2px solid #3498db;">$1</h2>')
             .replace(/📊|📈|📉|💱|📰|🔮|⚡/g, '<span style="font-size: 1.2em;">$&</span>')
-            .replace(/🟢/g, '<span style="color: #27ae60; font-weight: bold;">●</span>')
-            .replace(/🔴/g, '<span style="color: #e74c3c; font-weight: bold;">●</span>')
-            .replace(/\n\n/g, '</p><p>')
+            .replace(/🟢/g, '<span style="color: #27ae60;">●</span>')
+            .replace(/🔴/g, '<span style="color: #e74c3c;">●</span>')
             .replace(/\n/g, '<br>');
 
         return `
@@ -344,21 +282,94 @@ Report generated: ${currentTime}`;
         <head>
             <style>
                 body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 20px; }
-                h1, h2 { margin-top: 25px; margin-bottom: 15px; }
-                .exact-copy { background: #e8f5e8; padding: 15px; border-left: 4px solid #27ae60; margin: 20px 0; border-radius: 5px; }
+                h2 { margin-top: 25px; margin-bottom: 15px; }
+                .timestamp { font-size: 0.9em; color: #7f8c8d; font-style: italic; }
             </style>
         </head>
         <body>
-            <div class="exact-copy">
-                <strong>✅ EXACT COPY:</strong> This email contains the identical content saved to your GitHub repository.
+            <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 20px; text-align: center; border-radius: 10px; margin-bottom: 20px;">
+                <h1>📊 Daily Market Summary</h1>
+                <p class="timestamp">Automated Report via GitHub Actions</p>
             </div>
-            <p>${html}</p>
+            <div style="background: #f8f9fa; padding: 20px; border-radius: 10px;">
+                ${html}
+            </div>
+            <div style="margin-top: 20px; padding: 15px; background: #ecf0f1; border-radius: 5px; font-size: 0.8em; color: #7f8c8d;">
+                This report was automatically generated using real-time market data and AI analysis.<br>
+                Data sources: Alpha Vantage, Finnhub, Anthropic Claude
+            </div>
         </body>
         </html>`;
     }
 
+    async saveReportToFile(report) {
+        console.log('💾 Saving report to file...');
+        try {
+            const reportsDir = path.join(process.cwd(), 'reports');
+            
+            // Create reports directory if it doesn't exist
+            try {
+                await fs.access(reportsDir);
+            } catch {
+                await fs.mkdir(reportsDir, { recursive: true });
+            }
+
+            const timestamp = new Date().toISOString().split('T')[0];
+            const filename = `market-report-${timestamp}.md`;
+            const filepath = path.join(reportsDir, filename);
+            
+            const fileContent = `# Daily Market Report - ${timestamp}\n\n${report}\n\n---\n*Generated automatically via GitHub Actions*`;
+            
+            await fs.writeFile(filepath, fileContent, 'utf8');
+            console.log(`✅ Report saved to ${filepath}`);
+            return true;
+        } catch (error) {
+            console.log(`❌ Error saving report: ${error.message}`);
+            return false;
+        }
+    }
+
     sleep(ms) {
         return new Promise(resolve => setTimeout(resolve, ms));
+    }
+
+    // FIXED: This is the key change - generate once, use for both email and file
+    async generateCompleteReport() {
+        console.log('🚀 Starting market report generation...');
+        
+        try {
+            // Get market data (using your original method)
+            const marketData = await this.getMarketData();
+            console.log(`📊 Retrieved data for ${Object.keys(marketData).length} instruments`);
+
+            // Get news data (using your original method)
+            const newsData = await this.getNewsHeadlines();
+            console.log(`📰 Retrieved ${newsData.length} news articles`);
+
+            // Generate AI analysis ONCE (using your original method)
+            const report = await this.generateAIAnalysis(marketData, newsData);
+            console.log('🤖 AI analysis completed');
+
+            // Save to GitHub file FIRST (using your original method)
+            const fileSaved = await this.saveReportToFile(report);
+            
+            // Email the EXACT same report content (not regenerated)
+            const emailSent = await this.sendEmailReport(report);
+
+            if (emailSent && fileSaved) {
+                console.log('✅ Market report generation completed successfully!');
+                console.log('📧 Email contains exact copy of GitHub report');
+                return true;
+            } else {
+                console.log('⚠️ Market report completed with some issues');
+                return false;
+            }
+
+        } catch (error) {
+            console.log(`❌ Fatal error in report generation: ${error.message}`);
+            console.error(error.stack);
+            return false;
+        }
     }
 }
 
