@@ -160,126 +160,211 @@
     "gainers": [
       {
         "symbol": "AAPL",
-        "price": "$82.26",
-        "change": "+4.21",
-        "changePercent": "+5.40%"
+        "price": "$262.95",
+        "change": "+15.56",
+        "changePercent": "+6.29%",
+        "volume": "349,183"
       },
       {
         "symbol": "MSFT",
-        "price": "$72.89",
-        "change": "+6.54",
-        "changePercent": "+9.85%"
+        "price": "$191.66",
+        "change": "+10.47",
+        "changePercent": "+5.78%",
+        "volume": "956,174"
       },
       {
         "symbol": "GOOGL",
-        "price": "$198.40",
-        "change": "+12.34",
-        "changePercent": "+6.63%"
+        "price": "$234.43",
+        "change": "+20.30",
+        "changePercent": "+9.48%",
+        "volume": "309,780"
       },
       {
         "symbol": "AMZN",
-        "price": "$176.60",
-        "change": "+8.04",
-        "changePercent": "+4.77%"
+        "price": "$255.07",
+        "change": "+14.14",
+        "changePercent": "+5.87%",
+        "volume": "627,791"
       },
       {
         "symbol": "TSLA",
-        "price": "$78.67",
-        "change": "+5.38",
-        "changePercent": "+7.34%"
+        "price": "$254.61",
+        "change": "+9.16",
+        "changePercent": "+3.73%",
+        "volume": "136,326"
       },
       {
         "symbol": "NVDA",
-        "price": "$124.56",
-        "change": "+6.12",
-        "changePercent": "+5.17%"
+        "price": "$179.67",
+        "change": "+14.71",
+        "changePercent": "+8.92%",
+        "volume": "229,892"
       },
       {
         "symbol": "META",
-        "price": "$165.80",
-        "change": "+12.14",
-        "changePercent": "+7.90%"
+        "price": "$62.92",
+        "change": "+3.81",
+        "changePercent": "+6.44%",
+        "volume": "864,028"
       },
       {
         "symbol": "NFLX",
-        "price": "$229.53",
-        "change": "+12.42",
-        "changePercent": "+5.72%"
+        "price": "$215.54",
+        "change": "+17.18",
+        "changePercent": "+8.66%",
+        "volume": "838,433"
       },
       {
         "symbol": "AMD",
-        "price": "$178.02",
-        "change": "+7.22",
-        "changePercent": "+4.23%"
+        "price": "$184.47",
+        "change": "+12.87",
+        "changePercent": "+7.50%",
+        "volume": "299,105"
       },
       {
         "symbol": "CRM",
-        "price": "$255.23",
-        "change": "+22.36",
-        "changePercent": "+9.60%"
+        "price": "$96.81",
+        "change": "+5.28",
+        "changePercent": "+5.77%",
+        "volume": "455,694"
       }
     ],
     "losers": [
       {
         "symbol": "AAPL",
-        "price": "$225.41",
-        "change": "-15.80",
-        "changePercent": "-6.55%"
+        "price": "$159.05",
+        "change": "-6.20",
+        "changePercent": "-3.75%",
+        "volume": "873,722"
       },
       {
         "symbol": "MSFT",
-        "price": "$191.17",
-        "change": "-15.57",
-        "changePercent": "-7.53%"
+        "price": "$51.33",
+        "change": "-3.03",
+        "changePercent": "-5.58%",
+        "volume": "733,575"
       },
       {
         "symbol": "GOOGL",
-        "price": "$82.54",
-        "change": "-4.36",
-        "changePercent": "-5.02%"
+        "price": "$67.45",
+        "change": "-6.67",
+        "changePercent": "-9%",
+        "volume": "360,550"
       },
       {
         "symbol": "AMZN",
-        "price": "$130.87",
-        "change": "-4.75",
-        "changePercent": "-3.5%"
+        "price": "$134.72",
+        "change": "-10.13",
+        "changePercent": "-6.99%",
+        "volume": "859,197"
       },
       {
         "symbol": "TSLA",
-        "price": "$176.47",
-        "change": "-7.91",
-        "changePercent": "-4.29%"
+        "price": "$74.30",
+        "change": "-7.86",
+        "changePercent": "-9.57%",
+        "volume": "909,413"
       },
       {
         "symbol": "NVDA",
-        "price": "$169.27",
-        "change": "-15.71",
-        "changePercent": "-8.49%"
+        "price": "$153.33",
+        "change": "-5.83",
+        "changePercent": "-3.66%",
+        "volume": "1,064,613"
       },
       {
         "symbol": "META",
-        "price": "$126.98",
-        "change": "-4.04",
-        "changePercent": "-3.08%"
+        "price": "$50.60",
+        "change": "-4.95",
+        "changePercent": "-8.91%",
+        "volume": "174,012"
       },
       {
         "symbol": "NFLX",
-        "price": "$83.40",
-        "change": "-5.53",
-        "changePercent": "-6.22%"
+        "price": "$125.33",
+        "change": "-9.81",
+        "changePercent": "-7.26%",
+        "volume": "669,325"
       },
       {
         "symbol": "AMD",
-        "price": "$207.46",
-        "change": "-6.13",
-        "changePercent": "-2.87%"
+        "price": "$136.31",
+        "change": "-7.73",
+        "changePercent": "-5.37%",
+        "volume": "1,094,775"
       },
       {
         "symbol": "CRM",
-        "price": "$204.40",
-        "change": "-8.96",
-        "changePercent": "-4.2%"
+        "price": "$143.43",
+        "change": "-14.29",
+        "changePercent": "-9.06%",
+        "volume": "467,394"
       }
     ]
-  }
+  },
+  "commodities": [
+    {
+      "symbol": "GOLD",
+      "name": "Gold (oz)",
+      "price": "$1990.81",
+      "change": "-9.19",
+      "changePercent": "-0.46%"
+    },
+    {
+      "symbol": "OIL",
+      "name": "WTI Crude",
+      "price": "$76.29",
+      "change": "+1.29",
+      "changePercent": "+1.71%"
+    },
+    {
+      "symbol": "SILVER",
+      "name": "Silver (oz)",
+      "price": "$24.61",
+      "change": "-0.39",
+      "changePercent": "-1.57%"
+    },
+    {
+      "symbol": "COPPER",
+      "name": "Copper",
+      "price": "$3.77",
+      "change": "-0.03",
+      "changePercent": "-0.91%"
+    },
+    {
+      "symbol": "NATGAS",
+      "name": "Natural Gas",
+      "price": "$2.54",
+      "change": "+0.04",
+      "changePercent": "+1.46%"
+    },
+    {
+      "symbol": "US10Y",
+      "name": "10-Year Treasury",
+      "price": "$4.22",
+      "change": "+0.02",
+      "changePercent": "+0.36%"
+    },
+    {
+      "symbol": "US2Y",
+      "name": "2-Year Treasury",
+      "price": "$4.88",
+      "change": "+0.08",
+      "changePercent": "+1.56%"
+    },
+    {
+      "symbol": "US30Y",
+      "name": "30-Year Treasury",
+      "price": "$4.45",
+      "change": "+0.05",
+      "changePercent": "+1.10%"
+    },
+    {
+      "symbol": "DXY",
+      "name": "Dollar Index",
+      "price": "$101.64",
+      "change": "-1.86",
+      "changePercent": "-1.80%"
+    }
+  ]
 }
