@@ -1,7 +1,7 @@
 # Daily Market Report - 2025-07-24
 
 📊 DAILY MARKET SUMMARY
-Generated: July 24, 2025 at 10:16 AM EDT
+Generated: July 24, 2025 at 10:33 AM EDT
 
 📈 MARKET PERFORMANCE
 🟢 SPY: $634.21 (+0.8507%)
@@ -10,16 +10,16 @@ Generated: July 24, 2025 at 10:16 AM EDT
 🟢 IWM: $226.68 (+1.5273%)
 
 💱 CURRENCY MARKETS
-EURUSD: 1.1788
-GBPUSD: 1.3559
-USDJPY: 146.4120
+EURUSD: 1.1776
+GBPUSD: 1.3543
+USDJPY: 146.6410
 
 📰 TOP HEADLINES
-1. Can a single retiree with average Social Security income and minimal savings live comfortably abroad?
-2. The most surprising benefits of a 4-day workweek, from a researcher who's studied thousands of cases: 'We never expected' it
-3. A new bill could make it easier to build a tiny home in your backyard—here's what to know
-4. Jobless claims drop for sixth straight week, as labor market is showing no signs of stress
-5. Why Tesla analysts are mostly upbeat about earnings, but investors aren’t happy
+1. Commerce Sec. Lutnick says TikTok will go dark if China won't agree to U.S. control of the social media app
+2. Google just gave a big boost to its AI spending. Why Meta and Amazon could follow.
+3. Can a single retiree with average Social Security income and minimal savings live comfortably abroad?
+4. The most surprising benefits of a 4-day workweek, from a researcher who's studied thousands of cases: 'We never expected' it
+5. A new bill could make it easier to build a tiny home in your backyard—here's what to know
 
 ⚡ This is an automated report generated via GitHub Actions
 
