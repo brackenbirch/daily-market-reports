@@ -458,6 +458,10 @@ Analyze the sector performance and global market themes affecting US market open
 Include global sector rotation themes and positioning for US market open.
 [Target: 300 words, sector analysis for US positioning]
 
+**FUTURES ANALYSIS**
+Use futures market data and global developments to provide comprehensive analysis of overnight futures positioning. Cover S&P 500, NASDAQ, and DOW futures performance during market closure, international market impacts on US futures pricing, institutional futures positioning and volume patterns, futures spreads and term structure implications. Analyze gap scenarios for market open, futures arbitrage opportunities, and professional trading strategies. Include futures market technical levels and expected opening dynamics for regular trading session.
+[Target: 150 words, futures market focus for opening preparation]
+
 **POSITIONING FOR MARKET OPEN**
 Use market data and global developments to provide senior analyst-level positioning recommendations for the 9:30 AM US market opening. Analyze momentum and gap scenarios, global market correlation and spillover effects, currency and commodity impacts from trading, sector rotation themes from global markets. Include risk-adjusted return expectations for opening positions based on the ${timing.hoursSinceClose}-hour period and correlation analysis between global moves and US market opening performance.
 [Target: 200 words, opening positioning strategy based on analysis]
@@ -523,11 +527,6 @@ async function generateOvernightMarketReport() {
         
         // Add metadata header focused on morning period
         const reportWithMetadata = `# MORNING MARKET REPORT - ${dateStr}
-*Generated at: ${today.toLocaleString()} ET*
-*Market Closed: ${timing.lastClose}*
-*Market Opens: ${timing.nextOpen}*
-*Hours Since Close: ${timing.hoursSinceClose}*
-*Time to Open: ${timing.timeToOpenStr}*
 *Data Sources: ${ALPHA_VANTAGE_API_KEY || FINNHUB_API_KEY ? 'Market APIs + ' : ''}Claude AI Analysis*
 
 ---
