@@ -6,9 +6,9 @@ const nodemailer = require('nodemailer');
 const ANTHROPIC_API_KEY = process.env.ANTHROPIC_API_KEY;
 const ALPHA_VANTAGE_API_KEY = process.env.ALPHA_VANTAGE_API_KEY;
 const FINNHUB_API_KEY = process.env.FINNHUB_API_KEY;
-const EMAIL_USERNAME = process.env.EMAIL_USERNAME;
-const EMAIL_PASSWORD = process.env.EMAIL_PASSWORD;
-const EMAIL_TO = process.env.EMAIL_TO;
+const GMAIL_USER = process.env.GMAIL_USER;
+const GMAIL_PASSWORD = process.env.GMAIL_PASSWORD;
+const WORK_EMAIL_LIST = process.env.WORK_EMAIL_LIST;
 const ANTHROPIC_API_URL = 'https://api.anthropic.com/v1/messages';
 
 // Helper function to get sector names
@@ -58,7 +58,7 @@ function generateSampleMovers(type) {
 
 // Function to send email with the market report
 async function sendMarketReportEmail(reportContent, dateStr) {
-    if (!EMAIL_USERNAME || !EMAIL_PASSWORD || !EMAIL_TO) {
+    if (!GMAIL_USER || !GMAIL_PASSWORD || !WORK_EMAIL_LIST) {
         console.log('⚠️  Email credentials not provided, skipping email send');
         return;
     }
@@ -67,11 +67,11 @@ async function sendMarketReportEmail(reportContent, dateStr) {
         console.log('📧 Setting up email transport...');
         
         // Create transport for Outlook/Hotmail
-        const transport = nodemailer.createTransport({
+        const transport = nodemailer.createTransporter({
             service: 'hotmail', // This works for outlook.com, hotmail.com, live.com
             auth: {
-                user: EMAIL_USERNAME,
-                pass: EMAIL_PASSWORD
+                user: GMAIL_USER,
+                pass: GMAIL_PASSWORD
             }
         });
         
@@ -98,8 +98,8 @@ async function sendMarketReportEmail(reportContent, dateStr) {
         </div>`;
         
         const mailOptions = {
-            from: EMAIL_USERNAME,
-            to: EMAIL_TO.split(',').map(email => email.trim()), // Support multiple recipients
+            from: GMAIL_USER,
+            to: WORK_EMAIL_LIST.split(',').map(email => email.trim()), // Support multiple recipients
             subject: `📈 Daily Market Report - ${dateStr}`,
             html: emailContent,
             text: reportContent // Fallback plain text version
@@ -108,7 +108,7 @@ async function sendMarketReportEmail(reportContent, dateStr) {
         console.log('📤 Sending email...');
         const info = await transport.sendMail(mailOptions);
         console.log('✅ Email sent successfully:', info.messageId);
-        console.log('📧 Recipients:', EMAIL_TO);
+        console.log('📧 Recipients:', WORK_EMAIL_LIST);
         
     } catch (error) {
         console.error('❌ Failed to send email:', error.message);
