@@ -1,0 +1,445 @@
+{
+  "afterHoursFutures": {
+    "SPY": {
+      "01. symbol": "SPY",
+      "02. open": "631.5500",
+      "03. high": "634.2100",
+      "04. low": "629.7300",
+      "05. price": "634.2100",
+      "06. volume": "70511036",
+      "07. latest trading day": "2025-07-23",
+      "08. previous close": "628.8600",
+      "09. change": "5.3500",
+      "10. change percent": "0.8507%",
+      "session": "After-Hours/Extended"
+    },
+    "QQQ": {
+      "01. symbol": "QQQ",
+      "02. open": "562.3400",
+      "03. high": "563.8500",
+      "04. low": "559.5800",
+      "05. price": "563.8100",
+      "06. volume": "40215259",
+      "07. latest trading day": "2025-07-23",
+      "08. previous close": "561.2500",
+      "09. change": "2.5600",
+      "10. change percent": "0.4561%",
+      "session": "After-Hours/Extended"
+    },
+    "DIA": {
+      "01. symbol": "DIA",
+      "02. open": "447.2500",
+      "03. high": "450.2500",
+      "04. low": "446.3500",
+      "05. price": "450.2100",
+      "06. volume": "5486453",
+      "07. latest trading day": "2025-07-23",
+      "08. previous close": "444.9600",
+      "09. change": "5.2500",
+      "10. change percent": "1.1799%",
+      "session": "After-Hours/Extended"
+    }
+  },
+  "overnightSectors": {
+    "XLF": {
+      "01. symbol": "XLF",
+      "02. open": "52.8000",
+      "03. high": "53.1000",
+      "04. low": "52.5600",
+      "05. price": "53.1000",
+      "06. volume": "32111308",
+      "07. latest trading day": "2025-07-23",
+      "08. previous close": "52.6800",
+      "09. change": "0.4200",
+      "10. change percent": "0.7973%",
+      "name": "Financial Services",
+      "session": "Extended Hours"
+    },
+    "XLK": {
+      "01. symbol": "XLK",
+      "02. open": "259.4800",
+      "03. high": "260.6300",
+      "04. low": "257.9400",
+      "05. price": "260.2900",
+      "06. volume": "5045896",
+      "07. latest trading day": "2025-07-23",
+      "08. previous close": "258.8100",
+      "09. change": "1.4800",
+      "10. change percent": "0.5718%",
+      "name": "Technology",
+      "session": "Extended Hours"
+    },
+    "XLE": {
+      "01. symbol": "XLE",
+      "02. open": "85.8200",
+      "03. high": "86.8600",
+      "04. low": "85.6000",
+      "05. price": "86.8100",
+      "06. volume": "14023041",
+      "07. latest trading day": "2025-07-23",
+      "08. previous close": "85.4700",
+      "09. change": "1.3400",
+      "10. change percent": "1.5678%",
+      "name": "Energy",
+      "session": "Extended Hours"
+    },
+    "XLV": {
+      "01. symbol": "XLV",
+      "02. open": "135.2600",
+      "03. high": "136.3150",
+      "04. low": "134.8000",
+      "05. price": "136.2700",
+      "06. volume": "16623992",
+      "07. latest trading day": "2025-07-23",
+      "08. previous close": "133.5300",
+      "09. change": "2.7400",
+      "10. change percent": "2.0520%",
+      "name": "Healthcare",
+      "session": "Extended Hours"
+    },
+    "XLI": {
+      "01. symbol": "XLI",
+      "02. open": "152.2800",
+      "03. high": "153.8100",
+      "04. low": "152.0400",
+      "05. price": "153.7300",
+      "06. volume": "14747528",
+      "07. latest trading day": "2025-07-23",
+      "08. previous close": "151.0200",
+      "09. change": "2.7100",
+      "10. change percent": "1.7945%",
+      "name": "Industrials",
+      "session": "Extended Hours"
+    },
+    "XLY": {
+      "01. symbol": "XLY",
+      "02. open": "226.0000",
+      "03. high": "226.8900",
+      "04. low": "225.7300",
+      "05. price": "226.5500",
+      "06. volume": "5041597",
+      "07. latest trading day": "2025-07-23",
+      "08. previous close": "225.4800",
+      "09. change": "1.0700",
+      "10. change percent": "0.4745%",
+      "name": "Consumer Discretionary",
+      "session": "Extended Hours"
+    },
+    "XLP": {
+      "01. symbol": "XLP",
+      "02. open": "81.6500",
+      "03. high": "81.8600",
+      "04. low": "81.3900",
+      "05. price": "81.6500",
+      "06. volume": "13808933",
+      "07. latest trading day": "2025-07-23",
+      "08. previous close": "81.6200",
+      "09. change": "0.0300",
+      "10. change percent": "0.0368%",
+      "name": "Consumer Staples",
+      "session": "Extended Hours"
+    },
+    "XLU": {
+      "01. symbol": "XLU",
+      "02. open": "85.8100",
+      "03. high": "86.0200",
+      "04. low": "84.0650",
+      "05. price": "84.4100",
+      "06. volume": "20166514",
+      "07. latest trading day": "2025-07-23",
+      "08. previous close": "85.0500",
+      "09. change": "-0.6400",
+      "10. change percent": "-0.7525%",
+      "name": "Utilities",
+      "session": "Extended Hours"
+    },
+    "XLB": {
+      "01. symbol": "XLB",
+      "02. open": "92.2900",
+      "03. high": "92.7400",
+      "04. low": "92.0800",
+      "05. price": "92.2400",
+      "06. volume": "6747213",
+      "07. latest trading day": "2025-07-23",
+      "08. previous close": "91.9300",
+      "09. change": "0.3100",
+      "10. change percent": "0.3372%",
+      "name": "Materials",
+      "session": "Extended Hours"
+    }
+  },
+  "afterHoursMovers": {
+    "topGainers": [
+      {
+        "symbol": "AAPL",
+        "price": "$259.63",
+        "change": "+26.74",
+        "changePercent": "+11.48%",
+        "volume": "114K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "MSFT",
+        "price": "$120.27",
+        "change": "+4.78",
+        "changePercent": "+4.14%",
+        "volume": "110K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "GOOGL",
+        "price": "$129.44",
+        "change": "+17.31",
+        "changePercent": "+15.44%",
+        "volume": "82K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "AMZN",
+        "price": "$102.59",
+        "change": "+11.72",
+        "changePercent": "+12.90%",
+        "volume": "69K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "TSLA",
+        "price": "$160.54",
+        "change": "+5.67",
+        "changePercent": "+3.66%",
+        "volume": "32K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "NVDA",
+        "price": "$195.29",
+        "change": "+20.83",
+        "changePercent": "+11.94%",
+        "volume": "176K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "META",
+        "price": "$162.57",
+        "change": "+19.25",
+        "changePercent": "+13.43%",
+        "volume": "189K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "NFLX",
+        "price": "$255.87",
+        "change": "+6.70",
+        "changePercent": "+2.69%",
+        "volume": "214K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "AMD",
+        "price": "$189.78",
+        "change": "+5.06",
+        "changePercent": "+2.74%",
+        "volume": "65K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "CRM",
+        "price": "$142.56",
+        "change": "+7.02",
+        "changePercent": "+5.18%",
+        "volume": "129K",
+        "timeframe": "After-Hours"
+      }
+    ],
+    "topLosers": [
+      {
+        "symbol": "AAPL",
+        "price": "$138.27",
+        "change": "-19.19",
+        "changePercent": "-12.19%",
+        "volume": "194K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "MSFT",
+        "price": "$58.36",
+        "change": "-1.58",
+        "changePercent": "-2.63%",
+        "volume": "51K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "GOOGL",
+        "price": "$76.13",
+        "change": "-7.82",
+        "changePercent": "-9.31%",
+        "volume": "42K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "AMZN",
+        "price": "$157.78",
+        "change": "-15.74",
+        "changePercent": "-9.07%",
+        "volume": "105K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "TSLA",
+        "price": "$179.99",
+        "change": "-28.79",
+        "changePercent": "-13.79%",
+        "volume": "221K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "NVDA",
+        "price": "$144.21",
+        "change": "-24.04",
+        "changePercent": "-14.29%",
+        "volume": "213K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "META",
+        "price": "$196.97",
+        "change": "-18.53",
+        "changePercent": "-8.6%",
+        "volume": "62K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "NFLX",
+        "price": "$137.71",
+        "change": "-8.46",
+        "changePercent": "-5.79%",
+        "volume": "71K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "AMD",
+        "price": "$189.13",
+        "change": "-4.85",
+        "changePercent": "-2.5%",
+        "volume": "156K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "CRM",
+        "price": "$87.38",
+        "change": "-7.62",
+        "changePercent": "-8.02%",
+        "volume": "211K",
+        "timeframe": "After-Hours"
+      }
+    ]
+  },
+  "overnightNews": [
+    {
+      "category": "top news",
+      "datetime": 1753377726,
+      "headline": "Apple releases public preview of iOS 26, its biggest iPhone software redesign since 2013",
+      "id": 7500584,
+      "image": "https://image.cnbcfm.com/api/v1/image/108157309-1749578116345-108157309-1749578022271-gettyimages-2218819299-AFP_49PN68F.jpeg?v=1749578151&w=1920&h=1080",
+      "related": "",
+      "source": "CNBC",
+      "summary": "This version of iOS includes one of the biggest changes to the iPhone's user interface design since 2013, when Apple's iOS 7 introduced a new, flatter look.",
+      "url": "https://www.cnbc.com/2025/07/24/apple-iphone-ios-26-public-beta.html"
+    },
+    {
+      "category": "top news",
+      "datetime": 1753373220,
+      "headline": "Inflation, recession fears and the worst cattle shortage in over 70 years haven’t dented beef demand. Here’s why.",
+      "id": 7500558,
+      "image": "https://static2.finnhub.io/file/publicdatany/finnhubimage/market_watch_logo.png",
+      "related": "",
+      "source": "MarketWatch",
+      "summary": "Record-high beef prices have failed to shake consumer demand, which stands at its highest in at least 20 years.",
+      "url": "https://www.marketwatch.com/story/inflation-recession-fears-and-the-worst-cattle-shortage-in-over-70-years-havent-dented-beef-demand-heres-why-41327b35"
+    },
+    {
+      "category": "top news",
+      "datetime": 1753372842,
+      "headline": "Jim Cramer says pullbacks in 2 stocks after earnings give new investors chances to buy",
+      "id": 7500559,
+      "image": "https://image.cnbcfm.com/api/v1/image/107090864-1658245265138-NUP_198367_01033_copy.jpg?v=1698174882&w=1920&h=1080",
+      "related": "",
+      "source": "CNBC",
+      "summary": "The Investing Club holds its \"Morning Meeting\" every weekday at 10:20 a.m. ET.",
+      "url": "https://www.cnbc.com/2025/07/24/jim-cramer-says-pullbacks-in-2-stocks-after-earnings-give-new-investors-chances-to-buy.html"
+    },
+    {
+      "category": "top news",
+      "datetime": 1753372440,
+      "headline": "The ECB just pressed pause on rate cuts. The next move isn’t clear.",
+      "id": 7500557,
+      "image": "https://static2.finnhub.io/file/publicdatany/finnhubimage/market_watch_logo.png",
+      "related": "",
+      "source": "MarketWatch",
+      "summary": "ECB President Christine Lagarde left economists and investors a little less certain as to when, or perhaps even whether, further easing will arrive.",
+      "url": "https://www.marketwatch.com/story/the-ecb-just-pressed-pause-on-rate-cuts-the-next-move-isnt-clear-b2af26d4"
+    },
+    {
+      "category": "top news",
+      "datetime": 1753369508,
+      "headline": "If AI attempts to take over world, don't count on a 'kill switch' to save humanity",
+      "id": 7500546,
+      "image": "https://image.cnbcfm.com/api/v1/image/108175896-1753293446895-gettyimages-1246495627-20090101230124-99-335352.jpeg?v=1753293479&w=1920&h=1080",
+      "related": "",
+      "source": "CNBC",
+      "summary": "Attempts to destroy AI to stop a superintelligence from taking over the world are unlikely to work. Humans may have to persuade AI into saving us.",
+      "url": "https://www.cnbc.com/2025/07/24/in-ai-attempt-to-take-over-world-theres-no-kill-switch-to-save-us.html"
+    },
+    {
+      "category": "top news",
+      "datetime": 1753368720,
+      "headline": "S&P economic PMIs find stronger but uneven growth, higher inflation in July",
+      "id": 7500535,
+      "image": "https://static2.finnhub.io/file/publicdatany/finnhubimage/market_watch_logo.png",
+      "related": "",
+      "source": "MarketWatch",
+      "summary": "U.S. economic activity grew at a sharply higher rate in July, a pair of S&P surveys of purchasing managers found — though the growth was concentrated in the services sector, while manufacturing struggled.",
+      "url": "https://www.marketwatch.com/story/service-sector-fuels-stronger-growth-in-july-while-manufacturing-stumbles-s-p-pmi-surveys-find-79fceb30"
+    },
+    {
+      "category": "top news",
+      "datetime": 1753368660,
+      "headline": "UnitedHealth confirms DOJ criminal probe two months after calling a report of one ‘irresponsible’",
+      "id": 7500536,
+      "image": "https://static2.finnhub.io/file/publicdatany/finnhubimage/market_watch_logo.png",
+      "related": "",
+      "source": "MarketWatch",
+      "summary": "UnitedHealth Group’s stock fell Thursday after the company confirmed government criminal and civil investigations into its Medicare practices but stressed that it doesn’t expect to be charged with any wrongdoing.",
+      "url": "https://www.marketwatch.com/story/unitedhealth-confirms-doj-criminal-probe-two-months-after-calling-a-report-of-one-irresponsible-a76b7d68"
+    },
+    {
+      "category": "top news",
+      "datetime": 1753367820,
+      "headline": "We asked readers how they prefer their Coca-Cola. Only 2.8% chose high-fructose corn syrup over cane sugar.",
+      "id": 7500516,
+      "image": "https://static2.finnhub.io/file/publicdatany/finnhubimage/market_watch_logo.png",
+      "related": "",
+      "source": "MarketWatch",
+      "summary": "Coca-Cola will soon introduce a cane-sugar version in the U.S. as an alternative offering.",
+      "url": "https://www.marketwatch.com/story/we-asked-readers-how-they-prefer-their-coca-cola-only-2-8-chose-high-fructose-corn-syrup-over-cane-sugar-0f92c6a8"
+    }
+  ],
+  "globalMarkets": {},
+  "currencyMoves": {
+    "EURUSD": {
+      "rate": "1.1781",
+      "lastRefreshed": "2025-07-24 17:45:39",
+      "session": "Overnight"
+    },
+    "GBPUSD": {
+      "rate": "1.3528",
+      "lastRefreshed": "2025-07-24 17:45:41",
+      "session": "Overnight"
+    },
+    "USDJPY": {
+      "rate": "146.7630",
+      "lastRefreshed": "2025-07-24 17:45:37",
+      "session": "Overnight"
+    }
+  }
+}
