@@ -120,7 +120,7 @@ async function sendOvernightReportEmail(reportContent, dateStr) {
             .replace(/^# (.*$)/gm, '<h1 style="color: #2c3e50; border-bottom: 3px solid #d4af37; padding-bottom: 10px;">$1</h1>')
             .replace(/^## (.*$)/gm, '<h2 style="color: #2c3e50; margin-top: 25px;">$1</h2>')
             .replace(/^\*\*(.*?)\*\*/gm, '<h3 style="color: #2c3e50; margin-top: 30px; margin-bottom: 15px; border-bottom: 2px solid #d4af37; padding-bottom: 10px; font-weight: bold;">$1</h3>')
-            .replace(/^(EXECUTIVE BRIEF|ASIAN MARKETS IMPACT|EUROPEAN TRADING SESSION TO US OPEN|US FUTURES & AFTER-HOURS ANALYSIS|BREAKING HEADLINES|RESEARCH & INSTITUTIONAL ACTIVITY|ECONOMIC CALENDAR & EARNINGS IMPACT|AFTER-HOURS & EXTENDED TRADING ANALYSIS|SECTOR ROTATION & GLOBAL THEMES|FUTURES ANALYSIS|POSITIONING FOR MARKET OPEN|BONDS & COMMODITIES ANALYSIS|TECHNICAL LEVELS FOR US OPEN|RISK ASSESSMENT FOR US OPEN|MARKET OPEN STRATEGY SUMMARY)$/gm, '<h3 style="color: #2c3e50; margin-top: 30px; margin-bottom: 15px; border-bottom: 2px solid #d4af37; padding-bottom: 10px; font-weight: bold;">$1</h3>')
+            .replace(/color: #2c3e50/g, 'color: #2c3e50; border-bottom: 2px solid #d4af37; padding-bottom: 8px')
             .replace(/^\*(.*$)/gm, '<p style="font-style: italic; color: #7f8c8d;">$1</p>')
             .replace(/^([^<\n].*$)/gm, '<p style="line-height: 1.6; margin-bottom: 10px; color: #000000;">$1</p>')
             .replace(/\n\n/g, '<br><br>')
