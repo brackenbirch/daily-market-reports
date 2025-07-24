@@ -341,6 +341,14 @@ Use current market data from today's date and market closure information to give
 Use current market data from today's date and market closure information to give a high level report on Bonds and commodities and an analyst level summary. Write in professional financial language suitable for institutional clients.
 [Target: 150 words]
 
+**TECHNICAL LEVELS**
+Use current market data from today's date and information from the previous day closed market hours to give a high-level report and an analyst level summary on the premarket technical levels. Write in professional financial language suitable for institutional clients.
+[Target: 150 words]
+
+**RISK EVENTS**
+Use current market data from today's date and information from the previous day closed market hours to give a high-level report and an analyst level summary on the risk events for that day and their potential impacts. Write in professional financial language suitable for institutional clients.
+[Target: 150 words]
+
 **KEY TAKEAWAYS**
 [2-sentence summary of main trading themes for the day]
 
