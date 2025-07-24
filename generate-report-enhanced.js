@@ -221,45 +221,42 @@ Report generated: ${currentTime}`;
 
     // THE KEY METHOD: Generate once, use for both email and GitHub
     async generateCompleteReport() {
-        console.log('🚀 Starting market report generation...');
+    console.log('🚀 Starting market report generation...');
+    
+    try {
+        // Get market data (using your original method)
+        const marketData = await this.getMarketData();
+        console.log(`📊 Retrieved data for ${Object.keys(marketData).length} instruments`);
+
+        // Get news data (using your original method)
+        const newsData = await this.getNewsHeadlines();
+        console.log(`📰 Retrieved ${newsData.length} news articles`);
+
+        // Generate AI analysis ONCE (using your original method)
+        const report = await this.generateAIAnalysis(marketData, newsData);
+        console.log('🤖 AI analysis completed');
+
+        // Save to GitHub file FIRST (using your original method)
+        const fileSaved = await this.saveReportToFile(report);
         
-        try {
-            // Step 1: Get all data
-            const marketData = await this.getMarketData();
-            console.log(`📊 Retrieved data for ${Object.keys(marketData).length} instruments`);
+        // Email the EXACT same report content (not regenerated)
+        const emailSent = await this.sendEmailReport(report);
 
-            const newsData = await this.getNewsHeadlines();
-            console.log(`📰 Retrieved ${newsData.length} news articles`);
+        if (emailSent && fileSaved) {
+            console.log('✅ Market report generation completed successfully!');
+            console.log('📧 Email contains exact copy of GitHub report');
+            return true;
+        } else {
+            console.log('⚠️ Market report completed with some issues');
+            return false;
+        }
 
-            // Step 2: Generate AI analysis ONCE
-            const reportContent = await this.generateAIAnalysis(marketData, newsData);
-            console.log('🤖 AI analysis completed');
-
-            // Step 3: Create the exact GitHub format
-            const timestamp = new Date().toISOString().split('T')[0];
-            const completeReport = `# Daily Market Report - ${timestamp}\n\n${reportContent}\n\n---\n*Generated automatically via GitHub Actions*`;
-
-            console.log('\n' + '='.repeat(60));
-            console.log('📋 FINAL REPORT CONTENT (same for email & GitHub):');
-            console.log('='.repeat(60));
-            console.log(completeReport);
-            console.log('='.repeat(60));
-            console.log(`📏 Report length: ${completeReport.length} characters`);
-            console.log('='.repeat(60) + '\n');
-
-            // Step 4: Save to GitHub file
-            const fileSaved = await this.saveExactReport(completeReport, timestamp);
-            
-            // Step 5: Email the EXACT same content
-            const emailSent = await this.emailExactReport(completeReport);
-
-            if (emailSent && fileSaved) {
-                console.log('✅ SUCCESS: Email and GitHub contain IDENTICAL content!');
-                return true;
-            } else {
-                console.log('⚠️ Report completed with some issues');
-                return false;
-            }
+    } catch (error) {
+        console.log(`❌ Fatal error in report generation: ${error.message}`);
+        console.error(error.stack);
+        return false;
+    }
+}
 
         } catch (error) {
             console.log(`❌ Fatal error in report generation: ${error.message}`);
