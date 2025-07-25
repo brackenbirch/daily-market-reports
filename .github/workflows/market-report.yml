@@ -22,17 +22,39 @@ jobs:
       uses: actions/setup-node@v4
       with:
         node-version: '18'
-        cache: 'npm'
        
-    - name: Create package.json if not exists
+    - name: Create package.json and install dependencies
       run: |
+        # Create package.json if it doesn't exist
         if [ ! -f package.json ]; then
-          echo '{"name": "market-report", "version": "1.0.0", "dependencies": {}}' > package.json
+          echo "📦 Creating package.json..."
+          cat > package.json << 'EOF'
+        {
+          "name": "market-report-generator",
+          "version": "1.0.0",
+          "description": "Automated multi-source market report generator",
+          "main": "generate-report-enhanced.js",
+          "scripts": {
+            "start": "node generate-report-enhanced.js",
+            "test": "echo \"No tests specified\""
+          },
+          "keywords": ["market", "trading", "finance", "automation"],
+          "author": "Market Report Bot",
+          "license": "MIT",
+          "dependencies": {
+            "axios": "^1.6.0",
+            "nodemailer": "^6.9.0",
+            "cheerio": "^1.0.0",
+            "node-fetch": "^3.3.0",
+            "@anthropic-ai/sdk": "^0.20.0"
+          }
+        }
+        EOF
         fi
-       
-    - name: Install dependencies
-      run: |
-        npm install axios nodemailer cheerio node-fetch @anthropic-ai/sdk
+        
+        # Install dependencies
+        echo "📦 Installing dependencies..."
+        npm install --no-package-lock --no-save
        
     - name: Verify environment variables
       run: |
@@ -89,6 +111,8 @@ jobs:
       run: |
         echo "🌅 Starting morning market report generation..."
         echo "Current time: $(date)"
+        echo "Node version: $(node --version)"
+        echo "NPM version: $(npm --version)"
         node generate-report-enhanced.js
         echo "✅ Report generation completed"
       continue-on-error: false
