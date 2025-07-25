@@ -6,9 +6,9 @@ const nodemailer = require('nodemailer');
 const ANTHROPIC_API_KEY = process.env.ANTHROPIC_API_KEY;
 const ALPHA_VANTAGE_API_KEY = process.env.ALPHA_VANTAGE_API_KEY;
 const FINNHUB_API_KEY = process.env.FINNHUB_API_KEY;
-const EMAIL_USERNAME = process.env.EMAIL_USERNAME;
-const EMAIL_PASSWORD = process.env.EMAIL_PASSWORD;
-const EMAIL_TO = process.env.EMAIL_TO;
+const GMAIL_USER = process.env.GMAIL_USER;
+const GMAIL_PASSWORD = process.env.GMAIL_PASSWORD;
+const WORK_EMAIL_LIST = process.env.WORK_EMAIL_LIST;
 const ANTHROPIC_API_URL = 'https://api.anthropic.com/v1/messages';
 
 // Data validation functions
@@ -88,11 +88,18 @@ async function crossValidateData(marketData) {
         
         // Check for data freshness (market data should be recent)
         const currentTime = new Date();
-        const marketHours = isMarketHours(currentTime);
+        const marketStatus = isMarketHours(currentTime);
         
-        if (!marketHours) {
-            validation.discrepancies.push('Generated outside market hours - data may be from previous session');
+        if (marketStatus.isFullyClosed) {
+            validation.discrepancies.push(`Generated during market closure (${marketStatus.currentPhase}) - data may be from previous session`);
         }
+        
+        // Add market timing context
+        validation.marketContext = {
+            phase: marketStatus.currentPhase,
+            time: marketStatus.estTime,
+            isWeekday: marketStatus.isWeekday
+        };
         
     } catch (error) {
         validation.discrepancies.push(`Cross-validation error: ${error.message}`);
@@ -104,13 +111,48 @@ async function crossValidateData(marketData) {
 // Check if current time is during market hours
 function isMarketHours(date = new Date()) {
     const day = date.getDay(); // 0 = Sunday, 6 = Saturday
-    const hour = date.getUTCHours();
     
-    // US market hours: 9:30 AM - 4:00 PM EST = 14:30 - 21:00 UTC
+    // Convert to EST/EDT
+    const estOffset = -5; // EST is UTC-5, EDT is UTC-4 (adjust for daylight saving)
+    const isDST = isDaylightSavingTime(date);
+    const offset = isDST ? -4 : -5;
+    
+    const estHour = (date.getUTCHours() + offset + 24) % 24;
+    const estMinute = date.getUTCMinutes();
+    const timeInMinutes = estHour * 60 + estMinute;
+    
+    // Market hours: 9:30 AM - 4:00 PM EST = 570 - 960 minutes
+    const marketOpen = 9 * 60 + 30; // 9:30 AM = 570 minutes
+    const marketClose = 16 * 60; // 4:00 PM = 960 minutes
+    
+    // Extended hours: 4:00 AM - 8:00 PM EST
+    const extendedOpen = 4 * 60; // 4:00 AM = 240 minutes  
+    const extendedClose = 20 * 60; // 8:00 PM = 1200 minutes
+    
     const isWeekday = day >= 1 && day <= 5;
-    const isMarketTime = hour >= 14 && hour < 21;
+    const isRegularHours = timeInMinutes >= marketOpen && timeInMinutes < marketClose;
+    const isExtendedHours = timeInMinutes >= extendedOpen && timeInMinutes < extendedClose;
     
-    return isWeekday && isMarketTime;
+    return {
+        isWeekday,
+        isRegularHours: isWeekday && isRegularHours,
+        isExtendedHours: isWeekday && isExtendedHours,
+        isFullyClosed: !isWeekday || timeInMinutes < extendedOpen || timeInMinutes >= extendedClose,
+        currentPhase: isWeekday ? 
+            (timeInMinutes < extendedOpen ? 'Fully Closed' :
+             timeInMinutes < marketOpen ? 'Pre-Market' :
+             timeInMinutes < marketClose ? 'Regular Hours' :
+             timeInMinutes < extendedClose ? 'After Hours' : 'Fully Closed') 
+            : 'Weekend',
+        estTime: `${Math.floor(estHour)}:${estMinute.toString().padStart(2, '0')} ${isDST ? 'EDT' : 'EST'}`
+    };
+}
+
+// Helper function to check daylight saving time
+function isDaylightSavingTime(date) {
+    const jan = new Date(date.getFullYear(), 0, 1).getTimezoneOffset();
+    const jul = new Date(date.getFullYear(), 6, 1).getTimezoneOffset();
+    return Math.max(jan, jul) !== date.getTimezoneOffset();
 }
 
 // Fact-check report content
@@ -122,14 +164,28 @@ async function factCheckReport(reportContent) {
 
 ${reportContent}
 
+Pay special attention to:
+1. Market timing and hours (Regular: 9:30 AM - 4:00 PM EST, Extended: 4:00 AM - 8:00 PM EST)
+2. Realistic price movements and percentage changes
+3. Accurate sector classifications and ETF descriptions
+4. Consistent data between different sections
+5. Proper market terminology and concepts
+
+Common errors to check for:
+- Incorrect market closure periods (should be ~8 hours, not 21 hours)
+- Unrealistic daily price movements (>10% moves need explanation)
+- Mixing up regular hours vs extended hours trading
+- Incorrect sector ETF mappings
+
 Please provide:
 1. Any factual errors or inconsistencies you identify
-2. Unrealistic market moves or claims
+2. Unrealistic market moves or claims that need verification
 3. Contradictory statements within the report
-4. A confidence score (1-10) for the overall accuracy
-5. Specific suggestions for corrections if needed
+4. Market timing or schedule errors
+5. A confidence score (1-10) for the overall accuracy
+6. Specific suggestions for corrections if needed
 
-Be thorough but focus on significant issues, not minor stylistic preferences.`;
+Be thorough but focus on significant issues that could mislead readers.`;
 
         const response = await axios.post(ANTHROPIC_API_URL, {
             model: 'claude-sonnet-4-20250514',
@@ -194,9 +250,10 @@ ${factCheck.hasIssues ?
 }
 
 ### Market Context
-- **Report Time:** ${isMarketHours() ? 'During market hours' : 'Outside market hours'}
+- **Report Time:** ${crossValidation.marketContext ? crossValidation.marketContext.phase : 'Unknown'} (${crossValidation.marketContext ? crossValidation.marketContext.time : 'N/A'})
 - **Data Freshness:** ${dataValidation.dataQuality === 'high' ? 'Real-time' : 'Simulated/Delayed'}
 - **Source Diversity:** ${crossValidation.crossChecked ? 'Multiple sources' : 'Single source'}
+- **Market Schedule:** Regular Hours: 9:30 AM - 4:00 PM EST | Extended: 4:00 AM - 8:00 PM EST
 
 ---
 *This verification was automatically performed to ensure report accuracy and reliability.*
@@ -490,26 +547,30 @@ REQUIREMENTS:
 
 // Function to send email with the market report
 async function sendMarketReportEmail(reportContent, dateStr) {
-    if (!EMAIL_USERNAME || !EMAIL_PASSWORD || !EMAIL_TO) {
-        console.log('⚠️  Email credentials not provided, skipping email send');
+    // Debug: Check what email credentials we have
+    console.log('📧 Gmail Debug Info:');
+    console.log('- GMAIL_USER:', GMAIL_USER ? '✅ Present' : '❌ Missing');
+    console.log('- GMAIL_PASSWORD:', GMAIL_PASSWORD ? '✅ Present' : '❌ Missing');
+    console.log('- WORK_EMAIL_LIST:', WORK_EMAIL_LIST ? '✅ Present' : '❌ Missing');
+    
+    if (!GMAIL_USER || !GMAIL_PASSWORD || !WORK_EMAIL_LIST) {
+        console.log('⚠️  Gmail credentials not provided, skipping email send');
+        console.log('   Make sure these GitHub Secrets are set:');
+        console.log('   - GMAIL_USER (your Gmail address)');
+        console.log('   - GMAIL_PASSWORD (your Gmail app password)');
+        console.log('   - WORK_EMAIL_LIST (recipient email addresses)');
         return;
     }
     
     try {
-        console.log('📧 Setting up email transport...');
+        console.log('📧 Setting up Gmail transport...');
         
-        // Create transport for company/corporate Outlook (Exchange/Office 365)
+        // Create transport for Gmail
         const transport = nodemailer.createTransport({
-            host: 'smtp-mail.outlook.com',
-            port: 587,
-            secure: false,
+            service: 'gmail',
             auth: {
-                user: EMAIL_USERNAME,
-                pass: EMAIL_PASSWORD
-            },
-            tls: {
-                ciphers: 'SSLv3',
-                rejectUnauthorized: false
+                user: GMAIL_USER,
+                pass: GMAIL_PASSWORD
             }
         });
         
@@ -531,26 +592,37 @@ async function sendMarketReportEmail(reportContent, dateStr) {
                 <div style="margin-top: 30px; padding: 20px; background-color: #ecf0f1; border-radius: 5px; border-left: 4px solid #3498db;">
                     <p style="margin: 0; color: #2c3e50; font-weight: bold;">📊 Verified Market Intelligence</p>
                     <p style="margin: 5px 0 0 0; color: #7f8c8d; font-size: 14px;">Accuracy-checked report generated by Claude AI • ${new Date().toLocaleString()}</p>
+                    <p style="margin: 5px 0 0 0; color: #7f8c8d; font-size: 12px;">Sent via Gmail automation</p>
                 </div>
             </div>
         </div>`;
         
         const mailOptions = {
-            from: EMAIL_USERNAME,
-            to: EMAIL_TO.split(',').map(email => email.trim()),
+            from: GMAIL_USER,
+            to: WORK_EMAIL_LIST.split(',').map(email => email.trim()), // Support multiple recipients
             subject: `📈 Verified Daily Market Report - ${dateStr}`,
             html: emailContent,
-            text: reportContent
+            text: reportContent // Fallback plain text version
         };
         
-        console.log('📤 Sending verified email...');
+        console.log('📤 Sending Gmail...');
+        console.log('📧 From:', GMAIL_USER);
+        console.log('📧 To:', WORK_EMAIL_LIST);
+        
         const info = await transport.sendMail(mailOptions);
-        console.log('✅ Email sent successfully:', info.messageId);
-        console.log('📧 Recipients:', EMAIL_TO);
+        console.log('✅ Gmail sent successfully:', info.messageId);
+        console.log('📬 Gmail response:', info.response);
         
     } catch (error) {
-        console.error('❌ Failed to send email:', error.message);
+        console.error('❌ Failed to send Gmail:', error.message);
         console.log('📝 Report was still saved to file successfully');
+        
+        // Log more details for Gmail troubleshooting
+        if (error.code === 'EAUTH') {
+            console.log('🔐 Authentication failed - check your Gmail app password');
+        } else if (error.code === 'ENOTFOUND') {
+            console.log('🌐 Network issue - check internet connection');
+        }
     }
 }
 
