@@ -1,0 +1,231 @@
+{
+  "marketData": {
+    "futures": {
+      "SPY": {
+        "price": "634.42",
+        "change": "-0.18",
+        "changePercent": "-0.03",
+        "volume": "71,307,134",
+        "high": "636.15",
+        "low": "633.99",
+        "lastUpdated": "2025-07-24T20:00:00.000Z",
+        "source": "Polygon"
+      },
+      "QQQ": {
+        "price": "565.01",
+        "change": "-0.12",
+        "changePercent": "-0.02",
+        "volume": "42,275,541",
+        "high": "566.24",
+        "low": "563.29",
+        "lastUpdated": "2025-07-24T20:00:00.000Z",
+        "source": "Polygon"
+      },
+      "DIA": {
+        "price": "447.11",
+        "change": "0.10",
+        "changePercent": "0.02",
+        "volume": "5,078,312",
+        "high": "449.13",
+        "low": "446.75",
+        "lastUpdated": "2025-07-24T20:00:00.000Z",
+        "source": "Polygon"
+      }
+    },
+    "sectors": {
+      "XLF": {
+        "price": "53.07",
+        "change": "-0.05",
+        "changePercent": "-0.09",
+        "volume": "32,371,926",
+        "high": "53.44",
+        "low": "53.01",
+        "lastUpdated": "2025-07-24T20:00:00.000Z",
+        "source": "Polygon",
+        "name": "Financial Services"
+      },
+      "XLK": {
+        "price": "261.39",
+        "change": "0.46",
+        "changePercent": "0.18",
+        "volume": "6,079,813",
+        "high": "261.90",
+        "low": "259.92",
+        "lastUpdated": "2025-07-24T20:00:00.000Z",
+        "source": "Polygon",
+        "name": "Technology"
+      },
+      "XLE": {
+        "price": "87.43",
+        "change": "0.85",
+        "changePercent": "0.98",
+        "volume": "12,011,071",
+        "high": "87.54",
+        "low": "86.19",
+        "lastUpdated": "2025-07-24T20:00:00.000Z",
+        "source": "Polygon",
+        "name": "Energy"
+      },
+      "XLV": {
+        "price": "135.76",
+        "change": "-0.37",
+        "changePercent": "-0.27",
+        "volume": "11,054,765",
+        "high": "136.93",
+        "low": "135.54",
+        "lastUpdated": "2025-07-24T20:00:00.000Z",
+        "source": "Polygon",
+        "name": "Healthcare"
+      },
+      "XLI": {
+        "price": "153.47",
+        "change": "-0.10",
+        "changePercent": "-0.07",
+        "volume": "11,695,649",
+        "high": "154.59",
+        "low": "153.05",
+        "lastUpdated": "2025-07-24T20:00:00.000Z",
+        "source": "Polygon",
+        "name": "Industrials"
+      },
+      "XLY": {
+        "price": "222.80",
+        "change": "-0.72",
+        "changePercent": "-0.32",
+        "volume": "7,574,180",
+        "high": "224.82",
+        "low": "222.33",
+        "lastUpdated": "2025-07-24T20:00:00.000Z",
+        "source": "Polygon",
+        "name": "Consumer Discretionary"
+      },
+      "XLP": {
+        "price": "81.36",
+        "change": "-0.36",
+        "changePercent": "-0.44",
+        "volume": "11,462,589",
+        "high": "81.81",
+        "low": "81.29",
+        "lastUpdated": "2025-07-24T20:00:00.000Z",
+        "source": "Polygon",
+        "name": "Consumer Staples"
+      },
+      "XLU": {
+        "price": "84.30",
+        "change": "-0.22",
+        "changePercent": "-0.26",
+        "volume": "11,069,070",
+        "high": "84.69",
+        "low": "84.08",
+        "lastUpdated": "2025-07-24T20:00:00.000Z",
+        "source": "Polygon",
+        "name": "Utilities"
+      },
+      "XLB": {
+        "price": "91.29",
+        "change": "-0.11",
+        "changePercent": "-0.12",
+        "volume": "8,671,936",
+        "high": "92.00",
+        "low": "91.02",
+        "lastUpdated": "2025-07-24T20:00:00.000Z",
+        "source": "Polygon",
+        "name": "Materials"
+      }
+    },
+    "currencies": {},
+    "news": [
+      {
+        "headline": "Dover and Honeywell continue their post-earnings slides. Here's how we may respond",
+        "summary": "The Investing Club holds its \"Morning Meeting\" every weekday at 10:20 a.m. ET.",
+        "source": "CNBC",
+        "datetime": "2025-07-25T16:43:53.000Z",
+        "url": "https://www.cnbc.com/2025/07/25/dover-and-honeywell-continue-their-post-earnings-slides-heres-how-we-may-respond.html"
+      },
+      {
+        "headline": "My friends expect me to pay for everything because I make more money. Am I a jerk for not wanting to pick up the tab?",
+        "summary": "“They sometimes even joke with me about being cheap when I don’t pick up bills.”",
+        "source": "MarketWatch",
+        "datetime": "2025-07-25T16:39:00.000Z",
+        "url": "https://www.marketwatch.com/story/my-friends-expect-me-to-pay-for-everything-because-i-make-more-money-am-i-a-jerk-for-not-wanting-to-pick-up-the-tab-0e41e5b8"
+      },
+      {
+        "headline": "This chart shows how prices have gone up because of Trump’s tariffs",
+        "summary": "One team of economists found clear price increases for American consumers due to President Donald Trump’s tariffs. I, a chart, they compare the price tags for imported goods with those for goods made in the U.S.",
+        "source": "MarketWatch",
+        "datetime": "2025-07-25T16:28:00.000Z",
+        "url": "https://www.marketwatch.com/story/this-chart-shows-how-prices-have-gone-up-because-of-trumps-tariffs-41f4e2fb"
+      },
+      {
+        "headline": "How to find purpose and passion in retirement without a title, salary or to-do list",
+        "summary": "A new book aims to teach people to slow down and contemplate what their ideal retirement might look like.",
+        "source": "MarketWatch",
+        "datetime": "2025-07-25T16:14:00.000Z",
+        "url": "https://www.marketwatch.com/story/how-to-find-purpose-and-passion-in-retirement-without-a-title-salary-or-to-do-list-7e0b6972"
+      },
+      {
+        "headline": "How you can keep your job as Trump and Google propel AI spending",
+        "summary": "Also: A deeper dive into the meme-stock craze and important trends for home buyers and sellers to learn about.",
+        "source": "MarketWatch",
+        "datetime": "2025-07-25T15:31:00.000Z",
+        "url": "https://www.marketwatch.com/story/how-you-can-keep-your-job-as-trump-and-google-propel-ai-spending-4d11881e"
+      },
+      {
+        "headline": "AI won't replace you just yet, Wharton professor says—but it'll be 'a huge concern' for entry-level workers",
+        "summary": "Many American workers are concerned about being replaced by AI. We're not quite there yet, says Wharton professor Ethan Mollick.",
+        "source": "CNBC",
+        "datetime": "2025-07-25T15:21:19.000Z",
+        "url": "https://www.cnbc.com/2025/07/25/ai-probably-wont-replace-you-just-yet-wharton-professor-says.html"
+      },
+      {
+        "headline": "Auction sales fall 6% in the first half, raising fears of an art market shift",
+        "summary": "Auction sales have been declining for the third year in a row and are down 44% — or more than $3 billion — from the first six months of 2022.",
+        "source": "CNBC",
+        "datetime": "2025-07-25T14:53:47.000Z",
+        "url": "https://www.cnbc.com/2025/07/25/fine-art-auction-sales.html"
+      },
+      {
+        "headline": "Intel earnings bring more questions than answers, sending the stock lower",
+        "summary": "Analysts think Intel’s commentary signaled openness to cutting its foundry business later on, but, for now, there’s uncertainty around the company’s future.",
+        "source": "MarketWatch",
+        "datetime": "2025-07-25T14:26:00.000Z",
+        "url": "https://www.marketwatch.com/story/intel-earnings-bring-more-questions-than-answers-sending-the-stock-lower-02501ed9"
+      },
+      {
+        "headline": "Trump says he believes Powell is ready to start lowering rates",
+        "summary": "Trump on Friday expressed confidence the Fed will start cutting, a day after he met with central bank Chair Jerome Powell.",
+        "source": "CNBC",
+        "datetime": "2025-07-25T14:22:27.000Z",
+        "url": "https://www.cnbc.com/2025/07/25/trump-says-he-believes-powell-is-ready-to-start-lowering-rates.html"
+      },
+      {
+        "headline": "39-year-old dermatologist spent $180,000 to get licensed nationwide—she made $870,000 last year",
+        "summary": "Dr. Anna Chacon has a private dermatology practiced based in Coral Gables, Florida. But she sees patients all over the country.",
+        "source": "CNBC",
+        "datetime": "2025-07-25T14:03:26.000Z",
+        "url": "https://www.cnbc.com/2025/07/25/39-year-old-dermatologist-spent-180000-to-get-licensed-nationwide-and-made-870000-last-year.html"
+      }
+    ],
+    "dataSourceUsed": "live",
+    "timestamp": "2025-07-25T16:52:04.984Z",
+    "errors": [
+      "Polygon forex error for C:EURUSD: Request failed with status code 404",
+      "Polygon forex error for C:GBPUSD: Request failed with status code 404",
+      "Polygon forex error for C:USDJPY: Request failed with status code 404"
+    ]
+  },
+  "timing": {
+    "lastClose": "7/24/2025, 6:00:00 PM",
+    "nextOpen": "7/25/2025, 11:30:00 AM",
+    "hoursSinceClose": 20,
+    "timeToOpenStr": "-4h -23m",
+    "isMarketHours": true
+  },
+  "availableAPIs": [
+    "Anthropic",
+    "Polygon",
+    "Alpha Vantage",
+    "Finnhub"
+  ],
+  "generatedAt": "2025-07-25T16:55:11.850Z"
+}
