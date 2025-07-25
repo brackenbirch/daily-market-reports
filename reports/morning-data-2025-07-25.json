@@ -2,22 +2,22 @@
   "stocks": {
     "SPY": {
       "symbol": "SPY",
-      "price": "635.25",
+      "price": "635.22",
       "sources": 3,
       "confidence": "HIGH",
-      "lastUpdated": 1753460896963,
+      "lastUpdated": 1753461575822,
       "sourceList": [
-        "finnhub",
+        "polygon",
         "alphaVantage",
-        "polygon"
+        "finnhub"
       ]
     },
     "QQQ": {
       "symbol": "QQQ",
-      "price": "565.85",
+      "price": "565.78",
       "sources": 3,
       "confidence": "HIGH",
-      "lastUpdated": 1753460901729,
+      "lastUpdated": 1753461580667,
       "sourceList": [
         "finnhub",
         "polygon",
@@ -26,22 +26,22 @@
     },
     "DIA": {
       "symbol": "DIA",
-      "price": "447.44",
+      "price": "447.41",
       "sources": 3,
       "confidence": "HIGH",
-      "lastUpdated": 1753460906743,
+      "lastUpdated": 1753461585653,
       "sourceList": [
-        "polygon",
         "finnhub",
+        "polygon",
         "alphaVantage"
       ]
     },
     "IWM": {
       "symbol": "IWM",
-      "price": "223.54",
+      "price": "223.55",
       "sources": 3,
       "confidence": "HIGH",
-      "lastUpdated": 1753460911730,
+      "lastUpdated": 1753461590685,
       "sourceList": [
         "finnhub",
         "polygon",
@@ -53,7 +53,7 @@
       "price": "53.15",
       "sources": 3,
       "confidence": "HIGH",
-      "lastUpdated": 1753460916729,
+      "lastUpdated": 1753461595660,
       "sourceList": [
         "finnhub",
         "polygon",
@@ -62,10 +62,10 @@
     },
     "XLK": {
       "symbol": "XLK",
-      "price": "261.99",
+      "price": "261.93",
       "sources": 2,
       "confidence": "HIGH",
-      "lastUpdated": 1753460921728,
+      "lastUpdated": 1753461600668,
       "sourceList": [
         "finnhub",
         "alphaVantage"
@@ -73,10 +73,10 @@
     },
     "XLE": {
       "symbol": "XLE",
-      "price": "87.27",
+      "price": "87.25",
       "sources": 2,
       "confidence": "HIGH",
-      "lastUpdated": 1753460926867,
+      "lastUpdated": 1753461605697,
       "sourceList": [
         "finnhub",
         "alphaVantage"
@@ -84,43 +84,46 @@
     },
     "XLV": {
       "symbol": "XLV",
-      "price": "135.83",
-      "sources": 2,
+      "price": "135.82",
+      "sources": 3,
       "confidence": "HIGH",
-      "lastUpdated": 1753460931738,
+      "lastUpdated": 1753461610664,
       "sourceList": [
         "finnhub",
+        "polygon",
         "alphaVantage"
       ]
     },
     "XLI": {
       "symbol": "XLI",
-      "price": "153.95",
-      "sources": 2,
+      "price": "153.79",
+      "sources": 3,
       "confidence": "HIGH",
-      "lastUpdated": 1753460936735,
+      "lastUpdated": 1753461615675,
       "sourceList": [
         "finnhub",
+        "polygon",
         "alphaVantage"
       ]
     },
     "XLY": {
       "symbol": "XLY",
-      "price": "223.97",
-      "sources": 2,
+      "price": "223.57",
+      "sources": 3,
       "confidence": "HIGH",
-      "lastUpdated": 1753460941872,
+      "lastUpdated": 1753461620675,
       "sourceList": [
         "finnhub",
+        "polygon",
         "alphaVantage"
       ]
     },
     "XLP": {
       "symbol": "XLP",
-      "price": "81.30",
+      "price": "81.32",
       "sources": 3,
       "confidence": "HIGH",
-      "lastUpdated": 1753460946802,
+      "lastUpdated": 1753461625674,
       "sourceList": [
         "finnhub",
         "polygon",
@@ -129,10 +132,10 @@
     },
     "XLU": {
       "symbol": "XLU",
-      "price": "84.29",
+      "price": "84.32",
       "sources": 3,
       "confidence": "HIGH",
-      "lastUpdated": 1753460951741,
+      "lastUpdated": 1753461630679,
       "sourceList": [
         "finnhub",
         "polygon",
@@ -141,13 +144,12 @@
     },
     "XLB": {
       "symbol": "XLB",
-      "price": "91.37",
-      "sources": 3,
+      "price": "91.42",
+      "sources": 2,
       "confidence": "HIGH",
-      "lastUpdated": 1753460956743,
+      "lastUpdated": 1753461635679,
       "sourceList": [
         "finnhub",
-        "polygon",
         "alphaVantage"
       ]
     }
