@@ -632,187 +632,93 @@ function formatComprehensiveDataForPrompt(marketData) {
     return dataString;
 }
 
-// Enhanced prompt creation matching original format and style
+// Enhanced prompt creation for VERBOSE, detailed reports
 const createValidatedMarketPrompt = (marketData) => {
     const timing = getMarketTimingInfo();
     
-    return `You are a senior market analyst preparing institutional clients for the next trading session. You are analyzing the ${timing.hoursSinceClose}-hour period from yesterday's market close (4:00 PM ET) to this morning's market open (9:30 AM ET). Use the cross-referenced, validated market data below as your foundation and create comprehensive, detailed analysis for each section.
+    return `You are a senior market analyst at a top-tier investment bank preparing institutional clients for the next trading session. You are analyzing the ${timing.hoursSinceClose}-hour period from yesterday's market close (4:00 PM ET) to this morning's market open (9:30 AM ET). 
 
-INSTRUCTIONS:
-- Use the validated data provided as your foundation
-- Build comprehensive, realistic analysis around the actual data points
-- Create detailed professional summaries even when some data points are missing
-- Base analysis on real market patterns, typical overnight flows, and institutional behavior
-- When specific data is unavailable, use professional market analysis based on general market conditions and typical patterns
-- Provide actionable insights for institutional traders and portfolio managers
+Create an EXTREMELY DETAILED, COMPREHENSIVE, and VERBOSE morning market report. Each section should be rich with analysis, specific insights, and actionable intelligence. Use validated market data as your foundation and build extensive professional analysis.
 
 ${formatComprehensiveDataForPrompt(marketData)}
 
-Create a professional MORNING MARKET REPORT with these exact sections:
+Create a COMPREHENSIVE MORNING MARKET INTELLIGENCE REPORT with ALL sections below. Write extensively and provide deep analysis for every section:
 
 **EXECUTIVE BRIEF**
-[2-sentence overview of market developments and key themes that will drive the 9:30 AM opening, focusing on the ${timing.hoursSinceClose}-hour close-to-open window. Use validated data where available and professional market analysis for comprehensive coverage]
+[Write 4-5 detailed sentences providing a comprehensive overview of overnight market developments, key themes driving the 9:30 AM opening, major cross-asset moves, sector rotation patterns, and primary risk factors. Include specific data points and market positioning insights.]
 
 **ASIAN MARKETS IMPACT**
-Create a comprehensive professional summary covering how Asian trading sessions (which occurred while US markets were closed) are setting up the US market open. Use validated data as foundation and build detailed analysis covering:
-- Tokyo, Hong Kong, Shanghai, Sydney market performance and impact on US futures
-- Asian corporate developments and earnings affecting US-listed ADRs and multinationals
-- Asian economic data releases and central bank actions during US market closure
-- Currency movements during Asian trading hours affecting US market positioning
-- Cross-border capital flows from Asian session into anticipated US open
-- Technology sector spillover effects from Asian markets
-- Commodities and energy impacts from Asian trading
-[Target: 150 words, detailed professional analysis combining validated data with comprehensive market insights]
+[400-500 words: Provide extensive analysis of Asian trading session impact on US markets. Cover Tokyo Nikkei performance and specific sector movements, Hong Kong Hang Seng action with focus on tech and property sectors, Shanghai Composite and A-shares performance, Sydney ASX movements and commodities impact. Analyze specific corporate earnings from major Asian companies (Sony, Samsung, Taiwan Semi, Alibaba, Tencent), Asian central bank communications and policy changes, detailed currency movements (JPY, CNY, KRW, AUD) and their US market implications, cross-border capital flows analysis, Asian commodities trading impact on US energy and materials sectors, specific ADR performance expectations, technology sector spillover effects, manufacturing PMI and economic data releases, and institutional flow patterns from Asian pension funds and sovereign wealth funds.]
 
 **EUROPEAN TRADING SESSION TO US OPEN**
-Create a comprehensive professional summary covering the European trading session (which occurred during US market closure). Build detailed analysis covering:
-- London, Frankfurt, Paris market performance and transmission to US futures
-- European corporate developments affecting US multinationals and sectors
-- ECB communications and European economic data released during US closure
-- European currency and bond movements affecting US positioning
-- European institutional flows and positioning ahead of US market open
-- Brexit and EU policy impacts on global markets
-- European banking sector performance affecting US financials
-[Target: 150 words, detailed professional analysis with actionable insights]
+[400-500 words: Provide comprehensive analysis of European session impact. Detail London FTSE performance with Brexit implications, Frankfurt DAX movements and German industrial data, Paris CAC performance and French economic indicators, Milan and Madrid market actions, specific European corporate developments (ASML, SAP, Nestle, Unilever, BP, Shell), ECB communications and monetary policy implications, detailed European currency movements (EUR, GBP, CHF) and cross-rate analysis, European sovereign bond performance and yield curve movements, European banking sector performance and regulatory developments, energy sector analysis including gas prices and renewable developments, European institutional flows and positioning changes, luxury goods sector performance impact on US consumer discretionary, European auto sector developments affecting US auto stocks, and cross-Atlantic merger and acquisition activity.]
 
 **US FUTURES & AFTER-HOURS ANALYSIS**
-Create a comprehensive professional summary covering US market activity during closure. Use validated futures data and build detailed analysis covering:
-- S&P, NASDAQ, DOW futures performance during the ${timing.hoursSinceClose}-hour closure period
-- After-hours and extended-hours trading activity in major US stocks
-- Gap scenarios and expected opening dynamics for 9:30 AM
-- Futures positioning and institutional activity
-- Federal Reserve and US policy developments during market closure
-- Options flow and gamma positioning effects
-- Volume patterns and liquidity conditions
-[Target: 150 words, comprehensive futures analysis for market open positioning]
+[400-500 words: Provide detailed futures market analysis. Cover S&P 500 futures performance with specific level analysis and volume patterns, NASDAQ futures action focusing on tech sector leadership, DOW futures movements with industrial and financial sector focus, Russell 2000 futures for small-cap sentiment, VIX futures and volatility expectations, detailed after-hours trading analysis of major stocks, specific earnings announcements and guidance updates, Federal Reserve officials' speeches and policy communications, Treasury futures performance and yield curve implications, dollar index movements and currency impacts, commodities futures analysis (oil, gold, copper, agricultural), options flow analysis and gamma positioning effects, institutional futures positioning and commitment of traders data, futures arbitrage opportunities and basis trading, international correlation analysis and global risk sentiment, and pre-market volume patterns and liquidity conditions.]
 
-**BREAKING HEADLINES**
-Create comprehensive coverage of market-moving developments that occurred during market closure. Use validated news data as foundation and provide detailed analysis covering:
-- After-hours earnings releases and corporate announcements
-- Geopolitical developments during market closure affecting risk sentiment
-- Central bank communications from global markets
-- Regulatory news and policy developments
-- Technology sector developments and AI/semiconductor news
-- Energy sector developments and commodity price impacts
-- Healthcare and biotech developments
-- Expected impact on 9:30 AM market opening and sector implications
-[Target: 250 words, comprehensive news analysis with market impact assessment]
+**BREAKING HEADLINES AND NEWS ANALYSIS**
+[600-700 words: Provide extensive coverage of overnight news flow. Analyze specific earnings releases with detailed fundamental analysis, major corporate announcements including M&A activity, management guidance updates and conference call highlights, geopolitical developments affecting market sentiment, central bank communications from major economies, regulatory news and policy developments, technology sector developments including AI advancements and semiconductor news, energy sector developments including oil production changes and renewable energy announcements, healthcare and biotech developments including drug approvals and clinical trial results, financial sector news including banking regulations and fintech developments, consumer sector developments including retail earnings and consumer confidence data, international trade developments and tariff news, climate and ESG developments affecting sector positioning, cryptocurrency and digital asset developments, specific analyst upgrades and downgrades with price target changes, institutional research publications and strategic recommendations, and detailed impact analysis on sector performance and individual stock movements.]
 
 **RESEARCH & INSTITUTIONAL ACTIVITY**
-Create comprehensive analysis of global institutional activity during market closure. Build detailed coverage including:
-- Analyst reports and rating changes released after US market close
-- International institutional positioning changes during global trading sessions
-- Research from major investment banks affecting US markets
-- Hedge fund activity in global markets during US closure
-- Emerging market themes and sector rotation patterns
-- ETF flows and passive investment impacts
-- High-frequency trading patterns in overnight sessions
-- Institutional preparation for US market open
-[Target: 250 words, detailed institutional activity analysis]
+[600-700 words: Provide comprehensive analysis of institutional activity. Cover major investment bank research publications released overnight, specific analyst reports and rating changes with detailed reasoning, hedge fund positioning changes and 13F filing analysis, mutual fund flows and ETF creation/redemption activity, pension fund and sovereign wealth fund positioning changes, high-frequency trading patterns and algorithmic activity, options flow analysis and unusual options activity, dark pool activity and institutional block trading, international fund flows and cross-border investment patterns, sector rotation themes and style factor performance, momentum and technical analysis from institutional desks, risk management activities and hedging strategies, derivatives positioning and structured products activity, prime brokerage activities and margin requirements, institutional calendar and upcoming events, merger arbitrage and event-driven strategies, quantitative factor analysis and systematic trading patterns, emerging market flows and developing market impacts, ESG and sustainable investing flows, and specific institutional recommendations for market open positioning.]
 
 **ECONOMIC CALENDAR & EARNINGS IMPACT**
-Create comprehensive assessment of market-moving events for today's US trading session. Use validated economic data and build detailed analysis covering:
-- Economic releases from Asian and European markets during US closure
-- Earnings announcements released after yesterday's US close
-- Central bank communications from global markets affecting US positioning
-- Scheduled US economic events for today's trading session
-- Corporate guidance updates and management commentary
-- Sector-specific economic indicators
-- Federal Reserve officials' speeches and policy implications
-[Target: 150 words, comprehensive economic and earnings impact analysis]
+[400-500 words: Provide detailed economic and earnings analysis. Cover Asian economic releases including China PMI, Japan industrial production, and Korea trade data, European economic indicators including German IFO, UK inflation, and Eurozone PMI data, specific earnings announcements from major companies with fundamental analysis, corporate guidance updates and management commentary analysis, Federal Reserve calendar and upcoming speeches, US economic releases scheduled for today including employment, inflation, and GDP data, sector-specific economic indicators affecting individual industries, central bank communications from major economies, international trade data and import/export trends, commodity prices and their economic implications, housing market data and real estate sector impacts, consumer confidence and spending patterns, business investment and capital expenditure trends, inflation expectations and monetary policy implications, and detailed impact analysis on market sectors and trading strategies.]
 
 **AFTER-HOURS & EXTENDED TRADING ANALYSIS**
-Create comprehensive analysis of after-hours and extended trading activity. Use validated mover data and build detailed professional analysis covering:
-- Top after-hours gainers and losers with fundamental analysis
-- After-hours volume patterns and liquidity conditions
-- Earnings releases or news driving significant moves
-- Extended-hours technical levels and gap implications for 9:30 AM open
-- Institutional after-hours activity and positioning strategies
-- Expected continuation or reversal patterns at regular market open
-- Risk/reward scenarios for opening positions based on overnight moves
-- Cross-asset correlations affecting after-hours trading
-[Target: 200 words, comprehensive after-hours analysis with trading strategies]
+[500-600 words: Provide comprehensive after-hours trading analysis. Analyze top after-hours gainers with detailed fundamental catalysts, top after-hours losers with specific reason analysis, earnings-driven moves with guidance and commentary analysis, news-driven price action with event impact assessment, volume analysis and liquidity conditions during extended hours, technical level analysis and gap implications for regular session, institutional after-hours activity and block trading patterns, options activity and gamma effects during extended hours, cross-asset correlations during after-hours trading, international market influences on after-hours pricing, specific sector performance during extended hours, market maker activity and bid-ask spread analysis, after-hours futures and pre-market correlations, continuation vs. reversal probability analysis, risk/reward scenarios for opening positions, hedge strategies for gap trading, volatility expectations and VIX implications, and specific trading recommendations for market open based on after-hours activity.]
 
 **SECTOR ROTATION & GLOBAL THEMES**
-Create comprehensive analysis of sector performance and global market themes affecting US market open. Use validated sector ETF data and build detailed analysis covering:
-- **XLF (Financial Services)**: Interest rate sensitivity, global banking performance, regulatory developments
-- **XLK (Technology)**: Asian tech spillover, semiconductor developments, AI sector momentum
-- **XLE (Energy)**: Global oil markets, geopolitical factors, renewable energy trends
-- **XLV (Healthcare)**: Biotech developments, regulatory news, global health trends
-- **XLI (Industrials)**: Global manufacturing data, infrastructure spending, trade developments
-- **XLY (Consumer Discretionary)**: Global consumer trends, retail developments, economic sensitivity
-- **XLP (Consumer Staples)**: Defensive positioning, currency impacts, inflation hedging
-- **XLU (Utilities)**: Interest rate sensitivity, renewable energy transition, regulatory changes
-- **XLB (Materials)**: Commodity price action, global manufacturing demand, infrastructure trends
-- Cross-sector rotation themes and relative value opportunities
-[Target: 300 words, comprehensive sector analysis with positioning recommendations]
+[800-1000 words: Provide extensive sector-by-sector analysis. For each major sector, provide detailed analysis:]
+
+**XLF (Financial Services)**: [100+ words on interest rate sensitivity, global banking performance, regulatory developments, credit conditions, loan growth, net interest margins, fintech competition, insurance sector performance, REIT performance, and specific stock recommendations]
+
+**XLK (Technology)**: [100+ words on Asian tech spillover, semiconductor developments, AI sector momentum, cloud computing trends, cybersecurity developments, software sector performance, hardware trends, and specific stock analysis]
+
+**XLE (Energy)**: [100+ words on global oil markets, geopolitical factors, renewable energy trends, natural gas developments, pipeline and infrastructure projects, refining margins, and specific energy stock analysis]
+
+**XLV (Healthcare)**: [100+ words on biotech developments, pharmaceutical earnings, regulatory approvals, clinical trial results, healthcare services performance, medical device innovations, and specific healthcare stock recommendations]
+
+**XLI (Industrials)**: [100+ words on global manufacturing data, infrastructure spending, trade developments, aerospace and defense trends, construction activity, transportation sector performance, and specific industrial stock analysis]
+
+**XLY (Consumer Discretionary)**: [100+ words on consumer trends, retail developments, automotive sector performance, travel and leisure trends, e-commerce developments, luxury goods performance, and specific consumer stock recommendations]
+
+**XLP (Consumer Staples)**: [100+ words on defensive positioning, currency impacts, inflation hedging characteristics, food and beverage trends, household products performance, tobacco sector developments, and specific staples stock analysis]
+
+**XLU (Utilities)**: [100+ words on interest rate sensitivity, renewable energy transition, regulatory changes, dividend sustainability, grid modernization trends, and specific utility stock recommendations]
+
+**XLB (Materials)**: [100+ words on commodity price action, global manufacturing demand, infrastructure trends, mining sector performance, chemical industry developments, steel and aluminum markets, and specific materials stock analysis]
+
+[Include cross-sector rotation themes, relative value opportunities, and global positioning recommendations]
 
 **FUTURES ANALYSIS**
-Create comprehensive analysis of overnight futures positioning and market structure. Use validated futures data and build detailed coverage including:
-- S&P 500, NASDAQ, and DOW futures performance during market closure
-- International market impacts on US futures pricing and correlation analysis
-- Institutional futures positioning and volume pattern analysis
-- Futures spreads, term structure, and roll dynamics
-- Gap scenarios and expected opening dynamics for regular trading session
-- Futures arbitrage opportunities and professional trading strategies
-- Options-futures interactions and gamma positioning effects
-- Technical levels and momentum indicators for futures markets
-[Target: 150 words, comprehensive futures market analysis for professional traders]
+[500-600 words: Provide comprehensive futures market analysis. Cover detailed S&P 500 futures analysis with specific technical levels, NASDAQ futures positioning and technology sector implications, DOW futures performance and industrial/financial focus, Russell 2000 futures and small-cap sentiment, international futures correlations and global risk sentiment, institutional futures positioning and volume analysis, futures spreads and term structure implications, roll dynamics and calendar spread opportunities, options-futures interactions and gamma positioning, volatility futures and VIX term structure, commodity futures analysis and cross-asset implications, currency futures and international flow analysis, Treasury futures and interest rate implications, futures arbitrage opportunities and basis trading strategies, technical analysis and momentum indicators, gap scenarios and opening range expectations, and specific futures trading recommendations for professional traders.]
 
 **POSITIONING FOR MARKET OPEN**
-Create comprehensive senior analyst-level positioning recommendations for the 9:30 AM US market opening. Build detailed strategic analysis covering:
-- Momentum and gap scenarios based on overnight developments
-- Global market correlation and spillover effects analysis
-- Currency and commodity impacts on equity positioning
-- Sector rotation themes from global markets
-- Risk-adjusted return expectations for opening positions
-- Correlation analysis between global moves and US market opening performance
-- Institutional flow expectations and positioning strategies
-- Hedge strategies and risk management for market open
-[Target: 200 words, comprehensive opening positioning strategy]
+[500-600 words: Provide comprehensive positioning strategy. Analyze momentum and gap scenarios with specific level analysis, global market correlation and spillover effects, currency and commodity impacts on equity positioning, detailed sector rotation recommendations with specific allocations, risk-adjusted return expectations with quantitative analysis, correlation analysis between global moves and US opening performance, institutional flow expectations and positioning strategies, hedge strategies and risk management for various scenarios, options strategies for gap trading and volatility management, cash management and liquidity considerations, margin requirements and leverage implications, tax considerations for institutional accounts, ESG and sustainable investing implications, factor exposure analysis (value, growth, momentum, quality), geographic and international exposure recommendations, and specific stock picks and sector overweight/underweight recommendations.]
 
 **BONDS & COMMODITIES ANALYSIS**
-Create comprehensive cross-asset analysis for US equity market opening. Build detailed coverage including:
-- Treasury futures and international bond market performance analysis
-- Commodity price action during global trading sessions (gold, oil, base metals, agricultural)
-- Dollar strength/weakness themes from FX trading overnight
-- Cross-asset flow patterns from global markets into US equity open
-- Yield curve positioning and interest rate sensitivity analysis
-- Inflation expectations and real rate impacts
-- Credit market conditions and corporate bond performance
-- Fixed income and commodities implications for equity sector positioning
-[Target: 150 words, comprehensive cross-asset analysis]
+[400-500 words: Provide comprehensive cross-asset analysis. Cover detailed Treasury futures analysis with yield curve implications, international bond performance and global yield comparisons, corporate bond markets and credit spread analysis, municipal bond performance and state/local government impacts, inflation-protected securities and real rate analysis, commodity price action with specific analysis of gold, silver, platinum, crude oil, natural gas, copper, aluminum, agricultural commodities, and precious metals, dollar strength/weakness themes with detailed currency analysis, cross-asset flow patterns and correlation analysis, hedge fund commodity positioning and systematic strategies, central bank reserve management and international flows, inflation expectations and monetary policy implications, and specific recommendations for fixed income and commodity positioning in equity portfolios.]
 
 **TECHNICAL LEVELS FOR US OPEN**
-Create comprehensive technical analysis for US market open based on global developments. Build detailed coverage including:
-- Support and resistance levels established in futures and overnight markets
-- Gap analysis based on global market performance and correlation patterns
-- Volume profile analysis from after-hours and international sessions
-- Options positioning and gamma effects from overnight activity
-- Technical momentum indicators and trend analysis
-- Chart pattern recognition and breakout/breakdown scenarios
-- Fibonacci retracements and key technical levels for major indices
-- Risk/reward ratios and technical probability analysis for opening trades
-[Target: 150 words, comprehensive technical analysis for trading decisions]
+[400-500 words: Provide comprehensive technical analysis. Cover specific support and resistance levels for major indices with exact price points, gap analysis with probability assessments, volume profile analysis and value area calculations, options positioning analysis with gamma and delta implications, technical momentum indicators including RSI, MACD, and moving averages, chart pattern recognition with breakout/breakdown scenarios, Fibonacci retracements and extension levels, Elliott Wave analysis and cycle theory, relative strength analysis and sector comparisons, volatility analysis and Bollinger Band positioning, breadth indicators and advance/decline analysis, put/call ratios and sentiment indicators, institutional technical analysis and algorithmic triggers, high-frequency trading technical levels, options expiration effects and pin risk analysis, and specific technical trading recommendations with entry/exit points and risk management levels.]
 
 **RISK ASSESSMENT FOR US OPEN**
-Create comprehensive risk analysis for today's US trading session. Build detailed assessment covering:
-- Volatility expectations based on global market activity and VIX implications
-- Geopolitical developments during US market closure and risk-off scenarios
-- Economic data and policy developments from major economies
-- Earnings and corporate developments affecting market sentiment
-- Liquidity conditions expected at 9:30 AM opening based on overnight activity
-- Tail risk scenarios and black swan event preparation
-- Professional risk management recommendations for various market scenarios
-- Position sizing and hedge strategies for institutional portfolios
-[Target: 150 words, comprehensive risk management analysis]
+[400-500 words: Provide comprehensive risk analysis. Cover detailed volatility expectations with VIX analysis and skew indicators, geopolitical risk assessment with specific conflict and policy implications, economic risk factors including recession probability and leading indicators, earnings risk with specific companies and sectors under pressure, liquidity risk assessment and market depth analysis, systemic risk factors and correlation breakdowns, tail risk scenarios and black swan event preparation, regulatory risk and policy change implications, currency risk and international exposure assessment, commodity risk and supply chain implications, cyber security risks and technology vulnerabilities, climate risk and ESG factors, credit risk and corporate bond implications, inflation risk and purchasing power considerations, model risk and quantitative strategy failures, and specific risk management recommendations including hedging strategies, position sizing guidelines, and portfolio protection techniques.]
 
 **MARKET OPEN STRATEGY SUMMARY**
-[3-sentence summary of key themes, opening strategies, and risk/reward scenarios for the 9:30 AM market open based on the ${timing.hoursSinceClose}-hour close-to-open analysis. Provide clear, actionable guidance for institutional traders.]
+[Write 6-8 detailed sentences providing comprehensive strategic guidance for the 9:30 AM market open. Include specific positioning recommendations, key levels to watch, primary risk factors, sector allocation suggestions, hedging strategies, and clear actionable guidance for institutional traders and portfolio managers.]
 
-Write in professional institutional language suitable for senior portfolio managers, hedge fund professionals, and institutional trading desks. Create comprehensive, detailed analysis that provides real value to professional traders preparing for market open. Use validated data as your foundation but build complete, actionable analysis even when some specific data points may be limited. Include today's date: ${new Date().toDateString()}.
+CRITICAL INSTRUCTIONS:
+- Write EXTENSIVELY for each section - aim for maximum detail and comprehensive analysis
+- Target total report length: 6,000-8,000 words
+- Use professional institutional language throughout
+- Provide specific data points, price levels, and quantitative analysis
+- Include actionable trading recommendations and risk management guidance
+- Write as if for senior portfolio managers at top-tier investment firms
 
-IMPORTANT: This is a MORNING MARKET REPORT focused on the period from yesterday's 4:00 PM market close to this morning's 9:30 AM market open. Provide comprehensive analysis that institutional traders can act upon, combining validated data with professional market insights and realistic scenario analysis.`;
+Date: ${new Date().toDateString()}
+Market Timing: ${timing.hoursSinceClose} hours since close, opens in ${timing.timeToOpenStr}`;
 };
 
 // Main execution function
