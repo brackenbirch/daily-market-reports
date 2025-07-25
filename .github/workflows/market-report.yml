@@ -1,163 +1,48 @@
 name: Daily Market Report with Real Data
 on:
   schedule:
-    # Runs at 6:00 AM MST daily (13:00 UTC)
-    - cron: '0 13 * * *'
+    # Runs at 12:00 PM UTC daily (FIXED cron syntax)
+    - cron: '0 12 * * *'
   workflow_dispatch: # Allows manual triggering
   push:
     branches: [ main ] # Triggers when you push updates
-   
+    
 jobs:
   generate-market-report:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
-   
+    
     steps:
     - name: Checkout repository
       uses: actions/checkout@v4
-      with:
-        token: ${{ secrets.GITHUB_TOKEN }}
-     
+      
     - name: Set up Node.js
       uses: actions/setup-node@v4
       with:
         node-version: '18'
-       
-    - name: Create package.json and install dependencies
+        
+    - name: Install dependencies
       run: |
-        # Create package.json if it doesn't exist
-        if [ ! -f package.json ]; then
-          echo "📦 Creating package.json..."
-          cat > package.json << 'EOF'
-        {
-          "name": "market-report-generator",
-          "version": "1.0.0",
-          "description": "Automated multi-source market report generator",
-          "main": "generate-report-enhanced.js",
-          "scripts": {
-            "start": "node generate-report-enhanced.js",
-            "test": "echo \"No tests specified\""
-          },
-          "keywords": ["market", "trading", "finance", "automation"],
-          "author": "Market Report Bot",
-          "license": "MIT",
-          "dependencies": {
-            "axios": "^1.6.0",
-            "nodemailer": "^6.9.0",
-            "cheerio": "^1.0.0",
-            "node-fetch": "^3.3.0",
-            "@anthropic-ai/sdk": "^0.20.0"
-          }
-        }
-        EOF
-        fi
+        npm install axios
+        npm install nodemailer
+        npm install cheerio
+        npm install node-fetch
+        npm install @anthropic-ai/sdk
         
-        # Install dependencies
-        echo "📦 Installing dependencies..."
-        npm install --no-package-lock --no-save
-       
-    - name: Verify environment variables
-      run: |
-        echo "Checking required environment variables..."
-        if [ -z "$ANTHROPIC_API_KEY" ]; then echo "❌ ANTHROPIC_API_KEY missing"; exit 1; fi
-        
-        echo "Checking optional data sources..."
-        if [ -z "$ALPHA_VANTAGE_API_KEY" ]; then echo "⚠️ ALPHA_VANTAGE_API_KEY missing"; fi
-        if [ -z "$POLYGON_API_KEY" ]; then echo "⚠️ POLYGON_API_KEY missing"; fi
-        if [ -z "$FINNHUB_API_KEY" ]; then echo "⚠️ FINNHUB_API_KEY missing"; fi
-        if [ -z "$TRADING_ECONOMICS_API_KEY" ]; then echo "⚠️ TRADING_ECONOMICS_API_KEY missing"; fi
-        if [ -z "$FIXER_API_KEY" ]; then echo "⚠️ FIXER_API_KEY missing"; fi
-        if [ -z "$NEWS_API_KEY" ]; then echo "⚠️ NEWS_API_KEY missing"; fi
-        if [ -z "$GMAIL_USER" ]; then echo "⚠️ GMAIL_USER missing"; fi
-        
-        # Count available sources
-        SOURCES=0
-        [ ! -z "$ALPHA_VANTAGE_API_KEY" ] && SOURCES=$((SOURCES+1))
-        [ ! -z "$POLYGON_API_KEY" ] && SOURCES=$((SOURCES+1))
-        [ ! -z "$FINNHUB_API_KEY" ] && SOURCES=$((SOURCES+1))
-        [ ! -z "$TRADING_ECONOMICS_API_KEY" ] && SOURCES=$((SOURCES+1))
-        [ ! -z "$FIXER_API_KEY" ] && SOURCES=$((SOURCES+1))
-        [ ! -z "$NEWS_API_KEY" ] && SOURCES=$((SOURCES+1))
-        
-        echo "✅ Environment check complete - $SOURCES data sources available"
-        if [ $SOURCES -lt 2 ]; then
-          echo "⚠️ Warning: Less than 2 data sources available. Cross-referencing will be limited."
-        fi
-      env:
-        ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-        ALPHA_VANTAGE_API_KEY: ${{ secrets.ALPHA_VANTAGE_API_KEY }}
-        POLYGON_API_KEY: ${{ secrets.POLYGON_API_KEY }}
-        FINNHUB_API_KEY: ${{ secrets.FINNHUB_API_KEY }}
-        TRADING_ECONOMICS_API_KEY: ${{ secrets.TRADING_ECONOMICS_API_KEY }}
-        FIXER_API_KEY: ${{ secrets.FIXER_API_KEY }}
-        NEWS_API_KEY: ${{ secrets.NEWS_API_KEY }}
-        GMAIL_USER: ${{ secrets.GMAIL_USER }}
-        GMAIL_PASSWORD: ${{ secrets.GMAIL_PASSWORD }}
-        WORK_EMAIL_LIST: ${{ secrets.WORK_EMAIL_LIST }}
-       
     - name: Generate and Email Market Report
       env:
         ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         ALPHA_VANTAGE_API_KEY: ${{ secrets.ALPHA_VANTAGE_API_KEY }}
-        POLYGON_API_KEY: ${{ secrets.POLYGON_API_KEY }}
         FINNHUB_API_KEY: ${{ secrets.FINNHUB_API_KEY }}
-        TRADING_ECONOMICS_API_KEY: ${{ secrets.TRADING_ECONOMICS_API_KEY }}
-        FIXER_API_KEY: ${{ secrets.FIXER_API_KEY }}
-        NEWS_API_KEY: ${{ secrets.NEWS_API_KEY }}
         GMAIL_USER: ${{ secrets.GMAIL_USER }}
         GMAIL_PASSWORD: ${{ secrets.GMAIL_PASSWORD }}
         WORK_EMAIL_LIST: ${{ secrets.WORK_EMAIL_LIST }}
-        TZ: 'America/Denver'  # Set timezone for MST
-      run: |
-        echo "🌅 Starting morning market report generation..."
-        echo "Current time: $(date)"
-        echo "Node version: $(node --version)"
-        echo "NPM version: $(npm --version)"
-        node generate-report-enhanced.js
-        echo "✅ Report generation completed"
-      continue-on-error: false
-     
-    - name: Check for generated reports
-      run: |
-        if [ -d "reports" ] && [ "$(ls -A reports)" ]; then
-          echo "✅ Reports directory exists and contains files:"
-          ls -la reports/
-        else
-          echo "⚠️ No reports generated"
-          exit 1
-        fi
-     
+      run: node generate-report-enhanced.js
+      
     - name: Commit and push report
       run: |
-        git config --local user.email "market-report@github-actions"
-        git config --local user.name "Market Report Bot"
-        git config --local core.autocrlf false
-        
-        # Ensure reports directory exists
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
         mkdir -p reports
-        
-        # Add all report files
         git add reports/ || echo "No reports directory to add"
-        
-        # Check if there are changes to commit
-        if git diff --staged --quiet; then
-          echo "📄 No new reports to commit"
-        else
-          echo "📝 Committing new market report..."
-          git commit -m "🌅 Daily market report - $(date +'%Y-%m-%d %H:%M MST')"
-          git push
-          echo "✅ Report committed and pushed successfully"
-        fi
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-    
-    - name: Report Status
-      if: always()
-      run: |
-        echo "📊 Workflow Summary:"
-        echo "- Time: $(date)"
-        echo "- Status: ${{ job.status }}"
-        echo "- Reports generated: $(ls reports/ 2>/dev/null | wc -l || echo 0)"
-        if [ -f "reports/latest-morning-market-report.md" ]; then
-          echo "📈 Latest report size: $(wc -c < reports/latest-morning-market-report.md) characters"
-        fi
+        git commit -m "Daily market report - $(date +'%Y-%m-%d')" || echo "No changes to commit"
+        git push || echo "Push failed or no changes"
