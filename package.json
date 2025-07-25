@@ -1,44 +1,43 @@
 {
-  "name": "market-report-generator",
-  "version": "1.0.0",
-  "description": "Automated multi-source market report generator with data validation",
-  "main": "generate-report-enhanced.js",
+  "name": "market-intelligence-report",
+  "version": "2.0.0",
+  "description": "Automated market intelligence report generator with web scraping and multiple API integrations",
+  "main": "market-report.js",
   "scripts": {
-    "start": "node generate-report-enhanced.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "validate": "node -c generate-report-enhanced.js",
-    "dev": "NODE_ENV=development node generate-report-enhanced.js"
+    "start": "node market-report.js",
+    "test": "node --version",
+    "report": "node market-report.js",
+    "dev": "node market-report.js"
   },
-  "keywords": [
-    "market",
-    "trading", 
-    "finance",
-    "automation",
-    "stocks",
-    "crypto",
-    "reporting",
-    "ai",
-    "cross-reference",
-    "validation"
-  ],
-  "author": "Market Report Bot",
-  "license": "MIT",
   "dependencies": {
-    "axios": "^1.6.0",
-    "nodemailer": "^6.9.0", 
-    "cheerio": "^1.0.0",
-    "node-fetch": "^3.3.0",
-    "@anthropic-ai/sdk": "^0.20.0"
+    "axios": "^1.6.2",
+    "cheerio": "^1.0.0-rc.12",
+    "nodemailer": "^6.9.7"
+  },
+  "devDependencies": {
+    "eslint": "^8.55.0"
   },
   "engines": {
     "node": ">=16.0.0"
   },
+  "keywords": [
+    "market",
+    "stocks",
+    "finance",
+    "report",
+    "automation",
+    "api",
+    "web-scraping",
+    "github-actions"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/your-username/daily-market-reports.git"
+    "url": "https://github.com/yourusername/market-intelligence-report"
   },
   "bugs": {
-    "url": "https://github.com/your-username/daily-market-reports/issues"
+    "url": "https://github.com/yourusername/market-intelligence-report/issues"
   },
-  "homepage": "https://github.com/your-username/daily-market-reports#readme"
+  "homepage": "https://github.com/yourusername/market-intelligence-report#readme"
 }
