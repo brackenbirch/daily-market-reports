@@ -1,0 +1,177 @@
+{
+  "indices": {
+    "SPY": {
+      "price": "634.42",
+      "change": "-0.18",
+      "changePercent": "-0.03"
+    },
+    "QQQ": {
+      "price": "565.01",
+      "change": "-0.12",
+      "changePercent": "-0.02"
+    },
+    "DIA": {
+      "price": "447.11",
+      "change": "0.10",
+      "changePercent": "0.02"
+    }
+  },
+  "sectors": {
+    "XLF": {
+      "price": "53.07",
+      "change": "-0.05",
+      "changePercent": "-0.09",
+      "name": "Financial Services"
+    },
+    "XLK": {
+      "price": "261.39",
+      "change": "0.46",
+      "changePercent": "0.18",
+      "name": "Technology"
+    },
+    "XLE": {
+      "price": "87.43",
+      "change": "0.85",
+      "changePercent": "0.98",
+      "name": "Energy"
+    },
+    "XLV": {
+      "price": "135.76",
+      "change": "-0.37",
+      "changePercent": "-0.27",
+      "name": "Healthcare"
+    },
+    "XLI": {
+      "price": "153.47",
+      "change": "-0.10",
+      "changePercent": "-0.07",
+      "name": "Industrials"
+    }
+  },
+  "premarket": {
+    "gainers": [
+      {
+        "symbol": "AAPL",
+        "price": "$192.34",
+        "change": "+7.34",
+        "changePercent": "+3.97%"
+      },
+      {
+        "symbol": "MSFT",
+        "price": "$438.13",
+        "change": "+28.13",
+        "changePercent": "+6.86%"
+      },
+      {
+        "symbol": "GOOGL",
+        "price": "$147.43",
+        "change": "+7.43",
+        "changePercent": "+5.31%"
+      },
+      {
+        "symbol": "AMZN",
+        "price": "$160.84",
+        "change": "+5.84",
+        "changePercent": "+3.77%"
+      },
+      {
+        "symbol": "TSLA",
+        "price": "$265.38",
+        "change": "+15.38",
+        "changePercent": "+6.15%"
+      },
+      {
+        "symbol": "NVDA",
+        "price": "$129.35",
+        "change": "+4.35",
+        "changePercent": "+3.48%"
+      },
+      {
+        "symbol": "META",
+        "price": "$492.18",
+        "change": "+7.18",
+        "changePercent": "+1.48%"
+      },
+      {
+        "symbol": "NFLX",
+        "price": "$517.01",
+        "change": "+32.01",
+        "changePercent": "+6.60%"
+      },
+      {
+        "symbol": "AMD",
+        "price": "$149.14",
+        "change": "+9.14",
+        "changePercent": "+6.53%"
+      },
+      {
+        "symbol": "CRM",
+        "price": "$279.40",
+        "change": "+4.40",
+        "changePercent": "+1.60%"
+      }
+    ],
+    "losers": [
+      {
+        "symbol": "AAPL",
+        "price": "$176.95",
+        "change": "-8.05",
+        "changePercent": "-4.35%"
+      },
+      {
+        "symbol": "MSFT",
+        "price": "$402.87",
+        "change": "-7.13",
+        "changePercent": "-1.74%"
+      },
+      {
+        "symbol": "GOOGL",
+        "price": "$136.46",
+        "change": "-3.54",
+        "changePercent": "-2.53%"
+      },
+      {
+        "symbol": "AMZN",
+        "price": "$148.85",
+        "change": "-6.15",
+        "changePercent": "-3.97%"
+      },
+      {
+        "symbol": "TSLA",
+        "price": "$233.10",
+        "change": "-16.90",
+        "changePercent": "-6.76%"
+      },
+      {
+        "symbol": "NVDA",
+        "price": "$119.42",
+        "change": "-5.58",
+        "changePercent": "-4.46%"
+      },
+      {
+        "symbol": "META",
+        "price": "$459.20",
+        "change": "-25.80",
+        "changePercent": "-5.32%"
+      },
+      {
+        "symbol": "NFLX",
+        "price": "$475.25",
+        "change": "-9.75",
+        "changePercent": "-2.01%"
+      },
+      {
+        "symbol": "AMD",
+        "price": "$133.03",
+        "change": "-6.97",
+        "changePercent": "-4.98%"
+      },
+      {
+        "symbol": "CRM",
+        "price": "$264.52",
+        "change": "-10.48",
+        "changePercent": "-3.81%"
+      }
+    ]
+  }
+}
