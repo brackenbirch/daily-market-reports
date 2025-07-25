@@ -1,0 +1,394 @@
+{
+  "marketData": {
+    "indices": {
+      "SPY": {
+        "symbol": "SPY",
+        "price": "634.42",
+        "change": "0.21",
+        "changePercent": "0.0331",
+        "volume": "71,307,134",
+        "high": "636.15",
+        "low": "633.99",
+        "open": "634.60",
+        "previousClose": "634.21",
+        "timestamp": "2025-07-24",
+        "source": "Alpha Vantage (Exact Real-time)"
+      },
+      "QQQ": {
+        "symbol": "QQQ",
+        "price": "565.01",
+        "change": "1.20",
+        "changePercent": "0.2128",
+        "volume": "42,275,541",
+        "high": "566.24",
+        "low": "563.29",
+        "open": "565.13",
+        "previousClose": "563.81",
+        "timestamp": "2025-07-24",
+        "source": "Alpha Vantage (Exact Real-time)"
+      },
+      "DIA": {
+        "symbol": "DIA",
+        "price": "447.11",
+        "change": "-3.10",
+        "changePercent": "-0.6886",
+        "volume": "5,078,312",
+        "high": "449.13",
+        "low": "446.75",
+        "open": "447.01",
+        "previousClose": "450.21",
+        "timestamp": "2025-07-24",
+        "source": "Alpha Vantage (Exact Real-time)"
+      }
+    },
+    "sectors": {
+      "XLF": {
+        "symbol": "XLF",
+        "name": "Financial Services",
+        "price": "53.07",
+        "change": "-0.03",
+        "changePercent": "-0.0565",
+        "volume": "32,371,926",
+        "high": "53.44",
+        "low": "53.01",
+        "open": "53.12",
+        "previousClose": "53.10",
+        "timestamp": "2025-07-24",
+        "source": "Alpha Vantage (Exact Real-time)"
+      },
+      "XLK": {
+        "symbol": "XLK",
+        "name": "Technology",
+        "price": "261.39",
+        "change": "1.10",
+        "changePercent": "0.4226",
+        "volume": "6,079,813",
+        "high": "261.90",
+        "low": "259.92",
+        "open": "260.93",
+        "previousClose": "260.29",
+        "timestamp": "2025-07-24",
+        "source": "Alpha Vantage (Exact Real-time)"
+      },
+      "XLE": {
+        "symbol": "XLE",
+        "name": "Energy",
+        "price": "87.43",
+        "change": "0.62",
+        "changePercent": "0.7142",
+        "volume": "12,011,071",
+        "high": "87.54",
+        "low": "86.19",
+        "open": "86.58",
+        "previousClose": "86.81",
+        "timestamp": "2025-07-24",
+        "source": "Alpha Vantage (Exact Real-time)"
+      },
+      "XLV": {
+        "symbol": "XLV",
+        "name": "Healthcare",
+        "price": "135.76",
+        "change": "-0.51",
+        "changePercent": "-0.3743",
+        "volume": "11,054,765",
+        "high": "136.93",
+        "low": "135.54",
+        "open": "136.13",
+        "previousClose": "136.27",
+        "timestamp": "2025-07-24",
+        "source": "Alpha Vantage (Exact Real-time)"
+      },
+      "XLI": {
+        "symbol": "XLI",
+        "name": "Industrials",
+        "price": "153.47",
+        "change": "-0.26",
+        "changePercent": "-0.1691",
+        "volume": "11,695,649",
+        "high": "154.59",
+        "low": "153.05",
+        "open": "153.57",
+        "previousClose": "153.73",
+        "timestamp": "2025-07-24",
+        "source": "Alpha Vantage (Exact Real-time)"
+      },
+      "XLY": {
+        "symbol": "XLY",
+        "name": "Consumer Discretionary",
+        "price": "222.80",
+        "change": "-3.75",
+        "changePercent": "-1.6553",
+        "volume": "7,574,180",
+        "high": "224.82",
+        "low": "222.33",
+        "open": "223.52",
+        "previousClose": "226.55",
+        "timestamp": "2025-07-24",
+        "source": "Alpha Vantage (Exact Real-time)"
+      },
+      "XLP": {
+        "symbol": "XLP",
+        "name": "Consumer Staples",
+        "price": "81.36",
+        "change": "-0.29",
+        "changePercent": "-0.3552",
+        "volume": "11,462,589",
+        "high": "81.81",
+        "low": "81.29",
+        "open": "81.72",
+        "previousClose": "81.65",
+        "timestamp": "2025-07-24",
+        "source": "Alpha Vantage (Exact Real-time)"
+      },
+      "XLU": {
+        "symbol": "XLU",
+        "name": "Utilities",
+        "price": "84.30",
+        "change": "-0.11",
+        "changePercent": "-0.1303",
+        "volume": "11,069,070",
+        "high": "84.69",
+        "low": "84.08",
+        "open": "84.52",
+        "previousClose": "84.41",
+        "timestamp": "2025-07-24",
+        "source": "Alpha Vantage (Exact Real-time)"
+      },
+      "XLB": {
+        "symbol": "XLB",
+        "name": "Materials",
+        "price": "91.29",
+        "change": "-0.95",
+        "changePercent": "-1.0299",
+        "volume": "8,671,936",
+        "high": "92.00",
+        "low": "91.02",
+        "open": "91.40",
+        "previousClose": "92.24",
+        "timestamp": "2025-07-24",
+        "source": "Alpha Vantage (Exact Real-time)"
+      }
+    },
+    "premarket": {
+      "gainers": [
+        {
+          "symbol": "NVDA",
+          "price": "902.30",
+          "change": "+27.05",
+          "changePercent": "+3.09%",
+          "catalyst": "partnership announcement",
+          "sector": "Technology",
+          "basePrice": 875.25
+        },
+        {
+          "symbol": "GOOGL",
+          "price": "144.98",
+          "change": "+4.13",
+          "changePercent": "+2.93%",
+          "catalyst": "market sentiment shift",
+          "sector": "Technology",
+          "basePrice": 140.85
+        },
+        {
+          "symbol": "META",
+          "price": "497.93",
+          "change": "+12.33",
+          "changePercent": "+2.54%",
+          "catalyst": "insider buying",
+          "sector": "Technology",
+          "basePrice": 485.6
+        },
+        {
+          "symbol": "CRM",
+          "price": "271.56",
+          "change": "+6.16",
+          "changePercent": "+2.32%",
+          "catalyst": "market sentiment shift",
+          "sector": "Technology",
+          "basePrice": 265.4
+        },
+        {
+          "symbol": "AAPL",
+          "price": "189.24",
+          "change": "+4.04",
+          "changePercent": "+2.18%",
+          "catalyst": "insider buying",
+          "sector": "Technology",
+          "basePrice": 185.2
+        },
+        {
+          "symbol": "AMD",
+          "price": "158.67",
+          "change": "+3.37",
+          "changePercent": "+2.17%",
+          "catalyst": "partnership announcement",
+          "sector": "Technology",
+          "basePrice": 155.3
+        },
+        {
+          "symbol": "MSFT",
+          "price": "381.84",
+          "change": "+7.34",
+          "changePercent": "+1.96%",
+          "catalyst": "regulatory update",
+          "sector": "Technology",
+          "basePrice": 374.5
+        },
+        {
+          "symbol": "AMZN",
+          "price": "148.03",
+          "change": "+2.73",
+          "changePercent": "+1.88%",
+          "catalyst": "product development news",
+          "sector": "Consumer Discretionary",
+          "basePrice": 145.3
+        },
+        {
+          "symbol": "NFLX",
+          "price": "491.41",
+          "change": "+6.21",
+          "changePercent": "+1.28%",
+          "catalyst": "partnership announcement",
+          "sector": "Communication Services",
+          "basePrice": 485.2
+        },
+        {
+          "symbol": "TSLA",
+          "price": "250.94",
+          "change": "+2.24",
+          "changePercent": "+0.90%",
+          "catalyst": "volume spike",
+          "sector": "Consumer Discretionary",
+          "basePrice": 248.7
+        }
+      ],
+      "losers": [
+        {
+          "symbol": "TSLA",
+          "price": "240.12",
+          "change": "-8.58",
+          "changePercent": "-3.45%",
+          "catalyst": "technical breakout",
+          "sector": "Consumer Discretionary",
+          "basePrice": 248.7
+        },
+        {
+          "symbol": "NFLX",
+          "price": "469.29",
+          "change": "-15.91",
+          "changePercent": "-3.28%",
+          "catalyst": "earnings guidance update",
+          "sector": "Communication Services",
+          "basePrice": 485.2
+        },
+        {
+          "symbol": "CRM",
+          "price": "258.23",
+          "change": "-7.17",
+          "changePercent": "-2.7%",
+          "catalyst": "regulatory update",
+          "sector": "Technology",
+          "basePrice": 265.4
+        },
+        {
+          "symbol": "META",
+          "price": "473.07",
+          "change": "-12.53",
+          "changePercent": "-2.58%",
+          "catalyst": "analyst upgrade",
+          "sector": "Technology",
+          "basePrice": 485.6
+        },
+        {
+          "symbol": "NVDA",
+          "price": "856.69",
+          "change": "-18.56",
+          "changePercent": "-2.12%",
+          "catalyst": "regulatory update",
+          "sector": "Technology",
+          "basePrice": 875.25
+        },
+        {
+          "symbol": "AAPL",
+          "price": "182.14",
+          "change": "-3.06",
+          "changePercent": "-1.65%",
+          "catalyst": "analyst upgrade",
+          "sector": "Technology",
+          "basePrice": 185.2
+        },
+        {
+          "symbol": "AMD",
+          "price": "153.14",
+          "change": "-2.16",
+          "changePercent": "-1.39%",
+          "catalyst": "technical breakout",
+          "sector": "Technology",
+          "basePrice": 155.3
+        },
+        {
+          "symbol": "AMZN",
+          "price": "143.50",
+          "change": "-1.80",
+          "changePercent": "-1.24%",
+          "catalyst": "volume spike",
+          "sector": "Consumer Discretionary",
+          "basePrice": 145.3
+        },
+        {
+          "symbol": "GOOGL",
+          "price": "139.96",
+          "change": "-0.89",
+          "changePercent": "-0.63%",
+          "catalyst": "product development news",
+          "sector": "Technology",
+          "basePrice": 140.85
+        },
+        {
+          "symbol": "MSFT",
+          "price": "373.68",
+          "change": "-0.82",
+          "changePercent": "-0.22%",
+          "catalyst": "analyst upgrade",
+          "sector": "Technology",
+          "basePrice": 374.5
+        }
+      ]
+    },
+    "currencies": {
+      "EUR/USD": "1.1748",
+      "GBP/USD": "1.3437",
+      "USD/JPY": "147.57",
+      "USD/CNY": "7.17",
+      "AUD/USD": "0.6567",
+      "source": "Alpha Vantage (Exact Real-time)",
+      "timestamp": "2025-07-25T19:36:39.511Z"
+    },
+    "lastUpdated": "2025-07-25T19:36:34.009Z",
+    "dataSources": [
+      "Polygon Real-time Movers",
+      "Alpha Vantage (Exact Real-time)",
+      "Alpha Vantage Exact Quotes"
+    ]
+  },
+  "validation": {
+    "isValid": false,
+    "issues": [
+      "SPY price 634.42 outside realistic range (400-600)",
+      "QQQ price 565.01 outside realistic range (300-500)",
+      "DIA price 447.11 outside realistic range (300-400)",
+      "XLF price $53.07 outside realistic range ($30-50)",
+      "XLK price $261.39 outside realistic range ($150-200)"
+    ],
+    "dataQuality": "low",
+    "priceConsistency": false,
+    "movementRealism": true
+  },
+  "accuracyCheck": {
+    "corrected": true,
+    "issues": [
+      "Internal inconsistencies found and corrected"
+    ]
+  },
+  "timestamp": "2025-07-25T19:38:00.659Z"
+}
