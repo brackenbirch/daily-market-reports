@@ -2,7 +2,7 @@ name: Daily Market Report with Real Data
 on:
   schedule:
     # Runs at 6:00 AM MST daily (FIXED cron syntax)
-    - cron: '0 12 * * *'
+    - cron: '0 11 * * *'
   workflow_dispatch: # Allows manual triggering
   push:
     branches: [ main ] # Triggers when you push updates
