@@ -2,34 +2,34 @@
   "stocks": {
     "SPY": {
       "symbol": "SPY",
-      "price": "635.04",
+      "price": "635.25",
       "sources": 3,
       "confidence": "HIGH",
-      "lastUpdated": 1753460300575,
+      "lastUpdated": 1753460896963,
       "sourceList": [
-        "polygon",
+        "finnhub",
         "alphaVantage",
-        "finnhub"
+        "polygon"
       ]
     },
     "QQQ": {
       "symbol": "QQQ",
-      "price": "565.64",
+      "price": "565.85",
       "sources": 3,
       "confidence": "HIGH",
-      "lastUpdated": 1753460305344,
+      "lastUpdated": 1753460901729,
       "sourceList": [
-        "polygon",
         "finnhub",
+        "polygon",
         "alphaVantage"
       ]
     },
     "DIA": {
       "symbol": "DIA",
-      "price": "447.31",
+      "price": "447.44",
       "sources": 3,
       "confidence": "HIGH",
-      "lastUpdated": 1753460310338,
+      "lastUpdated": 1753460906743,
       "sourceList": [
         "polygon",
         "finnhub",
@@ -38,10 +38,10 @@
     },
     "IWM": {
       "symbol": "IWM",
-      "price": "223.44",
+      "price": "223.54",
       "sources": 3,
       "confidence": "HIGH",
-      "lastUpdated": 1753460315353,
+      "lastUpdated": 1753460911730,
       "sourceList": [
         "finnhub",
         "polygon",
@@ -50,22 +50,22 @@
     },
     "XLF": {
       "symbol": "XLF",
-      "price": "53.13",
+      "price": "53.15",
       "sources": 3,
       "confidence": "HIGH",
-      "lastUpdated": 1753460320340,
+      "lastUpdated": 1753460916729,
       "sourceList": [
-        "polygon",
         "finnhub",
+        "polygon",
         "alphaVantage"
       ]
     },
     "XLK": {
       "symbol": "XLK",
-      "price": "261.84",
+      "price": "261.99",
       "sources": 2,
       "confidence": "HIGH",
-      "lastUpdated": 1753460325350,
+      "lastUpdated": 1753460921728,
       "sourceList": [
         "finnhub",
         "alphaVantage"
@@ -73,10 +73,10 @@
     },
     "XLE": {
       "symbol": "XLE",
-      "price": "87.19",
+      "price": "87.27",
       "sources": 2,
       "confidence": "HIGH",
-      "lastUpdated": 1753460330337,
+      "lastUpdated": 1753460926867,
       "sourceList": [
         "finnhub",
         "alphaVantage"
@@ -84,10 +84,10 @@
     },
     "XLV": {
       "symbol": "XLV",
-      "price": "135.77",
+      "price": "135.83",
       "sources": 2,
       "confidence": "HIGH",
-      "lastUpdated": 1753460335337,
+      "lastUpdated": 1753460931738,
       "sourceList": [
         "finnhub",
         "alphaVantage"
@@ -95,10 +95,10 @@
     },
     "XLI": {
       "symbol": "XLI",
-      "price": "153.88",
+      "price": "153.95",
       "sources": 2,
       "confidence": "HIGH",
-      "lastUpdated": 1753460340359,
+      "lastUpdated": 1753460936735,
       "sourceList": [
         "finnhub",
         "alphaVantage"
@@ -106,10 +106,10 @@
     },
     "XLY": {
       "symbol": "XLY",
-      "price": "223.83",
+      "price": "223.97",
       "sources": 2,
       "confidence": "HIGH",
-      "lastUpdated": 1753460345343,
+      "lastUpdated": 1753460941872,
       "sourceList": [
         "finnhub",
         "alphaVantage"
@@ -120,7 +120,7 @@
       "price": "81.30",
       "sources": 3,
       "confidence": "HIGH",
-      "lastUpdated": 1753460350354,
+      "lastUpdated": 1753460946802,
       "sourceList": [
         "finnhub",
         "polygon",
@@ -129,10 +129,10 @@
     },
     "XLU": {
       "symbol": "XLU",
-      "price": "84.26",
+      "price": "84.29",
       "sources": 3,
       "confidence": "HIGH",
-      "lastUpdated": 1753460355345,
+      "lastUpdated": 1753460951741,
       "sourceList": [
         "finnhub",
         "polygon",
@@ -141,10 +141,10 @@
     },
     "XLB": {
       "symbol": "XLB",
-      "price": "91.32",
+      "price": "91.37",
       "sources": 3,
       "confidence": "HIGH",
-      "lastUpdated": 1753460360356,
+      "lastUpdated": 1753460956743,
       "sourceList": [
         "finnhub",
         "polygon",
