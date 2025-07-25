@@ -82,175 +82,281 @@
       "10. change percent": "0.7142%",
       "name": "Energy",
       "session": "Extended Hours"
+    },
+    "XLV": {
+      "01. symbol": "XLV",
+      "02. open": "136.1300",
+      "03. high": "136.9300",
+      "04. low": "135.5400",
+      "05. price": "135.7600",
+      "06. volume": "11054765",
+      "07. latest trading day": "2025-07-24",
+      "08. previous close": "136.2700",
+      "09. change": "-0.5100",
+      "10. change percent": "-0.3743%",
+      "name": "Healthcare",
+      "session": "Extended Hours"
+    },
+    "XLI": {
+      "01. symbol": "XLI",
+      "02. open": "153.5700",
+      "03. high": "154.5850",
+      "04. low": "153.0500",
+      "05. price": "153.4700",
+      "06. volume": "11695649",
+      "07. latest trading day": "2025-07-24",
+      "08. previous close": "153.7300",
+      "09. change": "-0.2600",
+      "10. change percent": "-0.1691%",
+      "name": "Industrials",
+      "session": "Extended Hours"
+    },
+    "XLY": {
+      "01. symbol": "XLY",
+      "02. open": "223.5200",
+      "03. high": "224.8200",
+      "04. low": "222.3301",
+      "05. price": "222.8000",
+      "06. volume": "7574180",
+      "07. latest trading day": "2025-07-24",
+      "08. previous close": "226.5500",
+      "09. change": "-3.7500",
+      "10. change percent": "-1.6553%",
+      "name": "Consumer Discretionary",
+      "session": "Extended Hours"
+    },
+    "XLP": {
+      "01. symbol": "XLP",
+      "02. open": "81.7200",
+      "03. high": "81.8100",
+      "04. low": "81.2947",
+      "05. price": "81.3600",
+      "06. volume": "11462589",
+      "07. latest trading day": "2025-07-24",
+      "08. previous close": "81.6500",
+      "09. change": "-0.2900",
+      "10. change percent": "-0.3552%",
+      "name": "Consumer Staples",
+      "session": "Extended Hours"
+    },
+    "XLU": {
+      "01. symbol": "XLU",
+      "02. open": "84.5200",
+      "03. high": "84.6950",
+      "04. low": "84.0800",
+      "05. price": "84.3000",
+      "06. volume": "11069070",
+      "07. latest trading day": "2025-07-24",
+      "08. previous close": "84.4100",
+      "09. change": "-0.1100",
+      "10. change percent": "-0.1303%",
+      "name": "Utilities",
+      "session": "Extended Hours"
+    },
+    "XLB": {
+      "01. symbol": "XLB",
+      "02. open": "91.4000",
+      "03. high": "92.0000",
+      "04. low": "91.0200",
+      "05. price": "91.2900",
+      "06. volume": "8671936",
+      "07. latest trading day": "2025-07-24",
+      "08. previous close": "92.2400",
+      "09. change": "-0.9500",
+      "10. change percent": "-1.0299%",
+      "name": "Materials",
+      "session": "Extended Hours"
     }
   },
   "afterHoursMovers": {
     "topGainers": [
       {
         "symbol": "AAPL",
-        "price": "$64.51",
-        "change": "+5.49",
-        "changePercent": "+9.30%",
-        "volume": "75K",
+        "price": "$171.26",
+        "change": "+16.75",
+        "changePercent": "+10.84%",
+        "volume": "62K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "MSFT",
-        "price": "$213.09",
-        "change": "+9.90",
-        "changePercent": "+4.87%",
-        "volume": "222K",
+        "price": "$244.99",
+        "change": "+26.37",
+        "changePercent": "+12.06%",
+        "volume": "32K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "GOOGL",
-        "price": "$84.67",
-        "change": "+5.79",
-        "changePercent": "+7.34%",
-        "volume": "98K",
+        "price": "$196.05",
+        "change": "+23.74",
+        "changePercent": "+13.78%",
+        "volume": "56K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "AMZN",
-        "price": "$251.15",
-        "change": "+5.79",
-        "changePercent": "+2.36%",
-        "volume": "131K",
+        "price": "$216.37",
+        "change": "+24.43",
+        "changePercent": "+12.73%",
+        "volume": "204K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "TSLA",
-        "price": "$121.82",
-        "change": "+3.17",
-        "changePercent": "+2.67%",
-        "volume": "97K",
+        "price": "$54.02",
+        "change": "+1.24",
+        "changePercent": "+2.34%",
+        "volume": "108K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "NVDA",
-        "price": "$243.63",
-        "change": "+27.59",
-        "changePercent": "+12.77%",
-        "volume": "78K",
+        "price": "$215.16",
+        "change": "+8.77",
+        "changePercent": "+4.25%",
+        "volume": "118K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "META",
-        "price": "$63.12",
-        "change": "+4.62",
-        "changePercent": "+7.89%",
-        "volume": "78K",
+        "price": "$244.05",
+        "change": "+7.45",
+        "changePercent": "+3.15%",
+        "volume": "112K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "NFLX",
-        "price": "$175.79",
-        "change": "+15.66",
-        "changePercent": "+9.78%",
-        "volume": "162K",
+        "price": "$64.63",
+        "change": "+7.59",
+        "changePercent": "+13.31%",
+        "volume": "214K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "AMD",
-        "price": "$224.04",
-        "change": "+26.65",
-        "changePercent": "+13.50%",
-        "volume": "81K",
+        "price": "$218.81",
+        "change": "+5.25",
+        "changePercent": "+2.46%",
+        "volume": "53K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "CRM",
-        "price": "$199.63",
-        "change": "+23.70",
-        "changePercent": "+13.47%",
-        "volume": "154K",
+        "price": "$57.02",
+        "change": "+3.11",
+        "changePercent": "+5.77%",
+        "volume": "63K",
         "timeframe": "After-Hours"
       }
     ],
     "topLosers": [
       {
         "symbol": "AAPL",
-        "price": "$209.11",
-        "change": "-18.50",
-        "changePercent": "-8.13%",
-        "volume": "36K",
+        "price": "$147.55",
+        "change": "-23.13",
+        "changePercent": "-13.55%",
+        "volume": "125K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "MSFT",
-        "price": "$111.29",
-        "change": "-7.86",
-        "changePercent": "-6.6%",
-        "volume": "187K",
-        "timeframe": "After-Hours"
-      },
-      {
-        "symbol": "GOOGL",
-        "price": "$176.38",
-        "change": "-13.01",
-        "changePercent": "-6.87%",
-        "volume": "206K",
-        "timeframe": "After-Hours"
-      },
-      {
-        "symbol": "AMZN",
-        "price": "$62.99",
-        "change": "-8.75",
-        "changePercent": "-12.2%",
-        "volume": "69K",
-        "timeframe": "After-Hours"
-      },
-      {
-        "symbol": "TSLA",
-        "price": "$103.73",
-        "change": "-5.66",
-        "changePercent": "-5.17%",
-        "volume": "133K",
-        "timeframe": "After-Hours"
-      },
-      {
-        "symbol": "NVDA",
-        "price": "$69.55",
-        "change": "-5.50",
-        "changePercent": "-7.33%",
+        "price": "$114.97",
+        "change": "-8.71",
+        "changePercent": "-7.04%",
         "volume": "118K",
         "timeframe": "After-Hours"
       },
       {
+        "symbol": "GOOGL",
+        "price": "$43.27",
+        "change": "-6.79",
+        "changePercent": "-13.56%",
+        "volume": "64K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "AMZN",
+        "price": "$48.08",
+        "change": "-3.51",
+        "changePercent": "-6.81%",
+        "volume": "96K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "TSLA",
+        "price": "$143.01",
+        "change": "-6.07",
+        "changePercent": "-4.07%",
+        "volume": "123K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "NVDA",
+        "price": "$152.39",
+        "change": "-25.14",
+        "changePercent": "-14.16%",
+        "volume": "46K",
+        "timeframe": "After-Hours"
+      },
+      {
         "symbol": "META",
-        "price": "$197.33",
-        "change": "-6.00",
-        "changePercent": "-2.95%",
-        "volume": "29K",
+        "price": "$53.50",
+        "change": "-2.48",
+        "changePercent": "-4.43%",
+        "volume": "50K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "NFLX",
-        "price": "$99.38",
-        "change": "-4.61",
-        "changePercent": "-4.43%",
-        "volume": "47K",
+        "price": "$173.01",
+        "change": "-24.06",
+        "changePercent": "-12.21%",
+        "volume": "49K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "AMD",
-        "price": "$62.76",
-        "change": "-8.32",
-        "changePercent": "-11.7%",
-        "volume": "115K",
+        "price": "$136.17",
+        "change": "-19.29",
+        "changePercent": "-12.41%",
+        "volume": "88K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "CRM",
-        "price": "$169.71",
-        "change": "-7.92",
-        "changePercent": "-4.46%",
-        "volume": "84K",
+        "price": "$131.17",
+        "change": "-17.10",
+        "changePercent": "-11.53%",
+        "volume": "118K",
         "timeframe": "After-Hours"
       }
     ]
   },
   "overnightNews": [
+    {
+      "category": "business",
+      "datetime": 1753472085,
+      "headline": "NFL will fine more than 100 players for reselling Super Bowl tickets at a profit",
+      "id": 7500916,
+      "image": "https://image.cnbcfm.com/api/v1/image/108099212-1738939319785-108099212-1738939064956-gettyimages-2197494230-20250203_commissionerpresser_ks_009_frp1ggs4.jpg?v=1738939335&w=1920&h=1080",
+      "related": "",
+      "source": "CNBC",
+      "summary": "Violators will be fined up to 2 times the face value of the tickets and could lose the ability to purchase future NFL tickets, according to a memo.",
+      "url": "https://www.cnbc.com/2025/07/25/nfl-to-fine-players-for-reselling-super-bowl-tickets-at-a-profit.html"
+    },
+    {
+      "category": "top news",
+      "datetime": 1753471200,
+      "headline": "Charter is bleeding internet subscribers — and the stock could see its worst day ever",
+      "id": 7500913,
+      "image": "https://static2.finnhub.io/file/publicdatany/finnhubimage/market_watch_logo.png",
+      "related": "",
+      "source": "MarketWatch",
+      "summary": "A downbeat earnings report, plus investor disdain for the pending Cox Communications merger, is sending the stock to a one-year low.",
+      "url": "https://www.marketwatch.com/story/charter-is-bleeding-internet-subscribers-and-the-stock-could-see-its-worst-day-ever-6ad9b138"
+    },
     {
       "category": "top news",
       "datetime": 1753469280,
@@ -316,30 +422,24 @@
       "source": "CNBC",
       "summary": "The Investing Club holds its \"Morning Meeting\" every weekday at 10:20 a.m. ET.",
       "url": "https://www.cnbc.com/2025/07/25/dover-and-honeywell-continue-their-post-earnings-slides-heres-how-we-may-respond.html"
-    },
-    {
-      "category": "top news",
-      "datetime": 1753461540,
-      "headline": "My friends expect me to pay for everything because I make more money. Am I a jerk for not wanting to pick up the tab?",
-      "id": 7500880,
-      "image": "https://static2.finnhub.io/file/publicdatany/finnhubimage/market_watch_logo.png",
-      "related": "",
-      "source": "MarketWatch",
-      "summary": "“They sometimes even joke with me about being cheap when I don’t pick up bills.”",
-      "url": "https://www.marketwatch.com/story/my-friends-expect-me-to-pay-for-everything-because-i-make-more-money-am-i-a-jerk-for-not-wanting-to-pick-up-the-tab-0e41e5b8"
-    },
-    {
-      "category": "top news",
-      "datetime": 1753460880,
-      "headline": "This chart shows how prices have gone up because of Trump’s tariffs",
-      "id": 7500876,
-      "image": "https://static2.finnhub.io/file/publicdatany/finnhubimage/market_watch_logo.png",
-      "related": "",
-      "source": "MarketWatch",
-      "summary": "One team of economists found clear price increases for American consumers due to President Donald Trump’s tariffs. I, a chart, they compare the price tags for imported goods with those for goods made in the U.S.",
-      "url": "https://www.marketwatch.com/story/this-chart-shows-how-prices-have-gone-up-because-of-trumps-tariffs-41f4e2fb"
     }
   ],
   "globalMarkets": {},
-  "currencyMoves": {}
+  "currencyMoves": {
+    "EURUSD": {
+      "rate": "1.1748",
+      "lastRefreshed": "2025-07-25 19:57:37",
+      "session": "Overnight"
+    },
+    "GBPUSD": {
+      "rate": "1.3437",
+      "lastRefreshed": "2025-07-25 19:57:37",
+      "session": "Overnight"
+    },
+    "USDJPY": {
+      "rate": "147.6050",
+      "lastRefreshed": "2025-07-25 19:58:01",
+      "session": "Overnight"
+    }
+  }
 }
