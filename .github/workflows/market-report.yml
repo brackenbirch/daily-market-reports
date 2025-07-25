@@ -1,12 +1,11 @@
 name: Daily Market Report with Real Data
+
 on:
   schedule:
-    # Runs at 6:00 AM MST daily (FIXED cron syntax)
-    - cron: '0 11 * * *'
+    # Runs at 12:00 PM UTC daily
+    - cron: '0 12 * * *'
   workflow_dispatch: # Allows manual triggering
-  push:
-    branches: [ main ] # Triggers when you push updates
-    
+
 jobs:
   generate-market-report:
     runs-on: ubuntu-latest
@@ -24,11 +23,10 @@ jobs:
       run: |
         npm install axios
         npm install nodemailer
-        npm install cheerio
-        npm install node-fetch
-        npm install @anthropic-ai/sdk
+        npm install cheerio || echo "Cheerio install failed, continuing without web scraping"
+        npm install node-fetch || echo "Node-fetch install failed, continuing"
         
-    - name: Generate and Email Market Report
+    - name: Generate Market Report
       env:
         ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         ALPHA_VANTAGE_API_KEY: ${{ secrets.ALPHA_VANTAGE_API_KEY }}
@@ -42,7 +40,6 @@ jobs:
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
-        mkdir -p reports
-        git add reports/ || echo "No reports directory to add"
-        git commit -m "Daily market report - $(date +'%Y-%m-%d')" || echo "No changes to commit"
-        git push || echo "Push failed or no changes"
+        git add reports/
+        git commit -m "Daily market report - $(date +'%Y-%m-%d')" || exit 0
+        git push
