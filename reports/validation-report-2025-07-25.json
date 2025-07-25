@@ -1,0 +1,23 @@
+{
+  "timestamp": 1753459850767,
+  "summary": {
+    "totalSymbols": 13,
+    "validated": 13,
+    "conflicts": 0,
+    "insufficient": 0,
+    "stale": 0,
+    "successRate": "100.0%"
+  },
+  "conflicts": [],
+  "insufficient": [],
+  "stale": [],
+  "fetchErrors": [],
+  "sourceStatus": {
+    "alphaVantage": true,
+    "finnhub": true,
+    "polygon": true,
+    "tradingEconomics": true,
+    "fixer": true,
+    "newsApi": true
+  }
+}
