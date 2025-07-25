@@ -172,169 +172,202 @@
     "topGainers": [
       {
         "symbol": "AAPL",
-        "price": "$138.31",
-        "change": "+17.80",
-        "changePercent": "+14.77%",
-        "volume": "53K",
+        "price": "$257.37",
+        "change": "+26.15",
+        "changePercent": "+11.31%",
+        "volume": "29K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "MSFT",
-        "price": "$60.69",
-        "change": "+1.14",
-        "changePercent": "+1.92%",
-        "volume": "83K",
+        "price": "$256.68",
+        "change": "+19.58",
+        "changePercent": "+8.26%",
+        "volume": "192K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "GOOGL",
-        "price": "$119.95",
-        "change": "+0.87",
-        "changePercent": "+0.73%",
-        "volume": "170K",
+        "price": "$156.54",
+        "change": "+4.71",
+        "changePercent": "+3.10%",
+        "volume": "151K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "AMZN",
-        "price": "$86.77",
-        "change": "+10.68",
-        "changePercent": "+14.04%",
-        "volume": "186K",
+        "price": "$225.01",
+        "change": "+26.26",
+        "changePercent": "+13.21%",
+        "volume": "123K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "TSLA",
-        "price": "$156.31",
-        "change": "+0.84",
-        "changePercent": "+0.54%",
-        "volume": "203K",
+        "price": "$197.15",
+        "change": "+14.33",
+        "changePercent": "+7.84%",
+        "volume": "81K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "NVDA",
-        "price": "$185.04",
-        "change": "+16.87",
-        "changePercent": "+10.03%",
-        "volume": "180K",
+        "price": "$174.01",
+        "change": "+18.62",
+        "changePercent": "+11.98%",
+        "volume": "93K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "META",
-        "price": "$91.68",
-        "change": "+0.63",
-        "changePercent": "+0.69%",
-        "volume": "201K",
+        "price": "$114.61",
+        "change": "+13.03",
+        "changePercent": "+12.83%",
+        "volume": "179K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "NFLX",
-        "price": "$66.70",
-        "change": "+3.94",
-        "changePercent": "+6.28%",
-        "volume": "223K",
+        "price": "$178.59",
+        "change": "+2.47",
+        "changePercent": "+1.40%",
+        "volume": "136K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "AMD",
-        "price": "$208.75",
-        "change": "+9.77",
-        "changePercent": "+4.91%",
-        "volume": "80K",
+        "price": "$174.57",
+        "change": "+4.24",
+        "changePercent": "+2.49%",
+        "volume": "28K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "CRM",
-        "price": "$265.78",
-        "change": "+23.46",
-        "changePercent": "+9.68%",
-        "volume": "217K",
+        "price": "$192.50",
+        "change": "+22.09",
+        "changePercent": "+12.96%",
+        "volume": "171K",
         "timeframe": "After-Hours"
       }
     ],
     "topLosers": [
       {
         "symbol": "AAPL",
-        "price": "$94.31",
-        "change": "-9.18",
-        "changePercent": "-8.87%",
-        "volume": "54K",
+        "price": "$201.24",
+        "change": "-8.30",
+        "changePercent": "-3.96%",
+        "volume": "80K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "MSFT",
-        "price": "$155.32",
-        "change": "-20.42",
-        "changePercent": "-11.62%",
-        "volume": "178K",
+        "price": "$170.16",
+        "change": "-21.22",
+        "changePercent": "-11.09%",
+        "volume": "180K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "GOOGL",
-        "price": "$54.34",
-        "change": "-6.46",
-        "changePercent": "-10.63%",
-        "volume": "205K",
+        "price": "$129.96",
+        "change": "-14.59",
+        "changePercent": "-10.09%",
+        "volume": "123K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "AMZN",
-        "price": "$72.39",
-        "change": "-8.92",
-        "changePercent": "-10.97%",
-        "volume": "206K",
+        "price": "$194.33",
+        "change": "-32.22",
+        "changePercent": "-14.22%",
+        "volume": "144K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "TSLA",
-        "price": "$124.78",
-        "change": "-16.44",
-        "changePercent": "-11.64%",
-        "volume": "135K",
+        "price": "$49.20",
+        "change": "-7.11",
+        "changePercent": "-12.62%",
+        "volume": "198K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "NVDA",
-        "price": "$70.62",
-        "change": "-2.69",
-        "changePercent": "-3.67%",
-        "volume": "34K",
+        "price": "$89.07",
+        "change": "-16.13",
+        "changePercent": "-15.33%",
+        "volume": "36K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "META",
-        "price": "$223.07",
-        "change": "-11.62",
-        "changePercent": "-4.95%",
-        "volume": "135K",
+        "price": "$173.89",
+        "change": "-1.76",
+        "changePercent": "-1%",
+        "volume": "134K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "NFLX",
-        "price": "$109.63",
-        "change": "-17.11",
-        "changePercent": "-13.5%",
-        "volume": "200K",
+        "price": "$59.92",
+        "change": "-6.01",
+        "changePercent": "-9.12%",
+        "volume": "119K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "AMD",
-        "price": "$80.21",
-        "change": "-3.11",
-        "changePercent": "-3.73%",
-        "volume": "86K",
+        "price": "$111.90",
+        "change": "-0.88",
+        "changePercent": "-0.78%",
+        "volume": "202K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "CRM",
-        "price": "$147.76",
-        "change": "-11.69",
-        "changePercent": "-7.33%",
-        "volume": "35K",
+        "price": "$98.13",
+        "change": "-9.29",
+        "changePercent": "-8.65%",
+        "volume": "88K",
         "timeframe": "After-Hours"
       }
     ]
   },
   "overnightNews": [
+    {
+      "category": "top news",
+      "datetime": 1753449241,
+      "headline": "10 things to watch in Friday's stock market, including earnings hits and misses",
+      "id": 7500829,
+      "image": "https://image.cnbcfm.com/api/v1/image/108133398-1744901282932-gettyimages-2210727739-anotherday18620636_mw2vfms2.jpeg?v=1753449113&w=1920&h=1080",
+      "related": "",
+      "source": "CNBC",
+      "summary": "Stocks were steady this morning as we head into the last session before the weekend.",
+      "url": "https://www.cnbc.com/2025/07/25/10-things-to-watch-in-fridays-stock-market-including-earnings-hits-and-misses.html"
+    },
+    {
+      "category": "top news",
+      "datetime": 1753449060,
+      "headline": "Durable-goods orders show business investment holding up despite uncertainty",
+      "id": 7500824,
+      "image": "https://static2.finnhub.io/file/publicdatany/finnhubimage/market_watch_logo.png",
+      "related": "",
+      "source": "MarketWatch",
+      "summary": "The manufacturing side of the economy seems to be holding up despite heightened uncertainty about trade policies and high borrowing costs.",
+      "url": "https://www.marketwatch.com/story/durable-goods-orders-weaker-in-june-due-to-planes-business-investment-holding-up-despite-uncertainty-6b8aac2e"
+    },
+    {
+      "category": "top news",
+      "datetime": 1753448401,
+      "headline": "Sarah Jessica Parker used to get by on $40 for 3 days—it taught her there's 'security in being able to pay your bills'",
+      "id": 7500825,
+      "image": "https://image.cnbcfm.com/api/v1/image/108174080-1752863415640-gettyimages-2217462341-mp2_8029_hyklkyad.jpeg?v=1752863661&w=1920&h=1080",
+      "related": "",
+      "source": "CNBC",
+      "summary": "Sarah Jessica Parker used to stretch every dollar while trying to make it in the industry, she said. Here's how to budget for financial unpredictability.",
+      "url": "https://www.cnbc.com/2025/07/25/sarah-jessica-parker-used-to-get-by-on-40-dollars-for-three-days.html"
+    },
     {
       "category": "top news",
       "datetime": 1753445100,
@@ -389,56 +422,23 @@
       "source": "MarketWatch",
       "summary": "Investors have been piling into highly risky shares.",
       "url": "https://www.marketwatch.com/story/speculative-trading-is-booming-again-that-could-turn-into-a-headwind-for-the-s-p-500-says-goldman-sachs-3cff9459"
-    },
-    {
-      "category": "top news",
-      "datetime": 1753437600,
-      "headline": "Tesla investors left in the lurch as EV maker keeps its outlook vague",
-      "id": 7500780,
-      "image": "https://static2.finnhub.io/file/publicdatany/finnhubimage/market_watch_logo.png",
-      "related": "",
-      "source": "MarketWatch",
-      "summary": "One of the more glaring omissions from Tesla’s late Wednesday earnings was that the EV maker Tesla did not update its 2025 outlook as promised.",
-      "url": "https://www.marketwatch.com/story/tesla-investors-left-in-the-lurch-as-ev-maker-keeps-its-outlook-vague-f2b50e80"
-    },
-    {
-      "category": "top news",
-      "datetime": 1753436580,
-      "headline": "‘He cannot match my spending’: I’m 65 and have $7 million. My boyfriend is 73. Should he release equity from his home so we can enjoy life?",
-      "id": 7500778,
-      "image": "https://static2.finnhub.io/file/publicdatany/finnhubimage/market_watch_logo.png",
-      "related": "",
-      "source": "MarketWatch",
-      "summary": "“His financial circumstances present certain limitations for me.”",
-      "url": "https://www.marketwatch.com/story/he-cannot-match-my-spending-im-65-and-have-7-million-my-boyfriend-is-73-should-he-release-equity-from-his-home-so-we-can-enjoy-life-fd55046d"
-    },
-    {
-      "category": "top news",
-      "datetime": 1753435260,
-      "headline": "Today in tariffs: VW cuts guidance as LG Electronics profit falls on weak TV sales",
-      "id": 7500766,
-      "image": "https://static2.finnhub.io/file/publicdatany/finnhubimage/market_watch_logo.png",
-      "related": "",
-      "source": "MarketWatch",
-      "summary": "A string of global companies, among them Volkswagen and LG Electronics, have been the latest to report back to investors just how U.S. tariff strains have been hitting their bottom line.",
-      "url": "https://www.marketwatch.com/story/today-in-tariffs-vw-cuts-guidance-as-lg-electronics-profit-falls-on-weak-tv-sales-3206f251"
     }
   ],
   "globalMarkets": {},
   "currencyMoves": {
     "EURUSD": {
-      "rate": "1.1723",
-      "lastRefreshed": "2025-07-25 12:46:03",
+      "rate": "1.1716",
+      "lastRefreshed": "2025-07-25 13:49:23",
       "session": "Overnight"
     },
     "GBPUSD": {
-      "rate": "1.3433",
-      "lastRefreshed": "2025-07-25 12:46:03",
+      "rate": "1.3424",
+      "lastRefreshed": "2025-07-25 13:49:41",
       "session": "Overnight"
     },
     "USDJPY": {
-      "rate": "147.8280",
-      "lastRefreshed": "2025-07-25 12:45:56",
+      "rate": "147.7740",
+      "lastRefreshed": "2025-07-25 13:49:47",
       "session": "Overnight"
     }
   }
