@@ -169,302 +169,7 @@ async function fetchExactCurrencyRates() {
                         `https://www.alphavantage.co/query?function=CURRENCY_EXCHANGE_RATE&from_currency=${pair.slice(0,3)}&to_currency=${pair.slice(3)}&apikey=${ALPHA_VANTAGE_API_KEY}`
                     );
                     
-                    if (response.data && response.data.c) {
-                        marketData.indices[symbol] = {
-                            symbol: symbol,
-                            price: response.data.c.toFixed(2),
-                            change: response.data.d.toFixed(2),
-                            changePercent: response.data.dp.toFixed(2),
-                            high: response.data.h.toFixed(2),
-                            low: response.data.l.toFixed(2),
-                            open: response.data.o.toFixed(2),
-                            previousClose: response.data.pc.toFixed(2),
-                            timestamp: new Date(response.data.t * 1000).toISOString(),
-                            source: 'Finnhub (Real-time)'
-                        };
-                    }
-                    await new Promise(resolve => setTimeout(resolve, 500));
-                } catch (error) {
-                    console.log(`Failed to fetch ${symbol} from Finnhub`);
-                }
-            }
-            
-            if (Object.keys(marketData.indices).length > 0) {
-                marketData.dataSources.push('Finnhub Real-time');
-            }
-        }
-        
-    } catch (error) {
-        console.log('Market data fetch failed, using enhanced fallback');
-    }
-    
-    // Fallback to enhanced accurate data if no real data was retrieved
-    if (Object.keys(marketData.sectors).length === 0) {
-        console.log('📝 Generating enhanced accurate sector data...');
-        marketData.sectors = generateAccurateSectors();
-        marketData.dataSources.push('Enhanced Accurate Estimates');
-    }
-    
-    if (marketData.premarket.gainers.length === 0) {
-        console.log('📝 Generating enhanced accurate premarket data...');
-        marketData.premarket.gainers = generateAccurateMovers('gainers');
-        marketData.premarket.losers = generateAccurateMovers('losers');
-        marketData.dataSources.push('Enhanced Accurate Premarket');
-    }
-    
-    console.log(`✅ Data collection complete with ${marketData.dataSources.length} sources`);
-    console.log(`📊 Sources: ${marketData.dataSources.join(', ')}`);
-    
-    return marketData;
-}
-
-// Format market data for the prompt with exact real-time numbers
-function formatMarketDataForPrompt(marketData) {
-    let dataString = `EXACT Real-Time Market Data (${new Date().toDateString()}):\n`;
-    dataString += `Last Updated: ${new Date(marketData.lastUpdated).toLocaleTimeString()} UTC\n`;
-    dataString += `Data Sources: ${marketData.dataSources.join(', ')}\n\n`;
-    
-    if (Object.keys(marketData.indices).length > 0) {
-        dataString += "MAJOR INDICES (Exact Real-Time Prices):\n";
-        Object.entries(marketData.indices).forEach(([symbol, data]) => {
-            const price = data.price || 'N/A';
-            const change = data.change || 'N/A';
-            const changePercent = data.changePercent || 'N/A';
-            const volume = data.volume || 'N/A';
-            dataString += `- ${symbol}: ${price} (${change > 0 ? '+' : ''}${change} / ${changePercent > 0 ? '+' : ''}${changePercent}%) Vol: ${volume} [${data.source}]\n`;
-        });
-        dataString += "\n";
-    }
-    
-    if (Object.keys(marketData.sectors).length > 0) {
-        dataString += "SECTOR ETFS (Exact Real-Time Prices):\n";
-        Object.entries(marketData.sectors).forEach(([symbol, data]) => {
-            const price = data.price || 'N/A';
-            const change = data.change || 'N/A';
-            const changePercent = data.changePercent || 'N/A';
-            const volume = data.volume || 'N/A';
-            dataString += `- ${symbol} (${data.name}): ${price} (${change > 0 ? '+' : ''}${change} / ${changePercent > 0 ? '+' : ''}${changePercent}%) Vol: ${volume} [${data.source}]\n`;
-        });
-        dataString += "\n";
-    }
-    
-    if (Object.keys(marketData.currencies).length > 0) {
-        dataString += "CURRENCY RATES (Exact Real-Time):\n";
-        Object.entries(marketData.currencies).forEach(([pair, rate]) => {
-            if (pair !== 'source' && pair !== 'timestamp') {
-                dataString += `- ${pair}: ${rate}\n`;
-            }
-        });
-        dataString += `Source: ${marketData.currencies.source} | Updated: ${marketData.currencies.timestamp}\n\n`;
-    }
-    
-    if (marketData.premarket.gainers.length > 0) {
-        dataString += "TOP PREMARKET GAINERS (Exact Real-Time):\n";
-        marketData.premarket.gainers.forEach((stock, index) => {
-            const volume = stock.volume ? (stock.volume/1000000).toFixed(1) + 'M' : 'N/A';
-            dataString += `${index + 1}. ${stock.symbol}: ${stock.price} (${stock.changePercent}) Vol: ${volume} [${stock.source}]\n`;
-        });
-        dataString += "\n";
-    }
-    
-    if (marketData.premarket.losers.length > 0) {
-        dataString += "TOP PREMARKET LOSERS (Exact Real-Time):\n";
-        marketData.premarket.losers.forEach((stock, index) => {
-            const volume = stock.volume ? (stock.volume/1000000).toFixed(1) + 'M' : 'N/A';
-            dataString += `${index + 1}. ${stock.symbol}: ${stock.price} (${stock.changePercent}) Vol: ${volume} [${stock.source}]\n`;
-        });
-        dataString += "\n";
-    }
-    
-    dataString += "IMPORTANT: All prices above are EXACT real-time market data. Use these precise numbers in your analysis.\n\n";
-    
-    return dataString;
-}
-
-const createMarketPrompt = (marketData) => `You are a senior financial analyst creating a daily market summary for institutional clients. Use ONLY the data provided below and maintain strict accuracy.
-
-${formatMarketDataForPrompt(marketData)}
-
-CRITICAL REQUIREMENTS:
-- Use EXACTLY the prices and percentages provided above
-- Maintain internal consistency throughout the report
-- Ensure all sections are complete and present
-- Use realistic, conservative market language
-- Include specific catalysts for premarket moves where provided
-
-Create a professional report with these exact sections:
-
-**EXECUTIVE SUMMARY**
-[2-sentence overview of global market sentiment based on the data above]
-
-**ASIAN MARKETS OVERNIGHT**
-Create a professional summary covering:
-- Nikkei 225, Hang Seng, Shanghai Composite, ASX 200 performance (use realistic ranges)
-- Major Asian corporate news or earnings trends
-- Key economic data releases from Asia
-- USD/JPY, USD/CNY, AUD/USD currency movements (use realistic daily ranges)
-- Any central bank communications from Asia
-[Target: 150 words]
-
-**EUROPEAN MARKETS SUMMARY**
-Create a professional summary covering:
-- FTSE 100, DAX, CAC 40, Euro Stoxx 50 performance (use realistic ranges)
-- Major European corporate news trends
-- ECB policy updates or eurozone economic data
-- EUR/USD, GBP/USD movements (use realistic daily ranges)
-- Any significant political/economic developments in Europe
-[Target: 150 words]
-
-**US MARKET OUTLOOK**
-Create a professional summary covering:
-- Current S&P 500, NASDAQ, DOW futures outlook (reference actual data above)
-- Key economic releases scheduled for today
-- Major US earnings announcements expected
-- Federal Reserve speakers or policy implications
-- Overnight developments affecting US markets
-[Target: 150 words]
-
-**PREMARKET MOVERS**
-Analyze the premarket trading data provided above:
-- **Top 10 Gainers**: Use the EXACT data provided, including catalysts
-- **Top 10 Losers**: Use the EXACT data provided, including catalysts
-- Brief analysis of potential trading implications
-[Target: 200 words, focus on actionable insights]
-
-**SECTOR ANALYSIS**
-Analyze the SPDR sector ETF performance using the EXACT data provided:
-- **XLF (Financial Services)**: Use exact price and change from data
-- **XLK (Technology)**: Use exact price and change from data
-- **XLE (Energy)**: Use exact price and change from data
-- **XLV (Healthcare)**: Use exact price and change from data
-- **XLI (Industrials)**: Use exact price and change from data
-- **XLY (Consumer Discretionary)**: Use exact price and change from data
-- **XLP (Consumer Staples)**: Use exact price and change from data
-- **XLU (Utilities)**: Use exact price and change from data
-- **XLB (Materials)**: Use exact price and change from data
-[Target: 300 words, institutional-grade sector rotation insights]
-
-**KEY TAKEAWAYS**
-[2-sentence summary of main trading themes based on the data above]
-
-**KEY HEADLINES AND RESEARCH**
-[Target: 200 words]
-Summary of research themes and market headlines relevant to current conditions and the data provided.
-
-MANDATORY: Include ALL sections above. Use professional financial language suitable for institutional clients. Reference today's date: ${new Date().toDateString()}.`;
-
-async function generateMarketReport() {
-    try {
-        console.log('🚀 Starting enhanced market report generation...');
-        
-        // Fetch available market data
-        const marketData = await fetchMarketData();
-        console.log('📊 Market data collected - Indices:', Object.keys(marketData.indices).length, 'Sectors:', Object.keys(marketData.sectors).length);
-        
-        // Validate data quality
-        const validation = validateMarketData(marketData);
-        console.log(`🔍 Data validation: ${validation.dataQuality} quality, ${validation.issues.length} issues`);
-        
-        // Generate initial report
-        console.log('📝 Generating initial report...');
-        const response = await axios.post(ANTHROPIC_API_URL, {
-            model: 'claude-sonnet-4-20250514',
-            max_tokens: 4000,
-            temperature: 0.2, // Lower temperature for more consistency
-            messages: [{
-                role: 'user',
-                content: createMarketPrompt(marketData)
-            }]
-        }, {
-            headers: {
-                'Content-Type': 'application/json',
-                'x-api-key': ANTHROPIC_API_KEY,
-                'anthropic-version': '2023-06-01'
-            }
-        });
-
-        const initialReport = response.data.content[0].text;
-        console.log('✅ Initial report generated');
-        
-        // Run accuracy check and correction
-        const accuracyCheck = await checkAndCorrectReport(initialReport, marketData);
-        const finalReport = accuracyCheck.report;
-        
-        console.log(`🔍 Accuracy check: ${accuracyCheck.corrected ? 'Corrections applied' : 'No corrections needed'}`);
-        
-        // Create reports directory
-        const reportsDir = path.join(__dirname, 'reports');
-        if (!fs.existsSync(reportsDir)) {
-            fs.mkdirSync(reportsDir, { recursive: true });
-        }
-        
-        // Generate filename
-        const today = new Date();
-        const dateStr = today.toISOString().split('T')[0];
-        const filename = `verified-market-report-${dateStr}.md`;
-        const filepath = path.join(reportsDir, filename);
-        
-        // Create comprehensive report with metadata
-        const reportWithMetadata = `# Daily Market Report - ${dateStr}
-*Generated on: ${today.toISOString()}*
-*Data Sources: ${ALPHA_VANTAGE_API_KEY || FINNHUB_API_KEY ? 'Market APIs + ' : ''}Claude AI Analysis*
-*Accuracy Status: ${accuracyCheck.corrected ? 'Verified & Corrected' : 'Verified'}*
-
-${finalReport}
-
----
-
-## Verification Summary
-**Data Quality:** ${validation.dataQuality.toUpperCase()}
-**Price Consistency:** ${validation.priceConsistency ? 'PASSED' : 'CORRECTED'}
-**Movement Realism:** ${validation.movementRealism ? 'PASSED' : 'CORRECTED'}
-**Accuracy Check:** ${accuracyCheck.corrected ? 'CORRECTIONS APPLIED' : 'PASSED'}
-
-## Data Summary
-**Market Indices:** ${Object.keys(marketData.indices).length} tracked
-**Sector ETFs:** ${Object.keys(marketData.sectors).length} analyzed
-**Premarket Movers:** ${marketData.premarket.gainers.length} gainers, ${marketData.premarket.losers.length} losers
-**Validation Issues:** ${validation.issues.length}
-
-*This report was automatically generated and verified using Claude AI via GitHub Actions*
-`;
-        
-        // Write report to file
-        fs.writeFileSync(filepath, reportWithMetadata);
-        
-        console.log(`✅ Verified market report generated: ${filename}`);
-        console.log(`📝 Report length: ${finalReport.length} characters`);
-        console.log(`🔍 Validation: ${validation.dataQuality} quality`);
-        
-        // Also create/update latest report for easy access
-        const latestFilepath = path.join(reportsDir, 'latest-verified-report.md');
-        fs.writeFileSync(latestFilepath, reportWithMetadata);
-        
-        // Save raw data and validation results
-        const debugData = {
-            marketData,
-            validation,
-            accuracyCheck: {
-                corrected: accuracyCheck.corrected,
-                issues: accuracyCheck.issues
-            },
-            timestamp: today.toISOString()
-        };
-        const rawDataPath = path.join(reportsDir, `verification-data-${dateStr}.json`);
-        fs.writeFileSync(rawDataPath, JSON.stringify(debugData, null, 2));
-        
-        // Send email with verified report
-        console.log('📧 Sending verified email...');
-        await sendMarketReportEmail(reportWithMetadata, dateStr);
-        
-    } catch (error) {
-        console.error('❌ Error generating verified market report:', error.response?.data || error.message);
-        process.exit(1);
-    }
-}
-
-// Run the enhanced report generation
-generateMarketReport();data['Realtime Currency Exchange Rate']) {
+                    if (response.data['Realtime Currency Exchange Rate']) {
                         const rate = response.data['Realtime Currency Exchange Rate'];
                         const rateValue = parseFloat(rate['5. Exchange Rate']);
                         
@@ -885,4 +590,299 @@ async function fetchMarketData() {
                         `https://finnhub.io/api/v1/quote?symbol=${symbol}&token=${FINNHUB_API_KEY}`,
                         { timeout: 10000 }
                     );
-                    if (response.
+                    if (response.data && response.data.c) {
+                        marketData.indices[symbol] = {
+                            symbol: symbol,
+                            price: response.data.c.toFixed(2),
+                            change: response.data.d.toFixed(2),
+                            changePercent: response.data.dp.toFixed(2),
+                            high: response.data.h.toFixed(2),
+                            low: response.data.l.toFixed(2),
+                            open: response.data.o.toFixed(2),
+                            previousClose: response.data.pc.toFixed(2),
+                            timestamp: new Date(response.data.t * 1000).toISOString(),
+                            source: 'Finnhub (Real-time)'
+                        };
+                    }
+                    await new Promise(resolve => setTimeout(resolve, 500));
+                } catch (error) {
+                    console.log(`Failed to fetch ${symbol} from Finnhub`);
+                }
+            }
+            
+            if (Object.keys(marketData.indices).length > 0) {
+                marketData.dataSources.push('Finnhub Real-time');
+            }
+        }
+        
+    } catch (error) {
+        console.log('Market data fetch failed, using enhanced fallback');
+    }
+    
+    // Fallback to enhanced accurate data if no real data was retrieved
+    if (Object.keys(marketData.sectors).length === 0) {
+        console.log('📝 Generating enhanced accurate sector data...');
+        marketData.sectors = generateAccurateSectors();
+        marketData.dataSources.push('Enhanced Accurate Estimates');
+    }
+    
+    if (marketData.premarket.gainers.length === 0) {
+        console.log('📝 Generating enhanced accurate premarket data...');
+        marketData.premarket.gainers = generateAccurateMovers('gainers');
+        marketData.premarket.losers = generateAccurateMovers('losers');
+        marketData.dataSources.push('Enhanced Accurate Premarket');
+    }
+    
+    console.log(`✅ Data collection complete with ${marketData.dataSources.length} sources`);
+    console.log(`📊 Sources: ${marketData.dataSources.join(', ')}`);
+    
+    return marketData;
+}
+
+// Format market data for the prompt with exact real-time numbers
+function formatMarketDataForPrompt(marketData) {
+    let dataString = `EXACT Real-Time Market Data (${new Date().toDateString()}):\n`;
+    dataString += `Last Updated: ${new Date(marketData.lastUpdated).toLocaleTimeString()} UTC\n`;
+    dataString += `Data Sources: ${marketData.dataSources.join(', ')}\n\n`;
+    
+    if (Object.keys(marketData.indices).length > 0) {
+        dataString += "MAJOR INDICES (Exact Real-Time Prices):\n";
+        Object.entries(marketData.indices).forEach(([symbol, data]) => {
+            const price = data.price || 'N/A';
+            const change = data.change || 'N/A';
+            const changePercent = data.changePercent || 'N/A';
+            const volume = data.volume || 'N/A';
+            dataString += `- ${symbol}: ${price} (${change > 0 ? '+' : ''}${change} / ${changePercent > 0 ? '+' : ''}${changePercent}%) Vol: ${volume} [${data.source}]\n`;
+        });
+        dataString += "\n";
+    }
+    
+    if (Object.keys(marketData.sectors).length > 0) {
+        dataString += "SECTOR ETFS (Exact Real-Time Prices):\n";
+        Object.entries(marketData.sectors).forEach(([symbol, data]) => {
+            const price = data.price || 'N/A';
+            const change = data.change || 'N/A';
+            const changePercent = data.changePercent || 'N/A';
+            const volume = data.volume || 'N/A';
+            dataString += `- ${symbol} (${data.name}): ${price} (${change > 0 ? '+' : ''}${change} / ${changePercent > 0 ? '+' : ''}${changePercent}%) Vol: ${volume} [${data.source}]\n`;
+        });
+        dataString += "\n";
+    }
+    
+    if (Object.keys(marketData.currencies).length > 0) {
+        dataString += "CURRENCY RATES (Exact Real-Time):\n";
+        Object.entries(marketData.currencies).forEach(([pair, rate]) => {
+            if (pair !== 'source' && pair !== 'timestamp') {
+                dataString += `- ${pair}: ${rate}\n`;
+            }
+        });
+        dataString += `Source: ${marketData.currencies.source} | Updated: ${marketData.currencies.timestamp}\n\n`;
+    }
+    
+    if (marketData.premarket.gainers.length > 0) {
+        dataString += "TOP PREMARKET GAINERS (Exact Real-Time):\n";
+        marketData.premarket.gainers.forEach((stock, index) => {
+            const volume = stock.volume ? (stock.volume/1000000).toFixed(1) + 'M' : 'N/A';
+            dataString += `${index + 1}. ${stock.symbol}: ${stock.price} (${stock.changePercent}) Vol: ${volume} [${stock.source}]\n`;
+        });
+        dataString += "\n";
+    }
+    
+    if (marketData.premarket.losers.length > 0) {
+        dataString += "TOP PREMARKET LOSERS (Exact Real-Time):\n";
+        marketData.premarket.losers.forEach((stock, index) => {
+            const volume = stock.volume ? (stock.volume/1000000).toFixed(1) + 'M' : 'N/A';
+            dataString += `${index + 1}. ${stock.symbol}: ${stock.price} (${stock.changePercent}) Vol: ${volume} [${stock.source}]\n`;
+        });
+        dataString += "\n";
+    }
+    
+    dataString += "IMPORTANT: All prices above are EXACT real-time market data. Use these precise numbers in your analysis.\n\n";
+    
+    return dataString;
+}
+
+const createMarketPrompt = (marketData) => `You are a senior financial analyst creating a daily market summary for institutional clients. Use ONLY the data provided below and maintain strict accuracy.
+
+${formatMarketDataForPrompt(marketData)}
+
+CRITICAL REQUIREMENTS:
+- Use EXACTLY the prices and percentages provided above
+- Maintain internal consistency throughout the report
+- Ensure all sections are complete and present
+- Use realistic, conservative market language
+- Include specific catalysts for premarket moves where provided
+
+Create a professional report with these exact sections:
+
+**EXECUTIVE SUMMARY**
+[2-sentence overview of global market sentiment based on the data above]
+
+**ASIAN MARKETS OVERNIGHT**
+Create a professional summary covering:
+- Nikkei 225, Hang Seng, Shanghai Composite, ASX 200 performance (use realistic ranges)
+- Major Asian corporate news or earnings trends
+- Key economic data releases from Asia
+- USD/JPY, USD/CNY, AUD/USD currency movements (use realistic daily ranges)
+- Any central bank communications from Asia
+[Target: 150 words]
+
+**EUROPEAN MARKETS SUMMARY**
+Create a professional summary covering:
+- FTSE 100, DAX, CAC 40, Euro Stoxx 50 performance (use realistic ranges)
+- Major European corporate news trends
+- ECB policy updates or eurozone economic data
+- EUR/USD, GBP/USD movements (use realistic daily ranges)
+- Any significant political/economic developments in Europe
+[Target: 150 words]
+
+**US MARKET OUTLOOK**
+Create a professional summary covering:
+- Current S&P 500, NASDAQ, DOW futures outlook (reference actual data above)
+- Key economic releases scheduled for today
+- Major US earnings announcements expected
+- Federal Reserve speakers or policy implications
+- Overnight developments affecting US markets
+[Target: 150 words]
+
+**PREMARKET MOVERS**
+Analyze the premarket trading data provided above:
+- **Top 10 Gainers**: Use the EXACT data provided, including catalysts
+- **Top 10 Losers**: Use the EXACT data provided, including catalysts
+- Brief analysis of potential trading implications
+[Target: 200 words, focus on actionable insights]
+
+**SECTOR ANALYSIS**
+Analyze the SPDR sector ETF performance using the EXACT data provided:
+- **XLF (Financial Services)**: Use exact price and change from data
+- **XLK (Technology)**: Use exact price and change from data
+- **XLE (Energy)**: Use exact price and change from data
+- **XLV (Healthcare)**: Use exact price and change from data
+- **XLI (Industrials)**: Use exact price and change from data
+- **XLY (Consumer Discretionary)**: Use exact price and change from data
+- **XLP (Consumer Staples)**: Use exact price and change from data
+- **XLU (Utilities)**: Use exact price and change from data
+- **XLB (Materials)**: Use exact price and change from data
+[Target: 300 words, institutional-grade sector rotation insights]
+
+**KEY TAKEAWAYS**
+[2-sentence summary of main trading themes based on the data above]
+
+**KEY HEADLINES AND RESEARCH**
+[Target: 200 words]
+Summary of research themes and market headlines relevant to current conditions and the data provided.
+
+MANDATORY: Include ALL sections above. Use professional financial language suitable for institutional clients. Reference today's date: ${new Date().toDateString()}.`;
+
+async function generateMarketReport() {
+    try {
+        console.log('🚀 Starting enhanced market report generation...');
+        
+        // Fetch available market data
+        const marketData = await fetchMarketData();
+        console.log('📊 Market data collected - Indices:', Object.keys(marketData.indices).length, 'Sectors:', Object.keys(marketData.sectors).length);
+        
+        // Validate data quality
+        const validation = validateMarketData(marketData);
+        console.log(`🔍 Data validation: ${validation.dataQuality} quality, ${validation.issues.length} issues`);
+        
+        // Generate initial report
+        console.log('📝 Generating initial report...');
+        const response = await axios.post(ANTHROPIC_API_URL, {
+            model: 'claude-sonnet-4-20250514',
+            max_tokens: 4000,
+            temperature: 0.2, // Lower temperature for more consistency
+            messages: [{
+                role: 'user',
+                content: createMarketPrompt(marketData)
+            }]
+        }, {
+            headers: {
+                'Content-Type': 'application/json',
+                'x-api-key': ANTHROPIC_API_KEY,
+                'anthropic-version': '2023-06-01'
+            }
+        });
+
+        const initialReport = response.data.content[0].text;
+        console.log('✅ Initial report generated');
+        
+        // Run accuracy check and correction
+        const accuracyCheck = await checkAndCorrectReport(initialReport, marketData);
+        const finalReport = accuracyCheck.report;
+        
+        console.log(`🔍 Accuracy check: ${accuracyCheck.corrected ? 'Corrections applied' : 'No corrections needed'}`);
+        
+        // Create reports directory
+        const reportsDir = path.join(__dirname, 'reports');
+        if (!fs.existsSync(reportsDir)) {
+            fs.mkdirSync(reportsDir, { recursive: true });
+        }
+        
+        // Generate filename
+        const today = new Date();
+        const dateStr = today.toISOString().split('T')[0];
+        const filename = `verified-market-report-${dateStr}.md`;
+        const filepath = path.join(reportsDir, filename);
+        
+        // Create comprehensive report with metadata
+        const reportWithMetadata = `# Daily Market Report - ${dateStr}
+*Generated on: ${today.toISOString()}*
+*Data Sources: ${ALPHA_VANTAGE_API_KEY || FINNHUB_API_KEY ? 'Market APIs + ' : ''}Claude AI Analysis*
+*Accuracy Status: ${accuracyCheck.corrected ? 'Verified & Corrected' : 'Verified'}*
+
+${finalReport}
+
+---
+
+## Verification Summary
+**Data Quality:** ${validation.dataQuality.toUpperCase()}
+**Price Consistency:** ${validation.priceConsistency ? 'PASSED' : 'CORRECTED'}
+**Movement Realism:** ${validation.movementRealism ? 'PASSED' : 'CORRECTED'}
+**Accuracy Check:** ${accuracyCheck.corrected ? 'CORRECTIONS APPLIED' : 'PASSED'}
+
+## Data Summary
+**Market Indices:** ${Object.keys(marketData.indices).length} tracked
+**Sector ETFs:** ${Object.keys(marketData.sectors).length} analyzed
+**Premarket Movers:** ${marketData.premarket.gainers.length} gainers, ${marketData.premarket.losers.length} losers
+**Validation Issues:** ${validation.issues.length}
+
+*This report was automatically generated and verified using Claude AI via GitHub Actions*
+`;
+        
+        // Write report to file
+        fs.writeFileSync(filepath, reportWithMetadata);
+        
+        console.log(`✅ Verified market report generated: ${filename}`);
+        console.log(`📝 Report length: ${finalReport.length} characters`);
+        console.log(`🔍 Validation: ${validation.dataQuality} quality`);
+        
+        // Also create/update latest report for easy access
+        const latestFilepath = path.join(reportsDir, 'latest-verified-report.md');
+        fs.writeFileSync(latestFilepath, reportWithMetadata);
+        
+        // Save raw data and validation results
+        const debugData = {
+            marketData,
+            validation,
+            accuracyCheck: {
+                corrected: accuracyCheck.corrected,
+                issues: accuracyCheck.issues
+            },
+            timestamp: today.toISOString()
+        };
+        const rawDataPath = path.join(reportsDir, `verification-data-${dateStr}.json`);
+        fs.writeFileSync(rawDataPath, JSON.stringify(debugData, null, 2));
+        
+        // Send email with verified report
+        console.log('📧 Sending verified email...');
+        await sendMarketReportEmail(reportWithMetadata, dateStr);
+        
+    } catch (error) {
+        console.error('❌ Error generating verified market report:', error.response?.data || error.message);
+        process.exit(1);
+    }
+}
+
+// Run the enhanced report generation
+generateMarketReport();
