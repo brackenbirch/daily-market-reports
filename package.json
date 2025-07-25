@@ -1,43 +1,58 @@
 {
-  "name": "market-intelligence-report",
+  "name": "verified-market-report-generator",
   "version": "2.0.0",
-  "description": "Automated market intelligence report generator with web scraping and multiple API integrations",
-  "main": "market-report.js",
+  "description": "Automated daily market report generator with accuracy verification using Claude AI",
+  "main": "generate-verified-report.js",
   "scripts": {
-    "start": "node market-report.js",
-    "test": "node --version",
-    "report": "node market-report.js",
-    "dev": "node market-report.js"
+    "start": "node generate-verified-report.js",
+    "generate": "node generate-verified-report.js",
+    "test-connection": "node -e \"console.log('Testing API connections...'); require('./generate-verified-report.js');\"",
+    "validate-env": "node -e \"console.log('Environment Check:'); console.log('ANTHROPIC_API_KEY:', process.env.ANTHROPIC_API_KEY ? '✅ Present' : '❌ Missing'); console.log('ALPHA_VANTAGE_API_KEY:', process.env.ALPHA_VANTAGE_API_KEY ? '✅ Present' : '⚠️ Optional'); console.log('EMAIL_USERNAME:', process.env.EMAIL_USERNAME ? '✅ Present' : '❌ Missing');\"",
+    "test-email": "node -e \"const nodemailer = require('nodemailer'); console.log('📧 Nodemailer loaded successfully');\"",
+    "check-reports": "node -e \"const fs = require('fs'); if(fs.existsSync('reports')) { console.log('📁 Reports found:'); fs.readdirSync('reports').forEach(f => console.log('  -', f)); } else { console.log('📁 No reports directory found'); }\"",
+    "clean-reports": "node -e \"const fs = require('fs'); const path = require('path'); if(fs.existsSync('reports')) { fs.readdirSync('reports').forEach(f => fs.unlinkSync(path.join('reports', f))); console.log('🧹 Reports cleaned'); } else { console.log('📁 No reports to clean'); }\"",
+    "install-deps": "npm install axios nodemailer",
+    "version-check": "node -e \"console.log('Node.js:', process.version); console.log('NPM:', process.env.npm_version || 'Unknown'); console.log('Platform:', process.platform);\""
   },
   "dependencies": {
-    "axios": "^1.6.2",
-    "cheerio": "^1.0.0-rc.12",
-    "nodemailer": "^6.9.7"
+    "axios": "^1.6.0",
+    "nodemailer": "^6.9.0"
   },
-  "devDependencies": {
-    "eslint": "^8.55.0"
+  "optionalDependencies": {
+    "cheerio": "^1.0.0-rc.12"
   },
   "engines": {
-    "node": ">=16.0.0"
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "your-repository-url"
   },
   "keywords": [
-    "market",
-    "stocks",
-    "finance",
-    "report",
+    "market-report",
+    "financial-analysis", 
     "automation",
-    "api",
-    "web-scraping",
-    "github-actions"
+    "claude-ai",
+    "github-actions",
+    "stock-market",
+    "trading",
+    "investment",
+    "premarket-movers",
+    "sector-analysis",
+    "accuracy-verification"
   ],
   "author": "Your Name",
   "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/yourusername/market-intelligence-report"
+  "private": true,
+  "config": {
+    "report_schedule": "12:00 PM UTC daily",
+    "accuracy_check": "enabled",
+    "email_delivery": "enabled",
+    "data_sources": ["Alpha Vantage", "Finnhub", "Claude AI"]
   },
-  "bugs": {
-    "url": "https://github.com/yourusername/market-intelligence-report/issues"
-  },
-  "homepage": "https://github.com/yourusername/market-intelligence-report#readme"
+  "funding": {
+    "type": "individual",
+    "url": "https://your-funding-url"
+  }
 }
