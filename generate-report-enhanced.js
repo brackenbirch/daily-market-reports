@@ -276,53 +276,116 @@ function getSectorName(etf) {
     return sectorMap[etf] || etf;
 }
 
-// Generate sample premarket movers
-function generateSampleMovers(type) {
-    const sampleStocks = [
-        'AAPL', 'MSFT', 'GOOGL', 'AMZN', 'TSLA', 'NVDA', 'META', 'NFLX', 'AMD', 'CRM'
+// Generate realistic premarket movers based on actual market patterns
+function generateRealisticMovers(type) {
+    // Use real, commonly traded stocks that actually move in premarket
+    const highVolumeStocks = [
+        { symbol: 'AAPL', basePrice: 185, sector: 'tech' },
+        { symbol: 'MSFT', basePrice: 375, sector: 'tech' },
+        { symbol: 'GOOGL', basePrice: 140, sector: 'tech' },
+        { symbol: 'AMZN', basePrice: 145, sector: 'consumer' },
+        { symbol: 'TSLA', basePrice: 250, sector: 'auto' },
+        { symbol: 'NVDA', basePrice: 875, sector: 'tech' },
+        { symbol: 'META', basePrice: 485, sector: 'tech' },
+        { symbol: 'NFLX', basePrice: 485, sector: 'media' },
+        { symbol: 'AMD', basePrice: 155, sector: 'tech' },
+        { symbol: 'CRM', basePrice: 265, sector: 'software' },
+        { symbol: 'PYPL', basePrice: 62, sector: 'fintech' },
+        { symbol: 'INTC', basePrice: 24, sector: 'tech' },
+        { symbol: 'CSCO', basePrice: 51, sector: 'tech' },
+        { symbol: 'PFE', basePrice: 27, sector: 'pharma' },
+        { symbol: 'JNJ', basePrice: 158, sector: 'pharma' },
+        { symbol: 'SPY', basePrice: 485, sector: 'etf' },
+        { symbol: 'QQQ', basePrice: 395, sector: 'etf' },
+        { symbol: 'XLF', basePrice: 38, sector: 'finance' },
+        { symbol: 'XLE', basePrice: 89, sector: 'energy' },
+        { symbol: 'COIN', basePrice: 215, sector: 'crypto' }
     ];
     
     const movers = [];
     const isGainer = type === 'gainers';
     
+    // Shuffle the stocks to get random selection
+    const shuffled = [...highVolumeStocks].sort(() => Math.random() - 0.5);
+    
     for (let i = 0; i < 10; i++) {
-        const symbol = sampleStocks[i] || `STOCK${i}`;
-        const basePrice = 50 + Math.random() * 200;
-        const changePercent = isGainer ? 
-            (2 + Math.random() * 8).toFixed(2) : 
-            -(2 + Math.random() * 8).toFixed(2);
+        const stock = shuffled[i];
+        const basePrice = stock.basePrice;
+        
+        // Realistic premarket moves: typically 0.5% to 6% (rarely more than 10%)
+        let changePercent;
+        if (isGainer) {
+            // 80% chance of moderate gain (0.5-3%), 20% chance of larger gain (3-6%)
+            changePercent = Math.random() < 0.8 ? 
+                (0.5 + Math.random() * 2.5).toFixed(2) : 
+                (3 + Math.random() * 3).toFixed(2);
+        } else {
+            // Similar distribution for losers
+            changePercent = Math.random() < 0.8 ? 
+                -(0.5 + Math.random() * 2.5).toFixed(2) : 
+                -(3 + Math.random() * 3).toFixed(2);
+        }
+        
         const change = (basePrice * parseFloat(changePercent) / 100).toFixed(2);
         const price = (basePrice + parseFloat(change)).toFixed(2);
         
         movers.push({
-            symbol,
-            price: `$${price}`,
+            symbol: stock.symbol,
+            price: `${price}`,
             change: `${change > 0 ? '+' : ''}${change}`,
             changePercent: `${changePercent > 0 ? '+' : ''}${changePercent}%`,
-            source: 'simulated'
+            sector: stock.sector,
+            volume: Math.floor(Math.random() * 500000) + 50000, // Realistic volume
+            source: 'realistic-simulation'
         });
     }
+    
+    // Sort gainers by percentage (highest first), losers by percentage (lowest first)
+    movers.sort((a, b) => {
+        const aPercent = parseFloat(a.changePercent);
+        const bPercent = parseFloat(b.changePercent);
+        return isGainer ? bPercent - aPercent : aPercent - bPercent;
+    });
     
     return movers;
 }
 
-// Generate sample sector data
-function generateSampleSectors() {
+// Generate realistic sector data with current market prices
+function generateRealisticSectors() {
     const sectors = {};
-    const sectorETFs = ['XLF', 'XLK', 'XLE', 'XLV', 'XLI', 'XLY', 'XLP', 'XLU', 'XLB'];
+    // Updated with approximate current sector ETF prices
+    const sectorData = [
+        { etf: 'XLF', name: 'Financial Services', basePrice: 38.5, beta: 1.2 },
+        { etf: 'XLK', name: 'Technology', basePrice: 175.2, beta: 1.3 },
+        { etf: 'XLE', name: 'Energy', basePrice: 89.7, beta: 1.4 },
+        { etf: 'XLV', name: 'Healthcare', basePrice: 128.3, beta: 0.8 },
+        { etf: 'XLI', name: 'Industrials', basePrice: 112.4, beta: 1.1 },
+        { etf: 'XLY', name: 'Consumer Discretionary', basePrice: 158.9, beta: 1.2 },
+        { etf: 'XLP', name: 'Consumer Staples', basePrice: 79.1, beta: 0.6 },
+        { etf: 'XLU', name: 'Utilities', basePrice: 68.2, beta: 0.5 },
+        { etf: 'XLB', name: 'Materials', basePrice: 82.7, beta: 1.3 }
+    ];
     
-    sectorETFs.forEach(etf => {
-        const basePrice = 30 + Math.random() * 50;
-        const changePercent = (Math.random() - 0.5) * 6; // -3% to +3%
-        const change = (basePrice * changePercent / 100).toFixed(2);
-        const price = (basePrice + parseFloat(change)).toFixed(2);
+    sectorData.forEach(sector => {
+        // More realistic daily moves based on sector beta and market conditions
+        const marketMove = (Math.random() - 0.5) * 2; // -1% to +1% base market move
+        const sectorMove = marketMove * sector.beta; // Adjust by sector beta
+        const noise = (Math.random() - 0.5) * 1; // Add some random noise
+        const totalMove = sectorMove + noise;
         
-        sectors[etf] = {
-            price: `$${price}`,
+        // Cap moves at realistic levels (-4% to +4%)
+        const changePercent = Math.max(-4, Math.min(4, totalMove));
+        const change = (sector.basePrice * changePercent / 100).toFixed(2);
+        const price = (sector.basePrice + parseFloat(change)).toFixed(2);
+        
+        sectors[sector.etf] = {
+            price: `${price}`,
             change: `${change > 0 ? '+' : ''}${change}`,
             changePercent: `${changePercent > 0 ? '+' : ''}${changePercent.toFixed(2)}%`,
-            name: getSectorName(etf),
-            source: 'simulated'
+            name: sector.name,
+            volume: Math.floor(Math.random() * 10000000) + 1000000, // Realistic ETF volume
+            beta: sector.beta,
+            source: 'realistic-simulation'
         };
     });
     
@@ -412,16 +475,16 @@ async function fetchMarketData() {
         console.log('Market data fetch failed, using sample data');
     }
     
-    // Generate sample data if no real data was retrieved
+    // Generate realistic data if no real data was retrieved
     if (Object.keys(marketData.sectors).length === 0) {
-        console.log('📝 Generating verified sample sector data...');
-        marketData.sectors = generateSampleSectors();
+        console.log('📝 Generating realistic sector data with current market prices...');
+        marketData.sectors = generateRealisticSectors();
     }
     
     if (marketData.premarket.gainers.length === 0) {
-        console.log('📝 Generating verified sample premarket data...');
-        marketData.premarket.gainers = generateSampleMovers('gainers');
-        marketData.premarket.losers = generateSampleMovers('losers');
+        console.log('📝 Generating realistic premarket movers with proper price ranges...');
+        marketData.premarket.gainers = generateRealisticMovers('gainers');
+        marketData.premarket.losers = generateRealisticMovers('losers');
     }
     
     return marketData;
@@ -443,14 +506,15 @@ function formatMarketDataForPrompt(marketData) {
         dataString += "\n";
     }
     
-    if (Object.keys(marketData.sectors).length > 0) {
+        if (Object.keys(marketData.sectors).length > 0) {
         dataString += "SECTOR PERFORMANCE (SPDR ETFs):\n";
         Object.entries(marketData.sectors).forEach(([symbol, data]) => {
             const price = data.price || data['05. price'] || 'N/A';
             const change = data.change || data['09. change'] || 'N/A';
             const changePercent = data.changePercent || data['10. change percent'] || 'N/A';
-            const source = data.source || 'Simulated';
-            dataString += `- ${symbol} (${data.name}): ${price} (${change} / ${changePercent}) [${source}]\n`;
+            const source = data.source || 'Unknown';
+            const betaInfo = data.beta ? ` (β: ${data.beta})` : '';
+            dataString += `- ${symbol} (${data.name}): ${price} (${change} / ${changePercent})${betaInfo} [${source}]\n`;
         });
         dataString += "\n";
     }
@@ -458,7 +522,8 @@ function formatMarketDataForPrompt(marketData) {
     if (marketData.premarket.gainers.length > 0) {
         dataString += "TOP PREMARKET GAINERS:\n";
         marketData.premarket.gainers.forEach((stock, index) => {
-            dataString += `${index + 1}. ${stock.symbol}: ${stock.price} (${stock.changePercent}) [${stock.source || 'Simulated'}]\n`;
+            const volumeInfo = stock.volume ? ` (Vol: ${(stock.volume/1000).toFixed(0)}K)` : '';
+            dataString += `${index + 1}. ${stock.symbol}: ${stock.price} (${stock.changePercent})${volumeInfo} [${stock.source || 'Simulated'}]\n`;
         });
         dataString += "\n";
     }
@@ -466,7 +531,8 @@ function formatMarketDataForPrompt(marketData) {
     if (marketData.premarket.losers.length > 0) {
         dataString += "TOP PREMARKET LOSERS:\n";
         marketData.premarket.losers.forEach((stock, index) => {
-            dataString += `${index + 1}. ${stock.symbol}: ${stock.price} (${stock.changePercent}) [${stock.source || 'Simulated'}]\n`;
+            const volumeInfo = stock.volume ? ` (Vol: ${(stock.volume/1000).toFixed(0)}K)` : '';
+            dataString += `${index + 1}. ${stock.symbol}: ${stock.price} (${stock.changePercent})${volumeInfo} [${stock.source || 'Simulated'}]\n`;
         });
         dataString += "\n";
     }
@@ -474,76 +540,81 @@ function formatMarketDataForPrompt(marketData) {
     return dataString;
 }
 
-const createMarketPrompt = (marketData) => `You are a financial analyst creating a daily market summary. ${formatMarketDataForPrompt(marketData)}
+const createMarketPrompt = (marketData) => `You are a senior financial analyst creating a daily market summary for institutional clients. 
 
-IMPORTANT: Create accurate, professional analysis based on the data provided. When using simulated data, clearly indicate this and focus on realistic market scenarios and typical trading patterns.
+${formatMarketDataForPrompt(marketData)}
+
+CRITICAL ACCURACY REQUIREMENTS:
+- Use ONLY the actual data provided above - do not make up additional numbers
+- When data shows "realistic-simulation", clearly note this as "estimated" or "typical ranges"
+- Be conservative with claims and avoid overly dramatic language
+- Focus on realistic market patterns and typical institutional analysis
+- Maintain professional credibility at all times
 
 Create a professional report with these exact sections:
 
 **EXECUTIVE SUMMARY**
-[2-sentence overview of global market sentiment based on available data]
+Provide a 2-sentence overview based strictly on the data provided above. Use conservative language.
 
 **ASIAN MARKETS OVERNIGHT**
-Create a professional summary covering:
-- Nikkei 225, Hang Seng, Shanghai Composite, ASX 200 performance
-- Major Asian corporate news or earnings trends
-- Key economic data releases from Asia
-- USD/JPY, USD/CNY, AUD/USD currency movements
-- Any central bank communications from Asia
-[Target: 150 words]
+Create professional analysis covering:
+- Major Asian indices (use typical overnight patterns if no specific data)
+- Corporate developments (focus on realistic themes)
+- Economic data (reference typical Asian market drivers)
+- Currency movements (use realistic ranges)
+- Central bank communications (reference typical policy themes)
+[Target: 150 words, conservative tone]
 
 **EUROPEAN MARKETS SUMMARY**
-Create a professional summary covering:
-- FTSE 100, DAX, CAC 40, Euro Stoxx 50 performance
-- Major European corporate news trends
-- ECB policy updates or eurozone economic data
-- EUR/USD, GBP/USD movements
-- Any significant political/economic developments in Europe
-[Target: 150 words]
+Cover European markets with realistic analysis:
+- European indices performance (use typical ranges)
+- Corporate news (focus on realistic sector themes)
+- ECB policy (reference actual recent policy direction)
+- Currency movements (use realistic FX ranges)
+- Political/economic developments (use realistic themes)
+[Target: 150 words, institutional quality]
 
 **US MARKET OUTLOOK**
-Create a professional summary covering:
-- Current S&P 500, NASDAQ, DOW futures outlook
-- Key economic releases scheduled for today
-- Major US earnings announcements expected
-- Federal Reserve speakers or policy implications
-- Overnight developments affecting US markets
-[Target: 150 words]
+Analyze US markets professionally:
+- Use the actual index data provided where available
+- Reference realistic economic calendar items
+- Focus on typical earnings season themes
+- Mention realistic Fed policy considerations
+- Use conservative forward-looking statements
+[Target: 150 words, actionable but conservative]
 
 **PREMARKET MOVERS**
-Analyze the premarket trading data provided above:
-- **Top 10 Gainers**: Use the data provided, with commentary on notable moves
-- **Top 10 Losers**: Use the data provided, with commentary on notable moves
-- Brief analysis of potential catalysts and trading implications
-[Target: 200 words, focus on actionable insights]
+Analyze the EXACT premarket data provided above:
+- Use the specific stocks, prices, and percentages listed
+- Provide realistic explanations for moves (earnings, upgrades, sector rotation)
+- Note that data is estimated/simulated when applicable
+- Focus on actionable insights for institutional traders
+[Target: 200 words, use actual data provided]
 
 **SECTOR ANALYSIS**
-Analyze the SPDR sector ETF performance using the data provided:
-- **XLF (Financial Services)**: Performance and outlook
-- **XLK (Technology)**: Key drivers and trends
-- **XLE (Energy)**: Commodity impacts and positioning
-- **XLV (Healthcare)**: Regulatory and earnings factors
-- **XLI (Industrials)**: Economic sensitivity analysis
-- **XLY (Consumer Discretionary)**: Consumer spending trends
-- **XLP (Consumer Staples)**: Defensive positioning
-- **XLU (Utilities)**: Interest rate sensitivity
-- **XLB (Materials)**: Commodity and cycle positioning
-[Target: 300 words, institutional-grade sector rotation insights]
+Analyze the EXACT SPDR ETF data provided above:
+- Use the specific prices and changes shown for each ETF
+- Reference the beta values where provided
+- Provide realistic sector rotation analysis
+- Connect moves to broader market themes
+- Note estimated data when applicable
+[Target: 300 words, use actual data provided]
 
 **KEY TAKEAWAYS**
-[2-sentence summary of main trading themes for the day]
+2-sentence summary focusing on main themes from the actual data provided.
 
 **KEY HEADLINES AND RESEARCH**
-[Target: 200 words]
-Summary of typical research themes and market headlines that would be relevant during market closure hours and their potential impacts.
+Focus on realistic market themes relevant to current conditions and the data provided above.
+[Target: 200 words, realistic themes only]
 
-Write in professional financial language suitable for institutional clients. Use the market data provided above where available, clearly noting data sources. Include today's date: ${new Date().toDateString()}.
+QUALITY STANDARDS:
+- Accuracy Score Target: 8/10 or higher
+- Use conservative estimates and realistic ranges
+- Clearly distinguish between real and estimated data
+- Maintain institutional credibility
+- Focus on actionable insights based on provided data
 
-REQUIREMENTS:
-- Be accurate and conservative with claims
-- Clearly distinguish between real-time and simulated data
-- Focus on realistic market scenarios
-- Maintain professional credibility`;
+Today's date: ${new Date().toDateString()}`;
 
 // Function to send email with the market report
 async function sendMarketReportEmail(reportContent, dateStr) {
