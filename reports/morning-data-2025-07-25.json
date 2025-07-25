@@ -172,169 +172,180 @@
     "topGainers": [
       {
         "symbol": "AAPL",
-        "price": "$113.48",
-        "change": "+14.57",
-        "changePercent": "+14.73%",
-        "volume": "98K",
+        "price": "$101.83",
+        "change": "+6.60",
+        "changePercent": "+6.93%",
+        "volume": "100K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "MSFT",
-        "price": "$97.73",
-        "change": "+4.62",
-        "changePercent": "+4.96%",
-        "volume": "81K",
+        "price": "$99.58",
+        "change": "+6.38",
+        "changePercent": "+6.85%",
+        "volume": "103K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "GOOGL",
-        "price": "$120.04",
-        "change": "+12.44",
-        "changePercent": "+11.56%",
-        "volume": "90K",
+        "price": "$126.40",
+        "change": "+0.69",
+        "changePercent": "+0.55%",
+        "volume": "152K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "AMZN",
-        "price": "$182.70",
-        "change": "+9.21",
-        "changePercent": "+5.31%",
-        "volume": "224K",
+        "price": "$214.34",
+        "change": "+12.27",
+        "changePercent": "+6.07%",
+        "volume": "53K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "TSLA",
-        "price": "$200.21",
-        "change": "+13.26",
-        "changePercent": "+7.09%",
-        "volume": "164K",
+        "price": "$229.41",
+        "change": "+15.79",
+        "changePercent": "+7.39%",
+        "volume": "210K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "NVDA",
-        "price": "$164.23",
-        "change": "+12.54",
-        "changePercent": "+8.27%",
-        "volume": "34K",
+        "price": "$65.90",
+        "change": "+8.65",
+        "changePercent": "+15.11%",
+        "volume": "189K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "META",
-        "price": "$248.56",
-        "change": "+30.60",
-        "changePercent": "+14.04%",
-        "volume": "219K",
+        "price": "$102.87",
+        "change": "+8.29",
+        "changePercent": "+8.76%",
+        "volume": "125K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "NFLX",
-        "price": "$207.26",
-        "change": "+21.28",
-        "changePercent": "+11.44%",
-        "volume": "107K",
+        "price": "$104.01",
+        "change": "+1.24",
+        "changePercent": "+1.21%",
+        "volume": "133K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "AMD",
-        "price": "$56.47",
-        "change": "+4.31",
-        "changePercent": "+8.26%",
-        "volume": "93K",
+        "price": "$143.52",
+        "change": "+16.41",
+        "changePercent": "+12.91%",
+        "volume": "92K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "CRM",
-        "price": "$178.93",
-        "change": "+15.00",
-        "changePercent": "+9.15%",
-        "volume": "181K",
+        "price": "$108.09",
+        "change": "+9.24",
+        "changePercent": "+9.35%",
+        "volume": "121K",
         "timeframe": "After-Hours"
       }
     ],
     "topLosers": [
       {
         "symbol": "AAPL",
-        "price": "$168.21",
-        "change": "-15.30",
-        "changePercent": "-8.34%",
-        "volume": "210K",
+        "price": "$81.59",
+        "change": "-11.25",
+        "changePercent": "-12.12%",
+        "volume": "172K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "MSFT",
-        "price": "$212.39",
-        "change": "-17.25",
-        "changePercent": "-7.51%",
-        "volume": "108K",
+        "price": "$175.46",
+        "change": "-7.08",
+        "changePercent": "-3.88%",
+        "volume": "70K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "GOOGL",
-        "price": "$60.16",
-        "change": "-5.40",
-        "changePercent": "-8.24%",
-        "volume": "189K",
+        "price": "$88.13",
+        "change": "-15.84",
+        "changePercent": "-15.24%",
+        "volume": "185K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "AMZN",
-        "price": "$140.22",
-        "change": "-2.80",
-        "changePercent": "-1.96%",
-        "volume": "41K",
+        "price": "$126.12",
+        "change": "-2.21",
+        "changePercent": "-1.72%",
+        "volume": "35K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "TSLA",
-        "price": "$58.66",
-        "change": "-7.74",
-        "changePercent": "-11.66%",
-        "volume": "68K",
+        "price": "$173.57",
+        "change": "-31.01",
+        "changePercent": "-15.16%",
+        "volume": "218K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "NVDA",
-        "price": "$182.60",
-        "change": "-8.78",
-        "changePercent": "-4.59%",
-        "volume": "31K",
+        "price": "$111.95",
+        "change": "-9.44",
+        "changePercent": "-7.78%",
+        "volume": "161K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "META",
-        "price": "$103.24",
-        "change": "-2.10",
-        "changePercent": "-1.99%",
-        "volume": "125K",
+        "price": "$69.05",
+        "change": "-3.84",
+        "changePercent": "-5.27%",
+        "volume": "26K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "NFLX",
-        "price": "$89.36",
-        "change": "-7.22",
-        "changePercent": "-7.48%",
-        "volume": "80K",
+        "price": "$107.53",
+        "change": "-19.05",
+        "changePercent": "-15.05%",
+        "volume": "42K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "AMD",
-        "price": "$188.21",
-        "change": "-18.77",
-        "changePercent": "-9.07%",
-        "volume": "168K",
+        "price": "$147.23",
+        "change": "-13.15",
+        "changePercent": "-8.2%",
+        "volume": "98K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "CRM",
-        "price": "$187.63",
-        "change": "-30.82",
-        "changePercent": "-14.11%",
-        "volume": "159K",
+        "price": "$122.71",
+        "change": "-17.43",
+        "changePercent": "-12.44%",
+        "volume": "41K",
         "timeframe": "After-Hours"
       }
     ]
   },
   "overnightNews": [
+    {
+      "category": "top news",
+      "datetime": 1753445100,
+      "headline": "Higher car prices help AutoNation beat sales and profit estimates, and its stock is rising",
+      "id": 7500806,
+      "image": "https://static2.finnhub.io/file/publicdatany/finnhubimage/market_watch_logo.png",
+      "related": "",
+      "source": "MarketWatch",
+      "summary": "Customers shrugged off higher prices and drove up sales.",
+      "url": "https://www.marketwatch.com/story/higher-car-prices-help-autonation-beat-sales-and-profit-estimates-and-its-stock-is-rising-0016a080"
+    },
     {
       "category": "top news",
       "datetime": 1753444200,
@@ -411,34 +422,23 @@
       "source": "MarketWatch",
       "summary": "A string of global companies, among them Volkswagen and LG Electronics, have been the latest to report back to investors just how U.S. tariff strains have been hitting their bottom line.",
       "url": "https://www.marketwatch.com/story/today-in-tariffs-vw-cuts-guidance-as-lg-electronics-profit-falls-on-weak-tv-sales-3206f251"
-    },
-    {
-      "category": "top news",
-      "datetime": 1753429020,
-      "headline": "Puma shares rocked by profit warning. Tariffs are the least of its problems.",
-      "id": 7500746,
-      "image": "https://static2.finnhub.io/file/publicdatany/finnhubimage/market_watch_logo.png",
-      "related": "",
-      "source": "MarketWatch",
-      "summary": "Puma shares lost nearly a fifth of their value as the German apparel maker cited “muted brand momentum,” U.S. tariffs and elevated inventories as reasons why it’s now forecasting a loss on the year.",
-      "url": "https://www.marketwatch.com/story/puma-shares-rocked-by-profit-warning-tariffs-are-the-least-of-its-problems-2b1dc310"
     }
   ],
   "globalMarkets": {},
   "currencyMoves": {
     "EURUSD": {
-      "rate": "1.1729",
-      "lastRefreshed": "2025-07-25 12:18:07",
+      "rate": "1.1727",
+      "lastRefreshed": "2025-07-25 12:22:14",
       "session": "Overnight"
     },
     "GBPUSD": {
       "rate": "1.3453",
-      "lastRefreshed": "2025-07-25 12:18:29",
+      "lastRefreshed": "2025-07-25 12:22:08",
       "session": "Overnight"
     },
     "USDJPY": {
-      "rate": "147.6330",
-      "lastRefreshed": "2025-07-25 12:18:10",
+      "rate": "147.6560",
+      "lastRefreshed": "2025-07-25 12:21:46",
       "session": "Overnight"
     }
   }
