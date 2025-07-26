@@ -1,0 +1,368 @@
+{
+  "afterHoursFutures": {
+    "SPY": {
+      "01. symbol": "SPY",
+      "02. open": "635.0900",
+      "03. high": "637.5799",
+      "04. low": "634.8400",
+      "05. price": "637.1000",
+      "06. volume": "56865364",
+      "07. latest trading day": "2025-07-25",
+      "08. previous close": "634.4200",
+      "09. change": "2.6800",
+      "10. change percent": "0.4224%",
+      "session": "After-Hours/Extended"
+    },
+    "QQQ": {
+      "01. symbol": "QQQ",
+      "02. open": "564.9300",
+      "03. high": "567.6950",
+      "04. low": "564.2700",
+      "05. price": "566.3700",
+      "06. volume": "30630813",
+      "07. latest trading day": "2025-07-25",
+      "08. previous close": "565.0100",
+      "09. change": "1.3600",
+      "10. change percent": "0.2407%",
+      "session": "After-Hours/Extended"
+    },
+    "DIA": {
+      "01. symbol": "DIA",
+      "02. open": "447.5300",
+      "03. high": "449.4100",
+      "04. low": "446.4102",
+      "05. price": "449.0200",
+      "06. volume": "3710570",
+      "07. latest trading day": "2025-07-25",
+      "08. previous close": "447.1100",
+      "09. change": "1.9100",
+      "10. change percent": "0.4272%",
+      "session": "After-Hours/Extended"
+    }
+  },
+  "overnightSectors": {
+    "XLF": {
+      "01. symbol": "XLF",
+      "02. open": "53.1000",
+      "03. high": "53.4867",
+      "04. low": "52.9900",
+      "05. price": "53.4400",
+      "06. volume": "28964728",
+      "07. latest trading day": "2025-07-25",
+      "08. previous close": "53.0700",
+      "09. change": "0.3700",
+      "10. change percent": "0.6972%",
+      "name": "Financial Services",
+      "session": "Extended Hours"
+    },
+    "XLK": {
+      "01. symbol": "XLK",
+      "02. open": "261.3100",
+      "03. high": "262.6500",
+      "04. low": "260.7651",
+      "05. price": "261.9900",
+      "06. volume": "4000985",
+      "07. latest trading day": "2025-07-25",
+      "08. previous close": "261.3900",
+      "09. change": "0.6000",
+      "10. change percent": "0.2295%",
+      "name": "Technology",
+      "session": "Extended Hours"
+    },
+    "XLE": {
+      "01. symbol": "XLE",
+      "02. open": "87.5200",
+      "03. high": "87.6700",
+      "04. low": "86.6450",
+      "05. price": "87.1000",
+      "06. volume": "10071567",
+      "07. latest trading day": "2025-07-25",
+      "08. previous close": "87.4300",
+      "09. change": "-0.3300",
+      "10. change percent": "-0.3774%",
+      "name": "Energy",
+      "session": "Extended Hours"
+    },
+    "XLV": {
+      "01. symbol": "XLV",
+      "02. open": "136.2450",
+      "03. high": "136.7000",
+      "04. low": "135.7400",
+      "05. price": "136.4800",
+      "06. volume": "9540321",
+      "07. latest trading day": "2025-07-25",
+      "08. previous close": "135.7600",
+      "09. change": "0.7200",
+      "10. change percent": "0.5303%",
+      "name": "Healthcare",
+      "session": "Extended Hours"
+    },
+    "XLI": {
+      "01. symbol": "XLI",
+      "02. open": "153.9400",
+      "03. high": "155.0600",
+      "04. low": "153.3600",
+      "05. price": "154.9900",
+      "06. volume": "9376677",
+      "07. latest trading day": "2025-07-25",
+      "08. previous close": "153.4700",
+      "09. change": "1.5200",
+      "10. change percent": "0.9904%",
+      "name": "Industrials",
+      "session": "Extended Hours"
+    },
+    "XLY": {
+      "01. symbol": "XLY",
+      "02. open": "223.9200",
+      "03. high": "225.2100",
+      "04. low": "223.3600",
+      "05. price": "224.8700",
+      "06. volume": "6134108",
+      "07. latest trading day": "2025-07-25",
+      "08. previous close": "222.8000",
+      "09. change": "2.0700",
+      "10. change percent": "0.9291%",
+      "name": "Consumer Discretionary",
+      "session": "Extended Hours"
+    },
+    "XLP": {
+      "01. symbol": "XLP",
+      "02. open": "81.3100",
+      "03. high": "81.5200",
+      "04. low": "81.0400",
+      "05. price": "81.5000",
+      "06. volume": "9284882",
+      "07. latest trading day": "2025-07-25",
+      "08. previous close": "81.3600",
+      "09. change": "0.1400",
+      "10. change percent": "0.1721%",
+      "name": "Consumer Staples",
+      "session": "Extended Hours"
+    },
+    "XLU": {
+      "01. symbol": "XLU",
+      "02. open": "84.4300",
+      "03. high": "84.6050",
+      "04. low": "84.1100",
+      "05. price": "84.5200",
+      "06. volume": "8160240",
+      "07. latest trading day": "2025-07-25",
+      "08. previous close": "84.3000",
+      "09. change": "0.2200",
+      "10. change percent": "0.2610%",
+      "name": "Utilities",
+      "session": "Extended Hours"
+    },
+    "XLB": {
+      "01. symbol": "XLB",
+      "02. open": "91.5300",
+      "03. high": "92.4200",
+      "04. low": "91.2800",
+      "05. price": "92.3700",
+      "06. volume": "7876383",
+      "07. latest trading day": "2025-07-25",
+      "08. previous close": "91.2900",
+      "09. change": "1.0800",
+      "10. change percent": "1.1830%",
+      "name": "Materials",
+      "session": "Extended Hours"
+    }
+  },
+  "afterHoursMovers": {
+    "topGainers": [
+      {
+        "symbol": "AAPL",
+        "price": "$110.99",
+        "change": "+6.31",
+        "changePercent": "+6.03%",
+        "volume": "136K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "MSFT",
+        "price": "$168.62",
+        "change": "+8.79",
+        "changePercent": "+5.50%",
+        "volume": "56K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "GOOGL",
+        "price": "$152.23",
+        "change": "+10.69",
+        "changePercent": "+7.55%",
+        "volume": "200K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "AMZN",
+        "price": "$242.15",
+        "change": "+8.66",
+        "changePercent": "+3.71%",
+        "volume": "88K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "TSLA",
+        "price": "$66.88",
+        "change": "+3.53",
+        "changePercent": "+5.57%",
+        "volume": "172K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "NVDA",
+        "price": "$129.46",
+        "change": "+7.12",
+        "changePercent": "+5.82%",
+        "volume": "166K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "META",
+        "price": "$254.25",
+        "change": "+15.52",
+        "changePercent": "+6.50%",
+        "volume": "43K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "NFLX",
+        "price": "$237.55",
+        "change": "+15.21",
+        "changePercent": "+6.84%",
+        "volume": "152K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "AMD",
+        "price": "$204.56",
+        "change": "+19.92",
+        "changePercent": "+10.79%",
+        "volume": "165K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "CRM",
+        "price": "$223.56",
+        "change": "+14.16",
+        "changePercent": "+6.76%",
+        "volume": "132K",
+        "timeframe": "After-Hours"
+      }
+    ],
+    "topLosers": [
+      {
+        "symbol": "AAPL",
+        "price": "$130.27",
+        "change": "-1.49",
+        "changePercent": "-1.13%",
+        "volume": "82K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "MSFT",
+        "price": "$160.15",
+        "change": "-13.42",
+        "changePercent": "-7.73%",
+        "volume": "104K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "GOOGL",
+        "price": "$178.84",
+        "change": "-31.56",
+        "changePercent": "-15%",
+        "volume": "153K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "AMZN",
+        "price": "$115.04",
+        "change": "-17.02",
+        "changePercent": "-12.89%",
+        "volume": "73K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "TSLA",
+        "price": "$120.66",
+        "change": "-13.72",
+        "changePercent": "-10.21%",
+        "volume": "147K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "NVDA",
+        "price": "$107.39",
+        "change": "-9.91",
+        "changePercent": "-8.45%",
+        "volume": "200K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "META",
+        "price": "$177.51",
+        "change": "-9.97",
+        "changePercent": "-5.32%",
+        "volume": "203K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "NFLX",
+        "price": "$137.21",
+        "change": "-1.30",
+        "changePercent": "-0.94%",
+        "volume": "48K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "AMD",
+        "price": "$196.26",
+        "change": "-34.53",
+        "changePercent": "-14.96%",
+        "volume": "44K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "CRM",
+        "price": "$175.69",
+        "change": "-1.08",
+        "changePercent": "-0.61%",
+        "volume": "92K",
+        "timeframe": "After-Hours"
+      }
+    ]
+  },
+  "overnightNews": [
+    {
+      "category": "top news",
+      "datetime": 1753525800,
+      "headline": "‘I have no debts’: Is this a good time to invest in the S&P 500? I’m 66, retired and have $700K.",
+      "id": 7500962,
+      "image": "https://static2.finnhub.io/file/publicdatany/finnhubimage/market_watch_logo.png",
+      "related": "",
+      "source": "MarketWatch",
+      "summary": "“I own my home outright. I also get Social Security, but not much.”",
+      "url": "https://www.marketwatch.com/story/i-have-no-debts-is-this-a-good-time-to-invest-in-the-s-p-500-im-66-retired-and-have-700k-3439a13e"
+    }
+  ],
+  "globalMarkets": {},
+  "currencyMoves": {
+    "EURUSD": {
+      "rate": "1.1744",
+      "lastRefreshed": "2025-07-26 12:23:48",
+      "session": "Overnight"
+    },
+    "GBPUSD": {
+      "rate": "1.3439",
+      "lastRefreshed": "2025-07-26 12:23:28",
+      "session": "Overnight"
+    },
+    "USDJPY": {
+      "rate": "147.6220",
+      "lastRefreshed": "2025-07-26 12:23:42",
+      "session": "Overnight"
+    }
+  }
+}
