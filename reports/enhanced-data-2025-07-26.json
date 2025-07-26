@@ -1,0 +1,575 @@
+{
+  "marketData": {
+    "indices": {
+      "SPY": {
+        "symbol": "SPY",
+        "price": "637.10",
+        "change": "2.68",
+        "changePercent": "0.4224",
+        "volume": "56,865,364",
+        "high": "637.58",
+        "low": "634.84",
+        "open": "635.09",
+        "previousClose": "634.42",
+        "timestamp": "2025-07-25",
+        "source": "Alpha Vantage (Exact Real-time)"
+      },
+      "QQQ": {
+        "symbol": "QQQ",
+        "price": "566.37",
+        "change": "1.36",
+        "changePercent": "0.2407",
+        "volume": "30,630,813",
+        "high": "567.70",
+        "low": "564.27",
+        "open": "564.93",
+        "previousClose": "565.01",
+        "timestamp": "2025-07-25",
+        "source": "Alpha Vantage (Exact Real-time)"
+      },
+      "DIA": {
+        "symbol": "DIA",
+        "price": "449.02",
+        "change": "1.91",
+        "changePercent": "0.4272",
+        "volume": "3,710,570",
+        "high": "449.41",
+        "low": "446.41",
+        "open": "447.53",
+        "previousClose": "447.11",
+        "timestamp": "2025-07-25",
+        "source": "Alpha Vantage (Exact Real-time)"
+      }
+    },
+    "sectors": {
+      "XLF": {
+        "symbol": "XLF",
+        "name": "Financial Services",
+        "price": "53.44",
+        "change": "0.37",
+        "changePercent": "0.6972",
+        "volume": "28,964,728",
+        "high": "53.49",
+        "low": "52.99",
+        "open": "53.10",
+        "previousClose": "53.07",
+        "timestamp": "2025-07-25",
+        "source": "Alpha Vantage (Exact Real-time)"
+      },
+      "XLK": {
+        "symbol": "XLK",
+        "name": "Technology",
+        "price": "261.99",
+        "change": "0.60",
+        "changePercent": "0.2295",
+        "volume": "4,000,985",
+        "high": "262.65",
+        "low": "260.77",
+        "open": "261.31",
+        "previousClose": "261.39",
+        "timestamp": "2025-07-25",
+        "source": "Alpha Vantage (Exact Real-time)"
+      },
+      "XLE": {
+        "symbol": "XLE",
+        "name": "Energy",
+        "price": "87.10",
+        "change": "-0.33",
+        "changePercent": "-0.3774",
+        "volume": "10,071,567",
+        "high": "87.67",
+        "low": "86.64",
+        "open": "87.52",
+        "previousClose": "87.43",
+        "timestamp": "2025-07-25",
+        "source": "Alpha Vantage (Exact Real-time)"
+      },
+      "XLV": {
+        "symbol": "XLV",
+        "name": "Healthcare",
+        "price": "136.48",
+        "change": "0.72",
+        "changePercent": "0.5303",
+        "volume": "9,540,321",
+        "high": "136.70",
+        "low": "135.74",
+        "open": "136.25",
+        "previousClose": "135.76",
+        "timestamp": "2025-07-25",
+        "source": "Alpha Vantage (Exact Real-time)"
+      },
+      "XLI": {
+        "symbol": "XLI",
+        "name": "Industrials",
+        "price": "154.99",
+        "change": "1.52",
+        "changePercent": "0.9904",
+        "volume": "9,376,677",
+        "high": "155.06",
+        "low": "153.36",
+        "open": "153.94",
+        "previousClose": "153.47",
+        "timestamp": "2025-07-25",
+        "source": "Alpha Vantage (Exact Real-time)"
+      },
+      "XLY": {
+        "symbol": "XLY",
+        "name": "Consumer Discretionary",
+        "price": "224.87",
+        "change": "2.07",
+        "changePercent": "0.9291",
+        "volume": "6,134,108",
+        "high": "225.21",
+        "low": "223.36",
+        "open": "223.92",
+        "previousClose": "222.80",
+        "timestamp": "2025-07-25",
+        "source": "Alpha Vantage (Exact Real-time)"
+      },
+      "XLP": {
+        "symbol": "XLP",
+        "name": "Consumer Staples",
+        "price": "81.50",
+        "change": "0.14",
+        "changePercent": "0.1721",
+        "volume": "9,284,882",
+        "high": "81.52",
+        "low": "81.04",
+        "open": "81.31",
+        "previousClose": "81.36",
+        "timestamp": "2025-07-25",
+        "source": "Alpha Vantage (Exact Real-time)"
+      },
+      "XLU": {
+        "symbol": "XLU",
+        "name": "Utilities",
+        "price": "84.52",
+        "change": "0.22",
+        "changePercent": "0.2610",
+        "volume": "8,160,240",
+        "high": "84.61",
+        "low": "84.11",
+        "open": "84.43",
+        "previousClose": "84.30",
+        "timestamp": "2025-07-25",
+        "source": "Alpha Vantage (Exact Real-time)"
+      },
+      "XLB": {
+        "symbol": "XLB",
+        "name": "Materials",
+        "price": "92.37",
+        "change": "1.08",
+        "changePercent": "1.1830",
+        "volume": "7,876,383",
+        "high": "92.42",
+        "low": "91.28",
+        "open": "91.53",
+        "previousClose": "91.29",
+        "timestamp": "2025-07-25",
+        "source": "Alpha Vantage (Exact Real-time)"
+      }
+    },
+    "premarket": {
+      "gainers": [
+        {
+          "symbol": "TSLA",
+          "price": "256.63",
+          "change": "+7.93",
+          "changePercent": "+3.19%",
+          "catalyst": "technical breakout",
+          "sector": "Consumer Discretionary",
+          "basePrice": 248.7
+        },
+        {
+          "symbol": "META",
+          "price": "497.69",
+          "change": "+12.09",
+          "changePercent": "+2.49%",
+          "catalyst": "market sentiment shift",
+          "sector": "Technology",
+          "basePrice": 485.6
+        },
+        {
+          "symbol": "AAPL",
+          "price": "189.57",
+          "change": "+4.37",
+          "changePercent": "+2.36%",
+          "catalyst": "sector rotation",
+          "sector": "Technology",
+          "basePrice": 185.2
+        },
+        {
+          "symbol": "CRM",
+          "price": "271.64",
+          "change": "+6.24",
+          "changePercent": "+2.35%",
+          "catalyst": "market sentiment shift",
+          "sector": "Technology",
+          "basePrice": 265.4
+        },
+        {
+          "symbol": "NVDA",
+          "price": "893.28",
+          "change": "+18.03",
+          "changePercent": "+2.06%",
+          "catalyst": "earnings guidance update",
+          "sector": "Technology",
+          "basePrice": 875.25
+        },
+        {
+          "symbol": "AMZN",
+          "price": "147.74",
+          "change": "+2.44",
+          "changePercent": "+1.68%",
+          "catalyst": "options activity",
+          "sector": "Consumer Discretionary",
+          "basePrice": 145.3
+        },
+        {
+          "symbol": "AMD",
+          "price": "157.26",
+          "change": "+1.96",
+          "changePercent": "+1.26%",
+          "catalyst": "regulatory update",
+          "sector": "Technology",
+          "basePrice": 155.3
+        },
+        {
+          "symbol": "MSFT",
+          "price": "378.92",
+          "change": "+4.42",
+          "changePercent": "+1.18%",
+          "catalyst": "options activity",
+          "sector": "Technology",
+          "basePrice": 374.5
+        },
+        {
+          "symbol": "NFLX",
+          "price": "490.00",
+          "change": "+4.80",
+          "changePercent": "+0.99%",
+          "catalyst": "institutional buying",
+          "sector": "Communication Services",
+          "basePrice": 485.2
+        },
+        {
+          "symbol": "GOOGL",
+          "price": "141.15",
+          "change": "+0.30",
+          "changePercent": "+0.21%",
+          "catalyst": "market sentiment shift",
+          "sector": "Technology",
+          "basePrice": 140.85
+        }
+      ],
+      "losers": [
+        {
+          "symbol": "NFLX",
+          "price": "468.85",
+          "change": "-16.35",
+          "changePercent": "-3.37%",
+          "catalyst": "analyst upgrade",
+          "sector": "Communication Services",
+          "basePrice": 485.2
+        },
+        {
+          "symbol": "AAPL",
+          "price": "179.48",
+          "change": "-5.72",
+          "changePercent": "-3.09%",
+          "catalyst": "market sentiment shift",
+          "sector": "Technology",
+          "basePrice": 185.2
+        },
+        {
+          "symbol": "NVDA",
+          "price": "848.38",
+          "change": "-26.87",
+          "changePercent": "-3.07%",
+          "catalyst": "partnership announcement",
+          "sector": "Technology",
+          "basePrice": 875.25
+        },
+        {
+          "symbol": "META",
+          "price": "473.99",
+          "change": "-11.61",
+          "changePercent": "-2.39%",
+          "catalyst": "market sentiment shift",
+          "sector": "Technology",
+          "basePrice": 485.6
+        },
+        {
+          "symbol": "AMZN",
+          "price": "142.41",
+          "change": "-2.89",
+          "changePercent": "-1.99%",
+          "catalyst": "analyst upgrade",
+          "sector": "Consumer Discretionary",
+          "basePrice": 145.3
+        },
+        {
+          "symbol": "AMD",
+          "price": "152.58",
+          "change": "-2.72",
+          "changePercent": "-1.75%",
+          "catalyst": "analyst upgrade",
+          "sector": "Technology",
+          "basePrice": 155.3
+        },
+        {
+          "symbol": "GOOGL",
+          "price": "139.33",
+          "change": "-1.52",
+          "changePercent": "-1.08%",
+          "catalyst": "regulatory update",
+          "sector": "Technology",
+          "basePrice": 140.85
+        },
+        {
+          "symbol": "MSFT",
+          "price": "370.61",
+          "change": "-3.89",
+          "changePercent": "-1.04%",
+          "catalyst": "technical breakout",
+          "sector": "Technology",
+          "basePrice": 374.5
+        },
+        {
+          "symbol": "CRM",
+          "price": "263.78",
+          "change": "-1.62",
+          "changePercent": "-0.61%",
+          "catalyst": "analyst upgrade",
+          "sector": "Technology",
+          "basePrice": 265.4
+        },
+        {
+          "symbol": "TSLA",
+          "price": "247.41",
+          "change": "-1.29",
+          "changePercent": "-0.52%",
+          "catalyst": "technical breakout",
+          "sector": "Consumer Discretionary",
+          "basePrice": 248.7
+        }
+      ]
+    },
+    "currencies": {
+      "EUR/USD": "1.1744",
+      "GBP/USD": "1.3439",
+      "USD/JPY": "147.62",
+      "USD/CNY": "7.17",
+      "AUD/USD": "0.6569",
+      "source": "Alpha Vantage (Exact Real-time)",
+      "timestamp": "2025-07-26T12:40:45.475Z"
+    },
+    "lastUpdated": "2025-07-26T12:40:39.335Z",
+    "dataSources": [
+      "Polygon Real-time Movers",
+      "Alpha Vantage (Exact Real-time)",
+      "Alpha Vantage Exact Quotes",
+      "News: Alpha Vantage News"
+    ],
+    "news": {
+      "marketNews": [],
+      "economicNews": [
+        {
+          "title": "How Investing Just $10 a Day Could Make You a Millionaire by Retirement",
+          "source": "Motley Fool",
+          "publishedAt": "20250726T092700",
+          "url": "https://www.fool.com/retirement/2025/07/26/how-investing-just-10-a-day-could-make-you-a-milli/",
+          "summary": "Consistent, small actions add up to huge sums over time....",
+          "sentiment": "Somewhat-Bullish",
+          "category": "economic"
+        },
+        {
+          "title": "2 Reliable Dividend Stocks With Yields Above 5% to Buy Now and Hold Forever",
+          "source": "Motley Fool",
+          "publishedAt": "20250726T095700",
+          "url": "https://www.fool.com/investing/2025/07/26/reliable-dividend-stocks-with-yields-above-5-to-bu/",
+          "summary": "This pair of REITs steadily raised their dividend payouts for over a decade....",
+          "sentiment": "Somewhat-Bullish",
+          "category": "economic"
+        },
+        {
+          "title": "2 Unstoppable Vanguard ETFs That Consistently Beat the S&P 500 Index",
+          "source": "Motley Fool",
+          "publishedAt": "20250726T090700",
+          "url": "https://www.fool.com/investing/2025/07/26/2-vanguard-etfs-consistently-beat-sp-500-index/",
+          "summary": "The S&P 500 is among the leading U.S. stock market indexes. It's home to 500 companies from 11 different sectors of the economy, and they have to meet very strict criteria before a special committee can grant them entry....",
+          "sentiment": "Neutral",
+          "category": "economic"
+        },
+        {
+          "title": "The Smartest Dividend Stocks to Buy With $350 Right Now",
+          "source": "Motley Fool",
+          "publishedAt": "20250726T085000",
+          "url": "https://www.fool.com/investing/2025/07/26/the-smartest-dividend-stocks-to-buy-with-350-right/",
+          "summary": "These stocks offer juicy dividends, solid growth prospects, and stability....",
+          "sentiment": "Somewhat-Bullish",
+          "category": "economic"
+        },
+        {
+          "title": "Where Will Intuitive Surgical Be in 5 Years?",
+          "source": "Motley Fool",
+          "publishedAt": "20250726T110000",
+          "url": "https://www.fool.com/investing/2025/07/26/where-will-intuitive-surgical-be-in-5-years/",
+          "summary": "The stock has a long history of making long-term shareholders very wealthy....",
+          "sentiment": "Somewhat-Bullish",
+          "category": "economic"
+        },
+        {
+          "title": "Where Will Palantir Technologies Be in 3 Years?",
+          "source": "Motley Fool",
+          "publishedAt": "20250726T091000",
+          "url": "https://www.fool.com/investing/2025/07/26/where-will-palantir-technologies-be-in-3-years/",
+          "summary": "The standout AI software company has achieved a 1,300% return in just the past 36 months....",
+          "sentiment": "Somewhat-Bullish",
+          "category": "economic"
+        },
+        {
+          "title": "Is MP Materials Stock Your Ticket to Becoming a Millionaire?",
+          "source": "Motley Fool",
+          "publishedAt": "20250726T085000",
+          "url": "https://www.fool.com/investing/2025/07/26/is-mp-materials-stock-your-ticket-to-becoming-a-mi/",
+          "summary": "MP Materials ( NYSE: MP ) is a unique company with a crucial role to play in America's defense policy and its geostrategic positioning. Currently, it's the only company operating a rare-earth mine and processing facility in the U.S., and it has recen...",
+          "sentiment": "Somewhat-Bullish",
+          "category": "economic"
+        },
+        {
+          "title": "Here's How Nvidia and AMD Could Help This Super Semiconductor ETF Turn $500 Per Month Into $1 Million",
+          "source": "Motley Fool",
+          "publishedAt": "20250726T085600",
+          "url": "https://www.fool.com/investing/2025/07/26/nvidia-amd-help-etf-turn-500-month-into-1-million/",
+          "summary": "The biggest names in artificial intelligence (AI) hardware are packed into this unique exchange-traded fund....",
+          "sentiment": "Somewhat-Bullish",
+          "category": "economic"
+        }
+      ],
+      "techNews": [],
+      "corporateNews": [],
+      "lastUpdated": "2025-07-26T12:40:39.370Z",
+      "sources": [
+        "Alpha Vantage News"
+      ]
+    },
+    "newsSentiment": {
+      "overall": "positive",
+      "positive": 1,
+      "negative": 0,
+      "total": 8,
+      "confidence": "high"
+    }
+  },
+  "validation": {
+    "isValid": false,
+    "issues": [
+      "SPY price 637.1 outside realistic range (400-600)",
+      "QQQ price 566.37 outside realistic range (300-500)",
+      "DIA price 449.02 outside realistic range (300-400)",
+      "XLF price $53.44 outside realistic range ($30-50)",
+      "XLK price $261.99 outside realistic range ($150-200)"
+    ],
+    "dataQuality": "low",
+    "priceConsistency": false,
+    "movementRealism": true
+  },
+  "accuracyCheck": {
+    "corrected": true,
+    "issues": [
+      "Internal inconsistencies found and corrected"
+    ]
+  },
+  "newsData": {
+    "marketNews": [],
+    "economicNews": [
+      {
+        "title": "How Investing Just $10 a Day Could Make You a Millionaire by Retirement",
+        "source": "Motley Fool",
+        "publishedAt": "20250726T092700",
+        "url": "https://www.fool.com/retirement/2025/07/26/how-investing-just-10-a-day-could-make-you-a-milli/",
+        "summary": "Consistent, small actions add up to huge sums over time....",
+        "sentiment": "Somewhat-Bullish",
+        "category": "economic"
+      },
+      {
+        "title": "2 Reliable Dividend Stocks With Yields Above 5% to Buy Now and Hold Forever",
+        "source": "Motley Fool",
+        "publishedAt": "20250726T095700",
+        "url": "https://www.fool.com/investing/2025/07/26/reliable-dividend-stocks-with-yields-above-5-to-bu/",
+        "summary": "This pair of REITs steadily raised their dividend payouts for over a decade....",
+        "sentiment": "Somewhat-Bullish",
+        "category": "economic"
+      },
+      {
+        "title": "2 Unstoppable Vanguard ETFs That Consistently Beat the S&P 500 Index",
+        "source": "Motley Fool",
+        "publishedAt": "20250726T090700",
+        "url": "https://www.fool.com/investing/2025/07/26/2-vanguard-etfs-consistently-beat-sp-500-index/",
+        "summary": "The S&P 500 is among the leading U.S. stock market indexes. It's home to 500 companies from 11 different sectors of the economy, and they have to meet very strict criteria before a special committee can grant them entry....",
+        "sentiment": "Neutral",
+        "category": "economic"
+      },
+      {
+        "title": "The Smartest Dividend Stocks to Buy With $350 Right Now",
+        "source": "Motley Fool",
+        "publishedAt": "20250726T085000",
+        "url": "https://www.fool.com/investing/2025/07/26/the-smartest-dividend-stocks-to-buy-with-350-right/",
+        "summary": "These stocks offer juicy dividends, solid growth prospects, and stability....",
+        "sentiment": "Somewhat-Bullish",
+        "category": "economic"
+      },
+      {
+        "title": "Where Will Intuitive Surgical Be in 5 Years?",
+        "source": "Motley Fool",
+        "publishedAt": "20250726T110000",
+        "url": "https://www.fool.com/investing/2025/07/26/where-will-intuitive-surgical-be-in-5-years/",
+        "summary": "The stock has a long history of making long-term shareholders very wealthy....",
+        "sentiment": "Somewhat-Bullish",
+        "category": "economic"
+      },
+      {
+        "title": "Where Will Palantir Technologies Be in 3 Years?",
+        "source": "Motley Fool",
+        "publishedAt": "20250726T091000",
+        "url": "https://www.fool.com/investing/2025/07/26/where-will-palantir-technologies-be-in-3-years/",
+        "summary": "The standout AI software company has achieved a 1,300% return in just the past 36 months....",
+        "sentiment": "Somewhat-Bullish",
+        "category": "economic"
+      },
+      {
+        "title": "Is MP Materials Stock Your Ticket to Becoming a Millionaire?",
+        "source": "Motley Fool",
+        "publishedAt": "20250726T085000",
+        "url": "https://www.fool.com/investing/2025/07/26/is-mp-materials-stock-your-ticket-to-becoming-a-mi/",
+        "summary": "MP Materials ( NYSE: MP ) is a unique company with a crucial role to play in America's defense policy and its geostrategic positioning. Currently, it's the only company operating a rare-earth mine and processing facility in the U.S., and it has recen...",
+        "sentiment": "Somewhat-Bullish",
+        "category": "economic"
+      },
+      {
+        "title": "Here's How Nvidia and AMD Could Help This Super Semiconductor ETF Turn $500 Per Month Into $1 Million",
+        "source": "Motley Fool",
+        "publishedAt": "20250726T085600",
+        "url": "https://www.fool.com/investing/2025/07/26/nvidia-amd-help-etf-turn-500-month-into-1-million/",
+        "summary": "The biggest names in artificial intelligence (AI) hardware are packed into this unique exchange-traded fund....",
+        "sentiment": "Somewhat-Bullish",
+        "category": "economic"
+      }
+    ],
+    "techNews": [],
+    "corporateNews": [],
+    "lastUpdated": "2025-07-26T12:40:39.370Z",
+    "sources": [
+      "Alpha Vantage News"
+    ]
+  },
+  "newsSentiment": {
+    "overall": "positive",
+    "positive": 1,
+    "negative": 0,
+    "total": 8,
+    "confidence": "high"
+  },
+  "timestamp": "2025-07-26T12:42:39.386Z"
+}
