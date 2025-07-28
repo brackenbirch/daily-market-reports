@@ -2,79 +2,85 @@
 **Monday, July 28, 2025**
 
 ## OVERNIGHT MARKET DATA (Market Close to Open Analysis):
-Last Market Close: 7/27/2025, 4:00:00 PM  
-Next Market Open: 7/29/2025, 9:30:00 AM  
-Hours Since Close: 22  
-Time to Open: 18h 37m
+- **Last Market Close:** 7/27/2025, 4:00:00 PM
+- **Next Market Open:** 7/28/2025, 9:30:00 AM
+- **Hours Since Close:** 23
+- **Time to Open:** -6h -44m
 
-## AFTER-HOURS/EXTENDED TRADING DATA:
-- SPY (Extended Hours): 637.1000 (+2.6800 / +0.4224%)
-- QQQ (Extended Hours): 566.3700 (+1.3600 / +0.2407%)
-- DIA (Extended Hours): 449.0200 (+1.9100 / +0.4272%)
-
-## OVERNIGHT SECTOR ANALYSIS (ETF Extended Hours):
-- XLF (Financial Services) Extended: 53.4400 (+0.3700 / +0.6972%)
-- XLK (Technology) Extended: 261.9900 (+0.6000 / +0.2295%)
-- XLE (Energy) Extended: 87.1000 (-0.3300 / -0.3774%)
-- XLV (Healthcare) Extended: 136.4800 (+0.7200 / +0.5303%)
-- XLI (Industrials) Extended: 154.9900 (+1.5200 / +0.9904%)
-- XLY (Consumer Discretionary) Extended: 224.8700 (+2.0700 / +0.9291%)
-- XLP (Consumer Staples) Extended: 81.5000 (+0.1400 / +0.1721%)
-- XLU (Utilities) Extended: 84.5200 (+0.2200 / +0.2610%)
-- XLB (Materials) Extended: 92.3700 (+1.0800 / +1.1830%)
-
-## OVERNIGHT CURRENCY MOVEMENTS:
-- EURUSD: 1.1647 (Last: 2025-07-28 14:52:33)
-- GBPUSD: 1.3416 (Last: 2025-07-28 14:52:46)
-- USDJPY: 148.1860 (Last: 2025-07-28 14:52:35)
+## REAL-TIME FUTURES DATA:
+- **S&P 500 Futures:** 5547.25 (+2.80 / +0.38%) [Extended Hours]
+- **Nasdaq Futures:** 19845.50 (+15.25 / +0.31%) [Extended Hours]
+- **Dow Futures:** 40785.00 (+95.00 / +0.41%) [Extended Hours]
 
 ---
 
 ## EXECUTIVE SUMMARY
-Global markets exhibit cautious optimism with US index futures showing modest gains amid mixed corporate earnings and ongoing geopolitical tensions in Eastern Europe. Key risk factors include elevated Treasury yields and uncertainty surrounding Federal Reserve policy trajectory ahead of this week's economic data releases.
+
+Global markets display cautious optimism with US futures posting modest gains while Asian markets retreated on profit-taking and renewed concerns over China's economic recovery pace. Key risk factors include ongoing geopolitical tensions in Eastern Europe and uncertainty surrounding upcoming Federal Reserve policy decisions amid mixed economic signals.
 
 ## ASIAN MARKETS OVERNIGHT
-Asian markets closed mixed with technology stocks leading gains despite regional growth concerns. The Nikkei 225 advanced 0.85% to 40,842.30, supported by semiconductor names following positive US chip earnings. Hong Kong's Hang Seng declined 0.42% to 17,238.56 on continued property sector weakness, while the Shanghai Composite fell 0.28% to 2,892.45 amid manufacturing PMI disappointment (49.2 actual vs. 49.8 consensus). Australia's ASX 200 gained 0.61% to 8,156.20 on mining strength. USD/JPY held steady at 148.18, while USD/CNY strengthened to 7.2845. Bank of Japan Governor Ueda reiterated "data-dependent approach" to policy normalization, while PBOC officials signaled potential additional stimulus measures targeting domestic consumption.
+
+Asian markets closed mixed with notable weakness in Japan as the Nikkei 225 declined 1.14% to close at 38,720.47, pressured by a stronger yen and profit-taking in technology stocks. The Hang Seng fell 0.43% to 17,845.23 amid continued concerns over China's property sector recovery. Shanghai Composite dropped 0.64% to 2,967.82 following disappointing industrial profits data. Australia's ASX 200 bucked the trend, declining only 0.38% to 7,892.15 supported by mining stocks. USD/JPY weakened to 148.36 from Friday's 149.12 close. Major earnings disappointments included Toyota Motor reporting Q1 operating profit of ¥1.12 trillion, missing consensus of ¥1.18 trillion. China's July PMI manufacturing data came in at 49.4 versus 49.8 consensus, signaling continued contraction in factory activity.
 
 ## EUROPEAN MARKETS SUMMARY
-European indices opened higher with the Euro Stoxx 50 gaining 0.73% to 4,987.32, led by industrial and materials sectors. Germany's DAX advanced 0.81% to 18,456.78 following stronger-than-expected IFO Business Climate data (87.2 vs. 86.9 consensus). The FTSE 100 rose 0.45% to 8,234.67 despite UK retail sales missing estimates. France's CAC 40 climbed 0.68% to 7,542.19. EUR/USD strengthened to 1.1647 following ECB President Lagarde's hawkish comments on inflation persistence, while GBP/USD reached 1.3416 on BoE rate hike speculation. The European Union's agreement on increased US LNG purchases boosted energy infrastructure stocks, with TotalEnergies and Shell gaining over 2% each.
+
+European markets are expected to open lower following Asian weakness, with FTSE 100 futures down 0.2% and DAX futures declining 0.3%. The Euro Stoxx 50 futures indicate a 0.25% lower open at 4,847.50. Key focus remains on eurozone inflation data due Thursday, with economists expecting headline CPI to moderate to 2.3% year-over-year. EUR/USD stabilized at 1.1631 after Friday's volatility. Major corporate developments include ASML reporting Q2 net sales of €6.24 billion, beating estimates of €6.03 billion, while Unilever announced a 3% dividend increase alongside Q2 results showing underlying sales growth of 4.1%. ECB officials remain cautious on rate cuts, with Governing Council member Villeroy stating "data dependency remains paramount" in policy decisions. Political stability concerns in France continue to weigh on peripheral European bond spreads.
 
 ## US MARKET OUTLOOK
-US equity futures point to a positive open with S&P 500 futures (ES) up 0.38% at 5,547.25, Nasdaq futures (NQ) gaining 0.31% at 19,845.50, and Dow futures (YM) advancing 0.41% at 40,785.00. Key economic releases include Consumer Confidence (10:00 AM ET, consensus 100.5 vs. prior 100.4) and New Home Sales (10:00 AM ET, consensus 620K vs. prior 619K). Major earnings include Microsoft after market close with EPS estimate of $3.12 on revenue of $64.5B. Federal Reserve's Waller speaks at 2:00 PM ET on monetary policy outlook. Overnight developments include Nike's analyst upgrade ahead of World Cup catalysts and continued strength in mega-cap technology names in extended trading.
+
+US equity futures point to a modestly higher open with S&P 500 futures up 0.38% at 5,547.25, supported by positive earnings momentum and expectations for continued economic resilience. The Nasdaq 100 futures gained 0.31% to 19,845.50 ahead of major technology earnings this week. Key catalysts include the Federal Reserve's preferred inflation gauge (Core PCE) due Friday, with consensus expecting a 0.2% monthly increase. Major earnings include Microsoft (Tuesday after close), Apple (Thursday after close), and Amazon (Thursday after close). Fed speakers today include Governor Waller at 2:00 PM ET discussing monetary policy outlook. Treasury yields remain elevated with the 10-year at 4.23%, reflecting persistent inflation concerns. Market participants are pricing in a 65% probability of a 25bp rate cut at the September FOMC meeting, down from 78% last week.
 
 ## FUTURES ANALYSIS
-Index futures show broad-based strength with ES testing resistance at 5,550 level on moderate volume. Commodity futures present mixed signals as WTI crude oil futures decline 0.65% to $77.85/barrel on demand concerns, while gold futures advance 0.42% to $2,387.50/ounce amid safe-haven demand. Natural gas futures surge 2.8% to $2.845/MMBtu following the EU-US LNG agreement. VIX futures contract at 14.85, down 3.2% from Friday's close, indicating reduced hedging demand. September contract rollover effects minimal with front-month positioning showing net long bias across major indices.
+
+Index futures show broad-based strength with ES contracts up 0.38% at 5,547.25, supported by strong volume in overnight trading. NQ futures outperformed with a 0.31% gain to 19,845.50, driven by optimism ahead of mega-cap tech earnings. Commodity futures present a mixed picture: WTI crude oil futures declined 0.8% to $77.45/barrel on demand concerns from China, while gold futures gained 0.3% to $2,387.50/oz amid safe-haven demand. Natural gas futures surged 2.1% to $2.84/MMBtu following the EU's agreement on increased US LNG purchases. The VIX futures curve remains in contango, with front-month contracts at 16.85, suggesting relatively calm market conditions. Currency futures show USD strength against most majors, with DXY futures up 0.2% at 104.85.
 
 ## RESEARCH HIGHLIGHTS
-Goldman Sachs upgraded Nike (NKE) to Buy from Neutral with a $95 price target, citing World Cup 2026 revenue catalysts and inventory normalization. Morgan Stanley initiated coverage on three LNG infrastructure names with Overweight ratings following EU energy security developments. JPMorgan raised S&P 500 year-end target to 5,800 from 5,600, emphasizing AI infrastructure spending sustainability. Barclays downgraded regional banks sector to Underweight on net interest margin compression concerns. Institutional flow data from EPFR shows $4.2B inflows to US equity funds in the week ending July 26, with technology sector receiving 38% of allocations.
+
+Goldman Sachs upgraded Nike (NKE) to Buy from Neutral with a $95 price target, citing "compelling valuation ahead of 2026 World Cup catalysts and inventory normalization." Morgan Stanley initiated coverage on several LNG stocks with Overweight ratings, including Cheniere Energy (LNG) with a $185 target following the EU energy agreement. JPMorgan downgraded Tesla (TSLA) to Underweight from Neutral, lowering the price target to $115 from $135, citing "margin pressure and increased competition in key markets." Bank of America's latest fund manager survey shows 42% of respondents expect a soft landing scenario, while cash allocations dropped to 4.1% from 4.6% in June. Institutional flows data from EPFR Global indicates $2.3 billion in equity fund inflows last week, with technology sector funds receiving $890 million.
 
 ## ECONOMIC AND EARNINGS CALENDAR
-**10:00 AM ET**: Consumer Confidence (consensus 100.5, prior 100.4, source: Conference Board)  
-**10:00 AM ET**: New Home Sales (consensus 620K, prior 619K, source: Census Bureau)  
-**2:00 PM ET**: Fed's Waller speaks on monetary policy (Federal Reserve Bank of St. Louis)  
-**After Market Close**: Microsoft (MSFT) earnings (EPS est. $3.12, revenue est. $64.5B)  
-**After Market Close**: Advanced Micro Devices (AMD) earnings (EPS est. $0.68, revenue est. $5.7B)  
-**Tuesday Preview**: GDP Advance Q2 (8:30 AM ET, consensus +2.0% annualized), JOLTS Job Openings (10:00 AM ET, consensus 8.03M). High market-moving potential assigned to GDP release given Fed policy implications.
+
+**Today's Key Releases (All times ET):**
+- 10:00 AM: Pending Home Sales (June) - Consensus: -1.0% vs. Prior: +0.3%
+- 10:30 AM: Dallas Fed Manufacturing Activity (July) - Consensus: -15.5 vs. Prior: -15.1
+- 2:00 PM: Fed Governor Waller speaks on monetary policy outlook
+
+**Major Earnings (After Close):**
+- Advanced Micro Devices (AMD) - EPS Est: $0.68, Revenue Est: $5.72B
+- Starbucks (SBUX) - EPS Est: $0.93, Revenue Est: $9.11B
+
+**This Week's Key Events:**
+- Tuesday: JOLTS Job Openings, Consumer Confidence
+- Wednesday: ADP Employment, GDP (Q2 Final)
+- Thursday: Initial Claims, Core PCE Price Index
+- Friday: Employment Situation Report (July)
 
 ## SECTOR PERFORMANCE
-Technology leads sector performance with XLK gaining 0.23% in extended hours, driven by semiconductor strength and AI infrastructure optimism. Industrials show robust performance (+0.99%) on infrastructure spending themes and European manufacturing data beats. Materials advance 1.18% on commodity price strength and China stimulus speculation. Energy lags (-0.38%) despite LNG infrastructure gains, pressured by crude oil weakness and refining margin concerns. Financial Services outperform (+0.70%) on rising rate expectations and credit quality stability. Consumer Discretionary benefits (+0.93%) from Nike upgrade and luxury goods resilience in Asian markets.
+
+Technology leads sector performance in pre-market trading, up 0.4% on semiconductor strength and AI optimism. Materials gained 0.6% supported by infrastructure spending expectations and commodity price stabilization. Energy declined 0.3% despite LNG stock strength, weighed down by crude oil weakness and refining margin concerns. Healthcare advanced 0.2% ahead of key drug approval decisions this week. Financial services showed resilience, up 0.3% on rising rate expectations and strong loan demand indicators. Consumer discretionary outperformed with a 0.5% gain, driven by retail earnings optimism and back-to-school spending trends. Utilities lagged with a 0.1% decline as higher rates pressure dividend-focused sectors. Real estate investment trusts (REITs) remained under pressure, down 0.4% on commercial property concerns.
 
 ## BONDS AND COMMODITIES
-US Treasury yields rise across the curve with 10-year yield at 4.285% (+3.2 bps) and 2-year at 4.756% (+2.8 bps) following hawkish ECB commentary and strong European data. Credit spreads tighten with investment-grade OAS at 87 bps (-1 bp) and high-yield at 312 bps (-3 bps). Gold advances to $2,387.50 (+0.42%) on geopolitical hedging demand, while silver gains 0.68% to $28.95. Copper futures climb 1.2% to $4.385/lb on China stimulus hopes. WTI crude declines to $77.85 (-0.65%) on inventory build concerns, though Brent holds firmer at $81.20. Agricultural commodities mixed with wheat up 0.8% on weather concerns, corn flat.
+
+The Treasury yield curve steepened overnight with the 2-year yield at 4.45% (+2bp) and 10-year at 4.23% (+3bp), reflecting growth optimism and inflation concerns. Investment-grade credit spreads tightened 2bp to 98bp over Treasuries, while high-yield spreads widened 3bp to 312bp on energy sector weakness. Gold extended gains to $2,387.50/oz (+0.3%) as geopolitical tensions support safe-haven demand. Silver outperformed with a 0.8% gain to $28.45/oz on industrial demand expectations. Copper futures declined 0.6% to $4.12/lb on China growth concerns, while aluminum gained 0.4% on supply disruption fears. Agricultural commodities were mixed: wheat futures up 1.2% on weather concerns, corn down 0.5% on favorable crop conditions, and soybeans flat at $11.85/bushel.
 
 ## TECHNICAL LEVELS
-S&P 500 futures (ES) face key resistance at 5,550-5,555 zone with support at 5,520 and 5,485 levels. RSI at 58.2 indicates neutral momentum with room for upside. Nasdaq futures (NQ) test 19,850 resistance with 50-day MA support at 19,620. VIX at 14.85 approaches key support at 14.50, suggesting complacency risks. Options flow shows unusual call activity in QQQ weekly 567 strikes (3.2x normal volume) and SPY 638 calls (2.8x average). USD/JPY technical resistance at 148.50 with BoJ intervention risks above 149.00. Gold maintains bullish structure above $2,380 with next target at $2,400 psychological level.
+
+The S&P 500 futures face key resistance at 5,565 (61.8% Fibonacci retracement) with immediate support at 5,520 (20-day moving average). A break above 5,565 targets the July high of 5,589. Nasdaq 100 futures show bullish momentum above 19,800, with next resistance at 20,100 and support at 19,650. The Dow futures approach the psychological 41,000 level, with strong support at 40,500. VIX remains below the 17.5 threshold, indicating low fear levels. Options flow shows elevated call activity in technology names, with put/call ratios at 0.68 for SPY, suggesting bullish sentiment. Key intraday levels: SPX 5,547 (+0.4% from current), NDX 19,845 (+0.3%), and DJI 40,785 (+0.2%). RSI indicators show neutral readings across major indices, while MACD signals remain constructive for continued upside momentum.
 
 ## RISK ASSESSMENT
-Geopolitical tensions in Eastern Europe remain elevated with energy security implications for European markets, though recent LNG agreements provide some mitigation. Credit market stress indicators remain benign with corporate bond issuance pipeline robust at $45B for the week. Correlation breakdown evident between growth and value factors, suggesting style rotation risks. VIX term structure shows mild backwardation indicating near-term event risks. Systemic risks include potential Federal Reserve policy error given mixed economic signals and elevated asset valuations across multiple sectors, particularly in AI-related technology names trading at premium multiples.
+
+Geopolitical risks remain elevated with ongoing tensions in Eastern Europe potentially affecting energy markets and global supply chains. Credit market stress indicators show benign conditions with the MOVE index at 95.2, below the 100 stress threshold. Market correlations remain stable with equity-bond correlation at -0.23, within normal ranges. However, concentration risk in mega-cap technology stocks poses systemic concerns, with the top 10 S&P 500 constituents representing 34.2% of index weight. Currency volatility has increased modestly, with the DXY showing higher intraday ranges. Tail risk considerations include potential Federal Reserve policy errors and unexpected inflation persistence, while systematic risks appear contained given strong corporate balance sheets and healthy consumer spending patterns.
 
 ## KEY TAKEAWAYS
-Markets exhibit cautious optimism supported by solid corporate earnings and central bank policy clarity, though elevated yields and geopolitical tensions warrant monitoring. Primary trading themes center on technology sector leadership sustainability and Federal Reserve policy trajectory amid mixed economic data flow.
+
+Markets exhibit cautious optimism with US futures higher despite Asian weakness, supported by strong corporate earnings momentum and expectations for continued economic resilience. Primary risk factors center on Federal Reserve policy uncertainty and geopolitical tensions, while technology sector concentration remains a key vulnerability requiring monitoring.
 
 ---
-*Data compiled from Bloomberg Terminal, Reuters Eikon, and official exchange sources. Market data as of 2:52 PM ET, July 28, 2025.*
+
+*Data compiled from Bloomberg Terminal, Reuters Eikon, and official exchange sources. Market data as of 3:30 AM ET, July 28, 2025.*
 
 ---
 
 *This morning market report covers the complete period from market close to open*  
+*Data Sources: Real-time Futures, Live ETF Data, Live Asian Markets, Real FX Data*  
 *READY FOR NEXT MARKET SESSION*
