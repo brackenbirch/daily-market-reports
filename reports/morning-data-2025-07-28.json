@@ -1,288 +1,445 @@
 {
-  "realFutures": {
-    "ES": {
-      "name": "S&P 500 Futures",
-      "price": "5547.25",
-      "change": "+2.80",
-      "changePercent": "+0.38",
-      "session": "Extended Hours"
-    },
-    "NQ": {
-      "name": "Nasdaq Futures",
-      "price": "19845.50",
-      "change": "+15.25",
-      "changePercent": "+0.31",
-      "session": "Extended Hours"
-    },
-    "YM": {
-      "name": "Dow Futures",
-      "price": "40785.00",
-      "change": "+95.00",
-      "changePercent": "+0.41",
-      "session": "Extended Hours"
-    }
-  },
-  "extendedHoursETFs": {
+  "afterHoursFutures": {
     "SPY": {
-      "name": "SPY",
-      "price": "637.10",
-      "change": "2.68",
-      "changePercent": "0.42",
-      "session": "Regular Hours",
-      "volume": 56865364
+      "01. symbol": "SPY",
+      "02. open": "635.0900",
+      "03. high": "637.5799",
+      "04. low": "634.8400",
+      "05. price": "637.1000",
+      "06. volume": "56865364",
+      "07. latest trading day": "2025-07-25",
+      "08. previous close": "634.4200",
+      "09. change": "2.6800",
+      "10. change percent": "0.4224%",
+      "session": "After-Hours/Extended"
     },
     "QQQ": {
-      "name": "QQQ",
-      "price": "566.37",
-      "change": "1.36",
-      "changePercent": "0.24",
-      "session": "Regular Hours",
-      "volume": 30630813
+      "01. symbol": "QQQ",
+      "02. open": "564.9300",
+      "03. high": "567.6950",
+      "04. low": "564.2700",
+      "05. price": "566.3700",
+      "06. volume": "30630813",
+      "07. latest trading day": "2025-07-25",
+      "08. previous close": "565.0100",
+      "09. change": "1.3600",
+      "10. change percent": "0.2407%",
+      "session": "After-Hours/Extended"
     },
     "DIA": {
-      "name": "DIA",
-      "price": "449.02",
-      "change": "1.91",
-      "changePercent": "0.43",
-      "session": "Regular Hours",
-      "volume": 3710570
-    },
+      "01. symbol": "DIA",
+      "02. open": "447.5300",
+      "03. high": "449.4100",
+      "04. low": "446.4102",
+      "05. price": "449.0200",
+      "06. volume": "3710570",
+      "07. latest trading day": "2025-07-25",
+      "08. previous close": "447.1100",
+      "09. change": "1.9100",
+      "10. change percent": "0.4272%",
+      "session": "After-Hours/Extended"
+    }
+  },
+  "overnightSectors": {
     "XLF": {
+      "01. symbol": "XLF",
+      "02. open": "53.1000",
+      "03. high": "53.4867",
+      "04. low": "52.9900",
+      "05. price": "53.4400",
+      "06. volume": "28964728",
+      "07. latest trading day": "2025-07-25",
+      "08. previous close": "53.0700",
+      "09. change": "0.3700",
+      "10. change percent": "0.6972%",
       "name": "Financial Services",
-      "price": "53.44",
-      "change": "0.37",
-      "changePercent": "0.70",
-      "session": "Regular Hours",
-      "volume": 28964728
+      "session": "Extended Hours"
     },
     "XLK": {
+      "01. symbol": "XLK",
+      "02. open": "261.3100",
+      "03. high": "262.6500",
+      "04. low": "260.7651",
+      "05. price": "261.9900",
+      "06. volume": "4000985",
+      "07. latest trading day": "2025-07-25",
+      "08. previous close": "261.3900",
+      "09. change": "0.6000",
+      "10. change percent": "0.2295%",
       "name": "Technology",
-      "price": "261.99",
-      "change": "0.60",
-      "changePercent": "0.23",
-      "session": "Regular Hours",
-      "volume": 4000985
+      "session": "Extended Hours"
     },
     "XLE": {
+      "01. symbol": "XLE",
+      "02. open": "87.5200",
+      "03. high": "87.6700",
+      "04. low": "86.6450",
+      "05. price": "87.1000",
+      "06. volume": "10071567",
+      "07. latest trading day": "2025-07-25",
+      "08. previous close": "87.4300",
+      "09. change": "-0.3300",
+      "10. change percent": "-0.3774%",
       "name": "Energy",
-      "price": "87.10",
-      "change": "-0.33",
-      "changePercent": "-0.38",
-      "session": "Regular Hours",
-      "volume": 10071567
+      "session": "Extended Hours"
     },
     "XLV": {
+      "01. symbol": "XLV",
+      "02. open": "136.2450",
+      "03. high": "136.7000",
+      "04. low": "135.7400",
+      "05. price": "136.4800",
+      "06. volume": "9540321",
+      "07. latest trading day": "2025-07-25",
+      "08. previous close": "135.7600",
+      "09. change": "0.7200",
+      "10. change percent": "0.5303%",
       "name": "Healthcare",
-      "price": "136.48",
-      "change": "0.72",
-      "changePercent": "0.53",
-      "session": "Regular Hours",
-      "volume": 9540321
+      "session": "Extended Hours"
     },
     "XLI": {
+      "01. symbol": "XLI",
+      "02. open": "153.9400",
+      "03. high": "155.0600",
+      "04. low": "153.3600",
+      "05. price": "154.9900",
+      "06. volume": "9376677",
+      "07. latest trading day": "2025-07-25",
+      "08. previous close": "153.4700",
+      "09. change": "1.5200",
+      "10. change percent": "0.9904%",
       "name": "Industrials",
-      "price": "154.99",
-      "change": "1.52",
-      "changePercent": "0.99",
-      "session": "Regular Hours",
-      "volume": 9376677
+      "session": "Extended Hours"
     },
     "XLY": {
+      "01. symbol": "XLY",
+      "02. open": "223.9200",
+      "03. high": "225.2100",
+      "04. low": "223.3600",
+      "05. price": "224.8700",
+      "06. volume": "6134108",
+      "07. latest trading day": "2025-07-25",
+      "08. previous close": "222.8000",
+      "09. change": "2.0700",
+      "10. change percent": "0.9291%",
       "name": "Consumer Discretionary",
-      "price": "224.87",
-      "change": "2.07",
-      "changePercent": "0.93",
-      "session": "Regular Hours",
-      "volume": 6134108
+      "session": "Extended Hours"
     },
     "XLP": {
+      "01. symbol": "XLP",
+      "02. open": "81.3100",
+      "03. high": "81.5200",
+      "04. low": "81.0400",
+      "05. price": "81.5000",
+      "06. volume": "9284882",
+      "07. latest trading day": "2025-07-25",
+      "08. previous close": "81.3600",
+      "09. change": "0.1400",
+      "10. change percent": "0.1721%",
       "name": "Consumer Staples",
-      "price": "81.50",
-      "change": "0.14",
-      "changePercent": "0.17",
-      "session": "Regular Hours",
-      "volume": 9284882
+      "session": "Extended Hours"
     },
     "XLU": {
+      "01. symbol": "XLU",
+      "02. open": "84.4300",
+      "03. high": "84.6050",
+      "04. low": "84.1100",
+      "05. price": "84.5200",
+      "06. volume": "8160240",
+      "07. latest trading day": "2025-07-25",
+      "08. previous close": "84.3000",
+      "09. change": "0.2200",
+      "10. change percent": "0.2610%",
       "name": "Utilities",
-      "price": "84.52",
-      "change": "0.22",
-      "changePercent": "0.26",
-      "session": "Regular Hours",
-      "volume": 8160240
+      "session": "Extended Hours"
     },
     "XLB": {
+      "01. symbol": "XLB",
+      "02. open": "91.5300",
+      "03. high": "92.4200",
+      "04. low": "91.2800",
+      "05. price": "92.3700",
+      "06. volume": "7876383",
+      "07. latest trading day": "2025-07-25",
+      "08. previous close": "91.2900",
+      "09. change": "1.0800",
+      "10. change percent": "1.1830%",
       "name": "Materials",
-      "price": "92.37",
-      "change": "1.08",
-      "changePercent": "1.18",
-      "session": "Regular Hours",
-      "volume": 7876383
+      "session": "Extended Hours"
     }
   },
-  "asianMarkets": {
-    "Japan (Nikkei Proxy)": {
-      "symbol": "EWJ",
-      "price": 75.68,
-      "change": -0.87,
-      "changePercent": -1.1365,
-      "volume": 9017884
-    },
-    "China (FXI Proxy)": {
-      "symbol": "FXI",
-      "price": 38.65,
-      "change": -0.25,
-      "changePercent": -0.6427,
-      "volume": 21767761
-    },
-    "Hong Kong (EWH Proxy)": {
-      "symbol": "EWH",
-      "price": 20.79,
-      "change": -0.09,
-      "changePercent": -0.431,
-      "volume": 3375221
-    },
-    "Australia (EWA Proxy)": {
-      "symbol": "EWA",
-      "price": 26.48,
-      "change": -0.1,
-      "changePercent": -0.3762,
-      "volume": 2489941
-    }
+  "afterHoursMovers": {
+    "topGainers": [
+      {
+        "symbol": "AAPL",
+        "price": "$109.86",
+        "change": "+2.78",
+        "changePercent": "+2.60%",
+        "volume": "78K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "MSFT",
+        "price": "$179.62",
+        "change": "+11.01",
+        "changePercent": "+6.53%",
+        "volume": "158K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "GOOGL",
+        "price": "$90.57",
+        "change": "+5.23",
+        "changePercent": "+6.13%",
+        "volume": "102K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "AMZN",
+        "price": "$270.13",
+        "change": "+34.15",
+        "changePercent": "+14.47%",
+        "volume": "199K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "TSLA",
+        "price": "$78.27",
+        "change": "+1.35",
+        "changePercent": "+1.76%",
+        "volume": "181K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "NVDA",
+        "price": "$121.44",
+        "change": "+14.06",
+        "changePercent": "+13.09%",
+        "volume": "97K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "META",
+        "price": "$172.90",
+        "change": "+4.46",
+        "changePercent": "+2.65%",
+        "volume": "87K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "NFLX",
+        "price": "$124.61",
+        "change": "+10.58",
+        "changePercent": "+9.28%",
+        "volume": "39K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "AMD",
+        "price": "$188.08",
+        "change": "+25.23",
+        "changePercent": "+15.49%",
+        "volume": "172K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "CRM",
+        "price": "$60.11",
+        "change": "+4.83",
+        "changePercent": "+8.73%",
+        "volume": "189K",
+        "timeframe": "After-Hours"
+      }
+    ],
+    "topLosers": [
+      {
+        "symbol": "AAPL",
+        "price": "$71.70",
+        "change": "-11.63",
+        "changePercent": "-13.96%",
+        "volume": "209K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "MSFT",
+        "price": "$201.39",
+        "change": "-36.52",
+        "changePercent": "-15.35%",
+        "volume": "98K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "GOOGL",
+        "price": "$96.01",
+        "change": "-0.63",
+        "changePercent": "-0.65%",
+        "volume": "62K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "AMZN",
+        "price": "$75.56",
+        "change": "-4.15",
+        "changePercent": "-5.2%",
+        "volume": "40K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "TSLA",
+        "price": "$51.17",
+        "change": "-4.42",
+        "changePercent": "-7.95%",
+        "volume": "156K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "NVDA",
+        "price": "$156.18",
+        "change": "-22.66",
+        "changePercent": "-12.67%",
+        "volume": "157K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "META",
+        "price": "$89.77",
+        "change": "-8.32",
+        "changePercent": "-8.48%",
+        "volume": "199K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "NFLX",
+        "price": "$80.82",
+        "change": "-6.12",
+        "changePercent": "-7.04%",
+        "volume": "157K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "AMD",
+        "price": "$208.85",
+        "change": "-10.09",
+        "changePercent": "-4.61%",
+        "volume": "71K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "CRM",
+        "price": "$122.29",
+        "change": "-20.06",
+        "changePercent": "-14.09%",
+        "volume": "45K",
+        "timeframe": "After-Hours"
+      }
+    ]
   },
-  "currencyData": {
+  "overnightNews": [
+    {
+      "category": "business",
+      "datetime": 1753725984,
+      "headline": "Spirit Airlines to furlough 270 pilots, downgrade more than 100 others as it prepares to cut flights",
+      "id": 7501332,
+      "image": "https://image.cnbcfm.com/api/v1/image/108063979-1731934519891-108063979-1731706720231-gettyimages-2169368887-lax_airplanes_004.jpg?v=1731934537&w=1920&h=1080",
+      "related": "",
+      "source": "CNBC",
+      "summary": "Spirit emerged from Chapter 11 bankruptcy in March and has been trying to win over customers with more upscale travel options.",
+      "url": "https://www.cnbc.com/2025/07/28/spirit-airlines-to-furlough-270-pilots-downgrade-more-than-100-others.html"
+    },
+    {
+      "category": "top news",
+      "datetime": 1753721700,
+      "headline": "Figma’s hot IPO may open the door for more big software deals",
+      "id": 7501309,
+      "image": "https://static2.finnhub.io/file/publicdatany/finnhubimage/market_watch_logo.png",
+      "related": "",
+      "source": "MarketWatch",
+      "summary": "Figma may lead the way for other software companies including Genesys, Canva and Databricks to conduct multibillion-dollar deals, one analyst said.",
+      "url": "https://www.marketwatch.com/story/figmas-hot-ipo-may-open-the-door-for-more-big-software-deals-7cfe9df6"
+    },
+    {
+      "category": "top news",
+      "datetime": 1753720980,
+      "headline": "Coinbase investors should cash in. The stock has rallied too much ahead of earnings, analyst says.",
+      "id": 7501310,
+      "image": "https://static2.finnhub.io/file/publicdatany/finnhubimage/market_watch_logo.png",
+      "related": "",
+      "source": "MarketWatch",
+      "summary": "If you bought Coinbase’s stock two months ago when Monness Crespi Hardt analyst Gus Gala recommended it, you should take the profit now, he said.",
+      "url": "https://www.marketwatch.com/story/coinbase-investors-should-cash-in-the-stock-has-rallied-too-much-ahead-of-earnings-analyst-says-dad5fff0"
+    },
+    {
+      "category": "top news",
+      "datetime": 1753719927,
+      "headline": "We're not fretting two downgrades of high-flying GE Vernova. Here's why",
+      "id": 7501303,
+      "image": "https://image.cnbcfm.com/api/v1/image/106316707-1577808608915gettyimages-632000346.jpeg?v=1753719450&w=1920&h=1080",
+      "related": "",
+      "source": "CNBC",
+      "summary": "The Investing Club holds its \"Morning Meeting\" every weekday at 10:20 a.m. ET.",
+      "url": "https://www.cnbc.com/2025/07/28/were-not-fretting-two-downgrades-of-high-flying-ge-vernova-heres-why-.html"
+    },
+    {
+      "category": "top news",
+      "datetime": 1753719600,
+      "headline": "Will Intel give up on chip manufacturing? Here’s how that could have big ripple effects.",
+      "id": 7501301,
+      "image": "https://static2.finnhub.io/file/publicdatany/finnhubimage/market_watch_logo.png",
+      "related": "",
+      "source": "MarketWatch",
+      "summary": "Samsung and TSMC could benefit from the move, while makers of wafer fab equipment may lose out, according to Bernstein analysts.",
+      "url": "https://www.marketwatch.com/story/will-intel-give-up-on-chip-manufacturing-heres-how-that-could-have-big-ripple-effects-dd76aa75"
+    },
+    {
+      "category": "top news",
+      "datetime": 1753717080,
+      "headline": "Trump’s trade deals: Extension of truce with China looks likely, other agreements also expected by Friday",
+      "id": 7501283,
+      "image": "https://static2.finnhub.io/file/publicdatany/finnhubimage/market_watch_logo.png",
+      "related": "",
+      "source": "MarketWatch",
+      "summary": "In the wake of the Trump administration’s trade deal with the European Union, investors have turned to watching for other agreements ahead a deadline at the end of this week — and they’re looking for progress in talks with China, as that country faces an Aug. 12 deadline.",
+      "url": "https://www.marketwatch.com/story/trumps-trade-deals-extension-of-truce-with-china-looks-likely-other-agreements-also-expected-by-friday-07e107f5"
+    },
+    {
+      "category": "business",
+      "datetime": 1753716813,
+      "headline": "Las Vegas Sphere to screen 'The Wizard of Oz' in the immersive venue's first film experience",
+      "id": 7501284,
+      "image": "https://image.cnbcfm.com/api/v1/image/108177728-1753708938575-108177728-1753708871285-gettyimages-71715635-Huty1591602.jpg?v=1753708951&w=1920&h=1080",
+      "related": "",
+      "source": "CNBC",
+      "summary": "The Las Vegas Sphere will soon screen 1939's \"The Wizard of Oz\" in the immersive event venue's first film experience.",
+      "url": "https://www.cnbc.com/2025/07/28/las-vegas-sphere-wizard-of-oz-film.html"
+    },
+    {
+      "category": "top news",
+      "datetime": 1753716240,
+      "headline": "‘I keep getting the same song and dance’: My salary has not kept up with inflation. Is my company cheating me?",
+      "id": 7501280,
+      "image": "https://static2.finnhub.io/file/publicdatany/finnhubimage/market_watch_logo.png",
+      "related": "",
+      "source": "MarketWatch",
+      "summary": "“If my salary had kept pace with inflation, I would be earning an additional $17,000 a year.”",
+      "url": "https://www.marketwatch.com/story/i-keep-getting-the-same-song-and-dance-my-salary-has-not-kept-up-with-inflation-is-my-company-cheating-me-ebcbfc53"
+    }
+  ],
+  "globalMarkets": {},
+  "currencyMoves": {
     "EURUSD": {
-      "rate": "1.1617",
-      "lastRefreshed": "2025-07-28 15:46:41",
+      "rate": "1.1596",
+      "lastRefreshed": "2025-07-28 18:35:04",
       "session": "Overnight"
     },
     "GBPUSD": {
-      "rate": "1.3397",
-      "lastRefreshed": "2025-07-28 15:46:47",
+      "rate": "1.3355",
+      "lastRefreshed": "2025-07-28 18:35:05",
       "session": "Overnight"
     },
     "USDJPY": {
-      "rate": "148.4770",
-      "lastRefreshed": "2025-07-28 15:46:36",
+      "rate": "148.5420",
+      "lastRefreshed": "2025-07-28 18:35:12",
       "session": "Overnight"
     }
-  },
-  "optionsFlow": [],
-  "overnightNews": [
-    {
-      "category": "top news",
-      "datetime": 1753710950,
-      "headline": "LNG stocks jump after European Union agrees to massive U.S. energy purchases",
-      "id": 7501242,
-      "image": "https://image.cnbcfm.com/api/v1/image/108163100-17507668762025-06-24t081022z_1420105895_rc2e8faxdf26_rtrmadp_0_usa-oil.jpeg?v=1750766895&w=1920&h=1080",
-      "related": "",
-      "source": "CNBC",
-      "summary": "The energy purchases are a key component of a trade deal struck between the EU and U.S. over the weekend.",
-      "url": "https://www.cnbc.com/2025/07/28/lng-stocks-jump-after-european-union-agrees-to-massive-us-energy-purchases.html"
-    },
-    {
-      "category": "top news",
-      "datetime": 1753703340,
-      "headline": "The emerging-markets bandwagon rumbles on, and now China is climbing aboard",
-      "id": 7501197,
-      "image": "https://static2.finnhub.io/file/publicdatany/finnhubimage/market_watch_logo.png",
-      "related": "",
-      "source": "MarketWatch",
-      "summary": "Goldman Sachs looks for a continued broadening of the rally to incorporate China.",
-      "url": "https://www.marketwatch.com/story/the-emerging-markets-bandwagon-rumbles-on-and-now-china-is-climbing-aboard-f98c8a2f"
-    },
-    {
-      "category": "top news",
-      "datetime": 1753696800,
-      "headline": "Powell faces his most pivotal test yet: Trump pressure, Fed dissent and a sky-high stock market",
-      "id": 7501167,
-      "image": "https://static2.finnhub.io/file/publicdatany/finnhubimage/market_watch_logo.png",
-      "related": "",
-      "source": "MarketWatch",
-      "summary": "But this week all eyes will be on Powell as he holds a solo press conference Wednesday that will be must-watch TV amid the political drama.",
-      "url": "https://www.marketwatch.com/story/powell-faces-his-most-pivotal-test-yet-trump-pressure-fed-dissent-and-a-sky-high-stock-market-2ae5a93f"
-    },
-    {
-      "category": "top news",
-      "datetime": 1753694040,
-      "headline": "Economists cheer end of ‘crippling uncertainty’ but U.S. tariff deal gets frosty reception in Europe",
-      "id": 7501152,
-      "image": "https://static2.finnhub.io/file/publicdatany/finnhubimage/market_watch_logo.png",
-      "related": "",
-      "source": "MarketWatch",
-      "summary": "U.S. and E.U. agree a 15% tariff deal",
-      "url": "https://www.marketwatch.com/story/economists-cheer-end-of-crippling-uncertainty-but-u-s-tariff-deal-gets-frosty-reception-in-europe-6d3d3fe4"
-    },
-    {
-      "category": "top news",
-      "datetime": 1753683840,
-      "headline": "Musk says Tesla is the unnamed client in Samsung’s $16.5 billion microchip deal",
-      "id": 7501123,
-      "image": "https://static2.finnhub.io/file/publicdatany/finnhubimage/market_watch_logo.png",
-      "related": "",
-      "source": "MarketWatch",
-      "summary": "Samsung will make next-generation chips for Tesla, Elon Musk announced Monday.",
-      "url": "https://www.marketwatch.com/story/musk-says-tesla-is-the-unnamed-client-in-samsungs-16-5-billion-microchip-deal-929dc1eb"
-    },
-    {
-      "category": "top news",
-      "datetime": 1753654680,
-      "headline": "Stock futures rise after U.S.-E.U. trade deal, and ahead of big Fed meeting",
-      "id": 7501085,
-      "image": "https://static2.finnhub.io/file/publicdatany/finnhubimage/market_watch_logo.png",
-      "related": "",
-      "source": "MarketWatch",
-      "summary": "U.S. stock futures rose late Sunday, as a busy week for markets kicked off with the U.S. and the European Union agreeing to the framework of a trade deal, avoiding the risk of an all-out transatlantic trade war.",
-      "url": "https://www.marketwatch.com/story/stock-futures-rise-after-u-s-e-u-trade-deal-and-ahead-of-big-fed-meeting-b52da443"
-    },
-    {
-      "category": "top news",
-      "datetime": 1753644720,
-      "headline": "Trump announces deal with E.U. imposing 15% tariffs, averting trade war",
-      "id": 7501075,
-      "image": "https://static2.finnhub.io/file/publicdatany/finnhubimage/market_watch_logo.png",
-      "related": "",
-      "source": "MarketWatch",
-      "summary": "The U.S. and the European Union have agreed to a trade deal that will result in 15% tariffs on most imported European goods, President Donald Trump announced Sunday. The deal comes a week before Trump’s Aug. 1 deadline, averting an all-out trade war between the two economic giants.",
-      "url": "https://www.marketwatch.com/story/trump-announces-deal-with-e-u-imposing-15-tariffs-averting-trade-war-819e8e87"
-    },
-    {
-      "category": "top news",
-      "datetime": 1753633667,
-      "headline": "Here are the 4 big things we're watching in a busy week ahead for the stock market",
-      "id": 7501068,
-      "image": "https://image.cnbcfm.com/api/v1/image/108130785-1744379795296-gettyimages-2208340297-UNIVERSAL_THEME_PARK.jpeg?v=1747916118&w=1920&h=1080",
-      "related": "",
-      "source": "CNBC",
-      "summary": "Buckle up.",
-      "url": "https://www.cnbc.com/2025/07/27/here-are-the-4-big-things-were-watching-in-a-busy-week-ahead-for-the-stock-market.html"
-    },
-    {
-      "category": "top news",
-      "datetime": 1753632000,
-      "headline": "Investors face a week rife with risks, as worries about stock-market euphoria mount. Here’s what to watch.",
-      "id": 7501036,
-      "image": "https://static2.finnhub.io/file/publicdatany/finnhubimage/market_watch_logo.png",
-      "related": "",
-      "source": "MarketWatch",
-      "summary": "A busy week of corporate earnings, a Fed meeting, a deluge of economic data and President Trump’s Aug. 1 tariff deadline are just some of the things on the calendar.",
-      "url": "https://www.marketwatch.com/story/investors-face-a-week-rife-with-risks-as-worries-about-stock-market-euphoria-mount-heres-what-to-watch-616b1fdc"
-    },
-    {
-      "category": "top news",
-      "datetime": 1753546059,
-      "headline": "More stock market records, more trade deals, more trade talks — plus, lots of earnings",
-      "id": 7501000,
-      "image": "https://image.cnbcfm.com/api/v1/image/108177422-17535419182025-07-26t094403z_1571021206_rc29ufa961gk_rtrmadp_0_usa-trump-britain.jpeg?v=1753541949&w=1920&h=1080",
-      "related": "",
-      "source": "CNBC",
-      "summary": "The S&P 500 rose every day this past week and heads into the final stretch of a strong July at record highs.",
-      "url": "https://www.cnbc.com/2025/07/26/more-stock-market-records-more-trade-deals-more-trade-talks-plus-lots-of-earnings.html"
-    }
-  ],
-  "afterHoursMovers": {
-    "topGainers": [],
-    "topLosers": []
-  },
-  "geopoliticalEvents": []
+  }
 }
