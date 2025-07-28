@@ -362,61 +362,111 @@ async function fetchCurrencyAlternative() {
     return Object.keys(currencyData).length > 0 ? currencyData : generateSampleCurrencies();
 }
 
-// NEW: Enhanced overnight news using your News API
+// NEW: Enhanced overnight news using your News API with better search terms
 async function fetchOvernightNews() {
     const newsData = [];
     
-    // Try News API first (you already have this!)
+    // Try News API first with multiple targeted searches
     if (NEWS_API_KEY) {
         try {
-            console.log('📰 Fetching overnight financial news from News API...');
-            const response = await axios.get(
-                `https://newsapi.org/v2/everything?q=stocks OR market OR economy OR earnings OR fed OR "federal reserve"&language=en&sortBy=publishedAt&pageSize=20&apiKey=${NEWS_API_KEY}`
-            );
+            console.log('📰 Fetching comprehensive overnight financial news...');
             
-            if (response.data && response.data.articles) {
-                const twelveHoursAgo = new Date(Date.now() - (12 * 60 * 60 * 1000));
-                newsData.push(...response.data.articles
-                    .filter(article => new Date(article.publishedAt) > twelveHoursAgo)
-                    .slice(0, 8)
-                    .map(article => ({
-                        headline: article.title,
-                        datetime: Math.floor(new Date(article.publishedAt).getTime() / 1000),
-                        source: article.source.name,
-                        url: article.url
-                    }))
-                );
+            // Multiple search queries to catch different types of events
+            const searchQueries = [
+                'trade deal OR tariff OR trade agreement OR EU OR China trade',
+                'federal reserve OR fed OR interest rates OR monetary policy',
+                'earnings OR quarterly results OR guidance',
+                'geopolitical OR war OR sanctions OR diplomatic',
+                'market moving OR breaking OR major announcement',
+                'stimulus OR fiscal policy OR government spending',
+                'inflation OR CPI OR economic data'
+            ];
+            
+            for (const query of searchQueries) {
+                try {
+                    const response = await axios.get(
+                        `https://newsapi.org/v2/everything?q=${encodeURIComponent(query)}&language=en&sortBy=publishedAt&pageSize=10&apiKey=${NEWS_API_KEY}`
+                    );
+                    
+                    if (response.data && response.data.articles) {
+                        const twelveHoursAgo = new Date(Date.now() - (12 * 60 * 60 * 1000));
+                        const relevantArticles = response.data.articles
+                            .filter(article => new Date(article.publishedAt) > twelveHoursAgo)
+                            .filter(article => {
+                                const title = article.title.toLowerCase();
+                                const description = (article.description || '').toLowerCase();
+                                // Filter for market-relevant news
+                                return title.includes('market') || title.includes('stock') || 
+                                       title.includes('trade') || title.includes('economic') ||
+                                       title.includes('fed') || title.includes('earnings') ||
+                                       description.includes('market') || description.includes('stock');
+                            })
+                            .slice(0, 3)
+                            .map(article => ({
+                                headline: article.title,
+                                datetime: Math.floor(new Date(article.publishedAt).getTime() / 1000),
+                                source: article.source.name,
+                                url: article.url,
+                                description: article.description,
+                                category: query.split(' ')[0] // First word as category
+                            }));
+                        
+                        newsData.push(...relevantArticles);
+                    }
+                    
+                    // Rate limiting for News API
+                    await new Promise(resolve => setTimeout(resolve, 100));
+                } catch (error) {
+                    console.log(`Failed to fetch news for query "${query}":`, error.message);
+                }
             }
             
-            console.log(`✅ Fetched ${newsData.length} news articles from News API`);
+            // Remove duplicates and sort by time
+            const uniqueNews = newsData.filter((article, index, self) => 
+                index === self.findIndex(a => a.headline === article.headline)
+            ).sort((a, b) => b.datetime - a.datetime).slice(0, 12);
+            
+            console.log(`✅ Fetched ${uniqueNews.length} unique news articles from News API`);
+            return uniqueNews;
+            
         } catch (error) {
             console.log('News API failed, trying Finnhub fallback:', error.message);
         }
     }
     
-    // Fallback to Finnhub if News API didn't work or no data
-    if (newsData.length === 0 && FINNHUB_API_KEY) {
+    // Enhanced Finnhub fallback
+    if (FINNHUB_API_KEY) {
         try {
-            console.log('📰 Fetching overnight news from Finnhub fallback...');
+            console.log('📰 Fetching overnight news from Finnhub with enhanced filtering...');
             const response = await axios.get(
                 `https://finnhub.io/api/v1/news?category=general&token=${FINNHUB_API_KEY}`
             );
             
             if (response.data && Array.isArray(response.data)) {
                 const twelveHoursAgo = Date.now() / 1000 - (12 * 60 * 60);
-                newsData.push(...response.data
+                const filteredNews = response.data
                     .filter(news => news.datetime > twelveHoursAgo)
-                    .slice(0, 8)
-                );
+                    .filter(news => {
+                        const headline = news.headline.toLowerCase();
+                        // Enhanced filtering for major events
+                        return headline.includes('trade') || headline.includes('tariff') ||
+                               headline.includes('agreement') || headline.includes('deal') ||
+                               headline.includes('fed') || headline.includes('market') ||
+                               headline.includes('earnings') || headline.includes('economic') ||
+                               headline.includes('china') || headline.includes('eu') ||
+                               headline.includes('geopolitical') || headline.includes('breaking');
+                    })
+                    .slice(0, 10);
+                
+                console.log(`✅ Fetched ${filteredNews.length} filtered news articles from Finnhub`);
+                return filteredNews;
             }
-            
-            console.log(`✅ Fetched ${newsData.length} news articles from Finnhub`);
         } catch (error) {
             console.log('Finnhub news failed:', error.message);
         }
     }
     
-    return newsData;
+    return [];
 }
 
 // Generate sample data functions for fallbacks
@@ -520,7 +570,106 @@ function generateSampleOptionsFlow() {
     ];
 }
 
-// Generate sample overnight movers
+// NEW: Add geopolitical and economic events tracker
+async function fetchGeopoliticalEvents() {
+    const events = [];
+    
+    try {
+        console.log('🌍 Fetching geopolitical and economic events...');
+        
+        // Use Trading Economics for economic events/announcements
+        if (TRADING_ECONOMICS_API_KEY) {
+            try {
+                const response = await axios.get(
+                    `https://api.tradingeconomics.com/calendar?c=${TRADING_ECONOMICS_API_KEY}&f=json`
+                );
+                
+                if (response.data && Array.isArray(response.data)) {
+                    const recentEvents = response.data
+                        .filter(event => {
+                            const eventDate = new Date(event.Date);
+                            const hoursAgo = (Date.now() - eventDate.getTime()) / (1000 * 60 * 60);
+                            return hoursAgo <= 24 && hoursAgo >= 0; // Last 24 hours
+                        })
+                        .filter(event => {
+                            const eventText = `${event.Event} ${event.Country}`.toLowerCase();
+                            return eventText.includes('trade') || eventText.includes('tariff') ||
+                                   eventText.includes('agreement') || eventText.includes('deal') ||
+                                   eventText.includes('policy') || eventText.includes('announcement') ||
+                                   event.Importance === 'High';
+                        })
+                        .slice(0, 5);
+                    
+                    events.push(...recentEvents.map(event => ({
+                        type: 'economic',
+                        headline: `${event.Country}: ${event.Event}`,
+                        datetime: Math.floor(new Date(event.Date).getTime() / 1000),
+                        importance: event.Importance,
+                        actual: event.Actual,
+                        forecast: event.Forecast,
+                        previous: event.Previous
+                    })));
+                }
+            } catch (error) {
+                console.log('Trading Economics calendar failed:', error.message);
+            }
+        }
+        
+        // Enhanced news search for major announcements
+        if (NEWS_API_KEY) {
+            try {
+                const majorEventQueries = [
+                    '"trade agreement" OR "trade deal"',
+                    '"tariff" AND ("eu" OR "china" OR "japan")',
+                    '"federal reserve" AND ("announcement" OR "decision")',
+                    '"breaking" AND ("market" OR "economic")',
+                    '"diplomatic" AND ("agreement" OR "talks")'
+                ];
+                
+                for (const query of majorEventQueries) {
+                    const response = await axios.get(
+                        `https://newsapi.org/v2/everything?q=${encodeURIComponent(query)}&language=en&sortBy=publishedAt&pageSize=5&from=${new Date(Date.now() - 24*60*60*1000).toISOString()}&apiKey=${NEWS_API_KEY}`
+                    );
+                    
+                    if (response.data && response.data.articles) {
+                        const majorEvents = response.data.articles
+                            .filter(article => {
+                                const content = `${article.title} ${article.description}`.toLowerCase();
+                                return content.includes('agreement') || content.includes('deal') ||
+                                       content.includes('announcement') || content.includes('breaking');
+                            })
+                            .slice(0, 2)
+                            .map(article => ({
+                                type: 'geopolitical',
+                                headline: article.title,
+                                datetime: Math.floor(new Date(article.publishedAt).getTime() / 1000),
+                                source: article.source.name,
+                                description: article.description,
+                                url: article.url
+                            }));
+                        
+                        events.push(...majorEvents);
+                    }
+                    
+                    await new Promise(resolve => setTimeout(resolve, 200));
+                }
+            } catch (error) {
+                console.log('Enhanced geopolitical news search failed:', error.message);
+            }
+        }
+        
+        console.log(`✅ Fetched ${events.length} geopolitical/economic events`);
+    } catch (error) {
+        console.log('Error fetching geopolitical events:', error.message);
+    }
+    
+    // Remove duplicates and sort by importance/time
+    const uniqueEvents = events.filter((event, index, self) => 
+        index === self.findIndex(e => e.headline === event.headline)
+    ).sort((a, b) => b.datetime - a.datetime);
+    
+    return uniqueEvents.slice(0, 8);
+}
 function generateOvernightMovers(type) {
     const sampleStocks = [
         'AAPL', 'MSFT', 'GOOGL', 'AMZN', 'TSLA', 'NVDA', 'META', 'NFLX', 'AMD', 'CRM'
@@ -654,26 +803,29 @@ async function fetchOvernightMarketData() {
     };
     
     try {
-        // Fetch all real-time data using your existing APIs
+        // Fetch all real-time data using your existing APIs + enhanced news
         const [
             futures,
             etfs,
             asianMarkets,
             currencies,
-            overnightNews
+            overnightNews,
+            geopoliticalEvents
         ] = await Promise.all([
             fetchRealFuturesData(),           // Uses your Polygon API
             fetchExtendedHoursETFs(),         // Uses your Alpha Vantage API  
             fetchAsianMarkets(),              // Uses your Trading Economics API
             fetchRealCurrencyData(),          // Uses your Fixer API
-            fetchOvernightNews()              // Uses your News API + Finnhub fallback
+            fetchOvernightNews(),             // Enhanced News API search
+            fetchGeopoliticalEvents()         // NEW: Major events tracker
         ]);
         
         overnightData.realFutures = futures;
         overnightData.extendedHoursETFs = etfs;
         overnightData.asianMarkets = asianMarkets;
         overnightData.currencyData = currencies;
-        overnightData.overnightNews = overnightNews;Flow = optionsFlow;
+        overnightData.overnightNews = overnightNews;
+        overnightData.geopoliticalEvents = geopoliticalEvents;Flow = optionsFlow;
         
         // Fetch overnight news if Finnhub is available
         if (FINNHUB_API_KEY) {
@@ -699,7 +851,7 @@ async function fetchOvernightMarketData() {
         }
         
         console.log('✅ Overnight data collection completed');
-        console.log(`📊 Data sources: Futures(${Object.keys(futures).length}), ETFs(${Object.keys(etfs).length}), Asian(${Object.keys(asianMarkets).length}), FX(${Object.keys(currencies).length}), News(${overnightNews.length})`);
+        console.log(`📊 Data sources: Futures(${Object.keys(futures).length}), ETFs(${Object.keys(etfs).length}), Asian(${Object.keys(asianMarkets).length}), FX(${Object.keys(currencies).length}), News(${overnightNews.length}), Events(${geopoliticalEvents.length})`);
         
         // Display API usage summary
         console.log('\n🔑 API Usage Summary:');
@@ -707,7 +859,8 @@ async function fetchOvernightMarketData() {
         console.log(`Alpha Vantage API: ${Object.keys(etfs).length > 0 ? '✅ Active' : '❌ No data'}`);
         console.log(`Trading Economics API: ${Object.keys(asianMarkets).length > 0 && !asianMarkets['Japan (Nikkei Proxy)'] ? '✅ Active' : '⚠️  Using ETF proxies'}`);
         console.log(`Fixer API: ${Object.keys(currencies).length > 0 && currencies['EURUSD']?.lastUpdate ? '✅ Active' : '⚠️  Using Alpha Vantage'}`);
-        console.log(`News API: ${overnightNews.length > 0 && overnightNews[0].source ? '✅ Active' : '⚠️  Using Finnhub'}`);
+        console.log(`News API: ${overnightNews.length > 0 && overnightNews[0].source ? '✅ Active (Enhanced)' : '⚠️  Using Finnhub'}`);
+        console.log(`Geopolitical Events: ${geopoliticalEvents.length > 0 ? `✅ ${geopoliticalEvents.length} major events tracked` : '⚠️  No major events'}`);
         console.log(`Finnhub API: ${FINNHUB_API_KEY ? '✅ Available as fallback' : '❌ Not configured'}`);
         
     } catch (error) {
@@ -789,12 +942,28 @@ function formatOvernightDataForPrompt(overnightData) {
         dataString += "\n";
     }
     
-    // Overnight News
+    // Major Events and Geopolitical Developments
+    if (overnightData.geopoliticalEvents && overnightData.geopoliticalEvents.length > 0) {
+        dataString += "MAJOR OVERNIGHT DEVELOPMENTS:\n";
+        overnightData.geopoliticalEvents.forEach((event, index) => {
+            const eventTime = new Date(event.datetime * 1000).toLocaleString();
+            dataString += `${index + 1}. [${event.type.toUpperCase()}] ${event.headline} (${eventTime})\n`;
+            if (event.description) {
+                dataString += `   ${event.description.substring(0, 100)}...\n`;
+            }
+        });
+        dataString += "\n";
+    }
+    
+    // Overnight News (now enhanced)
     if (overnightData.overnightNews.length > 0) {
-        dataString += "OVERNIGHT NEWS AFFECTING NEXT OPEN:\n";
-        overnightData.overnightNews.slice(0, 5).forEach((news, index) => {
+        dataString += "OVERNIGHT NEWS AFFECTING MARKETS:\n";
+        overnightData.overnightNews.slice(0, 8).forEach((news, index) => {
             const newsTime = new Date(news.datetime * 1000).toLocaleString();
-            dataString += `${index + 1}. ${news.headline} (${newsTime})\n`;
+            dataString += `${index + 1}. ${news.headline} [${news.source || 'Unknown'}] (${newsTime})\n`;
+            if (news.description && news.description.length > 0) {
+                dataString += `   ${news.description.substring(0, 120)}...\n`;
+            }
         });
         dataString += "\n";
     }
@@ -843,11 +1012,12 @@ Search for and report on:
 
 **FUTURES ANALYSIS**
 Search for and report on:
-- Major index futures movements (ES, NQ, YM) and positioning
+- Major index futures movements (ES, NQ, YM) and positioning - use the LIVE FUTURES DATA provided above
 - Commodity futures performance (crude oil, gold, natural gas)
 - Currency futures trends and volatility
 - VIX futures and implied volatility changes
 - Key futures expirations or rollover effects
+- Cross-reference the real-time futures data with market sentiment and overnight developments
 [Target: 120 words]
 
 **RESEARCH HIGHLIGHTS**
@@ -909,15 +1079,26 @@ Search for and report on:
 **KEY TAKEAWAYS**
 [2-sentence summary of main trading themes and risk factors for the day]
 
-IMPORTANT ACCURACY GUIDELINES:
-- Verify all numerical data (prices, percentages, levels) from at least 2 authoritative sources
-- Include exact timestamps for market data (specify market close times and time zones)
-- Cite specific sources for economic forecasts and earnings estimates
-- Use official exchange data over third-party aggregators when possible
-- Cross-reference breaking news from multiple financial news outlets
-- Include confidence levels for forward-looking statements or predictions
-- Distinguish between preliminary and final economic data releases
-- Note any data revisions or corrections from previous periods
+**IMPORTANT ACCURACY GUIDELINES FOR MAJOR EVENTS:**
+- PRIORITIZE major geopolitical developments (trade deals, diplomatic agreements, policy announcements)
+- Search multiple sources for breaking overnight developments that could impact markets
+- Cross-reference major announcements from at least 2 different news sources
+- Flag any trade agreements, tariff changes, or diplomatic breakthroughs as HIGH PRIORITY
+- Include specific details of any announced deals (percentages, timelines, scope)
+- Verify authenticity of major political/economic announcements
+- Distinguish between rumors, reports, and official confirmations
+- Pay special attention to weekend developments that may not be reflected in market prices yet
+
+KEY SEARCH TERMS FOR MAJOR EVENTS:
+- Trade agreements, tariff deals, diplomatic breakthroughs
+- Federal Reserve emergency meetings or surprise announcements  
+- Central bank interventions or policy changes
+- Geopolitical developments affecting major economies
+- Corporate mega-mergers or bankruptcies announced overnight
+- Natural disasters or events affecting major economic regions
+- Election results or political developments in major economies
+
+CRITICAL: If any major trade deal, diplomatic agreement, or significant policy announcement occurred in the last 24 hours, it should be featured prominently in the EXECUTIVE SUMMARY and referenced throughout relevant sections.
 
 Use current market data from today's date and specify market session timing (Asian close, European open, US pre-market, etc.). Include specific percentage moves and index levels with decimal precision. Write in professional financial language suitable for institutional clients.
 
