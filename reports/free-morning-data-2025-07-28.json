@@ -1,0 +1,176 @@
+{
+  "realFutures": {
+    "SPY": {
+      "name": "S&P 500 Futures (SPY Proxy)",
+      "price": "637.10",
+      "change": "2.68",
+      "changePercent": "0.42",
+      "session": "Regular Hours (Proxy)",
+      "volume": 56865364,
+      "timestamp": "2025-07-25"
+    },
+    "QQQ": {
+      "name": "Nasdaq Futures (QQQ Proxy)",
+      "price": "566.37",
+      "change": "1.36",
+      "changePercent": "0.24",
+      "session": "Regular Hours (Proxy)",
+      "volume": 30630813,
+      "timestamp": "2025-07-25"
+    },
+    "DIA": {
+      "name": "Dow Futures (DIA Proxy)",
+      "price": "449.02",
+      "change": "1.91",
+      "changePercent": "0.43",
+      "session": "Regular Hours (Proxy)",
+      "volume": 3710570,
+      "timestamp": "2025-07-25"
+    }
+  },
+  "extendedHoursETFs": {
+    "SPY": {
+      "name": "S&P 500 ETF",
+      "price": "637.10",
+      "change": "2.68",
+      "changePercent": "0.42",
+      "session": "Regular Hours",
+      "volume": 56865364
+    },
+    "QQQ": {
+      "name": "Nasdaq 100 ETF",
+      "price": "566.37",
+      "change": "1.36",
+      "changePercent": "0.24",
+      "session": "Regular Hours",
+      "volume": 30630813
+    },
+    "XLK": {
+      "name": "Technology",
+      "price": "261.99",
+      "change": "0.60",
+      "changePercent": "0.23",
+      "session": "Regular Hours",
+      "volume": 4000985
+    },
+    "XLF": {
+      "name": "Financial Services",
+      "price": "53.44",
+      "change": "0.37",
+      "changePercent": "0.70",
+      "session": "Regular Hours",
+      "volume": 28964728
+    }
+  },
+  "globalMarkets": {
+    "European Tech (ASML)": {
+      "symbol": "ASML",
+      "price": 711.25,
+      "change": -13.83,
+      "changePercent": -1.9074,
+      "volume": 2312071
+    },
+    "Taiwan Semi (Asian Tech)": {
+      "symbol": "TSM",
+      "price": 245.6,
+      "change": 4,
+      "changePercent": 1.6556,
+      "volume": 11593366
+    },
+    "Japanese Market (Sony)": {
+      "symbol": "SONY",
+      "price": 24.88,
+      "change": -0.5,
+      "changePercent": -1.9701,
+      "volume": 3727406
+    },
+    "Chinese Market (Alibaba)": {
+      "symbol": "BABA",
+      "price": 120.03,
+      "change": -1.12,
+      "changePercent": -0.9245,
+      "volume": 7060560
+    }
+  },
+  "currencyData": {
+    "EURUSD": {
+      "rate": "1.0847",
+      "change": "+0.0012",
+      "session": "Sample Data"
+    },
+    "GBPUSD": {
+      "rate": "1.2816",
+      "change": "+0.0089",
+      "session": "Sample Data"
+    },
+    "USDJPY": {
+      "rate": "155.18",
+      "change": "-0.45",
+      "session": "Sample Data"
+    }
+  },
+  "optionsFlow": [
+    {
+      "symbol": "SPY",
+      "strike": "638",
+      "type": "CALL",
+      "volume": 15420,
+      "unusualActivity": true,
+      "impliedVolatility": 14.2,
+      "source": "Sample Data"
+    },
+    {
+      "symbol": "QQQ",
+      "strike": "567",
+      "type": "CALL",
+      "volume": 12850,
+      "unusualActivity": true,
+      "impliedVolatility": 16.8,
+      "source": "Sample Data"
+    },
+    {
+      "symbol": "AAPL",
+      "strike": "225",
+      "type": "PUT",
+      "volume": 8940,
+      "unusualActivity": true,
+      "impliedVolatility": 22.5,
+      "source": "Sample Data"
+    }
+  ],
+  "overnightNews": [
+    {
+      "headline": "Figma’s hot IPO may open the door for more big software deals",
+      "datetime": 1753721700,
+      "source": "MarketWatch",
+      "url": "https://www.marketwatch.com/story/figmas-hot-ipo-may-open-the-door-for-more-big-software-deals-7cfe9df6",
+      "category": "general",
+      "timeFromClose": 0
+    },
+    {
+      "headline": "Coinbase investors should cash in. The stock has rallied too much ahead of earnings, analyst says.",
+      "datetime": 1753720980,
+      "source": "MarketWatch",
+      "url": "https://www.marketwatch.com/story/coinbase-investors-should-cash-in-the-stock-has-rallied-too-much-ahead-of-earnings-analyst-says-dad5fff0",
+      "category": "general",
+      "timeFromClose": 0
+    },
+    {
+      "headline": "We're not fretting two downgrades of high-flying GE Vernova. Here's why",
+      "datetime": 1753719927,
+      "source": "CNBC",
+      "url": "https://www.cnbc.com/2025/07/28/were-not-fretting-two-downgrades-of-high-flying-ge-vernova-heres-why-.html",
+      "category": "general",
+      "timeFromClose": 0
+    },
+    {
+      "headline": "Will Intel give up on chip manufacturing? Here’s how that could have big ripple effects.",
+      "datetime": 1753719600,
+      "source": "MarketWatch",
+      "url": "https://www.marketwatch.com/story/will-intel-give-up-on-chip-manufacturing-heres-how-that-could-have-big-ripple-effects-dd76aa75",
+      "category": "general",
+      "timeFromClose": 0
+    }
+  ],
+  "geopoliticalEvents": []
+}
