@@ -1,4 +1,17 @@
-const axios = require('axios');
+// After Hours Movers
+    if (overnightData.afterHoursMovers && overnightData.afterHoursMovers.topGainers.length > 0) {
+        dataString += "TOP AFTER-HOURS GAINERS:\n";
+        overnightData.afterHoursMovers.topGainers.slice(0, 5).forEach((stock, index) => {
+            dataString += `${index + 1}. ${stock.symbol}: ${stock.price} (${stock.changePercent}) Vol: ${stock.volume}\n`;
+        });
+        dataString += "\n";
+        
+        dataString += "TOP AFTER-HOURS LOSERS:\n";
+        overnightData.afterHoursMovers.topLosers.slice(0, 5).forEach((stock, index) => {
+            dataString += `${index + 1}. ${stock.symbol}: ${stock.price} (${stock.changePercent}) Vol: ${stock.volume}\n`;
+        });
+        dataString += "\n";
+    }const axios = require('axios');
 const fs = require('fs');
 const path = require('path');
 const nodemailer = require('nodemailer');
