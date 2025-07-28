@@ -1,17 +1,4 @@
-// After Hours Movers
-    if (overnightData.afterHoursMovers && overnightData.afterHoursMovers.topGainers.length > 0) {
-        dataString += "TOP AFTER-HOURS GAINERS:\n";
-        overnightData.afterHoursMovers.topGainers.slice(0, 5).forEach((stock, index) => {
-            dataString += `${index + 1}. ${stock.symbol}: ${stock.price} (${stock.changePercent}) Vol: ${stock.volume}\n`;
-        });
-        dataString += "\n";
-        
-        dataString += "TOP AFTER-HOURS LOSERS:\n";
-        overnightData.afterHoursMovers.topLosers.slice(0, 5).forEach((stock, index) => {
-            dataString += `${index + 1}. ${stock.symbol}: ${stock.price} (${stock.changePercent}) Vol: ${stock.volume}\n`;
-        });
-        dataString += "\n";
-    }const axios = require('axios');
+const axios = require('axios');
 const fs = require('fs');
 const path = require('path');
 const nodemailer = require('nodemailer');
@@ -849,20 +836,13 @@ async function sendOvernightReportEmail(reportContent, dateStr) {
 async function fetchOvernightMarketData() {
     console.log('🔄 Fetching comprehensive overnight market data...');
     
-    // Initialize the data structure properly
     const overnightData = {
         realFutures: {},
         extendedHoursETFs: {},
         asianMarkets: {},
         currencyData: {},
+        optionsFlow: [],
         overnightNews: [],
-        geopoliticalEvents: [],
-        verificationSources: {
-            majorEventSources: [],
-            crossReferences: [],
-            officialStatements: [],
-            conflictingReports: []
-        },
         afterHoursMovers: {
             topGainers: [],
             topLosers: []
@@ -895,7 +875,24 @@ async function fetchOvernightMarketData() {
         overnightData.currencyData = currencies;
         overnightData.overnightNews = overnightNews;
         overnightData.geopoliticalEvents = geopoliticalEvents;
-        overnightData.verificationSources = verificationSources;
+        overnightData.verificationSources = verificationSources;Flow = optionsFlow;
+        
+        // Fetch overnight news if Finnhub is available
+        if (FINNHUB_API_KEY) {
+            try {
+                const newsResponse = await axios.get(
+                    `https://finnhub.io/api/v1/news?category=general&token=${FINNHUB_API_KEY}`
+                );
+                if (newsResponse.data && Array.isArray(newsResponse.data)) {
+                    const twelveHoursAgo = Date.now() / 1000 - (12 * 60 * 60);
+                    overnightData.overnightNews = newsResponse.data
+                        .filter(news => news.datetime > twelveHoursAgo)
+                        .slice(0, 8);
+                }
+            } catch (error) {
+                console.log('Failed to fetch overnight news:', error.message);
+            }
+        }
         
         // Generate sample movers if no real data
         if (overnightData.afterHoursMovers.topGainers.length === 0) {
@@ -924,13 +921,19 @@ async function fetchOvernightMarketData() {
     return overnightData;
 }
 
-// Format overnight data for the prompt (cleaned up version - no timing header)
+// Format overnight data for the prompt
 function formatOvernightDataForPrompt(overnightData) {
-    let dataString = `REAL-TIME MARKET DATA FOR ANALYSIS:\n\n`;
+    const timing = getMarketTimingInfo();
     
-    // Real Futures Data (moved to top as requested)
+    let dataString = `OVERNIGHT MARKET DATA (Market Close to Open Analysis):\n`;
+    dataString += `Last Market Close: ${timing.lastClose}\n`;
+    dataString += `Next Market Open: ${timing.nextOpen}\n`;
+    dataString += `Hours Since Close: ${timing.hoursSinceClose}\n`;
+    dataString += `Time to Open: ${timing.timeToOpenStr}\n\n`;
+    
+    // Real Futures Data
     if (Object.keys(overnightData.realFutures).length > 0) {
-        dataString += "LIVE FUTURES DATA:\n";
+        dataString += "REAL-TIME FUTURES DATA:\n";
         Object.entries(overnightData.realFutures).forEach(([symbol, data]) => {
             dataString += `- ${data.name || symbol}: ${data.price} (${data.change} / ${data.changePercent}%) [${data.session}]\n`;
         });
@@ -943,7 +946,7 @@ function formatOvernightDataForPrompt(overnightData) {
         Object.entries(overnightData.extendedHoursETFs).forEach(([symbol, data]) => {
             const price = data.extendedPrice || data.price;
             const changePercent = data.extendedChangePercent || data.changePercent;
-            dataString += `- ${symbol} (${data.name}): ${price} (${changePercent}%) [${data.session}]\n`;
+            dataString += `- ${symbol} (${data.name}): $${price} (${changePercent}%) [${data.session}]\n`;
         });
         dataString += "\n";
     }
@@ -966,50 +969,17 @@ function formatOvernightDataForPrompt(overnightData) {
         dataString += "\n";
     }
     
-    // Major Events and Geopolitical Developments (Enhanced with Verification)
-    if (overnightData.geopoliticalEvents && overnightData.geopoliticalEvents.length > 0) {
-        dataString += "MAJOR OVERNIGHT DEVELOPMENTS:\n";
-        overnightData.geopoliticalEvents.forEach((event, index) => {
-            const eventTime = new Date(event.datetime * 1000).toLocaleString();
-            dataString += `${index + 1}. [${event.type.toUpperCase()}] ${event.headline} (${eventTime})\n`;
-            if (event.description) {
-                dataString += `   ${event.description.substring(0, 100)}...\n`;
-            }
+    // Options Flow
+    if (overnightData.optionsFlow.length > 0) {
+        dataString += "UNUSUAL OPTIONS ACTIVITY:\n";
+        overnightData.optionsFlow.forEach((option, index) => {
+            dataString += `${index + 1}. ${option.symbol} ${option.strike} ${option.type}: ${option.volume} contracts (IV: ${option.impliedVolatility}%)\n`;
         });
         dataString += "\n";
     }
     
-    // Verification Sources for Cross-Referencing
-    if (overnightData.verificationSources && Object.keys(overnightData.verificationSources).length > 0) {
-        const { officialStatements, majorEventSources, crossReferences } = overnightData.verificationSources;
-        
-        if (officialStatements.length > 0) {
-            dataString += "OFFICIAL GOVERNMENT/INSTITUTIONAL STATEMENTS:\n";
-            officialStatements.slice(0, 5).forEach((statement, index) => {
-                const statementTime = new Date(statement.publishedAt).toLocaleString();
-                dataString += `${index + 1}. [${statement.sourceType}] ${statement.headline} [${statement.source}] (${statementTime})\n`;
-                if (statement.description) {
-                    dataString += `   ${statement.description.substring(0, 120)}...\n`;
-                }
-            });
-            dataString += "\n";
-        }
-        
-        if (majorEventSources.length > 0) {
-            dataString += "HIGH-PRIORITY GEOPOLITICAL EVENTS (Multiple Source Verification):\n";
-            majorEventSources.slice(0, 5).forEach((event, index) => {
-                const eventTime = new Date(event.publishedAt).toLocaleString();
-                dataString += `${index + 1}. [${event.priority}] ${event.headline} [${event.source}] (${eventTime})\n`;
-                if (event.description) {
-                    dataString += `   ${event.description.substring(0, 120)}...\n`;
-                }
-            });
-            dataString += "\n";
-        }
-    }
-    
     // After Hours Movers
-    if (overnightData.afterHoursMovers && overnightData.afterHoursMovers.topGainers.length > 0) {
+    if (overnightData.afterHoursMovers.topGainers.length > 0) {
         dataString += "TOP AFTER-HOURS GAINERS:\n";
         overnightData.afterHoursMovers.topGainers.slice(0, 5).forEach((stock, index) => {
             dataString += `${index + 1}. ${stock.symbol}: ${stock.price} (${stock.changePercent}) Vol: ${stock.volume}\n`;
@@ -1023,10 +993,23 @@ function formatOvernightDataForPrompt(overnightData) {
         dataString += "\n";
     }
     
-    // Additional Overnight News
+    // Major Events and Geopolitical Developments
+    if (overnightData.geopoliticalEvents && overnightData.geopoliticalEvents.length > 0) {
+        dataString += "MAJOR OVERNIGHT DEVELOPMENTS:\n";
+        overnightData.geopoliticalEvents.forEach((event, index) => {
+            const eventTime = new Date(event.datetime * 1000).toLocaleString();
+            dataString += `${index + 1}. [${event.type.toUpperCase()}] ${event.headline} (${eventTime})\n`;
+            if (event.description) {
+                dataString += `   ${event.description.substring(0, 100)}...\n`;
+            }
+        });
+        dataString += "\n";
+    }
+    
+    // Overnight News (now enhanced)
     if (overnightData.overnightNews.length > 0) {
-        dataString += "ADDITIONAL OVERNIGHT NEWS:\n";
-        overnightData.overnightNews.slice(0, 6).forEach((news, index) => {
+        dataString += "OVERNIGHT NEWS AFFECTING MARKETS:\n";
+        overnightData.overnightNews.slice(0, 8).forEach((news, index) => {
             const newsTime = new Date(news.datetime * 1000).toLocaleString();
             dataString += `${index + 1}. ${news.headline} [${news.source || 'Unknown'}] (${newsTime})\n`;
             if (news.description && news.description.length > 0) {
@@ -1211,15 +1194,14 @@ async function generateOvernightMarketReport() {
         const filename = `overnight-market-report-${dateStr}.md`;
         const filepath = path.join(reportsDir, filename);
         
-        // Add metadata header focused on verification and data quality
+        // Add metadata header focused on morning period
         const reportWithMetadata = `${report}
 
 ---
 
-*Enhanced market intelligence with multi-source verification and geopolitical event tracking*  
+*This morning market report covers the complete period from market close to open*  
 *Data Sources: ${Object.keys(overnightData.realFutures).length > 0 ? 'Real-time Futures' : 'Sample Futures'}, ${Object.keys(overnightData.extendedHoursETFs).length > 0 ? 'Live ETF Data' : 'Sample ETF Data'}, ${Object.keys(overnightData.asianMarkets).length > 0 ? 'Live Asian Markets' : 'Sample Asian Data'}, ${Object.keys(overnightData.currencyData).length > 0 ? 'Real FX Data' : 'Sample FX Data'}*  
-*Verification: ${overnightData.verificationSources.officialStatements.length} official sources, ${overnightData.verificationSources.majorEventSources.length} cross-references*  
-*INSTITUTIONAL-GRADE MARKET INTELLIGENCE*
+*READY FOR NEXT MARKET SESSION*
 `;
         
         // Write overnight report to file
