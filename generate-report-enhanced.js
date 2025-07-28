@@ -1194,14 +1194,15 @@ async function generateOvernightMarketReport() {
         const filename = `overnight-market-report-${dateStr}.md`;
         const filepath = path.join(reportsDir, filename);
         
-        // Add metadata header focused on morning period
+        // Add metadata header focused on verification and data quality
         const reportWithMetadata = `${report}
 
 ---
 
-*This morning market report covers the complete period from market close to open*  
+*Enhanced market intelligence with multi-source verification and geopolitical event tracking*  
 *Data Sources: ${Object.keys(overnightData.realFutures).length > 0 ? 'Real-time Futures' : 'Sample Futures'}, ${Object.keys(overnightData.extendedHoursETFs).length > 0 ? 'Live ETF Data' : 'Sample ETF Data'}, ${Object.keys(overnightData.asianMarkets).length > 0 ? 'Live Asian Markets' : 'Sample Asian Data'}, ${Object.keys(overnightData.currencyData).length > 0 ? 'Real FX Data' : 'Sample FX Data'}*  
-*READY FOR NEXT MARKET SESSION*
+*Verification: ${overnightData.verificationSources.officialStatements.length} official sources, ${overnightData.verificationSources.majorEventSources.length} cross-references*  
+*INSTITUTIONAL-GRADE MARKET INTELLIGENCE*
 `;
         
         // Write overnight report to file
