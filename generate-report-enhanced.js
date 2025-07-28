@@ -850,21 +850,23 @@ async function fetchOvernightMarketData() {
     };
     
     try {
-        // Fetch all real-time data using your existing APIs + enhanced news
+        // Fetch all real-time data using your existing APIs + enhanced verification
         const [
             futures,
             etfs,
             asianMarkets,
             currencies,
             overnightNews,
-            geopoliticalEvents
+            geopoliticalEvents,
+            verificationSources
         ] = await Promise.all([
             fetchRealFuturesData(),           // Uses your Polygon API
             fetchExtendedHoursETFs(),         // Uses your Alpha Vantage API  
             fetchAsianMarkets(),              // Uses your Trading Economics API
             fetchRealCurrencyData(),          // Uses your Fixer API
             fetchOvernightNews(),             // Enhanced News API search
-            fetchGeopoliticalEvents()         // NEW: Major events tracker
+            fetchGeopoliticalEvents(),        // Major events tracker
+            fetchVerificationSources()        // NEW: Verification and cross-referencing
         ]);
         
         overnightData.realFutures = futures;
@@ -872,7 +874,8 @@ async function fetchOvernightMarketData() {
         overnightData.asianMarkets = asianMarkets;
         overnightData.currencyData = currencies;
         overnightData.overnightNews = overnightNews;
-        overnightData.geopoliticalEvents = geopoliticalEvents;Flow = optionsFlow;
+        overnightData.geopoliticalEvents = geopoliticalEvents;
+        overnightData.verificationSources = verificationSources;Flow = optionsFlow;
         
         // Fetch overnight news if Finnhub is available
         if (FINNHUB_API_KEY) {
@@ -898,7 +901,7 @@ async function fetchOvernightMarketData() {
         }
         
         console.log('✅ Overnight data collection completed');
-        console.log(`📊 Data sources: Futures(${Object.keys(futures).length}), ETFs(${Object.keys(etfs).length}), Asian(${Object.keys(asianMarkets).length}), FX(${Object.keys(currencies).length}), News(${overnightNews.length}), Events(${geopoliticalEvents.length})`);
+        console.log(`📊 Data sources: Futures(${Object.keys(futures).length}), ETFs(${Object.keys(etfs).length}), Asian(${Object.keys(asianMarkets).length}), FX(${Object.keys(currencies).length}), News(${overnightNews.length}), Events(${geopoliticalEvents.length}), Verification(${verificationSources.officialStatements.length + verificationSources.majorEventSources.length})`);
         
         // Display API usage summary
         console.log('\n🔑 API Usage Summary:');
@@ -906,8 +909,9 @@ async function fetchOvernightMarketData() {
         console.log(`Alpha Vantage API: ${Object.keys(etfs).length > 0 ? '✅ Active' : '❌ No data'}`);
         console.log(`Trading Economics API: ${Object.keys(asianMarkets).length > 0 && !asianMarkets['Japan (Nikkei Proxy)'] ? '✅ Active' : '⚠️  Using ETF proxies'}`);
         console.log(`Fixer API: ${Object.keys(currencies).length > 0 && currencies['EURUSD']?.lastUpdate ? '✅ Active' : '⚠️  Using Alpha Vantage'}`);
-        console.log(`News API: ${overnightNews.length > 0 && overnightNews[0].source ? '✅ Active (Enhanced)' : '⚠️  Using Finnhub'}`);
+        console.log(`News API: ${overnightNews.length > 0 && overnightNews[0].source ? '✅ Active (Enhanced + Verification)' : '⚠️  Using Finnhub'}`);
         console.log(`Geopolitical Events: ${geopoliticalEvents.length > 0 ? `✅ ${geopoliticalEvents.length} major events tracked` : '⚠️  No major events'}`);
+        console.log(`Verification Sources: ${verificationSources.officialStatements.length + verificationSources.majorEventSources.length > 0 ? `✅ ${verificationSources.officialStatements.length} official + ${verificationSources.majorEventSources.length} cross-refs` : '⚠️  No verification data'}`);
         console.log(`Finnhub API: ${FINNHUB_API_KEY ? '✅ Available as fallback' : '❌ Not configured'}`);
         
     } catch (error) {
@@ -1224,23 +1228,42 @@ async function generateOvernightMarketReport() {
         console.log(`${timing.hoursSinceClose}-hour close-to-open analysis ready`);
         console.log(`⏰ Market opens in ${timing.timeToOpenStr}`);
         
-        // Display data source summary with your existing APIs
+        // Display data source summary with verification tracking
         console.log('\n📊 DATA SOURCE SUMMARY:');
         console.log(`Futures Data: ${Object.keys(overnightData.realFutures).length > 0 ? '✅ Real-time (Polygon)' : '⚠️  Sample data'}`);
         console.log(`ETF Data: ${Object.keys(overnightData.extendedHoursETFs).length > 0 ? '✅ Real-time (Alpha Vantage)' : '⚠️  Sample data'}`);
         console.log(`Asian Markets: ${Object.keys(overnightData.asianMarkets).length > 0 ? '✅ Real-time (Trading Economics/Alpha Vantage)' : '⚠️  Sample data'}`);
         console.log(`Currency Data: ${Object.keys(overnightData.currencyData).length > 0 ? '✅ Real-time (Fixer/Alpha Vantage)' : '⚠️  Sample data'}`);
         console.log(`News: ${overnightData.overnightNews.length > 0 ? `✅ ${overnightData.overnightNews.length} articles (News API/Finnhub)` : '⚠️  No news data'}`);
+        console.log(`Verification: ${overnightData.verificationSources.officialStatements.length > 0 ? `✅ ${overnightData.verificationSources.officialStatements.length} official sources` : '⚠️  No verification data'}`);
+        console.log(`Cross-References: ${overnightData.verificationSources.majorEventSources.length > 0 ? `✅ ${overnightData.verificationSources.majorEventSources.length} multi-source events` : '⚠️  No cross-reference data'}`);
         
-        // Cost breakdown
-        console.log('\n💰 Monthly API Cost Estimate:');
+        // Verification quality assessment
+        const totalOfficialSources = overnightData.verificationSources.officialStatements.length;
+        const totalCrossRefs = overnightData.verificationSources.majorEventSources.length;
+        const verificationScore = totalOfficialSources + (totalCrossRefs * 0.5);
+        
+        console.log('\n🔍 VERIFICATION QUALITY:');
+        if (verificationScore >= 10) {
+            console.log('✅ EXCELLENT - High confidence in major event verification');
+        } else if (verificationScore >= 5) {
+            console.log('⚠️  GOOD - Moderate verification coverage');
+        } else if (verificationScore >= 2) {
+            console.log('⚠️  LIMITED - Some verification sources available');
+        } else {
+            console.log('❌ POOR - Minimal verification data - rely on sample/cached data');
+        }
+        
+        // Cost breakdown with verification additions
+        console.log('\n💰 Enhanced API Cost Estimate:');
         console.log('• Polygon: $199/month (Premium futures data)');
         console.log('• Alpha Vantage: Free tier (5 calls/min)');
         console.log('• Trading Economics: $20/month (Basic plan)');
         console.log('• Fixer: $10/month (Basic plan)');
-        console.log('• News API: $449/month (Business plan)');
+        console.log('• News API: $449/month (Business plan) - Enhanced with verification searches');
         console.log('• Finnhub: Free tier (Basic data)');
-        console.log('📊 Total estimated cost: ~$678/month for premium real-time data');
+        console.log('📊 Total estimated cost: ~$678/month for premium verified data');
+        console.log('🔍 Verification enhancement: +15-20 additional API calls per run for cross-referencing');
         
     } catch (error) {
         console.error('❌ Error generating morning market report:', error.response?.data || error.message);
