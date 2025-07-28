@@ -1,17 +1,4 @@
-// After Hours Movers
-    if (overnightData.afterHoursMovers && overnightData.afterHoursMovers.topGainers.length > 0) {
-        dataString += "TOP AFTER-HOURS GAINERS:\n";
-        overnightData.afterHoursMovers.topGainers.slice(0, 5).forEach((stock, index) => {
-            dataString += `${index + 1}. ${stock.symbol}: ${stock.price} (${stock.changePercent}) Vol: ${stock.volume}\n`;
-        });
-        dataString += "\n";
-        
-        dataString += "TOP AFTER-HOURS LOSERS:\n";
-        overnightData.afterHoursMovers.topLosers.slice(0, 5).forEach((stock, index) => {
-            dataString += `${index + 1}. ${stock.symbol}: ${stock.price} (${stock.changePercent}) Vol: ${stock.volume}\n`;
-        });
-        dataString += "\n";
-    }const axios = require('axios');
+const axios = require('axios');
 const fs = require('fs');
 const path = require('path');
 const nodemailer = require('nodemailer');
@@ -1207,15 +1194,14 @@ async function generateOvernightMarketReport() {
         const filename = `overnight-market-report-${dateStr}.md`;
         const filepath = path.join(reportsDir, filename);
         
-        // Add metadata header focused on verification and data quality
+        // Add metadata header focused on morning period
         const reportWithMetadata = `${report}
 
 ---
 
-*Enhanced market intelligence with multi-source verification and geopolitical event tracking*  
+*This morning market report covers the complete period from market close to open*  
 *Data Sources: ${Object.keys(overnightData.realFutures).length > 0 ? 'Real-time Futures' : 'Sample Futures'}, ${Object.keys(overnightData.extendedHoursETFs).length > 0 ? 'Live ETF Data' : 'Sample ETF Data'}, ${Object.keys(overnightData.asianMarkets).length > 0 ? 'Live Asian Markets' : 'Sample Asian Data'}, ${Object.keys(overnightData.currencyData).length > 0 ? 'Real FX Data' : 'Sample FX Data'}*  
-*Verification: ${overnightData.verificationSources.officialStatements.length} official sources, ${overnightData.verificationSources.majorEventSources.length} cross-references*  
-*INSTITUTIONAL-GRADE MARKET INTELLIGENCE*
+*READY FOR NEXT MARKET SESSION*
 `;
         
         // Write overnight report to file
@@ -1294,4 +1280,4 @@ module.exports = {
     generateOvernightMarketReport,
     fetchOvernightMarketData,
     getMarketTimingInfo
-};Ftr
+};
