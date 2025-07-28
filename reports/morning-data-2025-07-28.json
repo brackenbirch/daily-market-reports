@@ -1,0 +1,445 @@
+{
+  "afterHoursFutures": {
+    "SPY": {
+      "01. symbol": "SPY",
+      "02. open": "635.0900",
+      "03. high": "637.5799",
+      "04. low": "634.8400",
+      "05. price": "637.1000",
+      "06. volume": "56865364",
+      "07. latest trading day": "2025-07-25",
+      "08. previous close": "634.4200",
+      "09. change": "2.6800",
+      "10. change percent": "0.4224%",
+      "session": "After-Hours/Extended"
+    },
+    "QQQ": {
+      "01. symbol": "QQQ",
+      "02. open": "564.9300",
+      "03. high": "567.6950",
+      "04. low": "564.2700",
+      "05. price": "566.3700",
+      "06. volume": "30630813",
+      "07. latest trading day": "2025-07-25",
+      "08. previous close": "565.0100",
+      "09. change": "1.3600",
+      "10. change percent": "0.2407%",
+      "session": "After-Hours/Extended"
+    },
+    "DIA": {
+      "01. symbol": "DIA",
+      "02. open": "447.5300",
+      "03. high": "449.4100",
+      "04. low": "446.4102",
+      "05. price": "449.0200",
+      "06. volume": "3710570",
+      "07. latest trading day": "2025-07-25",
+      "08. previous close": "447.1100",
+      "09. change": "1.9100",
+      "10. change percent": "0.4272%",
+      "session": "After-Hours/Extended"
+    }
+  },
+  "overnightSectors": {
+    "XLF": {
+      "01. symbol": "XLF",
+      "02. open": "53.1000",
+      "03. high": "53.4867",
+      "04. low": "52.9900",
+      "05. price": "53.4400",
+      "06. volume": "28964728",
+      "07. latest trading day": "2025-07-25",
+      "08. previous close": "53.0700",
+      "09. change": "0.3700",
+      "10. change percent": "0.6972%",
+      "name": "Financial Services",
+      "session": "Extended Hours"
+    },
+    "XLK": {
+      "01. symbol": "XLK",
+      "02. open": "261.3100",
+      "03. high": "262.6500",
+      "04. low": "260.7651",
+      "05. price": "261.9900",
+      "06. volume": "4000985",
+      "07. latest trading day": "2025-07-25",
+      "08. previous close": "261.3900",
+      "09. change": "0.6000",
+      "10. change percent": "0.2295%",
+      "name": "Technology",
+      "session": "Extended Hours"
+    },
+    "XLE": {
+      "01. symbol": "XLE",
+      "02. open": "87.5200",
+      "03. high": "87.6700",
+      "04. low": "86.6450",
+      "05. price": "87.1000",
+      "06. volume": "10071567",
+      "07. latest trading day": "2025-07-25",
+      "08. previous close": "87.4300",
+      "09. change": "-0.3300",
+      "10. change percent": "-0.3774%",
+      "name": "Energy",
+      "session": "Extended Hours"
+    },
+    "XLV": {
+      "01. symbol": "XLV",
+      "02. open": "136.2450",
+      "03. high": "136.7000",
+      "04. low": "135.7400",
+      "05. price": "136.4800",
+      "06. volume": "9540321",
+      "07. latest trading day": "2025-07-25",
+      "08. previous close": "135.7600",
+      "09. change": "0.7200",
+      "10. change percent": "0.5303%",
+      "name": "Healthcare",
+      "session": "Extended Hours"
+    },
+    "XLI": {
+      "01. symbol": "XLI",
+      "02. open": "153.9400",
+      "03. high": "155.0600",
+      "04. low": "153.3600",
+      "05. price": "154.9900",
+      "06. volume": "9376677",
+      "07. latest trading day": "2025-07-25",
+      "08. previous close": "153.4700",
+      "09. change": "1.5200",
+      "10. change percent": "0.9904%",
+      "name": "Industrials",
+      "session": "Extended Hours"
+    },
+    "XLY": {
+      "01. symbol": "XLY",
+      "02. open": "223.9200",
+      "03. high": "225.2100",
+      "04. low": "223.3600",
+      "05. price": "224.8700",
+      "06. volume": "6134108",
+      "07. latest trading day": "2025-07-25",
+      "08. previous close": "222.8000",
+      "09. change": "2.0700",
+      "10. change percent": "0.9291%",
+      "name": "Consumer Discretionary",
+      "session": "Extended Hours"
+    },
+    "XLP": {
+      "01. symbol": "XLP",
+      "02. open": "81.3100",
+      "03. high": "81.5200",
+      "04. low": "81.0400",
+      "05. price": "81.5000",
+      "06. volume": "9284882",
+      "07. latest trading day": "2025-07-25",
+      "08. previous close": "81.3600",
+      "09. change": "0.1400",
+      "10. change percent": "0.1721%",
+      "name": "Consumer Staples",
+      "session": "Extended Hours"
+    },
+    "XLU": {
+      "01. symbol": "XLU",
+      "02. open": "84.4300",
+      "03. high": "84.6050",
+      "04. low": "84.1100",
+      "05. price": "84.5200",
+      "06. volume": "8160240",
+      "07. latest trading day": "2025-07-25",
+      "08. previous close": "84.3000",
+      "09. change": "0.2200",
+      "10. change percent": "0.2610%",
+      "name": "Utilities",
+      "session": "Extended Hours"
+    },
+    "XLB": {
+      "01. symbol": "XLB",
+      "02. open": "91.5300",
+      "03. high": "92.4200",
+      "04. low": "91.2800",
+      "05. price": "92.3700",
+      "06. volume": "7876383",
+      "07. latest trading day": "2025-07-25",
+      "08. previous close": "91.2900",
+      "09. change": "1.0800",
+      "10. change percent": "1.1830%",
+      "name": "Materials",
+      "session": "Extended Hours"
+    }
+  },
+  "afterHoursMovers": {
+    "topGainers": [
+      {
+        "symbol": "AAPL",
+        "price": "$86.46",
+        "change": "+1.46",
+        "changePercent": "+1.72%",
+        "volume": "130K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "MSFT",
+        "price": "$175.89",
+        "change": "+8.50",
+        "changePercent": "+5.08%",
+        "volume": "202K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "GOOGL",
+        "price": "$97.48",
+        "change": "+5.54",
+        "changePercent": "+6.03%",
+        "volume": "33K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "AMZN",
+        "price": "$151.18",
+        "change": "+20.16",
+        "changePercent": "+15.39%",
+        "volume": "69K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "TSLA",
+        "price": "$152.43",
+        "change": "+18.50",
+        "changePercent": "+13.81%",
+        "volume": "170K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "NVDA",
+        "price": "$194.00",
+        "change": "+23.85",
+        "changePercent": "+14.02%",
+        "volume": "119K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "META",
+        "price": "$232.65",
+        "change": "+12.98",
+        "changePercent": "+5.91%",
+        "volume": "59K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "NFLX",
+        "price": "$88.87",
+        "change": "+4.58",
+        "changePercent": "+5.43%",
+        "volume": "214K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "AMD",
+        "price": "$223.61",
+        "change": "+28.44",
+        "changePercent": "+14.57%",
+        "volume": "214K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "CRM",
+        "price": "$261.25",
+        "change": "+23.71",
+        "changePercent": "+9.98%",
+        "volume": "190K",
+        "timeframe": "After-Hours"
+      }
+    ],
+    "topLosers": [
+      {
+        "symbol": "AAPL",
+        "price": "$102.57",
+        "change": "-8.42",
+        "changePercent": "-7.59%",
+        "volume": "28K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "MSFT",
+        "price": "$84.36",
+        "change": "-2.36",
+        "changePercent": "-2.72%",
+        "volume": "136K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "GOOGL",
+        "price": "$190.05",
+        "change": "-21.99",
+        "changePercent": "-10.37%",
+        "volume": "100K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "AMZN",
+        "price": "$188.45",
+        "change": "-8.00",
+        "changePercent": "-4.07%",
+        "volume": "62K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "TSLA",
+        "price": "$73.32",
+        "change": "-6.51",
+        "changePercent": "-8.15%",
+        "volume": "166K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "NVDA",
+        "price": "$50.42",
+        "change": "-1.37",
+        "changePercent": "-2.64%",
+        "volume": "81K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "META",
+        "price": "$245.75",
+        "change": "-2.03",
+        "changePercent": "-0.82%",
+        "volume": "71K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "NFLX",
+        "price": "$164.47",
+        "change": "-28.61",
+        "changePercent": "-14.82%",
+        "volume": "73K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "AMD",
+        "price": "$65.36",
+        "change": "-8.09",
+        "changePercent": "-11.01%",
+        "volume": "160K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "CRM",
+        "price": "$114.82",
+        "change": "-20.34",
+        "changePercent": "-15.05%",
+        "volume": "197K",
+        "timeframe": "After-Hours"
+      }
+    ]
+  },
+  "overnightNews": [
+    {
+      "category": "top news",
+      "datetime": 1753703340,
+      "headline": "The emerging-markets bandwagon rumbles on, and now China is climbing aboard",
+      "id": 7501197,
+      "image": "https://static2.finnhub.io/file/publicdatany/finnhubimage/market_watch_logo.png",
+      "related": "",
+      "source": "MarketWatch",
+      "summary": "Goldman Sachs looks for a continued broadening of the rally to incorporate China.",
+      "url": "https://www.marketwatch.com/story/the-emerging-markets-bandwagon-rumbles-on-and-now-china-is-climbing-aboard-f98c8a2f"
+    },
+    {
+      "category": "top news",
+      "datetime": 1753701720,
+      "headline": "Are Americans squandering their retirement savings on eating out?",
+      "id": 7501187,
+      "image": "https://static2.finnhub.io/file/publicdatany/finnhubimage/market_watch_logo.png",
+      "related": "",
+      "source": "MarketWatch",
+      "summary": "Americans spend almost as much eating out every year as they owe in student debt.",
+      "url": "https://www.marketwatch.com/story/are-americans-squandering-their-retirement-savings-on-eating-out-55de7d0e"
+    },
+    {
+      "category": "top news",
+      "datetime": 1753699260,
+      "headline": "S&P 500 now more likely to reach 7,200 next year, according to Morgan Stanley’s Wilson",
+      "id": 7501173,
+      "image": "https://static2.finnhub.io/file/publicdatany/finnhubimage/market_watch_logo.png",
+      "related": "",
+      "source": "MarketWatch",
+      "summary": "Better earnings and a steadily high multiple should boost stocks, says Morgan Stanley.",
+      "url": "https://www.marketwatch.com/story/s-p-500-now-more-likely-to-reach-7-200-next-year-according-to-morgan-stanleys-wilson-8553ce2d"
+    },
+    {
+      "category": "top news",
+      "datetime": 1753699020,
+      "headline": "This researcher finds eerie parallels between now and the pullback of 1998",
+      "id": 7501174,
+      "image": "https://static2.finnhub.io/file/publicdatany/finnhubimage/market_watch_logo.png",
+      "related": "",
+      "source": "MarketWatch",
+      "summary": "Citrini Research warns of market similarities between now and 1998, when markets saw a summer swoon.",
+      "url": "https://www.marketwatch.com/story/this-researcher-finds-eerie-parallels-between-now-and-the-pullback-of-1998-ffa0f0e9"
+    },
+    {
+      "category": "top news",
+      "datetime": 1753698060,
+      "headline": "‘I have Type 1 diabetes’: I’m 64 with a $1.3 million 401(k). Is it too late for long-term-care insurance?",
+      "id": 7501171,
+      "image": "https://static2.finnhub.io/file/publicdatany/finnhubimage/market_watch_logo.png",
+      "related": "",
+      "source": "MarketWatch",
+      "summary": "“‘I am married, live in Texas and have no debt other than a mortgage of about $2,200 a month.”",
+      "url": "https://www.marketwatch.com/story/i-have-type-1-diabetes-im-64-with-a-1-3-million-401-k-is-it-too-late-for-long-term-care-insurance-15c4555a"
+    },
+    {
+      "category": "top news",
+      "datetime": 1753696800,
+      "headline": "Powell faces his most pivotal test yet: Trump pressure, Fed dissent and a sky-high stock market",
+      "id": 7501167,
+      "image": "https://static2.finnhub.io/file/publicdatany/finnhubimage/market_watch_logo.png",
+      "related": "",
+      "source": "MarketWatch",
+      "summary": "But this week all eyes will be on Powell as he holds a solo press conference Wednesday that will be must-watch TV amid the political drama.",
+      "url": "https://www.marketwatch.com/story/powell-faces-his-most-pivotal-test-yet-trump-pressure-fed-dissent-and-a-sky-high-stock-market-2ae5a93f"
+    },
+    {
+      "category": "top news",
+      "datetime": 1753694040,
+      "headline": "Economists cheer end of ‘crippling uncertainty’ but U.S. tariff deal gets frosty reception in Europe",
+      "id": 7501152,
+      "image": "https://static2.finnhub.io/file/publicdatany/finnhubimage/market_watch_logo.png",
+      "related": "",
+      "source": "MarketWatch",
+      "summary": "U.S. and E.U. agree a 15% tariff deal",
+      "url": "https://www.marketwatch.com/story/economists-cheer-end-of-crippling-uncertainty-but-u-s-tariff-deal-gets-frosty-reception-in-europe-6d3d3fe4"
+    },
+    {
+      "category": "top news",
+      "datetime": 1753693500,
+      "headline": "While most athletes look to be sponsored by clothing brands, Dallas Wings star Paige Bueckers wants something much bigger",
+      "id": 7501146,
+      "image": "https://static2.finnhub.io/file/publicdatany/finnhubimage/market_watch_logo.png",
+      "related": "",
+      "source": "MarketWatch",
+      "summary": "Dallas Wings star Paige Bueckers has admitted that she is desperate to partner with a real estate company so that she doesn’t have to “pay for a house.”",
+      "url": "https://www.marketwatch.com/story/while-most-athletes-look-to-be-sponsored-by-clothing-brands-dallas-wings-star-paige-bueckers-wants-something-much-bigger-6422414f"
+    }
+  ],
+  "globalMarkets": {},
+  "currencyMoves": {
+    "EURUSD": {
+      "rate": "1.1662",
+      "lastRefreshed": "2025-07-28 12:27:49",
+      "session": "Overnight"
+    },
+    "GBPUSD": {
+      "rate": "1.3429",
+      "lastRefreshed": "2025-07-28 12:27:52",
+      "session": "Overnight"
+    },
+    "USDJPY": {
+      "rate": "148.1040",
+      "lastRefreshed": "2025-07-28 12:27:45",
+      "session": "Overnight"
+    }
+  }
+}
