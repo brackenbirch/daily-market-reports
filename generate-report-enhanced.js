@@ -375,112 +375,126 @@ function formatOvernightDataForPrompt(overnightData) {
     return dataString;
 }
 
+// Enhanced comprehensive market prompt
 const createOvernightMarketPrompt = (overnightData) => {
     const timing = getMarketTimingInfo();
     
-    return `You are a senior market analyst preparing institutional clients for the next trading session. You are analyzing the ${timing.hoursSinceClose}-hour period from yesterday's market close (4:00 PM ET) to this morning's market open (9:30 AM ET). Use the market data below to create a comprehensive close-to-open analysis.
+    return `You are a financial analyst creating a comprehensive daily market summary. Use multiple authoritative financial sources and cross-reference data points for accuracy. Prioritize official exchange data, central bank communications, and primary financial news sources. Create a professional report with these exact sections:
 
 ${formatOvernightDataForPrompt(overnightData)}
 
-Create a professional MORNING MARKET REPORT with these exact sections:
+**EXECUTIVE SUMMARY**
+[2-sentence overview of global market sentiment and key risk factors]
 
-**EXECUTIVE BRIEF**
-[2-sentence overview of market developments and key themes that will drive the 9:30 AM opening, focusing on the ${timing.hoursSinceClose}-hour close-to-open window]
+**ASIAN MARKETS OVERNIGHT**
+Search multiple sources and verify data for:
+- Nikkei 225, Hang Seng, Shanghai Composite, ASX 200 performance (include exact closing levels and % changes)
+- Major Asian corporate earnings with specific numbers (revenue, EPS beats/misses)
+- Key economic data releases from Asia (actual vs. consensus vs. prior)
+- USD/JPY, USD/CNY, AUD/USD currency movements (current levels and daily changes)
+- Central bank communications from Asia (direct quotes from officials when available)
+- Cross-reference Asian market data from at least 2 sources
+[Target: 150 words]
 
-**ASIAN MARKETS IMPACT**
-Create a professional summary covering how Asian trading sessions (which occurred while US markets were closed) are setting up the US market open:
-- Tokyo, Hong Kong, Shanghai, Sydney market performance and impact on US futures
-- Asian corporate developments and earnings affecting US-listed ADRs and multinationals
-- Asian economic data releases and central bank actions during US market closure
-- Currency movements during Asian trading hours affecting US market positioning
-- Cross-border capital flows from Asian session into anticipated US open
-[Target: 150 words, focus on Asian close impact on US market open]
+**EUROPEAN MARKETS SUMMARY**
+Search for and report on:
+- FTSE 100, DAX, CAC 40, Euro Stoxx 50 performance
+- Major European corporate news
+- ECB policy updates or eurozone economic data
+- EUR/USD, GBP/USD movements
+- Any significant political/economic developments in Europe
+[Target: 150 words]
 
-**EUROPEAN TRADING SESSION TO US OPEN**
-Create a professional summary covering the European trading session (which occurred during US market closure):
-- London, Frankfurt, Paris market performance and transmission to US futures
-- European corporate developments affecting US multinationals and sectors
-- ECB communications and European economic data released during US closure
-- European currency and bond movements affecting US positioning
-- European institutional flows and positioning ahead of US market open
-[Target: 150 words, focus on European session impact on US open]
-
-**US FUTURES & AFTER-HOURS ANALYSIS**
-Create a professional summary covering US market activity during closure:
-- S&P, NASDAQ, DOW futures performance during the ${timing.hoursSinceClose}-hour closure period
-- After-hours and extended-hours trading activity in major US stocks
-- Gap scenarios and expected opening dynamics for 9:30 AM
-- Futures positioning and institutional activity
-- Federal Reserve and US policy developments during market closure
-[Target: 150 words, focus on positioning for market open]
-
-**BREAKING HEADLINES**
-Use developments that occurred during market closure to provide comprehensive coverage of market-moving headlines. Include after-hours earnings releases, corporate announcements, geopolitical developments during market closure, central bank communications from global markets, and regulatory news. Analyze expected impact on 9:30 AM market opening and sector implications. Focus on news flow from yesterday's 4:00 PM close to this morning's analysis.
-[Target: 250 words, news analysis affecting market open]
-
-**RESEARCH & INSTITUTIONAL ACTIVITY**
-Use data and global institutional activity to provide in-depth analysis. Cover analyst reports released after US market close, international institutional positioning changes during global trading sessions, research from major investment banks, hedge fund activity in global markets during US closure, and emerging themes. Include research released in Asian and European time zones, global fund flows, and institutional positioning ahead of US market open.
-[Target: 250 words, institutional activity focus]
-
-**ECONOMIC CALENDAR & EARNINGS IMPACT**
-Use economic data and earnings releases to assess market-moving potential for today's US trading session. Cover economic releases from Asian and European markets during US closure, earnings announcements released after yesterday's US close (both domestic and international), central bank communications from global markets, and scheduled US events for today's trading session. Analyze how developments will interact with today's US market opening.
-[Target: 150 words, events affecting US session]
-
-**AFTER-HOURS & EXTENDED TRADING ANALYSIS**
-Analyze the after-hours and extended trading data from yesterday's close to this morning:
-
-Focus on the top after-hours movers with professional analysis of:
-- After-hours volume patterns and liquidity conditions
-- Earnings releases or news driving moves
-- Extended-hours technical levels and gap implications for 9:30 AM open
-- Institutional after-hours activity and positioning
-- Expected continuation or reversal at regular market open
-- Risk/reward scenarios for opening positions based on moves
-
-Include analysis of catalysts and professional opening strategies based on after-hours activity.
-[Target: 200 words, focus on after-hours to regular session transition]
-
-**SECTOR ROTATION & GLOBAL THEMES**
-Analyze the sector performance and global market themes affecting US market open:
-- **XLF (Financial Services)**: Interest rate moves and global banking sector performance
-- **XLK (Technology)**: Asian tech performance and semiconductor/AI developments
-- **XLE (Energy)**: Oil price action and global energy market developments
-- **XLV (Healthcare)**: Global healthcare developments and biotech news
-- **XLI (Industrials)**: Global manufacturing data and industrial developments
-- **XLY (Consumer Discretionary)**: Asian consumer trends and retail developments
-- **XLP (Consumer Staples)**: Global consumer staples performance and currency impacts
-- **XLU (Utilities)**: Interest rate sensitivity and global utility performance
-- **XLB (Materials)**: Commodity price action and global materials performance
-
-Include global sector rotation themes and positioning for US market open.
-[Target: 300 words, sector analysis for US positioning]
+**US MARKET OUTLOOK**
+Search for and report on:
+- Current S&P 500, NASDAQ, DOW futures
+- Key economic releases scheduled for today
+- Major US earnings announcements expected
+- Federal Reserve speakers or policy implications
+- Any overnight developments affecting US markets
+[Target: 150 words]
 
 **FUTURES ANALYSIS**
-Use futures market data and global developments to provide comprehensive analysis of overnight futures positioning. Cover S&P 500, NASDAQ, and DOW futures performance during market closure, international market impacts on US futures pricing, institutional futures positioning and volume patterns, futures spreads and term structure implications. Analyze gap scenarios for market open, futures arbitrage opportunities, and professional trading strategies. Include futures market technical levels and expected opening dynamics for regular trading session.
-[Target: 150 words, futures market focus for opening preparation]
+Search for and report on:
+- Major index futures movements (ES, NQ, YM) and positioning
+- Commodity futures performance (crude oil, gold, natural gas)
+- Currency futures trends and volatility
+- VIX futures and implied volatility changes
+- Key futures expirations or rollover effects
+[Target: 120 words]
 
-**POSITIONING FOR MARKET OPEN**
-Use market data and global developments to provide senior analyst-level positioning recommendations for the 9:30 AM US market opening. Analyze momentum and gap scenarios, global market correlation and spillover effects, currency and commodity impacts from trading, sector rotation themes from global markets. Include risk-adjusted return expectations for opening positions based on the ${timing.hoursSinceClose}-hour period and correlation analysis between global moves and US market opening performance.
-[Target: 200 words, opening positioning strategy based on analysis]
+**RESEARCH HIGHLIGHTS**
+Search for and report on:
+- Major broker upgrades, downgrades, or target price changes
+- New research reports from investment banks
+- Analyst consensus changes on key stocks or sectors
+- Notable research calls or thematic investment ideas
+- Institutional positioning updates or flow data
+[Target: 120 words]
 
-**BONDS & COMMODITIES ANALYSIS**
-Use bond and commodity market data to analyze impact on US equity market opening. Cover Treasury futures and international bond market performance, commodity price action during global trading sessions (gold, oil, base metals), dollar strength/weakness themes from FX trading, and cross-asset flow patterns from global markets into US equity open. Include fixed income and commodities implications for today's US equity session based on global activity.
-[Target: 150 words, cross-asset analysis]
+**ECONOMIC AND EARNINGS CALENDAR**
+Verify timing and consensus from multiple sources:
+- Today's economic data releases with exact release times (ET), consensus forecasts, and previous readings
+- Major earnings announcements with confirmed reporting times and analyst EPS/revenue estimates
+- Corporate guidance updates with specific numerical targets when provided
+- Economic indicators ranked by market-moving potential
+- Federal Reserve speakers with confirmed speaking times and event details
+- Include data source attribution for key forecasts
+[Target: 120 words]
 
-**TECHNICAL LEVELS FOR US OPEN**
-Use technical developments from global markets to provide trading-level analysis for US market open. Cover support and resistance levels established in futures markets, gap analysis based on global market performance, volume profile analysis from after-hours and sessions, options positioning and gamma effects from activity. Include specific technical levels and gap-fill probabilities for the 9:30 AM US market opening based on price action.
-[Target: 150 words, technical analysis for market open based on activity]
+**SECTOR PERFORMANCE**
+Search for and report on:
+- Best and worst performing S&P 500 sectors
+- Key sector rotation themes or trends
+- Industry-specific news affecting sector performance
+- Relative strength analysis of major sectors
+- Any sector-specific catalysts or headwinds
+[Target: 120 words]
 
-**RISK ASSESSMENT FOR US OPEN**
-Use global market conditions to assess risk factors for today's US trading session. Cover volatility expectations based on global market activity, geopolitical developments during US market closure, economic data and policy developments from major economies, earnings and corporate developments affecting US market open, and liquidity conditions expected at 9:30 AM opening based on institutional activity. Include professional risk management recommendations for today's session based on developments.
-[Target: 150 words, risk management based on analysis]
+**BONDS AND COMMODITIES**
+Search for and report on:
+- US Treasury yield movements across the curve
+- Credit spreads and high-yield bond performance
+- Gold, silver, copper, and crude oil price action
+- Agricultural commodity trends
+- Any central bank bond buying or selling activity
+[Target: 120 words]
 
-**MARKET OPEN STRATEGY SUMMARY**
-[3-sentence summary of key themes, opening strategies, and risk/reward scenarios for the 9:30 AM market open based on the ${timing.hoursSinceClose}-hour close-to-open analysis]
+**TECHNICAL LEVELS**
+Use recent price action and verified technical data:
+- Key support and resistance levels for major indices (include specific price levels and timeframes)
+- Technical breakouts or breakdowns with volume confirmation
+- Chart patterns backed by quantitative momentum indicators (RSI, MACD levels)
+- Options flow data from reputable sources (unusual activity thresholds)
+- Critical intraday levels with percentage distances from current prices
+- Reference established technical analysis principles
+[Target: 120 words]
 
-Write in professional institutional language suitable for senior portfolio managers, hedge fund professionals, and institutional trading desks preparing for market open based on global market activity. Use the extensive data provided above and incorporate realistic scenarios from the ${timing.hoursSinceClose}-hour market closure period. Include today's date: ${new Date().toDateString()}.
+**RISK ASSESSMENT**
+Search for and report on:
+- Current geopolitical risks affecting markets
+- Credit market stress indicators or warning signs
+- Volatility measures and risk-off/risk-on sentiment
+- Correlation breakdowns or unusual market behavior
+- Any systemic risks or tail risk considerations
+[Target: 120 words]
 
-IMPORTANT: This is a MORNING MARKET REPORT focused on the period from yesterday's 4:00 PM market close to this morning's 9:30 AM market open. All analysis should be oriented toward how global market activity, after-hours trading, and international developments will impact the US market opening. Use specific data and global market developments to provide actionable insights for professional traders and portfolio managers preparing for today's US market session.`;
+**KEY TAKEAWAYS**
+[2-sentence summary of main trading themes and risk factors for the day]
+
+IMPORTANT ACCURACY GUIDELINES:
+- Verify all numerical data (prices, percentages, levels) from at least 2 authoritative sources
+- Include exact timestamps for market data (specify market close times and time zones)
+- Cite specific sources for economic forecasts and earnings estimates
+- Use official exchange data over third-party aggregators when possible
+- Cross-reference breaking news from multiple financial news outlets
+- Include confidence levels for forward-looking statements or predictions
+- Distinguish between preliminary and final economic data releases
+- Note any data revisions or corrections from previous periods
+
+Use current market data from today's date and specify market session timing (Asian close, European open, US pre-market, etc.). Include specific percentage moves and index levels with decimal precision. Write in professional financial language suitable for institutional clients.
+
+Include today's date: ${new Date().toDateString()}.`;
 };
 
 async function generateOvernightMarketReport() {
