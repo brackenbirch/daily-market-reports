@@ -172,169 +172,246 @@
     "topGainers": [
       {
         "symbol": "AAPL",
-        "price": "$86.46",
-        "change": "+1.46",
-        "changePercent": "+1.72%",
-        "volume": "130K",
+        "price": "$240.06",
+        "change": "+13.16",
+        "changePercent": "+5.80%",
+        "volume": "49K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "MSFT",
-        "price": "$175.89",
-        "change": "+8.50",
-        "changePercent": "+5.08%",
-        "volume": "202K",
+        "price": "$216.63",
+        "change": "+12.49",
+        "changePercent": "+6.12%",
+        "volume": "115K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "GOOGL",
-        "price": "$97.48",
-        "change": "+5.54",
-        "changePercent": "+6.03%",
-        "volume": "33K",
+        "price": "$118.66",
+        "change": "+9.86",
+        "changePercent": "+9.06%",
+        "volume": "132K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "AMZN",
-        "price": "$151.18",
-        "change": "+20.16",
-        "changePercent": "+15.39%",
-        "volume": "69K",
+        "price": "$96.05",
+        "change": "+0.57",
+        "changePercent": "+0.60%",
+        "volume": "187K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "TSLA",
-        "price": "$152.43",
-        "change": "+18.50",
-        "changePercent": "+13.81%",
-        "volume": "170K",
+        "price": "$137.95",
+        "change": "+5.18",
+        "changePercent": "+3.90%",
+        "volume": "33K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "NVDA",
-        "price": "$194.00",
-        "change": "+23.85",
-        "changePercent": "+14.02%",
-        "volume": "119K",
+        "price": "$209.51",
+        "change": "+12.16",
+        "changePercent": "+6.16%",
+        "volume": "46K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "META",
-        "price": "$232.65",
-        "change": "+12.98",
-        "changePercent": "+5.91%",
-        "volume": "59K",
+        "price": "$60.52",
+        "change": "+2.12",
+        "changePercent": "+3.63%",
+        "volume": "203K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "NFLX",
-        "price": "$88.87",
-        "change": "+4.58",
-        "changePercent": "+5.43%",
-        "volume": "214K",
+        "price": "$173.79",
+        "change": "+6.91",
+        "changePercent": "+4.14%",
+        "volume": "41K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "AMD",
-        "price": "$223.61",
-        "change": "+28.44",
-        "changePercent": "+14.57%",
-        "volume": "214K",
+        "price": "$212.99",
+        "change": "+9.19",
+        "changePercent": "+4.51%",
+        "volume": "48K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "CRM",
-        "price": "$261.25",
-        "change": "+23.71",
-        "changePercent": "+9.98%",
-        "volume": "190K",
+        "price": "$144.43",
+        "change": "+0.90",
+        "changePercent": "+0.63%",
+        "volume": "144K",
         "timeframe": "After-Hours"
       }
     ],
     "topLosers": [
       {
         "symbol": "AAPL",
-        "price": "$102.57",
-        "change": "-8.42",
-        "changePercent": "-7.59%",
-        "volume": "28K",
+        "price": "$90.88",
+        "change": "-5.08",
+        "changePercent": "-5.29%",
+        "volume": "38K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "MSFT",
-        "price": "$84.36",
-        "change": "-2.36",
-        "changePercent": "-2.72%",
-        "volume": "136K",
+        "price": "$54.22",
+        "change": "-4.11",
+        "changePercent": "-7.05%",
+        "volume": "123K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "GOOGL",
-        "price": "$190.05",
-        "change": "-21.99",
-        "changePercent": "-10.37%",
-        "volume": "100K",
+        "price": "$209.00",
+        "change": "-12.99",
+        "changePercent": "-5.85%",
+        "volume": "193K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "AMZN",
-        "price": "$188.45",
-        "change": "-8.00",
-        "changePercent": "-4.07%",
-        "volume": "62K",
+        "price": "$234.04",
+        "change": "-3.76",
+        "changePercent": "-1.58%",
+        "volume": "88K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "TSLA",
-        "price": "$73.32",
-        "change": "-6.51",
-        "changePercent": "-8.15%",
-        "volume": "166K",
+        "price": "$215.38",
+        "change": "-15.12",
+        "changePercent": "-6.56%",
+        "volume": "64K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "NVDA",
-        "price": "$50.42",
-        "change": "-1.37",
-        "changePercent": "-2.64%",
-        "volume": "81K",
+        "price": "$216.03",
+        "change": "-11.25",
+        "changePercent": "-4.95%",
+        "volume": "156K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "META",
-        "price": "$245.75",
-        "change": "-2.03",
-        "changePercent": "-0.82%",
-        "volume": "71K",
+        "price": "$119.93",
+        "change": "-16.55",
+        "changePercent": "-12.13%",
+        "volume": "162K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "NFLX",
-        "price": "$164.47",
-        "change": "-28.61",
-        "changePercent": "-14.82%",
-        "volume": "73K",
+        "price": "$191.16",
+        "change": "-18.72",
+        "changePercent": "-8.92%",
+        "volume": "68K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "AMD",
-        "price": "$65.36",
-        "change": "-8.09",
-        "changePercent": "-11.01%",
-        "volume": "160K",
+        "price": "$121.50",
+        "change": "-8.93",
+        "changePercent": "-6.85%",
+        "volume": "79K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "CRM",
-        "price": "$114.82",
-        "change": "-20.34",
-        "changePercent": "-15.05%",
-        "volume": "197K",
+        "price": "$89.86",
+        "change": "-3.89",
+        "changePercent": "-4.15%",
+        "volume": "57K",
         "timeframe": "After-Hours"
       }
     ]
   },
   "overnightNews": [
+    {
+      "category": "top news",
+      "datetime": 1753711740,
+      "headline": "Nike’s stock jumps after an analyst says ‘just buy it’ ahead of soccer World Cup",
+      "id": 7501243,
+      "image": "https://static2.finnhub.io/file/publicdatany/finnhubimage/market_watch_logo.png",
+      "related": "",
+      "source": "MarketWatch",
+      "summary": "Nike’s stock extends its recent surge after J.P. Morgan upgraded it to overweight from neutral.",
+      "url": "https://www.marketwatch.com/story/nikes-stock-jumps-after-an-analyst-says-just-buy-it-ahead-of-soccer-world-cup-5e6cd3ea"
+    },
+    {
+      "category": "top news",
+      "datetime": 1753710950,
+      "headline": "LNG stocks jump after European Union agrees to massive U.S. energy purchases",
+      "id": 7501242,
+      "image": "https://image.cnbcfm.com/api/v1/image/108163100-17507668762025-06-24t081022z_1420105895_rc2e8faxdf26_rtrmadp_0_usa-oil.jpeg?v=1750766895&w=1920&h=1080",
+      "related": "",
+      "source": "CNBC",
+      "summary": "The energy purchases are a key component of a trade deal struck between the EU and U.S. over the weekend.",
+      "url": "https://www.cnbc.com/2025/07/28/lng-stocks-jump-after-european-union-agrees-to-massive-us-energy-purchases.html"
+    },
+    {
+      "category": "top news",
+      "datetime": 1753709401,
+      "headline": "15 surprising things you can negotiate when buying a home—one could save you up to $50K, says real estate expert of 10 years",
+      "id": 7501232,
+      "image": "https://image.cnbcfm.com/api/v1/image/108174768-1753130592987-GettyImages-1408150641.jpg?v=1753130781&w=1920&h=1080",
+      "related": "",
+      "source": "CNBC",
+      "summary": "Buying a house? Almost every part of a transaction is negotiable. A few of them could save you up to $50,000, according to real estate expert Dana Bull.",
+      "url": "https://www.cnbc.com/2025/07/28/15-things-you-can-negotiate-when-buying-a-homeone-can-save-you-up-to-50000.html"
+    },
+    {
+      "category": "top news",
+      "datetime": 1753708502,
+      "headline": "Mark Cuban: I spent under $20 to launch a business at age 24, and it failed in a month—what I learned about operating with no money",
+      "id": 7501229,
+      "image": "https://image.cnbcfm.com/api/v1/image/108176504-1753375462385-gettyimages-2224531094-_62a4711_whctyyam.jpeg?v=1753375487&w=1920&h=1080",
+      "related": "",
+      "source": "CNBC",
+      "summary": "Before Mark Cuban became a tech billionaire, he gave up on a venture selling powdered milk after just one month. Here's what the experience taught him.",
+      "url": "https://www.cnbc.com/2025/07/28/mark-cuban-how-to-launch-a-successful-business-with-zero-money.html"
+    },
+    {
+      "category": "top news",
+      "datetime": 1753708140,
+      "headline": "How Opendoor’s meme-stock rally helped fix a listing-requirement problem, for now",
+      "id": 7501223,
+      "image": "https://static2.finnhub.io/file/publicdatany/finnhubimage/market_watch_logo.png",
+      "related": "",
+      "source": "MarketWatch",
+      "summary": "Opendoor wants more time “to assess market conditions and the Company’s stock price.”",
+      "url": "https://www.marketwatch.com/story/how-opendoors-meme-stock-rally-helped-fix-a-listing-requirement-problem-for-now-b4c9fe27"
+    },
+    {
+      "category": "top news",
+      "datetime": 1753707901,
+      "headline": "Harvard expert: This simple listening tactic can make you more influential at work—'a shockingly low number of people think to do it'",
+      "id": 7501224,
+      "image": "https://image.cnbcfm.com/api/v1/image/108177323-1753470181757-gettyimages-2220248109-ma117675.jpeg?v=1753470201&w=1920&h=1080",
+      "related": "",
+      "source": "CNBC",
+      "summary": "Harvard University associate professor Alison Wood Brooks says active listening can make you more influential at work, and give you more rewarding relationships.",
+      "url": "https://www.cnbc.com/2025/07/28/harvard-expert-how-active-listening-makes-you-more-influential-at-work.html"
+    },
+    {
+      "category": "top news",
+      "datetime": 1753706711,
+      "headline": "We're adding to our position in 2 stocks undergoing transformations",
+      "id": 7501222,
+      "image": "https://image.cnbcfm.com/api/v1/image/108176026-1753304121278-gettyimages-2226699342-anotherday89686273_cybjxsq8.jpeg?v=1753304265&w=1920&h=1080",
+      "related": "",
+      "source": "CNBC",
+      "summary": "We're taking the other side of a downgrade and making good on an earlier pledge.",
+      "url": "https://www.cnbc.com/2025/07/28/were-adding-to-our-position-in-2-stocks-undergoing-transformations.html"
+    },
     {
       "category": "top news",
       "datetime": 1753703340,
@@ -345,100 +422,23 @@
       "source": "MarketWatch",
       "summary": "Goldman Sachs looks for a continued broadening of the rally to incorporate China.",
       "url": "https://www.marketwatch.com/story/the-emerging-markets-bandwagon-rumbles-on-and-now-china-is-climbing-aboard-f98c8a2f"
-    },
-    {
-      "category": "top news",
-      "datetime": 1753701720,
-      "headline": "Are Americans squandering their retirement savings on eating out?",
-      "id": 7501187,
-      "image": "https://static2.finnhub.io/file/publicdatany/finnhubimage/market_watch_logo.png",
-      "related": "",
-      "source": "MarketWatch",
-      "summary": "Americans spend almost as much eating out every year as they owe in student debt.",
-      "url": "https://www.marketwatch.com/story/are-americans-squandering-their-retirement-savings-on-eating-out-55de7d0e"
-    },
-    {
-      "category": "top news",
-      "datetime": 1753699260,
-      "headline": "S&P 500 now more likely to reach 7,200 next year, according to Morgan Stanley’s Wilson",
-      "id": 7501173,
-      "image": "https://static2.finnhub.io/file/publicdatany/finnhubimage/market_watch_logo.png",
-      "related": "",
-      "source": "MarketWatch",
-      "summary": "Better earnings and a steadily high multiple should boost stocks, says Morgan Stanley.",
-      "url": "https://www.marketwatch.com/story/s-p-500-now-more-likely-to-reach-7-200-next-year-according-to-morgan-stanleys-wilson-8553ce2d"
-    },
-    {
-      "category": "top news",
-      "datetime": 1753699020,
-      "headline": "This researcher finds eerie parallels between now and the pullback of 1998",
-      "id": 7501174,
-      "image": "https://static2.finnhub.io/file/publicdatany/finnhubimage/market_watch_logo.png",
-      "related": "",
-      "source": "MarketWatch",
-      "summary": "Citrini Research warns of market similarities between now and 1998, when markets saw a summer swoon.",
-      "url": "https://www.marketwatch.com/story/this-researcher-finds-eerie-parallels-between-now-and-the-pullback-of-1998-ffa0f0e9"
-    },
-    {
-      "category": "top news",
-      "datetime": 1753698060,
-      "headline": "‘I have Type 1 diabetes’: I’m 64 with a $1.3 million 401(k). Is it too late for long-term-care insurance?",
-      "id": 7501171,
-      "image": "https://static2.finnhub.io/file/publicdatany/finnhubimage/market_watch_logo.png",
-      "related": "",
-      "source": "MarketWatch",
-      "summary": "“‘I am married, live in Texas and have no debt other than a mortgage of about $2,200 a month.”",
-      "url": "https://www.marketwatch.com/story/i-have-type-1-diabetes-im-64-with-a-1-3-million-401-k-is-it-too-late-for-long-term-care-insurance-15c4555a"
-    },
-    {
-      "category": "top news",
-      "datetime": 1753696800,
-      "headline": "Powell faces his most pivotal test yet: Trump pressure, Fed dissent and a sky-high stock market",
-      "id": 7501167,
-      "image": "https://static2.finnhub.io/file/publicdatany/finnhubimage/market_watch_logo.png",
-      "related": "",
-      "source": "MarketWatch",
-      "summary": "But this week all eyes will be on Powell as he holds a solo press conference Wednesday that will be must-watch TV amid the political drama.",
-      "url": "https://www.marketwatch.com/story/powell-faces-his-most-pivotal-test-yet-trump-pressure-fed-dissent-and-a-sky-high-stock-market-2ae5a93f"
-    },
-    {
-      "category": "top news",
-      "datetime": 1753694040,
-      "headline": "Economists cheer end of ‘crippling uncertainty’ but U.S. tariff deal gets frosty reception in Europe",
-      "id": 7501152,
-      "image": "https://static2.finnhub.io/file/publicdatany/finnhubimage/market_watch_logo.png",
-      "related": "",
-      "source": "MarketWatch",
-      "summary": "U.S. and E.U. agree a 15% tariff deal",
-      "url": "https://www.marketwatch.com/story/economists-cheer-end-of-crippling-uncertainty-but-u-s-tariff-deal-gets-frosty-reception-in-europe-6d3d3fe4"
-    },
-    {
-      "category": "top news",
-      "datetime": 1753693500,
-      "headline": "While most athletes look to be sponsored by clothing brands, Dallas Wings star Paige Bueckers wants something much bigger",
-      "id": 7501146,
-      "image": "https://static2.finnhub.io/file/publicdatany/finnhubimage/market_watch_logo.png",
-      "related": "",
-      "source": "MarketWatch",
-      "summary": "Dallas Wings star Paige Bueckers has admitted that she is desperate to partner with a real estate company so that she doesn’t have to “pay for a house.”",
-      "url": "https://www.marketwatch.com/story/while-most-athletes-look-to-be-sponsored-by-clothing-brands-dallas-wings-star-paige-bueckers-wants-something-much-bigger-6422414f"
     }
   ],
   "globalMarkets": {},
   "currencyMoves": {
     "EURUSD": {
-      "rate": "1.1662",
-      "lastRefreshed": "2025-07-28 12:27:49",
+      "rate": "1.1647",
+      "lastRefreshed": "2025-07-28 14:52:33",
       "session": "Overnight"
     },
     "GBPUSD": {
-      "rate": "1.3429",
-      "lastRefreshed": "2025-07-28 12:27:52",
+      "rate": "1.3416",
+      "lastRefreshed": "2025-07-28 14:52:46",
       "session": "Overnight"
     },
     "USDJPY": {
-      "rate": "148.1040",
-      "lastRefreshed": "2025-07-28 12:27:45",
+      "rate": "148.1860",
+      "lastRefreshed": "2025-07-28 14:52:35",
       "session": "Overnight"
     }
   }
