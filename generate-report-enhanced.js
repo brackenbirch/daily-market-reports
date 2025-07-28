@@ -27,86 +27,42 @@ function getSectorName(etf) {
     return sectorMap[etf] || etf;
 }
 
-// Calculate precise market timing information for close-to-open analysis
+// Calculate market timing information
 function getMarketTimingInfo() {
     const now = new Date();
+    const lastClose = new Date();
+    const nextOpen = new Date();
     
-    // Get previous trading day's close (4:00 PM ET)
-    const lastClose = getPreviousTradingDayClose(now);
+    // Set last market close (4:00 PM ET previous trading day)
+    lastClose.setHours(16, 0, 0, 0);
+    if (now.getHours() < 16) {
+        lastClose.setDate(lastClose.getDate() - 1);
+    }
     
-    // Get current trading day's open (9:30 AM ET)
-    const todayOpen = getCurrentTradingDayOpen(now);
+    // Set next market open (9:30 AM ET next trading day)
+    nextOpen.setHours(9, 30, 0, 0);
+    if (now.getHours() >= 9 && now.getMinutes() >= 30) {
+        nextOpen.setDate(nextOpen.getDate() + 1);
+    }
     
-    // Calculate precise hours since close
+    // Calculate hours since close
     const hoursSinceClose = Math.floor((now - lastClose) / (1000 * 60 * 60));
-    const minutesSinceClose = Math.floor(((now - lastClose) % (1000 * 60 * 60)) / (1000 * 60));
     
-    // Calculate time to/from open
-    const timeToOpen = todayOpen - now;
+    // Calculate time to open
+    const timeToOpen = nextOpen - now;
     const hoursToOpen = Math.floor(timeToOpen / (1000 * 60 * 60));
     const minutesToOpen = Math.floor((timeToOpen % (1000 * 60 * 60)) / (1000 * 60));
     
-    // Determine market session status
-    const isPreMarket = now < todayOpen;
-    const isRegularHours = now >= todayOpen && now.getHours() < 16;
-    const isAfterHours = now.getHours() >= 16;
-    
     return {
-        lastClose: lastClose.toLocaleString('en-US', { timeZone: 'America/New_York' }),
-        todayOpen: todayOpen.toLocaleString('en-US', { timeZone: 'America/New_York' }),
+        lastClose: lastClose.toLocaleString(),
+        nextOpen: nextOpen.toLocaleString(),
         hoursSinceClose,
-        minutesSinceClose,
-        timeToOpenStr: isPreMarket ? `${hoursToOpen}h ${minutesToOpen}m` : 'Market Open',
-        isPreMarket,
-        isRegularHours,
-        isAfterHours,
-        sessionStatus: isPreMarket ? 'Pre-Market' : isRegularHours ? 'Regular Hours' : 'After Hours',
-        closeToOpenHours: Math.floor((todayOpen - lastClose) / (1000 * 60 * 60))
+        timeToOpenStr: `${hoursToOpen}h ${minutesToOpen}m`
     };
 }
 
-// Get previous trading day's close (handles weekends and holidays)
-function getPreviousTradingDayClose(currentDate) {
-    const lastClose = new Date(currentDate);
-    lastClose.setHours(16, 0, 0, 0); // 4:00 PM ET
-    
-    // If it's before 4 PM today, go to previous day's close
-    if (currentDate.getHours() < 16) {
-        lastClose.setDate(lastClose.getDate() - 1);
-    }
-    
-    // Handle weekends - if it's Monday morning, go to Friday's close
-    if (lastClose.getDay() === 0) { // Sunday
-        lastClose.setDate(lastClose.getDate() - 2);
-    } else if (lastClose.getDay() === 6) { // Saturday
-        lastClose.setDate(lastClose.getDate() - 1);
-    }
-    
-    return lastClose;
-}
-
-// Get current trading day's open (handles weekends and holidays)
-function getCurrentTradingDayOpen(currentDate) {
-    const todayOpen = new Date(currentDate);
-    todayOpen.setHours(9, 30, 0, 0); // 9:30 AM ET
-    
-    // If it's weekend, adjust to Monday
-    if (todayOpen.getDay() === 0) { // Sunday
-        todayOpen.setDate(todayOpen.getDate() + 1);
-    } else if (todayOpen.getDay() === 6) { // Saturday
-        todayOpen.setDate(todayOpen.getDate() + 2);
-    }
-    
-    // If we're past today's open, it refers to today's already opened session
-    if (currentDate >= todayOpen) {
-        return todayOpen;
-    }
-    
-    return todayOpen;
-}
-
-// Generate close-to-open movers based on previous day's close
-function generateCloseToOpenMovers(type, timing) {
+// Generate sample overnight/after-hours movers
+function generateOvernightMovers(type) {
     const sampleStocks = [
         'AAPL', 'MSFT', 'GOOGL', 'AMZN', 'TSLA', 'NVDA', 'META', 'NFLX', 'AMD', 'CRM'
     ];
@@ -116,27 +72,23 @@ function generateCloseToOpenMovers(type, timing) {
     
     for (let i = 0; i < 10; i++) {
         const symbol = sampleStocks[i] || `STOCK${i}`;
-        const previousClose = 50 + Math.random() * 200;
-        
-        // Close-to-open moves (more realistic overnight gaps)
+        const basePrice = 50 + Math.random() * 200;
+        // After-hours moves can be more volatile due to lower volume
         const changePercent = isGainer ? 
-            (0.3 + Math.random() * 8).toFixed(2) : 
-            -(0.3 + Math.random() * 8).toFixed(2);
-        const change = (previousClose * parseFloat(changePercent) / 100).toFixed(2);
-        const currentPrice = (previousClose + parseFloat(change)).toFixed(2);
-        
-        // Volume is lower in extended hours
-        const volume = Math.floor(Math.random() * 150000) + 20000;
+            (0.5 + Math.random() * 15).toFixed(2) : 
+            -(0.5 + Math.random() * 15).toFixed(2);
+        const change = (basePrice * parseFloat(changePercent) / 100).toFixed(2);
+        const price = (basePrice + parseFloat(change)).toFixed(2);
+        // After-hours volume is typically much lower
+        const volume = Math.floor(Math.random() * 200000) + 25000;
         
         movers.push({
             symbol,
-            previousClose: `${previousClose.toFixed(2)}`,
-            currentPrice: `${currentPrice}`,
+            price: `$${price}`,
             change: `${change > 0 ? '+' : ''}${change}`,
             changePercent: `${changePercent > 0 ? '+' : ''}${changePercent}%`,
-            volume: (volume / 1000).toFixed(0) + 'K',
-            timeframe: `Close-to-Open (${timing.closeToOpenHours}h)`,
-            session: timing.sessionStatus
+            volume: (volume / 1000).toFixed(0) + 'K', // After-hours volume in thousands
+            timeframe: 'After-Hours'
         });
     }
     
@@ -230,235 +182,183 @@ function generateOvernightSectors() {
     return sectors;
 }
 
-// Function to fetch market data specifically for close-to-open period
-async function fetchCloseToOpenMarketData() {
-    const timing = getMarketTimingInfo();
-    const closeToOpenData = {
-        previousDayClose: {},
-        afterHoursMovement: {},
-        preMarketActivity: {},
+// Function to fetch overnight market data (close to open focus)
+async function fetchOvernightMarketData() {
+    const overnightData = {
+        afterHoursFutures: {},
         overnightSectors: {},
-        globalMarketImpact: {},
-        currencyMovesOvernight: {},
+        afterHoursMovers: {
+            topGainers: [],
+            topLosers: []
+        },
         overnightNews: [],
-        economicEventsOvernight: []
+        globalMarkets: {},
+        currencyMoves: {}
     };
     
     try {
-        console.log(`Fetching close-to-open data (${timing.closeToOpenHours} hour window)...`);
-        
-        // Fetch previous day's closing data for major indices
+        // Fetch after-hours and futures data
         if (ALPHA_VANTAGE_API_KEY) {
-            const majorIndices = ['SPY', 'QQQ', 'DIA', 'IWM']; // Major index ETFs
+            console.log('Fetching overnight market data...');
             
-            for (const symbol of majorIndices) {
+            // Focus on major index ETFs for after-hours indication
+            const majorETFs = ['SPY', 'QQQ', 'DIA']; // Proxies for overnight sentiment
+            
+            for (const symbol of majorETFs) {
                 try {
                     const response = await axios.get(
-                        `https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=${symbol}&interval=5min&apikey=${ALPHA_VANTAGE_API_KEY}`
+                        `https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=${symbol}&apikey=${ALPHA_VANTAGE_API_KEY}`
                     );
-                    
-                    if (response.data['Time Series (5min)']) {
-                        const timeSeries = response.data['Time Series (5min)'];
-                        const timeKeys = Object.keys(timeSeries).sort().reverse();
-                        
-                        // Get previous day's 4:00 PM close data
-                        const previousCloseData = findPreviousCloseData(timeSeries, timeKeys);
-                        // Get current pre-market/after-hours data
-                        const currentData = timeSeries[timeKeys[0]];
-                        
-                        closeToOpenData.previousDayClose[symbol] = {
-                            close: previousCloseData ? previousCloseData['4. close'] : 'N/A',
-                            volume: previousCloseData ? previousCloseData['5. volume'] : 'N/A',
-                            timestamp: 'Previous 4:00 PM ET'
-                        };
-                        
-                        closeToOpenData.preMarketActivity[symbol] = {
-                            current: currentData['4. close'],
-                            change: previousCloseData ? 
-                                (parseFloat(currentData['4. close']) - parseFloat(previousCloseData['4. close'])).toFixed(2) : 'N/A',
-                            changePercent: previousCloseData ? 
-                                (((parseFloat(currentData['4. close']) - parseFloat(previousCloseData['4. close'])) / parseFloat(previousCloseData['4. close'])) * 100).toFixed(2) + '%' : 'N/A',
-                            session: timing.sessionStatus
+                    if (response.data['Global Quote']) {
+                        overnightData.afterHoursFutures[symbol] = {
+                            ...response.data['Global Quote'],
+                            session: 'After-Hours/Extended'
                         };
                     }
-                    
                     await new Promise(resolve => setTimeout(resolve, 1000));
                 } catch (error) {
-                    console.log(`Failed to fetch close-to-open data for ${symbol}:`, error.message);
+                    console.log(`Failed to fetch overnight data for ${symbol}:`, error.message);
                 }
             }
             
-            // Fetch sector ETFs for overnight sector rotation analysis
+            // Fetch sector ETFs for overnight sector analysis
             const sectorETFs = ['XLF', 'XLK', 'XLE', 'XLV', 'XLI', 'XLY', 'XLP', 'XLU', 'XLB'];
             for (const etf of sectorETFs) {
                 try {
                     const response = await axios.get(
                         `https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=${etf}&apikey=${ALPHA_VANTAGE_API_KEY}`
                     );
-                    
                     if (response.data['Global Quote']) {
-                        const quote = response.data['Global Quote'];
-                        closeToOpenData.overnightSectors[etf] = {
-                            previousClose: quote['08. previous close'],
-                            currentPrice: quote['05. price'],
-                            change: quote['09. change'],
-                            changePercent: quote['10. change percent'],
+                        overnightData.overnightSectors[etf] = {
+                            ...response.data['Global Quote'],
                             name: getSectorName(etf),
-                            session: 'Close-to-Open Analysis'
+                            session: 'Extended Hours'
                         };
                     }
-                    
                     await new Promise(resolve => setTimeout(resolve, 1000));
                 } catch (error) {
-                    console.log(`Failed to fetch sector close-to-open data for ${etf}:`, error.message);
+                    console.log(`Failed to fetch overnight sector data for ${etf}:`, error.message);
+                }
+            }
+            
+            // Fetch major currency pairs for overnight FX moves
+            const currencies = [
+                { from: 'EUR', to: 'USD' },
+                { from: 'GBP', to: 'USD' },
+                { from: 'USD', to: 'JPY' }
+            ];
+            
+            for (const curr of currencies) {
+                try {
+                    const response = await axios.get(
+                        `https://www.alphavantage.co/query?function=CURRENCY_EXCHANGE_RATE&from_currency=${curr.from}&to_currency=${curr.to}&apikey=${ALPHA_VANTAGE_API_KEY}`
+                    );
+                    if (response.data && response.data['Realtime Currency Exchange Rate']) {
+                        const rate = response.data['Realtime Currency Exchange Rate'];
+                        overnightData.currencyMoves[`${curr.from}${curr.to}`] = {
+                            rate: parseFloat(rate['5. Exchange Rate']).toFixed(4),
+                            lastRefreshed: rate['6. Last Refreshed'],
+                            session: 'Overnight'
+                        };
+                    }
+                    await new Promise(resolve => setTimeout(resolve, 1000));
+                } catch (error) {
+                    console.log(`Failed to fetch overnight FX data for ${curr.from}${curr.to}:`, error.message);
                 }
             }
         }
         
-        // Fetch overnight news specifically in the close-to-open window
+        // Fetch overnight news and global market data
         if (FINNHUB_API_KEY) {
+            console.log('Fetching overnight news and global markets...');
+            
             try {
                 const newsResponse = await axios.get(
                     `https://finnhub.io/api/v1/news?category=general&token=${FINNHUB_API_KEY}`
                 );
-                
                 if (newsResponse.data && Array.isArray(newsResponse.data)) {
-                    const lastCloseTime = new Date(timing.lastClose).getTime() / 1000;
-                    const currentTime = Date.now() / 1000;
-                    
-                    // Filter news specifically from previous close to now
-                    closeToOpenData.overnightNews = newsResponse.data
-                        .filter(news => news.datetime >= lastCloseTime && news.datetime <= currentTime)
-                        .slice(0, 10)
-                        .map(news => ({
-                            ...news,
-                            relativeTime: `${Math.floor((currentTime - news.datetime) / 3600)}h ago`,
-                            inCloseToOpenWindow: true
-                        }));
+                    // Filter for overnight news (last 12 hours)
+                    const twelveHoursAgo = Date.now() / 1000 - (12 * 60 * 60);
+                    overnightData.overnightNews = newsResponse.data
+                        .filter(news => news.datetime > twelveHoursAgo)
+                        .slice(0, 8);
                 }
             } catch (error) {
-                console.log('Failed to fetch close-to-open news:', error.message);
+                console.log('Failed to fetch overnight news:', error.message);
             }
         }
         
     } catch (error) {
-        console.log('Close-to-open market data fetch failed, using sample data');
+        console.log('Overnight market data fetch failed, using sample data');
     }
     
-    // Generate sample data if no real data retrieved
-    if (Object.keys(closeToOpenData.overnightSectors).length === 0) {
-        console.log('Generating sample close-to-open sector data...');
-        closeToOpenData.overnightSectors = generateCloseToOpenSectors(timing);
+    // Generate sample overnight data if no real data retrieved
+    if (Object.keys(overnightData.overnightSectors).length === 0) {
+        console.log('Generating sample overnight sector data...');
+        overnightData.overnightSectors = generateOvernightSectors();
     }
     
-    return closeToOpenData;
-}
-
-// Helper function to find previous day's 4 PM close data
-function findPreviousCloseData(timeSeries, timeKeys) {
-    // Look for 16:00 (4 PM) timestamp from previous trading day
-    for (const timeKey of timeKeys) {
-        const date = new Date(timeKey);
-        if (date.getHours() === 16 && date.getMinutes() === 0) {
-            return timeSeries[timeKey];
-        }
+    if (overnightData.afterHoursMovers.topGainers.length === 0) {
+        console.log('Generating sample overnight movers...');
+        overnightData.afterHoursMovers.topGainers = generateOvernightMovers('gainers');
+        overnightData.afterHoursMovers.topLosers = generateOvernightMovers('losers');
     }
-    // Fallback to most recent data point before current session
-    return timeSeries[timeKeys[timeKeys.length - 1]];
+    
+    return overnightData;
 }
 
-// Generate sample close-to-open sector data
-function generateCloseToOpenSectors(timing) {
-    const sectors = {};
-    const sectorETFs = ['XLF', 'XLK', 'XLE', 'XLV', 'XLI', 'XLY', 'XLP', 'XLU', 'XLB'];
-    
-    sectorETFs.forEach(etf => {
-        const previousClose = 30 + Math.random() * 50;
-        // Close-to-open moves reflecting overnight sentiment
-        const changePercent = (Math.random() - 0.5) * 4; // -2% to +2% overnight
-        const change = (previousClose * changePercent / 100).toFixed(2);
-        const currentPrice = (previousClose + parseFloat(change)).toFixed(2);
-        
-        sectors[etf] = {
-            previousClose: `${previousClose.toFixed(2)}`,
-            currentPrice: `${currentPrice}`,
-            change: `${change > 0 ? '+' : ''}${change}`,
-            changePercent: `${changePercent > 0 ? '+' : ''}${changePercent.toFixed(2)}%`,
-            name: getSectorName(etf),
-            session: `Close-to-Open (${timing.closeToOpenHours}h)`
-        };
-    });
-    
-    return sectors;
-}
-
-// Format close-to-open data for the prompt
-function formatCloseToOpenDataForPrompt(closeToOpenData) {
+// Format overnight data for the prompt
+function formatOvernightDataForPrompt(overnightData) {
     const timing = getMarketTimingInfo();
     
-    let dataString = `CLOSE-TO-OPEN MARKET ANALYSIS:\n`;
-    dataString += `Previous Trading Day Close: ${timing.lastClose}\n`;
-    dataString += `Current Trading Day Open: ${timing.todayOpen}\n`;
-    dataString += `Close-to-Open Window: ${timing.closeToOpenHours} hours\n`;
-    dataString += `Current Session: ${timing.sessionStatus}\n`;
-    dataString += `Time Since Close: ${timing.hoursSinceClose}h ${timing.minutesSinceClose}m\n\n`;
+    let dataString = `OVERNIGHT MARKET DATA (Market Close to Open Analysis):\n`;
+    dataString += `Last Market Close: ${timing.lastClose}\n`;
+    dataString += `Next Market Open: ${timing.nextOpen}\n`;
+    dataString += `Hours Since Close: ${timing.hoursSinceClose}\n`;
+    dataString += `Time to Open: ${timing.timeToOpenStr}\n\n`;
     
-    if (Object.keys(closeToOpenData.previousDayClose).length > 0) {
-        dataString += "PREVIOUS DAY'S CLOSING LEVELS:\n";
-        Object.entries(closeToOpenData.previousDayClose).forEach(([symbol, data]) => {
-            dataString += `- ${symbol}: Closed at ${data.close} (Volume: ${data.volume})\n`;
+    if (Object.keys(overnightData.afterHoursFutures).length > 0) {
+        dataString += "AFTER-HOURS/EXTENDED TRADING DATA:\n";
+        Object.entries(overnightData.afterHoursFutures).forEach(([symbol, data]) => {
+            const price = data.price || data['05. price'] || data.c || 'N/A';
+            const change = data.change || data['09. change'] || data.d || 'N/A';
+            const changePercent = data.changePercent || data['10. change percent'] || data.dp || 'N/A';
+            dataString += `- ${symbol} (Extended Hours): ${price} (${change} / ${changePercent})\n`;
         });
         dataString += "\n";
     }
     
-    if (Object.keys(closeToOpenData.preMarketActivity).length > 0) {
-        dataString += `CURRENT ${timing.sessionStatus.toUpperCase()} ACTIVITY vs PREVIOUS CLOSE:\n`;
-        Object.entries(closeToOpenData.preMarketActivity).forEach(([symbol, data]) => {
-            dataString += `- ${symbol}: ${data.current} (${data.change} / ${data.changePercent}) [${data.session}]\n`;
+    if (Object.keys(overnightData.overnightSectors).length > 0) {
+        dataString += "OVERNIGHT SECTOR ANALYSIS (ETF Extended Hours):\n";
+        Object.entries(overnightData.overnightSectors).forEach(([symbol, data]) => {
+            const price = data.price || data['05. price'] || 'N/A';
+            const change = data.change || data['09. change'] || 'N/A';
+            const changePercent = data.changePercent || data['10. change percent'] || 'N/A';
+            dataString += `- ${symbol} (${data.name}) Extended: ${price} (${change} / ${changePercent})\n`;
         });
         dataString += "\n";
     }
     
-    if (Object.keys(closeToOpenData.overnightSectors).length > 0) {
-        dataString += "SECTOR ROTATION (CLOSE-TO-OPEN):\n";
-        Object.entries(closeToOpenData.overnightSectors).forEach(([symbol, data]) => {
-            const prevClose = data.previousClose || 'N/A';
-            const current = data.currentPrice || 'N/A';
-            const change = data.change || 'N/A';
-            const changePercent = data.changePercent || 'N/A';
-            dataString += `- ${symbol} (${data.name}): ${prevClose} → ${current} (${change} / ${changePercent})\n`;
+    if (overnightData.afterHoursMovers.topGainers.length > 0) {
+        dataString += "TOP AFTER-HOURS GAINERS:\n";
+        overnightData.afterHoursMovers.topGainers.forEach((stock, index) => {
+            dataString += `${index + 1}. ${stock.symbol}: ${stock.price} (${stock.changePercent}) Vol: ${stock.volume} [${stock.timeframe}]\n`;
         });
         dataString += "\n";
     }
     
-    if (closeToOpenData.overnightNews.length > 0) {
-        dataString += "NEWS IN CLOSE-TO-OPEN WINDOW:\n";
-        closeToOpenData.overnightNews.forEach((news, index) => {
-            dataString += `${index + 1}. ${news.headline} (${news.relativeTime})\n`;
+    if (overnightData.afterHoursMovers.topLosers.length > 0) {
+        dataString += "TOP AFTER-HOURS LOSERS:\n";
+        overnightData.afterHoursMovers.topLosers.forEach((stock, index) => {
+            dataString += `${index + 1}. ${stock.symbol}: ${stock.price} (${stock.changePercent}) Vol: ${stock.volume} [${stock.timeframe}]\n`;
         });
         dataString += "\n";
     }
     
-    // Add sample close-to-open movers if no real data
-    const timing2 = getMarketTimingInfo();
-    const sampleGainers = generateCloseToOpenMovers('gainers', timing2);
-    const sampleLosers = generateCloseToOpenMovers('losers', timing2);
-    
-    dataString += "TOP CLOSE-TO-OPEN GAINERS:\n";
-    sampleGainers.slice(0, 5).forEach((stock, index) => {
-        dataString += `${index + 1}. ${stock.symbol}: ${stock.previousClose} → ${stock.currentPrice} (${stock.changePercent}) [${stock.timeframe}]\n`;
-    });
-    dataString += "\n";
-    
-    dataString += "TOP CLOSE-TO-OPEN LOSERS:\n";
-    sampleLosers.slice(0, 5).forEach((stock, index) => {
-        dataString += `${index + 1}. ${stock.symbol}: ${stock.previousClose} → ${stock.currentPrice} (${stock.changePercent}) [${stock.timeframe}]\n`;
-    });
-    dataString += "\n";
-    
-    return dataString;
-}
-}reshed})\n`;
+    if (Object.keys(overnightData.currencyMoves).length > 0) {
+        dataString += "OVERNIGHT CURRENCY MOVEMENTS:\n";
+        Object.entries(overnightData.currencyMoves).forEach(([pair, data]) => {
+            dataString += `- ${pair}: ${data.rate} (Last: ${data.lastRefreshed})\n`;
         });
         dataString += "\n";
     }
@@ -475,152 +375,136 @@ function formatCloseToOpenDataForPrompt(closeToOpenData) {
     return dataString;
 }
 
-// Enhanced comprehensive market prompt focused strictly on close-to-open
-const createCloseToOpenMarketPrompt = (closeToOpenData) => {
+// Enhanced comprehensive market prompt
+const createOvernightMarketPrompt = (overnightData) => {
     const timing = getMarketTimingInfo();
     
-    return `You are a financial analyst creating a comprehensive CLOSE-TO-OPEN market analysis. Use multiple authoritative financial sources and cross-reference data points for accuracy. Focus STRICTLY on the ${timing.closeToOpenHours}-hour window from PREVIOUS TRADING DAY'S 4:00 PM ET CLOSE to TODAY'S MARKET ACTIVITY.
+    return `You are a financial analyst creating a comprehensive daily market summary. Use multiple authoritative financial sources and cross-reference data points for accuracy. Prioritize official exchange data, central bank communications, and primary financial news sources. Create a professional report with these exact sections:
 
-${formatCloseToOpenDataForPrompt(closeToOpenData)}
+${formatOvernightDataForPrompt(overnightData)}
 
 **EXECUTIVE SUMMARY**
-[2-sentence overview focusing on how previous day's close is setting up today's market activity and key themes for the close-to-open transition]
+[2-sentence overview of global market sentiment and key risk factors]
 
-**PREVIOUS DAY'S CLOSE ANALYSIS**
-Search and verify data specifically for yesterday's market close:
-- S&P 500, NASDAQ, DOW closing levels from previous trading day (exact closing prices and volumes)
-- Previous day's sector performance at 4:00 PM ET close (XLF, XLK, XLE, XLV, XLI, XLY, XLP, XLU, XLB closing levels)
-- Previous day's final hour trading patterns and institutional activity before close
-- Previous day's after-hours earnings releases and corporate announcements post-4 PM
-- Currency and commodity closing levels from previous day
-- Cross-reference previous day's closing data from multiple sources
-[Target: 200 words - focus on previous day's close as foundation]
+**ASIAN MARKETS OVERNIGHT**
+Search multiple sources and verify data for:
+- Nikkei 225, Hang Seng, Shanghai Composite, ASX 200 performance (include exact closing levels and % changes)
+- Major Asian corporate earnings with specific numbers (revenue, EPS beats/misses)
+- Key economic data releases from Asia (actual vs. consensus vs. prior)
+- USD/JPY, USD/CNY, AUD/USD currency movements (current levels and daily changes)
+- Central bank communications from Asia (direct quotes from officials when available)
+- Cross-reference Asian market data from at least 2 sources
+[Target: 150 words]
 
-**OVERNIGHT DEVELOPMENTS IMPACTING TODAY'S OPEN**
-Search for developments that occurred AFTER previous trading day's close:
-- Asian market performance during US market closure (Nikkei, Hang Seng, Shanghai impact on US futures)
-- European market activity affecting US market open (FTSE, DAX, CAC performance transmission)
-- After-hours and pre-market trading activity in major US stocks
-- Economic data releases from global markets during US closure
-- Corporate earnings and announcements released after previous day's 4 PM close
-- Federal Reserve or central bank communications during market closure
-[Target: 250 words - events between close and current time]
+**EUROPEAN MARKETS SUMMARY**
+Search for and report on:
+- FTSE 100, DAX, CAC 40, Euro Stoxx 50 performance
+- Major European corporate news
+- ECB policy updates or eurozone economic data
+- EUR/USD, GBP/USD movements
+- Any significant political/economic developments in Europe
+[Target: 150 words]
 
-**FUTURES GAP ANALYSIS**
-Analyze futures performance from previous close to current:
-- S&P 500, NASDAQ, DOW futures vs previous day's closing levels
-- Gap scenarios for market open based on futures positioning
-- Overnight futures volume and institutional activity
-- VIX futures changes indicating sentiment shift from close to open
-- Commodity futures overnight moves (oil, gold, metals) affecting equity gaps
-- Currency futures impact on multinational positioning for open
-[Target: 150 words - gap analysis for opening]
+**US MARKET OUTLOOK**
+Search for and report on:
+- Current S&P 500, NASDAQ, DOW futures
+- Key economic releases scheduled for today
+- Major US earnings announcements expected
+- Federal Reserve speakers or policy implications
+- Any overnight developments affecting US markets
+[Target: 150 words]
 
-**SECTOR ROTATION FROM CLOSE TO OPEN**
-Analyze sector performance in the close-to-open window:
-- **Previous Day Close vs Current**: Sector ETF performance comparison
-- **XLF (Financial Services)**: Interest rate overnight moves affecting financial gap
-- **XLK (Technology)**: Asian tech performance and semiconductor overnight news
-- **XLE (Energy)**: Oil price overnight action affecting energy sector open
-- **XLV (Healthcare)**: Biotech and pharma developments during closure
-- **XLI (Industrials)**: Global manufacturing data released during closure
-- **XLY (Consumer Discretionary)**: Consumer spending data and retail developments
-- **XLP (Consumer Staples)**: Defensive positioning changes overnight
-- **XLU (Utilities)**: Interest rate sensitivity and overnight bond moves
-- **XLB (Materials)**: Commodity price action affecting materials open
-[Target: 300 words - sector-specific close-to-open analysis]
+**FUTURES ANALYSIS**
+Search for and report on:
+- Major index futures movements (ES, NQ, YM) and positioning
+- Commodity futures performance (crude oil, gold, natural gas)
+- Currency futures trends and volatility
+- VIX futures and implied volatility changes
+- Key futures expirations or rollover effects
+[Target: 120 words]
 
-**AFTER-HOURS & PRE-MARKET MOVERS**
-Focus on stocks moving between close and open:
-- Top gainers from previous close to current (specific companies and catalysts)
-- Top losers from previous close to current (reasons for declines)
-- After-hours earnings releases and their stock price impacts
-- Pre-market volume leaders and institutional activity
-- Gap-up and gap-down scenarios for individual stocks at open
-- Extended-hours trading liquidity and price discovery issues
-[Target: 200 words - individual stock close-to-open moves]
+**RESEARCH HIGHLIGHTS**
+Search for and report on:
+- Major broker upgrades, downgrades, or target price changes
+- New research reports from investment banks
+- Analyst consensus changes on key stocks or sectors
+- Notable research calls or thematic investment ideas
+- Institutional positioning updates or flow data
+[Target: 120 words]
 
-**ECONOMIC DATA & EARNINGS IMPACT**
-Events affecting the close-to-open transition:
-- Economic releases from Asian and European markets during US closure
-- Earnings releases after previous day's close with specific EPS/revenue impacts
-- Corporate guidance updates released during market closure
-- Central bank communications from global markets during closure
-- Economic indicators scheduled for today that will interact with overnight developments
-[Target: 150 words - fundamental catalysts for gap]
+**ECONOMIC AND EARNINGS CALENDAR**
+Verify timing and consensus from multiple sources:
+- Today's economic data releases with exact release times (ET), consensus forecasts, and previous readings
+- Major earnings announcements with confirmed reporting times and analyst EPS/revenue estimates
+- Corporate guidance updates with specific numerical targets when provided
+- Economic indicators ranked by market-moving potential
+- Federal Reserve speakers with confirmed speaking times and event details
+- Include data source attribution for key forecasts
+[Target: 120 words]
 
-**BONDS & COMMODITIES CLOSE-TO-OPEN**
-Cross-asset moves affecting equity open:
-- Treasury futures overnight performance vs previous day's close
-- US 10-year yield changes during closure affecting equity valuations
-- Gold, oil, copper overnight moves and equity sector implications
-- Dollar strength/weakness overnight affecting multinational positioning
-- Credit spreads changes during global trading affecting risk sentiment
-[Target: 150 words - cross-asset close-to-open analysis]
+**SECTOR PERFORMANCE**
+Search for and report on:
+- Best and worst performing S&P 500 sectors
+- Key sector rotation themes or trends
+- Industry-specific news affecting sector performance
+- Relative strength analysis of major sectors
+- Any sector-specific catalysts or headwinds
+[Target: 120 words]
 
-**TECHNICAL LEVELS FOR MARKET OPEN**
-Technical analysis for the opening based on close-to-open moves:
-- Support and resistance levels established from previous close
-- Gap analysis and gap-fill probabilities for major indices
-- Options positioning from previous close affecting opening gamma
-- Technical breakouts or breakdowns occurring overnight
-- Volume profile analysis for expected opening range
-[Target: 150 words - technical setup from close to open]
+**BONDS AND COMMODITIES**
+Search for and report on:
+- US Treasury yield movements across the curve
+- Credit spreads and high-yield bond performance
+- Gold, silver, copper, and crude oil price action
+- Agricultural commodity trends
+- Any central bank bond buying or selling activity
+[Target: 120 words]
 
-**GLOBAL MARKET TRANSMISSION**
-How global markets are affecting US open:
-- Asian market close impact on US futures during closure
-- European market performance transmission to US pre-market
-- Cross-border capital flows from overnight trading sessions
-- Global risk-on/risk-off sentiment changes during US closure
-- International institutional positioning changes affecting US open
-[Target: 150 words - global market linkage to US open]
+**TECHNICAL LEVELS**
+Use recent price action and verified technical data:
+- Key support and resistance levels for major indices (include specific price levels and timeframes)
+- Technical breakouts or breakdowns with volume confirmation
+- Chart patterns backed by quantitative momentum indicators (RSI, MACD levels)
+- Options flow data from reputable sources (unusual activity thresholds)
+- Critical intraday levels with percentage distances from current prices
+- Reference established technical analysis principles
+[Target: 120 words]
 
-**RESEARCH & INSTITUTIONAL ACTIVITY**
-Analyst and institutional activity in close-to-open window:
-- Research reports released after previous market close
-- Analyst upgrades/downgrades announced during closure
-- Institutional positioning changes based on overnight developments
-- Hedge fund activity in global markets during US closure
-- Investment bank research affecting opening positioning
-[Target: 120 words - professional research impact]
+**RISK ASSESSMENT**
+Search for and report on:
+- Current geopolitical risks affecting markets
+- Credit market stress indicators or warning signs
+- Volatility measures and risk-off/risk-on sentiment
+- Correlation breakdowns or unusual market behavior
+- Any systemic risks or tail risk considerations
+[Target: 120 words]
 
-**RISK ASSESSMENT FOR OPENING**
-Risk factors for today's market open based on overnight developments:
-- Volatility expectations based on overnight global market activity
-- Geopolitical developments during market closure affecting opening sentiment
-- Liquidity conditions expected at market open
-- Correlation breakdown risks from overnight global market moves
-- Gap risk management for opening positions
-[Target: 120 words - risk management for open]
-
-**OPENING STRATEGY SUMMARY**
-[3-sentence summary of key close-to-open themes, gap scenarios, and positioning strategies for market open based on the ${timing.closeToOpenHours}-hour analysis window]
+**KEY TAKEAWAYS**
+[2-sentence summary of main trading themes and risk factors for the day]
 
 IMPORTANT ACCURACY GUIDELINES:
-- Verify all data specifically from previous trading day's 4:00 PM ET close
-- Include exact timestamps showing close-to-open time progression
-- Cross-reference overnight developments from multiple financial sources
-- Focus ONLY on the specific close-to-open window, not general market commentary
-- Distinguish between previous day's close data and current session data
-- Use official exchange data for closing and opening levels
+- Verify all numerical data (prices, percentages, levels) from at least 2 authoritative sources
+- Include exact timestamps for market data (specify market close times and time zones)
+- Cite specific sources for economic forecasts and earnings estimates
+- Use official exchange data over third-party aggregators when possible
+- Cross-reference breaking news from multiple financial news outlets
+- Include confidence levels for forward-looking statements or predictions
+- Distinguish between preliminary and final economic data releases
+- Note any data revisions or corrections from previous periods
 
-Write in professional institutional language for traders and portfolio managers preparing for market open. Include today's date: ${new Date().toDateString()}.
+Use current market data from today's date and specify market session timing (Asian close, European open, US pre-market, etc.). Include specific percentage moves and index levels with decimal precision. Write in professional financial language suitable for institutional clients.
 
-CRITICAL: This analysis must focus EXCLUSIVELY on the period from PREVIOUS TRADING DAY'S 4:00 PM CLOSE to TODAY'S MARKET ACTIVITY. All data points and analysis should reference this specific ${timing.closeToOpenHours}-hour close-to-open window.`;
+Include today's date: ${new Date().toDateString()}.`;
 };
-};
 
-async function generateCloseToOpenMarketReport() {
+async function generateOvernightMarketReport() {
     try {
         const timing = getMarketTimingInfo();
-        console.log(`📊 Generating CLOSE-TO-OPEN MARKET ANALYSIS (${timing.closeToOpenHours} hour window)...`);
-        console.log(`📅 Previous Close: ${timing.lastClose}`);
-        console.log(`📅 Current Session: ${timing.sessionStatus}`);
+        console.log(`🌙 Generating OVERNIGHT MARKET REPORT (${timing.hoursSinceClose} hours since close)...`);
         
-        // Fetch close-to-open market data
-        const closeToOpenData = await fetchCloseToOpenMarketData();
-        console.log('📊 Close-to-open data fetched - Previous close:', Object.keys(closeToOpenData.previousDayClose).length, 'Current activity:', Object.keys(closeToOpenData.preMarketActivity).length, 'News:', closeToOpenData.overnightNews.length);
+        // Fetch overnight market data
+        const overnightData = await fetchOvernightMarketData();
+        console.log('📊 Overnight data fetched - After-hours:', Object.keys(overnightData.afterHoursFutures).length, 'Sectors:', Object.keys(overnightData.overnightSectors).length, 'News:', overnightData.overnightNews.length);
         
         const response = await axios.post(ANTHROPIC_API_URL, {
             model: 'claude-sonnet-4-20250514',
@@ -628,7 +512,7 @@ async function generateCloseToOpenMarketReport() {
             temperature: 0.3,
             messages: [{
                 role: 'user',
-                content: createCloseToOpenMarketPrompt(closeToOpenData)
+                content: createOvernightMarketPrompt(overnightData)
             }]
         }, {
             headers: {
@@ -646,49 +530,47 @@ async function generateCloseToOpenMarketReport() {
             fs.mkdirSync(reportsDir, { recursive: true });
         }
         
-        // Generate filename with close-to-open focus
+        // Generate filename with overnight focus
         const today = new Date();
         const dateStr = today.toISOString().split('T')[0];
-        const filename = `close-to-open-analysis-${dateStr}.md`;
+        const filename = `overnight-market-report-${dateStr}.md`;
         const filepath = path.join(reportsDir, filename);
         
-        // Add metadata header focused on close-to-open period
+        // Add metadata header focused on morning period
         const reportWithMetadata = `${report}
 
 ---
 
-*Close-to-Open Analysis: ${timing.closeToOpenHours}-hour window from Previous Close to Current Session*  
-*Previous Close: ${timing.lastClose}*  
-*Current Session: ${timing.sessionStatus}*  
-*Analysis Generated: ${new Date().toLocaleString('en-US', { timeZone: 'America/New_York' })} ET*
+*This morning market report covers the complete period from market close to open*  
+*READY FOR NEXT MARKET SESSION*
 `;
         
-        // Write close-to-open report to file
+        // Write overnight report to file
         fs.writeFileSync(filepath, reportWithMetadata);
         
-        console.log(`✅ Close-to-open analysis generated: ${filename}`);
+        console.log(`Morning market report generated: ${filename}`);
         console.log(`📊 Report length: ${report.length} characters`);
-        console.log(`⏰ Analysis window: ${timing.closeToOpenHours} hours`);
-        console.log(`⏰ Session status: ${timing.sessionStatus}`);
+        console.log(`⏰ Hours since close: ${timing.hoursSinceClose}`);
+        console.log(`⏰ Time to market open: ${timing.timeToOpenStr}`);
         
-        // Create latest close-to-open report
-        const latestFilepath = path.join(reportsDir, 'latest-close-to-open-analysis.md');
+        // Create latest morning report
+        const latestFilepath = path.join(reportsDir, 'latest-morning-market-report.md');
         fs.writeFileSync(latestFilepath, reportWithMetadata);
         
-        // Save raw close-to-open data
-        const rawDataPath = path.join(reportsDir, `close-to-open-data-${dateStr}.json`);
-        fs.writeFileSync(rawDataPath, JSON.stringify(closeToOpenData, null, 2));
+        // Save raw data
+        const rawDataPath = path.join(reportsDir, `morning-data-${dateStr}.json`);
+        fs.writeFileSync(rawDataPath, JSON.stringify(overnightData, null, 2));
         
-        // Send close-to-open report via email
-        console.log('📧 Sending close-to-open market analysis...');
-        await sendCloseToOpenReportEmail(reportWithMetadata, dateStr, timing);
+        // Send morning report via email
+        console.log('📧 Sending morning market report...');
+        await sendOvernightReportEmail(reportWithMetadata, dateStr);
         
-        console.log('✅ CLOSE-TO-OPEN MARKET ANALYSIS COMPLETED!');
-        console.log(`📈 ${timing.closeToOpenHours}-hour close-to-open window analyzed`);
-        console.log(`📊 Current session: ${timing.sessionStatus}`);
+        console.log('✅ MORNING MARKET REPORT COMPLETED!');
+        console.log(`${timing.hoursSinceClose}-hour close-to-open analysis ready`);
+        console.log(`⏰ Market opens in ${timing.timeToOpenStr}`);
         
     } catch (error) {
-        console.error('❌ Error generating close-to-open market analysis:', error.response?.data || error.message);
+        console.error('❌ Error generating morning market report:', error.response?.data || error.message);
         process.exit(1);
     }
 }
