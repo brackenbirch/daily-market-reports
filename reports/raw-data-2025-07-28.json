@@ -1,0 +1,148 @@
+{
+  "realFutures": {},
+  "extendedHoursETFs": {
+    "SPY": {
+      "name": "SPY",
+      "price": "637.10",
+      "change": "2.68",
+      "changePercent": "0.42",
+      "session": "Real-time",
+      "volume": 1274520,
+      "lastUpdate": "2025-07-25 20:00:00"
+    },
+    "QQQ": {
+      "name": "QQQ",
+      "price": "566.98",
+      "change": "1.36",
+      "changePercent": "0.24",
+      "session": "Real-time",
+      "volume": 1574,
+      "lastUpdate": "2025-07-25 19:59:00"
+    },
+    "DIA": {
+      "name": "DIA",
+      "price": "449.02",
+      "change": "1.91",
+      "changePercent": "0.43",
+      "session": "Real-time",
+      "volume": 18499,
+      "lastUpdate": "2025-07-25 20:00:00"
+    },
+    "XLF": {
+      "name": "Financial Services",
+      "price": "53.44",
+      "change": "0.37",
+      "changePercent": "0.70",
+      "session": "Real-time",
+      "volume": 554605,
+      "lastUpdate": "2025-07-25 20:00:00"
+    },
+    "XLK": {
+      "name": "Technology",
+      "price": "261.99",
+      "change": "0.60",
+      "changePercent": "0.23",
+      "session": "Real-time",
+      "volume": 94609,
+      "lastUpdate": "2025-07-25 20:00:00"
+    },
+    "XLE": {
+      "name": "Energy",
+      "price": "87.10",
+      "change": "-0.33",
+      "changePercent": "-0.38",
+      "session": "Real-time",
+      "volume": 210435,
+      "lastUpdate": "2025-07-25 20:00:00"
+    },
+    "XLV": {
+      "name": "Healthcare",
+      "price": "136.48",
+      "change": "0.72",
+      "changePercent": "0.53",
+      "session": "Real-time",
+      "volume": 72493,
+      "lastUpdate": "2025-07-25 20:00:00"
+    },
+    "XLI": {
+      "name": "Industrials",
+      "price": "154.99",
+      "change": "1.52",
+      "changePercent": "0.99",
+      "session": "Real-time",
+      "volume": 99921,
+      "lastUpdate": "2025-07-25 20:00:00"
+    }
+  },
+  "asianMarkets": {},
+  "currencyData": {
+    "EUR/USD": {
+      "rate": "1.1600",
+      "lastRefreshed": "2025-07-28 17:17:00",
+      "session": "Live"
+    },
+    "GBP/USD": {
+      "rate": "1.3375",
+      "lastRefreshed": "2025-07-28 17:17:16",
+      "session": "Live"
+    },
+    "USD/JPY": {
+      "rate": "148.4470",
+      "lastRefreshed": "2025-07-28 17:17:37",
+      "session": "Live"
+    }
+  },
+  "overnightNews": [
+    {
+      "category": "top news",
+      "datetime": 1753721700,
+      "headline": "Figma’s hot IPO may open the door for more big software deals",
+      "id": 7501309,
+      "image": "https://static2.finnhub.io/file/publicdatany/finnhubimage/market_watch_logo.png",
+      "related": "",
+      "source": "MarketWatch",
+      "summary": "Figma may lead the way for other software companies including Genesys, Canva and Databricks to conduct multibillion-dollar deals, one analyst said.",
+      "url": "https://www.marketwatch.com/story/figmas-hot-ipo-may-open-the-door-for-more-big-software-deals-7cfe9df6"
+    },
+    {
+      "category": "top news",
+      "datetime": 1753720980,
+      "headline": "Coinbase investors should cash in. The stock has rallied too much ahead of earnings, analyst says.",
+      "id": 7501310,
+      "image": "https://static2.finnhub.io/file/publicdatany/finnhubimage/market_watch_logo.png",
+      "related": "",
+      "source": "MarketWatch",
+      "summary": "If you bought Coinbase’s stock two months ago when Monness Crespi Hardt analyst Gus Gala recommended it, you should take the profit now, he said.",
+      "url": "https://www.marketwatch.com/story/coinbase-investors-should-cash-in-the-stock-has-rallied-too-much-ahead-of-earnings-analyst-says-dad5fff0"
+    },
+    {
+      "category": "top news",
+      "datetime": 1753719927,
+      "headline": "We're not fretting two downgrades of high-flying GE Vernova. Here's why",
+      "id": 7501303,
+      "image": "https://image.cnbcfm.com/api/v1/image/106316707-1577808608915gettyimages-632000346.jpeg?v=1753719450&w=1920&h=1080",
+      "related": "",
+      "source": "CNBC",
+      "summary": "The Investing Club holds its \"Morning Meeting\" every weekday at 10:20 a.m. ET.",
+      "url": "https://www.cnbc.com/2025/07/28/were-not-fretting-two-downgrades-of-high-flying-ge-vernova-heres-why-.html"
+    },
+    {
+      "category": "top news",
+      "datetime": 1753719600,
+      "headline": "Will Intel give up on chip manufacturing? Here’s how that could have big ripple effects.",
+      "id": 7501301,
+      "image": "https://static2.finnhub.io/file/publicdatany/finnhubimage/market_watch_logo.png",
+      "related": "",
+      "source": "MarketWatch",
+      "summary": "Samsung and TSMC could benefit from the move, while makers of wafer fab equipment may lose out, according to Bernstein analysts.",
+      "url": "https://www.marketwatch.com/story/will-intel-give-up-on-chip-manufacturing-heres-how-that-could-have-big-ripple-effects-dd76aa75"
+    }
+  ],
+  "dataQuality": {
+    "futuresDataAvailable": false,
+    "etfDataAvailable": true,
+    "asianDataAvailable": false,
+    "currencyDataAvailable": true,
+    "newsDataAvailable": true
+  }
+}
