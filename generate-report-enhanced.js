@@ -457,6 +457,7 @@ function formatCloseToOpenDataForPrompt(closeToOpenData) {
     dataString += "\n";
     
     return dataString;
+}
 }reshed})\n`;
         });
         dataString += "\n";
