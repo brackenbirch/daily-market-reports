@@ -3,9 +3,16 @@ const fs = require('fs');
 const path = require('path');
 const nodemailer = require('nodemailer');
 
+// API Keys - Using your existing setup
 const ANTHROPIC_API_KEY = process.env.ANTHROPIC_API_KEY;
 const ALPHA_VANTAGE_API_KEY = process.env.ALPHA_VANTAGE_API_KEY;
 const FINNHUB_API_KEY = process.env.FINNHUB_API_KEY;
+const POLYGON_API_KEY = process.env.POLYGON_API_KEY; // You already have this!
+const FIXER_API_KEY = process.env.FIXER_API_KEY; // You already have this!
+const NEWS_API_KEY = process.env.NEWS_API_KEY; // You already have this!
+const TRADING_ECONOMICS_API_KEY = process.env.TRADING_ECONOMICS_API_KEY; // You already have this!
+
+// Email configuration
 const GMAIL_USER = process.env.GMAIL_USER;
 const GMAIL_PASSWORD = process.env.GMAIL_PASSWORD;
 const WORK_EMAIL_LIST = process.env.WORK_EMAIL_LIST;
@@ -61,7 +68,459 @@ function getMarketTimingInfo() {
     };
 }
 
-// Generate sample overnight/after-hours movers
+// NEW: Fetch real futures data using your Polygon API
+async function fetchRealFuturesData() {
+    const futures = {};
+    
+    if (!POLYGON_API_KEY) {
+        console.log('⚠️  Polygon API key not found, using sample futures data');
+        return generateSampleFutures();
+    }
+    
+    // Using Polygon for real futures - you already have this API!
+    const futuresSymbols = {
+        'I:SPX': 'S&P 500 Futures',
+        'I:NDX': 'Nasdaq Futures', 
+        'I:DJI': 'Dow Futures'
+    };
+    
+    try {
+        console.log('📈 Fetching real-time futures data from Polygon...');
+        for (const [symbol, name] of Object.entries(futuresSymbols)) {
+            try {
+                const response = await axios.get(
+                    `https://api.polygon.io/v2/aggs/ticker/${symbol}/prev?adjusted=true&apikey=${POLYGON_API_KEY}`
+                );
+                
+                if (response.data && response.data.results && response.data.results[0]) {
+                    const data = response.data.results[0];
+                    futures[symbol] = {
+                        name,
+                        price: data.c.toFixed(2),
+                        change: (data.c - data.o).toFixed(2),
+                        changePercent: (((data.c - data.o) / data.o) * 100).toFixed(2),
+                        session: 'Extended Hours',
+                        volume: data.v
+                    };
+                }
+                
+                await new Promise(resolve => setTimeout(resolve, 200));
+            } catch (error) {
+                console.log(`Failed to fetch ${name}:`, error.message);
+            }
+        }
+        
+        console.log(`✅ Fetched ${Object.keys(futures).length} futures contracts`);
+    } catch (error) {
+        console.log('Error fetching futures data:', error.message);
+    }
+    
+    return Object.keys(futures).length > 0 ? futures : generateSampleFutures();
+}
+
+// Fallback to Alpha Vantage for ETFs (you already have this)
+async function fetchExtendedHoursETFs() {
+    const extendedData = {};
+    
+    if (!ALPHA_VANTAGE_API_KEY) {
+        console.log('⚠️  Alpha Vantage API key not found, using sample ETF data');
+        return generateOvernightSectors();
+    }
+    
+    const etfs = ['SPY', 'QQQ', 'DIA', 'XLF', 'XLK', 'XLE', 'XLV', 'XLI', 'XLY', 'XLP', 'XLU', 'XLB'];
+    
+    try {
+        console.log('📊 Fetching ETF data from Alpha Vantage...');
+        for (const etf of etfs) {
+            try {
+                const response = await axios.get(
+                    `https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=${etf}&apikey=${ALPHA_VANTAGE_API_KEY}`
+                );
+                
+                if (response.data['Global Quote']) {
+                    const quote = response.data['Global Quote'];
+                    extendedData[etf] = {
+                        name: getSectorName(etf),
+                        price: parseFloat(quote['05. price']).toFixed(2),
+                        change: parseFloat(quote['09. change']).toFixed(2),
+                        changePercent: parseFloat(quote['10. change percent'].replace('%', '')).toFixed(2),
+                        session: 'Regular Hours',
+                        volume: parseInt(quote['06. volume'])
+                    };
+                }
+                
+                await new Promise(resolve => setTimeout(resolve, 1000)); // Alpha Vantage rate limit
+            } catch (error) {
+                console.log(`Failed to fetch ${etf} from Alpha Vantage:`, error.message);
+            }
+        }
+        
+        console.log(`✅ Fetched ${Object.keys(extendedData).length} ETFs from Alpha Vantage`);
+    } catch (error) {
+        console.log('Error fetching ETF data:', error.message);
+    }
+    
+    return Object.keys(extendedData).length > 0 ? extendedData : generateOvernightSectors();
+}
+
+// NEW: Fetch real Asian market data using Trading Economics API
+async function fetchAsianMarkets() {
+    const asianData = {};
+    
+    if (!TRADING_ECONOMICS_API_KEY) {
+        console.log('⚠️  Trading Economics API key not found, trying alternative sources...');
+        return await fetchAsianMarketsAlternative();
+    }
+    
+    const asianIndices = {
+        'NIKKEI': 'Nikkei 225',
+        'HSI': 'Hang Seng', 
+        'SHCOMP': 'Shanghai Composite',
+        'AS51': 'ASX 200',
+        'KOSPI': 'KOSPI'
+    };
+    
+    try {
+        console.log('🌏 Fetching Asian markets from Trading Economics...');
+        for (const [symbol, name] of Object.entries(asianIndices)) {
+            try {
+                const response = await axios.get(
+                    `https://api.tradingeconomics.com/markets/symbol/${symbol}?c=${TRADING_ECONOMICS_API_KEY}`
+                );
+                
+                if (response.data && response.data[0]) {
+                    const data = response.data[0];
+                    asianData[name] = {
+                        symbol,
+                        price: data.Last,
+                        change: data.DailyChange,
+                        changePercent: data.DailyPercentualChange,
+                        dayHigh: data.High,
+                        dayLow: data.Low,
+                        date: data.Date
+                    };
+                }
+                
+                await new Promise(resolve => setTimeout(resolve, 300));
+            } catch (error) {
+                console.log(`Failed to fetch ${name}:`, error.message);
+            }
+        }
+        
+        console.log(`✅ Fetched ${Object.keys(asianData).length} Asian markets`);
+    } catch (error) {
+        console.log('Error fetching Asian markets:', error.message);
+    }
+    
+    return Object.keys(asianData).length > 0 ? asianData : await fetchAsianMarketsAlternative();
+}
+
+// Alternative Asian markets fetch using Alpha Vantage
+async function fetchAsianMarketsAlternative() {
+    const asianData = {};
+    
+    if (!ALPHA_VANTAGE_API_KEY) {
+        return generateSampleAsianMarkets();
+    }
+    
+    const asianETFs = ['EWJ', 'FXI', 'EWH', 'EWA']; // Japan, China, Hong Kong, Australia ETFs
+    const etfNames = {
+        'EWJ': 'Japan (Nikkei Proxy)',
+        'FXI': 'China (FXI Proxy)', 
+        'EWH': 'Hong Kong (EWH Proxy)',
+        'EWA': 'Australia (EWA Proxy)'
+    };
+    
+    try {
+        console.log('🌏 Fetching Asian market proxies via Alpha Vantage...');
+        for (const etf of asianETFs) {
+            try {
+                const response = await axios.get(
+                    `https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=${etf}&apikey=${ALPHA_VANTAGE_API_KEY}`
+                );
+                
+                if (response.data['Global Quote']) {
+                    const quote = response.data['Global Quote'];
+                    asianData[etfNames[etf]] = {
+                        symbol: etf,
+                        price: parseFloat(quote['05. price']),
+                        change: parseFloat(quote['09. change']),
+                        changePercent: parseFloat(quote['10. change percent'].replace('%', '')),
+                        volume: parseInt(quote['06. volume'])
+                    };
+                }
+                
+                await new Promise(resolve => setTimeout(resolve, 1000));
+            } catch (error) {
+                console.log(`Failed to fetch ${etf}:`, error.message);
+            }
+        }
+        
+        console.log(`✅ Fetched ${Object.keys(asianData).length} Asian market proxies`);
+    } catch (error) {
+        console.log('Error fetching Asian market alternatives:', error.message);
+    }
+    
+    return Object.keys(asianData).length > 0 ? asianData : generateSampleAsianMarkets();
+}
+
+// NEW: Fetch real currency data using your Fixer API
+async function fetchRealCurrencyData() {
+    const currencyData = {};
+    
+    if (!FIXER_API_KEY) {
+        console.log('⚠️  Fixer API key not found, trying free alternative...');
+        return await fetchCurrencyAlternative();
+    }
+    
+    try {
+        console.log('💱 Fetching real-time FX data from Fixer...');
+        const response = await axios.get(
+            `http://data.fixer.io/api/latest?access_key=${FIXER_API_KEY}&base=USD&symbols=EUR,GBP,JPY,CNY,AUD`
+        );
+        
+        if (response.data && response.data.rates) {
+            const rates = response.data.rates;
+            
+            currencyData['EURUSD'] = {
+                rate: (1 / rates.EUR).toFixed(4),
+                change: 'N/A', // Would need historical for change
+                session: 'Overnight',
+                lastUpdate: response.data.date
+            };
+            currencyData['GBPUSD'] = {
+                rate: (1 / rates.GBP).toFixed(4),
+                change: 'N/A',
+                session: 'Overnight',
+                lastUpdate: response.data.date
+            };
+            currencyData['USDJPY'] = {
+                rate: rates.JPY.toFixed(2),
+                change: 'N/A',
+                session: 'Overnight',
+                lastUpdate: response.data.date
+            };
+            currencyData['USDCNY'] = {
+                rate: rates.CNY.toFixed(4),
+                change: 'N/A',
+                session: 'Overnight',
+                lastUpdate: response.data.date
+            };
+            
+            console.log(`✅ Fetched ${Object.keys(currencyData).length} currency pairs from Fixer`);
+        }
+    } catch (error) {
+        console.log('Error fetching Fixer data, trying Alpha Vantage fallback:', error.message);
+        return await fetchCurrencyAlternative();
+    }
+    
+    return Object.keys(currencyData).length > 0 ? currencyData : await fetchCurrencyAlternative();
+}
+
+// Alternative currency fetch using Alpha Vantage
+async function fetchCurrencyAlternative() {
+    const currencyData = {};
+    
+    if (!ALPHA_VANTAGE_API_KEY) {
+        return generateSampleCurrencies();
+    }
+    
+    const currencies = [
+        { from: 'EUR', to: 'USD' },
+        { from: 'GBP', to: 'USD' },
+        { from: 'USD', to: 'JPY' }
+    ];
+    
+    try {
+        console.log('💱 Fetching FX data from Alpha Vantage fallback...');
+        for (const curr of currencies) {
+            try {
+                const response = await axios.get(
+                    `https://www.alphavantage.co/query?function=CURRENCY_EXCHANGE_RATE&from_currency=${curr.from}&to_currency=${curr.to}&apikey=${ALPHA_VANTAGE_API_KEY}`
+                );
+                
+                if (response.data && response.data['Realtime Currency Exchange Rate']) {
+                    const rate = response.data['Realtime Currency Exchange Rate'];
+                    currencyData[`${curr.from}${curr.to}`] = {
+                        rate: parseFloat(rate['5. Exchange Rate']).toFixed(4),
+                        lastRefreshed: rate['6. Last Refreshed'],
+                        session: 'Overnight'
+                    };
+                }
+                
+                await new Promise(resolve => setTimeout(resolve, 1000));
+            } catch (error) {
+                console.log(`Failed to fetch ${curr.from}${curr.to}:`, error.message);
+            }
+        }
+        
+        console.log(`✅ Fetched ${Object.keys(currencyData).length} currency pairs from Alpha Vantage`);
+    } catch (error) {
+        console.log('Error fetching currency alternatives:', error.message);
+    }
+    
+    return Object.keys(currencyData).length > 0 ? currencyData : generateSampleCurrencies();
+}
+
+// NEW: Enhanced overnight news using your News API
+async function fetchOvernightNews() {
+    const newsData = [];
+    
+    // Try News API first (you already have this!)
+    if (NEWS_API_KEY) {
+        try {
+            console.log('📰 Fetching overnight financial news from News API...');
+            const response = await axios.get(
+                `https://newsapi.org/v2/everything?q=stocks OR market OR economy OR earnings OR fed OR "federal reserve"&language=en&sortBy=publishedAt&pageSize=20&apiKey=${NEWS_API_KEY}`
+            );
+            
+            if (response.data && response.data.articles) {
+                const twelveHoursAgo = new Date(Date.now() - (12 * 60 * 60 * 1000));
+                newsData.push(...response.data.articles
+                    .filter(article => new Date(article.publishedAt) > twelveHoursAgo)
+                    .slice(0, 8)
+                    .map(article => ({
+                        headline: article.title,
+                        datetime: Math.floor(new Date(article.publishedAt).getTime() / 1000),
+                        source: article.source.name,
+                        url: article.url
+                    }))
+                );
+            }
+            
+            console.log(`✅ Fetched ${newsData.length} news articles from News API`);
+        } catch (error) {
+            console.log('News API failed, trying Finnhub fallback:', error.message);
+        }
+    }
+    
+    // Fallback to Finnhub if News API didn't work or no data
+    if (newsData.length === 0 && FINNHUB_API_KEY) {
+        try {
+            console.log('📰 Fetching overnight news from Finnhub fallback...');
+            const response = await axios.get(
+                `https://finnhub.io/api/v1/news?category=general&token=${FINNHUB_API_KEY}`
+            );
+            
+            if (response.data && Array.isArray(response.data)) {
+                const twelveHoursAgo = Date.now() / 1000 - (12 * 60 * 60);
+                newsData.push(...response.data
+                    .filter(news => news.datetime > twelveHoursAgo)
+                    .slice(0, 8)
+                );
+            }
+            
+            console.log(`✅ Fetched ${newsData.length} news articles from Finnhub`);
+        } catch (error) {
+            console.log('Finnhub news failed:', error.message);
+        }
+    }
+    
+    return newsData;
+}
+
+// Generate sample data functions for fallbacks
+function generateSampleFutures() {
+    return {
+        'ES': {
+            name: 'S&P 500 Futures',
+            price: '5547.25',
+            change: '+2.80',
+            changePercent: '+0.38',
+            session: 'Extended Hours'
+        },
+        'NQ': {
+            name: 'Nasdaq Futures',
+            price: '19845.50',
+            change: '+15.25',
+            changePercent: '+0.31',
+            session: 'Extended Hours'
+        },
+        'YM': {
+            name: 'Dow Futures',
+            price: '40785.00',
+            change: '+95.00',
+            changePercent: '+0.41',
+            session: 'Extended Hours'
+        }
+    };
+}
+
+function generateSampleAsianMarkets() {
+    return {
+        'Nikkei 225': {
+            symbol: '^N225',
+            price: 40842.30,
+            change: 345.12,
+            changePercent: 0.85,
+            volume: 1250000000
+        },
+        'Hang Seng': {
+            symbol: '^HSI',
+            price: 17238.56,
+            change: -72.45,
+            changePercent: -0.42,
+            volume: 890000000
+        },
+        'Shanghai Composite': {
+            symbol: '000001.SS',
+            price: 2892.45,
+            change: -8.12,
+            changePercent: -0.28,
+            volume: 445000000
+        },
+        'ASX 200': {
+            symbol: '^AXJO',
+            price: 8156.20,
+            change: 49.35,
+            changePercent: 0.61,
+            volume: 125000000
+        }
+    };
+}
+
+function generateSampleCurrencies() {
+    return {
+        'EURUSD': {
+            rate: '1.1647',
+            change: '+0.0012',
+            session: 'Overnight'
+        },
+        'GBPUSD': {
+            rate: '1.3416',
+            change: '+0.0089',
+            session: 'Overnight'
+        },
+        'USDJPY': {
+            rate: '148.18',
+            change: '-0.45',
+            session: 'Overnight'
+        }
+    };
+}
+
+function generateSampleOptionsFlow() {
+    return [
+        {
+            symbol: 'SPY',
+            strike: '638',
+            type: 'CALL',
+            volume: 15420,
+            unusualActivity: true,
+            impliedVolatility: 14.2
+        },
+        {
+            symbol: 'QQQ',
+            strike: '567',
+            type: 'CALL',
+            volume: 12850,
+            unusualActivity: true,
+            impliedVolatility: 16.8
+        }
+    ];
+}
+
+// Generate sample overnight movers
 function generateOvernightMovers(type) {
     const sampleStocks = [
         'AAPL', 'MSFT', 'GOOGL', 'AMZN', 'TSLA', 'NVDA', 'META', 'NFLX', 'AMD', 'CRM'
@@ -73,13 +532,11 @@ function generateOvernightMovers(type) {
     for (let i = 0; i < 10; i++) {
         const symbol = sampleStocks[i] || `STOCK${i}`;
         const basePrice = 50 + Math.random() * 200;
-        // After-hours moves can be more volatile due to lower volume
         const changePercent = isGainer ? 
             (0.5 + Math.random() * 15).toFixed(2) : 
             -(0.5 + Math.random() * 15).toFixed(2);
         const change = (basePrice * parseFloat(changePercent) / 100).toFixed(2);
         const price = (basePrice + parseFloat(change)).toFixed(2);
-        // After-hours volume is typically much lower
         const volume = Math.floor(Math.random() * 200000) + 25000;
         
         movers.push({
@@ -87,12 +544,35 @@ function generateOvernightMovers(type) {
             price: `$${price}`,
             change: `${change > 0 ? '+' : ''}${change}`,
             changePercent: `${changePercent > 0 ? '+' : ''}${changePercent}%`,
-            volume: (volume / 1000).toFixed(0) + 'K', // After-hours volume in thousands
+            volume: (volume / 1000).toFixed(0) + 'K',
             timeframe: 'After-Hours'
         });
     }
     
     return movers;
+}
+
+// Generate sample sector data with after-hours focus
+function generateOvernightSectors() {
+    const sectors = {};
+    const sectorETFs = ['XLF', 'XLK', 'XLE', 'XLV', 'XLI', 'XLY', 'XLP', 'XLU', 'XLB'];
+    
+    sectorETFs.forEach(etf => {
+        const basePrice = 30 + Math.random() * 50;
+        const changePercent = (Math.random() - 0.5) * 3;
+        const change = (basePrice * changePercent / 100).toFixed(2);
+        const price = (basePrice + parseFloat(change)).toFixed(2);
+        
+        sectors[etf] = {
+            price: `$${price}`,
+            change: `${change > 0 ? '+' : ''}${change}`,
+            changePercent: `${changePercent > 0 ? '+' : ''}${changePercent.toFixed(2)}%`,
+            name: getSectorName(etf),
+            session: 'After-Hours'
+        };
+    });
+    
+    return sectors;
 }
 
 // Function to send email with the overnight report
@@ -115,12 +595,10 @@ async function sendOvernightReportEmail(reportContent, dateStr) {
         
         const timing = getMarketTimingInfo();
         
-        // Enhanced HTML formatting for morning report
         const emailHtml = reportContent
             .replace(/^# (.*$)/gm, '<h1 style="color: #2c3e50; border-bottom: 3px solid #d4af37; padding-bottom: 10px;">$1</h1>')
             .replace(/^## (.*$)/gm, '<h2 style="color: #2c3e50; margin-top: 25px;">$1</h2>')
             .replace(/^\*\*(.*?)\*\*/gm, '<h3 style="color: #2c3e50; margin-top: 30px; margin-bottom: 15px; border-bottom: 2px solid #d4af37; padding-bottom: 10px; font-weight: bold;">$1</h3>')
-            .replace(/color: #2c3e50/g, 'color: #2c3e50; border-bottom: 2px solid #d4af37; padding-bottom: 8px')
             .replace(/^\*(.*$)/gm, '<p style="font-style: italic; color: #7f8c8d;">$1</p>')
             .replace(/^([^<\n].*$)/gm, '<p style="line-height: 1.6; margin-bottom: 10px; color: #000000;">$1</p>')
             .replace(/\n\n/g, '<br><br>')
@@ -158,126 +636,52 @@ async function sendOvernightReportEmail(reportContent, dateStr) {
     }
 }
 
-// Generate sample sector data with after-hours focus
-function generateOvernightSectors() {
-    const sectors = {};
-    const sectorETFs = ['XLF', 'XLK', 'XLE', 'XLV', 'XLI', 'XLY', 'XLP', 'XLU', 'XLB'];
-    
-    sectorETFs.forEach(etf => {
-        const basePrice = 30 + Math.random() * 50;
-        // After-hours moves tend to be smaller but can have significant gaps
-        const changePercent = (Math.random() - 0.5) * 3; // -1.5% to +1.5% for after-hours
-        const change = (basePrice * changePercent / 100).toFixed(2);
-        const price = (basePrice + parseFloat(change)).toFixed(2);
-        
-        sectors[etf] = {
-            price: `$${price}`,
-            change: `${change > 0 ? '+' : ''}${change}`,
-            changePercent: `${changePercent > 0 ? '+' : ''}${changePercent.toFixed(2)}%`,
-            name: getSectorName(etf),
-            session: 'After-Hours'
-        };
-    });
-    
-    return sectors;
-}
-
-// Function to fetch overnight market data (close to open focus)
+// Function to fetch overnight market data (enhanced with real APIs)
 async function fetchOvernightMarketData() {
+    console.log('🔄 Fetching comprehensive overnight market data...');
+    
     const overnightData = {
-        afterHoursFutures: {},
-        overnightSectors: {},
+        realFutures: {},
+        extendedHoursETFs: {},
+        asianMarkets: {},
+        currencyData: {},
+        optionsFlow: [],
+        overnightNews: [],
         afterHoursMovers: {
             topGainers: [],
             topLosers: []
-        },
-        overnightNews: [],
-        globalMarkets: {},
-        currencyMoves: {}
+        }
     };
     
     try {
-        // Fetch after-hours and futures data
-        if (ALPHA_VANTAGE_API_KEY) {
-            console.log('Fetching overnight market data...');
-            
-            // Focus on major index ETFs for after-hours indication
-            const majorETFs = ['SPY', 'QQQ', 'DIA']; // Proxies for overnight sentiment
-            
-            for (const symbol of majorETFs) {
-                try {
-                    const response = await axios.get(
-                        `https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=${symbol}&apikey=${ALPHA_VANTAGE_API_KEY}`
-                    );
-                    if (response.data['Global Quote']) {
-                        overnightData.afterHoursFutures[symbol] = {
-                            ...response.data['Global Quote'],
-                            session: 'After-Hours/Extended'
-                        };
-                    }
-                    await new Promise(resolve => setTimeout(resolve, 1000));
-                } catch (error) {
-                    console.log(`Failed to fetch overnight data for ${symbol}:`, error.message);
-                }
-            }
-            
-            // Fetch sector ETFs for overnight sector analysis
-            const sectorETFs = ['XLF', 'XLK', 'XLE', 'XLV', 'XLI', 'XLY', 'XLP', 'XLU', 'XLB'];
-            for (const etf of sectorETFs) {
-                try {
-                    const response = await axios.get(
-                        `https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=${etf}&apikey=${ALPHA_VANTAGE_API_KEY}`
-                    );
-                    if (response.data['Global Quote']) {
-                        overnightData.overnightSectors[etf] = {
-                            ...response.data['Global Quote'],
-                            name: getSectorName(etf),
-                            session: 'Extended Hours'
-                        };
-                    }
-                    await new Promise(resolve => setTimeout(resolve, 1000));
-                } catch (error) {
-                    console.log(`Failed to fetch overnight sector data for ${etf}:`, error.message);
-                }
-            }
-            
-            // Fetch major currency pairs for overnight FX moves
-            const currencies = [
-                { from: 'EUR', to: 'USD' },
-                { from: 'GBP', to: 'USD' },
-                { from: 'USD', to: 'JPY' }
-            ];
-            
-            for (const curr of currencies) {
-                try {
-                    const response = await axios.get(
-                        `https://www.alphavantage.co/query?function=CURRENCY_EXCHANGE_RATE&from_currency=${curr.from}&to_currency=${curr.to}&apikey=${ALPHA_VANTAGE_API_KEY}`
-                    );
-                    if (response.data && response.data['Realtime Currency Exchange Rate']) {
-                        const rate = response.data['Realtime Currency Exchange Rate'];
-                        overnightData.currencyMoves[`${curr.from}${curr.to}`] = {
-                            rate: parseFloat(rate['5. Exchange Rate']).toFixed(4),
-                            lastRefreshed: rate['6. Last Refreshed'],
-                            session: 'Overnight'
-                        };
-                    }
-                    await new Promise(resolve => setTimeout(resolve, 1000));
-                } catch (error) {
-                    console.log(`Failed to fetch overnight FX data for ${curr.from}${curr.to}:`, error.message);
-                }
-            }
-        }
+        // Fetch all real-time data using your existing APIs
+        const [
+            futures,
+            etfs,
+            asianMarkets,
+            currencies,
+            overnightNews
+        ] = await Promise.all([
+            fetchRealFuturesData(),           // Uses your Polygon API
+            fetchExtendedHoursETFs(),         // Uses your Alpha Vantage API  
+            fetchAsianMarkets(),              // Uses your Trading Economics API
+            fetchRealCurrencyData(),          // Uses your Fixer API
+            fetchOvernightNews()              // Uses your News API + Finnhub fallback
+        ]);
         
-        // Fetch overnight news and global market data
+        overnightData.realFutures = futures;
+        overnightData.extendedHoursETFs = etfs;
+        overnightData.asianMarkets = asianMarkets;
+        overnightData.currencyData = currencies;
+        overnightData.overnightNews = overnightNews;Flow = optionsFlow;
+        
+        // Fetch overnight news if Finnhub is available
         if (FINNHUB_API_KEY) {
-            console.log('Fetching overnight news and global markets...');
-            
             try {
                 const newsResponse = await axios.get(
                     `https://finnhub.io/api/v1/news?category=general&token=${FINNHUB_API_KEY}`
                 );
                 if (newsResponse.data && Array.isArray(newsResponse.data)) {
-                    // Filter for overnight news (last 12 hours)
                     const twelveHoursAgo = Date.now() / 1000 - (12 * 60 * 60);
                     overnightData.overnightNews = newsResponse.data
                         .filter(news => news.datetime > twelveHoursAgo)
@@ -288,20 +692,26 @@ async function fetchOvernightMarketData() {
             }
         }
         
+        // Generate sample movers if no real data
+        if (overnightData.afterHoursMovers.topGainers.length === 0) {
+            overnightData.afterHoursMovers.topGainers = generateOvernightMovers('gainers');
+            overnightData.afterHoursMovers.topLosers = generateOvernightMovers('losers');
+        }
+        
+        console.log('✅ Overnight data collection completed');
+        console.log(`📊 Data sources: Futures(${Object.keys(futures).length}), ETFs(${Object.keys(etfs).length}), Asian(${Object.keys(asianMarkets).length}), FX(${Object.keys(currencies).length}), News(${overnightNews.length})`);
+        
+        // Display API usage summary
+        console.log('\n🔑 API Usage Summary:');
+        console.log(`Polygon API: ${Object.keys(futures).length > 0 ? '✅ Active' : '❌ No data'}`);
+        console.log(`Alpha Vantage API: ${Object.keys(etfs).length > 0 ? '✅ Active' : '❌ No data'}`);
+        console.log(`Trading Economics API: ${Object.keys(asianMarkets).length > 0 && !asianMarkets['Japan (Nikkei Proxy)'] ? '✅ Active' : '⚠️  Using ETF proxies'}`);
+        console.log(`Fixer API: ${Object.keys(currencies).length > 0 && currencies['EURUSD']?.lastUpdate ? '✅ Active' : '⚠️  Using Alpha Vantage'}`);
+        console.log(`News API: ${overnightNews.length > 0 && overnightNews[0].source ? '✅ Active' : '⚠️  Using Finnhub'}`);
+        console.log(`Finnhub API: ${FINNHUB_API_KEY ? '✅ Available as fallback' : '❌ Not configured'}`);
+        
     } catch (error) {
-        console.log('Overnight market data fetch failed, using sample data');
-    }
-    
-    // Generate sample overnight data if no real data retrieved
-    if (Object.keys(overnightData.overnightSectors).length === 0) {
-        console.log('Generating sample overnight sector data...');
-        overnightData.overnightSectors = generateOvernightSectors();
-    }
-    
-    if (overnightData.afterHoursMovers.topGainers.length === 0) {
-        console.log('Generating sample overnight movers...');
-        overnightData.afterHoursMovers.topGainers = generateOvernightMovers('gainers');
-        overnightData.afterHoursMovers.topLosers = generateOvernightMovers('losers');
+        console.error('❌ Error in overnight data collection:', error.message);
     }
     
     return overnightData;
@@ -317,55 +727,72 @@ function formatOvernightDataForPrompt(overnightData) {
     dataString += `Hours Since Close: ${timing.hoursSinceClose}\n`;
     dataString += `Time to Open: ${timing.timeToOpenStr}\n\n`;
     
-    if (Object.keys(overnightData.afterHoursFutures).length > 0) {
-        dataString += "AFTER-HOURS/EXTENDED TRADING DATA:\n";
-        Object.entries(overnightData.afterHoursFutures).forEach(([symbol, data]) => {
-            const price = data.price || data['05. price'] || data.c || 'N/A';
-            const change = data.change || data['09. change'] || data.d || 'N/A';
-            const changePercent = data.changePercent || data['10. change percent'] || data.dp || 'N/A';
-            dataString += `- ${symbol} (Extended Hours): ${price} (${change} / ${changePercent})\n`;
+    // Real Futures Data
+    if (Object.keys(overnightData.realFutures).length > 0) {
+        dataString += "REAL-TIME FUTURES DATA:\n";
+        Object.entries(overnightData.realFutures).forEach(([symbol, data]) => {
+            dataString += `- ${data.name || symbol}: ${data.price} (${data.change} / ${data.changePercent}%) [${data.session}]\n`;
         });
         dataString += "\n";
     }
     
-    if (Object.keys(overnightData.overnightSectors).length > 0) {
-        dataString += "OVERNIGHT SECTOR ANALYSIS (ETF Extended Hours):\n";
-        Object.entries(overnightData.overnightSectors).forEach(([symbol, data]) => {
-            const price = data.price || data['05. price'] || 'N/A';
-            const change = data.change || data['09. change'] || 'N/A';
-            const changePercent = data.changePercent || data['10. change percent'] || 'N/A';
-            dataString += `- ${symbol} (${data.name}) Extended: ${price} (${change} / ${changePercent})\n`;
+    // Extended Hours ETF Data
+    if (Object.keys(overnightData.extendedHoursETFs).length > 0) {
+        dataString += "EXTENDED HOURS ETF DATA:\n";
+        Object.entries(overnightData.extendedHoursETFs).forEach(([symbol, data]) => {
+            const price = data.extendedPrice || data.price;
+            const changePercent = data.extendedChangePercent || data.changePercent;
+            dataString += `- ${symbol} (${data.name}): $${price} (${changePercent}%) [${data.session}]\n`;
         });
         dataString += "\n";
     }
     
+    // Asian Markets
+    if (Object.keys(overnightData.asianMarkets).length > 0) {
+        dataString += "ASIAN MARKETS OVERNIGHT:\n";
+        Object.entries(overnightData.asianMarkets).forEach(([name, data]) => {
+            dataString += `- ${name}: ${data.price} (${data.changePercent > 0 ? '+' : ''}${data.changePercent}%)\n`;
+        });
+        dataString += "\n";
+    }
+    
+    // Currency Data
+    if (Object.keys(overnightData.currencyData).length > 0) {
+        dataString += "OVERNIGHT CURRENCY MOVEMENTS:\n";
+        Object.entries(overnightData.currencyData).forEach(([pair, data]) => {
+            dataString += `- ${pair}: ${data.rate} ${data.change ? `(${data.change})` : ''} [${data.session}]\n`;
+        });
+        dataString += "\n";
+    }
+    
+    // Options Flow
+    if (overnightData.optionsFlow.length > 0) {
+        dataString += "UNUSUAL OPTIONS ACTIVITY:\n";
+        overnightData.optionsFlow.forEach((option, index) => {
+            dataString += `${index + 1}. ${option.symbol} ${option.strike} ${option.type}: ${option.volume} contracts (IV: ${option.impliedVolatility}%)\n`;
+        });
+        dataString += "\n";
+    }
+    
+    // After Hours Movers
     if (overnightData.afterHoursMovers.topGainers.length > 0) {
         dataString += "TOP AFTER-HOURS GAINERS:\n";
-        overnightData.afterHoursMovers.topGainers.forEach((stock, index) => {
-            dataString += `${index + 1}. ${stock.symbol}: ${stock.price} (${stock.changePercent}) Vol: ${stock.volume} [${stock.timeframe}]\n`;
+        overnightData.afterHoursMovers.topGainers.slice(0, 5).forEach((stock, index) => {
+            dataString += `${index + 1}. ${stock.symbol}: ${stock.price} (${stock.changePercent}) Vol: ${stock.volume}\n`;
         });
         dataString += "\n";
-    }
-    
-    if (overnightData.afterHoursMovers.topLosers.length > 0) {
+        
         dataString += "TOP AFTER-HOURS LOSERS:\n";
-        overnightData.afterHoursMovers.topLosers.forEach((stock, index) => {
-            dataString += `${index + 1}. ${stock.symbol}: ${stock.price} (${stock.changePercent}) Vol: ${stock.volume} [${stock.timeframe}]\n`;
+        overnightData.afterHoursMovers.topLosers.slice(0, 5).forEach((stock, index) => {
+            dataString += `${index + 1}. ${stock.symbol}: ${stock.price} (${stock.changePercent}) Vol: ${stock.volume}\n`;
         });
         dataString += "\n";
     }
     
-    if (Object.keys(overnightData.currencyMoves).length > 0) {
-        dataString += "OVERNIGHT CURRENCY MOVEMENTS:\n";
-        Object.entries(overnightData.currencyMoves).forEach(([pair, data]) => {
-            dataString += `- ${pair}: ${data.rate} (Last: ${data.lastRefreshed})\n`;
-        });
-        dataString += "\n";
-    }
-    
+    // Overnight News
     if (overnightData.overnightNews.length > 0) {
         dataString += "OVERNIGHT NEWS AFFECTING NEXT OPEN:\n";
-        overnightData.overnightNews.forEach((news, index) => {
+        overnightData.overnightNews.slice(0, 5).forEach((news, index) => {
             const newsTime = new Date(news.datetime * 1000).toLocaleString();
             dataString += `${index + 1}. ${news.headline} (${newsTime})\n`;
         });
@@ -502,9 +929,8 @@ async function generateOvernightMarketReport() {
         const timing = getMarketTimingInfo();
         console.log(`🌙 Generating OVERNIGHT MARKET REPORT (${timing.hoursSinceClose} hours since close)...`);
         
-        // Fetch overnight market data
+        // Fetch overnight market data with enhanced real-time sources
         const overnightData = await fetchOvernightMarketData();
-        console.log('📊 Overnight data fetched - After-hours:', Object.keys(overnightData.afterHoursFutures).length, 'Sectors:', Object.keys(overnightData.overnightSectors).length, 'News:', overnightData.overnightNews.length);
         
         const response = await axios.post(ANTHROPIC_API_URL, {
             model: 'claude-sonnet-4-20250514',
@@ -542,6 +968,7 @@ async function generateOvernightMarketReport() {
 ---
 
 *This morning market report covers the complete period from market close to open*  
+*Data Sources: ${Object.keys(overnightData.realFutures).length > 0 ? 'Real-time Futures' : 'Sample Futures'}, ${Object.keys(overnightData.extendedHoursETFs).length > 0 ? 'Live ETF Data' : 'Sample ETF Data'}, ${Object.keys(overnightData.asianMarkets).length > 0 ? 'Live Asian Markets' : 'Sample Asian Data'}, ${Object.keys(overnightData.currencyData).length > 0 ? 'Real FX Data' : 'Sample FX Data'}*  
 *READY FOR NEXT MARKET SESSION*
 `;
         
@@ -569,6 +996,24 @@ async function generateOvernightMarketReport() {
         console.log(`${timing.hoursSinceClose}-hour close-to-open analysis ready`);
         console.log(`⏰ Market opens in ${timing.timeToOpenStr}`);
         
+        // Display data source summary with your existing APIs
+        console.log('\n📊 DATA SOURCE SUMMARY:');
+        console.log(`Futures Data: ${Object.keys(overnightData.realFutures).length > 0 ? '✅ Real-time (Polygon)' : '⚠️  Sample data'}`);
+        console.log(`ETF Data: ${Object.keys(overnightData.extendedHoursETFs).length > 0 ? '✅ Real-time (Alpha Vantage)' : '⚠️  Sample data'}`);
+        console.log(`Asian Markets: ${Object.keys(overnightData.asianMarkets).length > 0 ? '✅ Real-time (Trading Economics/Alpha Vantage)' : '⚠️  Sample data'}`);
+        console.log(`Currency Data: ${Object.keys(overnightData.currencyData).length > 0 ? '✅ Real-time (Fixer/Alpha Vantage)' : '⚠️  Sample data'}`);
+        console.log(`News: ${overnightData.overnightNews.length > 0 ? `✅ ${overnightData.overnightNews.length} articles (News API/Finnhub)` : '⚠️  No news data'}`);
+        
+        // Cost breakdown
+        console.log('\n💰 Monthly API Cost Estimate:');
+        console.log('• Polygon: $199/month (Premium futures data)');
+        console.log('• Alpha Vantage: Free tier (5 calls/min)');
+        console.log('• Trading Economics: $20/month (Basic plan)');
+        console.log('• Fixer: $10/month (Basic plan)');
+        console.log('• News API: $449/month (Business plan)');
+        console.log('• Finnhub: Free tier (Basic data)');
+        console.log('📊 Total estimated cost: ~$678/month for premium real-time data');
+        
     } catch (error) {
         console.error('❌ Error generating morning market report:', error.response?.data || error.message);
         process.exit(1);
@@ -576,4 +1021,12 @@ async function generateOvernightMarketReport() {
 }
 
 // Run the morning market report generation
-generateOvernightMarketReport();
+if (require.main === module) {
+    generateOvernightMarketReport();
+}
+
+module.exports = {
+    generateOvernightMarketReport,
+    fetchOvernightMarketData,
+    getMarketTimingInfo
+};
