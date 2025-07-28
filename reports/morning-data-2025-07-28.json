@@ -152,34 +152,23 @@
   },
   "currencyData": {
     "EURUSD": {
-      "rate": "1.1631",
-      "lastRefreshed": "2025-07-28 15:13:07",
+      "rate": "1.1627",
+      "lastRefreshed": "2025-07-28 15:27:03",
       "session": "Overnight"
     },
     "GBPUSD": {
-      "rate": "1.3404",
-      "lastRefreshed": "2025-07-28 15:13:04",
+      "rate": "1.3407",
+      "lastRefreshed": "2025-07-28 15:27:11",
       "session": "Overnight"
     },
     "USDJPY": {
-      "rate": "148.3590",
-      "lastRefreshed": "2025-07-28 15:13:01",
+      "rate": "148.4100",
+      "lastRefreshed": "2025-07-28 15:26:56",
       "session": "Overnight"
     }
   },
   "optionsFlow": [],
   "overnightNews": [
-    {
-      "category": "top news",
-      "datetime": 1753711740,
-      "headline": "Nike’s stock jumps after an analyst says ‘just buy it’ ahead of soccer World Cup",
-      "id": 7501243,
-      "image": "https://static2.finnhub.io/file/publicdatany/finnhubimage/market_watch_logo.png",
-      "related": "",
-      "source": "MarketWatch",
-      "summary": "Nike’s stock extends its recent surge after J.P. Morgan upgraded it to overweight from neutral.",
-      "url": "https://www.marketwatch.com/story/nikes-stock-jumps-after-an-analyst-says-just-buy-it-ahead-of-soccer-world-cup-5e6cd3ea"
-    },
     {
       "category": "top news",
       "datetime": 1753710950,
@@ -193,61 +182,6 @@
     },
     {
       "category": "top news",
-      "datetime": 1753709401,
-      "headline": "15 surprising things you can negotiate when buying a home—one could save you up to $50K, says real estate expert of 10 years",
-      "id": 7501232,
-      "image": "https://image.cnbcfm.com/api/v1/image/108174768-1753130592987-GettyImages-1408150641.jpg?v=1753130781&w=1920&h=1080",
-      "related": "",
-      "source": "CNBC",
-      "summary": "Buying a house? Almost every part of a transaction is negotiable. A few of them could save you up to $50,000, according to real estate expert Dana Bull.",
-      "url": "https://www.cnbc.com/2025/07/28/15-things-you-can-negotiate-when-buying-a-homeone-can-save-you-up-to-50000.html"
-    },
-    {
-      "category": "top news",
-      "datetime": 1753708502,
-      "headline": "Mark Cuban: I spent under $20 to launch a business at age 24, and it failed in a month—what I learned about operating with no money",
-      "id": 7501229,
-      "image": "https://image.cnbcfm.com/api/v1/image/108176504-1753375462385-gettyimages-2224531094-_62a4711_whctyyam.jpeg?v=1753375487&w=1920&h=1080",
-      "related": "",
-      "source": "CNBC",
-      "summary": "Before Mark Cuban became a tech billionaire, he gave up on a venture selling powdered milk after just one month. Here's what the experience taught him.",
-      "url": "https://www.cnbc.com/2025/07/28/mark-cuban-how-to-launch-a-successful-business-with-zero-money.html"
-    },
-    {
-      "category": "top news",
-      "datetime": 1753708140,
-      "headline": "How Opendoor’s meme-stock rally helped fix a listing-requirement problem, for now",
-      "id": 7501223,
-      "image": "https://static2.finnhub.io/file/publicdatany/finnhubimage/market_watch_logo.png",
-      "related": "",
-      "source": "MarketWatch",
-      "summary": "Opendoor wants more time “to assess market conditions and the Company’s stock price.”",
-      "url": "https://www.marketwatch.com/story/how-opendoors-meme-stock-rally-helped-fix-a-listing-requirement-problem-for-now-b4c9fe27"
-    },
-    {
-      "category": "top news",
-      "datetime": 1753707901,
-      "headline": "Harvard expert: This simple listening tactic can make you more influential at work—'a shockingly low number of people think to do it'",
-      "id": 7501224,
-      "image": "https://image.cnbcfm.com/api/v1/image/108177323-1753470181757-gettyimages-2220248109-ma117675.jpeg?v=1753470201&w=1920&h=1080",
-      "related": "",
-      "source": "CNBC",
-      "summary": "Harvard University associate professor Alison Wood Brooks says active listening can make you more influential at work, and give you more rewarding relationships.",
-      "url": "https://www.cnbc.com/2025/07/28/harvard-expert-how-active-listening-makes-you-more-influential-at-work.html"
-    },
-    {
-      "category": "top news",
-      "datetime": 1753706711,
-      "headline": "We're adding to our position in 2 stocks undergoing transformations",
-      "id": 7501222,
-      "image": "https://image.cnbcfm.com/api/v1/image/108176026-1753304121278-gettyimages-2226699342-anotherday89686273_cybjxsq8.jpeg?v=1753304265&w=1920&h=1080",
-      "related": "",
-      "source": "CNBC",
-      "summary": "We're taking the other side of a downgrade and making good on an earlier pledge.",
-      "url": "https://www.cnbc.com/2025/07/28/were-adding-to-our-position-in-2-stocks-undergoing-transformations.html"
-    },
-    {
-      "category": "top news",
       "datetime": 1753703340,
       "headline": "The emerging-markets bandwagon rumbles on, and now China is climbing aboard",
       "id": 7501197,
@@ -256,10 +190,44 @@
       "source": "MarketWatch",
       "summary": "Goldman Sachs looks for a continued broadening of the rally to incorporate China.",
       "url": "https://www.marketwatch.com/story/the-emerging-markets-bandwagon-rumbles-on-and-now-china-is-climbing-aboard-f98c8a2f"
+    },
+    {
+      "category": "top news",
+      "datetime": 1753696800,
+      "headline": "Powell faces his most pivotal test yet: Trump pressure, Fed dissent and a sky-high stock market",
+      "id": 7501167,
+      "image": "https://static2.finnhub.io/file/publicdatany/finnhubimage/market_watch_logo.png",
+      "related": "",
+      "source": "MarketWatch",
+      "summary": "But this week all eyes will be on Powell as he holds a solo press conference Wednesday that will be must-watch TV amid the political drama.",
+      "url": "https://www.marketwatch.com/story/powell-faces-his-most-pivotal-test-yet-trump-pressure-fed-dissent-and-a-sky-high-stock-market-2ae5a93f"
+    },
+    {
+      "category": "top news",
+      "datetime": 1753694040,
+      "headline": "Economists cheer end of ‘crippling uncertainty’ but U.S. tariff deal gets frosty reception in Europe",
+      "id": 7501152,
+      "image": "https://static2.finnhub.io/file/publicdatany/finnhubimage/market_watch_logo.png",
+      "related": "",
+      "source": "MarketWatch",
+      "summary": "U.S. and E.U. agree a 15% tariff deal",
+      "url": "https://www.marketwatch.com/story/economists-cheer-end-of-crippling-uncertainty-but-u-s-tariff-deal-gets-frosty-reception-in-europe-6d3d3fe4"
+    },
+    {
+      "category": "top news",
+      "datetime": 1753683840,
+      "headline": "Musk says Tesla is the unnamed client in Samsung’s $16.5 billion microchip deal",
+      "id": 7501123,
+      "image": "https://static2.finnhub.io/file/publicdatany/finnhubimage/market_watch_logo.png",
+      "related": "",
+      "source": "MarketWatch",
+      "summary": "Samsung will make next-generation chips for Tesla, Elon Musk announced Monday.",
+      "url": "https://www.marketwatch.com/story/musk-says-tesla-is-the-unnamed-client-in-samsungs-16-5-billion-microchip-deal-929dc1eb"
     }
   ],
   "afterHoursMovers": {
     "topGainers": [],
     "topLosers": []
-  }
+  },
+  "geopoliticalEvents": []
 }
