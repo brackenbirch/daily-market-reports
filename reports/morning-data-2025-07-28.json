@@ -172,169 +172,191 @@
     "topGainers": [
       {
         "symbol": "AAPL",
-        "price": "$250.73",
-        "change": "+27.66",
-        "changePercent": "+12.40%",
-        "volume": "209K",
+        "price": "$233.06",
+        "change": "+2.90",
+        "changePercent": "+1.26%",
+        "volume": "26K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "MSFT",
-        "price": "$184.94",
-        "change": "+8.35",
-        "changePercent": "+4.73%",
-        "volume": "148K",
+        "price": "$107.31",
+        "change": "+9.60",
+        "changePercent": "+9.83%",
+        "volume": "114K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "GOOGL",
-        "price": "$130.20",
-        "change": "+17.14",
-        "changePercent": "+15.16%",
-        "volume": "131K",
+        "price": "$94.21",
+        "change": "+1.02",
+        "changePercent": "+1.09%",
+        "volume": "142K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "AMZN",
-        "price": "$82.89",
-        "change": "+10.62",
-        "changePercent": "+14.69%",
-        "volume": "109K",
+        "price": "$266.95",
+        "change": "+33.56",
+        "changePercent": "+14.38%",
+        "volume": "38K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "TSLA",
-        "price": "$276.70",
-        "change": "+27.94",
-        "changePercent": "+11.23%",
-        "volume": "155K",
+        "price": "$84.52",
+        "change": "+4.67",
+        "changePercent": "+5.85%",
+        "volume": "209K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "NVDA",
-        "price": "$108.85",
-        "change": "+9.84",
-        "changePercent": "+9.94%",
-        "volume": "200K",
+        "price": "$171.66",
+        "change": "+19.09",
+        "changePercent": "+12.51%",
+        "volume": "41K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "META",
-        "price": "$214.58",
-        "change": "+1.56",
-        "changePercent": "+0.73%",
-        "volume": "105K",
+        "price": "$141.85",
+        "change": "+8.33",
+        "changePercent": "+6.24%",
+        "volume": "182K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "NFLX",
-        "price": "$192.29",
-        "change": "+5.56",
-        "changePercent": "+2.98%",
-        "volume": "213K",
+        "price": "$234.59",
+        "change": "+8.13",
+        "changePercent": "+3.59%",
+        "volume": "35K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "AMD",
-        "price": "$199.24",
-        "change": "+21.54",
-        "changePercent": "+12.12%",
-        "volume": "25K",
+        "price": "$174.01",
+        "change": "+12.64",
+        "changePercent": "+7.83%",
+        "volume": "152K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "CRM",
-        "price": "$59.65",
-        "change": "+0.84",
-        "changePercent": "+1.42%",
-        "volume": "136K",
+        "price": "$147.49",
+        "change": "+13.66",
+        "changePercent": "+10.21%",
+        "volume": "36K",
         "timeframe": "After-Hours"
       }
     ],
     "topLosers": [
       {
         "symbol": "AAPL",
-        "price": "$146.45",
-        "change": "-25.28",
-        "changePercent": "-14.72%",
-        "volume": "52K",
+        "price": "$155.51",
+        "change": "-12.16",
+        "changePercent": "-7.25%",
+        "volume": "96K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "MSFT",
-        "price": "$104.21",
-        "change": "-11.17",
-        "changePercent": "-9.68%",
-        "volume": "95K",
+        "price": "$117.84",
+        "change": "-17.67",
+        "changePercent": "-13.04%",
+        "volume": "185K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "GOOGL",
-        "price": "$76.39",
-        "change": "-7.08",
-        "changePercent": "-8.48%",
-        "volume": "143K",
+        "price": "$116.54",
+        "change": "-18.58",
+        "changePercent": "-13.75%",
+        "volume": "32K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "AMZN",
-        "price": "$74.43",
-        "change": "-8.41",
-        "changePercent": "-10.15%",
-        "volume": "59K",
+        "price": "$71.45",
+        "change": "-4.15",
+        "changePercent": "-5.49%",
+        "volume": "25K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "TSLA",
-        "price": "$106.74",
-        "change": "-2.33",
-        "changePercent": "-2.14%",
-        "volume": "87K",
+        "price": "$195.41",
+        "change": "-33.30",
+        "changePercent": "-14.56%",
+        "volume": "218K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "NVDA",
-        "price": "$113.98",
-        "change": "-0.82",
-        "changePercent": "-0.71%",
-        "volume": "220K",
+        "price": "$184.73",
+        "change": "-22.18",
+        "changePercent": "-10.72%",
+        "volume": "90K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "META",
-        "price": "$135.17",
-        "change": "-20.32",
-        "changePercent": "-13.07%",
-        "volume": "115K",
+        "price": "$91.81",
+        "change": "-2.00",
+        "changePercent": "-2.13%",
+        "volume": "223K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "NFLX",
-        "price": "$162.16",
-        "change": "-15.55",
-        "changePercent": "-8.75%",
-        "volume": "104K",
+        "price": "$135.56",
+        "change": "-4.52",
+        "changePercent": "-3.23%",
+        "volume": "157K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "AMD",
-        "price": "$202.28",
-        "change": "-15.77",
-        "changePercent": "-7.23%",
-        "volume": "224K",
+        "price": "$106.75",
+        "change": "-2.56",
+        "changePercent": "-2.34%",
+        "volume": "26K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "CRM",
-        "price": "$168.92",
-        "change": "-18.56",
-        "changePercent": "-9.9%",
-        "volume": "122K",
+        "price": "$100.48",
+        "change": "-13.65",
+        "changePercent": "-11.96%",
+        "volume": "115K",
         "timeframe": "After-Hours"
       }
     ]
   },
   "overnightNews": [
+    {
+      "category": "top news",
+      "datetime": 1753729440,
+      "headline": "Where Morgan Stanley is looking for value after powerful rebound in U.S. stocks",
+      "id": 7501348,
+      "image": "https://static2.finnhub.io/file/publicdatany/finnhubimage/market_watch_logo.png",
+      "related": "",
+      "source": "MarketWatch",
+      "summary": "The stock market was trading mixed Monday, after President Donald Trump announced on Sunday a trade deal with the Europe Union.",
+      "url": "https://www.marketwatch.com/story/where-morgan-stanley-is-looking-for-value-after-powerful-rebound-in-u-s-stocks-4130ed4a"
+    },
+    {
+      "category": "top news",
+      "datetime": 1753728140,
+      "headline": "Stocks slip despite EU trade deal — plus, the 2 questions we want tech earnings to answer",
+      "id": 7501350,
+      "image": "https://image.cnbcfm.com/api/v1/image/108136248-1745514956121-gettyimages-2161850999-data-14.jpeg?v=1753727937&w=1920&h=1080",
+      "related": "",
+      "source": "CNBC",
+      "summary": "Every weekday, the Investing Club releases the Homestretch; an actionable afternoon update just in time for the last hour of trading.",
+      "url": "https://www.cnbc.com/2025/07/28/stocks-slip-despite-eu-trade-deal-plus-the-2-questions-we-want-tech-earnings-to-answer.html"
+    },
     {
       "category": "top news",
       "datetime": 1753727820,
@@ -400,45 +422,23 @@
       "source": "MarketWatch",
       "summary": "If you bought Coinbase’s stock two months ago when Monness Crespi Hardt analyst Gus Gala recommended it, you should take the profit now, he said.",
       "url": "https://www.marketwatch.com/story/coinbase-investors-should-cash-in-the-stock-has-rallied-too-much-ahead-of-earnings-analyst-says-dad5fff0"
-    },
-    {
-      "category": "top news",
-      "datetime": 1753719927,
-      "headline": "We're not fretting two downgrades of high-flying GE Vernova. Here's why",
-      "id": 7501303,
-      "image": "https://image.cnbcfm.com/api/v1/image/106316707-1577808608915gettyimages-632000346.jpeg?v=1753719450&w=1920&h=1080",
-      "related": "",
-      "source": "CNBC",
-      "summary": "The Investing Club holds its \"Morning Meeting\" every weekday at 10:20 a.m. ET.",
-      "url": "https://www.cnbc.com/2025/07/28/were-not-fretting-two-downgrades-of-high-flying-ge-vernova-heres-why-.html"
-    },
-    {
-      "category": "top news",
-      "datetime": 1753719600,
-      "headline": "Will Intel give up on chip manufacturing? Here’s how that could have big ripple effects.",
-      "id": 7501301,
-      "image": "https://static2.finnhub.io/file/publicdatany/finnhubimage/market_watch_logo.png",
-      "related": "",
-      "source": "MarketWatch",
-      "summary": "Samsung and TSMC could benefit from the move, while makers of wafer fab equipment may lose out, according to Bernstein analysts.",
-      "url": "https://www.marketwatch.com/story/will-intel-give-up-on-chip-manufacturing-heres-how-that-could-have-big-ripple-effects-dd76aa75"
     }
   ],
   "globalMarkets": {},
   "currencyMoves": {
     "EURUSD": {
-      "rate": "1.1597",
-      "lastRefreshed": "2025-07-28 18:58:12",
+      "rate": "1.1594",
+      "lastRefreshed": "2025-07-28 19:25:57",
       "session": "Overnight"
     },
     "GBPUSD": {
       "rate": "1.3354",
-      "lastRefreshed": "2025-07-28 18:58:29",
+      "lastRefreshed": "2025-07-28 19:25:58",
       "session": "Overnight"
     },
     "USDJPY": {
-      "rate": "148.5560",
-      "lastRefreshed": "2025-07-28 18:58:13",
+      "rate": "148.5380",
+      "lastRefreshed": "2025-07-28 19:26:01",
       "session": "Overnight"
     }
   }
