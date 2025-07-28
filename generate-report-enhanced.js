@@ -34,37 +34,70 @@ function getSectorName(etf) {
     return sectorMap[etf] || etf;
 }
 
-// Calculate market timing information
-function getMarketTimingInfo() {
+// Calculate proper close-to-open timing window
+function getCloseToOpenWindow() {
     const now = new Date();
-    const lastClose = new Date();
-    const nextOpen = new Date();
     
-    // Set last market close (4:00 PM ET previous trading day)
-    lastClose.setHours(16, 0, 0, 0);
+    // Find last market close (4:00 PM ET on last trading day)
+    const lastClose = new Date();
+    lastClose.setHours(16, 0, 0, 0); // 4:00 PM ET
+    
+    // If it's before 4 PM today, use yesterday's close
     if (now.getHours() < 16) {
         lastClose.setDate(lastClose.getDate() - 1);
     }
     
-    // Set next market open (9:30 AM ET next trading day)
+    // Skip weekends - if last close was on Friday, and it's now Monday morning
+    if (lastClose.getDay() === 6) { // Saturday
+        lastClose.setDate(lastClose.getDate() - 1); // Move to Friday
+    } else if (lastClose.getDay() === 0) { // Sunday
+        lastClose.setDate(lastClose.getDate() - 2); // Move to Friday
+    }
+    
+    // Find next market open (9:30 AM ET)
+    const nextOpen = new Date();
     nextOpen.setHours(9, 30, 0, 0);
-    if (now.getHours() >= 9 && now.getMinutes() >= 30) {
+    
+    // If it's after 9:30 AM today, next open is tomorrow
+    if (now.getHours() > 9 || (now.getHours() === 9 && now.getMinutes() >= 30)) {
         nextOpen.setDate(nextOpen.getDate() + 1);
     }
     
+    // Skip weekends for next open
+    if (nextOpen.getDay() === 6) { // Saturday
+        nextOpen.setDate(nextOpen.getDate() + 2); // Move to Monday
+    } else if (nextOpen.getDay() === 0) { // Sunday
+        nextOpen.setDate(nextOpen.getDate() + 1); // Move to Monday
+    }
+    
+    return {
+        lastClose,
+        nextOpen,
+        isCloseToOpenPeriod: now >= lastClose && now < nextOpen,
+        hoursInWindow: Math.abs(nextOpen - lastClose) / (1000 * 60 * 60)
+    };
+}
+
+// Calculate market timing information with proper close-to-open focus
+function getMarketTimingInfo() {
+    const window = getCloseToOpenWindow();
+    const now = new Date();
+    
     // Calculate hours since close
-    const hoursSinceClose = Math.floor((now - lastClose) / (1000 * 60 * 60));
+    const hoursSinceClose = Math.floor((now - window.lastClose) / (1000 * 60 * 60));
     
     // Calculate time to open
-    const timeToOpen = nextOpen - now;
+    const timeToOpen = window.nextOpen - now;
     const hoursToOpen = Math.floor(timeToOpen / (1000 * 60 * 60));
     const minutesToOpen = Math.floor((timeToOpen % (1000 * 60 * 60)) / (1000 * 60));
     
     return {
-        lastClose: lastClose.toLocaleString(),
-        nextOpen: nextOpen.toLocaleString(),
+        lastClose: window.lastClose.toLocaleString(),
+        nextOpen: window.nextOpen.toLocaleString(),
         hoursSinceClose,
-        timeToOpenStr: `${hoursToOpen}h ${minutesToOpen}m`
+        timeToOpenStr: `${hoursToOpen}h ${minutesToOpen}m`,
+        isCloseToOpenPeriod: window.isCloseToOpenPeriod,
+        totalWindowHours: window.hoursInWindow
     };
 }
 
@@ -362,19 +395,22 @@ async function fetchCurrencyAlternative() {
     return Object.keys(currencyData).length > 0 ? currencyData : generateSampleCurrencies();
 }
 
-// NEW: Enhanced overnight news using your News API with better search terms
+// NEW: Enhanced overnight news with proper close-to-open filtering
 async function fetchOvernightNews() {
     const newsData = [];
+    const timing = getMarketTimingInfo();
+    
+    // Only get news from AFTER last market close
+    const searchFromTime = new Date(timing.lastClose);
+    
+    console.log(`📰 Fetching close-to-open news (from ${searchFromTime.toLocaleString()})...`);
     
     // Try News API first with multiple targeted searches
     if (NEWS_API_KEY) {
         try {
-            console.log('📰 Fetching comprehensive overnight financial news...');
-            
-            // Multiple search queries to catch different types of events
             const searchQueries = [
                 'trade deal OR tariff OR trade agreement OR EU OR China trade',
-                'federal reserve OR fed OR interest rates OR monetary policy',
+                'federal reserve OR fed OR interest rates OR monetary policy', 
                 'earnings OR quarterly results OR guidance',
                 'geopolitical OR war OR sanctions OR diplomatic',
                 'market moving OR breaking OR major announcement',
@@ -385,13 +421,16 @@ async function fetchOvernightNews() {
             for (const query of searchQueries) {
                 try {
                     const response = await axios.get(
-                        `https://newsapi.org/v2/everything?q=${encodeURIComponent(query)}&language=en&sortBy=publishedAt&pageSize=10&apiKey=${NEWS_API_KEY}`
+                        `https://newsapi.org/v2/everything?q=${encodeURIComponent(query)}&language=en&sortBy=publishedAt&pageSize=10&from=${searchFromTime.toISOString()}&apiKey=${NEWS_API_KEY}`
                     );
                     
                     if (response.data && response.data.articles) {
-                        const twelveHoursAgo = new Date(Date.now() - (12 * 60 * 60 * 1000));
                         const relevantArticles = response.data.articles
-                            .filter(article => new Date(article.publishedAt) > twelveHoursAgo)
+                            .filter(article => {
+                                const publishTime = new Date(article.publishedAt);
+                                // STRICT: Only news AFTER market close
+                                return publishTime >= searchFromTime;
+                            })
                             .filter(article => {
                                 const title = article.title.toLowerCase();
                                 const description = (article.description || '').toLowerCase();
@@ -408,13 +447,13 @@ async function fetchOvernightNews() {
                                 source: article.source.name,
                                 url: article.url,
                                 description: article.description,
-                                category: query.split(' ')[0] // First word as category
+                                category: query.split(' ')[0],
+                                timeFromClose: Math.floor((new Date(article.publishedAt) - searchFromTime) / (1000 * 60 * 60))
                             }));
                         
                         newsData.push(...relevantArticles);
                     }
                     
-                    // Rate limiting for News API
                     await new Promise(resolve => setTimeout(resolve, 100));
                 } catch (error) {
                     console.log(`Failed to fetch news for query "${query}":`, error.message);
@@ -426,7 +465,7 @@ async function fetchOvernightNews() {
                 index === self.findIndex(a => a.headline === article.headline)
             ).sort((a, b) => b.datetime - a.datetime).slice(0, 12);
             
-            console.log(`✅ Fetched ${uniqueNews.length} unique news articles from News API`);
+            console.log(`✅ Fetched ${uniqueNews.length} close-to-open news articles`);
             return uniqueNews;
             
         } catch (error) {
@@ -434,21 +473,20 @@ async function fetchOvernightNews() {
         }
     }
     
-    // Enhanced Finnhub fallback
+    // Enhanced Finnhub fallback with proper time filtering
     if (FINNHUB_API_KEY) {
         try {
-            console.log('📰 Fetching overnight news from Finnhub with enhanced filtering...');
+            console.log('📰 Fetching close-to-open news from Finnhub...');
             const response = await axios.get(
                 `https://finnhub.io/api/v1/news?category=general&token=${FINNHUB_API_KEY}`
             );
             
             if (response.data && Array.isArray(response.data)) {
-                const twelveHoursAgo = Date.now() / 1000 - (12 * 60 * 60);
+                const closeTimestamp = Math.floor(searchFromTime.getTime() / 1000);
                 const filteredNews = response.data
-                    .filter(news => news.datetime > twelveHoursAgo)
+                    .filter(news => news.datetime > closeTimestamp) // Only AFTER close
                     .filter(news => {
                         const headline = news.headline.toLowerCase();
-                        // Enhanced filtering for major events
                         return headline.includes('trade') || headline.includes('tariff') ||
                                headline.includes('agreement') || headline.includes('deal') ||
                                headline.includes('fed') || headline.includes('market') ||
@@ -458,7 +496,7 @@ async function fetchOvernightNews() {
                     })
                     .slice(0, 10);
                 
-                console.log(`✅ Fetched ${filteredNews.length} filtered news articles from Finnhub`);
+                console.log(`✅ Fetched ${filteredNews.length} close-to-open articles from Finnhub`);
                 return filteredNews;
             }
         } catch (error) {
@@ -570,12 +608,14 @@ function generateSampleOptionsFlow() {
     ];
 }
 
-// NEW: Add geopolitical and economic events tracker
+// NEW: Add geopolitical and economic events tracker with proper close-to-open filtering
 async function fetchGeopoliticalEvents() {
     const events = [];
+    const timing = getMarketTimingInfo();
+    const searchFromTime = new Date(timing.lastClose);
     
     try {
-        console.log('🌍 Fetching geopolitical and economic events...');
+        console.log(`🌍 Fetching close-to-open geopolitical events (from ${searchFromTime.toLocaleString()})...`);
         
         // Use Trading Economics for economic events/announcements
         if (TRADING_ECONOMICS_API_KEY) {
@@ -588,8 +628,8 @@ async function fetchGeopoliticalEvents() {
                     const recentEvents = response.data
                         .filter(event => {
                             const eventDate = new Date(event.Date);
-                            const hoursAgo = (Date.now() - eventDate.getTime()) / (1000 * 60 * 60);
-                            return hoursAgo <= 24 && hoursAgo >= 0; // Last 24 hours
+                            // STRICT: Only events AFTER last market close
+                            return eventDate >= searchFromTime;
                         })
                         .filter(event => {
                             const eventText = `${event.Event} ${event.Country}`.toLowerCase();
@@ -607,7 +647,8 @@ async function fetchGeopoliticalEvents() {
                         importance: event.Importance,
                         actual: event.Actual,
                         forecast: event.Forecast,
-                        previous: event.Previous
+                        previous: event.Previous,
+                        hoursFromClose: Math.floor((new Date(event.Date) - searchFromTime) / (1000 * 60 * 60))
                     })));
                 }
             } catch (error) {
@@ -615,7 +656,7 @@ async function fetchGeopoliticalEvents() {
             }
         }
         
-        // Enhanced news search for major announcements
+        // Enhanced news search for major announcements (close-to-open only)
         if (NEWS_API_KEY) {
             try {
                 const majorEventQueries = [
@@ -628,11 +669,16 @@ async function fetchGeopoliticalEvents() {
                 
                 for (const query of majorEventQueries) {
                     const response = await axios.get(
-                        `https://newsapi.org/v2/everything?q=${encodeURIComponent(query)}&language=en&sortBy=publishedAt&pageSize=5&from=${new Date(Date.now() - 24*60*60*1000).toISOString()}&apiKey=${NEWS_API_KEY}`
+                        `https://newsapi.org/v2/everything?q=${encodeURIComponent(query)}&language=en&sortBy=publishedAt&pageSize=5&from=${searchFromTime.toISOString()}&apiKey=${NEWS_API_KEY}`
                     );
                     
                     if (response.data && response.data.articles) {
                         const majorEvents = response.data.articles
+                            .filter(article => {
+                                const publishTime = new Date(article.publishedAt);
+                                // STRICT: Only AFTER market close
+                                return publishTime >= searchFromTime;
+                            })
                             .filter(article => {
                                 const content = `${article.title} ${article.description}`.toLowerCase();
                                 return content.includes('agreement') || content.includes('deal') ||
@@ -645,7 +691,8 @@ async function fetchGeopoliticalEvents() {
                                 datetime: Math.floor(new Date(article.publishedAt).getTime() / 1000),
                                 source: article.source.name,
                                 description: article.description,
-                                url: article.url
+                                url: article.url,
+                                hoursFromClose: Math.floor((new Date(article.publishedAt) - searchFromTime) / (1000 * 60 * 60))
                             }));
                         
                         events.push(...majorEvents);
@@ -658,12 +705,12 @@ async function fetchGeopoliticalEvents() {
             }
         }
         
-        console.log(`✅ Fetched ${events.length} geopolitical/economic events`);
+        console.log(`✅ Fetched ${events.length} close-to-open geopolitical/economic events`);
     } catch (error) {
         console.log('Error fetching geopolitical events:', error.message);
     }
     
-    // Remove duplicates and sort by importance/time
+    // Remove duplicates and sort by time (most recent first)
     const uniqueEvents = events.filter((event, index, self) => 
         index === self.findIndex(e => e.headline === event.headline)
     ).sort((a, b) => b.datetime - a.datetime);
