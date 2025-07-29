@@ -1,0 +1,31 @@
+# Morning Market Report Environment Variables
+# Copy this file to .env-market and fill in your actual API keys
+
+# Bloomberg Connection Settings
+BLOOMBERG_HOST=127.0.0.1
+BLOOMBERG_PORT=8194
+BLOOMBERG_TYPE=DESKTOP
+
+# REQUIRED: AI Report Generation
+ANTHROPIC_API_KEY=your_anthropic_api_key_here
+
+# REQUIRED: Email Delivery
+GMAIL_USER=your_email@gmail.com
+GMAIL_PASSWORD=your_gmail_app_password_here
+WORK_EMAIL_LIST=recipient1@company.com,recipient2@company.com
+
+# OPTIONAL: Free API Keys (Recommended for fallback data)
+ALPHA_VANTAGE_API_KEY=your_alpha_vantage_key
+TWELVE_DATA_API_KEY=your_twelve_data_key
+NEWS_API_KEY=your_news_api_key
+EXCHANGERATE_API_KEY=your_exchangerate_key
+FINNHUB_API_KEY=your_finnhub_key
+
+# How to get these API keys:
+# 1. Anthropic API: https://console.anthropic.com → API Keys
+# 2. Gmail App Password: Google Account → Security → 2-Step Verification → App passwords
+# 3. Alpha Vantage: https://alphavantage.co/support/#api-key (Free)
+# 4. Twelve Data: https://twelvedata.com (Free tier: 800 calls/day)
+# 5. News API: https://newsapi.org (Free tier: 100 calls/day)
+# 6. Exchange Rate API: https://exchangerate-api.com (Free tier: 1500 calls/month)
+# 7. Finnhub: https://finnhub.io (Free tier: 60 calls/minute)
