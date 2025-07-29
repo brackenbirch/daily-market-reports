@@ -1,0 +1,459 @@
+{
+  "afterHoursFutures": {
+    "SPY": {
+      "01. symbol": "SPY",
+      "02. open": "637.4800",
+      "03. high": "638.0400",
+      "04. low": "635.5400",
+      "05. price": "636.9400",
+      "06. volume": "54917102",
+      "07. latest trading day": "2025-07-28",
+      "08. previous close": "637.1000",
+      "09. change": "-0.1600",
+      "10. change percent": "-0.0251%",
+      "session": "After-Hours/Extended"
+    },
+    "QQQ": {
+      "01. symbol": "QQQ",
+      "02. open": "567.7400",
+      "03. high": "569.0400",
+      "04. low": "566.8700",
+      "05. price": "568.1400",
+      "06. volume": "31498739",
+      "07. latest trading day": "2025-07-28",
+      "08. previous close": "566.3700",
+      "09. change": "1.7700",
+      "10. change percent": "0.3125%",
+      "session": "After-Hours/Extended"
+    },
+    "DIA": {
+      "01. symbol": "DIA",
+      "02. open": "448.6600",
+      "03. high": "449.4800",
+      "04. low": "447.3750",
+      "05. price": "448.3400",
+      "06. volume": "2864164",
+      "07. latest trading day": "2025-07-28",
+      "08. previous close": "449.0200",
+      "09. change": "-0.6800",
+      "10. change percent": "-0.1514%",
+      "session": "After-Hours/Extended"
+    }
+  },
+  "overnightSectors": {
+    "XLF": {
+      "01. symbol": "XLF",
+      "02. open": "53.3800",
+      "03. high": "53.4400",
+      "04. low": "52.9600",
+      "05. price": "53.0700",
+      "06. volume": "29119290",
+      "07. latest trading day": "2025-07-28",
+      "08. previous close": "53.4400",
+      "09. change": "-0.3700",
+      "10. change percent": "-0.6924%",
+      "name": "Financial Services",
+      "session": "Extended Hours"
+    },
+    "XLK": {
+      "01. symbol": "XLK",
+      "02. open": "262.9900",
+      "03. high": "264.1500",
+      "04. low": "262.4450",
+      "05. price": "264.0800",
+      "06. volume": "5758766",
+      "07. latest trading day": "2025-07-28",
+      "08. previous close": "261.9900",
+      "09. change": "2.0900",
+      "10. change percent": "0.7977%",
+      "name": "Technology",
+      "session": "Extended Hours"
+    },
+    "XLE": {
+      "01. symbol": "XLE",
+      "02. open": "87.6800",
+      "03. high": "88.2400",
+      "04. low": "87.5500",
+      "05. price": "88.0900",
+      "06. volume": "11852641",
+      "07. latest trading day": "2025-07-28",
+      "08. previous close": "87.1000",
+      "09. change": "0.9900",
+      "10. change percent": "1.1366%",
+      "name": "Energy",
+      "session": "Extended Hours"
+    },
+    "XLV": {
+      "01. symbol": "XLV",
+      "02. open": "136.1400",
+      "03. high": "136.3852",
+      "04. low": "134.9300",
+      "05. price": "135.2900",
+      "06. volume": "9780254",
+      "07. latest trading day": "2025-07-28",
+      "08. previous close": "136.4800",
+      "09. change": "-1.1900",
+      "10. change percent": "-0.8719%",
+      "name": "Healthcare",
+      "session": "Extended Hours"
+    },
+    "XLI": {
+      "01. symbol": "XLI",
+      "02. open": "155.0700",
+      "03. high": "155.1500",
+      "04. low": "154.0700",
+      "05. price": "154.5100",
+      "06. volume": "9214824",
+      "07. latest trading day": "2025-07-28",
+      "08. previous close": "154.9900",
+      "09. change": "-0.4800",
+      "10. change percent": "-0.3097%",
+      "name": "Industrials",
+      "session": "Extended Hours"
+    },
+    "XLY": {
+      "01. symbol": "XLY",
+      "02. open": "225.7400",
+      "03. high": "227.3400",
+      "04. low": "225.0300",
+      "05. price": "226.1800",
+      "06. volume": "5666433",
+      "07. latest trading day": "2025-07-28",
+      "08. previous close": "224.8700",
+      "09. change": "1.3100",
+      "10. change percent": "0.5826%",
+      "name": "Consumer Discretionary",
+      "session": "Extended Hours"
+    },
+    "XLP": {
+      "01. symbol": "XLP",
+      "02. open": "81.0700",
+      "03. high": "81.2000",
+      "04. low": "80.5450",
+      "05. price": "80.6600",
+      "06. volume": "12113637",
+      "07. latest trading day": "2025-07-28",
+      "08. previous close": "81.5000",
+      "09. change": "-0.8400",
+      "10. change percent": "-1.0307%",
+      "name": "Consumer Staples",
+      "session": "Extended Hours"
+    },
+    "XLU": {
+      "01. symbol": "XLU",
+      "02. open": "84.5100",
+      "03. high": "84.5300",
+      "04. low": "83.4050",
+      "05. price": "83.6200",
+      "06. volume": "11206754",
+      "07. latest trading day": "2025-07-28",
+      "08. previous close": "84.5200",
+      "09. change": "-0.9000",
+      "10. change percent": "-1.0648%",
+      "name": "Utilities",
+      "session": "Extended Hours"
+    },
+    "XLB": {
+      "01. symbol": "XLB",
+      "02. open": "91.8400",
+      "03. high": "91.9700",
+      "04. low": "90.7700",
+      "05. price": "91.0300",
+      "06. volume": "7507522",
+      "07. latest trading day": "2025-07-28",
+      "08. previous close": "92.3700",
+      "09. change": "-1.3400",
+      "10. change percent": "-1.4507%",
+      "name": "Materials",
+      "session": "Extended Hours"
+    }
+  },
+  "afterHoursMovers": {
+    "topGainers": [
+      {
+        "symbol": "AAPL",
+        "price": "$79.73",
+        "change": "+2.80",
+        "changePercent": "+3.64%",
+        "volume": "128K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "MSFT",
+        "price": "$208.93",
+        "change": "+15.35",
+        "changePercent": "+7.93%",
+        "volume": "42K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "GOOGL",
+        "price": "$261.51",
+        "change": "+33.46",
+        "changePercent": "+14.67%",
+        "volume": "222K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "AMZN",
+        "price": "$119.59",
+        "change": "+1.69",
+        "changePercent": "+1.43%",
+        "volume": "186K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "TSLA",
+        "price": "$73.25",
+        "change": "+7.92",
+        "changePercent": "+12.13%",
+        "volume": "78K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "NVDA",
+        "price": "$277.44",
+        "change": "+35.03",
+        "changePercent": "+14.45%",
+        "volume": "166K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "META",
+        "price": "$278.78",
+        "change": "+36.74",
+        "changePercent": "+15.18%",
+        "volume": "112K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "NFLX",
+        "price": "$155.61",
+        "change": "+12.32",
+        "changePercent": "+8.60%",
+        "volume": "162K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "AMD",
+        "price": "$229.49",
+        "change": "+3.35",
+        "changePercent": "+1.48%",
+        "volume": "106K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "CRM",
+        "price": "$71.08",
+        "change": "+7.18",
+        "changePercent": "+11.23%",
+        "volume": "168K",
+        "timeframe": "After-Hours"
+      }
+    ],
+    "topLosers": [
+      {
+        "symbol": "AAPL",
+        "price": "$68.08",
+        "change": "-6.03",
+        "changePercent": "-8.13%",
+        "volume": "121K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "MSFT",
+        "price": "$82.53",
+        "change": "-0.57",
+        "changePercent": "-0.69%",
+        "volume": "204K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "GOOGL",
+        "price": "$94.32",
+        "change": "-15.43",
+        "changePercent": "-14.06%",
+        "volume": "161K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "AMZN",
+        "price": "$71.62",
+        "change": "-9.32",
+        "changePercent": "-11.51%",
+        "volume": "28K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "TSLA",
+        "price": "$153.53",
+        "change": "-18.38",
+        "changePercent": "-10.69%",
+        "volume": "177K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "NVDA",
+        "price": "$98.42",
+        "change": "-2.29",
+        "changePercent": "-2.27%",
+        "volume": "28K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "META",
+        "price": "$172.06",
+        "change": "-2.14",
+        "changePercent": "-1.23%",
+        "volume": "200K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "NFLX",
+        "price": "$179.40",
+        "change": "-2.14",
+        "changePercent": "-1.18%",
+        "volume": "169K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "AMD",
+        "price": "$163.27",
+        "change": "-22.98",
+        "changePercent": "-12.34%",
+        "volume": "131K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "CRM",
+        "price": "$48.55",
+        "change": "-4.37",
+        "changePercent": "-8.26%",
+        "volume": "188K",
+        "timeframe": "After-Hours"
+      }
+    ]
+  },
+  "overnightNews": [
+    {
+      "category": "top news",
+      "datetime": 1753787160,
+      "headline": "PayPal earnings show the highest Venmo revenue growth since 2023. Here’s what’s working.",
+      "id": 7501564,
+      "image": "https://static2.finnhub.io/file/publicdatany/finnhubimage/market_watch_logo.png",
+      "related": "",
+      "source": "MarketWatch",
+      "summary": "PayPal is improving monetization of Venmo with debit cards and increased usage of a checkout option.",
+      "url": "https://www.marketwatch.com/story/paypal-earnings-show-the-highest-venmo-revenue-growth-since-2023-heres-whats-working-89bd197f"
+    },
+    {
+      "category": "top news",
+      "datetime": 1753787040,
+      "headline": "SoFi’s stock rises as earnings bring surging loan growth and a number of records",
+      "id": 7501565,
+      "image": "https://static2.finnhub.io/file/publicdatany/finnhubimage/market_watch_logo.png",
+      "related": "",
+      "source": "MarketWatch",
+      "summary": "SoFi originated a record amount of loans in the latest period while also hauling in a record number of new members.",
+      "url": "https://www.marketwatch.com/story/sofis-stock-rises-as-earnings-bring-surging-loan-growth-and-a-number-of-records-82ce3fe5"
+    },
+    {
+      "category": "top news",
+      "datetime": 1753786920,
+      "headline": "Spotify reports surprise loss as employee costs, weak dollar weigh",
+      "id": 7501566,
+      "image": "https://static2.finnhub.io/file/publicdatany/finnhubimage/market_watch_logo.png",
+      "related": "",
+      "source": "MarketWatch",
+      "summary": "Streaming giant Spotify Technology on Tuesday said it met goals for active users and premium subscribers but rising employee costs and a weak dollar led to a surprise loss in the second quarter.",
+      "url": "https://www.marketwatch.com/story/spotify-reports-surprise-loss-as-employee-costs-weak-dollar-weigh-a472a1e6"
+    },
+    {
+      "category": "top news",
+      "datetime": 1753785780,
+      "headline": "The most important woman in bonds says investors now have unrealistic expectations",
+      "id": 7501531,
+      "image": "https://static2.finnhub.io/file/publicdatany/finnhubimage/market_watch_logo.png",
+      "related": "",
+      "source": "MarketWatch",
+      "summary": "Stop expecting more from your fixed income than a “boring return,” said the CIO of Franklin Templeton’s Fixed Income group.",
+      "url": "https://www.marketwatch.com/story/the-most-important-woman-in-bonds-says-investors-now-have-unrealistic-expectations-a6b8d2b5"
+    },
+    {
+      "category": "top news",
+      "datetime": 1753783440,
+      "headline": "The two sides’ interpretations of the U.S.-E.U. trade deal are diverging already",
+      "id": 7501478,
+      "image": "https://static2.finnhub.io/file/publicdatany/finnhubimage/market_watch_logo.png",
+      "related": "",
+      "source": "MarketWatch",
+      "summary": "Economists and observers have been quick to highlight discrepancies between the White House and the European Commission’s version of events.",
+      "url": "https://www.marketwatch.com/story/the-two-sides-interpretations-of-the-u-s-e-u-trade-deal-are-diverging-already-12dd973b"
+    },
+    {
+      "category": "top news",
+      "datetime": 1753782360,
+      "headline": "‘He is currently in jail’: My daughter’s husband has bipolar I disorder. Can he sign divorce papers?",
+      "id": 7501479,
+      "image": "https://static2.finnhub.io/file/publicdatany/finnhubimage/market_watch_logo.png",
+      "related": "",
+      "source": "MarketWatch",
+      "summary": "“He opened credit cards in his name and spent every dime he could get his hands on, gambling and buying vehicles.”",
+      "url": "https://www.marketwatch.com/story/he-is-currently-in-jail-my-daughters-husband-has-bipolar-i-disorder-can-he-sign-divorce-papers-ecd23e32"
+    },
+    {
+      "category": "top news",
+      "datetime": 1753780020,
+      "headline": "The Fed risks a deflationary spiral by not cutting rates, these bond experts say",
+      "id": 7501480,
+      "image": "https://static2.finnhub.io/file/publicdatany/finnhubimage/market_watch_logo.png",
+      "related": "",
+      "source": "MarketWatch",
+      "summary": "The Federal Reserve, by not cutting interest rates, is risking the creation of a deflationary downturn called a Kindleberger Spiral, a leading bond manager says.",
+      "url": "https://www.marketwatch.com/story/the-fed-risks-a-deflationary-spiral-by-not-cutting-rates-these-bond-experts-say-76b1523f"
+    },
+    {
+      "category": "top news",
+      "datetime": 1753779660,
+      "headline": "Musician Adam Lambert sells Hollywood Hills home at a loss for $6.2 million",
+      "id": 7501481,
+      "image": "https://static2.finnhub.io/file/publicdatany/finnhubimage/market_watch_logo.png",
+      "related": "",
+      "source": "MarketWatch",
+      "summary": "The American Idol runner-up listed the sprawling L.A. home, with a kitchen that is “pure drama,”  for almost $7.4 million.",
+      "url": "https://www.marketwatch.com/story/musician-adam-lambert-sells-hollywood-hills-home-at-a-loss-for-6-2-million-0dbb254e"
+    }
+  ],
+  "globalMarkets": {},
+  "currencyMoves": {
+    "EURUSD": {
+      "rate": "1.1537",
+      "lastRefreshed": "2025-07-29 12:28:27",
+      "session": "Overnight"
+    },
+    "GBPUSD": {
+      "rate": "1.3333",
+      "lastRefreshed": "2025-07-29 12:28:10",
+      "session": "Overnight"
+    },
+    "USDJPY": {
+      "rate": "148.6780",
+      "lastRefreshed": "2025-07-29 12:28:19",
+      "session": "Overnight"
+    }
+  },
+  "metadata": {
+    "generatedAt": "2025-07-29T12:29:28.140Z",
+    "marketTimings": {
+      "lastClose": "7/28/2025, 4:00:00 PM",
+      "nextOpen": "7/29/2025, 9:30:00 AM",
+      "hoursSinceClose": 20,
+      "timeToOpenStr": "-3h -59m"
+    },
+    "dataQuality": {
+      "realDataPoints": 12,
+      "newsArticles": 8,
+      "currencyPairs": 3
+    }
+  }
+}
