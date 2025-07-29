@@ -140,6 +140,14 @@
   ],
   "overnightNews": [
     {
+      "headline": "Job openings decline and hiring tapers off due to trade wars. The good news? Layoffs are still low.",
+      "datetime": 1753798620,
+      "source": "MarketWatch",
+      "url": "https://www.marketwatch.com/story/job-openings-decline-and-hiring-tapers-off-due-to-trade-wars-the-good-news-layoffs-are-still-low-9cca84d3",
+      "category": "general",
+      "timeFromClose": 22
+    },
+    {
       "headline": "Merck will lay off employees and shed some real estate to cut $3 billion in costs",
       "datetime": 1753798080,
       "source": "MarketWatch",
@@ -192,14 +200,6 @@
       "datetime": 1753794984,
       "source": "CNBC",
       "url": "https://www.cnbc.com/2025/07/29/jim-cramers-top-10-things-to-watch-in-the-stock-market-tuesday.html",
-      "category": "general",
-      "timeFromClose": 21
-    },
-    {
-      "headline": "Home prices post smallest increase in nearly two years, offering buyers a reprieve",
-      "datetime": 1753794780,
-      "source": "MarketWatch",
-      "url": "https://www.marketwatch.com/story/home-prices-post-smallest-increase-in-nearly-two-years-offering-buyers-a-reprieve-3c3a4e83",
       "category": "general",
       "timeFromClose": 21
     }
