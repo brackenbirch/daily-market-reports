@@ -140,6 +140,14 @@
   ],
   "overnightNews": [
     {
+      "headline": "Could new laws protect office workers from violent incidents like the Midtown Manhattan shooting?",
+      "datetime": 1753817580,
+      "source": "MarketWatch",
+      "url": "https://www.marketwatch.com/story/could-new-laws-protect-office-workers-from-violent-incidents-like-the-midtown-manhattan-shooting-0f5ebb77",
+      "category": "general",
+      "timeFromClose": 3
+    },
+    {
       "headline": "Trump’s Genius Act made stablecoins safer — but several risks remain for investors",
       "datetime": 1753817100,
       "source": "MarketWatch",
@@ -192,14 +200,6 @@
       "datetime": 1753811730,
       "source": "CNBC",
       "url": "https://www.cnbc.com/2025/07/29/trump-china-trade-tariffs-bessent.html",
-      "category": "general",
-      "timeFromClose": 1
-    },
-    {
-      "headline": "Nike loses head of North America women's business to Athleta",
-      "datetime": 1753811659,
-      "source": "CNBC",
-      "url": "https://www.cnbc.com/2025/07/29/nike-loses-head-of-north-america-womens-business-to-athleta.html",
       "category": "general",
       "timeFromClose": 1
     }
