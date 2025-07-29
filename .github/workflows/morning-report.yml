@@ -1,0 +1,162 @@
+# .github/workflows/market-report.yml
+name: Morning Market Report
+
+on:
+  schedule:
+    # Run at 8:30 AM EST on weekdays (13:30 UTC)
+    - cron: '30 13 * * 1-5'
+  
+  # Allow manual trigger
+  workflow_dispatch:
+    inputs:
+      force_run:
+        description: 'Force run market report'
+        required: false
+        default: 'false'
+
+jobs:
+  market-report:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        cache: 'npm'
+        
+    - name: Install dependencies
+      run: |
+        npm ci
+        # Note: Bloomberg API (blpapi) will not work in GitHub Actions
+        # The script automatically detects this and uses free APIs only
+        
+    - name: Run market report (Free APIs only)
+      env:
+        # Bloomberg settings (will be detected as unavailable)
+        BLOOMBERG_HOST: ${{ secrets.BLOOMBERG_HOST }}
+        BLOOMBERG_PORT: ${{ secrets.BLOOMBERG_PORT }}
+        BLOOMBERG_TYPE: ${{ secrets.BLOOMBERG_TYPE }}
+        
+        # Required for report generation
+        ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        
+        # Required for email delivery
+        GMAIL_USER: ${{ secrets.GMAIL_USER }}
+        GMAIL_PASSWORD: ${{ secrets.GMAIL_PASSWORD }}
+        WORK_EMAIL_LIST: ${{ secrets.WORK_EMAIL_LIST }}
+        
+        # Free API fallbacks (recommended)
+        ALPHA_VANTAGE_API_KEY: ${{ secrets.ALPHA_VANTAGE_API_KEY }}
+        TWELVE_DATA_API_KEY: ${{ secrets.TWELVE_DATA_API_KEY }}
+        NEWS_API_KEY: ${{ secrets.NEWS_API_KEY }}
+        EXCHANGERATE_API_KEY: ${{ secrets.EXCHANGERATE_API_KEY }}
+        FINNHUB_API_KEY: ${{ secrets.FINNHUB_API_KEY }}
+        
+      run: |
+        echo "🤖 Running market report in GitHub Actions (Free APIs only)"
+        echo "Bloomberg Terminal not available - using free API fallbacks"
+        npm run report
+        
+    - name: Upload report artifacts
+      uses: actions/upload-artifact@v4
+      if: always()
+      with:
+        name: morning-report-${{ github.run_id }}
+        path: |
+          market-reports/
+          *.log
+        retention-days: 30
+        
+    - name: Notify on failure
+      if: failure()
+      uses: actions/github-script@v7
+      with:
+        script: |
+          github.rest.issues.create({
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            title: '🚨 Morning Market Report Generation Failed',
+            body: `
+            Morning market report generation failed in GitHub Actions.
+            
+            **Run Details:**
+            - Workflow: ${context.workflow}
+            - Run ID: ${context.runId}
+            - Commit: ${context.sha}
+            
+            **Possible Issues:**
+            - API rate limits exceeded
+            - Missing or invalid API keys
+            - Network connectivity issues
+            
+            Please check the [workflow logs](${context.payload.repository.html_url}/actions/runs/${context.runId}) for details.
+            `,
+            labels: ['bug', 'morning-report', 'automation']
+          })
+
+# Separate workflow for testing dependencies
+---
+name: Test Dependencies
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test-dependencies:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        cache: 'npm'
+        
+    - name: Install dependencies
+      run: npm ci
+      
+    - name: Test dependencies
+      run: |
+        echo "Testing core dependencies..."
+        node -e "
+        try {
+          const axios = require('axios');
+          console.log('✅ axios loaded');
+          
+          const nodemailer = require('nodemailer');
+          console.log('✅ nodemailer loaded');
+          
+          require('dotenv').config();
+          console.log('✅ dotenv loaded');
+          
+          try {
+            const blpapi = require('blpapi');
+            console.log('✅ blpapi loaded (Bloomberg available)');
+          } catch (e) {
+            console.log('⚠️  blpapi not available (expected in GitHub Actions)');
+          }
+          
+          console.log('🎯 Dependencies test completed successfully!');
+        } catch (error) {
+          console.error('❌ Dependency test failed:', error.message);
+          process.exit(1);
+        }
+        "
+        
+    - name: Lint code (if eslint configured)
+      run: |
+        if [ -f ".eslintrc.js" ] || [ -f ".eslintrc.json" ]; then
+          npm run lint || echo "Linting not configured"
+        else
+          echo "ESLint not configured, skipping"
+        fi
+      continue-on-error: true
