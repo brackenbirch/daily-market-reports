@@ -140,6 +140,46 @@
   ],
   "overnightNews": [
     {
+      "headline": "Merck will lay off employees and shed some real estate to cut $3 billion in costs",
+      "datetime": 1753798080,
+      "source": "MarketWatch",
+      "url": "https://www.marketwatch.com/story/merck-will-lay-off-employees-and-shed-some-real-estate-to-cut-3-billion-in-costs-854b5a33",
+      "category": "general",
+      "timeFromClose": 22
+    },
+    {
+      "headline": "6 lies parents tell their kids—like ‘if you put your mind to it, you can accomplish anything,' says psychologist",
+      "datetime": 1753798021,
+      "source": "CNBC",
+      "url": "https://www.cnbc.com/2025/07/29/lies-parents-tell-their-kids-like-if-you-put-your-mind-to-it-you-can-accomplish-anything-says-psychologist.html",
+      "category": "general",
+      "timeFromClose": 22
+    },
+    {
+      "headline": "Walmart, MLS ink partnership to capitalize on growing U.S. soccer fandom",
+      "datetime": 1753797601,
+      "source": "CNBC",
+      "url": "https://www.cnbc.com/2025/07/29/walmart-mls-partnership-soccer-fandom.html",
+      "category": "general",
+      "timeFromClose": 22
+    },
+    {
+      "headline": "Gen Z plans to be financially independent by age 32 — without relying on a 9-to-5 job",
+      "datetime": 1753797600,
+      "source": "MarketWatch",
+      "url": "https://www.marketwatch.com/story/gen-z-plans-to-be-financially-independent-by-age-32-without-relying-on-a-9-to-5-job-9f7ece88",
+      "category": "general",
+      "timeFromClose": 22
+    },
+    {
+      "headline": "3 ways companies successfully shift to a 4-day workweek, from a researcher who's studied hundreds of cases",
+      "datetime": 1753797271,
+      "source": "CNBC",
+      "url": "https://www.cnbc.com/2025/07/29/3-ways-companies-successfully-shift-to-a-4-day-workweek.html",
+      "category": "general",
+      "timeFromClose": 21
+    },
+    {
       "headline": "3 reasons why the stock market is on the brink of losing 5%-10% — and what to do now",
       "datetime": 1753795560,
       "source": "MarketWatch",
@@ -162,46 +202,6 @@
       "url": "https://www.marketwatch.com/story/home-prices-post-smallest-increase-in-nearly-two-years-offering-buyers-a-reprieve-3c3a4e83",
       "category": "general",
       "timeFromClose": 21
-    },
-    {
-      "headline": "IMF lifts U.S. growth outlook on lower tariffs and upbeat markets",
-      "datetime": 1753794000,
-      "source": "MarketWatch",
-      "url": "https://www.marketwatch.com/story/imf-lifts-u-s-growth-outlook-on-lower-tariffs-and-upbeat-markets-441b970a",
-      "category": "general",
-      "timeFromClose": 21
-    },
-    {
-      "headline": "Trade deficit sinks to 22-month low as businesses try to time Trump tariffs. GDP to get boost.",
-      "datetime": 1753793400,
-      "source": "MarketWatch",
-      "url": "https://www.marketwatch.com/story/trade-deficit-sinks-to-22-month-low-as-businesses-try-to-time-trump-tariffs-gdp-to-get-boost-05c3d569",
-      "category": "general",
-      "timeFromClose": 20
-    },
-    {
-      "headline": "We're locking in a 220% gain on a core holding to guard against an earnings letdown",
-      "datetime": 1753792478,
-      "source": "CNBC",
-      "url": "https://www.cnbc.com/2025/07/29/were-locking-in-a-220percent-gain-on-a-core-holding-to-guard-against-an-earnings-letdown.html",
-      "category": "general",
-      "timeFromClose": 20
-    },
-    {
-      "headline": "Novo Nordisk issues profit warning as competition — legal and otherwise — hits Wegovy, Ozempic",
-      "datetime": 1753792440,
-      "source": "MarketWatch",
-      "url": "https://www.marketwatch.com/story/novo-nordisk-issues-profit-warning-as-competition-legal-and-otherwise-hits-wegovy-ozempic-2d94d1a0",
-      "category": "general",
-      "timeFromClose": 20
-    },
-    {
-      "headline": "Union Pacific to buy Norfolk Southern in a much-anticipated $85 billion deal",
-      "datetime": 1753792380,
-      "source": "MarketWatch",
-      "url": "https://www.marketwatch.com/story/union-pacific-to-buy-norfolk-southern-in-a-much-anticipated-85-billion-deal-b9a6b083",
-      "category": "general",
-      "timeFromClose": 20
     }
   ],
   "geopoliticalEvents": []

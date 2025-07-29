@@ -5,93 +5,132 @@
 
 ## EXECUTIVE SUMMARY
 
-Mixed overnight signals emerge from free-tier proxy data, with Nasdaq futures proxies showing modest strength (+0.31%) while S&P 500 and Dow proxies remain slightly negative. Major market risks include potential 5-10% correction warnings and ongoing trade policy uncertainties, though IMF growth outlook improvements provide some counterbalance.
+Mixed overnight signals emerge from available proxy data, with technology showing relative strength (+0.31% QQQ) while broader markets remain flat to slightly negative. Key market-moving news includes Merck's $3B cost-cutting initiative and housing market cooling, suggesting sector rotation potential ahead of Tuesday's open.
 
 ---
 
 ## MARKET PROXIES ANALYSIS (Free Tier)
 
-ETF proxy data reveals divergent sector performance with technology leading gains (XLK +0.80%) while financials lag (XLF -0.69%). The QQQ's outperformance versus SPY suggests continued tech sector resilience. Global proxies show mixed sentiment: European tech strength via ASML (+2.63%) contrasts with Asian weakness in Taiwan Semi (-1.16%) and Sony (-2.09%). Chinese markets show recovery signs through Alibaba (+1.77%). Currency stability in major pairs (EUR/USD 1.0847, GBP/USD 1.2816) suggests no major overnight disruptions. Volume patterns in proxy ETFs indicate normal trading activity without panic or euphoria signals. Cross-referencing available data points shows consistency between domestic ETF performance and their underlying sector themes, though real futures data would provide more precise directional guidance.
+ETF proxy data reveals a nuanced overnight picture with technology outperforming broader indices. QQQ's +0.31% gain contrasts with SPY's marginal -0.03% decline, indicating potential Nasdaq leadership. The XLK technology sector ETF's robust +0.80% performance supports this thesis, while XLF financials lag at -0.69%.
+
+Global proxies show mixed Asian sentiment with Taiwan Semi declining -1.16% but Chinese markets (Alibaba proxy) gaining +1.77%. European technology strength via ASML (+2.63%) suggests continued tech sector momentum. High volume in SPY (54.9M) and QQQ (31.5M) indicates institutional positioning.
+
+Currency stability in major pairs (EUR/USD 1.0847) provides a neutral backdrop. The divergence between tech strength and financial weakness, combined with moderate volumes, suggests selective positioning rather than broad market conviction.
+
+**Limitation Note:** Real futures data would provide more precise pre-market direction versus these ETF proxies.
 
 ---
 
 ## US MARKET OUTLOOK
 
-Current ETF proxies suggest a cautiously mixed opening, with technology potentially leading while traditional sectors face headwinds. The SPY proxy's minimal decline (-0.03%) indicates market indecision rather than strong directional conviction. Key economic themes include housing market cooling (smallest price increase in two years) and trade deficit improvements, both potentially supportive for GDP growth. However, MarketWatch's prominent correction warning (5-10% potential decline) reflects growing analyst caution. The IMF's upgraded US growth outlook on lower tariff expectations provides fundamental support, though execution risks remain. Financial sector weakness in XLF suggests banking concerns may persist. Without real futures data, precise opening direction remains uncertain, but the narrow ranges in proxy instruments suggest consolidation rather than dramatic moves. Pre-market sentiment appears cautiously neutral with sector rotation continuing.
+Tuesday's open appears positioned for modest gains led by technology, based on available proxy indicators. QQQ's outperformance and XLK's strong showing suggest continued rotation into growth sectors. However, SPY's flat performance and DIA's slight decline (-0.15%) indicate broader market hesitation.
+
+The 22-hour gap since Friday's close creates uncertainty, but available overnight data suggests a cautiously optimistic open. Financial sector weakness (XLF -0.69%) may weigh on broader indices, while technology strength could drive selective gains.
+
+Key risk factors include the housing market slowdown reported overnight and corporate cost-cutting (Merck), which may signal economic caution. Volume patterns in major ETFs suggest institutional activity but lack the conviction seen in stronger trending periods.
+
+**Limitation Note:** Direct S&P 500 futures would provide more accurate opening direction than SPY proxy data.
 
 ---
 
 ## GLOBAL MARKETS SUMMARY
 
-Global proxy indicators reveal regional divergence with European technology showing strength while Asian markets face pressure. ASML's strong performance (+2.63%) suggests European tech resilience, potentially benefiting US tech sector sentiment. Asian weakness in Taiwan Semi and Sony reflects regional headwinds, though China's recovery signs via Alibaba provide some optimism. Currency stability across major pairs indicates no significant overnight disruptions or central bank interventions. The mixed global picture suggests US markets may open without strong international directional bias. Cross-market correlations visible in available data show technology as a global outperformer, while traditional industrial sectors face broader challenges. Limited free-tier global data constrains deeper regional analysis, but available proxies suggest continued sector-specific rather than broad-based market movements.
+International proxy data reveals regional divergence with European technology leading gains while Asian markets show mixed performance. ASML's +2.63% surge indicates European tech strength, potentially supporting US technology sectors at the open.
+
+Asian market proxies present conflicting signals: Taiwan Semi's decline suggests semiconductor caution, while Alibaba's +1.77% gain indicates Chinese market resilience. Japanese market weakness (Sony -2.09%) reflects broader regional uncertainty.
+
+Currency stability across major pairs provides a neutral international backdrop, with no significant FX-driven market pressures evident. The tech sector's global strength, visible across regions, may drive cross-border capital flows into growth sectors.
+
+**Limitation Note:** Direct Asian futures data would provide clearer regional sentiment versus these proxy instruments.
 
 ---
 
 ## NEWS ANALYSIS
 
-Overnight developments present conflicting market narratives. Bearish themes include prominent correction warnings and Novo Nordisk's profit warning affecting pharmaceutical sentiment. However, bullish catalysts emerge from the major Union Pacific-Norfolk Southern merger ($85 billion), IMF growth upgrades, and improving trade deficit data. Housing market cooling may benefit affordability but raises growth concerns. The trade deficit reaching 22-month lows as businesses navigate tariff timing suggests economic adaptation. Jim Cramer's market focus and institutional profit-taking (220% gain locks) indicate active portfolio management. Corporate earnings concerns balance against policy optimism. Without AI sentiment analysis tools (requiring paid APIs), manual news assessment suggests cautiously mixed sentiment with significant cross-currents requiring careful navigation.
+Overnight developments present mixed corporate and economic signals. Merck's $3B cost-cutting announcement signals defensive corporate positioning, potentially pressuring healthcare and broader market sentiment. The housing market showing its smallest price increase in two years offers consumer relief but may indicate economic cooling.
+
+Walmart's MLS partnership represents positive consumer engagement trends, while generational financial planning stories reflect longer-term economic optimism. The "stock market losing 5%-10%" headline from MarketWatch introduces bearish sentiment that could influence opening psychology.
+
+Corporate restructuring themes (4-day workweek studies, layoff announcements) suggest ongoing business model evolution. The absence of major geopolitical or monetary policy news creates a corporate earnings and economic data-focused environment.
+
+**Limitation Note:** AI-powered sentiment analysis requires paid APIs for more sophisticated news impact assessment.
 
 ---
 
 ## SECTOR INSIGHTS
 
-Available ETF data reveals clear sector rotation patterns with technology (XLK +0.80%) significantly outperforming financials (XLF -0.69%). This 149 basis point spread suggests continued preference for growth over value sectors. The financial sector weakness may reflect interest rate concerns or credit quality issues. Technology's resilience, supported by global semiconductor strength in ASML, indicates sustained investor confidence in the sector despite broader market cautions. Healthcare faces headwinds from Novo Nordisk's competitive pressures in the lucrative weight-loss drug market. Transportation benefits from major M&A activity with the Union Pacific deal. Energy and materials sectors lack clear directional signals from available free-tier data. The pronounced sector divergence suggests stock-picking environments over broad market plays.
+Available ETF data reveals clear sector rotation signals with technology (XLK +0.80%) significantly outperforming financials (XLF -0.69%). This 150 basis point spread suggests risk-on positioning favoring growth over value sectors.
+
+Healthcare faces headwinds from Merck's restructuring news, while consumer discretionary may benefit from housing market stabilization. The technology sector's global strength (ASML, QQQ performance) indicates sustained momentum in growth-oriented investments.
+
+Financial sector weakness may reflect interest rate concerns or economic growth questions, creating potential opportunities for contrarian positioning. Volume concentration in major ETFs suggests institutional sector allocation adjustments.
+
+**Limitation Note:** Individual sector futures and comprehensive sector ETF coverage requires paid data subscriptions.
 
 ---
 
 ## CURRENCY ANALYSIS
 
-Major currency pairs show relative stability with EUR/USD at 1.0847, GBP/USD at 1.2816, and USD/JPY at 155.18. The lack of significant overnight moves suggests no major central bank interventions or geopolitical disruptions. USD/JPY's elevated level near 155 continues to warrant Bank of Japan intervention monitoring, though current stability reduces immediate concerns. Euro strength against expectations may reflect improved European economic data or reduced political risks. Sterling's position above 1.28 suggests UK economic resilience. The stable currency environment should support international equity flows and reduce FX-related market volatility. However, free-tier forex data limitations prevent deeper analysis of carry trade flows or emerging market currency impacts that could affect global risk sentiment.
+Major currency pairs show relative stability with EUR/USD at 1.0847 and GBP/USD at 1.2816, indicating neutral international capital flow pressures. USD/JPY at 155.18 suggests continued dollar strength against the yen, supporting US asset attractiveness.
+
+Currency stability reduces international market volatility risks and supports cross-border investment flows. The absence of significant FX moves suggests central bank policy expectations remain stable, creating a supportive environment for equity markets.
+
+Moderate dollar strength may pressure commodity-sensitive sectors while supporting domestic-focused companies. The stable currency environment allows fundamental factors to drive market direction rather than FX-related volatility.
+
+**Limitation Note:** Real-time currency data and forward rate indicators require premium forex data services.
 
 ---
 
 ## TECHNICAL OVERVIEW
 
-Based on available ETF proxy data, SPY approaches key psychological resistance near 637 with minimal overnight movement suggesting consolidation. QQQ's relative strength above 568 indicates continued uptrend momentum in technology. Volume patterns in major ETFs appear normal without unusual accumulation or distribution signals. XLK's outperformance suggests sector rotation rather than broad market weakness. Support levels for SPY appear around 635, while QQQ shows support near 565. The narrow overnight ranges in proxy instruments suggest awaiting catalysts rather than strong directional conviction. Without real-time futures data and professional charting tools, detailed technical analysis remains limited. Available price action suggests sideways to slightly higher bias with sector-specific opportunities outweighing broad market plays.
+SPY proxy data at 636.94 shows consolidation near recent levels with moderate volume suggesting institutional accumulation. QQQ's 568.14 level with positive momentum indicates potential breakout above recent ranges.
+
+Volume patterns in major ETFs (SPY: 54.9M, QQQ: 31.5M) suggest active institutional positioning without panic buying or selling. The technology sector's relative strength creates potential leadership for broader market advances.
+
+Key resistance levels appear intact based on available price data, while support levels show resilience. The mixed sector performance suggests selective rather than broad-based technical breakouts.
+
+**Limitation Note:** Professional technical analysis requires real-time futures data, advanced charting tools, and intraday price action unavailable in free tiers.
 
 ---
 
 ## LIMITATIONS & UPGRADE PATH
 
-**Current Free Tier Constraints:**
-- Real-time futures data unavailable (using ETF proxies)
-- Professional options flow analysis not accessible
-- Limited global market direct feeds
-- No AI-powered sentiment analysis
-- Rate-limited API calls restrict data depth
-- Delayed or proxy data reduces precision
+**Current Free Tier Limitations:**
+- ETF proxies used instead of real-time futures data
+- Sample options flow data (real data requires paid APIs)
+- Limited global market coverage using proxy instruments
+- Basic news sentiment without AI analysis
+- Rate-limited API calls restricting data depth
 
 **Upgrade Benefits:**
-- Real-time futures and options data
-- Unlimited API calls for comprehensive analysis
-- Professional-grade technical indicators
-- AI sentiment analysis tools
-- Direct global market feeds
-- Enhanced accuracy for trading decisions
+- Real-time S&P 500, Nasdaq, and Dow futures
+- Professional options flow and unusual activity alerts
+- Comprehensive global market data
+- AI-powered news sentiment analysis
+- Unlimited API calls for deeper market analysis
 
 ---
 
 ## KEY TAKEAWAYS
 
-Technology sector strength and major M&A activity provide market support, while correction warnings and mixed economic signals suggest cautious positioning remains prudent. Sector rotation opportunities appear more compelling than broad market directional plays given current mixed signals.
+Technology sector leadership and financial sector weakness suggest selective market positioning ahead of Tuesday's open, with moderate volumes indicating cautious institutional activity. Mixed corporate news and housing market cooling create a balanced risk environment favoring stock-specific rather than broad market strategies.
 
 ---
 
 ## IMPORTANT FREE TIER DISCLAIMERS
 
-- **Data Sources:** Analysis uses best available free APIs with inherent limitations
-- **Real-Time Limitations:** Futures data proxied through ETFs; actual futures require paid subscriptions  
-- **Accuracy Constraints:** Some data delayed or limited in scope compared to professional feeds
-- **Trading Decisions:** Upgrade to paid APIs strongly recommended for active trading
-- **Proxy Instruments:** Direct market data unavailable in free tier for some instruments
-- **Analysis Scope:** Professional-grade analysis requires premium data subscriptions
+- **Data Sources:** This analysis uses the best available free APIs (Alpha Vantage, Twelve Data, Marketstack, ExchangeRate-API, News API)
+- **Proxy Data:** ETF proxies used where direct futures data unavailable
+- **Sample Data:** Options flow represents sample data structure, not actual overnight activity
+- **Rate Limits:** Analysis constrained by free tier API call limitations
+- **Trading Decisions:** Upgrade to paid APIs recommended for active trading strategies
+- **Data Delays:** Some data may be delayed or limited in scope compared to professional services
+
+**Total Analysis Cost: $0/month using exclusively free tier APIs**
 
 ---
 
-*This FREE TIER report provides valuable market insights using zero-cost data sources. While limitations exist, the analysis offers meaningful market perspective within available data constraints.*
-
-**Report Generated:** Tuesday, July 29, 2025 | **Next Update:** Market Open Analysis
-**Data Cost:** $0/month | **API Sources:** 6 free-tier providers active
+*This FREE TIER report provides valuable market insights using zero-cost data sources while maintaining transparency about limitations and upgrade benefits.*
 
 ---
 
@@ -99,5 +138,5 @@ Technology sector strength and major M&A activity provide market support, while 
 *Zero Cost Data Sources: Alpha Vantage (Free), Twelve Data (Free), Marketstack (Free), ExchangeRate-API (Free)*  
 *Total Monthly Cost: $0 (All free tier APIs)*  
 *Data Quality: Best available from no-cost sources with disclosed limitations*  
-*Generated: 2025-07-29T14:01:33.912Z | Next Market Open: 7/30/2025, 9:30:00 AM*  
+*Generated: 2025-07-29T14:21:57.515Z | Next Market Open: 7/30/2025, 9:30:00 AM*  
 *Upgrade Path: Consider paid APIs for real-time futures, professional options flow, and unlimited calls*
