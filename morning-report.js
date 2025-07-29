@@ -11,7 +11,7 @@ try {
     blpapi = require('blpapi');
     console.log('🔥 Bloomberg API loaded - Institutional-grade data available!');
 } catch (error) {
-    console.log('⚠️  Bloomberg API not available, using free APIs only');
+    console.log('⚠️  Bloomberg API not available, using standard APIs');
     blpapi = null;
 }
 
@@ -239,7 +239,7 @@ async function makeAPICall(url, options = {}, apiName = 'unknown', retries = 2) 
     }
 }
 
-// Hybrid futures data - Bloomberg first, then free API fallbacks
+// Hybrid futures data - Bloomberg first, then standard API fallbacks
 async function fetchHybridFuturesData(bloomberg) {
     console.log('📈 Fetching futures data...');
     
@@ -253,7 +253,7 @@ async function fetchHybridFuturesData(bloomberg) {
         }
     }
     
-    // Fallback to free APIs - Focus on major index ETFs for after-hours indication
+    // Fallback to standard APIs - Focus on major index ETFs for after-hours indication
     const afterHoursFutures = {};
     
     if (ALPHA_VANTAGE_API_KEY) {
@@ -370,7 +370,7 @@ async function fetchCurrencyMoves(bloomberg) {
         }
     }
     
-    // Fallback to free APIs
+    // Fallback to standard APIs
     if (Object.keys(currencyMoves).length === 0) {
         if (EXCHANGERATE_API_KEY) {
             try {
@@ -490,7 +490,7 @@ async function fetchOvernightNews() {
 
 // Function to fetch overnight market data (close to open focus) - Enhanced with Bloomberg integration
 async function fetchOvernightMarketData() {
-    console.log('🔄 Fetching overnight market data using Bloomberg + Free APIs...');
+    console.log('🔄 Fetching overnight market data using comprehensive API coverage...');
     
     const overnightData = {
         afterHoursFutures: {},
@@ -502,7 +502,7 @@ async function fetchOvernightMarketData() {
         overnightNews: [],
         globalMarkets: {},
         currencyMoves: {},
-        dataQuality: 'free'
+        dataQuality: 'standard'
     };
     
     // Initialize Bloomberg
@@ -517,7 +517,7 @@ async function fetchOvernightMarketData() {
                 overnightData.dataQuality = 'institutional';
             }
         } catch (error) {
-            console.log('Bloomberg connection failed, using free APIs');
+            console.log('Bloomberg connection failed, using standard APIs');
         }
     }
     
@@ -537,15 +537,15 @@ async function fetchOvernightMarketData() {
         
         // Determine final data quality
         const hasBloombergData = bloombergAvailable;
-        const hasFreeData = Object.keys(overnightData.afterHoursFutures).length > 0 || 
-                           Object.keys(overnightData.overnightSectors).length > 0;
+        const hasStandardData = Object.keys(overnightData.afterHoursFutures).length > 0 || 
+                                Object.keys(overnightData.overnightSectors).length > 0;
         
-        if (hasBloombergData && hasFreeData) {
+        if (hasBloombergData && hasStandardData) {
             overnightData.dataQuality = 'hybrid';
         } else if (hasBloombergData) {
             overnightData.dataQuality = 'institutional';
         } else {
-            overnightData.dataQuality = 'free';
+            overnightData.dataQuality = 'standard';
         }
         
         console.log(`✅ Overnight data collection completed - Quality: ${overnightData.dataQuality.toUpperCase()}`);
@@ -698,7 +698,7 @@ function formatOvernightDataForPrompt(overnightData) {
 const createOvernightMarketPrompt = (overnightData) => {
     const timing = getMarketTimingInfo();
     
-    return `You are a senior financial analyst creating a comprehensive daily market summary. You must use multiple authoritative financial sources and cross-reference data points for accuracy. Prioritize official exchange data, central bank communications, and primary financial news sources.
+    return `You are a senior financial analyst creating a comprehensive morning market report. You must use multiple authoritative financial sources and cross-reference data points for accuracy. Prioritize official exchange data, central bank communications, and primary financial news sources.
 
 ${formatOvernightDataForPrompt(overnightData)}
 
@@ -842,10 +842,10 @@ Search for and report on:
 Use current market data from ${new Date().toDateString()} and specify exact market session timing (Asian close, European open, US pre-market). Write in professional financial language suitable for institutional clients with quantitative risk management focus.`;
 };
 
-async function generateOvernightMarketReport() {
+async function generateMorningMarketReport() {
     try {
         const timing = getMarketTimingInfo();
-        console.log(`🌙 Generating ENHANCED OVERNIGHT MARKET REPORT (${timing.hoursSinceClose} hours since close)...`);
+        console.log(`🌅 Generating MORNING MARKET REPORT (${timing.hoursSinceClose} hours since close)...`);
         
         // Fetch overnight market data
         const overnightData = await fetchOvernightMarketData();
@@ -874,28 +874,28 @@ async function generateOvernightMarketReport() {
             fs.mkdirSync(reportsDir, { recursive: true });
         }
         
-        // Generate filename with overnight focus
+        // Generate filename
         const today = new Date();
         const dateStr = today.toISOString().split('T')[0];
-        const filename = `enhanced-overnight-market-report-${dateStr}.md`;
+        const filename = `morning-market-report-${dateStr}.md`;
         const filepath = path.join(reportsDir, filename);
         
-        // Add metadata header focused on morning period
+        // Add metadata header
         const reportWithMetadata = `${report}
 
 ---
 
-*Enhanced Morning Market Report with Multi-Source Verification*  
-*Data Quality: ${overnightData.dataQuality.toUpperCase()} (Bloomberg + Free APIs)*  
+*Morning Market Report with Multi-Source Verification*  
+*Data Quality: ${overnightData.dataQuality.toUpperCase()} (Bloomberg + Standard APIs)*  
 *Data Accuracy Priority: Official exchanges, central banks, primary sources*
 *Generated: ${new Date().toLocaleString()} ET*
 *Market Status: ${timing.timeToOpenStr} until open*
 `;
         
-        // Write overnight report to file
+        // Write report to file
         fs.writeFileSync(filepath, reportWithMetadata);
         
-        console.log(`✅ Enhanced morning market report generated: ${filename}`);
+        console.log(`✅ Morning market report generated: ${filename}`);
         console.log(`📊 Report length: ${report.length} characters`);
         console.log(`⏰ Hours since close: ${timing.hoursSinceClose}`);
         console.log(`⏰ Time to market open: ${timing.timeToOpenStr}`);
@@ -903,11 +903,11 @@ async function generateOvernightMarketReport() {
         console.log(`🎯 Data quality: ${overnightData.dataQuality.toUpperCase()}`);
         
         // Create latest morning report
-        const latestFilepath = path.join(reportsDir, 'latest-enhanced-morning-market-report.md');
+        const latestFilepath = path.join(reportsDir, 'latest-morning-market-report.md');
         fs.writeFileSync(latestFilepath, reportWithMetadata);
         
         // Save raw data with verification metadata
-        const rawDataPath = path.join(reportsDir, `enhanced-morning-data-${dateStr}.json`);
+        const rawDataPath = path.join(reportsDir, `morning-data-${dateStr}.json`);
         const enhancedData = {
             ...overnightData,
             metadata: {
@@ -925,13 +925,13 @@ async function generateOvernightMarketReport() {
         fs.writeFileSync(rawDataPath, JSON.stringify(enhancedData, null, 2));
         
         // Send morning report via email
-        console.log('📧 Sending enhanced morning market report...');
+        console.log('📧 Sending morning market report...');
         await sendOvernightReportEmail(reportWithMetadata, dateStr);
         
-        console.log('✅ ENHANCED MORNING MARKET REPORT COMPLETED!');
+        console.log('✅ MORNING MARKET REPORT COMPLETED!');
         console.log(`${timing.hoursSinceClose}-hour close-to-open analysis with enhanced accuracy`);
         console.log(`⏰ Market opens in ${timing.timeToOpenStr}`);
-        console.log('💪 Best of both worlds: Bloomberg precision with free API coverage');
+        console.log('💪 Comprehensive API coverage with institutional-grade data when available');
         
         return {
             success: true,
@@ -942,20 +942,20 @@ async function generateOvernightMarketReport() {
         };
         
     } catch (error) {
-        console.error('❌ Error generating enhanced morning market report:', error.response?.data || error.message);
+        console.error('❌ Error generating morning market report:', error.response?.data || error.message);
         process.exit(1);
     }
 }
 
 // Export for testing
 module.exports = {
-    generateOvernightMarketReport,
+    generateMorningMarketReport,
     fetchOvernightMarketData,
     getMarketTimingInfo,
     BloombergAPIManager
 };
 
-// Run the enhanced morning market report generation
+// Run the morning market report generation
 if (require.main === module) {
-    generateOvernightMarketReport();
+    generateMorningMarketReport();
 }
