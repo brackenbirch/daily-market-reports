@@ -140,6 +140,30 @@
   ],
   "overnightNews": [
     {
+      "headline": "Looking for the stock market’s next big winners? Just look for these three numbers.",
+      "datetime": 1753800840,
+      "source": "MarketWatch",
+      "url": "https://www.marketwatch.com/story/looking-for-the-stock-markets-next-big-winners-just-look-for-these-three-numbers-e239a4f8",
+      "category": "general",
+      "timeFromClose": 22
+    },
+    {
+      "headline": "Consumer confidence rebounds slightly in July on easing inflation fears and higher stock prices",
+      "datetime": 1753800480,
+      "source": "MarketWatch",
+      "url": "https://www.marketwatch.com/story/consumer-confidence-rebounds-in-july-on-lower-inflation-fears-and-higher-stock-prices-fdfeff99",
+      "category": "general",
+      "timeFromClose": 22
+    },
+    {
+      "headline": "Trump's trade deals for 'the world' will be 'done by Friday,' but China will take longer: Lutnick",
+      "datetime": 1753800110,
+      "source": "CNBC",
+      "url": "https://www.cnbc.com/2025/07/29/trump-trade-tariffs-china-lutnick.html",
+      "category": "general",
+      "timeFromClose": 22
+    },
+    {
       "headline": "Job openings decline and hiring tapers off due to trade wars. The good news? Layoffs are still low.",
       "datetime": 1753798620,
       "source": "MarketWatch",
@@ -178,30 +202,6 @@
       "url": "https://www.marketwatch.com/story/gen-z-plans-to-be-financially-independent-by-age-32-without-relying-on-a-9-to-5-job-9f7ece88",
       "category": "general",
       "timeFromClose": 22
-    },
-    {
-      "headline": "3 ways companies successfully shift to a 4-day workweek, from a researcher who's studied hundreds of cases",
-      "datetime": 1753797271,
-      "source": "CNBC",
-      "url": "https://www.cnbc.com/2025/07/29/3-ways-companies-successfully-shift-to-a-4-day-workweek.html",
-      "category": "general",
-      "timeFromClose": 21
-    },
-    {
-      "headline": "3 reasons why the stock market is on the brink of losing 5%-10% — and what to do now",
-      "datetime": 1753795560,
-      "source": "MarketWatch",
-      "url": "https://www.marketwatch.com/story/3-reasons-why-the-stock-market-is-on-the-brink-of-losing-5-10-and-what-to-do-now-91bcf13e",
-      "category": "general",
-      "timeFromClose": 21
-    },
-    {
-      "headline": "Jim Cramer's top 10 things to watch in the stock market Tuesday",
-      "datetime": 1753794984,
-      "source": "CNBC",
-      "url": "https://www.cnbc.com/2025/07/29/jim-cramers-top-10-things-to-watch-in-the-stock-market-tuesday.html",
-      "category": "general",
-      "timeFromClose": 21
     }
   ],
   "geopoliticalEvents": []
