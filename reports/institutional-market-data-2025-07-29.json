@@ -1,0 +1,461 @@
+{
+  "afterHoursFutures": {
+    "SPY": {
+      "01. symbol": "SPY",
+      "02. open": "637.4800",
+      "03. high": "638.0400",
+      "04. low": "635.5400",
+      "05. price": "636.9400",
+      "06. volume": "54917102",
+      "07. latest trading day": "2025-07-28",
+      "08. previous close": "637.1000",
+      "09. change": "-0.1600",
+      "10. change percent": "-0.0251%",
+      "session": "After-Hours/Extended"
+    },
+    "QQQ": {
+      "01. symbol": "QQQ",
+      "02. open": "567.7400",
+      "03. high": "569.0400",
+      "04. low": "566.8700",
+      "05. price": "568.1400",
+      "06. volume": "31498739",
+      "07. latest trading day": "2025-07-28",
+      "08. previous close": "566.3700",
+      "09. change": "1.7700",
+      "10. change percent": "0.3125%",
+      "session": "After-Hours/Extended"
+    },
+    "DIA": {
+      "01. symbol": "DIA",
+      "02. open": "448.6600",
+      "03. high": "449.4800",
+      "04. low": "447.3750",
+      "05. price": "448.3400",
+      "06. volume": "2864164",
+      "07. latest trading day": "2025-07-28",
+      "08. previous close": "449.0200",
+      "09. change": "-0.6800",
+      "10. change percent": "-0.1514%",
+      "session": "After-Hours/Extended"
+    }
+  },
+  "overnightSectors": {
+    "XLF": {
+      "01. symbol": "XLF",
+      "02. open": "53.3800",
+      "03. high": "53.4400",
+      "04. low": "52.9600",
+      "05. price": "53.0700",
+      "06. volume": "29119290",
+      "07. latest trading day": "2025-07-28",
+      "08. previous close": "53.4400",
+      "09. change": "-0.3700",
+      "10. change percent": "-0.6924%",
+      "name": "Financial Services",
+      "session": "Extended Hours"
+    },
+    "XLK": {
+      "01. symbol": "XLK",
+      "02. open": "262.9900",
+      "03. high": "264.1500",
+      "04. low": "262.4450",
+      "05. price": "264.0800",
+      "06. volume": "5758766",
+      "07. latest trading day": "2025-07-28",
+      "08. previous close": "261.9900",
+      "09. change": "2.0900",
+      "10. change percent": "0.7977%",
+      "name": "Technology",
+      "session": "Extended Hours"
+    },
+    "XLE": {
+      "01. symbol": "XLE",
+      "02. open": "87.6800",
+      "03. high": "88.2400",
+      "04. low": "87.5500",
+      "05. price": "88.0900",
+      "06. volume": "11852641",
+      "07. latest trading day": "2025-07-28",
+      "08. previous close": "87.1000",
+      "09. change": "0.9900",
+      "10. change percent": "1.1366%",
+      "name": "Energy",
+      "session": "Extended Hours"
+    },
+    "XLV": {
+      "01. symbol": "XLV",
+      "02. open": "136.1400",
+      "03. high": "136.3852",
+      "04. low": "134.9300",
+      "05. price": "135.2900",
+      "06. volume": "9780254",
+      "07. latest trading day": "2025-07-28",
+      "08. previous close": "136.4800",
+      "09. change": "-1.1900",
+      "10. change percent": "-0.8719%",
+      "name": "Healthcare",
+      "session": "Extended Hours"
+    },
+    "XLI": {
+      "01. symbol": "XLI",
+      "02. open": "155.0700",
+      "03. high": "155.1500",
+      "04. low": "154.0700",
+      "05. price": "154.5100",
+      "06. volume": "9214824",
+      "07. latest trading day": "2025-07-28",
+      "08. previous close": "154.9900",
+      "09. change": "-0.4800",
+      "10. change percent": "-0.3097%",
+      "name": "Industrials",
+      "session": "Extended Hours"
+    },
+    "XLY": {
+      "01. symbol": "XLY",
+      "02. open": "225.7400",
+      "03. high": "227.3400",
+      "04. low": "225.0300",
+      "05. price": "226.1800",
+      "06. volume": "5666433",
+      "07. latest trading day": "2025-07-28",
+      "08. previous close": "224.8700",
+      "09. change": "1.3100",
+      "10. change percent": "0.5826%",
+      "name": "Consumer Discretionary",
+      "session": "Extended Hours"
+    },
+    "XLP": {
+      "01. symbol": "XLP",
+      "02. open": "81.0700",
+      "03. high": "81.2000",
+      "04. low": "80.5450",
+      "05. price": "80.6600",
+      "06. volume": "12113637",
+      "07. latest trading day": "2025-07-28",
+      "08. previous close": "81.5000",
+      "09. change": "-0.8400",
+      "10. change percent": "-1.0307%",
+      "name": "Consumer Staples",
+      "session": "Extended Hours"
+    },
+    "XLU": {
+      "01. symbol": "XLU",
+      "02. open": "84.5100",
+      "03. high": "84.5300",
+      "04. low": "83.4050",
+      "05. price": "83.6200",
+      "06. volume": "11206754",
+      "07. latest trading day": "2025-07-28",
+      "08. previous close": "84.5200",
+      "09. change": "-0.9000",
+      "10. change percent": "-1.0648%",
+      "name": "Utilities",
+      "session": "Extended Hours"
+    },
+    "XLB": {
+      "01. symbol": "XLB",
+      "02. open": "91.8400",
+      "03. high": "91.9700",
+      "04. low": "90.7700",
+      "05. price": "91.0300",
+      "06. volume": "7507522",
+      "07. latest trading day": "2025-07-28",
+      "08. previous close": "92.3700",
+      "09. change": "-1.3400",
+      "10. change percent": "-1.4507%",
+      "name": "Materials",
+      "session": "Extended Hours"
+    }
+  },
+  "afterHoursMovers": {
+    "topGainers": [
+      {
+        "symbol": "AAPL",
+        "price": "$252.62",
+        "change": "+7.33",
+        "changePercent": "+2.99%",
+        "volume": "139K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "MSFT",
+        "price": "$172.34",
+        "change": "+1.15",
+        "changePercent": "+0.67%",
+        "volume": "168K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "GOOGL",
+        "price": "$158.56",
+        "change": "+11.98",
+        "changePercent": "+8.17%",
+        "volume": "146K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "AMZN",
+        "price": "$187.16",
+        "change": "+10.49",
+        "changePercent": "+5.94%",
+        "volume": "158K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "TSLA",
+        "price": "$117.73",
+        "change": "+11.58",
+        "changePercent": "+10.91%",
+        "volume": "54K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "NVDA",
+        "price": "$141.08",
+        "change": "+11.55",
+        "changePercent": "+8.92%",
+        "volume": "137K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "META",
+        "price": "$71.70",
+        "change": "+5.78",
+        "changePercent": "+8.77%",
+        "volume": "90K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "NFLX",
+        "price": "$180.21",
+        "change": "+8.76",
+        "changePercent": "+5.11%",
+        "volume": "207K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "AMD",
+        "price": "$239.17",
+        "change": "+28.19",
+        "changePercent": "+13.36%",
+        "volume": "53K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "CRM",
+        "price": "$62.21",
+        "change": "+5.57",
+        "changePercent": "+9.83%",
+        "volume": "152K",
+        "timeframe": "After-Hours"
+      }
+    ],
+    "topLosers": [
+      {
+        "symbol": "AAPL",
+        "price": "$106.17",
+        "change": "-5.33",
+        "changePercent": "-4.78%",
+        "volume": "162K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "MSFT",
+        "price": "$119.62",
+        "change": "-19.63",
+        "changePercent": "-14.1%",
+        "volume": "33K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "GOOGL",
+        "price": "$45.07",
+        "change": "-5.77",
+        "changePercent": "-11.35%",
+        "volume": "178K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "AMZN",
+        "price": "$124.87",
+        "change": "-13.12",
+        "changePercent": "-9.51%",
+        "volume": "120K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "TSLA",
+        "price": "$188.33",
+        "change": "-27.08",
+        "changePercent": "-12.57%",
+        "volume": "94K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "NVDA",
+        "price": "$153.25",
+        "change": "-13.14",
+        "changePercent": "-7.9%",
+        "volume": "89K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "META",
+        "price": "$110.41",
+        "change": "-11.36",
+        "changePercent": "-9.33%",
+        "volume": "44K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "NFLX",
+        "price": "$54.62",
+        "change": "-5.02",
+        "changePercent": "-8.42%",
+        "volume": "111K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "AMD",
+        "price": "$146.39",
+        "change": "-0.87",
+        "changePercent": "-0.59%",
+        "volume": "56K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "CRM",
+        "price": "$46.02",
+        "change": "-6.00",
+        "changePercent": "-11.53%",
+        "volume": "108K",
+        "timeframe": "After-Hours"
+      }
+    ]
+  },
+  "overnightNews": [
+    {
+      "category": "top news",
+      "datetime": 1753818960,
+      "headline": "Ambiq will soon make its IPO debut. Here’s what to know about the AI chip company.",
+      "id": 7501818,
+      "image": "https://static2.finnhub.io/file/publicdatany/finnhubimage/market_watch_logo.png",
+      "related": "",
+      "source": "MarketWatch",
+      "summary": "The company calls itself a ‘pioneer’ of ultra-low-power chip solutions that can be used for edge AI, or processing data on smaller devices without cloud servers.",
+      "url": "https://www.marketwatch.com/story/ambiq-will-soon-make-its-ipo-debut-heres-what-to-know-about-the-ai-chip-company-debc787b"
+    },
+    {
+      "category": "top news",
+      "datetime": 1753818660,
+      "headline": "This oil company is spending $14 billion to be part of the AI data-center business",
+      "id": 7501819,
+      "image": "https://static2.finnhub.io/file/publicdatany/finnhubimage/market_watch_logo.png",
+      "related": "",
+      "source": "MarketWatch",
+      "summary": "Oil-services giant outbids rival to hitch a ride on the data center gravy train by buying a heat cooling company",
+      "url": "https://www.marketwatch.com/story/this-oil-company-is-spending-14-billion-to-be-part-of-the-ai-data-center-business-b162139b"
+    },
+    {
+      "category": "top news",
+      "datetime": 1753818420,
+      "headline": "Republicans and Democrats are joining forces to fix America’s housing affordability crisis. Here’s what’s in their plan.",
+      "id": 7501820,
+      "image": "https://static2.finnhub.io/file/publicdatany/finnhubimage/market_watch_logo.png",
+      "related": "",
+      "source": "MarketWatch",
+      "summary": "A new bipartisan housing bill introduced by Senators Tim Scott and Elizabeth Warren is the latest attempt to address the housing crisis in the nation today.",
+      "url": "https://www.marketwatch.com/story/republicans-and-democrats-are-joining-forces-to-fix-americas-housing-affordability-crisis-heres-whats-in-their-plan-24945099"
+    },
+    {
+      "category": "top news",
+      "datetime": 1753817580,
+      "headline": "Could new laws protect office workers from violent incidents like the Midtown Manhattan shooting?",
+      "id": 7501807,
+      "image": "https://static2.finnhub.io/file/publicdatany/finnhubimage/market_watch_logo.png",
+      "related": "",
+      "source": "MarketWatch",
+      "summary": "California has a new law that addresses workplace violence — and how to safeguard against it.",
+      "url": "https://www.marketwatch.com/story/could-new-laws-protect-office-workers-from-violent-incidents-like-the-midtown-manhattan-shooting-0f5ebb77"
+    },
+    {
+      "category": "top news",
+      "datetime": 1753817100,
+      "headline": "Trump’s Genius Act made stablecoins safer — but several risks remain for investors",
+      "id": 7501803,
+      "image": "https://static2.finnhub.io/file/publicdatany/finnhubimage/market_watch_logo.png",
+      "related": "",
+      "source": "MarketWatch",
+      "summary": "“Stablecoin summer” is here — but freshly signed legislation hasn’t put all worries to bed.",
+      "url": "https://www.marketwatch.com/story/trumps-genius-act-made-stablecoins-safer-but-several-risks-remain-for-investors-26b0ca13"
+    },
+    {
+      "category": "top news",
+      "datetime": 1753814820,
+      "headline": "Sarepta finally gets some good news: A patient death wasn’t its DMD drug’s fault.",
+      "id": 7501792,
+      "image": "https://static2.finnhub.io/file/publicdatany/finnhubimage/market_watch_logo.png",
+      "related": "",
+      "source": "MarketWatch",
+      "summary": "Sarepta Therapeutics’ stock was soaring Tuesday after the FDA recommended lifting the pause on the company’s Duchenne muscular dystrophy drug, but analysts worry it will take time for patients and doctors to feel safe using it.",
+      "url": "https://www.marketwatch.com/story/sarepta-finally-gets-some-good-news-a-patient-death-wasnt-its-dmd-drugs-fault-89880085"
+    },
+    {
+      "category": "top news",
+      "datetime": 1753814220,
+      "headline": "Gen Z doesn’t need your approval, but it does need good advice. My new column, Dollar Signs, is here to help.",
+      "id": 7501784,
+      "image": "https://static2.finnhub.io/file/publicdatany/finnhubimage/market_watch_logo.png",
+      "related": "",
+      "source": "MarketWatch",
+      "summary": "Instead of relying on data points to decode Gen Z — or, really, anyone starting their financial journey — I want to speak directly to them.",
+      "url": "https://www.marketwatch.com/story/gen-z-doesnt-need-your-approval-but-it-does-need-good-advice-my-new-column-dollar-signs-is-here-to-help-15aa2b7f"
+    },
+    {
+      "category": "top news",
+      "datetime": 1753814189,
+      "headline": "Is Palo Alto joining the M&A party? Plus, the S&P 500 hits an earnings bump",
+      "id": 7501785,
+      "image": "https://image.cnbcfm.com/api/v1/image/108137400-17458546272025-03-25t214352z_1459184385_rc2kkda23vt6_rtrmadp_0_paloalto-stocks.jpeg?v=1745854692&w=1920&h=1080",
+      "related": "",
+      "source": "CNBC",
+      "summary": "Every weekday, the Investing Club releases the Homestretch; an actionable afternoon update just in time for the last hour of trading.",
+      "url": "https://www.cnbc.com/2025/07/29/is-palo-alto-joining-the-ma-party-plus-the-sp-500-hits-a-bump-.html"
+    }
+  ],
+  "globalMarkets": {},
+  "currencyMoves": {
+    "EURUSD": {
+      "rate": "1.1555",
+      "lastRefreshed": "2025-07-29 20:07:42",
+      "session": "Overnight"
+    },
+    "GBPUSD": {
+      "rate": "1.3359",
+      "lastRefreshed": "2025-07-29 20:07:26",
+      "session": "Overnight"
+    },
+    "USDJPY": {
+      "rate": "148.4700",
+      "lastRefreshed": "2025-07-29 20:07:42",
+      "session": "Overnight"
+    }
+  },
+  "reportMetadata": {
+    "generatedAt": "2025-07-29T20:08:57.885Z",
+    "marketTimings": {
+      "lastClose": "7/29/2025, 4:00:00 PM",
+      "nextOpen": "7/29/2025, 9:30:00 AM",
+      "hoursSinceClose": 4,
+      "timeToOpenStr": "-11h -38m"
+    },
+    "analysisType": "institutional-grade",
+    "dataQuality": {
+      "realTimeFeeds": 12,
+      "newsArticles": 8,
+      "currencyPairs": 3,
+      "confidence": "high"
+    }
+  }
+}
