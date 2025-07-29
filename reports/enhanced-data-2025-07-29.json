@@ -1,0 +1,575 @@
+{
+  "marketData": {
+    "indices": {
+      "SPY": {
+        "symbol": "SPY",
+        "price": "636.94",
+        "change": "-0.16",
+        "changePercent": "-0.0251",
+        "volume": "54,917,102",
+        "high": "638.04",
+        "low": "635.54",
+        "open": "637.48",
+        "previousClose": "637.10",
+        "timestamp": "2025-07-28",
+        "source": "Alpha Vantage (Exact Real-time)"
+      },
+      "QQQ": {
+        "symbol": "QQQ",
+        "price": "568.14",
+        "change": "1.77",
+        "changePercent": "0.3125",
+        "volume": "31,498,739",
+        "high": "569.04",
+        "low": "566.87",
+        "open": "567.74",
+        "previousClose": "566.37",
+        "timestamp": "2025-07-28",
+        "source": "Alpha Vantage (Exact Real-time)"
+      },
+      "DIA": {
+        "symbol": "DIA",
+        "price": "448.34",
+        "change": "-0.68",
+        "changePercent": "-0.1514",
+        "volume": "2,864,164",
+        "high": "449.48",
+        "low": "447.38",
+        "open": "448.66",
+        "previousClose": "449.02",
+        "timestamp": "2025-07-28",
+        "source": "Alpha Vantage (Exact Real-time)"
+      }
+    },
+    "sectors": {
+      "XLF": {
+        "symbol": "XLF",
+        "name": "Financial Services",
+        "price": "53.07",
+        "change": "-0.37",
+        "changePercent": "-0.6924",
+        "volume": "29,119,290",
+        "high": "53.44",
+        "low": "52.96",
+        "open": "53.38",
+        "previousClose": "53.44",
+        "timestamp": "2025-07-28",
+        "source": "Alpha Vantage (Exact Real-time)"
+      },
+      "XLK": {
+        "symbol": "XLK",
+        "name": "Technology",
+        "price": "264.08",
+        "change": "2.09",
+        "changePercent": "0.7977",
+        "volume": "5,758,766",
+        "high": "264.15",
+        "low": "262.44",
+        "open": "262.99",
+        "previousClose": "261.99",
+        "timestamp": "2025-07-28",
+        "source": "Alpha Vantage (Exact Real-time)"
+      },
+      "XLE": {
+        "symbol": "XLE",
+        "name": "Energy",
+        "price": "88.09",
+        "change": "0.99",
+        "changePercent": "1.1366",
+        "volume": "11,852,641",
+        "high": "88.24",
+        "low": "87.55",
+        "open": "87.68",
+        "previousClose": "87.10",
+        "timestamp": "2025-07-28",
+        "source": "Alpha Vantage (Exact Real-time)"
+      },
+      "XLV": {
+        "symbol": "XLV",
+        "name": "Healthcare",
+        "price": "135.29",
+        "change": "-1.19",
+        "changePercent": "-0.8719",
+        "volume": "9,780,254",
+        "high": "136.39",
+        "low": "134.93",
+        "open": "136.14",
+        "previousClose": "136.48",
+        "timestamp": "2025-07-28",
+        "source": "Alpha Vantage (Exact Real-time)"
+      },
+      "XLI": {
+        "symbol": "XLI",
+        "name": "Industrials",
+        "price": "154.51",
+        "change": "-0.48",
+        "changePercent": "-0.3097",
+        "volume": "9,214,824",
+        "high": "155.15",
+        "low": "154.07",
+        "open": "155.07",
+        "previousClose": "154.99",
+        "timestamp": "2025-07-28",
+        "source": "Alpha Vantage (Exact Real-time)"
+      },
+      "XLY": {
+        "symbol": "XLY",
+        "name": "Consumer Discretionary",
+        "price": "226.18",
+        "change": "1.31",
+        "changePercent": "0.5826",
+        "volume": "5,666,433",
+        "high": "227.34",
+        "low": "225.03",
+        "open": "225.74",
+        "previousClose": "224.87",
+        "timestamp": "2025-07-28",
+        "source": "Alpha Vantage (Exact Real-time)"
+      },
+      "XLP": {
+        "symbol": "XLP",
+        "name": "Consumer Staples",
+        "price": "80.66",
+        "change": "-0.84",
+        "changePercent": "-1.0307",
+        "volume": "12,113,637",
+        "high": "81.20",
+        "low": "80.55",
+        "open": "81.07",
+        "previousClose": "81.50",
+        "timestamp": "2025-07-28",
+        "source": "Alpha Vantage (Exact Real-time)"
+      },
+      "XLU": {
+        "symbol": "XLU",
+        "name": "Utilities",
+        "price": "83.62",
+        "change": "-0.90",
+        "changePercent": "-1.0648",
+        "volume": "11,206,754",
+        "high": "84.53",
+        "low": "83.41",
+        "open": "84.51",
+        "previousClose": "84.52",
+        "timestamp": "2025-07-28",
+        "source": "Alpha Vantage (Exact Real-time)"
+      },
+      "XLB": {
+        "symbol": "XLB",
+        "name": "Materials",
+        "price": "91.03",
+        "change": "-1.34",
+        "changePercent": "-1.4507",
+        "volume": "7,507,522",
+        "high": "91.97",
+        "low": "90.77",
+        "open": "91.84",
+        "previousClose": "92.37",
+        "timestamp": "2025-07-28",
+        "source": "Alpha Vantage (Exact Real-time)"
+      }
+    },
+    "premarket": {
+      "gainers": [
+        {
+          "symbol": "NFLX",
+          "price": "502.08",
+          "change": "+16.88",
+          "changePercent": "+3.48%",
+          "catalyst": "partnership announcement",
+          "sector": "Communication Services",
+          "basePrice": 485.2
+        },
+        {
+          "symbol": "NVDA",
+          "price": "905.10",
+          "change": "+29.85",
+          "changePercent": "+3.41%",
+          "catalyst": "market sentiment shift",
+          "sector": "Technology",
+          "basePrice": 875.25
+        },
+        {
+          "symbol": "META",
+          "price": "501.92",
+          "change": "+16.32",
+          "changePercent": "+3.36%",
+          "catalyst": "market sentiment shift",
+          "sector": "Technology",
+          "basePrice": 485.6
+        },
+        {
+          "symbol": "GOOGL",
+          "price": "145.17",
+          "change": "+4.32",
+          "changePercent": "+3.07%",
+          "catalyst": "partnership announcement",
+          "sector": "Technology",
+          "basePrice": 140.85
+        },
+        {
+          "symbol": "CRM",
+          "price": "272.54",
+          "change": "+7.14",
+          "changePercent": "+2.69%",
+          "catalyst": "technical breakout",
+          "sector": "Technology",
+          "basePrice": 265.4
+        },
+        {
+          "symbol": "TSLA",
+          "price": "255.34",
+          "change": "+6.64",
+          "changePercent": "+2.67%",
+          "catalyst": "earnings guidance update",
+          "sector": "Consumer Discretionary",
+          "basePrice": 248.7
+        },
+        {
+          "symbol": "AMD",
+          "price": "159.03",
+          "change": "+3.73",
+          "changePercent": "+2.40%",
+          "catalyst": "institutional buying",
+          "sector": "Technology",
+          "basePrice": 155.3
+        },
+        {
+          "symbol": "AMZN",
+          "price": "148.55",
+          "change": "+3.25",
+          "changePercent": "+2.24%",
+          "catalyst": "insider buying",
+          "sector": "Consumer Discretionary",
+          "basePrice": 145.3
+        },
+        {
+          "symbol": "AAPL",
+          "price": "187.83",
+          "change": "+2.63",
+          "changePercent": "+1.42%",
+          "catalyst": "sector rotation",
+          "sector": "Technology",
+          "basePrice": 185.2
+        },
+        {
+          "symbol": "MSFT",
+          "price": "379.29",
+          "change": "+4.79",
+          "changePercent": "+1.28%",
+          "catalyst": "insider buying",
+          "sector": "Technology",
+          "basePrice": 374.5
+        }
+      ],
+      "losers": [
+        {
+          "symbol": "META",
+          "price": "468.80",
+          "change": "-16.80",
+          "changePercent": "-3.46%",
+          "catalyst": "partnership announcement",
+          "sector": "Technology",
+          "basePrice": 485.6
+        },
+        {
+          "symbol": "NFLX",
+          "price": "468.99",
+          "change": "-16.21",
+          "changePercent": "-3.34%",
+          "catalyst": "technical breakout",
+          "sector": "Communication Services",
+          "basePrice": 485.2
+        },
+        {
+          "symbol": "MSFT",
+          "price": "362.10",
+          "change": "-12.40",
+          "changePercent": "-3.31%",
+          "catalyst": "regulatory update",
+          "sector": "Technology",
+          "basePrice": 374.5
+        },
+        {
+          "symbol": "GOOGL",
+          "price": "136.27",
+          "change": "-4.58",
+          "changePercent": "-3.25%",
+          "catalyst": "market sentiment shift",
+          "sector": "Technology",
+          "basePrice": 140.85
+        },
+        {
+          "symbol": "AMD",
+          "price": "150.38",
+          "change": "-4.92",
+          "changePercent": "-3.17%",
+          "catalyst": "volume spike",
+          "sector": "Technology",
+          "basePrice": 155.3
+        },
+        {
+          "symbol": "AAPL",
+          "price": "180.24",
+          "change": "-4.96",
+          "changePercent": "-2.68%",
+          "catalyst": "institutional buying",
+          "sector": "Technology",
+          "basePrice": 185.2
+        },
+        {
+          "symbol": "CRM",
+          "price": "263.25",
+          "change": "-2.15",
+          "changePercent": "-0.81%",
+          "catalyst": "analyst upgrade",
+          "sector": "Technology",
+          "basePrice": 265.4
+        },
+        {
+          "symbol": "TSLA",
+          "price": "246.88",
+          "change": "-1.82",
+          "changePercent": "-0.73%",
+          "catalyst": "insider buying",
+          "sector": "Consumer Discretionary",
+          "basePrice": 248.7
+        },
+        {
+          "symbol": "AMZN",
+          "price": "144.56",
+          "change": "-0.74",
+          "changePercent": "-0.51%",
+          "catalyst": "partnership announcement",
+          "sector": "Consumer Discretionary",
+          "basePrice": 145.3
+        },
+        {
+          "symbol": "NVDA",
+          "price": "871.49",
+          "change": "-3.76",
+          "changePercent": "-0.43%",
+          "catalyst": "analyst upgrade",
+          "sector": "Technology",
+          "basePrice": 875.25
+        }
+      ]
+    },
+    "currencies": {
+      "EUR/USD": "1.1534",
+      "GBP/USD": "1.3327",
+      "USD/JPY": "148.69",
+      "USD/CNY": "7.18",
+      "AUD/USD": "0.6501",
+      "source": "Alpha Vantage (Exact Real-time)",
+      "timestamp": "2025-07-29T12:48:29.658Z"
+    },
+    "lastUpdated": "2025-07-29T12:48:24.184Z",
+    "dataSources": [
+      "Polygon Real-time Movers",
+      "Alpha Vantage (Exact Real-time)",
+      "Alpha Vantage Exact Quotes",
+      "News: Alpha Vantage News"
+    ],
+    "news": {
+      "marketNews": [],
+      "economicNews": [
+        {
+          "title": "AssetMark Appoints Phill Rogerson as Senior Vice President, Head of RIA Channel",
+          "source": "Benzinga",
+          "publishedAt": "20250729T120000",
+          "url": "https://www.benzinga.com/pressreleases/25/07/g46684125/assetmark-appoints-phill-rogerson-as-senior-vice-president-head-of-ria-channel",
+          "summary": "CONCORD, Calif., July 29, 2025 ( GLOBE NEWSWIRE ) -- AssetMark, Inc., a leading provider of wealth management and technology solutions for financial advisors, today announced the appointment of Phill Rogerson as Senior Vice President and Head of the ...",
+          "sentiment": "Bullish",
+          "category": "economic"
+        },
+        {
+          "title": "Spotify User Base Grows, But Profitability Concerns Linger - Spotify Technology  ( NYSE:SPOT ) ",
+          "source": "Benzinga",
+          "publishedAt": "20250729T120529",
+          "url": "https://www.benzinga.com/markets/earnings/25/07/46684547/spotify-user-base-grows-but-profitability-concerns-linger",
+          "summary": "Spotify misses Q2 earnings and revenue targets, dampening investor sentiment despite strong user growth. Gross margin jumps to 31.5% as operating income surges 53% YoY; stock falls 7% on weak Q3 outlook. Get special access to three exclusive \"Top 10 ...",
+          "sentiment": "Somewhat-Bullish",
+          "category": "economic"
+        },
+        {
+          "title": "DeFi Dev Corp. Grows Treasury to 1.18M SOL, Raises $20M from Equity Line of Credit",
+          "source": "GlobeNewswire",
+          "publishedAt": "20250729T120000",
+          "url": "https://www.globenewswire.com/news-release/2025/07/29/3123156/0/en/DeFi-Dev-Corp-Grows-Treasury-to-1-18M-SOL-Raises-20M-from-Equity-Line-of-Credit.html",
+          "summary": "BOCA RATON, FL, July 29, 2025 ( GLOBE NEWSWIRE ) -- DeFi Development Corp. ( Nasdaq: DFDV ) ( the \"Company\" ) the first public company with a treasury strategy built to accumulate and compound Solana ( \"SOL\" ) , today announced it now holds approxima...",
+          "sentiment": "Somewhat-Bullish",
+          "category": "economic"
+        },
+        {
+          "title": "NewtekOne, Inc. Upsizes Additional Warehouse Facility to Support Growth of ALP Business - NewtekOne  ( NASDAQ:NEWT ) ",
+          "source": "Benzinga",
+          "publishedAt": "20250729T123000",
+          "url": "https://www.benzinga.com/pressreleases/25/07/g46685155/newtekone-inc-upsizes-additional-warehouse-facility-to-support-growth-of-alp-business",
+          "summary": "BOCA RATON, Fla., July 29, 2025 ( GLOBE NEWSWIRE ) -- NewtekOne, Inc. ( \"NewtekOne\" ) NEWT announced that its consolidated subsidiary, Newtek ALP Holdings, amended its revolving credit facility with Capital One, N.A. ( \"Capital One\" ) , which is empl...",
+          "sentiment": "Somewhat-Bullish",
+          "category": "economic"
+        },
+        {
+          "title": "Responding to the White House AI Action Plan, ZenaTech's ZenaDrone Launches Zena AI, Inc., a Specialized AI Development Center for US Defense and Homeland Security Applications - ZenaTech  ( NASDAQ:ZENA ) ",
+          "source": "Benzinga",
+          "publishedAt": "20250729T121500",
+          "url": "https://www.benzinga.com/pressreleases/25/07/g46684933/responding-to-the-white-house-ai-action-plan-zenatechs-zenadrone-launches-zena-ai-inc-a-specialize",
+          "summary": "VANCOUVER, British Columbia, July 29, 2025 ( GLOBE NEWSWIRE ) -- ZenaTech, Inc....",
+          "sentiment": "Somewhat-Bullish",
+          "category": "economic"
+        },
+        {
+          "title": "Broadway Isn't Overpriced, It's Undervalued: New Study Finds Gen Z & Millennials Will Spend More Than Triple When They See What's Behind the Curtain",
+          "source": "Benzinga",
+          "publishedAt": "20250729T120000",
+          "url": "https://www.benzinga.com/pressreleases/25/07/n46684217/broadway-isnt-overpriced-its-undervalued-new-study-finds-gen-z-millennials-will-spend-more-than-tr",
+          "summary": "Next Gen Audiences Are Willing to Splurge When They See Broadway as a Bespoke, Emotionally Rich, Luxury Cultural Experience...",
+          "sentiment": "Somewhat-Bullish",
+          "category": "economic"
+        },
+        {
+          "title": "ZOOZ Announces Private Placement of $180 Million to Launch a Bitcoin Treasury Reserve Strategy",
+          "source": "GlobeNewswire",
+          "publishedAt": "20250729T113600",
+          "url": "https://www.globenewswire.com/news-release/2025/07/29/3123142/0/en/ZOOZ-Announces-Private-Placement-of-180-Million-to-Launch-a-Bitcoin-Treasury-Reserve-Strategy.html",
+          "summary": "ZOOZ to become the first Nasdaq and TASE dual-listed company to hold Bitcoin in its treasury ......",
+          "sentiment": "Somewhat-Bullish",
+          "category": "economic"
+        },
+        {
+          "title": "UroGen Pharma to Report Second Quarter 2025 Financial Results on Thursday, August 7th, 2025 - UroGen Pharma  ( NASDAQ:URGN ) ",
+          "source": "Benzinga",
+          "publishedAt": "20250729T120000",
+          "url": "https://www.benzinga.com/pressreleases/25/07/g46684198/urogen-pharma-to-report-second-quarter-2025-financial-results-on-thursday-august-7th-2025",
+          "summary": "Conference Call and Webcast Scheduled for Thursday, August 7th, 2025, at 10:00 AM ET PRINCETON, N.J., July 29, 2025 ( GLOBE NEWSWIRE ) -- UroGen Pharma Ltd....",
+          "sentiment": "Somewhat-Bullish",
+          "category": "economic"
+        }
+      ],
+      "techNews": [],
+      "corporateNews": [],
+      "lastUpdated": "2025-07-29T12:48:24.219Z",
+      "sources": [
+        "Alpha Vantage News"
+      ]
+    },
+    "newsSentiment": {
+      "overall": "positive",
+      "positive": 4,
+      "negative": 3,
+      "total": 8,
+      "confidence": "high"
+    }
+  },
+  "validation": {
+    "isValid": false,
+    "issues": [
+      "SPY price 636.94 outside realistic range (400-600)",
+      "QQQ price 568.14 outside realistic range (300-500)",
+      "DIA price 448.34 outside realistic range (300-400)",
+      "XLF price $53.07 outside realistic range ($30-50)",
+      "XLK price $264.08 outside realistic range ($150-200)"
+    ],
+    "dataQuality": "low",
+    "priceConsistency": false,
+    "movementRealism": true
+  },
+  "accuracyCheck": {
+    "corrected": true,
+    "issues": [
+      "Internal inconsistencies found and corrected"
+    ]
+  },
+  "newsData": {
+    "marketNews": [],
+    "economicNews": [
+      {
+        "title": "AssetMark Appoints Phill Rogerson as Senior Vice President, Head of RIA Channel",
+        "source": "Benzinga",
+        "publishedAt": "20250729T120000",
+        "url": "https://www.benzinga.com/pressreleases/25/07/g46684125/assetmark-appoints-phill-rogerson-as-senior-vice-president-head-of-ria-channel",
+        "summary": "CONCORD, Calif., July 29, 2025 ( GLOBE NEWSWIRE ) -- AssetMark, Inc., a leading provider of wealth management and technology solutions for financial advisors, today announced the appointment of Phill Rogerson as Senior Vice President and Head of the ...",
+        "sentiment": "Bullish",
+        "category": "economic"
+      },
+      {
+        "title": "Spotify User Base Grows, But Profitability Concerns Linger - Spotify Technology  ( NYSE:SPOT ) ",
+        "source": "Benzinga",
+        "publishedAt": "20250729T120529",
+        "url": "https://www.benzinga.com/markets/earnings/25/07/46684547/spotify-user-base-grows-but-profitability-concerns-linger",
+        "summary": "Spotify misses Q2 earnings and revenue targets, dampening investor sentiment despite strong user growth. Gross margin jumps to 31.5% as operating income surges 53% YoY; stock falls 7% on weak Q3 outlook. Get special access to three exclusive \"Top 10 ...",
+        "sentiment": "Somewhat-Bullish",
+        "category": "economic"
+      },
+      {
+        "title": "DeFi Dev Corp. Grows Treasury to 1.18M SOL, Raises $20M from Equity Line of Credit",
+        "source": "GlobeNewswire",
+        "publishedAt": "20250729T120000",
+        "url": "https://www.globenewswire.com/news-release/2025/07/29/3123156/0/en/DeFi-Dev-Corp-Grows-Treasury-to-1-18M-SOL-Raises-20M-from-Equity-Line-of-Credit.html",
+        "summary": "BOCA RATON, FL, July 29, 2025 ( GLOBE NEWSWIRE ) -- DeFi Development Corp. ( Nasdaq: DFDV ) ( the \"Company\" ) the first public company with a treasury strategy built to accumulate and compound Solana ( \"SOL\" ) , today announced it now holds approxima...",
+        "sentiment": "Somewhat-Bullish",
+        "category": "economic"
+      },
+      {
+        "title": "NewtekOne, Inc. Upsizes Additional Warehouse Facility to Support Growth of ALP Business - NewtekOne  ( NASDAQ:NEWT ) ",
+        "source": "Benzinga",
+        "publishedAt": "20250729T123000",
+        "url": "https://www.benzinga.com/pressreleases/25/07/g46685155/newtekone-inc-upsizes-additional-warehouse-facility-to-support-growth-of-alp-business",
+        "summary": "BOCA RATON, Fla., July 29, 2025 ( GLOBE NEWSWIRE ) -- NewtekOne, Inc. ( \"NewtekOne\" ) NEWT announced that its consolidated subsidiary, Newtek ALP Holdings, amended its revolving credit facility with Capital One, N.A. ( \"Capital One\" ) , which is empl...",
+        "sentiment": "Somewhat-Bullish",
+        "category": "economic"
+      },
+      {
+        "title": "Responding to the White House AI Action Plan, ZenaTech's ZenaDrone Launches Zena AI, Inc., a Specialized AI Development Center for US Defense and Homeland Security Applications - ZenaTech  ( NASDAQ:ZENA ) ",
+        "source": "Benzinga",
+        "publishedAt": "20250729T121500",
+        "url": "https://www.benzinga.com/pressreleases/25/07/g46684933/responding-to-the-white-house-ai-action-plan-zenatechs-zenadrone-launches-zena-ai-inc-a-specialize",
+        "summary": "VANCOUVER, British Columbia, July 29, 2025 ( GLOBE NEWSWIRE ) -- ZenaTech, Inc....",
+        "sentiment": "Somewhat-Bullish",
+        "category": "economic"
+      },
+      {
+        "title": "Broadway Isn't Overpriced, It's Undervalued: New Study Finds Gen Z & Millennials Will Spend More Than Triple When They See What's Behind the Curtain",
+        "source": "Benzinga",
+        "publishedAt": "20250729T120000",
+        "url": "https://www.benzinga.com/pressreleases/25/07/n46684217/broadway-isnt-overpriced-its-undervalued-new-study-finds-gen-z-millennials-will-spend-more-than-tr",
+        "summary": "Next Gen Audiences Are Willing to Splurge When They See Broadway as a Bespoke, Emotionally Rich, Luxury Cultural Experience...",
+        "sentiment": "Somewhat-Bullish",
+        "category": "economic"
+      },
+      {
+        "title": "ZOOZ Announces Private Placement of $180 Million to Launch a Bitcoin Treasury Reserve Strategy",
+        "source": "GlobeNewswire",
+        "publishedAt": "20250729T113600",
+        "url": "https://www.globenewswire.com/news-release/2025/07/29/3123142/0/en/ZOOZ-Announces-Private-Placement-of-180-Million-to-Launch-a-Bitcoin-Treasury-Reserve-Strategy.html",
+        "summary": "ZOOZ to become the first Nasdaq and TASE dual-listed company to hold Bitcoin in its treasury ......",
+        "sentiment": "Somewhat-Bullish",
+        "category": "economic"
+      },
+      {
+        "title": "UroGen Pharma to Report Second Quarter 2025 Financial Results on Thursday, August 7th, 2025 - UroGen Pharma  ( NASDAQ:URGN ) ",
+        "source": "Benzinga",
+        "publishedAt": "20250729T120000",
+        "url": "https://www.benzinga.com/pressreleases/25/07/g46684198/urogen-pharma-to-report-second-quarter-2025-financial-results-on-thursday-august-7th-2025",
+        "summary": "Conference Call and Webcast Scheduled for Thursday, August 7th, 2025, at 10:00 AM ET PRINCETON, N.J., July 29, 2025 ( GLOBE NEWSWIRE ) -- UroGen Pharma Ltd....",
+        "sentiment": "Somewhat-Bullish",
+        "category": "economic"
+      }
+    ],
+    "techNews": [],
+    "corporateNews": [],
+    "lastUpdated": "2025-07-29T12:48:24.219Z",
+    "sources": [
+      "Alpha Vantage News"
+    ]
+  },
+  "newsSentiment": {
+    "overall": "positive",
+    "positive": 4,
+    "negative": 3,
+    "total": 8,
+    "confidence": "high"
+  },
+  "timestamp": "2025-07-29T12:50:13.768Z"
+}
