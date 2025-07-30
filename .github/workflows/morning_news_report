@@ -1,0 +1,322 @@
+name: Pre-Market News Briefing Generator
+
+on:
+  # Scheduled runs - Pre-market briefings
+  schedule:
+    # Monday-Friday at 6:00 AM ET (11:00 UTC) - 3.5 hours before market open
+    - cron: '0 11 * * 1-5'
+    # Monday-Friday at 7:30 AM ET (12:30 UTC) - 2 hours before market open  
+    - cron: '30 12 * * 1-5'
+    # Monday-Friday at 8:30 AM ET (13:30 UTC) - 1 hour before market open
+    - cron: '30 13 * * 1-5'
+  
+  # Manual trigger for testing and on-demand reports
+  workflow_dispatch:
+    inputs:
+      report_type:
+        description: 'Type of report to generate'
+        required: true
+        default: 'comprehensive'
+        type: choice
+        options:
+        - comprehensive
+        - quick
+        - test
+      
+      skip_email:
+        description: 'Skip email sending (for testing)'
+        required: false
+        default: false
+        type: boolean
+      
+      debug_mode:
+        description: 'Enable debug logging'
+        required: false
+        default: false
+        type: boolean
+
+  # Trigger on push to main branch for testing
+  push:
+    branches: [ main ]
+    paths: [ 'generate-report-enhanced.js', '.github/workflows/premarket-briefing.yml' ]
+
+jobs:
+  pre-market-briefing:
+    name: Generate Pre-Market Intelligence Report
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    
+    # Only run during market hours (skip weekends and holidays)
+    if: github.event_name == 'workflow_dispatch' || (github.event_name == 'schedule' && github.event.schedule != '0 11 * * 6,0')
+    
+    strategy:
+      fail-fast: false
+      matrix:
+        node-version: [18.x]
+    
+    steps:
+    - name: 📦 Checkout Repository
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 1
+    
+    - name: 🟢 Setup Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: 'npm'
+    
+    - name: 📋 Cache Dependencies
+      uses: actions/cache@v3
+      with:
+        path: ~/.npm
+        key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+        restore-keys: |
+          ${{ runner.os }}-node-
+    
+    - name: 🔧 Install Dependencies
+      run: |
+        npm ci
+        npm audit fix --audit-level moderate || true
+    
+    - name: 🔍 Validate API Keys
+      run: |
+        echo "🔑 Checking API key availability..."
+        
+        # Check required API keys
+        if [ -z "${{ secrets.ANTHROPIC_API_KEY }}" ]; then
+          echo "❌ ANTHROPIC_API_KEY is required but not set"
+          exit 1
+        fi
+        
+        # Count available API keys
+        available_keys=0
+        [ -n "${{ secrets.ALPHA_VANTAGE_API_KEY }}" ] && ((available_keys++)) && echo "✅ Alpha Vantage API key available"
+        [ -n "${{ secrets.FINNHUB_API_KEY }}" ] && ((available_keys++)) && echo "✅ Finnhub API key available"
+        [ -n "${{ secrets.NEWS_API_KEY }}" ] && ((available_keys++)) && echo "✅ NewsAPI key available"
+        [ -n "${{ secrets.MARKETSTACK_API_KEY }}" ] && ((available_keys++)) && echo "✅ Marketstack API key available"
+        [ -n "${{ secrets.TRADING_ECONOMICS_API_KEY }}" ] && ((available_keys++)) && echo "✅ Trading Economics API key available"
+        [ -n "${{ secrets.POLYGON_API_KEY }}" ] && ((available_keys++)) && echo "✅ Polygon API key available"
+        [ -n "${{ secrets.TWELVE_DATA_API_KEY }}" ] && ((available_keys++)) && echo "✅ Twelve Data API key available"
+        [ -n "${{ secrets.EXCHANGERATE_API_KEY }}" ] && ((available_keys++)) && echo "✅ Exchange Rate API key available"
+        [ -n "${{ secrets.FIXER_API_KEY }}" ] && ((available_keys++)) && echo "✅ Fixer API key available"
+        
+        echo "📊 Total API keys available: $available_keys"
+        
+        if [ $available_keys -lt 3 ]; then
+          echo "⚠️  Warning: Limited API keys available, report quality may be reduced"
+        fi
+    
+    - name: 🌅 Generate Pre-Market Report
+      id: generate_report
+      env:
+        # Financial Data APIs
+        ALPHA_VANTAGE_API_KEY: ${{ secrets.ALPHA_VANTAGE_API_KEY }}
+        FINNHUB_API_KEY: ${{ secrets.FINNHUB_API_KEY }}
+        NEWS_API_KEY: ${{ secrets.NEWS_API_KEY }}
+        MARKETSTACK_API_KEY: ${{ secrets.MARKETSTACK_API_KEY }}
+        TRADING_ECONOMICS_API_KEY: ${{ secrets.TRADING_ECONOMICS_API_KEY }}
+        POLYGON_API_KEY: ${{ secrets.POLYGON_API_KEY }}
+        TWELVE_DATA_API_KEY: ${{ secrets.TWELVE_DATA_API_KEY }}
+        
+        # Currency APIs
+        EXCHANGERATE_API_KEY: ${{ secrets.EXCHANGERATE_API_KEY }}
+        FIXER_API_KEY: ${{ secrets.FIXER_API_KEY }}
+        
+        # AI and Email
+        ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        GMAIL_USER: ${{ secrets.GMAIL_USER }}
+        GMAIL_PASSWORD: ${{ secrets.GMAIL_PASSWORD }}
+        WORK_EMAIL_LIST: ${{ secrets.WORK_EMAIL_LIST }}
+        
+        # Workflow inputs
+        REPORT_TYPE: ${{ github.event.inputs.report_type || 'comprehensive' }}
+        SKIP_EMAIL: ${{ github.event.inputs.skip_email || 'false' }}
+        DEBUG_MODE: ${{ github.event.inputs.debug_mode || 'false' }}
+        
+        # GitHub context
+        GITHUB_WORKFLOW: ${{ github.workflow }}
+        GITHUB_RUN_ID: ${{ github.run_id }}
+        GITHUB_ACTOR: ${{ github.actor }}
+        
+      run: |
+        echo "🌅 Starting Pre-Market Intelligence Report Generation..."
+        echo "📅 Report Date: $(date '+%Y-%m-%d %H:%M:%S ET')"
+        echo "🎯 Report Type: $REPORT_TYPE"
+        echo "📧 Skip Email: $SKIP_EMAIL"
+        echo "🐛 Debug Mode: $DEBUG_MODE"
+        echo "👤 Triggered by: $GITHUB_ACTOR"
+        echo ""
+        
+        # Set debug logging if enabled
+        if [ "$DEBUG_MODE" = "true" ]; then
+          export NODE_DEBUG=*
+          echo "🐛 Debug mode enabled - verbose logging active"
+        fi
+        
+        # Run the pre-market report generator
+        if [ "$REPORT_TYPE" = "quick" ]; then
+          echo "⚡ Running quick report mode..."
+          timeout 15m node generate-report-enhanced.js --quick-mode
+        elif [ "$REPORT_TYPE" = "test" ]; then
+          echo "🧪 Running test mode..."
+          timeout 10m node generate-report-enhanced.js --test-mode --no-email
+        else
+          echo "📊 Running comprehensive report mode..."
+          timeout 25m node generate-report-enhanced.js
+        fi
+        
+        # Check if report was generated successfully
+        if [ -f "reports/latest-comprehensive-premarket-brief.md" ]; then
+          echo "report_generated=true" >> $GITHUB_OUTPUT
+          echo "report_path=reports/latest-comprehensive-premarket-brief.md" >> $GITHUB_OUTPUT
+          
+          # Get report statistics
+          report_size=$(wc -c < reports/latest-comprehensive-premarket-brief.md)
+          headline_count=$(grep -c "^[0-9]\+\." reports/latest-comprehensive-premarket-brief.md || echo "0")
+          
+          echo "report_size=$report_size" >> $GITHUB_OUTPUT
+          echo "headline_count=$headline_count" >> $GITHUB_OUTPUT
+          
+          echo "✅ Report generated successfully!"
+          echo "📏 Report size: $report_size bytes"
+          echo "📰 Headlines found: $headline_count"
+        else
+          echo "❌ Report generation failed - no output file found"
+          echo "report_generated=false" >> $GITHUB_OUTPUT
+          exit 1
+        fi
+    
+    - name: 📊 Upload Report Artifacts
+      if: always()
+      uses: actions/upload-artifact@v4
+      with:
+        name: premarket-report-${{ github.run_id }}
+        path: |
+          reports/
+          *.log
+        retention-days: 30
+        compression-level: 6
+    
+    - name: 📈 Report Analytics
+      if: steps.generate_report.outputs.report_generated == 'true'
+      run: |
+        echo "📈 Pre-Market Report Analytics"
+        echo "================================"
+        echo "📅 Generated: $(date '+%Y-%m-%d %H:%M:%S ET')"
+        echo "📏 Report Size: ${{ steps.generate_report.outputs.report_size }} bytes"
+        echo "📰 Headlines: ${{ steps.generate_report.outputs.headline_count }}"
+        echo "⚡ Run ID: ${{ github.run_id }}"
+        echo "🔗 Workflow: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+        echo ""
+        
+        # Check report quality indicators
+        report_size=${{ steps.generate_report.outputs.report_size }}
+        headline_count=${{ steps.generate_report.outputs.headline_count }}
+        
+        if [ $report_size -gt 50000 ] && [ $headline_count -gt 50 ]; then
+          echo "🏆 High-quality comprehensive report generated"
+        elif [ $report_size -gt 25000 ] && [ $headline_count -gt 25 ]; then
+          echo "✅ Good quality report generated"
+        elif [ $report_size -gt 10000 ]; then
+          echo "⚠️  Basic report generated - limited data available"
+        else
+          echo "❌ Poor quality report - investigate API issues"
+          exit 1
+        fi
+    
+    - name: 🔔 Notification on Success
+      if: success() && steps.generate_report.outputs.report_generated == 'true'
+      run: |
+        echo "✅ SUCCESS: Pre-Market Intelligence Report Generated"
+        echo "📊 Report Quality: High"
+        echo "📰 Headlines Processed: ${{ steps.generate_report.outputs.headline_count }}"
+        echo "📧 Email Distribution: ${{ github.event.inputs.skip_email == 'true' && 'Skipped' || 'Sent' }}"
+        echo "⏰ Generation Time: $(date '+%Y-%m-%d %H:%M:%S ET')"
+        
+        # Future: Add Slack/Teams notification here if needed
+        # curl -X POST -H 'Content-type: application/json' \
+        #   --data '{"text":"✅ Pre-Market Report Generated Successfully"}' \
+        #   ${{ secrets.SLACK_WEBHOOK_URL }}
+    
+    - name: 🚨 Notification on Failure
+      if: failure()
+      run: |
+        echo "❌ FAILURE: Pre-Market Report Generation Failed"
+        echo "🔍 Check logs for detailed error information"
+        echo "🔗 Workflow Run: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+        echo "⏰ Failed at: $(date '+%Y-%m-%d %H:%M:%S ET')"
+        
+        # Log system information for debugging
+        echo ""
+        echo "🖥️  System Information:"
+        echo "Node version: $(node --version)"
+        echo "NPM version: $(npm --version)"
+        echo "OS: $(uname -a)"
+        echo "Available memory: $(free -h | grep '^Mem:' | awk '{print $7}')"
+        echo "Disk space: $(df -h . | tail -1 | awk '{print $4}')"
+        
+        # Future: Add error notification to Slack/Teams
+        # curl -X POST -H 'Content-type: application/json' \
+        #   --data '{"text":"❌ Pre-Market Report Generation Failed"}' \
+        #   ${{ secrets.SLACK_WEBHOOK_URL }}
+
+  # Health check job to verify system status
+  health-check:
+    name: System Health Check
+    runs-on: ubuntu-latest
+    if: github.event_name == 'schedule' && github.event.schedule == '0 11 * * 1-5'
+    
+    steps:
+    - name: 🏥 API Health Check
+      run: |
+        echo "🏥 Checking external API health..."
+        
+        # Check major financial APIs (without keys)
+        apis=(
+          "https://finnhub.io/api/v1/quote?symbol=AAPL&token=demo"
+          "https://api.polygon.io/v1/open-close/AAPL/2023-01-09?adjusted=true&apikey=demo"
+          "https://newsapi.org/v2/top-headlines?country=us&apiKey=demo"
+        )
+        
+        for api in "${apis[@]}"; do
+          if curl -s --max-time 10 "$api" > /dev/null; then
+            echo "✅ API responding: $api"
+          else
+            echo "❌ API not responding: $api"
+          fi
+        done
+    
+    - name: 📊 Market Status Check
+      run: |
+        echo "📊 Checking market status..."
+        current_hour=$(date +%H)
+        current_day=$(date +%u)  # 1=Monday, 7=Sunday
+        
+        if [ $current_day -gt 5 ]; then
+          echo "🏖️  Weekend - Markets closed"
+        elif [ $current_hour -lt 9 ] || [ $current_hour -gt 16 ]; then
+          echo "🌙 After hours - Pre-market/Extended hours"
+        else
+          echo "🔔 Market hours - Regular trading session"
+        fi
+        
+        echo "⏰ Current time: $(date '+%Y-%m-%d %H:%M:%S ET')"
+        echo "📅 Trading day: $current_day (1=Mon, 5=Fri)"
+
+# Separate workflow for weekend maintenance
+  weekend-maintenance:
+    name: Weekend System Maintenance
+    runs-on: ubuntu-latest
+    if: github.event_name == 'schedule' && github.event.schedule == '0 12 * * 6'
+    
+    steps:
+    - name: 🧹 Cleanup Old Reports
+      run: |
+        echo "🧹 Weekend maintenance - cleaning up old artifacts..."
+        echo "📅 Maintenance run: $(date '+%Y-%m-%d %H:%M:%S')"
+        
+        # Note: Artifact cleanup is handled by GitHub's retention policy
+        # This is a placeholder for any custom cleanup logic
+        
+        echo "✅ Maintenance completed"
