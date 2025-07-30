@@ -1,0 +1,461 @@
+{
+  "afterHoursFutures": {
+    "SPY": {
+      "01. symbol": "SPY",
+      "02. open": "638.3500",
+      "03. high": "638.6700",
+      "04. low": "634.3350",
+      "05. price": "635.2600",
+      "06. volume": "60556278",
+      "07. latest trading day": "2025-07-29",
+      "08. previous close": "636.9400",
+      "09. change": "-1.6800",
+      "10. change percent": "-0.2638%",
+      "session": "After-Hours/Extended"
+    },
+    "QQQ": {
+      "01. symbol": "QQQ",
+      "02. open": "570.7600",
+      "03. high": "572.1100",
+      "04. low": "566.5300",
+      "05. price": "567.2600",
+      "06. volume": "45463317",
+      "07. latest trading day": "2025-07-29",
+      "08. previous close": "568.1400",
+      "09. change": "-0.8800",
+      "10. change percent": "-0.1549%",
+      "session": "After-Hours/Extended"
+    },
+    "DIA": {
+      "01. symbol": "DIA",
+      "02. open": "448.6300",
+      "03. high": "448.8500",
+      "04. low": "445.6500",
+      "05. price": "446.4800",
+      "06. volume": "3146231",
+      "07. latest trading day": "2025-07-29",
+      "08. previous close": "448.3400",
+      "09. change": "-1.8600",
+      "10. change percent": "-0.4149%",
+      "session": "After-Hours/Extended"
+    }
+  },
+  "overnightSectors": {
+    "XLF": {
+      "01. symbol": "XLF",
+      "02. open": "53.2500",
+      "03. high": "53.2950",
+      "04. low": "52.6800",
+      "05. price": "52.8000",
+      "06. volume": "37883194",
+      "07. latest trading day": "2025-07-29",
+      "08. previous close": "53.0700",
+      "09. change": "-0.2700",
+      "10. change percent": "-0.5088%",
+      "name": "Financial Services",
+      "session": "Extended Hours"
+    },
+    "XLK": {
+      "01. symbol": "XLK",
+      "02. open": "265.8000",
+      "03. high": "267.2700",
+      "04. low": "263.6400",
+      "05. price": "264.0900",
+      "06. volume": "6869524",
+      "07. latest trading day": "2025-07-29",
+      "08. previous close": "264.0800",
+      "09. change": "0.0100",
+      "10. change percent": "0.0038%",
+      "name": "Technology",
+      "session": "Extended Hours"
+    },
+    "XLE": {
+      "01. symbol": "XLE",
+      "02. open": "88.2300",
+      "03. high": "88.9800",
+      "04. low": "87.9400",
+      "05. price": "88.9500",
+      "06. volume": "12275980",
+      "07. latest trading day": "2025-07-29",
+      "08. previous close": "88.0900",
+      "09. change": "0.8600",
+      "10. change percent": "0.9763%",
+      "name": "Energy",
+      "session": "Extended Hours"
+    },
+    "XLV": {
+      "01. symbol": "XLV",
+      "02. open": "133.9000",
+      "03. high": "135.0950",
+      "04. low": "132.9400",
+      "05. price": "134.4300",
+      "06. volume": "14967647",
+      "07. latest trading day": "2025-07-29",
+      "08. previous close": "135.2900",
+      "09. change": "-0.8600",
+      "10. change percent": "-0.6357%",
+      "name": "Healthcare",
+      "session": "Extended Hours"
+    },
+    "XLI": {
+      "01. symbol": "XLI",
+      "02. open": "154.5500",
+      "03. high": "154.6000",
+      "04. low": "152.2400",
+      "05. price": "152.7500",
+      "06. volume": "13546495",
+      "07. latest trading day": "2025-07-29",
+      "08. previous close": "154.5100",
+      "09. change": "-1.7600",
+      "10. change percent": "-1.1391%",
+      "name": "Industrials",
+      "session": "Extended Hours"
+    },
+    "XLY": {
+      "01. symbol": "XLY",
+      "02. open": "226.2200",
+      "03. high": "226.2550",
+      "04. low": "224.1200",
+      "05. price": "224.6200",
+      "06. volume": "5506397",
+      "07. latest trading day": "2025-07-29",
+      "08. previous close": "226.1800",
+      "09. change": "-1.5600",
+      "10. change percent": "-0.6897%",
+      "name": "Consumer Discretionary",
+      "session": "Extended Hours"
+    },
+    "XLP": {
+      "01. symbol": "XLP",
+      "02. open": "80.8000",
+      "03. high": "81.4250",
+      "04. low": "80.3700",
+      "05. price": "81.1900",
+      "06. volume": "18873191",
+      "07. latest trading day": "2025-07-29",
+      "08. previous close": "80.6600",
+      "09. change": "0.5300",
+      "10. change percent": "0.6571%",
+      "name": "Consumer Staples",
+      "session": "Extended Hours"
+    },
+    "XLU": {
+      "01. symbol": "XLU",
+      "02. open": "83.9400",
+      "03. high": "84.6300",
+      "04. low": "83.7600",
+      "05. price": "84.5800",
+      "06. volume": "9198065",
+      "07. latest trading day": "2025-07-29",
+      "08. previous close": "83.6200",
+      "09. change": "0.9600",
+      "10. change percent": "1.1481%",
+      "name": "Utilities",
+      "session": "Extended Hours"
+    },
+    "XLB": {
+      "01. symbol": "XLB",
+      "02. open": "90.8700",
+      "03. high": "90.8800",
+      "04. low": "90.1450",
+      "05. price": "90.6800",
+      "06. volume": "7102948",
+      "07. latest trading day": "2025-07-29",
+      "08. previous close": "91.0300",
+      "09. change": "-0.3500",
+      "10. change percent": "-0.3845%",
+      "name": "Materials",
+      "session": "Extended Hours"
+    }
+  },
+  "afterHoursMovers": {
+    "topGainers": [
+      {
+        "symbol": "AAPL",
+        "price": "$202.79",
+        "change": "+22.61",
+        "changePercent": "+12.55%",
+        "volume": "195K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "MSFT",
+        "price": "$148.93",
+        "change": "+11.64",
+        "changePercent": "+8.48%",
+        "volume": "170K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "GOOGL",
+        "price": "$135.02",
+        "change": "+4.16",
+        "changePercent": "+3.18%",
+        "volume": "147K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "AMZN",
+        "price": "$108.24",
+        "change": "+14.36",
+        "changePercent": "+15.30%",
+        "volume": "53K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "TSLA",
+        "price": "$63.90",
+        "change": "+7.49",
+        "changePercent": "+13.27%",
+        "volume": "29K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "NVDA",
+        "price": "$252.02",
+        "change": "+12.02",
+        "changePercent": "+5.01%",
+        "volume": "35K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "META",
+        "price": "$157.74",
+        "change": "+3.49",
+        "changePercent": "+2.26%",
+        "volume": "64K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "NFLX",
+        "price": "$131.23",
+        "change": "+5.05",
+        "changePercent": "+4.00%",
+        "volume": "100K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "AMD",
+        "price": "$219.67",
+        "change": "+20.69",
+        "changePercent": "+10.40%",
+        "volume": "205K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "CRM",
+        "price": "$118.28",
+        "change": "+0.86",
+        "changePercent": "+0.73%",
+        "volume": "28K",
+        "timeframe": "After-Hours"
+      }
+    ],
+    "topLosers": [
+      {
+        "symbol": "AAPL",
+        "price": "$115.11",
+        "change": "-7.87",
+        "changePercent": "-6.4%",
+        "volume": "129K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "MSFT",
+        "price": "$65.87",
+        "change": "-10.83",
+        "changePercent": "-14.12%",
+        "volume": "224K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "GOOGL",
+        "price": "$171.82",
+        "change": "-22.22",
+        "changePercent": "-11.45%",
+        "volume": "66K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "AMZN",
+        "price": "$73.98",
+        "change": "-5.87",
+        "changePercent": "-7.35%",
+        "volume": "64K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "TSLA",
+        "price": "$112.12",
+        "change": "-12.07",
+        "changePercent": "-9.72%",
+        "volume": "141K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "NVDA",
+        "price": "$132.23",
+        "change": "-14.15",
+        "changePercent": "-9.67%",
+        "volume": "69K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "META",
+        "price": "$50.19",
+        "change": "-5.58",
+        "changePercent": "-10.01%",
+        "volume": "90K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "NFLX",
+        "price": "$75.88",
+        "change": "-2.76",
+        "changePercent": "-3.51%",
+        "volume": "84K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "AMD",
+        "price": "$111.21",
+        "change": "-5.12",
+        "changePercent": "-4.4%",
+        "volume": "191K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "CRM",
+        "price": "$111.70",
+        "change": "-10.48",
+        "changePercent": "-8.58%",
+        "volume": "147K",
+        "timeframe": "After-Hours"
+      }
+    ]
+  },
+  "overnightNews": [
+    {
+      "category": "top news",
+      "datetime": 1753877400,
+      "headline": "Amazon’s earnings are due. It needs to prove it isn’t a ‘one-hit wonder’",
+      "id": 7502014,
+      "image": "https://static2.finnhub.io/file/publicdatany/finnhubimage/market_watch_logo.png",
+      "related": "",
+      "source": "MarketWatch",
+      "summary": "Amazon’s cloud-services business will be a key focus when the e-commerce giant reports earnings, with AWS revenue expected to grow 17%.",
+      "url": "https://www.marketwatch.com/story/amazons-earnings-are-due-it-needs-to-prove-it-isnt-a-one-hit-wonder-4b0867ef"
+    },
+    {
+      "category": "top news",
+      "datetime": 1753877100,
+      "headline": "The ‘great wealth transfer’ is coming. Many people will be rich — but they’re not ready.",
+      "id": 7502015,
+      "image": "https://static2.finnhub.io/file/publicdatany/finnhubimage/market_watch_logo.png",
+      "related": "",
+      "source": "MarketWatch",
+      "summary": "Inheriting money is one thing; keeping it is another.",
+      "url": "https://www.marketwatch.com/story/the-great-wealth-transfer-is-coming-many-people-will-be-rich-but-theyre-not-ready-e206232f"
+    },
+    {
+      "category": "top news",
+      "datetime": 1753876747,
+      "headline": "Trump says Friday tariff deadline 'will not be extended'",
+      "id": 7502012,
+      "image": "https://image.cnbcfm.com/api/v1/image/108178684-17538214052025-07-29t202125z_974579772_rc2hwfa715og_rtrmadp_0_usa-trump-britain.jpeg?v=1753821467&w=1920&h=1080",
+      "related": "",
+      "source": "CNBC",
+      "summary": "President Donald Trump said that he will not extend the deadline for his \"reciprocal\" tariffs on dozens of countries to restart.",
+      "url": "https://www.cnbc.com/2025/07/30/trump-trade-august-tariff-deadline.html"
+    },
+    {
+      "category": "top news",
+      "datetime": 1753876609,
+      "headline": "DOJ urges release of Jeffrey Epstein and Ghislaine Maxwell grand jury info in new filings",
+      "id": 7502013,
+      "image": "https://image.cnbcfm.com/api/v1/image/106071604-1565364545796epstein.jpg?v=1753875767&w=1920&h=1080",
+      "related": "",
+      "source": "CNBC",
+      "summary": "The Trump administration has faced pressure this month to release information in criminal files related to Jeffrey Epstein.",
+      "url": "https://www.cnbc.com/2025/07/30/jeffrey-epstein-ghislaine-maxwell-victims-trump.html"
+    },
+    {
+      "category": "top news",
+      "datetime": 1753874340,
+      "headline": "Has Humana turned the corner? Stock jumps as outlook raised, Medicare business improves",
+      "id": 7501999,
+      "image": "https://static2.finnhub.io/file/publicdatany/finnhubimage/market_watch_logo.png",
+      "related": "",
+      "source": "MarketWatch",
+      "summary": "Humana’s stock surges, after the health insurer raises its full-year profit outlook and sees improvement in its Medicare Advantage business.",
+      "url": "https://www.marketwatch.com/story/has-humana-turned-the-corner-stock-jumps-as-outlook-raised-medicare-business-improves-00b1a878"
+    },
+    {
+      "category": "top news",
+      "datetime": 1753874040,
+      "headline": "Study finds it’s hard to make money trading, even when cheating",
+      "id": 7502000,
+      "image": "https://static2.finnhub.io/file/publicdatany/finnhubimage/market_watch_logo.png",
+      "related": "",
+      "source": "MarketWatch",
+      "summary": "Early access to corporate financial results produced underwhelming results. Here’s why.",
+      "url": "https://www.marketwatch.com/story/study-finds-its-hard-to-make-money-trading-even-when-cheating-f10b563b"
+    },
+    {
+      "category": "top news",
+      "datetime": 1753873380,
+      "headline": "These ETFs will give you high income — but you need to learn about their strategies first",
+      "id": 7501991,
+      "image": "https://static2.finnhub.io/file/publicdatany/finnhubimage/market_watch_logo.png",
+      "related": "",
+      "source": "MarketWatch",
+      "summary": "Exchange-traded funds using options to generate income have become popular. They take a variety of approaches to providing income and growth.",
+      "url": "https://www.marketwatch.com/story/these-etfs-will-give-you-high-income-but-you-need-to-learn-about-their-strategies-first-03b28066"
+    },
+    {
+      "category": "top news",
+      "datetime": 1753872705,
+      "headline": "Companies from Stanley Black & Decker to Conagra are saying tariffs will cost them hundreds of millions",
+      "id": 7501990,
+      "image": "https://image.cnbcfm.com/api/v1/image/108140208-1746212805992-gettyimages-2213091505-mms10402_xxt1boi6.jpeg?v=1753817620&w=1920&h=1080",
+      "related": "",
+      "source": "CNBC",
+      "summary": "Businesses in a range of industries have raced to figure out how to handle rising costs in the middle of a shakeup in global trade policy.",
+      "url": "https://www.cnbc.com/2025/07/30/stanley-black-decker-conagra-trump-tariffs-cost-increases.html"
+    }
+  ],
+  "globalMarkets": {},
+  "currencyMoves": {
+    "EURUSD": {
+      "rate": "1.1514",
+      "lastRefreshed": "2025-07-30 12:27:57",
+      "session": "Overnight"
+    },
+    "GBPUSD": {
+      "rate": "1.3353",
+      "lastRefreshed": "2025-07-30 12:27:45",
+      "session": "Overnight"
+    },
+    "USDJPY": {
+      "rate": "148.4220",
+      "lastRefreshed": "2025-07-30 12:28:09",
+      "session": "Overnight"
+    }
+  },
+  "reportMetadata": {
+    "generatedAt": "2025-07-30T12:29:08.753Z",
+    "marketTimings": {
+      "lastClose": "7/29/2025, 4:00:00 PM",
+      "nextOpen": "7/30/2025, 9:30:00 AM",
+      "hoursSinceClose": 20,
+      "timeToOpenStr": "-3h -58m"
+    },
+    "analysisType": "institutional-grade",
+    "dataQuality": {
+      "realTimeFeeds": 12,
+      "newsArticles": 8,
+      "currencyPairs": 3,
+      "confidence": "high"
+    }
+  }
+}
