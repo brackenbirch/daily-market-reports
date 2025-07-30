@@ -172,169 +172,224 @@
     "topGainers": [
       {
         "symbol": "AAPL",
-        "price": "$186.57",
-        "change": "+3.51",
-        "changePercent": "+1.92%",
-        "volume": "87K",
+        "price": "$253.99",
+        "change": "+21.16",
+        "changePercent": "+9.09%",
+        "volume": "141K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "MSFT",
-        "price": "$141.04",
-        "change": "+8.08",
-        "changePercent": "+6.08%",
-        "volume": "209K",
+        "price": "$111.02",
+        "change": "+5.57",
+        "changePercent": "+5.28%",
+        "volume": "122K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "GOOGL",
-        "price": "$217.43",
-        "change": "+8.38",
-        "changePercent": "+4.01%",
-        "volume": "121K",
+        "price": "$154.29",
+        "change": "+2.92",
+        "changePercent": "+1.93%",
+        "volume": "164K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "AMZN",
-        "price": "$195.20",
-        "change": "+15.67",
-        "changePercent": "+8.73%",
-        "volume": "35K",
+        "price": "$206.85",
+        "change": "+2.21",
+        "changePercent": "+1.08%",
+        "volume": "66K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "TSLA",
-        "price": "$130.20",
-        "change": "+13.62",
-        "changePercent": "+11.68%",
-        "volume": "211K",
+        "price": "$254.21",
+        "change": "+6.18",
+        "changePercent": "+2.49%",
+        "volume": "43K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "NVDA",
-        "price": "$204.30",
-        "change": "+5.04",
-        "changePercent": "+2.53%",
-        "volume": "88K",
+        "price": "$232.51",
+        "change": "+28.05",
+        "changePercent": "+13.72%",
+        "volume": "55K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "META",
-        "price": "$132.46",
-        "change": "+4.76",
-        "changePercent": "+3.73%",
-        "volume": "184K",
+        "price": "$72.64",
+        "change": "+2.87",
+        "changePercent": "+4.11%",
+        "volume": "177K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "NFLX",
-        "price": "$165.87",
-        "change": "+1.82",
-        "changePercent": "+1.11%",
-        "volume": "114K",
+        "price": "$125.09",
+        "change": "+11.51",
+        "changePercent": "+10.13%",
+        "volume": "187K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "AMD",
-        "price": "$168.55",
-        "change": "+2.83",
-        "changePercent": "+1.71%",
-        "volume": "44K",
+        "price": "$111.49",
+        "change": "+10.50",
+        "changePercent": "+10.40%",
+        "volume": "97K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "CRM",
-        "price": "$236.59",
-        "change": "+4.41",
-        "changePercent": "+1.90%",
-        "volume": "146K",
+        "price": "$188.40",
+        "change": "+15.98",
+        "changePercent": "+9.27%",
+        "volume": "93K",
         "timeframe": "After-Hours"
       }
     ],
     "topLosers": [
       {
         "symbol": "AAPL",
-        "price": "$113.41",
-        "change": "-3.80",
-        "changePercent": "-3.24%",
-        "volume": "77K",
+        "price": "$187.17",
+        "change": "-16.76",
+        "changePercent": "-8.22%",
+        "volume": "58K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "MSFT",
-        "price": "$149.24",
-        "change": "-8.95",
-        "changePercent": "-5.66%",
-        "volume": "191K",
+        "price": "$166.40",
+        "change": "-8.33",
+        "changePercent": "-4.77%",
+        "volume": "174K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "GOOGL",
-        "price": "$59.74",
-        "change": "-2.34",
-        "changePercent": "-3.77%",
-        "volume": "61K",
+        "price": "$228.14",
+        "change": "-7.88",
+        "changePercent": "-3.34%",
+        "volume": "138K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "AMZN",
-        "price": "$51.52",
-        "change": "-6.81",
-        "changePercent": "-11.67%",
-        "volume": "144K",
+        "price": "$217.80",
+        "change": "-19.84",
+        "changePercent": "-8.35%",
+        "volume": "28K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "TSLA",
-        "price": "$244.57",
-        "change": "-4.41",
-        "changePercent": "-1.77%",
-        "volume": "44K",
+        "price": "$72.37",
+        "change": "-6.00",
+        "changePercent": "-7.66%",
+        "volume": "86K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "NVDA",
-        "price": "$77.55",
-        "change": "-5.86",
-        "changePercent": "-7.02%",
-        "volume": "41K",
+        "price": "$113.55",
+        "change": "-15.46",
+        "changePercent": "-11.98%",
+        "volume": "153K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "META",
-        "price": "$154.69",
-        "change": "-9.63",
-        "changePercent": "-5.86%",
-        "volume": "161K",
+        "price": "$55.75",
+        "change": "-1.04",
+        "changePercent": "-1.83%",
+        "volume": "153K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "NFLX",
-        "price": "$134.30",
-        "change": "-21.21",
-        "changePercent": "-13.64%",
-        "volume": "52K",
+        "price": "$158.90",
+        "change": "-16.31",
+        "changePercent": "-9.31%",
+        "volume": "211K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "AMD",
-        "price": "$183.27",
-        "change": "-28.34",
-        "changePercent": "-13.39%",
-        "volume": "219K",
+        "price": "$69.43",
+        "change": "-3.26",
+        "changePercent": "-4.48%",
+        "volume": "169K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "CRM",
-        "price": "$68.75",
-        "change": "-10.80",
-        "changePercent": "-13.57%",
-        "volume": "138K",
+        "price": "$150.39",
+        "change": "-9.40",
+        "changePercent": "-5.88%",
+        "volume": "165K",
         "timeframe": "After-Hours"
       }
     ]
   },
   "overnightNews": [
+    {
+      "category": "top news",
+      "datetime": 1753880067,
+      "headline": "Jim Cramer's top 10 things to watch in the stock market Wednesday",
+      "id": 7502057,
+      "image": "https://image.cnbcfm.com/api/v1/image/106237896-1573496538905nup_189015_1054.jpg?v=1692644644&w=1920&h=1080",
+      "related": "",
+      "source": "CNBC",
+      "summary": "Palo Alto announced a massive acquisition, and shares of Starbucks jumped on signs of progress in its turnaround.",
+      "url": "https://www.cnbc.com/2025/07/30/jim-cramers-top-10-things-to-watch-in-the-stock-market-wednesday.html"
+    },
+    {
+      "category": "top news",
+      "datetime": 1753879860,
+      "headline": "Hershey lowers earnings outlook amid ongoing tariffs expense. Why the stock is rising.",
+      "id": 7502055,
+      "image": "https://static2.finnhub.io/file/publicdatany/finnhubimage/market_watch_logo.png",
+      "related": "",
+      "source": "MarketWatch",
+      "summary": "Hershey’s stock surges toward a more than 7-month high, as a big earnings beat offset a lowered full-year outlook.",
+      "url": "https://www.marketwatch.com/story/hershey-lowers-earnings-outlook-amid-ongoing-tariffs-expense-why-the-stock-is-rising-6c4ef34d"
+    },
+    {
+      "category": "top news",
+      "datetime": 1753879200,
+      "headline": "You’d better know what kind of investor you are — because ‘risk happens fast’",
+      "id": 7502030,
+      "image": "https://static2.finnhub.io/file/publicdatany/finnhubimage/market_watch_logo.png",
+      "related": "",
+      "source": "MarketWatch",
+      "summary": "That investing-risk questionnaire your adviser gives you actually doesn’t say much about you.",
+      "url": "https://www.marketwatch.com/story/youd-better-know-what-kind-of-investor-you-are-because-risk-happens-fast-ff4748c4"
+    },
+    {
+      "category": "top news",
+      "datetime": 1753879140,
+      "headline": "GDP shows plump 3% growth rate in second quarter — but it’s not as good as it looks",
+      "id": 7502031,
+      "image": "https://static2.finnhub.io/file/publicdatany/finnhubimage/market_watch_logo.png",
+      "related": "",
+      "source": "MarketWatch",
+      "summary": "The U.S. expanded at an exaggerated 3.0% annual pace in the second quarter, but the economy also showed signs of weakness as businesses and consumers grappled with how to respond to ongoing trade wars.",
+      "url": "https://www.marketwatch.com/story/gdp-jumps-3-in-second-quarter-but-its-not-as-good-as-it-looks-5eea0c00"
+    },
+    {
+      "category": "top news",
+      "datetime": 1753878600,
+      "headline": "Treasury says it won’t have to increase coupon auction sizes for ‘next several quarters’",
+      "id": 7502032,
+      "image": "https://static2.finnhub.io/file/publicdatany/finnhubimage/market_watch_logo.png",
+      "related": "",
+      "source": "MarketWatch",
+      "summary": "Annual federal government budget deficits are likely to remain in the neighborhood of $2 trillion or more for the foreseeable future, one analyst notes.",
+      "url": "https://www.marketwatch.com/story/treasury-says-it-wont-have-to-increase-coupon-auction-sizes-for-next-several-quarters-ffc1972e"
+    },
     {
       "category": "top news",
       "datetime": 1753878300,
@@ -367,88 +422,33 @@
       "source": "MarketWatch",
       "summary": "Inheriting money is one thing; keeping it is another.",
       "url": "https://www.marketwatch.com/story/the-great-wealth-transfer-is-coming-many-people-will-be-rich-but-theyre-not-ready-e206232f"
-    },
-    {
-      "category": "top news",
-      "datetime": 1753876747,
-      "headline": "Trump says Friday tariff deadline 'will not be extended'",
-      "id": 7502012,
-      "image": "https://image.cnbcfm.com/api/v1/image/108178684-17538214052025-07-29t202125z_974579772_rc2hwfa715og_rtrmadp_0_usa-trump-britain.jpeg?v=1753821467&w=1920&h=1080",
-      "related": "",
-      "source": "CNBC",
-      "summary": "President Donald Trump said that he will not extend the deadline for his \"reciprocal\" tariffs on dozens of countries to restart.",
-      "url": "https://www.cnbc.com/2025/07/30/trump-trade-august-tariff-deadline.html"
-    },
-    {
-      "category": "top news",
-      "datetime": 1753876609,
-      "headline": "DOJ urges release of Jeffrey Epstein and Ghislaine Maxwell grand jury info in new filings",
-      "id": 7502013,
-      "image": "https://image.cnbcfm.com/api/v1/image/106071604-1565364545796epstein.jpg?v=1753875767&w=1920&h=1080",
-      "related": "",
-      "source": "CNBC",
-      "summary": "The Trump administration has faced pressure this month to release information in criminal files related to Jeffrey Epstein.",
-      "url": "https://www.cnbc.com/2025/07/30/jeffrey-epstein-ghislaine-maxwell-victims-trump.html"
-    },
-    {
-      "category": "top news",
-      "datetime": 1753874340,
-      "headline": "Has Humana turned the corner? Stock jumps as outlook raised, Medicare business improves",
-      "id": 7501999,
-      "image": "https://static2.finnhub.io/file/publicdatany/finnhubimage/market_watch_logo.png",
-      "related": "",
-      "source": "MarketWatch",
-      "summary": "Humana’s stock surges, after the health insurer raises its full-year profit outlook and sees improvement in its Medicare Advantage business.",
-      "url": "https://www.marketwatch.com/story/has-humana-turned-the-corner-stock-jumps-as-outlook-raised-medicare-business-improves-00b1a878"
-    },
-    {
-      "category": "top news",
-      "datetime": 1753874040,
-      "headline": "Study finds it’s hard to make money trading, even when cheating",
-      "id": 7502000,
-      "image": "https://static2.finnhub.io/file/publicdatany/finnhubimage/market_watch_logo.png",
-      "related": "",
-      "source": "MarketWatch",
-      "summary": "Early access to corporate financial results produced underwhelming results. Here’s why.",
-      "url": "https://www.marketwatch.com/story/study-finds-its-hard-to-make-money-trading-even-when-cheating-f10b563b"
-    },
-    {
-      "category": "top news",
-      "datetime": 1753873380,
-      "headline": "These ETFs will give you high income — but you need to learn about their strategies first",
-      "id": 7501991,
-      "image": "https://static2.finnhub.io/file/publicdatany/finnhubimage/market_watch_logo.png",
-      "related": "",
-      "source": "MarketWatch",
-      "summary": "Exchange-traded funds using options to generate income have become popular. They take a variety of approaches to providing income and growth.",
-      "url": "https://www.marketwatch.com/story/these-etfs-will-give-you-high-income-but-you-need-to-learn-about-their-strategies-first-03b28066"
     }
   ],
   "globalMarkets": {},
   "currencyMoves": {
     "EURUSD": {
-      "rate": "1.1493",
-      "lastRefreshed": "2025-07-30 12:37:07",
+      "rate": "1.1481",
+      "lastRefreshed": "2025-07-30 13:05:33",
       "session": "Overnight"
     },
     "GBPUSD": {
-      "rate": "1.3330",
-      "lastRefreshed": "2025-07-30 12:37:04",
+      "rate": "1.3309",
+      "lastRefreshed": "2025-07-30 13:05:10",
       "session": "Overnight"
     },
     "USDJPY": {
-      "rate": "148.7210",
-      "lastRefreshed": "2025-07-30 12:37:24",
+      "rate": "148.8650",
+      "lastRefreshed": "2025-07-30 13:05:15",
       "session": "Overnight"
     }
   },
   "reportMetadata": {
-    "generatedAt": "2025-07-30T12:38:24.421Z",
+    "generatedAt": "2025-07-30T13:06:17.026Z",
     "marketTimings": {
       "lastClose": "7/29/2025, 4:00:00 PM",
-      "nextOpen": "7/31/2025, 9:30:00 AM",
-      "hoursSinceClose": 20,
-      "timeToOpenStr": "20h 52m"
+      "nextOpen": "7/30/2025, 9:30:00 AM",
+      "hoursSinceClose": 21,
+      "timeToOpenStr": "-4h -36m"
     },
     "analysisType": "institutional-grade",
     "dataQuality": {
