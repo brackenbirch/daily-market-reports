@@ -399,28 +399,28 @@ async function sendComprehensivePreMarketReport(reportContent, dateStr, headline
             }
         });
         
-        // Enhanced HTML formatting optimized for narrative + headlines format
+        // Enhanced HTML formatting with white background, black text, and gold accents
         const emailHtml = reportContent
-            .replace(/^# (.*$)/gm, '<h1 style="color: #1a202c; border-bottom: 3px solid #3182ce; padding-bottom: 12px; margin-bottom: 20px; font-size: 28px;">$1</h1>')
-            .replace(/^## (.*$)/gm, '<h2 style="color: #2d3748; margin-top: 30px; margin-bottom: 15px; border-bottom: 2px solid #e2e8f0; padding-bottom: 8px; font-size: 22px;">$1</h2>')
-            .replace(/^\*\*(Key.*Headlines:)\*\*/gm, '<h3 style="color: #2c5aa0; margin-top: 25px; margin-bottom: 12px; font-weight: 600; font-size: 18px; border-bottom: 1px solid #cbd5e0; padding-bottom: 5px;">$1</h3>')
-            .replace(/^\*\*(.*?)\*\*/gm, '<strong style="color: #2d3748; font-weight: 600;">$1</strong>')
-            .replace(/^(\d+\.\s.*$)/gm, '<div style="margin: 8px 0; padding: 10px 15px; background-color: #f8fafc; border-left: 3px solid #3182ce; border-radius: 4px; font-size: 14px; color: #2d3748;">$1</div>')
-            .replace(/^([^<\n#-\d].*$)/gm, '<p style="line-height: 1.7; margin-bottom: 14px; color: #2d3748; font-size: 15px;">$1</p>')
+            .replace(/^# (.*$)/gm, '<h1 style="color: #000000; border-bottom: 3px solid #FFD700; padding-bottom: 12px; margin-bottom: 20px; font-size: 28px;">$1</h1>')
+            .replace(/^## (.*$)/gm, '<h2 style="color: #000000; margin-top: 30px; margin-bottom: 15px; border-bottom: 2px solid #FFD700; padding-bottom: 8px; font-size: 22px;">$1</h2>')
+            .replace(/^\*\*(Key.*Headlines:)\*\*/gm, '<h3 style="color: #B8860B; margin-top: 25px; margin-bottom: 12px; font-weight: 600; font-size: 18px; border-bottom: 1px solid #FFD700; padding-bottom: 5px;">$1</h3>')
+            .replace(/^\*\*(.*?)\*\*/gm, '<strong style="color: #000000; font-weight: 600;">$1</strong>')
+            .replace(/^(\d+\.\s.*$)/gm, '<div style="margin: 8px 0; padding: 10px 15px; background-color: #FFFFFF; border-left: 3px solid #FFD700; border-radius: 4px; font-size: 14px; color: #000000; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">$1</div>')
+            .replace(/^([^<\n#-\d].*$)/gm, '<p style="line-height: 1.7; margin-bottom: 14px; color: #000000; font-size: 15px;">$1</p>')
             .replace(/\n\n/g, '<br>')
             .replace(/\n/g, '<br>');
         
         const emailContent = `
-        <div style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; max-width: 900px; margin: 0 auto; background-color: #f7fafc; padding: 25px;">
-            <div style="background-color: white; padding: 35px; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.1);">
+        <div style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; max-width: 900px; margin: 0 auto; background-color: #FFFFFF; padding: 25px;">
+            <div style="background-color: #FFFFFF; padding: 35px; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); border: 1px solid #FFD700;">
                 ${emailHtml}
                 
-                <div style="margin-top: 35px; padding: 25px; background-color: #edf2f7; border-radius: 10px; border-left: 5px solid #3182ce;">
-                    <p style="margin: 0; font-weight: bold; color: #1a202c; font-size: 16px;">COMPREHENSIVE PRE-MARKET INTELLIGENCE BRIEFING</p>
-                    <p style="margin: 8px 0 0 0; font-size: 14px; color: #4a5568;">Generated: ${new Date().toLocaleString()} ET</p>
-                    <p style="margin: 5px 0 0 0; font-size: 14px; color: #4a5568;">Headlines Analyzed: ${headlineCount} from multiple premium sources</p>
-                    <p style="margin: 5px 0 0 0; font-size: 14px; color: #4a5568;">Data Sources: Finnhub, NewsAPI, Marketstack, Trading Economics, Exchange Rates + Web Search</p>
-                    <p style="margin: 5px 0 0 0; font-size: 14px; color: #4a5568;">AI Analysis: Claude Sonnet 4 | Classification: Institutional Grade</p>
+                <div style="margin-top: 35px; padding: 25px; background-color: #FFFFFF; border-radius: 10px; border-left: 5px solid #FFD700; border: 1px solid #FFD700;">
+                    <p style="margin: 0; font-weight: bold; color: #000000; font-size: 16px;">COMPREHENSIVE PRE-MARKET INTELLIGENCE BRIEFING</p>
+                    <p style="margin: 8px 0 0 0; font-size: 14px; color: #000000;">Generated: ${new Date().toLocaleString()} ET</p>
+                    <p style="margin: 5px 0 0 0; font-size: 14px; color: #000000;">Headlines Analyzed: ${headlineCount} from multiple premium sources</p>
+                    <p style="margin: 5px 0 0 0; font-size: 14px; color: #000000;">Data Sources: Finnhub, NewsAPI, Marketstack, Trading Economics, Exchange Rates + Web Search</p>
+                    <p style="margin: 5px 0 0 0; font-size: 14px; color: #B8860B;">AI Analysis: Claude Sonnet 4 | Classification: Institutional Grade</p>
                 </div>
             </div>
         </div>`;
@@ -513,22 +513,7 @@ async function generateComprehensivePreMarketReport() {
         const filename = `comprehensive-premarket-brief-${dateStr}.md`;
         const filepath = path.join(reportsDir, filename);
         
-        const reportWithMetadata = `${report}
-
----
-**COMPREHENSIVE REPORT METADATA**
-- Generated: ${timing.currentTime} ET
-- Coverage Period: Since market close ${timing.lastCloseString}
-- Headlines Analyzed: ${totalHeadlines} from multiple sources
-- Active Data Sources: ${availableAPIs.join(', ')}
-- Web Search Integration: Enhanced news discovery
-- AI Analysis: Claude Sonnet 4 - Institutional Grade
-- Classification: Comprehensive Pre-Market Intelligence Brief
-
-**DATA SOURCE BREAKDOWN:**
-${Object.entries(headlines).map(([cat, items]) => `- ${cat}: ${items.length} items`).join('\n')}
-
-*Multi-source automated news analysis powered by Claude AI*`;
+        const reportWithMetadata = report;
         
         fs.writeFileSync(filepath, reportWithMetadata);
         
