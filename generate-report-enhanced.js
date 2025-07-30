@@ -123,9 +123,9 @@ async function fetchComprehensiveNews() {
             console.log('📡 Fetching from NewsAPI...');
             const categories = [
                 { query: '(stocks OR trading OR NYSE OR NASDAQ OR "S&P 500" OR Dow OR earnings) AND market', category: 'us' },
-                { query: '(China OR Japan OR "Hong Kong" OR "Asian markets" OR Nikkei OR Shanghai OR "Hang Seng") AND market', category: 'asian' },
-                { query: '(Europe OR ECB OR Brexit OR DAX OR FTSE OR "European markets" OR eurozone) AND market', category: 'european' },
-                { query: '(Russia OR Ukraine OR "Middle East" OR sanctions OR "trade war" OR geopolitical) AND market', category: 'geopolitical' },
+                { query: '(China OR Japan OR "Hong Kong" OR "Asian markets" OR Nikkei OR Shanghai OR "Hang Seng" OR "South Korea" OR Singapore OR India OR Taiwan OR "Bank of Japan" OR PBOC) AND (market OR economy OR policy)', category: 'asian' },
+                { query: '(Europe OR ECB OR Brexit OR DAX OR FTSE OR "European markets" OR eurozone OR Germany OR France OR "United Kingdom" OR Italy OR Spain OR "European Union" OR "Christine Lagarde") AND (market OR economy OR policy)', category: 'european' },
+                { query: '(Russia OR Ukraine OR "Middle East" OR sanctions OR "trade war" OR geopolitical OR NATO OR China OR "South China Sea" OR Iran OR Israel OR "North Korea" OR Taiwan OR diplomacy) AND (market OR impact OR economy)', category: 'geopolitical' },
                 { query: '(dollar OR euro OR yen OR "currency markets" OR forex OR "exchange rate") AND market', category: 'currencies' },
                 { query: '(oil OR gold OR "natural gas" OR commodities OR "crude oil" OR copper OR wheat) AND price', category: 'commodities' },
                 { query: '(earnings OR "quarterly results" OR "earnings report" OR guidance OR revenue) AND (stock OR company)', category: 'earnings' }
@@ -143,7 +143,7 @@ async function fetchComprehensiveNews() {
                             from: fromDate,
                             sortBy: 'publishedAt',
                             language: 'en',
-                            pageSize: 10,
+                            pageSize: cat.category === 'asian' || cat.category === 'european' || cat.category === 'geopolitical' ? 15 : 10,
                             apiKey: NEWS_API_KEY
                         }
                     });
@@ -218,14 +218,16 @@ async function fetchComprehensiveNews() {
                         country: news.country
                     }));
                     
-                    // Categorize by region
+                    // Categorize by region with enhanced targeting
                     economicNews.forEach(news => {
                         if (news.country && ['United States', 'USA', 'US'].includes(news.country)) {
                             headlines.us.push(news);
-                        } else if (news.country && ['China', 'Japan', 'South Korea', 'India', 'Singapore'].includes(news.country)) {
+                        } else if (news.country && ['China', 'Japan', 'South Korea', 'India', 'Singapore', 'Hong Kong', 'Taiwan', 'Thailand', 'Malaysia', 'Philippines', 'Indonesia', 'Vietnam'].includes(news.country)) {
                             headlines.asian.push(news);
-                        } else if (news.country && ['Germany', 'France', 'UK', 'Italy', 'Spain', 'Netherlands'].includes(news.country)) {
+                        } else if (news.country && ['Germany', 'France', 'UK', 'United Kingdom', 'Italy', 'Spain', 'Netherlands', 'Belgium', 'Austria', 'Switzerland', 'Sweden', 'Norway', 'Denmark', 'Finland', 'Poland'].includes(news.country)) {
                             headlines.european.push(news);
+                        } else if (news.country && ['Russia', 'Ukraine', 'Iran', 'Israel', 'Turkey', 'Saudi Arabia', 'North Korea', 'Syria', 'Iraq', 'Afghanistan'].includes(news.country)) {
+                            headlines.geopolitical.push(news);
                         } else {
                             headlines.general.push(news);
                         }
@@ -297,7 +299,90 @@ async function fetchComprehensiveNews() {
             }
         }
         
-        // 8. Get currency rates for context using available APIs
+        // 9. Additional Asian Market News Sources
+        if (ALPHA_VANTAGE_API_KEY) {
+            console.log('📡 Fetching additional Asian market news...');
+            try {
+                const asianResponse = await axios.get(
+                    `https://www.alphavantage.co/query?function=NEWS_SENTIMENT&topics=technology,manufacturing&keywords=China,Japan,Asia&apikey=${ALPHA_VANTAGE_API_KEY}`
+                );
+                
+                if (asianResponse.data && asianResponse.data.feed) {
+                    const additionalAsianNews = asianResponse.data.feed
+                        .slice(0, 8)
+                        .map(news => ({
+                            headline: news.title,
+                            summary: news.summary,
+                            source: `Alpha Vantage Asia - ${news.source}`,
+                            datetime: new Date(news.time_published).toLocaleString(),
+                            url: news.url,
+                            sentiment: news.overall_sentiment_label
+                        }));
+                    headlines.asian.push(...additionalAsianNews);
+                    console.log(`  ✅ Additional Asian news: ${additionalAsianNews.length} headlines`);
+                }
+            } catch (error) {
+                console.log('  ❌ Additional Asian news fetch failed:', error.message);
+            }
+        }
+        
+        // 10. Additional European Market News Sources
+        if (ALPHA_VANTAGE_API_KEY) {
+            console.log('📡 Fetching additional European market news...');
+            try {
+                const europeanResponse = await axios.get(
+                    `https://www.alphavantage.co/query?function=NEWS_SENTIMENT&topics=economy,financial_markets&keywords=Europe,ECB,Brexit&apikey=${ALPHA_VANTAGE_API_KEY}`
+                );
+                
+                if (europeanResponse.data && europeanResponse.data.feed) {
+                    const additionalEuropeanNews = europeanResponse.data.feed
+                        .slice(0, 8)
+                        .map(news => ({
+                            headline: news.title,
+                            summary: news.summary,
+                            source: `Alpha Vantage Europe - ${news.source}`,
+                            datetime: new Date(news.time_published).toLocaleString(),
+                            url: news.url,
+                            sentiment: news.overall_sentiment_label
+                        }));
+                    headlines.european.push(...additionalEuropeanNews);
+                    console.log(`  ✅ Additional European news: ${additionalEuropeanNews.length} headlines`);
+                }
+            } catch (error) {
+                console.log('  ❌ Additional European news fetch failed:', error.message);
+            }
+        }
+        
+        // 11. Additional Geopolitical News Sources
+        if (FINNHUB_API_KEY) {
+            console.log('📡 Fetching additional geopolitical news...');
+            try {
+                const geoResponse = await axios.get(
+                    `https://finnhub.io/api/v1/news?category=general&minId=${timing.lastCloseTimestamp}&token=${FINNHUB_API_KEY}`
+                );
+                
+                if (geoResponse.data && Array.isArray(geoResponse.data)) {
+                    const geopoliticalKeywords = ['russia', 'ukraine', 'china', 'trade war', 'sanctions', 'nato', 'middle east', 'iran', 'israel', 'north korea', 'taiwan', 'diplomatic'];
+                    const additionalGeoNews = geoResponse.data
+                        .filter(news => {
+                            const headline = news.headline.toLowerCase();
+                            return geopoliticalKeywords.some(keyword => headline.includes(keyword)) && news.datetime > timing.lastCloseTimestamp;
+                        })
+                        .slice(0, 10)
+                        .map(news => ({
+                            headline: news.headline,
+                            summary: news.summary,
+                            source: `Finnhub Geo - ${news.source}`,
+                            datetime: new Date(news.datetime * 1000).toLocaleString(),
+                            url: news.url
+                        }));
+                    headlines.geopolitical.push(...additionalGeoNews);
+                    console.log(`  ✅ Additional geopolitical news: ${additionalGeoNews.length} headlines`);
+                }
+            } catch (error) {
+                console.log('  ❌ Additional geopolitical news fetch failed:', error.message);
+            }
+        }
         if (EXCHANGERATE_API_KEY || FIXER_API_KEY) {
             console.log('💱 Fetching currency data for context...');
             try {
