@@ -1,72 +1,117 @@
 {
   "headlines": {
-    "general": [],
+    "general": [
+      {
+        "headline": "America's Car-Mart, Inc. Provides Update on Status of Its Annual Report on Form 10-K",
+        "summary": "ROGERS, Ark., July 30, 2025 ( GLOBE NEWSWIRE ) -- America's Car-Mart, Inc. ( NASDAQ: CRMT ) ( \"Car-Mart\" or the \"Company\" ) , today announced that it is continuing its work to complete certain omitted disclosures to be included in the Company's Annual Report on Form 10-K for the fiscal year ...",
+        "source": "Alpha Vantage - GlobeNewswire",
+        "datetime": "Invalid Date",
+        "url": "https://www.globenewswire.com/news-release/2025/07/30/3124124/9718/en/America-s-Car-Mart-Inc-Provides-Update-on-Status-of-Its-Annual-Report-on-Form-10-K.html",
+        "sentiment": "Neutral"
+      },
+      {
+        "headline": "XBP Europe Holdings, Inc. Completes Acquisition of Exela Technologies BPA, LLC, Creating a Global Business Process Automation Powerhouse - XBP Europe Holdings  ( NASDAQ:XBP ) , XBP Europe Holdings  ( NASDAQ:XBPEW ) ",
+        "summary": "SANTA MONICA, Calif. and LONDON, July 30, 2025 ( GLOBE NEWSWIRE ) -- XBP Europe Holdings, Inc. ( \"XBP Europe\" ) XBP, a pan-European integrator of bills, payments, and related solutions and services, has finalized its acquisition of Exela Technologies BPA, LLC ( \"BPA\" ) , a leading provider of ...",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/pressreleases/25/07/g46719737/xbp-europe-holdings-inc-completes-acquisition-of-exela-technologies-bpa-llc-creating-a-global-busi",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "NeOnc Technologies Signs Definitive Agreement to Acquire AI, 3D, and Quantum Modeling IP Portfolio from Dr. Ishwar K. Puri; Appoints Him to Board of Directors - NeOnc Technologies  ( NASDAQ:NTHI ) ",
+        "summary": "CALABASAS, Calif., July 30, 2025 ( GLOBE NEWSWIRE ) -- NeOnc Technologies Holdings, Inc.",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/pressreleases/25/07/g46719734/neonc-technologies-signs-definitive-agreement-to-acquire-ai-3d-and-quantum-modeling-ip-portfolio-f",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Castor Maritime Inc. Announces the Sale and Leaseback of the M/V Magic Thunder - Castor Maritime  ( NASDAQ:CTRM ) ",
+        "summary": "LIMASSOL, Cyprus, July 30, 2025 ( GLOBE NEWSWIRE ) -- Castor Maritime Inc. CTRM, ( \"Castor\" or the \"Company\" ) , a diversified global shipping and energy company, announces that on July 29, 2025, it successfully completed a sale and leaseback transaction for the M/V Magic Thunder, a 2011-built ...",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/pressreleases/25/07/g46720817/castor-maritime-inc-announces-the-sale-and-leaseback-of-the-mv-magic-thunder",
+        "sentiment": "Neutral"
+      },
+      {
+        "headline": "Performance Shipping Inc. Reports Financial Results for the Second Quarter and Six Months Ended June 30, 2025",
+        "summary": "ATHENS, Greece, July 30, 2025 ( GLOBE NEWSWIRE ) -- Performance Shipping Inc. ( NASDAQ: PSHG ) ( \"we\" or the \"Company\" ) , a global shipping company specializing in the ownership of tanker vessels, today reported net income of $9.1 million and net income attributable to common stockholders of ...",
+        "source": "Alpha Vantage - GlobeNewswire",
+        "datetime": "Invalid Date",
+        "url": "https://www.globenewswire.com/news-release/2025/07/30/3124165/14069/en/Performance-Shipping-Inc-Reports-Financial-Results-for-the-Second-Quarter-and-Six-Months-Ended-June-30-2025.html",
+        "sentiment": "Neutral"
+      },
+      {
+        "headline": "'Turkey's Uber' Joins Strategy, Tesla As Bitcoin Treasury Company",
+        "summary": "Martı's core business operations and expansion plans remain fully funded and are unaffected by the crypto allocation. Martı becomes the first major Turkish mobility company to integrate Bitcoin into its corporate financial strategy. The market's back, and these 3 income stocks are thriving.",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/crypto/cryptocurrency/25/07/46720657/turkeys-uber-joins-strategy-tesla-as-bitcoin-treasury-company",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "XBP Europe Holdings, Inc. Completes Acquisition of Exela Technologies BPA, LLC, Creating a Global Business Process Automation Powerhouse",
+        "summary": "Acquisition results in over $900 million in combined annual Revenue, resulting in a Net Debt-to-EBITDA ratio of the combined company of approximately 3.5x Acquisition results in over $900 million in combined annual Revenue, resulting in a Net Debt-to-EBITDA ratio of the combined company of ...",
+        "source": "Alpha Vantage - GlobeNewswire",
+        "datetime": "Invalid Date",
+        "url": "https://www.globenewswire.com/news-release/2025/07/30/3124103/0/en/XBP-Europe-Holdings-Inc-Completes-Acquisition-of-Exela-Technologies-BPA-LLC-Creating-a-Global-Business-Process-Automation-Powerhouse.html",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "MySize Launches NaizGPT - Conversational AI Assistant for Retail Teams - My Size  ( NASDAQ:MYSZ ) ",
+        "summary": "AIRPORT CITY, Israel, July 30, 2025 /PRNewswire/ -- MySize Inc. MYSZ, an AI-powered retail solutions company, today announced the successful launch of its pilot program, NaizGPT, a conversational AI assistant designed specifically for retail teams.",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/pressreleases/25/07/n46719840/mysize-launches-naizgpt-conversational-ai-assistant-for-retail-teams",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "NeOnc Technologies Signs Definitive Agreement to Acquire AI, 3D, and Quantum Modeling IP Portfolio from Dr. Ishwar K. Puri; Appoints Him to Board of Directors",
+        "summary": "CALABASAS, Calif., July 30, 2025 ( GLOBE NEWSWIRE ) -- NeOnc Technologies Holdings, Inc. ( NASDAQ: NTHI ) , a multi Phase 2 clinical-stage biotechnology company pioneering innovative treatments for brain cancers, is proud to announce the signing of a definitive, binding Letter of Intent ( LOI ) ...",
+        "source": "Alpha Vantage - GlobeNewswire",
+        "datetime": "Invalid Date",
+        "url": "https://www.globenewswire.com/news-release/2025/07/30/3124108/0/en/NeOnc-Technologies-Signs-Definitive-Agreement-to-Acquire-AI-3D-and-Quantum-Modeling-IP-Portfolio-from-Dr-Ishwar-K-Puri-Appoints-Him-to-Board-of-Directors.html",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "24/7 Market News Exclusive Interview: J.W. Roth, CEO of VENU, Discusses the Future of Live Entertainment - Venu Holding  ( AMEX:VENU ) ",
+        "summary": "DENVER, July 30, 2025 ( GLOBE NEWSWIRE ) -- 247marketnews.com, a pioneer in digital media dedicated to the swift distribution of financial market news and corporate information, conducts an exclusive interview with J.W.",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/pressreleases/25/07/g46720188/247-market-news-exclusive-interview-j-w-roth-ceo-of-venu-discusses-the-future-of-live-entertainmen",
+        "sentiment": "Somewhat-Bullish"
+      }
+    ],
     "us": [],
     "asian": [],
     "european": [],
     "geopolitical": [],
     "currencies": [],
     "commodities": [],
-    "webSearch": [
-      {
-        "headline": "Web Search Result: breaking market news today developments overnight",
-        "summary": "Market-relevant information found via web search for breaking market news today",
-        "source": "Web Search - web-search",
-        "datetime": "7/30/2025, 2:09:24 PM",
-        "confidence": "moderate"
-      },
-      {
-        "headline": "Web Search Result: overnight market developments developments overnight",
-        "summary": "Market-relevant information found via web search for overnight market developments",
-        "source": "Web Search - web-search",
-        "datetime": "7/30/2025, 2:09:24 PM",
-        "confidence": "moderate"
-      },
-      {
-        "headline": "Web Search Result: Asian markets overnight news developments overnight",
-        "summary": "Market-relevant information found via web search for Asian markets overnight news",
-        "source": "Web Search - web-search",
-        "datetime": "7/30/2025, 2:09:25 PM",
-        "confidence": "moderate"
-      },
-      {
-        "headline": "Web Search Result: European market news today developments overnight",
-        "summary": "Market-relevant information found via web search for European market news today",
-        "source": "Web Search - web-search",
-        "datetime": "7/30/2025, 2:09:25 PM",
-        "confidence": "moderate"
-      },
-      {
-        "headline": "Web Search Result: geopolitical market impact news developments overnight",
-        "summary": "Market-relevant information found via web search for geopolitical market impact news",
-        "source": "Web Search - web-search",
-        "datetime": "7/30/2025, 2:09:26 PM",
-        "confidence": "moderate"
-      }
-    ]
+    "earnings": []
   },
   "timing": {
     "lastCloseTimestamp": 1753804800,
     "lastCloseString": "7/29/2025, 12:00:00 PM",
-    "currentTime": "7/30/2025, 10:09:23 AM"
+    "currentTime": "7/30/2025, 10:29:15 AM"
   },
-  "totalHeadlines": 5,
+  "totalHeadlines": 10,
   "activeAPIs": [
     "Alpha Vantage",
     "Finnhub"
   ],
   "categoryBreakdown": {
-    "general": 0,
+    "general": 10,
     "us": 0,
     "asian": 0,
     "european": 0,
     "geopolitical": 0,
     "currencies": 0,
     "commodities": 0,
-    "webSearch": 5
+    "earnings": 0
   },
   "metadata": {
-    "generatedAt": "2025-07-30T14:09:59.286Z",
+    "generatedAt": "2025-07-30T14:30:12.736Z",
     "reportType": "comprehensive-premarket-brief",
     "aiModel": "claude-sonnet-4",
     "classification": "institutional-grade"
