@@ -130,7 +130,7 @@ async function fetchComprehensiveNews() {
                 { query: '(dollar OR euro OR yen OR "currency markets" OR forex OR "exchange rate" OR "central bank" OR DXY) AND (market OR rate)', category: 'currencies' },
                 { query: '(oil OR gold OR "natural gas" OR commodities OR "crude oil" OR copper OR wheat OR silver OR platinum OR "Brent crude") AND (price OR market)', category: 'commodities' },
                 { query: '(earnings OR "quarterly results" OR "earnings report" OR guidance OR revenue OR "after hours" OR "pre market") AND (stock OR company)', category: 'earnings' },
-                { query: '("research report" OR "analyst report" OR "investment research" OR "equity research" OR "market research" OR "buy rating" OR "sell rating" OR "price target" OR "analyst upgrade" OR "analyst downgrade") AND (stock OR market)', category: 'research' }
+                { query: '("research report" OR "analyst report" OR "investment research" OR "equity research" OR "market outlook" OR "price target" OR upgrade OR downgrade OR initiation) AND (stock OR market)', category: 'research' }
             ];
             
             const yesterday = new Date();
@@ -557,6 +557,12 @@ Please create a comprehensive professional pre-market briefing with the followin
 # COMPREHENSIVE PRE-MARKET NEWS BRIEFING
 ## ${new Date().toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}
 
+## AT A GLANCE
+Provide a comprehensive executive overview that synthesizes all overnight developments into key themes and market-moving events. Highlight the single most important story, identify 3-4 critical developments across regions, and note any potential market catalysts for today's trading session. This should serve as a complete summary that a busy executive could read to understand all major overnight developments in 60 seconds.
+
+**Critical Overnight Events:**
+[List the top 5-7 most market-moving headlines from across all categories - these should be the absolute biggest stories that could impact trading today]
+
 ## EXECUTIVE SUMMARY
 Provide a 3-4 sentence overview of the most market-moving developments overnight and their potential impact on today's trading session, incorporating insights from multiple data sources.
 
@@ -597,10 +603,10 @@ Write a comprehensive narrative analysis of overnight earnings reports, corporat
 [List at least 10 of the most relevant earnings and corporate headlines here in clean format - no bullet points, just numbered headlines with source attribution]
 
 ## RESEARCH REPORTS & ANALYST COVERAGE
-Provide detailed analysis of overnight research publications, analyst rating changes, price target adjustments, equity research reports, economic forecasts, and investment recommendations that could influence today's trading decisions.
+Write a comprehensive analysis of overnight research publications, analyst upgrades and downgrades, price target changes, initiation of coverage, and investment banking research that could influence individual stock movements and sector sentiment.
 
 **Key Research & Analyst Headlines:**
-[List at least 10 of the most relevant research reports and analyst updates here in clean format - no bullet points, just numbered headlines with source attribution]
+[List at least 10 of the most relevant research reports and analyst coverage headlines here in clean format - no bullet points, just numbered headlines with source attribution]
 
 ## CROSS-MARKET IMPACT ANALYSIS
 Identify potential spillover effects between regions and asset classes based on overnight developments.
