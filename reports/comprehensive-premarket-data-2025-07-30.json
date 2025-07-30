@@ -67,8 +67,138 @@
       }
     ],
     "us": [],
-    "asian": [],
-    "european": [],
+    "asian": [
+      {
+        "headline": "iPhone maker Foxconn joins $1 trillion AI data center market with new alliance",
+        "summary": "Foxconn said it will take a 10% stake in TECO as part of a share swap and will focus on building data centers around the world, including the U.S.",
+        "source": "Alpha Vantage Asia - CNBC",
+        "datetime": "Invalid Date",
+        "url": "https://www.cnbc.com/2025/07/30/iphone-maker-foxconn-makes-a-major-play-for-the-ai-data-center.html",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "NeOnc Technologies Signs Definitive Agreement to Acquire AI, 3D, and Quantum Modeling IP Portfolio from Dr. Ishwar K. Puri; Appoints Him to Board of Directors",
+        "summary": "CALABASAS, Calif., July 30, 2025 ( GLOBE NEWSWIRE ) -- NeOnc Technologies Holdings, Inc. ( NASDAQ: NTHI ) , a multi Phase 2 clinical-stage biotechnology company pioneering innovative treatments for brain cancers, is proud to announce the signing of a definitive, binding Letter of Intent ( LOI ) ...",
+        "source": "Alpha Vantage Asia - GlobeNewswire",
+        "datetime": "Invalid Date",
+        "url": "https://www.globenewswire.com/news-release/2025/07/30/3124108/0/en/NeOnc-Technologies-Signs-Definitive-Agreement-to-Acquire-AI-3D-and-Quantum-Modeling-IP-Portfolio-from-Dr-Ishwar-K-Puri-Appoints-Him-to-Board-of-Directors.html",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "NeOnc Technologies Signs Definitive Agreement to Acquire AI, 3D, and Quantum Modeling IP Portfolio from Dr. Ishwar K. Puri; Appoints Him to Board of Directors - NeOnc Technologies  ( NASDAQ:NTHI ) ",
+        "summary": "CALABASAS, Calif., July 30, 2025 ( GLOBE NEWSWIRE ) -- NeOnc Technologies Holdings, Inc.",
+        "source": "Alpha Vantage Asia - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/pressreleases/25/07/g46719734/neonc-technologies-signs-definitive-agreement-to-acquire-ai-3d-and-quantum-modeling-ip-portfolio-f",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Why Investors Need to Take Advantage of These 2 Computer and Technology Stocks Now",
+        "summary": "Why investors should use the Zacks Earnings ESP tool to help find stocks that are poised to top quarterly earnings estimates.",
+        "source": "Alpha Vantage Asia - Zacks Commentary",
+        "datetime": "Invalid Date",
+        "url": "https://www.zacks.com/stock/news/2638197/why-investors-need-to-take-advantage-of-these-2-computer-and-technology-stocks-now",
+        "sentiment": "Bullish"
+      },
+      {
+        "headline": "AAPL INVESTORS: Apple Inc.  ( NASDAQ:AAPL )  Investors may have been Affected by Fraud - Contact BFA Law by August 19 about Potentially Recovering Losses - Apple  ( NASDAQ:AAPL ) ",
+        "summary": "NEW YORK, July 30, 2025 ( GLOBE NEWSWIRE ) -- Leading securities law firm Bleichmar Fonti & Auld LLP announces that a lawsuit has been filed against Apple Inc. AAPL and certain of the Company's senior executives for potential violations of the federal securities laws.",
+        "source": "Alpha Vantage Asia - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/pressreleases/25/07/g46719249/aapl-investors-apple-inc-nasdaq-aapl-investors-may-have-been-affected-by-fraud-contact-bfa-law-by-",
+        "sentiment": "Neutral"
+      },
+      {
+        "headline": "RDDT INVESTORS: Reddit, Inc.  ( NYSE:RDDT )  Investors may have been Affected by Fraud - Contact BFA Law by August 18 about Potentially Recovering Losses - Reddit  ( NYSE:RDDT ) ",
+        "summary": "NEW YORK, July 30, 2025 ( GLOBE NEWSWIRE ) -- Leading securities law firm Bleichmar Fonti & Auld LLP announces that a lawsuit has been filed against Reddit, Inc. RDDT and certain of the Company's senior executives for potential violations of the federal securities laws.",
+        "source": "Alpha Vantage Asia - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/pressreleases/25/07/g46719212/rddt-investors-reddit-inc-nyse-rddt-investors-may-have-been-affected-by-fraud-contact-bfa-law-by-a",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Hayward Holdings, Inc.  ( HAYW )  Q2 Earnings and Revenues Beat Estimates",
+        "summary": "Hayward Holdings (HAYW) delivered earnings and revenue surprises of +9.09% and +4.39%, respectively, for the quarter ended June 2025. Do the numbers hold clues to what lies ahead for the stock?",
+        "source": "Alpha Vantage Asia - Zacks Commentary",
+        "datetime": "Invalid Date",
+        "url": "https://www.zacks.com/stock/news/2638039/hayward-holdings-inc-hayw-q2-earnings-and-revenues-beat-estimates",
+        "sentiment": "Neutral"
+      },
+      {
+        "headline": "Overwhelmed by an Everchanging AI Investment Landscape? Consider Wedbush Analyst Dan Ives' ETF.",
+        "summary": "The new AI-focused ETF is putting your money where its mouth is, so to speak, by utilizing the very technology it's investing in.",
+        "source": "Alpha Vantage Asia - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/07/30/this-dan-ives-backed-etf-could-be-the-smartest-way/",
+        "sentiment": "Somewhat-Bullish"
+      }
+    ],
+    "european": [
+      {
+        "headline": "SoFi Technologies Stock Is Sliding Wednesday: What's Going On? - SoFi Technologies  ( NASDAQ:SOFI ) ",
+        "summary": "SoFi announces a public offering of approximately 71.94 million shares of its common stock at a price of $20.85 per share. Needham analyst Kyle Peterson maintains SoFi with a Buy rating and raises the price target from $20 to $25. Missed the rally? Learn exactly where the next leaders are ...",
+        "source": "Alpha Vantage Europe - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/trading-ideas/movers/25/07/46720898/sofi-technologies-stock-is-sliding-wednesday-whats-going-on",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Semiconductor Slump Puts Direxion's NVDA-Centered NVDU And NVDD ETFs In Focus - NVIDIA  ( NASDAQ:NVDA ) , Direxion Daily NVDA Bear 1X Shares  ( NASDAQ:NVDD ) ",
+        "summary": "Chip stocks, including mighty Nvidia, slipped recently due to the Stargate AI initiative stumbling. Still, the ongoing debate regarding machine intelligence bolsters interest in Direxion's NVDU and NVDD funds. Missed the rally? Learn exactly where the next leaders are emerging here.",
+        "source": "Alpha Vantage Europe - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/etfs/specialty-etfs/25/07/46721157/semiconductor-slump-puts-direxions-nvda-centered-nvdu-and-nvdd-etfs-in-focus",
+        "sentiment": "Neutral"
+      },
+      {
+        "headline": "Why Is Hershey's Stock Gaining On Wednesday? - Hershey  ( NYSE:HSY ) ",
+        "summary": "Hershey's Q2 sales rose 26% YoY, driven by strong confectionery demand. Adjusted EPS outlook cut to a 36-38% decline despite sales gains. Get special access to three exclusive \"Top 10 Stocks\" power lists today, updated daily.",
+        "source": "Alpha Vantage Europe - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/markets/earnings/25/07/46722055/tariffs-take-bite-out-of-hersheys-outlook",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Stablecoins add $4B, Bitcoin exchange reserves below 15%: July in charts",
+        "summary": "Investors are uncertain and moving their Bitcoin off exchanges, while stablecoins are set to take off after GENIUS passed.",
+        "source": "Alpha Vantage Europe - Cointelegraph",
+        "datetime": "Invalid Date",
+        "url": "https://cointelegraph.com/news/stablecoins-4b-bitcoin-exchange-reserves-july-charts",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Castor Maritime Inc. Announces the Sale and Leaseback of the M/V Magic Thunder - Castor Maritime  ( NASDAQ:CTRM ) ",
+        "summary": "LIMASSOL, Cyprus, July 30, 2025 ( GLOBE NEWSWIRE ) -- Castor Maritime Inc. CTRM, ( \"Castor\" or the \"Company\" ) , a diversified global shipping and energy company, announces that on July 29, 2025, it successfully completed a sale and leaseback transaction for the M/V Magic Thunder, a 2011-built ...",
+        "source": "Alpha Vantage Europe - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/pressreleases/25/07/g46720817/castor-maritime-inc-announces-the-sale-and-leaseback-of-the-mv-magic-thunder",
+        "sentiment": "Neutral"
+      },
+      {
+        "headline": "Performance Shipping Inc. Reports Financial Results for the Second Quarter and Six Months Ended June 30, 2025",
+        "summary": "ATHENS, Greece, July 30, 2025 ( GLOBE NEWSWIRE ) -- Performance Shipping Inc. ( NASDAQ: PSHG ) ( \"we\" or the \"Company\" ) , a global shipping company specializing in the ownership of tanker vessels, today reported net income of $9.1 million and net income attributable to common stockholders of ...",
+        "source": "Alpha Vantage Europe - GlobeNewswire",
+        "datetime": "Invalid Date",
+        "url": "https://www.globenewswire.com/news-release/2025/07/30/3124165/14069/en/Performance-Shipping-Inc-Reports-Financial-Results-for-the-Second-Quarter-and-Six-Months-Ended-June-30-2025.html",
+        "sentiment": "Neutral"
+      },
+      {
+        "headline": "Form 8.3 - [MARLOWE PLC - 29 07 2025] -  ( CGWL ) ",
+        "summary": "PUBLIC OPENING POSITION DISCLOSURE/DEALING DISCLOSURE BY A PERSON WITH INTERESTS IN RELEVANT SECURITIES REPRESENTING 1% OR MORE Rule 8.3 of the Takeover Code ( the \"Code\" ) 2. POSITIONS OF THE PERSON MAKING THE DISCLOSURE",
+        "source": "Alpha Vantage Europe - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/pressreleases/25/07/g46720908/form-8-3-marlowe-plc-29-07-2025-cgwl",
+        "sentiment": "Neutral"
+      },
+      {
+        "headline": "'Turkey's Uber' Joins Strategy, Tesla As Bitcoin Treasury Company",
+        "summary": "Martı's core business operations and expansion plans remain fully funded and are unaffected by the crypto allocation. Martı becomes the first major Turkish mobility company to integrate Bitcoin into its corporate financial strategy. The market's back, and these 3 income stocks are thriving.",
+        "source": "Alpha Vantage Europe - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/crypto/cryptocurrency/25/07/46720657/turkeys-uber-joins-strategy-tesla-as-bitcoin-treasury-company",
+        "sentiment": "Somewhat-Bullish"
+      }
+    ],
     "geopolitical": [],
     "currencies": [],
     "commodities": [],
@@ -77,9 +207,9 @@
   "timing": {
     "lastCloseTimestamp": 1753804800,
     "lastCloseString": "7/29/2025, 12:00:00 PM",
-    "currentTime": "7/30/2025, 10:37:21 AM"
+    "currentTime": "7/30/2025, 10:42:25 AM"
   },
-  "totalHeadlines": 8,
+  "totalHeadlines": 24,
   "activeAPIs": [
     "Alpha Vantage",
     "Finnhub"
@@ -87,15 +217,15 @@
   "categoryBreakdown": {
     "general": 8,
     "us": 0,
-    "asian": 0,
-    "european": 0,
+    "asian": 8,
+    "european": 8,
     "geopolitical": 0,
     "currencies": 0,
     "commodities": 0,
     "earnings": 0
   },
   "metadata": {
-    "generatedAt": "2025-07-30T14:38:03.035Z",
+    "generatedAt": "2025-07-30T14:43:22.525Z",
     "reportType": "comprehensive-premarket-brief",
     "aiModel": "claude-sonnet-4",
     "classification": "institutional-grade"
