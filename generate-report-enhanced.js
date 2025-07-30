@@ -319,7 +319,7 @@ COMPREHENSIVE HEADLINES DATA FROM MULTIPLE SOURCES:
 
     prompt += `
 
-Please create a comprehensive professional pre-market briefing with the following enhanced structure:
+Please create a comprehensive professional pre-market briefing with the following enhanced structure. IMPORTANT: For each section, provide a narrative summary paragraph followed by the actual headlines in a clean list format (not bullet points).
 
 # COMPREHENSIVE PRE-MARKET NEWS BRIEFING
 ## ${new Date().toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}
@@ -327,23 +327,35 @@ Please create a comprehensive professional pre-market briefing with the followin
 ## EXECUTIVE SUMMARY
 Provide a 3-4 sentence overview of the most market-moving developments overnight and their potential impact on today's trading session, incorporating insights from multiple data sources.
 
-## TOP STORIES OVERNIGHT
-Highlight the 5-6 most significant headlines that could influence market sentiment today, with detailed analysis of potential sector-specific or market-wide implications.
-
 ## US MARKET DEVELOPMENTS
-Comprehensive summary of US corporate earnings, regulatory announcements, Federal Reserve communications, domestic policy developments, and key economic data releases.
+Write a comprehensive narrative summary of US corporate earnings, regulatory announcements, Federal Reserve communications, domestic policy developments, and key economic data releases that occurred overnight.
+
+**Key US Headlines:**
+[List the most relevant US market headlines here in clean format - no bullet points, just numbered headlines with source attribution]
 
 ## ASIAN MARKET NEWS
-Detailed coverage of major developments from Asian markets including China policy announcements, Japanese economic data, Hong Kong market developments, and other regional news affecting global markets.
+Provide detailed narrative coverage of major developments from Asian markets including China policy announcements, Japanese economic data, Hong Kong market developments, and other regional news affecting global markets.
+
+**Key Asian Headlines:**
+[List the most relevant Asian market headlines here in clean format - no bullet points, just numbered headlines with source attribution]
 
 ## EUROPEAN MARKET NEWS
-In-depth analysis of European Central Bank communications, Brexit developments, EU policy announcements, major European corporate news, and eurozone economic indicators.
+Write an in-depth narrative analysis of European Central Bank communications, Brexit developments, EU policy announcements, major European corporate news, and eurozone economic indicators.
+
+**Key European Headlines:**
+[List the most relevant European market headlines here in clean format - no bullet points, just numbered headlines with source attribution]
 
 ## GEOPOLITICAL DEVELOPMENTS
-Thorough analysis of ongoing geopolitical tensions, trade developments, sanctions news, international conflicts, and diplomatic developments that could impact global market risk sentiment.
+Provide thorough narrative analysis of ongoing geopolitical tensions, trade developments, sanctions news, international conflicts, and diplomatic developments that could impact global market risk sentiment.
+
+**Key Geopolitical Headlines:**
+[List the most relevant geopolitical headlines here in clean format - no bullet points, just numbered headlines with source attribution]
 
 ## CURRENCY & COMMODITY MARKETS
-Analysis of major currency movements, central bank interventions, commodity price developments, and their implications for various market sectors.
+Write a narrative analysis of major currency movements, central bank interventions, commodity price developments, and their implications for various market sectors.
+
+**Key Currency & Commodity Headlines:**
+[List the most relevant currency and commodity headlines here in clean format - no bullet points, just numbered headlines with source attribution]
 
 ## CROSS-MARKET IMPACT ANALYSIS
 Identify potential spillover effects between regions and asset classes based on overnight developments.
@@ -354,7 +366,13 @@ Provide a detailed assessment of how these overnight developments might influenc
 ## RISK FACTORS TO MONITOR
 Highlight key risks and uncertainties that could develop during today's trading session.
 
-Use professional financial terminology and maintain an objective, analytical tone throughout. Focus on actionable intelligence for institutional investors, incorporating insights from multiple premium data sources.
+FORMATTING REQUIREMENTS:
+- Use narrative paragraphs for analysis sections
+- Follow each analysis with "**Key [Section] Headlines:**" 
+- List headlines in clean numbered format (1. 2. 3.) with source attribution
+- NO bullet points or dashes for headlines
+- Maintain professional institutional investment language throughout
+- Focus on actionable intelligence with clear headline attribution
 
 Report generated: ${timing.currentTime} ET
 Coverage period: Since market close ${timing.lastCloseString}
@@ -381,13 +399,14 @@ async function sendComprehensivePreMarketReport(reportContent, dateStr, headline
             }
         });
         
-        // Enhanced HTML formatting
+        // Enhanced HTML formatting optimized for narrative + headlines format
         const emailHtml = reportContent
             .replace(/^# (.*$)/gm, '<h1 style="color: #1a202c; border-bottom: 3px solid #3182ce; padding-bottom: 12px; margin-bottom: 20px; font-size: 28px;">$1</h1>')
             .replace(/^## (.*$)/gm, '<h2 style="color: #2d3748; margin-top: 30px; margin-bottom: 15px; border-bottom: 2px solid #e2e8f0; padding-bottom: 8px; font-size: 22px;">$1</h2>')
+            .replace(/^\*\*(Key.*Headlines:)\*\*/gm, '<h3 style="color: #2c5aa0; margin-top: 25px; margin-bottom: 12px; font-weight: 600; font-size: 18px; border-bottom: 1px solid #cbd5e0; padding-bottom: 5px;">$1</h3>')
             .replace(/^\*\*(.*?)\*\*/gm, '<strong style="color: #2d3748; font-weight: 600;">$1</strong>')
-            .replace(/^- (.*$)/gm, '<p style="margin: 10px 0; padding-left: 25px; border-left: 4px solid #3182ce; background-color: #f7fafc; padding: 12px 12px 12px 25px; border-radius: 4px;">• $1</p>')
-            .replace(/^([^<\n#-].*$)/gm, '<p style="line-height: 1.7; margin-bottom: 14px; color: #2d3748; font-size: 15px;">$1</p>')
+            .replace(/^(\d+\.\s.*$)/gm, '<div style="margin: 8px 0; padding: 10px 15px; background-color: #f8fafc; border-left: 3px solid #3182ce; border-radius: 4px; font-size: 14px; color: #2d3748;">$1</div>')
+            .replace(/^([^<\n#-\d].*$)/gm, '<p style="line-height: 1.7; margin-bottom: 14px; color: #2d3748; font-size: 15px;">$1</p>')
             .replace(/\n\n/g, '<br>')
             .replace(/\n/g, '<br>');
         
