@@ -316,12 +316,13 @@
       }
     ],
     "commodities": [],
-    "earnings": []
+    "earnings": [],
+    "research": []
   },
   "timing": {
     "lastCloseTimestamp": 1753804800,
     "lastCloseString": "7/29/2025, 12:00:00 PM",
-    "currentTime": "7/30/2025, 10:49:40 AM"
+    "currentTime": "7/30/2025, 10:55:42 AM"
   },
   "totalHeadlines": 38,
   "activeAPIs": [
@@ -336,10 +337,11 @@
     "geopolitical": 0,
     "currencies": 6,
     "commodities": 0,
-    "earnings": 0
+    "earnings": 0,
+    "research": 0
   },
   "metadata": {
-    "generatedAt": "2025-07-30T14:51:08.880Z",
+    "generatedAt": "2025-07-30T14:56:57.363Z",
     "reportType": "comprehensive-premarket-brief",
     "aiModel": "claude-sonnet-4",
     "classification": "institutional-grade"
