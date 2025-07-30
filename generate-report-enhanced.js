@@ -376,132 +376,182 @@ function formatOvernightDataForPrompt(overnightData) {
     return dataString;
 }
 
-// COMPREHENSIVE PROFESSIONAL MARKET ANALYSIS PROMPT
+// NEWS-FOCUSED PROFESSIONAL MARKET ANALYSIS PROMPT
 const createComprehensiveMarketPrompt = (overnightData) => {
-    return `Please generate a comprehensive institutional-grade market intelligence report covering current market conditions and developments. You are a senior market analyst creating detailed analysis for portfolio managers and institutional investors.
+    return `Please generate a comprehensive institutional-grade market intelligence report focused strictly on news headlines and their market impact analysis. You are a senior market analyst creating detailed news-driven analysis for portfolio managers and institutional investors.
 
 ${formatOvernightDataForPrompt(overnightData)}
+
+**CRITICAL INSTRUCTION: This report must be 100% focused on NEWS HEADLINES and their analysis. Do NOT include specific numerical market data, price levels, or technical analysis. Focus exclusively on news events, policy announcements, corporate developments, and their qualitative market implications.**
 
 Structure the analysis as follows:
 
 ## EXECUTIVE SUMMARY
-Provide a concise 2-3 sentence overview highlighting the most critical market-moving developments and their aggregate impact on global equity markets. Focus on the single most important theme driving markets today.
+Provide a concise 2-3 sentence overview highlighting the most critical NEWS DEVELOPMENTS and their aggregate impact on global equity markets. Focus on the single most important news theme driving market sentiment today.
 
-## US MARKET ANALYSIS
-**Current Market Performance:**
-- Detailed analysis of S&P 500, NASDAQ, and Dow Jones performance with specific levels and percentage changes
-- Federal Reserve policy developments and monetary policy implications with timeline expectations
-- Key economic indicators including employment data, inflation metrics, GDP growth, and consumer sentiment with actual vs. expected readings
-- Corporate earnings trends and sector-specific developments with notable beats/misses
-- Notable M&A activity, IPO developments, and capital markets trends
-- Regulatory changes or policy developments affecting market dynamics
+## US MARKET NEWS ANALYSIS
+**Federal Reserve and Policy Headlines:**
+- Recent Fed communications, speeches, and policy signals from officials
+- Congressional hearings, regulatory announcements, and policy shifts
+- Treasury Department announcements and fiscal policy developments
+- Banking regulation changes and financial sector oversight news
 
-**Forward-Looking Assessment:**
-- 30-60-90 day market outlook with probability-weighted scenarios
-- Key support and resistance levels for major indices
-- Sector rotation implications and recommended positioning
-- Risk factors including potential Fed policy shifts, earnings guidance changes, and economic data surprises
+**Corporate and Earnings Headlines:**
+- Major corporate announcements, executive changes, and strategic initiatives
+- Significant merger and acquisition announcements and regulatory approvals
+- Earnings guidance updates, management commentary, and forward-looking statements
+- IPO launches, SPAC developments, and capital raising activities
+- Technology sector innovations, AI developments, and regulatory responses
 
-## ASIAN MARKET ANALYSIS  
-**Regional Performance Review:**
-- Comprehensive analysis of Nikkei 225, Hang Seng, Shanghai Composite, and ASX 200 with closing levels and volume data
-- China's economic policy developments and their regional spillover effects
-- Japan's monetary policy stance including BOJ communications and yen implications
-- Trade dynamics and supply chain developments across the region
-- Technology sector developments, particularly semiconductors and electronics
-- Currency movements (USD/JPY, USD/CNY, AUD/USD) and their economic implications
+**Economic Policy and Regulatory News:**
+- Trade policy announcements and international commerce developments
+- Environmental and energy policy changes affecting corporate sectors
+- Healthcare policy developments and pharmaceutical regulatory decisions
+- Infrastructure spending announcements and government contract awards
 
-**Market Impact Analysis:**
-- How Asian developments affect US market sentiment and sector performance
-- Key overnight news from Asia affecting global markets
-- Commodity demand implications from regional economic data
-- Cross-border capital flow trends and their market implications
+**AI-Powered Impact Prediction:**
+- How these US news developments will likely affect market sentiment over 30-60-90 days
+- Sector rotation implications from regulatory and policy headlines
+- Corporate earnings impact predictions from management guidance and strategic announcements
 
-## EUROPEAN MARKET ANALYSIS
-**Market Performance Assessment:**
-- Detailed review of FTSE 100, DAX, CAC 40, and Euro Stoxx 50 performance with volume analysis
-- European Central Bank policy decisions and eurozone economic health indicators
-- Brexit-related developments and ongoing UK-EU trade implications
-- Energy sector dynamics including renewable transitions and commodity price impacts
-- Banking sector health assessment including regulatory developments and credit conditions
-- Political developments affecting market sentiment across major economies
+## ASIAN MARKET NEWS ANALYSIS
+**China Economic and Policy Headlines:**
+- Chinese government policy announcements affecting markets and trade
+- Regulatory crackdowns or policy reversals in technology, real estate, education sectors
+- Belt and Road Initiative developments and infrastructure project announcements
+- COVID policy changes and economic reopening developments
+- Property sector news, developer defaults, and government intervention measures
 
-**Economic and Policy Analysis:**
-- ECB monetary policy outlook and inflation trajectory
-- Eurozone growth prospects and fiscal policy coordination
-- Energy security issues and their market implications
-- Currency dynamics (EUR/USD, GBP/USD) and trade competitiveness impacts
+**Japan and Regional News:**
+- Bank of Japan policy communications and currency intervention signals
+- Japanese corporate restructuring announcements and cross-border deals
+- South Korean technology sector developments and regulatory changes
+- Australian commodity sector news and mining policy developments
+- ASEAN trade agreements and regional economic cooperation announcements
 
-## GEOPOLITICAL IMPACT ANALYSIS
-**Current Risk Assessment:**
-- Russia-Ukraine conflict implications for commodities, energy markets, and supply chains
-- US-China relations including trade policies, technology restrictions, and diplomatic developments
-- Middle East developments affecting oil markets and global trade routes
-- Sanctions regimes and their broader economic implications
-- Central bank coordination and currency intervention risks
+**Technology and Trade Headlines:**
+- Semiconductor industry developments, supply chain announcements, and capacity investments
+- US-China technology transfer restrictions and export control updates
+- Regional trade agreement developments and tariff policy changes
+- Supply chain diversification announcements from major corporations
 
-**Market Implications:**
-- Safe-haven flows and asset allocation shifts
-- Commodity price volatility and inflation implications  
-- Supply chain disruption risks and sector-specific impacts
-- Currency volatility and emerging market stability concerns
+**AI-Powered Impact Prediction:**
+- How Asian policy developments will affect global supply chains and commodity demand
+- Regional currency implications from central bank communications
+- Technology sector disruption potential from regulatory and trade headlines
 
-## MARKET-MOVING HEADLINES ANALYSIS
-**Breaking Developments:**
-- Analysis of breaking news with immediate market impact potential
-- Corporate announcements including earnings guidance, management changes, and strategic initiatives
-- Regulatory announcements and policy changes affecting specific sectors
-- Economic data releases and their deviation from consensus expectations
-- Central bank communications and policy shift indicators
+## EUROPEAN MARKET NEWS ANALYSIS
+**European Central Bank and Policy Headlines:**
+- ECB communications, policy speeches, and monetary policy signals
+- European Union regulatory announcements and policy harmonization efforts
+- Brexit-related trade developments and regulatory alignment news
+- EU climate policy announcements and carbon taxation developments
 
-**Market Reaction Assessment:**
-- Immediate price action and volume response analysis
-- Cross-asset correlation and sector rotation implications
-- Options market activity and volatility term structure changes
-- Technical level breaks and momentum shift indicators
+**Political and Economic Headlines:**
+- Major European election results and coalition government developments
+- EU budget negotiations and fiscal policy coordination announcements
+- Immigration policy changes and labor market developments
+- Energy security initiatives and renewable energy investment announcements
 
-## AI-POWERED PREDICTIONS AND IMPACT ANALYSIS
+**Corporate and Industry News:**
+- Major European corporate mergers, acquisitions, and strategic partnerships
+- Banking sector consolidation and regulatory compliance developments
+- Automotive industry transformation and EV investment announcements
+- Pharmaceutical sector developments and regulatory approvals
 
-**30-Day Outlook (High Confidence):**
-- Most probable market scenarios with 60-80% confidence levels
-- Key economic data releases and earnings that will drive performance
-- Technical analysis suggesting likely price ranges for major indices
-- Sector performance expectations based on current momentum and fundamentals
+**AI-Powered Impact Prediction:**
+- How European policy developments will affect global trade and investment flows
+- Currency implications from political and monetary policy headlines
+- Sector-specific impacts from regulatory and environmental policy changes
 
-**60-Day Outlook (Medium Confidence):**
-- Fed policy evolution and market adaptation scenarios  
-- Earnings season implications and guidance trend analysis
-- Geopolitical risk evolution and market pricing efficiency
-- Commodity cycle implications for inflation and sector performance
+## GEOPOLITICAL HEADLINES ANALYSIS
+**Conflict and Security News:**
+- Russia-Ukraine conflict developments, peace negotiation updates, and sanctions news
+- Middle East developments affecting oil supply and regional stability
+- US-China diplomatic communications and strategic competition headlines
+- NATO developments and defense spending announcements
+- Cybersecurity incidents and international response measures
 
-**90-Day Outlook (Lower Confidence - Scenario Planning):**
-- Multiple scenario analysis with probability weightings
-- Tail risk assessments including black swan event preparations
-- Structural market shifts and regime change possibilities
-- Long-term positioning recommendations for various scenarios
+**Trade and Economic Diplomacy:**
+- International trade agreement negotiations and implementation updates
+- WTO dispute resolution developments and regulatory harmonization efforts
+- Sanctions regime changes and international compliance requirements
+- Currency swap agreements and central bank cooperation announcements
 
-**Quantitative Impact Assessments:**
-- VIX implications and volatility regime analysis
-- Correlation breakdown risks and diversification effectiveness
-- Credit spread implications and systemic risk indicators
-- Currency volatility impacts on multinational earnings
+**Commodity and Resource Headlines:**
+- OPEC production decisions and energy policy announcements
+- Critical mineral supply agreements and strategic resource partnerships
+- Agricultural trade policy changes and food security initiatives
+- Climate change adaptation policies affecting commodity markets
 
-## PROFESSIONAL LANGUAGE AND METRICS
-Use institutional investment terminology throughout including:
-- Basis points for rate changes and yield movements
-- Beta, alpha, and risk-adjusted return metrics where relevant
-- Technical indicators (RSI, MACD, moving averages) with specific levels
-- Options terminology (implied volatility, gamma, theta) for positioning analysis
-- Credit metrics (spreads, duration, convexity) for fixed income analysis
-- Currency forward points and carry trade implications
+**AI-Powered Impact Prediction:**
+- How geopolitical developments will affect safe-haven flows and risk sentiment
+- Commodity market disruption potential from conflict and policy headlines
+- Supply chain vulnerability implications from trade and diplomatic news
 
-## RISK DISCLAIMERS AND UNCERTAINTY ACKNOWLEDGMENTS
-- Clearly distinguish between high-confidence analysis and speculative assessments
-- Note data limitations and potential revision risks
-- Acknowledge model limitations and scenario-dependent outcomes
-- Include appropriate disclaimers for forward-looking statements
+## TOP MARKET-MOVING HEADLINES ANALYSIS
+**Breaking Corporate News:**
+- Major acquisition announcements and deal approvals/rejections
+- CEO changes, board restructuring, and corporate governance developments
+- Product launch announcements and regulatory approval decisions
+- Earnings guidance revisions and strategic outlook changes
+- Corporate scandal developments and regulatory investigation news
 
-Generate this report with the analytical depth and quantitative rigor expected by institutional portfolio managers, risk officers, and senior market strategists. Focus on actionable intelligence while maintaining objectivity and professional skepticism.
+**Central Bank and Policy Headlines:**
+- Surprise policy announcements from major central banks worldwide
+- International monetary policy coordination communications
+- Currency intervention announcements and official statements
+- Financial stability warnings and systemic risk assessments
+
+**Regulatory and Legal Developments:**
+- Major lawsuit settlements and legal precedent decisions
+- Antitrust investigation announcements and enforcement actions
+- New regulatory framework proposals and implementation timelines
+- International regulatory coordination efforts and standard-setting initiatives
+
+**AI-Powered Impact Prediction:**
+- Immediate market sentiment implications from breaking headlines
+- Cross-asset correlation effects from major news developments
+- Sector rotation potential from regulatory and corporate news
+- Volatility implications from policy uncertainty and legal developments
+
+## COMPREHENSIVE AI MARKET IMPACT PREDICTIONS
+
+**30-Day News-Driven Outlook (High Confidence):**
+- Which headline themes will dominate market attention and trading decisions
+- Corporate earnings season narrative development and guidance trend implications
+- Policy implementation timelines and their staged market impact potential
+- Geopolitical event calendar and scheduled announcement impact assessments
+
+**60-Day News-Driven Outlook (Medium Confidence):**
+- Policy effectiveness assessments and potential course corrections from governments
+- Corporate strategic initiative success measurements and market reception analysis
+- International diplomatic process development and resolution probability assessments
+- Regulatory implementation impact visibility and corporate adaptation success rates
+
+**90-Day News-Driven Outlook (Scenario Planning):**
+- Multiple scenario development from current headline themes with probability weightings
+- Long-term policy trend implications and structural market shift potential
+- Geopolitical stability scenario analysis and tail risk event preparation
+- Corporate sector transformation timeline assessments from current strategic announcements
+
+## PROFESSIONAL NEWS ANALYSIS STANDARDS
+Use institutional investment terminology throughout while focusing on:
+- News headline significance ranking and market attention probability
+- Policy announcement implementation feasibility and timeline realism
+- Corporate communication credibility assessment and strategic coherence analysis
+- Geopolitical development sustainability and escalation/de-escalation potential
+- Cross-regional news correlation and international policy coordination effectiveness
+
+## RISK DISCLAIMERS AND NEWS ANALYSIS LIMITATIONS
+- Distinguish between confirmed news developments and speculative reporting
+- Acknowledge information source reliability variations and verification requirements
+- Note timing uncertainty in policy implementation and corporate execution
+- Include appropriate disclaimers for prediction accuracy in dynamic news environments
+
+Generate this report with deep news analysis expertise expected by institutional portfolio managers who need to understand how headlines will drive market behavior. Focus exclusively on news-driven intelligence while maintaining objectivity and professional skepticism about information sources and development timelines.
+
+**REMINDER: NO NUMERICAL MARKET DATA - ONLY NEWS ANALYSIS AND QUALITATIVE IMPACT ASSESSMENTS**
 
 Current date: ${new Date().toDateString()}
 Report generation time: ${new Date().toLocaleTimeString()} ET`;
