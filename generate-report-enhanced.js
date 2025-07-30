@@ -60,8 +60,7 @@ async function fetchComprehensiveNews() {
         currencies: [],
         commodities: [],
         earnings: [],
-        research: [],
-        premarketMovers: []
+        research: []
     };
     
     console.log(`📰 Comprehensive news gathering since: ${timing.lastCloseString}`);
@@ -536,8 +535,7 @@ COMPREHENSIVE HEADLINES DATA FROM MULTIPLE SOURCES:
         { key: 'currencies', title: 'CURRENCY MARKET UPDATES' },
         { key: 'commodities', title: 'COMMODITY MARKET NEWS' },
         { key: 'earnings', title: 'EARNINGS & CORPORATE NEWS' },
-        { key: 'research', title: 'RESEARCH REPORTS & ANALYST COVERAGE' },
-        { key: 'premarketMovers', title: 'PRE-MARKET MOVERS & TRADING DATA' }
+        { key: 'research', title: 'RESEARCH REPORTS & ANALYST COVERAGE' }
     ];
 
     sections.forEach(section => {
@@ -609,12 +607,6 @@ Write a comprehensive analysis of overnight research publications, analyst upgra
 
 **Key Research & Analyst Headlines:**
 [List at least 10 of the most relevant research reports and analyst coverage headlines here in clean format - no bullet points, just numbered headlines with source attribution]
-
-## PRE-MARKET MOVERS & TRADING DATA
-Provide comprehensive analysis of pre-market trading activity, highlighting significant price movements, volume spikes, and notable trading patterns. Include top gainers, losers, and most actively traded securities with percentage moves and volume data.
-
-**Key Pre-Market Movers:**
-[List the most significant pre-market movers including top gainers, losers, and high-volume stocks with price changes and trading data - no bullet points, just numbered entries with stock symbols and performance metrics]
 
 ## CROSS-MARKET IMPACT ANALYSIS
 Identify potential spillover effects between regions and asset classes based on overnight developments.
@@ -818,4 +810,4 @@ async function generateComprehensivePreMarketReport() {
 }
 
 // Run the comprehensive pre-market news system
-generateComprehensivePreMarketReport();Ftr
+generateComprehensivePreMarketReport();
