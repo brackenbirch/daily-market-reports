@@ -122,13 +122,13 @@ async function fetchComprehensiveNews() {
         if (NEWS_API_KEY) {
             console.log('📡 Fetching from NewsAPI...');
             const categories = [
-                { query: '(stocks OR trading OR NYSE OR NASDAQ OR "S&P 500" OR Dow OR earnings) AND market', category: 'us' },
+                { query: '(stocks OR trading OR NYSE OR NASDAQ OR "S&P 500" OR Dow OR earnings OR "Federal Reserve" OR Fed OR "interest rates") AND market', category: 'us' },
                 { query: '(China OR Japan OR "Hong Kong" OR "Asian markets" OR Nikkei OR Shanghai OR "Hang Seng" OR "South Korea" OR Singapore OR India OR Taiwan OR "Bank of Japan" OR PBOC) AND (market OR economy OR policy)', category: 'asian' },
                 { query: '(Europe OR ECB OR Brexit OR DAX OR FTSE OR "European markets" OR eurozone OR Germany OR France OR "United Kingdom" OR Italy OR Spain OR "European Union" OR "Christine Lagarde") AND (market OR economy OR policy)', category: 'european' },
                 { query: '(Russia OR Ukraine OR "Middle East" OR sanctions OR "trade war" OR geopolitical OR NATO OR China OR "South China Sea" OR Iran OR Israel OR "North Korea" OR Taiwan OR diplomacy) AND (market OR impact OR economy)', category: 'geopolitical' },
-                { query: '(dollar OR euro OR yen OR "currency markets" OR forex OR "exchange rate") AND market', category: 'currencies' },
-                { query: '(oil OR gold OR "natural gas" OR commodities OR "crude oil" OR copper OR wheat) AND price', category: 'commodities' },
-                { query: '(earnings OR "quarterly results" OR "earnings report" OR guidance OR revenue) AND (stock OR company)', category: 'earnings' }
+                { query: '(dollar OR euro OR yen OR "currency markets" OR forex OR "exchange rate" OR "central bank" OR DXY) AND (market OR rate)', category: 'currencies' },
+                { query: '(oil OR gold OR "natural gas" OR commodities OR "crude oil" OR copper OR wheat OR silver OR platinum OR "Brent crude") AND (price OR market)', category: 'commodities' },
+                { query: '(earnings OR "quarterly results" OR "earnings report" OR guidance OR revenue OR "after hours" OR "pre market") AND (stock OR company)', category: 'earnings' }
             ];
             
             const yesterday = new Date();
@@ -143,7 +143,7 @@ async function fetchComprehensiveNews() {
                             from: fromDate,
                             sortBy: 'publishedAt',
                             language: 'en',
-                            pageSize: cat.category === 'asian' || cat.category === 'european' || cat.category === 'geopolitical' ? 15 : 10,
+                            pageSize: 15, // Increased for all categories to ensure 10+ headlines per section
                             apiKey: NEWS_API_KEY
                         }
                     });
@@ -174,9 +174,9 @@ async function fetchComprehensiveNews() {
                 const response = await axios.get('http://api.marketstack.com/v1/news', {
                     params: {
                         access_key: MARKETSTACK_API_KEY,
-                        limit: 8,
+                        limit: 12,
                         sort: 'published_on',
-                        keywords: 'market,trading,stocks,earnings'
+                        keywords: 'market,trading,stocks,earnings,Federal Reserve,interest rates'
                     }
                 });
                 
@@ -204,7 +204,7 @@ async function fetchComprehensiveNews() {
                     params: {
                         c: TRADING_ECONOMICS_API_KEY,
                         format: 'json',
-                        limit: 12
+                        limit: 20 // Increased to ensure good distribution across categories
                     }
                 });
                 
@@ -246,7 +246,7 @@ async function fetchComprehensiveNews() {
                 const response = await axios.get('https://api.polygon.io/v2/reference/news', {
                     params: {
                         'published_utc.gte': new Date(timing.lastCloseTimestamp * 1000).toISOString().split('T')[0],
-                        limit: 8,
+                        limit: 12,
                         sort: 'published_utc',
                         order: 'desc',
                         apikey: POLYGON_API_KEY
@@ -283,7 +283,7 @@ async function fetchComprehensiveNews() {
                 
                 if (response.data && response.data.data) {
                     const twelveNews = response.data.data
-                        .slice(0, 6)
+                        .slice(0, 10)
                         .map(news => ({
                             headline: news.title,
                             summary: news.description,
@@ -353,7 +353,99 @@ async function fetchComprehensiveNews() {
             }
         }
         
-        // 11. Additional Geopolitical News Sources
+        // 13. Additional US Market News to ensure 10+ headlines
+        if (ALPHA_VANTAGE_API_KEY) {
+            console.log('📡 Fetching additional US market news...');
+            try {
+                const usResponse = await axios.get(
+                    `https://www.alphavantage.co/query?function=NEWS_SENTIMENT&topics=financial_markets,economy&keywords=Federal Reserve,NYSE,NASDAQ,earnings&apikey=${ALPHA_VANTAGE_API_KEY}`
+                );
+                
+                if (usResponse.data && usResponse.data.feed) {
+                    const additionalUSNews = usResponse.data.feed
+                        .slice(0, 8)
+                        .map(news => ({
+                            headline: news.title,
+                            summary: news.summary,
+                            source: `Alpha Vantage US - ${news.source}`,
+                            datetime: new Date(news.time_published).toLocaleString(),
+                            url: news.url,
+                            sentiment: news.overall_sentiment_label
+                        }));
+                    headlines.us.push(...additionalUSNews);
+                    console.log(`  ✅ Additional US news: ${additionalUSNews.length} headlines`);
+                }
+            } catch (error) {
+                console.log('  ❌ Additional US news fetch failed:', error.message);
+            }
+        }
+        
+        // 14. Additional Currency & Commodity News
+        if (ALPHA_VANTAGE_API_KEY) {
+            console.log('📡 Fetching additional currency & commodity news...');
+            try {
+                const currencyResponse = await axios.get(
+                    `https://www.alphavantage.co/query?function=NEWS_SENTIMENT&topics=economy,financial_markets&keywords=dollar,gold,oil,commodity&apikey=${ALPHA_VANTAGE_API_KEY}`
+                );
+                
+                if (currencyResponse.data && currencyResponse.data.feed) {
+                    const currencyNews = currencyResponse.data.feed
+                        .slice(0, 6)
+                        .map(news => ({
+                            headline: news.title,
+                            summary: news.summary,
+                            source: `Alpha Vantage FX - ${news.source}`,
+                            datetime: new Date(news.time_published).toLocaleString(),
+                            url: news.url,
+                            sentiment: news.overall_sentiment_label
+                        }));
+                    
+                    // Split between currencies and commodities based on keywords
+                    currencyNews.forEach(news => {
+                        const headline = news.headline.toLowerCase();
+                        if (headline.includes('oil') || headline.includes('gold') || headline.includes('commodity') || headline.includes('copper') || headline.includes('wheat')) {
+                            headlines.commodities.push(news);
+                        } else {
+                            headlines.currencies.push(news);
+                        }
+                    });
+                    console.log(`  ✅ Additional currency/commodity news: ${currencyNews.length} headlines`);
+                }
+            } catch (error) {
+                console.log('  ❌ Additional currency/commodity news fetch failed:', error.message);
+            }
+        }
+        
+        // 15. Additional Earnings News to ensure coverage
+        if (POLYGON_API_KEY) {
+            console.log('📡 Fetching additional earnings news...');
+            try {
+                const earningsResponse = await axios.get('https://api.polygon.io/v2/reference/news', {
+                    params: {
+                        'published_utc.gte': new Date(timing.lastCloseTimestamp * 1000).toISOString().split('T')[0],
+                        limit: 10,
+                        sort: 'published_utc',
+                        order: 'desc',
+                        'ticker.any_of': 'AAPL,MSFT,GOOGL,AMZN,TSLA,META,NVDA,NFLX', // Major stocks for earnings
+                        apikey: POLYGON_API_KEY
+                    }
+                });
+                
+                if (earningsResponse.data && earningsResponse.data.results) {
+                    const additionalEarningsNews = earningsResponse.data.results.map(news => ({
+                        headline: news.title,
+                        summary: news.description,
+                        source: `Polygon Earnings - ${news.publisher.name}`,
+                        datetime: new Date(news.published_utc).toLocaleString(),
+                        url: news.article_url
+                    }));
+                    headlines.earnings.push(...additionalEarningsNews);
+                    console.log(`  ✅ Additional earnings news: ${additionalEarningsNews.length} headlines`);
+                }
+            } catch (error) {
+                console.log('  ❌ Additional earnings news fetch failed:', error.message);
+            }
+        }
         if (FINNHUB_API_KEY) {
             console.log('📡 Fetching additional geopolitical news...');
             try {
@@ -469,37 +561,37 @@ Provide a 3-4 sentence overview of the most market-moving developments overnight
 Write a comprehensive narrative summary of US corporate earnings, regulatory announcements, Federal Reserve communications, domestic policy developments, and key economic data releases that occurred overnight.
 
 **Key US Headlines:**
-[List the top 5-10 most relevant US market headlines here in clean format - no bullet points, just numbered headlines with source attribution]
+[List at least 10 of the most relevant US market headlines here in clean format - no bullet points, just numbered headlines with source attribution]
 
 ## ASIAN MARKET NEWS
 Provide detailed narrative coverage of major developments from Asian markets including China policy announcements, Japanese economic data, Hong Kong market developments, and other regional news affecting global markets.
 
 **Key Asian Headlines:**
-[List the top 5-10 most relevant Asian market headlines here in clean format - no bullet points, just numbered headlines with source attribution]
+[List at least 10 of the most relevant Asian market headlines here in clean format - no bullet points, just numbered headlines with source attribution]
 
 ## EUROPEAN MARKET NEWS
 Write an in-depth narrative analysis of European Central Bank communications, Brexit developments, EU policy announcements, major European corporate news, and eurozone economic indicators.
 
 **Key European Headlines:**
-[List the top 5-10 most relevant European market headlines here in clean format - no bullet points, just numbered headlines with source attribution]
+[List at least 10 of the most relevant European market headlines here in clean format - no bullet points, just numbered headlines with source attribution]
 
 ## GEOPOLITICAL DEVELOPMENTS
 Provide thorough narrative analysis of ongoing geopolitical tensions, trade developments, sanctions news, international conflicts, and diplomatic developments that could impact global market risk sentiment.
 
 **Key Geopolitical Headlines:**
-[List the top 5-10 most relevant geopolitical headlines here in clean format - no bullet points, just numbered headlines with source attribution]
+[List at least 10 of the most relevant geopolitical headlines here in clean format - no bullet points, just numbered headlines with source attribution]
 
 ## CURRENCY & COMMODITY MARKETS
 Write a narrative analysis of major currency movements, central bank interventions, commodity price developments, and their implications for various market sectors.
 
 **Key Currency & Commodity Headlines:**
-[List the top 5-10 most relevant currency and commodity headlines here in clean format - no bullet points, just numbered headlines with source attribution]
+[List at least 10 of the most relevant currency and commodity headlines here in clean format - no bullet points, just numbered headlines with source attribution]
 
 ## EARNINGS & CORPORATE DEVELOPMENTS
 Write a comprehensive narrative analysis of overnight earnings reports, corporate announcements, management guidance updates, merger and acquisition news, and other significant corporate developments.
 
 **Key Earnings & Corporate Headlines:**
-[List the top 5-10 most relevant earnings and corporate headlines here in clean format - no bullet points, just numbered headlines with source attribution]
+[List at least 10 of the most relevant earnings and corporate headlines here in clean format - no bullet points, just numbered headlines with source attribution]
 
 ## CROSS-MARKET IMPACT ANALYSIS
 Identify potential spillover effects between regions and asset classes based on overnight developments.
