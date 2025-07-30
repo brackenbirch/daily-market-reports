@@ -118,7 +118,7 @@ async function sendMarketReportEmail(reportContent, dateStr) {
         // Enhanced HTML formatting for verified report
         const emailHtml = reportContent
             .replace(/^# (.*$)/gm, '<h1 style="color: #2c3e50; border-bottom: 3px solid #d4af37; padding-bottom: 10px;">$1</h1>')
-            .replace(/^## (.*$)/gm, '<h2 style="color: #2c3e50; margin-top: 25px;">$2</h2>')
+            .replace(/^## (.*$)/gm, '<h2 style="color: #2c3e50; margin-top: 25px;">$1</h2>')
             .replace(/^\*\*(.*?)\*\*/gm, '<h3 style="color: #2c3e50; margin-top: 30px; margin-bottom: 15px; border-bottom: 2px solid #d4af37; padding-bottom: 10px; font-weight: bold;">$1</h3>')
             .replace(/color: #2c3e50/g, 'color: #2c3e50; border-bottom: 2px solid #d4af37; padding-bottom: 8px')
             .replace(/^\*(.*$)/gm, '<p style="font-style: italic; color: #7f8c8d;">$1</p>')
@@ -382,12 +382,12 @@ ${formatOvernightDataForPrompt(overnightData)}
 
 ## US MARKET NEWS ANALYSIS
 **REQUIRED SEARCHES BEFORE WRITING:**
-- "Federal Reserve news today"
-- "US economic data releases [current date]"
-- "major corporate earnings [current date]"
-- "US GDP latest data"
-- "employment data latest"
-- "Treasury Department announcements"
+- Search: "Federal Reserve news today"
+- Search: "US economic data releases [current date]"
+- Search: "major corporate earnings [current date]"
+- Search: "US GDP latest data"
+- Search: "employment data latest"
+- Search: "Treasury Department announcements"
 
 **VERIFICATION RULES:**
 - Every GDP number MUST be web-verified with source
@@ -397,33 +397,32 @@ ${formatOvernightDataForPrompt(overnightData)}
 
 ## ASIAN MARKET NEWS ANALYSIS  
 **REQUIRED SEARCHES BEFORE WRITING:**
-- "Asian markets news today"
-- "China economic policy news"
-- "Japan central bank news"
-- "Asian stock markets today"
+- Search: "Asian markets news today"
+- Search: "China economic policy news"
+- Search: "Japan central bank news"
+- Search: "Asian stock markets today"
 
 ## EUROPEAN MARKET NEWS ANALYSIS
 **REQUIRED SEARCHES BEFORE WRITING:**
-- "European markets news today"
-- "ECB news today"
-- "European Union economic news"
-- "Brexit news today"
+- Search: "European markets news today"
+- Search: "ECB news today"
+- Search: "European Union economic news"
+- Search: "Brexit news today"
 
 ## GEOPOLITICAL HEADLINES ANALYSIS
 **REQUIRED SEARCHES BEFORE WRITING:**
-- "geopolitical news affecting markets today"
-- "trade war news today"
-- "international economic news"
+- Search: "geopolitical news affecting markets today"
+- Search: "trade war news today"
+- Search: "international economic news"
 
 ## TOP MARKET-MOVING HEADLINES ANALYSIS
 **REQUIRED SEARCHES BEFORE WRITING:**
-- "breaking market news today"
-- "corporate announcements today"
-- "economic data releases today"
+- Search: "breaking market news today"
+- Search: "corporate announcements today"
+- Search: "economic data releases today"
 
 **MANDATORY SECTION FORMAT FOR EACH SECTION:**
 
-```
 [SECTION NAME]
 
 **WEB SEARCHES CONDUCTED:**
@@ -439,7 +438,6 @@ ${formatOvernightDataForPrompt(overnightData)}
 
 **AI IMPACT ANALYSIS:**
 - [Analysis based ONLY on verified developments above]
-```
 
 **ABSOLUTE PROHIBITIONS:**
 ❌ NO specific GDP numbers unless web-verified with official source
