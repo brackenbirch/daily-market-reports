@@ -1,0 +1,575 @@
+{
+  "marketData": {
+    "indices": {
+      "SPY": {
+        "symbol": "SPY",
+        "price": "635.26",
+        "change": "-1.68",
+        "changePercent": "-0.2638",
+        "volume": "60,556,278",
+        "high": "638.67",
+        "low": "634.34",
+        "open": "638.35",
+        "previousClose": "636.94",
+        "timestamp": "2025-07-29",
+        "source": "Alpha Vantage (Exact Real-time)"
+      },
+      "QQQ": {
+        "symbol": "QQQ",
+        "price": "567.26",
+        "change": "-0.88",
+        "changePercent": "-0.1549",
+        "volume": "45,463,317",
+        "high": "572.11",
+        "low": "566.53",
+        "open": "570.76",
+        "previousClose": "568.14",
+        "timestamp": "2025-07-29",
+        "source": "Alpha Vantage (Exact Real-time)"
+      },
+      "DIA": {
+        "symbol": "DIA",
+        "price": "446.48",
+        "change": "-1.86",
+        "changePercent": "-0.4149",
+        "volume": "3,146,231",
+        "high": "448.85",
+        "low": "445.65",
+        "open": "448.63",
+        "previousClose": "448.34",
+        "timestamp": "2025-07-29",
+        "source": "Alpha Vantage (Exact Real-time)"
+      }
+    },
+    "sectors": {
+      "XLF": {
+        "symbol": "XLF",
+        "name": "Financial Services",
+        "price": "52.80",
+        "change": "-0.27",
+        "changePercent": "-0.5088",
+        "volume": "37,883,194",
+        "high": "53.30",
+        "low": "52.68",
+        "open": "53.25",
+        "previousClose": "53.07",
+        "timestamp": "2025-07-29",
+        "source": "Alpha Vantage (Exact Real-time)"
+      },
+      "XLK": {
+        "symbol": "XLK",
+        "name": "Technology",
+        "price": "264.09",
+        "change": "0.01",
+        "changePercent": "0.0038",
+        "volume": "6,869,524",
+        "high": "267.27",
+        "low": "263.64",
+        "open": "265.80",
+        "previousClose": "264.08",
+        "timestamp": "2025-07-29",
+        "source": "Alpha Vantage (Exact Real-time)"
+      },
+      "XLE": {
+        "symbol": "XLE",
+        "name": "Energy",
+        "price": "88.95",
+        "change": "0.86",
+        "changePercent": "0.9763",
+        "volume": "12,275,980",
+        "high": "88.98",
+        "low": "87.94",
+        "open": "88.23",
+        "previousClose": "88.09",
+        "timestamp": "2025-07-29",
+        "source": "Alpha Vantage (Exact Real-time)"
+      },
+      "XLV": {
+        "symbol": "XLV",
+        "name": "Healthcare",
+        "price": "134.43",
+        "change": "-0.86",
+        "changePercent": "-0.6357",
+        "volume": "14,967,647",
+        "high": "135.09",
+        "low": "132.94",
+        "open": "133.90",
+        "previousClose": "135.29",
+        "timestamp": "2025-07-29",
+        "source": "Alpha Vantage (Exact Real-time)"
+      },
+      "XLI": {
+        "symbol": "XLI",
+        "name": "Industrials",
+        "price": "152.75",
+        "change": "-1.76",
+        "changePercent": "-1.1391",
+        "volume": "13,546,495",
+        "high": "154.60",
+        "low": "152.24",
+        "open": "154.55",
+        "previousClose": "154.51",
+        "timestamp": "2025-07-29",
+        "source": "Alpha Vantage (Exact Real-time)"
+      },
+      "XLY": {
+        "symbol": "XLY",
+        "name": "Consumer Discretionary",
+        "price": "224.62",
+        "change": "-1.56",
+        "changePercent": "-0.6897",
+        "volume": "5,506,397",
+        "high": "226.25",
+        "low": "224.12",
+        "open": "226.22",
+        "previousClose": "226.18",
+        "timestamp": "2025-07-29",
+        "source": "Alpha Vantage (Exact Real-time)"
+      },
+      "XLP": {
+        "symbol": "XLP",
+        "name": "Consumer Staples",
+        "price": "81.19",
+        "change": "0.53",
+        "changePercent": "0.6571",
+        "volume": "18,873,191",
+        "high": "81.42",
+        "low": "80.37",
+        "open": "80.80",
+        "previousClose": "80.66",
+        "timestamp": "2025-07-29",
+        "source": "Alpha Vantage (Exact Real-time)"
+      },
+      "XLU": {
+        "symbol": "XLU",
+        "name": "Utilities",
+        "price": "84.58",
+        "change": "0.96",
+        "changePercent": "1.1481",
+        "volume": "9,198,065",
+        "high": "84.63",
+        "low": "83.76",
+        "open": "83.94",
+        "previousClose": "83.62",
+        "timestamp": "2025-07-29",
+        "source": "Alpha Vantage (Exact Real-time)"
+      },
+      "XLB": {
+        "symbol": "XLB",
+        "name": "Materials",
+        "price": "90.68",
+        "change": "-0.35",
+        "changePercent": "-0.3845",
+        "volume": "7,102,948",
+        "high": "90.88",
+        "low": "90.14",
+        "open": "90.87",
+        "previousClose": "91.03",
+        "timestamp": "2025-07-29",
+        "source": "Alpha Vantage (Exact Real-time)"
+      }
+    },
+    "premarket": {
+      "gainers": [
+        {
+          "symbol": "NFLX",
+          "price": "501.41",
+          "change": "+16.21",
+          "changePercent": "+3.34%",
+          "catalyst": "volume spike",
+          "sector": "Communication Services",
+          "basePrice": 485.2
+        },
+        {
+          "symbol": "NVDA",
+          "price": "901.51",
+          "change": "+26.26",
+          "changePercent": "+3.00%",
+          "catalyst": "market sentiment shift",
+          "sector": "Technology",
+          "basePrice": 875.25
+        },
+        {
+          "symbol": "CRM",
+          "price": "271.74",
+          "change": "+6.34",
+          "changePercent": "+2.39%",
+          "catalyst": "market sentiment shift",
+          "sector": "Technology",
+          "basePrice": 265.4
+        },
+        {
+          "symbol": "AAPL",
+          "price": "189.20",
+          "change": "+4.00",
+          "changePercent": "+2.16%",
+          "catalyst": "options activity",
+          "sector": "Technology",
+          "basePrice": 185.2
+        },
+        {
+          "symbol": "AMZN",
+          "price": "148.35",
+          "change": "+3.05",
+          "changePercent": "+2.10%",
+          "catalyst": "technical breakout",
+          "sector": "Consumer Discretionary",
+          "basePrice": 145.3
+        },
+        {
+          "symbol": "AMD",
+          "price": "158.41",
+          "change": "+3.11",
+          "changePercent": "+2.00%",
+          "catalyst": "institutional buying",
+          "sector": "Technology",
+          "basePrice": 155.3
+        },
+        {
+          "symbol": "TSLA",
+          "price": "253.23",
+          "change": "+4.53",
+          "changePercent": "+1.82%",
+          "catalyst": "partnership announcement",
+          "sector": "Consumer Discretionary",
+          "basePrice": 248.7
+        },
+        {
+          "symbol": "MSFT",
+          "price": "379.48",
+          "change": "+4.98",
+          "changePercent": "+1.33%",
+          "catalyst": "institutional buying",
+          "sector": "Technology",
+          "basePrice": 374.5
+        },
+        {
+          "symbol": "GOOGL",
+          "price": "141.89",
+          "change": "+1.04",
+          "changePercent": "+0.74%",
+          "catalyst": "technical breakout",
+          "sector": "Technology",
+          "basePrice": 140.85
+        },
+        {
+          "symbol": "META",
+          "price": "487.74",
+          "change": "+2.14",
+          "changePercent": "+0.44%",
+          "catalyst": "earnings guidance update",
+          "sector": "Technology",
+          "basePrice": 485.6
+        }
+      ],
+      "losers": [
+        {
+          "symbol": "NVDA",
+          "price": "849.61",
+          "change": "-25.64",
+          "changePercent": "-2.93%",
+          "catalyst": "regulatory update",
+          "sector": "Technology",
+          "basePrice": 875.25
+        },
+        {
+          "symbol": "GOOGL",
+          "price": "136.74",
+          "change": "-4.11",
+          "changePercent": "-2.92%",
+          "catalyst": "institutional buying",
+          "sector": "Technology",
+          "basePrice": 140.85
+        },
+        {
+          "symbol": "TSLA",
+          "price": "241.51",
+          "change": "-7.19",
+          "changePercent": "-2.89%",
+          "catalyst": "sector rotation",
+          "sector": "Consumer Discretionary",
+          "basePrice": 248.7
+        },
+        {
+          "symbol": "NFLX",
+          "price": "472.34",
+          "change": "-12.86",
+          "changePercent": "-2.65%",
+          "catalyst": "sector rotation",
+          "sector": "Communication Services",
+          "basePrice": 485.2
+        },
+        {
+          "symbol": "AAPL",
+          "price": "180.96",
+          "change": "-4.24",
+          "changePercent": "-2.29%",
+          "catalyst": "analyst upgrade",
+          "sector": "Technology",
+          "basePrice": 185.2
+        },
+        {
+          "symbol": "AMZN",
+          "price": "142.02",
+          "change": "-3.28",
+          "changePercent": "-2.26%",
+          "catalyst": "partnership announcement",
+          "sector": "Consumer Discretionary",
+          "basePrice": 145.3
+        },
+        {
+          "symbol": "META",
+          "price": "478.85",
+          "change": "-6.75",
+          "changePercent": "-1.39%",
+          "catalyst": "analyst upgrade",
+          "sector": "Technology",
+          "basePrice": 485.6
+        },
+        {
+          "symbol": "CRM",
+          "price": "262.32",
+          "change": "-3.08",
+          "changePercent": "-1.16%",
+          "catalyst": "analyst upgrade",
+          "sector": "Technology",
+          "basePrice": 265.4
+        },
+        {
+          "symbol": "MSFT",
+          "price": "371.77",
+          "change": "-2.73",
+          "changePercent": "-0.73%",
+          "catalyst": "partnership announcement",
+          "sector": "Technology",
+          "basePrice": 374.5
+        },
+        {
+          "symbol": "AMD",
+          "price": "154.60",
+          "change": "-0.70",
+          "changePercent": "-0.45%",
+          "catalyst": "institutional buying",
+          "sector": "Technology",
+          "basePrice": 155.3
+        }
+      ]
+    },
+    "currencies": {
+      "EUR/USD": "1.1492",
+      "GBP/USD": "1.3329",
+      "USD/JPY": "148.65",
+      "USD/CNY": "7.18",
+      "AUD/USD": "0.6479",
+      "source": "Alpha Vantage (Exact Real-time)",
+      "timestamp": "2025-07-30T12:48:09.733Z"
+    },
+    "lastUpdated": "2025-07-30T12:48:04.274Z",
+    "dataSources": [
+      "Polygon Real-time Movers",
+      "Alpha Vantage (Exact Real-time)",
+      "Alpha Vantage Exact Quotes",
+      "News: Alpha Vantage News"
+    ],
+    "news": {
+      "marketNews": [],
+      "economicNews": [
+        {
+          "title": "Blue Foundry Bancorp Reports Second Quarter 2025 Results",
+          "source": "GlobeNewswire",
+          "publishedAt": "20250730T121500",
+          "url": "https://www.globenewswire.com/news-release/2025/07/30/3124036/0/en/Blue-Foundry-Bancorp-Reports-Second-Quarter-2025-Results.html",
+          "summary": "RUTHERFORD, N.J., July 30, 2025 ( GLOBE NEWSWIRE ) -- Blue Foundry Bancorp ( NASDAQ:BLFY ) ( the \"Company\" ) , the holding company for Blue Foundry Bank ( the \"Bank\" ) , today reported a net loss of $2.0 million, or $0.10 per diluted common share, fo...",
+          "sentiment": "Somewhat-Bullish",
+          "category": "economic"
+        },
+        {
+          "title": "First National Corporation Reports Record Second Quarter 2025 Earnings",
+          "source": "GlobeNewswire",
+          "publishedAt": "20250730T113000",
+          "url": "https://www.globenewswire.com/news-release/2025/07/30/3123947/32278/en/First-National-Corporation-Reports-Record-Second-Quarter-2025-Earnings.html",
+          "summary": "FIRST NATIONAL CORPORATION REPORTS RECORD SECOND QUARTER EARNINGS ......",
+          "sentiment": "Somewhat-Bullish",
+          "category": "economic"
+        },
+        {
+          "title": "Why Nano Labs Stock Is Gaining On Wednesday - Nano Labs  ( NASDAQ:NA ) , CEA Industries  ( NASDAQ:VAPE ) ",
+          "source": "Benzinga",
+          "publishedAt": "20250730T112416",
+          "url": "https://www.benzinga.com/trading-ideas/movers/25/07/46717491/why-nano-labs-stock-is-gaining-wednesday",
+          "summary": "Nano Labs invested in CEA Industries to deepen its BNB token reserves. The deal includes shares and warrants, totaling up to 990,100 units. Get special access to three exclusive \"Top 10 Stocks\" power lists today, updated daily....",
+          "sentiment": "Somewhat-Bullish",
+          "category": "economic"
+        },
+        {
+          "title": "Avis Budget Group Posts Downbeat Earnings, Joins SoFi Technologies, Seagate And Other Big Stocks Moving Lower In Wednesday's Pre-Market Session - Avis Budget Gr  ( NASDAQ:CAR ) , Cardiff Oncology  ( NASDAQ:CRDF ) ",
+          "source": "Benzinga",
+          "publishedAt": "20250730T120506",
+          "url": "https://www.benzinga.com/trading-ideas/movers/25/07/46718454/avis-budget-group-posts-downbeat-earnings-joins-sofi-technologies-seagate-and-other-big-stoc",
+          "summary": "U.S. stock futures were mixed this morning, with the Dow futures falling around 0.1% on Wednesday. Shares of Avis Budget Group, Inc. CAR fell sharply in pre-market trading after the company reported second-quarter financial results....",
+          "sentiment": "Neutral",
+          "category": "economic"
+        },
+        {
+          "title": "Prediction: These 3 Dividend Stocks Will Soar in the Second Half of 2025",
+          "source": "Motley Fool",
+          "publishedAt": "20250730T113000",
+          "url": "https://www.fool.com/investing/2025/07/30/prediction-these-3-dividend-stocks-will-soar-in-th/",
+          "summary": "These dividend stocks are noticeably underperforming as the S&P 500 makes new all-time highs....",
+          "sentiment": "Neutral",
+          "category": "economic"
+        },
+        {
+          "title": "Watsco Reports Second Quarter 2025 Results and Provides Update on Innovation & Strategic Technology Initiatives",
+          "source": "GlobeNewswire",
+          "publishedAt": "20250730T113000",
+          "url": "https://www.globenewswire.com/news-release/2025/07/30/3123952/0/en/Watsco-Reports-Second-Quarter-2025-Results-and-Provides-Update-on-Innovation-Strategic-Technology-Initiatives.html",
+          "summary": "Record Gross Profit Margins & Expanded Operating Margins Amidst A2L Product Transition. Strong Balance Sheet Fortifies the Company and Enables Continued Investments in Growth ......",
+          "sentiment": "Somewhat-Bullish",
+          "category": "economic"
+        },
+        {
+          "title": "$10 Million For A Synthetic Dollar: What's Behind Trump-Backed World Liberty Financial's Stablecoin Plans?",
+          "source": "Benzinga",
+          "publishedAt": "20250730T114442",
+          "url": "https://www.benzinga.com/crypto/cryptocurrency/25/07/46717789/10-million-for-a-synthetic-dollar-whats-behind-trump-backed-world-liberty-financials-stable",
+          "summary": "World Liberty Financial invests $10 million in Falcon Finance to support USDf stablecoin development. Partnership highlights World Liberty's growing influence in crypto sector, with recent investments from DWF Labs, MGX, Aqua 1 Foundation. Missed the...",
+          "sentiment": "Bullish",
+          "category": "economic"
+        },
+        {
+          "title": "Enlight Expands Its Executive Leadership Team - Enlight Renewable Energy  ( NASDAQ:ENLT ) ",
+          "source": "Benzinga",
+          "publishedAt": "20250730T114555",
+          "url": "https://www.benzinga.com/pressreleases/25/07/g46717802/enlight-expands-its-executive-leadership-team",
+          "summary": "Gilad Yavetz, founder of Enlight, to serve as Executive chairman of the board Adi Leviatan to be appointed CEO, bringing a proven track record of executive leadership from leading global companies; Yair Seroussi to serve as vice chairman...",
+          "sentiment": "Somewhat-Bullish",
+          "category": "economic"
+        }
+      ],
+      "techNews": [],
+      "corporateNews": [],
+      "lastUpdated": "2025-07-30T12:48:04.316Z",
+      "sources": [
+        "Alpha Vantage News"
+      ]
+    },
+    "newsSentiment": {
+      "overall": "positive",
+      "positive": 2,
+      "negative": 0,
+      "total": 8,
+      "confidence": "high"
+    }
+  },
+  "validation": {
+    "isValid": false,
+    "issues": [
+      "SPY price 635.26 outside realistic range (400-600)",
+      "QQQ price 567.26 outside realistic range (300-500)",
+      "DIA price 446.48 outside realistic range (300-400)",
+      "XLF price $52.8 outside realistic range ($30-50)",
+      "XLK price $264.09 outside realistic range ($150-200)"
+    ],
+    "dataQuality": "low",
+    "priceConsistency": false,
+    "movementRealism": true
+  },
+  "accuracyCheck": {
+    "corrected": true,
+    "issues": [
+      "Internal inconsistencies found and corrected"
+    ]
+  },
+  "newsData": {
+    "marketNews": [],
+    "economicNews": [
+      {
+        "title": "Blue Foundry Bancorp Reports Second Quarter 2025 Results",
+        "source": "GlobeNewswire",
+        "publishedAt": "20250730T121500",
+        "url": "https://www.globenewswire.com/news-release/2025/07/30/3124036/0/en/Blue-Foundry-Bancorp-Reports-Second-Quarter-2025-Results.html",
+        "summary": "RUTHERFORD, N.J., July 30, 2025 ( GLOBE NEWSWIRE ) -- Blue Foundry Bancorp ( NASDAQ:BLFY ) ( the \"Company\" ) , the holding company for Blue Foundry Bank ( the \"Bank\" ) , today reported a net loss of $2.0 million, or $0.10 per diluted common share, fo...",
+        "sentiment": "Somewhat-Bullish",
+        "category": "economic"
+      },
+      {
+        "title": "First National Corporation Reports Record Second Quarter 2025 Earnings",
+        "source": "GlobeNewswire",
+        "publishedAt": "20250730T113000",
+        "url": "https://www.globenewswire.com/news-release/2025/07/30/3123947/32278/en/First-National-Corporation-Reports-Record-Second-Quarter-2025-Earnings.html",
+        "summary": "FIRST NATIONAL CORPORATION REPORTS RECORD SECOND QUARTER EARNINGS ......",
+        "sentiment": "Somewhat-Bullish",
+        "category": "economic"
+      },
+      {
+        "title": "Why Nano Labs Stock Is Gaining On Wednesday - Nano Labs  ( NASDAQ:NA ) , CEA Industries  ( NASDAQ:VAPE ) ",
+        "source": "Benzinga",
+        "publishedAt": "20250730T112416",
+        "url": "https://www.benzinga.com/trading-ideas/movers/25/07/46717491/why-nano-labs-stock-is-gaining-wednesday",
+        "summary": "Nano Labs invested in CEA Industries to deepen its BNB token reserves. The deal includes shares and warrants, totaling up to 990,100 units. Get special access to three exclusive \"Top 10 Stocks\" power lists today, updated daily....",
+        "sentiment": "Somewhat-Bullish",
+        "category": "economic"
+      },
+      {
+        "title": "Avis Budget Group Posts Downbeat Earnings, Joins SoFi Technologies, Seagate And Other Big Stocks Moving Lower In Wednesday's Pre-Market Session - Avis Budget Gr  ( NASDAQ:CAR ) , Cardiff Oncology  ( NASDAQ:CRDF ) ",
+        "source": "Benzinga",
+        "publishedAt": "20250730T120506",
+        "url": "https://www.benzinga.com/trading-ideas/movers/25/07/46718454/avis-budget-group-posts-downbeat-earnings-joins-sofi-technologies-seagate-and-other-big-stoc",
+        "summary": "U.S. stock futures were mixed this morning, with the Dow futures falling around 0.1% on Wednesday. Shares of Avis Budget Group, Inc. CAR fell sharply in pre-market trading after the company reported second-quarter financial results....",
+        "sentiment": "Neutral",
+        "category": "economic"
+      },
+      {
+        "title": "Prediction: These 3 Dividend Stocks Will Soar in the Second Half of 2025",
+        "source": "Motley Fool",
+        "publishedAt": "20250730T113000",
+        "url": "https://www.fool.com/investing/2025/07/30/prediction-these-3-dividend-stocks-will-soar-in-th/",
+        "summary": "These dividend stocks are noticeably underperforming as the S&P 500 makes new all-time highs....",
+        "sentiment": "Neutral",
+        "category": "economic"
+      },
+      {
+        "title": "Watsco Reports Second Quarter 2025 Results and Provides Update on Innovation & Strategic Technology Initiatives",
+        "source": "GlobeNewswire",
+        "publishedAt": "20250730T113000",
+        "url": "https://www.globenewswire.com/news-release/2025/07/30/3123952/0/en/Watsco-Reports-Second-Quarter-2025-Results-and-Provides-Update-on-Innovation-Strategic-Technology-Initiatives.html",
+        "summary": "Record Gross Profit Margins & Expanded Operating Margins Amidst A2L Product Transition. Strong Balance Sheet Fortifies the Company and Enables Continued Investments in Growth ......",
+        "sentiment": "Somewhat-Bullish",
+        "category": "economic"
+      },
+      {
+        "title": "$10 Million For A Synthetic Dollar: What's Behind Trump-Backed World Liberty Financial's Stablecoin Plans?",
+        "source": "Benzinga",
+        "publishedAt": "20250730T114442",
+        "url": "https://www.benzinga.com/crypto/cryptocurrency/25/07/46717789/10-million-for-a-synthetic-dollar-whats-behind-trump-backed-world-liberty-financials-stable",
+        "summary": "World Liberty Financial invests $10 million in Falcon Finance to support USDf stablecoin development. Partnership highlights World Liberty's growing influence in crypto sector, with recent investments from DWF Labs, MGX, Aqua 1 Foundation. Missed the...",
+        "sentiment": "Bullish",
+        "category": "economic"
+      },
+      {
+        "title": "Enlight Expands Its Executive Leadership Team - Enlight Renewable Energy  ( NASDAQ:ENLT ) ",
+        "source": "Benzinga",
+        "publishedAt": "20250730T114555",
+        "url": "https://www.benzinga.com/pressreleases/25/07/g46717802/enlight-expands-its-executive-leadership-team",
+        "summary": "Gilad Yavetz, founder of Enlight, to serve as Executive chairman of the board Adi Leviatan to be appointed CEO, bringing a proven track record of executive leadership from leading global companies; Yair Seroussi to serve as vice chairman...",
+        "sentiment": "Somewhat-Bullish",
+        "category": "economic"
+      }
+    ],
+    "techNews": [],
+    "corporateNews": [],
+    "lastUpdated": "2025-07-30T12:48:04.316Z",
+    "sources": [
+      "Alpha Vantage News"
+    ]
+  },
+  "newsSentiment": {
+    "overall": "positive",
+    "positive": 2,
+    "negative": 0,
+    "total": 8,
+    "confidence": "high"
+  },
+  "timestamp": "2025-07-30T12:49:59.511Z"
+}
