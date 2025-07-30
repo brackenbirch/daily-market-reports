@@ -2,27 +2,35 @@
   "headlines": {
     "general": [
       {
-        "headline": "America's Car-Mart, Inc. Provides Update on Status of Its Annual Report on Form 10-K",
-        "summary": "ROGERS, Ark., July 30, 2025 ( GLOBE NEWSWIRE ) -- America's Car-Mart, Inc. ( NASDAQ: CRMT ) ( \"Car-Mart\" or the \"Company\" ) , today announced that it is continuing its work to complete certain omitted disclosures to be included in the Company's Annual Report on Form 10-K for the fiscal year ...",
-        "source": "Alpha Vantage - GlobeNewswire",
-        "datetime": "Invalid Date",
-        "url": "https://www.globenewswire.com/news-release/2025/07/30/3124124/9718/en/America-s-Car-Mart-Inc-Provides-Update-on-Status-of-Its-Annual-Report-on-Form-10-K.html",
-        "sentiment": "Neutral"
-      },
-      {
-        "headline": "XBP Europe Holdings, Inc. Completes Acquisition of Exela Technologies BPA, LLC, Creating a Global Business Process Automation Powerhouse - XBP Europe Holdings  ( NASDAQ:XBP ) , XBP Europe Holdings  ( NASDAQ:XBPEW ) ",
-        "summary": "SANTA MONICA, Calif. and LONDON, July 30, 2025 ( GLOBE NEWSWIRE ) -- XBP Europe Holdings, Inc. ( \"XBP Europe\" ) XBP, a pan-European integrator of bills, payments, and related solutions and services, has finalized its acquisition of Exela Technologies BPA, LLC ( \"BPA\" ) , a leading provider of ...",
+        "headline": "SoFi Technologies Stock Is Sliding Wednesday: What's Going On? - SoFi Technologies  ( NASDAQ:SOFI ) ",
+        "summary": "SoFi announces a public offering of approximately 71.94 million shares of its common stock at a price of $20.85 per share. Needham analyst Kyle Peterson maintains SoFi with a Buy rating and raises the price target from $20 to $25. Missed the rally? Learn exactly where the next leaders are ...",
         "source": "Alpha Vantage - Benzinga",
         "datetime": "Invalid Date",
-        "url": "https://www.benzinga.com/pressreleases/25/07/g46719737/xbp-europe-holdings-inc-completes-acquisition-of-exela-technologies-bpa-llc-creating-a-global-busi",
+        "url": "https://www.benzinga.com/trading-ideas/movers/25/07/46720898/sofi-technologies-stock-is-sliding-wednesday-whats-going-on",
         "sentiment": "Somewhat-Bullish"
       },
       {
-        "headline": "NeOnc Technologies Signs Definitive Agreement to Acquire AI, 3D, and Quantum Modeling IP Portfolio from Dr. Ishwar K. Puri; Appoints Him to Board of Directors - NeOnc Technologies  ( NASDAQ:NTHI ) ",
-        "summary": "CALABASAS, Calif., July 30, 2025 ( GLOBE NEWSWIRE ) -- NeOnc Technologies Holdings, Inc.",
+        "headline": "Semiconductor Slump Puts Direxion's NVDA-Centered NVDU And NVDD ETFs In Focus - NVIDIA  ( NASDAQ:NVDA ) , Direxion Daily NVDA Bear 1X Shares  ( NASDAQ:NVDD ) ",
+        "summary": "Chip stocks, including mighty Nvidia, slipped recently due to the Stargate AI initiative stumbling. Still, the ongoing debate regarding machine intelligence bolsters interest in Direxion's NVDU and NVDD funds. Missed the rally? Learn exactly where the next leaders are emerging here.",
         "source": "Alpha Vantage - Benzinga",
         "datetime": "Invalid Date",
-        "url": "https://www.benzinga.com/pressreleases/25/07/g46719734/neonc-technologies-signs-definitive-agreement-to-acquire-ai-3d-and-quantum-modeling-ip-portfolio-f",
+        "url": "https://www.benzinga.com/etfs/specialty-etfs/25/07/46721157/semiconductor-slump-puts-direxions-nvda-centered-nvdu-and-nvdd-etfs-in-focus",
+        "sentiment": "Neutral"
+      },
+      {
+        "headline": "Why Is Hershey's Stock Gaining On Wednesday? - Hershey  ( NYSE:HSY ) ",
+        "summary": "Hershey's Q2 sales rose 26% YoY, driven by strong confectionery demand. Adjusted EPS outlook cut to a 36-38% decline despite sales gains. Get special access to three exclusive \"Top 10 Stocks\" power lists today, updated daily.",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/markets/earnings/25/07/46722055/tariffs-take-bite-out-of-hersheys-outlook",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Stablecoins add $4B, Bitcoin exchange reserves below 15%: July in charts",
+        "summary": "Investors are uncertain and moving their Bitcoin off exchanges, while stablecoins are set to take off after GENIUS passed.",
+        "source": "Alpha Vantage - Cointelegraph",
+        "datetime": "Invalid Date",
+        "url": "https://cointelegraph.com/news/stablecoins-4b-bitcoin-exchange-reserves-july-charts",
         "sentiment": "Somewhat-Bullish"
       },
       {
@@ -42,43 +50,19 @@
         "sentiment": "Neutral"
       },
       {
+        "headline": "Form 8.3 - [MARLOWE PLC - 29 07 2025] -  ( CGWL ) ",
+        "summary": "PUBLIC OPENING POSITION DISCLOSURE/DEALING DISCLOSURE BY A PERSON WITH INTERESTS IN RELEVANT SECURITIES REPRESENTING 1% OR MORE Rule 8.3 of the Takeover Code ( the \"Code\" ) 2. POSITIONS OF THE PERSON MAKING THE DISCLOSURE",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/pressreleases/25/07/g46720908/form-8-3-marlowe-plc-29-07-2025-cgwl",
+        "sentiment": "Neutral"
+      },
+      {
         "headline": "'Turkey's Uber' Joins Strategy, Tesla As Bitcoin Treasury Company",
         "summary": "Martı's core business operations and expansion plans remain fully funded and are unaffected by the crypto allocation. Martı becomes the first major Turkish mobility company to integrate Bitcoin into its corporate financial strategy. The market's back, and these 3 income stocks are thriving.",
         "source": "Alpha Vantage - Benzinga",
         "datetime": "Invalid Date",
         "url": "https://www.benzinga.com/crypto/cryptocurrency/25/07/46720657/turkeys-uber-joins-strategy-tesla-as-bitcoin-treasury-company",
-        "sentiment": "Somewhat-Bullish"
-      },
-      {
-        "headline": "XBP Europe Holdings, Inc. Completes Acquisition of Exela Technologies BPA, LLC, Creating a Global Business Process Automation Powerhouse",
-        "summary": "Acquisition results in over $900 million in combined annual Revenue, resulting in a Net Debt-to-EBITDA ratio of the combined company of approximately 3.5x Acquisition results in over $900 million in combined annual Revenue, resulting in a Net Debt-to-EBITDA ratio of the combined company of ...",
-        "source": "Alpha Vantage - GlobeNewswire",
-        "datetime": "Invalid Date",
-        "url": "https://www.globenewswire.com/news-release/2025/07/30/3124103/0/en/XBP-Europe-Holdings-Inc-Completes-Acquisition-of-Exela-Technologies-BPA-LLC-Creating-a-Global-Business-Process-Automation-Powerhouse.html",
-        "sentiment": "Somewhat-Bullish"
-      },
-      {
-        "headline": "MySize Launches NaizGPT - Conversational AI Assistant for Retail Teams - My Size  ( NASDAQ:MYSZ ) ",
-        "summary": "AIRPORT CITY, Israel, July 30, 2025 /PRNewswire/ -- MySize Inc. MYSZ, an AI-powered retail solutions company, today announced the successful launch of its pilot program, NaizGPT, a conversational AI assistant designed specifically for retail teams.",
-        "source": "Alpha Vantage - Benzinga",
-        "datetime": "Invalid Date",
-        "url": "https://www.benzinga.com/pressreleases/25/07/n46719840/mysize-launches-naizgpt-conversational-ai-assistant-for-retail-teams",
-        "sentiment": "Somewhat-Bullish"
-      },
-      {
-        "headline": "NeOnc Technologies Signs Definitive Agreement to Acquire AI, 3D, and Quantum Modeling IP Portfolio from Dr. Ishwar K. Puri; Appoints Him to Board of Directors",
-        "summary": "CALABASAS, Calif., July 30, 2025 ( GLOBE NEWSWIRE ) -- NeOnc Technologies Holdings, Inc. ( NASDAQ: NTHI ) , a multi Phase 2 clinical-stage biotechnology company pioneering innovative treatments for brain cancers, is proud to announce the signing of a definitive, binding Letter of Intent ( LOI ) ...",
-        "source": "Alpha Vantage - GlobeNewswire",
-        "datetime": "Invalid Date",
-        "url": "https://www.globenewswire.com/news-release/2025/07/30/3124108/0/en/NeOnc-Technologies-Signs-Definitive-Agreement-to-Acquire-AI-3D-and-Quantum-Modeling-IP-Portfolio-from-Dr-Ishwar-K-Puri-Appoints-Him-to-Board-of-Directors.html",
-        "sentiment": "Somewhat-Bullish"
-      },
-      {
-        "headline": "24/7 Market News Exclusive Interview: J.W. Roth, CEO of VENU, Discusses the Future of Live Entertainment - Venu Holding  ( AMEX:VENU ) ",
-        "summary": "DENVER, July 30, 2025 ( GLOBE NEWSWIRE ) -- 247marketnews.com, a pioneer in digital media dedicated to the swift distribution of financial market news and corporate information, conducts an exclusive interview with J.W.",
-        "source": "Alpha Vantage - Benzinga",
-        "datetime": "Invalid Date",
-        "url": "https://www.benzinga.com/pressreleases/25/07/g46720188/247-market-news-exclusive-interview-j-w-roth-ceo-of-venu-discusses-the-future-of-live-entertainmen",
         "sentiment": "Somewhat-Bullish"
       }
     ],
@@ -93,15 +77,15 @@
   "timing": {
     "lastCloseTimestamp": 1753804800,
     "lastCloseString": "7/29/2025, 12:00:00 PM",
-    "currentTime": "7/30/2025, 10:29:15 AM"
+    "currentTime": "7/30/2025, 10:37:21 AM"
   },
-  "totalHeadlines": 10,
+  "totalHeadlines": 8,
   "activeAPIs": [
     "Alpha Vantage",
     "Finnhub"
   ],
   "categoryBreakdown": {
-    "general": 10,
+    "general": 8,
     "us": 0,
     "asian": 0,
     "european": 0,
@@ -111,7 +95,7 @@
     "earnings": 0
   },
   "metadata": {
-    "generatedAt": "2025-07-30T14:30:12.736Z",
+    "generatedAt": "2025-07-30T14:38:03.035Z",
     "reportType": "comprehensive-premarket-brief",
     "aiModel": "claude-sonnet-4",
     "classification": "institutional-grade"
