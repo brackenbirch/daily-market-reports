@@ -76,7 +76,7 @@ async function fetchComprehensiveNews() {
                 if (response.data && Array.isArray(response.data)) {
                     headlines.general = response.data
                         .filter(news => news.datetime > timing.lastCloseTimestamp)
-                        .slice(0, 15)
+                        .slice(0, 10)
                         .map(news => ({
                             headline: news.headline,
                             summary: news.summary,
@@ -101,7 +101,7 @@ async function fetchComprehensiveNews() {
                 
                 if (response.data && response.data.feed) {
                     const alphaNews = response.data.feed
-                        .slice(0, 10)
+                        .slice(0, 8)
                         .map(news => ({
                             headline: news.title,
                             summary: news.summary,
@@ -143,7 +143,7 @@ async function fetchComprehensiveNews() {
                             from: fromDate,
                             sortBy: 'publishedAt',
                             language: 'en',
-                            pageSize: 8,
+                            pageSize: 10,
                             apiKey: NEWS_API_KEY
                         }
                     });
@@ -174,7 +174,7 @@ async function fetchComprehensiveNews() {
                 const response = await axios.get('http://api.marketstack.com/v1/news', {
                     params: {
                         access_key: MARKETSTACK_API_KEY,
-                        limit: 12,
+                        limit: 8,
                         sort: 'published_on',
                         keywords: 'market,trading,stocks,earnings'
                     }
@@ -204,7 +204,7 @@ async function fetchComprehensiveNews() {
                     params: {
                         c: TRADING_ECONOMICS_API_KEY,
                         format: 'json',
-                        limit: 15
+                        limit: 12
                     }
                 });
                 
@@ -244,7 +244,7 @@ async function fetchComprehensiveNews() {
                 const response = await axios.get('https://api.polygon.io/v2/reference/news', {
                     params: {
                         'published_utc.gte': new Date(timing.lastCloseTimestamp * 1000).toISOString().split('T')[0],
-                        limit: 10,
+                        limit: 8,
                         sort: 'published_utc',
                         order: 'desc',
                         apikey: POLYGON_API_KEY
@@ -281,7 +281,7 @@ async function fetchComprehensiveNews() {
                 
                 if (response.data && response.data.data) {
                     const twelveNews = response.data.data
-                        .slice(0, 8)
+                        .slice(0, 6)
                         .map(news => ({
                             headline: news.title,
                             summary: news.description,
@@ -384,37 +384,37 @@ Provide a 3-4 sentence overview of the most market-moving developments overnight
 Write a comprehensive narrative summary of US corporate earnings, regulatory announcements, Federal Reserve communications, domestic policy developments, and key economic data releases that occurred overnight.
 
 **Key US Headlines:**
-[List the most relevant US market headlines here in clean format - no bullet points, just numbered headlines with source attribution]
+[List the top 5-10 most relevant US market headlines here in clean format - no bullet points, just numbered headlines with source attribution]
 
 ## ASIAN MARKET NEWS
 Provide detailed narrative coverage of major developments from Asian markets including China policy announcements, Japanese economic data, Hong Kong market developments, and other regional news affecting global markets.
 
 **Key Asian Headlines:**
-[List the most relevant Asian market headlines here in clean format - no bullet points, just numbered headlines with source attribution]
+[List the top 5-10 most relevant Asian market headlines here in clean format - no bullet points, just numbered headlines with source attribution]
 
 ## EUROPEAN MARKET NEWS
 Write an in-depth narrative analysis of European Central Bank communications, Brexit developments, EU policy announcements, major European corporate news, and eurozone economic indicators.
 
 **Key European Headlines:**
-[List the most relevant European market headlines here in clean format - no bullet points, just numbered headlines with source attribution]
+[List the top 5-10 most relevant European market headlines here in clean format - no bullet points, just numbered headlines with source attribution]
 
 ## GEOPOLITICAL DEVELOPMENTS
 Provide thorough narrative analysis of ongoing geopolitical tensions, trade developments, sanctions news, international conflicts, and diplomatic developments that could impact global market risk sentiment.
 
 **Key Geopolitical Headlines:**
-[List the most relevant geopolitical headlines here in clean format - no bullet points, just numbered headlines with source attribution]
+[List the top 5-10 most relevant geopolitical headlines here in clean format - no bullet points, just numbered headlines with source attribution]
 
 ## CURRENCY & COMMODITY MARKETS
 Write a narrative analysis of major currency movements, central bank interventions, commodity price developments, and their implications for various market sectors.
 
 **Key Currency & Commodity Headlines:**
-[List the most relevant currency and commodity headlines here in clean format - no bullet points, just numbered headlines with source attribution]
+[List the top 5-10 most relevant currency and commodity headlines here in clean format - no bullet points, just numbered headlines with source attribution]
 
 ## EARNINGS & CORPORATE DEVELOPMENTS
 Write a comprehensive narrative analysis of overnight earnings reports, corporate announcements, management guidance updates, merger and acquisition news, and other significant corporate developments.
 
 **Key Earnings & Corporate Headlines:**
-[List the most relevant earnings and corporate headlines here in clean format - no bullet points, just numbered headlines with source attribution]
+[List the top 5-10 most relevant earnings and corporate headlines here in clean format - no bullet points, just numbered headlines with source attribution]
 
 ## CROSS-MARKET IMPACT ANALYSIS
 Identify potential spillover effects between regions and asset classes based on overnight developments.
