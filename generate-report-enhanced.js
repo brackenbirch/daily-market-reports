@@ -45,48 +45,10 @@ function getMarketTimingInfo() {
     };
 }
 
-// Web search function for additional news
-async function searchWebForNews(query, source = 'general') {
-    const results = [];
-    
-    try {
-        // Using a hypothetical web search - you can replace with actual search API
-        console.log(`🔍 Searching web for: ${query}`);
-        
-        // This would be replaced with actual web search API calls
-        // For now, we'll simulate web search results
-        const searchTerms = [
-            'breaking market news',
-            'overnight market developments',
-            'pre-market movers',
-            'Asian markets overnight',
-            'European market news',
-            'geopolitical market impact',
-            'Federal Reserve news',
-            'earnings after hours',
-            'commodity market updates',
-            'currency market news'
-        ];
-        
-        // Simulate finding relevant news based on query
-        if (searchTerms.some(term => query.toLowerCase().includes(term.toLowerCase()))) {
-            results.push({
-                headline: `Web Search Result: ${query} developments overnight`,
-                summary: `Market-relevant information found via web search for ${query}`,
-                source: `Web Search - ${source}`,
-                datetime: new Date().toLocaleString(),
-                confidence: 'moderate'
-            });
-        }
-        
-    } catch (error) {
-        console.log(`Web search failed for ${query}:`, error.message);
-    }
-    
-    return results;
-}
+// Remove web search function since we're focusing on API data
+// This function is no longer needed as we're using direct API calls
 
-// Enhanced news fetching with multiple APIs and web search
+// Enhanced news fetching with all available APIs
 async function fetchComprehensiveNews() {
     const timing = getMarketTimingInfo();
     const headlines = {
@@ -97,43 +59,76 @@ async function fetchComprehensiveNews() {
         geopolitical: [],
         currencies: [],
         commodities: [],
-        webSearch: []
+        earnings: []
     };
     
     console.log(`📰 Comprehensive news gathering since: ${timing.lastCloseString}`);
     
     try {
-        // 1. Finnhub News
+        // 1. Finnhub News (Market News)
         if (FINNHUB_API_KEY) {
             console.log('📡 Fetching from Finnhub...');
-            const response = await axios.get(
-                `https://finnhub.io/api/v1/news?category=general&minId=${timing.lastCloseTimestamp}&token=${FINNHUB_API_KEY}`
-            );
-            
-            if (response.data && Array.isArray(response.data)) {
-                headlines.general = response.data
-                    .filter(news => news.datetime > timing.lastCloseTimestamp)
-                    .slice(0, 15)
-                    .map(news => ({
-                        headline: news.headline,
-                        summary: news.summary,
-                        source: news.source,
-                        datetime: new Date(news.datetime * 1000).toLocaleString(),
-                        url: news.url
-                    }));
+            try {
+                const response = await axios.get(
+                    `https://finnhub.io/api/v1/news?category=general&minId=${timing.lastCloseTimestamp}&token=${FINNHUB_API_KEY}`
+                );
+                
+                if (response.data && Array.isArray(response.data)) {
+                    headlines.general = response.data
+                        .filter(news => news.datetime > timing.lastCloseTimestamp)
+                        .slice(0, 15)
+                        .map(news => ({
+                            headline: news.headline,
+                            summary: news.summary,
+                            source: `Finnhub - ${news.source}`,
+                            datetime: new Date(news.datetime * 1000).toLocaleString(),
+                            url: news.url
+                        }));
+                    console.log(`  ✅ Finnhub: ${headlines.general.length} headlines`);
+                }
+            } catch (error) {
+                console.log('  ❌ Finnhub fetch failed:', error.message);
             }
         }
         
-        // 2. NewsAPI with multiple categories
+        // 2. Alpha Vantage News
+        if (ALPHA_VANTAGE_API_KEY) {
+            console.log('📡 Fetching from Alpha Vantage...');
+            try {
+                const response = await axios.get(
+                    `https://www.alphavantage.co/query?function=NEWS_SENTIMENT&topics=financial_markets&apikey=${ALPHA_VANTAGE_API_KEY}`
+                );
+                
+                if (response.data && response.data.feed) {
+                    const alphaNews = response.data.feed
+                        .slice(0, 10)
+                        .map(news => ({
+                            headline: news.title,
+                            summary: news.summary,
+                            source: `Alpha Vantage - ${news.source}`,
+                            datetime: new Date(news.time_published).toLocaleString(),
+                            url: news.url,
+                            sentiment: news.overall_sentiment_label
+                        }));
+                    headlines.general.push(...alphaNews);
+                    console.log(`  ✅ Alpha Vantage: ${alphaNews.length} headlines`);
+                }
+            } catch (error) {
+                console.log('  ❌ Alpha Vantage fetch failed:', error.message);
+            }
+        }
+        
+        // 3. NewsAPI with multiple categories
         if (NEWS_API_KEY) {
             console.log('📡 Fetching from NewsAPI...');
             const categories = [
-                { query: 'markets OR stocks OR trading OR NYSE OR NASDAQ OR "S&P 500" OR Dow', category: 'us' },
-                { query: 'China OR Japan OR "Hong Kong" OR "Asian markets" OR Nikkei OR Shanghai OR "Hang Seng"', category: 'asian' },
-                { query: 'Europe OR ECB OR Brexit OR DAX OR FTSE OR "European markets" OR eurozone', category: 'european' },
-                { query: 'Russia OR Ukraine OR "Middle East" OR sanctions OR "trade war" OR geopolitical', category: 'geopolitical' },
-                { query: 'dollar OR euro OR yen OR "currency markets" OR forex OR "exchange rate"', category: 'currencies' },
-                { query: 'oil OR gold OR "natural gas" OR commodities OR "crude oil" OR copper', category: 'commodities' }
+                { query: '(stocks OR trading OR NYSE OR NASDAQ OR "S&P 500" OR Dow OR earnings) AND market', category: 'us' },
+                { query: '(China OR Japan OR "Hong Kong" OR "Asian markets" OR Nikkei OR Shanghai OR "Hang Seng") AND market', category: 'asian' },
+                { query: '(Europe OR ECB OR Brexit OR DAX OR FTSE OR "European markets" OR eurozone) AND market', category: 'european' },
+                { query: '(Russia OR Ukraine OR "Middle East" OR sanctions OR "trade war" OR geopolitical) AND market', category: 'geopolitical' },
+                { query: '(dollar OR euro OR yen OR "currency markets" OR forex OR "exchange rate") AND market', category: 'currencies' },
+                { query: '(oil OR gold OR "natural gas" OR commodities OR "crude oil" OR copper OR wheat) AND price', category: 'commodities' },
+                { query: '(earnings OR "quarterly results" OR "earnings report" OR guidance OR revenue) AND (stock OR company)', category: 'earnings' }
             ];
             
             const yesterday = new Date();
@@ -148,38 +143,40 @@ async function fetchComprehensiveNews() {
                             from: fromDate,
                             sortBy: 'publishedAt',
                             language: 'en',
-                            pageSize: 12,
+                            pageSize: 8,
                             apiKey: NEWS_API_KEY
                         }
                     });
                     
                     if (response.data && response.data.articles) {
-                        headlines[cat.category] = response.data.articles.map(article => ({
+                        const categoryNews = response.data.articles.map(article => ({
                             headline: article.title,
                             summary: article.description,
-                            source: article.source.name,
+                            source: `NewsAPI - ${article.source.name}`,
                             datetime: new Date(article.publishedAt).toLocaleString(),
                             url: article.url
                         }));
+                        headlines[cat.category].push(...categoryNews);
+                        console.log(`  ✅ NewsAPI ${cat.category}: ${categoryNews.length} headlines`);
                     }
                     
                     await new Promise(resolve => setTimeout(resolve, 1000));
                 } catch (error) {
-                    console.log(`Failed to fetch ${cat.category} news:`, error.message);
+                    console.log(`  ❌ NewsAPI ${cat.category} failed:`, error.message);
                 }
             }
         }
         
-        // 3. Marketstack for market-specific news
+        // 4. Marketstack for market-specific news
         if (MARKETSTACK_API_KEY) {
             console.log('📡 Fetching from Marketstack...');
             try {
                 const response = await axios.get('http://api.marketstack.com/v1/news', {
                     params: {
                         access_key: MARKETSTACK_API_KEY,
-                        limit: 10,
+                        limit: 12,
                         sort: 'published_on',
-                        keywords: 'market,trading,stocks'
+                        keywords: 'market,trading,stocks,earnings'
                     }
                 });
                 
@@ -187,18 +184,19 @@ async function fetchComprehensiveNews() {
                     const marketNews = response.data.data.map(news => ({
                         headline: news.title,
                         summary: news.description,
-                        source: 'Marketstack',
+                        source: `Marketstack - ${news.source}`,
                         datetime: new Date(news.published_on).toLocaleString(),
                         url: news.url
                     }));
-                    headlines.general.push(...marketNews);
+                    headlines.us.push(...marketNews);
+                    console.log(`  ✅ Marketstack: ${marketNews.length} headlines`);
                 }
             } catch (error) {
-                console.log('Marketstack fetch failed:', error.message);
+                console.log('  ❌ Marketstack fetch failed:', error.message);
             }
         }
         
-        // 4. Trading Economics news
+        // 5. Trading Economics news
         if (TRADING_ECONOMICS_API_KEY) {
             console.log('📡 Fetching from Trading Economics...');
             try {
@@ -206,7 +204,7 @@ async function fetchComprehensiveNews() {
                     params: {
                         c: TRADING_ECONOMICS_API_KEY,
                         format: 'json',
-                        limit: 10
+                        limit: 15
                     }
                 });
                 
@@ -214,38 +212,92 @@ async function fetchComprehensiveNews() {
                     const economicNews = response.data.map(news => ({
                         headline: news.title,
                         summary: news.description,
-                        source: 'Trading Economics',
+                        source: `Trading Economics - ${news.country || 'Global'}`,
                         datetime: new Date(news.date).toLocaleString(),
                         url: news.url,
                         country: news.country
                     }));
-                    headlines.general.push(...economicNews);
+                    
+                    // Categorize by region
+                    economicNews.forEach(news => {
+                        if (news.country && ['United States', 'USA', 'US'].includes(news.country)) {
+                            headlines.us.push(news);
+                        } else if (news.country && ['China', 'Japan', 'South Korea', 'India', 'Singapore'].includes(news.country)) {
+                            headlines.asian.push(news);
+                        } else if (news.country && ['Germany', 'France', 'UK', 'Italy', 'Spain', 'Netherlands'].includes(news.country)) {
+                            headlines.european.push(news);
+                        } else {
+                            headlines.general.push(news);
+                        }
+                    });
+                    console.log(`  ✅ Trading Economics: ${economicNews.length} headlines categorized`);
                 }
             } catch (error) {
-                console.log('Trading Economics fetch failed:', error.message);
+                console.log('  ❌ Trading Economics fetch failed:', error.message);
             }
         }
         
-        // 5. Web search for additional news
-        console.log('🔍 Performing web searches for additional news...');
-        const searchQueries = [
-            'breaking market news today',
-            'overnight market developments',
-            'Asian markets overnight news',
-            'European market news today',
-            'Federal Reserve latest news',
-            'geopolitical market impact news',
-            'currency market developments',
-            'commodity market news overnight'
-        ];
-        
-        for (const query of searchQueries) {
-            const webResults = await searchWebForNews(query, 'web-search');
-            headlines.webSearch.push(...webResults);
-            await new Promise(resolve => setTimeout(resolve, 500));
+        // 6. Polygon.io Market News
+        if (POLYGON_API_KEY) {
+            console.log('📡 Fetching from Polygon...');
+            try {
+                const response = await axios.get('https://api.polygon.io/v2/reference/news', {
+                    params: {
+                        'published_utc.gte': new Date(timing.lastCloseTimestamp * 1000).toISOString().split('T')[0],
+                        limit: 10,
+                        sort: 'published_utc',
+                        order: 'desc',
+                        apikey: POLYGON_API_KEY
+                    }
+                });
+                
+                if (response.data && response.data.results) {
+                    const polygonNews = response.data.results.map(news => ({
+                        headline: news.title,
+                        summary: news.description,
+                        source: `Polygon - ${news.publisher.name}`,
+                        datetime: new Date(news.published_utc).toLocaleString(),
+                        url: news.article_url
+                    }));
+                    headlines.us.push(...polygonNews);
+                    console.log(`  ✅ Polygon: ${polygonNews.length} headlines`);
+                }
+            } catch (error) {
+                console.log('  ❌ Polygon fetch failed:', error.message);
+            }
         }
         
-        // 6. Get currency rates for context
+        // 7. Twelve Data Market News
+        if (TWELVE_DATA_API_KEY) {
+            console.log('📡 Fetching from Twelve Data...');
+            try {
+                const response = await axios.get('https://api.twelvedata.com/news', {
+                    params: {
+                        source: 'all',
+                        language: 'en',
+                        apikey: TWELVE_DATA_API_KEY
+                    }
+                });
+                
+                if (response.data && response.data.data) {
+                    const twelveNews = response.data.data
+                        .slice(0, 8)
+                        .map(news => ({
+                            headline: news.title,
+                            summary: news.description,
+                            source: `Twelve Data - ${news.source}`,
+                            datetime: new Date(news.datetime).toLocaleString(),
+                            url: news.url
+                        }));
+                    headlines.general.push(...twelveNews);
+                    console.log(`  ✅ Twelve Data: ${twelveNews.length} headlines`);
+                }
+            } catch (error) {
+                console.log('  ❌ Twelve Data fetch failed:', error.message);
+            }
+        }
+        
+        // 8. Get currency rates for context using available APIs
         if (EXCHANGERATE_API_KEY || FIXER_API_KEY) {
             console.log('💱 Fetching currency data for context...');
             try {
@@ -260,26 +312,27 @@ async function fetchComprehensiveNews() {
                 }
                 
                 if (currencyData && currencyData.rates) {
-                    const majorPairs = ['EUR', 'GBP', 'JPY', 'CHF', 'CAD'];
+                    const majorPairs = ['EUR', 'GBP', 'JPY', 'CHF', 'CAD', 'AUD', 'CNY'];
                     majorPairs.forEach(currency => {
                         if (currencyData.rates[currency]) {
                             headlines.currencies.push({
-                                headline: `USD/${currency} Exchange Rate Update`,
-                                summary: `Current rate: ${currencyData.rates[currency].toFixed(4)}`,
-                                source: 'Exchange Rate API',
+                                headline: `USD/${currency} Current Exchange Rate`,
+                                summary: `Trading at ${currencyData.rates[currency].toFixed(4)} as of latest update`,
+                                source: EXCHANGERATE_API_KEY ? 'ExchangeRate-API' : 'Fixer.io',
                                 datetime: new Date().toLocaleString(),
                                 rate: currencyData.rates[currency]
                             });
                         }
                     });
+                    console.log(`  ✅ Currency data: ${majorPairs.length} exchange rates`);
                 }
             } catch (error) {
-                console.log('Currency data fetch failed:', error.message);
+                console.log('  ❌ Currency data fetch failed:', error.message);
             }
         }
         
     } catch (error) {
-        console.log('Error in comprehensive news fetch:', error.message);
+        console.log('❌ Error in comprehensive news fetch:', error.message);
     }
     
     return headlines;
@@ -302,7 +355,7 @@ COMPREHENSIVE HEADLINES DATA FROM MULTIPLE SOURCES:
         { key: 'geopolitical', title: 'GEOPOLITICAL HEADLINES' },
         { key: 'currencies', title: 'CURRENCY MARKET UPDATES' },
         { key: 'commodities', title: 'COMMODITY MARKET NEWS' },
-        { key: 'webSearch', title: 'ADDITIONAL WEB SEARCH RESULTS' }
+        { key: 'earnings', title: 'EARNINGS & CORPORATE NEWS' }
     ];
 
     sections.forEach(section => {
@@ -356,6 +409,12 @@ Write a narrative analysis of major currency movements, central bank interventio
 
 **Key Currency & Commodity Headlines:**
 [List the most relevant currency and commodity headlines here in clean format - no bullet points, just numbered headlines with source attribution]
+
+## EARNINGS & CORPORATE DEVELOPMENTS
+Write a comprehensive narrative analysis of overnight earnings reports, corporate announcements, management guidance updates, merger and acquisition news, and other significant corporate developments.
+
+**Key Earnings & Corporate Headlines:**
+[List the most relevant earnings and corporate headlines here in clean format - no bullet points, just numbered headlines with source attribution]
 
 ## CROSS-MARKET IMPACT ANALYSIS
 Identify potential spillover effects between regions and asset classes based on overnight developments.
