@@ -172,169 +172,180 @@
     "topGainers": [
       {
         "symbol": "AAPL",
-        "price": "$202.79",
-        "change": "+22.61",
-        "changePercent": "+12.55%",
-        "volume": "195K",
+        "price": "$186.57",
+        "change": "+3.51",
+        "changePercent": "+1.92%",
+        "volume": "87K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "MSFT",
-        "price": "$148.93",
-        "change": "+11.64",
-        "changePercent": "+8.48%",
-        "volume": "170K",
+        "price": "$141.04",
+        "change": "+8.08",
+        "changePercent": "+6.08%",
+        "volume": "209K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "GOOGL",
-        "price": "$135.02",
-        "change": "+4.16",
-        "changePercent": "+3.18%",
-        "volume": "147K",
+        "price": "$217.43",
+        "change": "+8.38",
+        "changePercent": "+4.01%",
+        "volume": "121K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "AMZN",
-        "price": "$108.24",
-        "change": "+14.36",
-        "changePercent": "+15.30%",
-        "volume": "53K",
-        "timeframe": "After-Hours"
-      },
-      {
-        "symbol": "TSLA",
-        "price": "$63.90",
-        "change": "+7.49",
-        "changePercent": "+13.27%",
-        "volume": "29K",
-        "timeframe": "After-Hours"
-      },
-      {
-        "symbol": "NVDA",
-        "price": "$252.02",
-        "change": "+12.02",
-        "changePercent": "+5.01%",
+        "price": "$195.20",
+        "change": "+15.67",
+        "changePercent": "+8.73%",
         "volume": "35K",
         "timeframe": "After-Hours"
       },
       {
+        "symbol": "TSLA",
+        "price": "$130.20",
+        "change": "+13.62",
+        "changePercent": "+11.68%",
+        "volume": "211K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "NVDA",
+        "price": "$204.30",
+        "change": "+5.04",
+        "changePercent": "+2.53%",
+        "volume": "88K",
+        "timeframe": "After-Hours"
+      },
+      {
         "symbol": "META",
-        "price": "$157.74",
-        "change": "+3.49",
-        "changePercent": "+2.26%",
-        "volume": "64K",
+        "price": "$132.46",
+        "change": "+4.76",
+        "changePercent": "+3.73%",
+        "volume": "184K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "NFLX",
-        "price": "$131.23",
-        "change": "+5.05",
-        "changePercent": "+4.00%",
-        "volume": "100K",
+        "price": "$165.87",
+        "change": "+1.82",
+        "changePercent": "+1.11%",
+        "volume": "114K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "AMD",
-        "price": "$219.67",
-        "change": "+20.69",
-        "changePercent": "+10.40%",
-        "volume": "205K",
+        "price": "$168.55",
+        "change": "+2.83",
+        "changePercent": "+1.71%",
+        "volume": "44K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "CRM",
-        "price": "$118.28",
-        "change": "+0.86",
-        "changePercent": "+0.73%",
-        "volume": "28K",
+        "price": "$236.59",
+        "change": "+4.41",
+        "changePercent": "+1.90%",
+        "volume": "146K",
         "timeframe": "After-Hours"
       }
     ],
     "topLosers": [
       {
         "symbol": "AAPL",
-        "price": "$115.11",
-        "change": "-7.87",
-        "changePercent": "-6.4%",
-        "volume": "129K",
+        "price": "$113.41",
+        "change": "-3.80",
+        "changePercent": "-3.24%",
+        "volume": "77K",
         "timeframe": "After-Hours"
       },
       {
         "symbol": "MSFT",
-        "price": "$65.87",
-        "change": "-10.83",
-        "changePercent": "-14.12%",
-        "volume": "224K",
-        "timeframe": "After-Hours"
-      },
-      {
-        "symbol": "GOOGL",
-        "price": "$171.82",
-        "change": "-22.22",
-        "changePercent": "-11.45%",
-        "volume": "66K",
-        "timeframe": "After-Hours"
-      },
-      {
-        "symbol": "AMZN",
-        "price": "$73.98",
-        "change": "-5.87",
-        "changePercent": "-7.35%",
-        "volume": "64K",
-        "timeframe": "After-Hours"
-      },
-      {
-        "symbol": "TSLA",
-        "price": "$112.12",
-        "change": "-12.07",
-        "changePercent": "-9.72%",
-        "volume": "141K",
-        "timeframe": "After-Hours"
-      },
-      {
-        "symbol": "NVDA",
-        "price": "$132.23",
-        "change": "-14.15",
-        "changePercent": "-9.67%",
-        "volume": "69K",
-        "timeframe": "After-Hours"
-      },
-      {
-        "symbol": "META",
-        "price": "$50.19",
-        "change": "-5.58",
-        "changePercent": "-10.01%",
-        "volume": "90K",
-        "timeframe": "After-Hours"
-      },
-      {
-        "symbol": "NFLX",
-        "price": "$75.88",
-        "change": "-2.76",
-        "changePercent": "-3.51%",
-        "volume": "84K",
-        "timeframe": "After-Hours"
-      },
-      {
-        "symbol": "AMD",
-        "price": "$111.21",
-        "change": "-5.12",
-        "changePercent": "-4.4%",
+        "price": "$149.24",
+        "change": "-8.95",
+        "changePercent": "-5.66%",
         "volume": "191K",
         "timeframe": "After-Hours"
       },
       {
+        "symbol": "GOOGL",
+        "price": "$59.74",
+        "change": "-2.34",
+        "changePercent": "-3.77%",
+        "volume": "61K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "AMZN",
+        "price": "$51.52",
+        "change": "-6.81",
+        "changePercent": "-11.67%",
+        "volume": "144K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "TSLA",
+        "price": "$244.57",
+        "change": "-4.41",
+        "changePercent": "-1.77%",
+        "volume": "44K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "NVDA",
+        "price": "$77.55",
+        "change": "-5.86",
+        "changePercent": "-7.02%",
+        "volume": "41K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "META",
+        "price": "$154.69",
+        "change": "-9.63",
+        "changePercent": "-5.86%",
+        "volume": "161K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "NFLX",
+        "price": "$134.30",
+        "change": "-21.21",
+        "changePercent": "-13.64%",
+        "volume": "52K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "AMD",
+        "price": "$183.27",
+        "change": "-28.34",
+        "changePercent": "-13.39%",
+        "volume": "219K",
+        "timeframe": "After-Hours"
+      },
+      {
         "symbol": "CRM",
-        "price": "$111.70",
-        "change": "-10.48",
-        "changePercent": "-8.58%",
-        "volume": "147K",
+        "price": "$68.75",
+        "change": "-10.80",
+        "changePercent": "-13.57%",
+        "volume": "138K",
         "timeframe": "After-Hours"
       }
     ]
   },
   "overnightNews": [
+    {
+      "category": "top news",
+      "datetime": 1753878300,
+      "headline": "ADP says businesses create 104,000 jobs in July as trade wars ease and businesses gain more confidence",
+      "id": 7502023,
+      "image": "https://static2.finnhub.io/file/publicdatany/finnhubimage/market_watch_logo.png",
+      "related": "",
+      "source": "MarketWatch",
+      "summary": "Privately run businesses created 104,000 jobs in July after reducing employment in the prior month, ADP said, perhaps a sign that easing trade wars encouraged companies to hire more people.",
+      "url": "https://www.marketwatch.com/story/adp-says-businesses-create-104-000-jobs-in-july-as-trade-wars-ease-and-businesses-gain-more-confidence-2d604024"
+    },
     {
       "category": "top news",
       "datetime": 1753877400,
@@ -411,44 +422,33 @@
       "source": "MarketWatch",
       "summary": "Exchange-traded funds using options to generate income have become popular. They take a variety of approaches to providing income and growth.",
       "url": "https://www.marketwatch.com/story/these-etfs-will-give-you-high-income-but-you-need-to-learn-about-their-strategies-first-03b28066"
-    },
-    {
-      "category": "top news",
-      "datetime": 1753872705,
-      "headline": "Companies from Stanley Black & Decker to Conagra are saying tariffs will cost them hundreds of millions",
-      "id": 7501990,
-      "image": "https://image.cnbcfm.com/api/v1/image/108140208-1746212805992-gettyimages-2213091505-mms10402_xxt1boi6.jpeg?v=1753817620&w=1920&h=1080",
-      "related": "",
-      "source": "CNBC",
-      "summary": "Businesses in a range of industries have raced to figure out how to handle rising costs in the middle of a shakeup in global trade policy.",
-      "url": "https://www.cnbc.com/2025/07/30/stanley-black-decker-conagra-trump-tariffs-cost-increases.html"
     }
   ],
   "globalMarkets": {},
   "currencyMoves": {
     "EURUSD": {
-      "rate": "1.1514",
-      "lastRefreshed": "2025-07-30 12:27:57",
+      "rate": "1.1493",
+      "lastRefreshed": "2025-07-30 12:37:07",
       "session": "Overnight"
     },
     "GBPUSD": {
-      "rate": "1.3353",
-      "lastRefreshed": "2025-07-30 12:27:45",
+      "rate": "1.3330",
+      "lastRefreshed": "2025-07-30 12:37:04",
       "session": "Overnight"
     },
     "USDJPY": {
-      "rate": "148.4220",
-      "lastRefreshed": "2025-07-30 12:28:09",
+      "rate": "148.7210",
+      "lastRefreshed": "2025-07-30 12:37:24",
       "session": "Overnight"
     }
   },
   "reportMetadata": {
-    "generatedAt": "2025-07-30T12:29:08.753Z",
+    "generatedAt": "2025-07-30T12:38:24.421Z",
     "marketTimings": {
       "lastClose": "7/29/2025, 4:00:00 PM",
-      "nextOpen": "7/30/2025, 9:30:00 AM",
+      "nextOpen": "7/31/2025, 9:30:00 AM",
       "hoursSinceClose": 20,
-      "timeToOpenStr": "-3h -58m"
+      "timeToOpenStr": "20h 52m"
     },
     "analysisType": "institutional-grade",
     "dataQuality": {
