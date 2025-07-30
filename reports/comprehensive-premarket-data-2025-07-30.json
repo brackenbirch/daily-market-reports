@@ -1,0 +1,74 @@
+{
+  "headlines": {
+    "general": [],
+    "us": [],
+    "asian": [],
+    "european": [],
+    "geopolitical": [],
+    "currencies": [],
+    "commodities": [],
+    "webSearch": [
+      {
+        "headline": "Web Search Result: breaking market news today developments overnight",
+        "summary": "Market-relevant information found via web search for breaking market news today",
+        "source": "Web Search - web-search",
+        "datetime": "7/30/2025, 1:48:34 PM",
+        "confidence": "moderate"
+      },
+      {
+        "headline": "Web Search Result: overnight market developments developments overnight",
+        "summary": "Market-relevant information found via web search for overnight market developments",
+        "source": "Web Search - web-search",
+        "datetime": "7/30/2025, 1:48:34 PM",
+        "confidence": "moderate"
+      },
+      {
+        "headline": "Web Search Result: Asian markets overnight news developments overnight",
+        "summary": "Market-relevant information found via web search for Asian markets overnight news",
+        "source": "Web Search - web-search",
+        "datetime": "7/30/2025, 1:48:35 PM",
+        "confidence": "moderate"
+      },
+      {
+        "headline": "Web Search Result: European market news today developments overnight",
+        "summary": "Market-relevant information found via web search for European market news today",
+        "source": "Web Search - web-search",
+        "datetime": "7/30/2025, 1:48:35 PM",
+        "confidence": "moderate"
+      },
+      {
+        "headline": "Web Search Result: geopolitical market impact news developments overnight",
+        "summary": "Market-relevant information found via web search for geopolitical market impact news",
+        "source": "Web Search - web-search",
+        "datetime": "7/30/2025, 1:48:36 PM",
+        "confidence": "moderate"
+      }
+    ]
+  },
+  "timing": {
+    "lastCloseTimestamp": 1753804800,
+    "lastCloseString": "7/29/2025, 12:00:00 PM",
+    "currentTime": "7/30/2025, 9:48:33 AM"
+  },
+  "totalHeadlines": 5,
+  "activeAPIs": [
+    "Alpha Vantage",
+    "Finnhub"
+  ],
+  "categoryBreakdown": {
+    "general": 0,
+    "us": 0,
+    "asian": 0,
+    "european": 0,
+    "geopolitical": 0,
+    "currencies": 0,
+    "commodities": 0,
+    "webSearch": 5
+  },
+  "metadata": {
+    "generatedAt": "2025-07-30T13:49:15.632Z",
+    "reportType": "comprehensive-premarket-brief",
+    "aiModel": "claude-sonnet-4",
+    "classification": "institutional-grade"
+  }
+}
