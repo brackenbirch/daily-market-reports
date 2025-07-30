@@ -59,7 +59,8 @@ async function fetchComprehensiveNews() {
         geopolitical: [],
         currencies: [],
         commodities: [],
-        earnings: []
+        earnings: [],
+        research: []
     };
     
     console.log(`📰 Comprehensive news gathering since: ${timing.lastCloseString}`);
@@ -128,7 +129,8 @@ async function fetchComprehensiveNews() {
                 { query: '(Russia OR Ukraine OR "Middle East" OR sanctions OR "trade war" OR geopolitical OR NATO OR China OR "South China Sea" OR Iran OR Israel OR "North Korea" OR Taiwan OR diplomacy) AND (market OR impact OR economy)', category: 'geopolitical' },
                 { query: '(dollar OR euro OR yen OR "currency markets" OR forex OR "exchange rate" OR "central bank" OR DXY) AND (market OR rate)', category: 'currencies' },
                 { query: '(oil OR gold OR "natural gas" OR commodities OR "crude oil" OR copper OR wheat OR silver OR platinum OR "Brent crude") AND (price OR market)', category: 'commodities' },
-                { query: '(earnings OR "quarterly results" OR "earnings report" OR guidance OR revenue OR "after hours" OR "pre market") AND (stock OR company)', category: 'earnings' }
+                { query: '(earnings OR "quarterly results" OR "earnings report" OR guidance OR revenue OR "after hours" OR "pre market") AND (stock OR company)', category: 'earnings' },
+                { query: '("research report" OR "analyst report" OR "investment research" OR "equity research" OR "market research" OR "buy rating" OR "sell rating" OR "price target" OR "analyst upgrade" OR "analyst downgrade") AND (stock OR market)', category: 'research' }
             ];
             
             const yesterday = new Date();
@@ -532,7 +534,8 @@ COMPREHENSIVE HEADLINES DATA FROM MULTIPLE SOURCES:
         { key: 'geopolitical', title: 'GEOPOLITICAL HEADLINES' },
         { key: 'currencies', title: 'CURRENCY MARKET UPDATES' },
         { key: 'commodities', title: 'COMMODITY MARKET NEWS' },
-        { key: 'earnings', title: 'EARNINGS & CORPORATE NEWS' }
+        { key: 'earnings', title: 'EARNINGS & CORPORATE NEWS' },
+        { key: 'research', title: 'RESEARCH REPORTS & ANALYST COVERAGE' }
     ];
 
     sections.forEach(section => {
@@ -592,6 +595,12 @@ Write a comprehensive narrative analysis of overnight earnings reports, corporat
 
 **Key Earnings & Corporate Headlines:**
 [List at least 10 of the most relevant earnings and corporate headlines here in clean format - no bullet points, just numbered headlines with source attribution]
+
+## RESEARCH REPORTS & ANALYST COVERAGE
+Provide detailed analysis of overnight research publications, analyst rating changes, price target adjustments, equity research reports, economic forecasts, and investment recommendations that could influence today's trading decisions.
+
+**Key Research & Analyst Headlines:**
+[List at least 10 of the most relevant research reports and analyst updates here in clean format - no bullet points, just numbered headlines with source attribution]
 
 ## CROSS-MARKET IMPACT ANALYSIS
 Identify potential spillover effects between regions and asset classes based on overnight developments.
