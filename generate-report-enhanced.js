@@ -60,7 +60,8 @@ async function fetchComprehensiveNews() {
         currencies: [],
         commodities: [],
         earnings: [],
-        research: []
+        research: [],
+        premarketMovers: []
     };
     
     console.log(`📰 Comprehensive news gathering since: ${timing.lastCloseString}`);
@@ -535,7 +536,8 @@ COMPREHENSIVE HEADLINES DATA FROM MULTIPLE SOURCES:
         { key: 'currencies', title: 'CURRENCY MARKET UPDATES' },
         { key: 'commodities', title: 'COMMODITY MARKET NEWS' },
         { key: 'earnings', title: 'EARNINGS & CORPORATE NEWS' },
-        { key: 'research', title: 'RESEARCH REPORTS & ANALYST COVERAGE' }
+        { key: 'research', title: 'RESEARCH REPORTS & ANALYST COVERAGE' },
+        { key: 'premarketMovers', title: 'PRE-MARKET MOVERS & TRADING DATA' }
     ];
 
     sections.forEach(section => {
@@ -544,6 +546,7 @@ COMPREHENSIVE HEADLINES DATA FROM MULTIPLE SOURCES:
             headlines[section.key].forEach((news, index) => {
                 prompt += `${index + 1}. ${news.headline} (${news.source} - ${news.datetime})\n`;
                 if (news.summary) prompt += `   Summary: ${news.summary}\n`;
+                if (news.url) prompt += `   URL: ${news.url}\n`;
                 if (news.country) prompt += `   Country: ${news.country}\n`;
                 if (news.rate) prompt += `   Rate: ${news.rate}\n`;
             });
@@ -608,6 +611,12 @@ Write a comprehensive analysis of overnight research publications, analyst upgra
 **Key Research & Analyst Headlines:**
 [List at least 10 of the most relevant research reports and analyst coverage headlines here in clean format - no bullet points, just numbered headlines with source attribution]
 
+## PRE-MARKET MOVERS & TRADING DATA
+Provide comprehensive analysis of pre-market trading activity, highlighting significant price movements, volume spikes, and notable trading patterns. Include top gainers, losers, and most actively traded securities with percentage moves and volume data.
+
+**Key Pre-Market Movers:**
+[List the most significant pre-market movers including top gainers, losers, and high-volume stocks with price changes and trading data - no bullet points, just numbered entries with stock symbols and performance metrics]
+
 ## CROSS-MARKET IMPACT ANALYSIS
 Identify potential spillover effects between regions and asset classes based on overnight developments.
 
@@ -620,10 +629,12 @@ Highlight key risks and uncertainties that could develop during today's trading 
 FORMATTING REQUIREMENTS:
 - Use narrative paragraphs for analysis sections
 - Follow each analysis with "**Key [Section] Headlines:**" 
-- List headlines in clean numbered format (1. 2. 3.) with source attribution
+- List headlines in clean numbered format with clickable links: "1. Headline Title (Source) [Read More](URL)"
+- Include working URLs for each headline when available
+- For pre-market movers without URLs, format as: "1. SYMBOL +/-X.X% to $XX.XX - Description (Source)"
 - NO bullet points or dashes for headlines
 - Maintain professional institutional investment language throughout
-- Focus on actionable intelligence with clear headline attribution
+- Focus on actionable intelligence with clear headline attribution and direct access to source articles
 
 Report generated: ${timing.currentTime} ET
 Coverage period: Since market close ${timing.lastCloseString}
@@ -642,7 +653,7 @@ async function sendComprehensivePreMarketReport(reportContent, dateStr, headline
     try {
         console.log('📧 Preparing comprehensive pre-market briefing email...');
         
-        const transport = nodemailer.createTransport({
+        const transport = nodemailer.createTransport=({
             service: 'gmail',
             auth: {
                 user: GMAIL_USER,
@@ -650,12 +661,14 @@ async function sendComprehensivePreMarketReport(reportContent, dateStr, headline
             }
         });
         
-        // Enhanced HTML formatting with white background, black text, soft gold accents, and dark grey text
+        // Enhanced HTML formatting with white background, black text, soft gold accents, and clickable links
         const emailHtml = reportContent
             .replace(/^# (.*$)/gm, '<h1 style="color: #000000; border-bottom: 3px solid #E6C068; padding-bottom: 12px; margin-bottom: 20px; font-size: 28px;">$1</h1>')
             .replace(/^## (.*$)/gm, '<h2 style="color: #000000; margin-top: 30px; margin-bottom: 15px; border-bottom: 2px solid #E6C068; padding-bottom: 8px; font-size: 22px;">$1</h2>')
             .replace(/^\*\*(Key.*Headlines:)\*\*/gm, '<h3 style="color: #4A4A4A; margin-top: 25px; margin-bottom: 12px; font-weight: 600; font-size: 18px; border-bottom: 1px solid #E6C068; padding-bottom: 5px;">$1</h3>')
             .replace(/^\*\*(.*?)\*\*/gm, '<strong style="color: #000000; font-weight: 600;">$1</strong>')
+            .replace(/\[Read More\]\((https?:\/\/[^\)]+)\)/g, '<a href="$1" target="_blank" style="color: #E6C068; text-decoration: none; font-weight: 500; border-bottom: 1px solid #E6C068; padding-bottom: 1px;">Read More</a>')
+            .replace(/\[More Info\]\((https?:\/\/[^\)]+)\)/g, '<a href="$1" target="_blank" style="color: #E6C068; text-decoration: none; font-weight: 500; border-bottom: 1px solid #E6C068; padding-bottom: 1px;">More Info</a>')
             .replace(/^(\d+\.\s.*$)/gm, '<div style="margin: 8px 0; padding: 10px 15px; background-color: #FFFFFF; border-left: 3px solid #E6C068; border-radius: 4px; font-size: 14px; color: #000000; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">$1</div>')
             .replace(/^([^<\n#-\d].*$)/gm, '<p style="line-height: 1.7; margin-bottom: 14px; color: #000000; font-size: 15px;">$1</p>')
             .replace(/\n\n/g, '<br>')
