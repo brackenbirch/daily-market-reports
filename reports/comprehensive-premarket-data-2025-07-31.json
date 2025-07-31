@@ -2,137 +2,161 @@
   "headlines": {
     "general": [
       {
-        "headline": "Up Over 50% in Just 1 Month, Is It Too Late to Buy Kohl's Stock?",
-        "summary": "Despite its recent rally, the stock is still down more than 40% from its 52-week high, at the time of this writing.",
-        "source": "Alpha Vantage - Motley Fool",
-        "datetime": "Invalid Date",
-        "url": "https://www.fool.com/investing/2025/07/31/up-over-50-in-just-1-month-is-it-too-late-to-buy-k/",
-        "sentiment": "Neutral"
-      },
-      {
-        "headline": "Align Technology Posts Downbeat Earnings, Joins Confluent,FormFactor And Other Big Stocks Moving Lower In Thursday Pre-Market Session - Anheuser-Busch InBev  ( NYSE:BUD ) , Align Technology  ( NASDAQ:ALGN ) ",
-        "summary": "U.S. stock futures were mixed this morning, with the Dow futures falling around 0.4% on Thursday. Shares of Align Technology, Inc. ALGN fell sharply in pre-market trading after the company missed second-quarter earnings estimates and issued soft third-quarter guidance.",
-        "source": "Alpha Vantage - Benzinga",
-        "datetime": "Invalid Date",
-        "url": "https://www.benzinga.com/trading-ideas/movers/25/07/46755693/align-technology-posts-downbeat-earnings-joins-confluentformfactor-and-other-big-stocks-movi",
-        "sentiment": "Neutral"
-      },
-      {
-        "headline": "Carvana Stock Climbs To New Highs After Q2 Earnings: What's Driving The Action? - Carvana  ( NYSE:CVNA ) ",
-        "summary": "Carvana beats analyst estimates on the top and bottom lines in the second quarter. Needham analyst Chris Pierce maintains a Buy rating and raises the price target from $340 to $500. Get special access to three exclusive \"Top 10 Stocks\" power lists today, updated daily.",
-        "source": "Alpha Vantage - Benzinga",
-        "datetime": "Invalid Date",
-        "url": "https://www.benzinga.com/trading-ideas/movers/25/07/46756056/carvana-stock-climbs-to-new-highs-after-q2-earnings-whats-driving-the-action",
-        "sentiment": "Somewhat-Bullish"
-      },
-      {
-        "headline": "Kinetiq Unveils Launch: The First Exchange-as-a-Service  ( EaaS )  Platform for the Hyperliquid Ecosystem",
-        "summary": "NEW YORK, July 31, 2025 ( GLOBE NEWSWIRE ) -- Kinetiq ( the \"Company\" ) is pleased to announce Launch, the first Exchange-as-a-Service ( EaaS ) platform purpose-built for the Hyperliquid ecosystem.",
-        "source": "Alpha Vantage - Benzinga",
-        "datetime": "Invalid Date",
-        "url": "https://www.benzinga.com/pressreleases/25/07/g46757083/kinetiq-unveils-launch-the-first-exchange-as-a-service-eaas-platform-for-the-hyperliquid-ecosystem",
-        "sentiment": "Somewhat-Bullish"
-      },
-      {
-        "headline": "Koryx Copper Announces Closing of $25 Million Financing",
-        "summary": "Not for distribution to United States newswire services or for dissemination in the United States",
-        "source": "Alpha Vantage - Benzinga",
-        "datetime": "Invalid Date",
-        "url": "https://www.benzinga.com/pressreleases/25/07/g46756365/koryx-copper-announces-closing-of-25-million-financing",
-        "sentiment": "Somewhat-Bullish"
-      },
-      {
-        "headline": "Taglich Brothers Initiates Coverage of Banzai International, Inc. - Banzai International  ( NASDAQ:BNZI ) ",
-        "summary": "NEW YORK, July 31, 2025 ( GLOBE NEWSWIRE ) -- Taglich Brothers, Inc. announces that it has initiated coverage of Banzai International, Inc. BNZI.",
-        "source": "Alpha Vantage - Benzinga",
-        "datetime": "Invalid Date",
-        "url": "https://www.benzinga.com/pressreleases/25/07/g46756460/taglich-brothers-initiates-coverage-of-banzai-international-inc",
-        "sentiment": "Somewhat-Bullish"
-      },
-      {
-        "headline": "Hepsiburada Announces Second Quarter 2025 Financial Results",
-        "summary": "ISTANBUL, July 31, 2025 ( GLOBE NEWSWIRE ) -- D-MARKET Electronic Services & Trading ( d/b/a \"Hepsiburada\" ) ( NASDAQ: HEPS ) , a leading Turkish e-commerce platform ( referred to herein as \"Hepsiburada\" or the \"Company\" ) , today announces its unaudited financial results for the second quarter ...",
+        "headline": "Final Results",
+        "summary": "FORESIGHT TECHNOLOGY VCT PLCLEI: 21380013CXOR8N6OD97731 July ...",
         "source": "Alpha Vantage - GlobeNewswire",
         "datetime": "Invalid Date",
-        "url": "https://www.globenewswire.com/news-release/2025/07/31/3125078/0/en/Hepsiburada-Announces-Second-Quarter-2025-Financial-Results.html",
+        "url": "https://www.globenewswire.com/news-release/2025/07/31/3125168/0/en/Final-Results.html",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Behind the Scenes of Oklo's Latest Options Trends - Oklo  ( NYSE:OKLO ) ",
+        "summary": "Deep-pocketed investors have adopted a bullish approach towards Oklo OKLO, and it's something market players shouldn't ignore. Our tracking of public options records at Benzinga unveiled this significant move today.",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/insights/options/25/07/46758494/behind-the-scenes-of-oklos-latest-options-trends",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Meta Platforms's Options: A Look at What the Big Money is Thinking - Meta Platforms  ( NASDAQ:META ) ",
+        "summary": "Financial giants have made a conspicuous bullish move on Meta Platforms. Our analysis of options history for Meta Platforms META revealed 393 unusual trades. Delving into the details, we found 43% of traders were bullish, while 29% showed bearish tendencies.",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/insights/options/25/07/46758482/meta-platformss-options-a-look-at-what-the-big-money-is-thinking",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "This Is What Whales Are Betting On ServiceNow - ServiceNow  ( NYSE:NOW ) ",
+        "summary": "Financial giants have made a conspicuous bullish move on ServiceNow. Our analysis of options history for ServiceNow NOW revealed 14 unusual trades. Delving into the details, we found 42% of traders were bullish, while 35% showed bearish tendencies.",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/insights/options/25/07/46758498/this-is-what-whales-are-betting-on-servicenow",
         "sentiment": "Neutral"
       },
       {
-        "headline": "Koryx Copper Announces Closing of $25 Million Financing",
-        "summary": "Not for distribution to United States newswire services or for dissemination in the United States ...",
-        "source": "Alpha Vantage - GlobeNewswire",
+        "headline": "Why Is Bristol Myers Stock Falling Thursday? - Bristol-Myers Squibb  ( NYSE:BMY ) ",
+        "summary": "Q2 revenue rose to $12.27 billion, beating estimates; EPS of $1.46 missed the $1.58 consensus. 2025 EPS guidance cut to $6.35-$6.65; sales outlook raised to $46.5 billion-$47.5 billion. Get special access to three exclusive \"Top 10 Stocks\" power lists today, updated daily.",
+        "source": "Alpha Vantage - Benzinga",
         "datetime": "Invalid Date",
-        "url": "https://www.globenewswire.com/news-release/2025/07/31/3125095/0/en/Koryx-Copper-Announces-Closing-of-25-Million-Financing.html",
+        "url": "https://www.benzinga.com/markets/earnings/25/07/46760485/bristol-myers-cuts-earnings-outlook-as-legacy-drugs-face-generic-erosion",
+        "sentiment": "Neutral"
+      },
+      {
+        "headline": "Bitcoin Surpasses Amazon in Market Cap | How It Became a Top 5 Asset",
+        "summary": "Bitcoin's explosive July rally pushed its market cap to $2.4 trillion, overtaking Amazon, silver and Alphabet, cementing its place among the world's five most valuable assets.",
+        "source": "Alpha Vantage - Cointelegraph",
+        "datetime": "Invalid Date",
+        "url": "https://cointelegraph.com/explained/bitcoin-is-now-bigger-than-amazon-heres-how-it-became-a-top-5-asset",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Willis Lease Finance Corporation Announces Quarterly Dividend - Willis Lease Finance  ( NASDAQ:WLFC ) ",
+        "summary": "COCONUT CREEK, Fla., July 31, 2025 ( GLOBE NEWSWIRE ) -- Willis Lease Finance Corporation WLFC ( \"WLFC\" or the \"Company\" ) announced a quarterly dividend of $0.25 per share on outstanding shares of WLFC common stock.",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/pressreleases/25/07/g46759147/willis-lease-finance-corporation-announces-quarterly-dividend",
+        "sentiment": "Neutral"
+      },
+      {
+        "headline": "WuXi Biologics' Profit Guidance Signals Rebound In China's Drug Sector",
+        "summary": "The provider of pharmaceutical services has joined other flagship companies in the WuXi group in projecting stronger first-half earnings after a couple of lean years WuXi Biologics expects first-half revenue to rise 16% and profit to jump around 56%",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/markets/asia/25/07/46759892/wuxi-biologics-profit-guidance-signals-rebound-in-chinas-drug-sector",
         "sentiment": "Somewhat-Bullish"
       }
     ],
     "us": [
       {
-        "headline": "Up Over 50% in Just 1 Month, Is It Too Late to Buy Kohl's Stock?",
-        "summary": "Despite its recent rally, the stock is still down more than 40% from its 52-week high, at the time of this writing.",
-        "source": "Alpha Vantage US - Motley Fool",
-        "datetime": "Invalid Date",
-        "url": "https://www.fool.com/investing/2025/07/31/up-over-50-in-just-1-month-is-it-too-late-to-buy-k/",
-        "sentiment": "Neutral"
-      },
-      {
-        "headline": "Align Technology Posts Downbeat Earnings, Joins Confluent,FormFactor And Other Big Stocks Moving Lower In Thursday Pre-Market Session - Anheuser-Busch InBev  ( NYSE:BUD ) , Align Technology  ( NASDAQ:ALGN ) ",
-        "summary": "U.S. stock futures were mixed this morning, with the Dow futures falling around 0.4% on Thursday. Shares of Align Technology, Inc. ALGN fell sharply in pre-market trading after the company missed second-quarter earnings estimates and issued soft third-quarter guidance.",
-        "source": "Alpha Vantage US - Benzinga",
-        "datetime": "Invalid Date",
-        "url": "https://www.benzinga.com/trading-ideas/movers/25/07/46755693/align-technology-posts-downbeat-earnings-joins-confluentformfactor-and-other-big-stocks-movi",
-        "sentiment": "Neutral"
-      },
-      {
-        "headline": "Carvana Stock Climbs To New Highs After Q2 Earnings: What's Driving The Action? - Carvana  ( NYSE:CVNA ) ",
-        "summary": "Carvana beats analyst estimates on the top and bottom lines in the second quarter. Needham analyst Chris Pierce maintains a Buy rating and raises the price target from $340 to $500. Get special access to three exclusive \"Top 10 Stocks\" power lists today, updated daily.",
-        "source": "Alpha Vantage US - Benzinga",
-        "datetime": "Invalid Date",
-        "url": "https://www.benzinga.com/trading-ideas/movers/25/07/46756056/carvana-stock-climbs-to-new-highs-after-q2-earnings-whats-driving-the-action",
-        "sentiment": "Somewhat-Bullish"
-      },
-      {
-        "headline": "Kinetiq Unveils Launch: The First Exchange-as-a-Service  ( EaaS )  Platform for the Hyperliquid Ecosystem",
-        "summary": "NEW YORK, July 31, 2025 ( GLOBE NEWSWIRE ) -- Kinetiq ( the \"Company\" ) is pleased to announce Launch, the first Exchange-as-a-Service ( EaaS ) platform purpose-built for the Hyperliquid ecosystem.",
-        "source": "Alpha Vantage US - Benzinga",
-        "datetime": "Invalid Date",
-        "url": "https://www.benzinga.com/pressreleases/25/07/g46757083/kinetiq-unveils-launch-the-first-exchange-as-a-service-eaas-platform-for-the-hyperliquid-ecosystem",
-        "sentiment": "Somewhat-Bullish"
-      },
-      {
-        "headline": "Koryx Copper Announces Closing of $25 Million Financing",
-        "summary": "Not for distribution to United States newswire services or for dissemination in the United States",
-        "source": "Alpha Vantage US - Benzinga",
-        "datetime": "Invalid Date",
-        "url": "https://www.benzinga.com/pressreleases/25/07/g46756365/koryx-copper-announces-closing-of-25-million-financing",
-        "sentiment": "Somewhat-Bullish"
-      },
-      {
-        "headline": "Taglich Brothers Initiates Coverage of Banzai International, Inc. - Banzai International  ( NASDAQ:BNZI ) ",
-        "summary": "NEW YORK, July 31, 2025 ( GLOBE NEWSWIRE ) -- Taglich Brothers, Inc. announces that it has initiated coverage of Banzai International, Inc. BNZI.",
-        "source": "Alpha Vantage US - Benzinga",
-        "datetime": "Invalid Date",
-        "url": "https://www.benzinga.com/pressreleases/25/07/g46756460/taglich-brothers-initiates-coverage-of-banzai-international-inc",
-        "sentiment": "Somewhat-Bullish"
-      },
-      {
-        "headline": "Hepsiburada Announces Second Quarter 2025 Financial Results",
-        "summary": "ISTANBUL, July 31, 2025 ( GLOBE NEWSWIRE ) -- D-MARKET Electronic Services & Trading ( d/b/a \"Hepsiburada\" ) ( NASDAQ: HEPS ) , a leading Turkish e-commerce platform ( referred to herein as \"Hepsiburada\" or the \"Company\" ) , today announces its unaudited financial results for the second quarter ...",
+        "headline": "Final Results",
+        "summary": "FORESIGHT TECHNOLOGY VCT PLCLEI: 21380013CXOR8N6OD97731 July ...",
         "source": "Alpha Vantage US - GlobeNewswire",
         "datetime": "Invalid Date",
-        "url": "https://www.globenewswire.com/news-release/2025/07/31/3125078/0/en/Hepsiburada-Announces-Second-Quarter-2025-Financial-Results.html",
+        "url": "https://www.globenewswire.com/news-release/2025/07/31/3125168/0/en/Final-Results.html",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Behind the Scenes of Oklo's Latest Options Trends - Oklo  ( NYSE:OKLO ) ",
+        "summary": "Deep-pocketed investors have adopted a bullish approach towards Oklo OKLO, and it's something market players shouldn't ignore. Our tracking of public options records at Benzinga unveiled this significant move today.",
+        "source": "Alpha Vantage US - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/insights/options/25/07/46758494/behind-the-scenes-of-oklos-latest-options-trends",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Meta Platforms's Options: A Look at What the Big Money is Thinking - Meta Platforms  ( NASDAQ:META ) ",
+        "summary": "Financial giants have made a conspicuous bullish move on Meta Platforms. Our analysis of options history for Meta Platforms META revealed 393 unusual trades. Delving into the details, we found 43% of traders were bullish, while 29% showed bearish tendencies.",
+        "source": "Alpha Vantage US - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/insights/options/25/07/46758482/meta-platformss-options-a-look-at-what-the-big-money-is-thinking",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "This Is What Whales Are Betting On ServiceNow - ServiceNow  ( NYSE:NOW ) ",
+        "summary": "Financial giants have made a conspicuous bullish move on ServiceNow. Our analysis of options history for ServiceNow NOW revealed 14 unusual trades. Delving into the details, we found 42% of traders were bullish, while 35% showed bearish tendencies.",
+        "source": "Alpha Vantage US - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/insights/options/25/07/46758498/this-is-what-whales-are-betting-on-servicenow",
         "sentiment": "Neutral"
       },
       {
-        "headline": "Koryx Copper Announces Closing of $25 Million Financing",
-        "summary": "Not for distribution to United States newswire services or for dissemination in the United States ...",
-        "source": "Alpha Vantage US - GlobeNewswire",
+        "headline": "Why Is Bristol Myers Stock Falling Thursday? - Bristol-Myers Squibb  ( NYSE:BMY ) ",
+        "summary": "Q2 revenue rose to $12.27 billion, beating estimates; EPS of $1.46 missed the $1.58 consensus. 2025 EPS guidance cut to $6.35-$6.65; sales outlook raised to $46.5 billion-$47.5 billion. Get special access to three exclusive \"Top 10 Stocks\" power lists today, updated daily.",
+        "source": "Alpha Vantage US - Benzinga",
         "datetime": "Invalid Date",
-        "url": "https://www.globenewswire.com/news-release/2025/07/31/3125095/0/en/Koryx-Copper-Announces-Closing-of-25-Million-Financing.html",
+        "url": "https://www.benzinga.com/markets/earnings/25/07/46760485/bristol-myers-cuts-earnings-outlook-as-legacy-drugs-face-generic-erosion",
+        "sentiment": "Neutral"
+      },
+      {
+        "headline": "Bitcoin Surpasses Amazon in Market Cap | How It Became a Top 5 Asset",
+        "summary": "Bitcoin's explosive July rally pushed its market cap to $2.4 trillion, overtaking Amazon, silver and Alphabet, cementing its place among the world's five most valuable assets.",
+        "source": "Alpha Vantage US - Cointelegraph",
+        "datetime": "Invalid Date",
+        "url": "https://cointelegraph.com/explained/bitcoin-is-now-bigger-than-amazon-heres-how-it-became-a-top-5-asset",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Willis Lease Finance Corporation Announces Quarterly Dividend - Willis Lease Finance  ( NASDAQ:WLFC ) ",
+        "summary": "COCONUT CREEK, Fla., July 31, 2025 ( GLOBE NEWSWIRE ) -- Willis Lease Finance Corporation WLFC ( \"WLFC\" or the \"Company\" ) announced a quarterly dividend of $0.25 per share on outstanding shares of WLFC common stock.",
+        "source": "Alpha Vantage US - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/pressreleases/25/07/g46759147/willis-lease-finance-corporation-announces-quarterly-dividend",
+        "sentiment": "Neutral"
+      },
+      {
+        "headline": "WuXi Biologics' Profit Guidance Signals Rebound In China's Drug Sector",
+        "summary": "The provider of pharmaceutical services has joined other flagship companies in the WuXi group in projecting stronger first-half earnings after a couple of lean years WuXi Biologics expects first-half revenue to rise 16% and profit to jump around 56%",
+        "source": "Alpha Vantage US - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/markets/asia/25/07/46759892/wuxi-biologics-profit-guidance-signals-rebound-in-chinas-drug-sector",
         "sentiment": "Somewhat-Bullish"
       }
     ],
     "asian": [
+      {
+        "headline": "Meta, Microsoft, Google Are Unleashing A $240 Billion AI Tsunami - Microsoft  ( NASDAQ:MSFT ) , Alphabet  ( NASDAQ:GOOGL ) , Meta Platforms  ( NASDAQ:META ) ",
+        "summary": "Meta, Microsoft, and Google plan to invest a staggering $250 billion+ in AI infrastructure over the next two years. Wedbush and JPMorgan analysts see this as a tidal wave powering the 4th Industrial Revolution and massive tech growth. The market's back, and these 3 income stocks are thriving.",
+        "source": "Alpha Vantage Asia - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/markets/tech/25/07/46760252/meta-microsoft-and-google-are-unleashing-a-250-billion-ai-tsunami",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Is Nebius Stock A Buy Before Aug. 7?",
+        "summary": "Nebius is scheduled to report second-quarter earnings on Aug. 7.",
+        "source": "Alpha Vantage Asia - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/07/31/is-nebius-stock-a-buy-before-aug-7/",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "2 Dividend Stocks That Could Help Set You Up for Life",
+        "summary": "These companies have stood the test of time and provide above-average dividend yields.",
+        "source": "Alpha Vantage Asia - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/07/31/2-dividend-stocks-that-could-help-set-you-up-for/",
+        "sentiment": "Somewhat-Bullish"
+      },
       {
         "headline": "WKSP Invites You to Join Its Second Quarter 2025 Earnings Conference Call",
         "summary": "Worksport Ltd. Announces August 13, 2025, as Q2 2025 Earnings Report DateWest Seneca, New York, July 31, 2025 ( GLOBE NEWSWIRE ) -- Worksport Ltd. ( NASDAQ: WKSP ) ( \"Worksport\" or the \"Company\" ) , a U.S.-based innovator and manufacturer of hybrid and clean energy solutions primarily for the ...",
@@ -172,158 +196,134 @@
         "datetime": "Invalid Date",
         "url": "https://www.zacks.com/stock/news/2643226/lightspeed-commerce-inc-lspd-q1-earnings-lag-estimates",
         "sentiment": "Neutral"
-      },
-      {
-        "headline": "Qualcomm Surpasses Q3 Earnings Estimates, Misses on Revenues",
-        "summary": "QCOM beats Q3 earnings estimates as record auto revenues offset a slight miss on total sales.",
-        "source": "Alpha Vantage Asia - Zacks Commentary",
-        "datetime": "Invalid Date",
-        "url": "https://www.zacks.com/stock/news/2643152/qualcomm-surpasses-q3-earnings-estimates-misses-on-revenues",
-        "sentiment": "Somewhat-Bullish"
-      },
-      {
-        "headline": "Should You Forget Nvidia and Buy These 2 Millionaire-Maker Stocks Instead?",
-        "summary": "These two tech stocks are increasing revenue and have big growth opportunities on the horizon.",
-        "source": "Alpha Vantage Asia - Motley Fool",
-        "datetime": "Invalid Date",
-        "url": "https://www.fool.com/investing/2025/07/31/should-you-forget-nvidia-and-buy-2-millionaire/",
-        "sentiment": "Somewhat-Bullish"
-      },
-      {
-        "headline": "Texas Instruments and ASML Are Falling. Could Other AI Growth Stocks Be Next?",
-        "summary": "These two dividend-paying chip stocks could be worth a closer look in August.",
-        "source": "Alpha Vantage Asia - Motley Fool",
-        "datetime": "Invalid Date",
-        "url": "https://www.fool.com/investing/2025/07/31/texas-instruments-and-asml-are-falling-could-other/",
-        "sentiment": "Neutral"
       }
     ],
     "european": [
       {
-        "headline": "Up Over 50% in Just 1 Month, Is It Too Late to Buy Kohl's Stock?",
-        "summary": "Despite its recent rally, the stock is still down more than 40% from its 52-week high, at the time of this writing.",
-        "source": "Alpha Vantage Europe - Motley Fool",
-        "datetime": "Invalid Date",
-        "url": "https://www.fool.com/investing/2025/07/31/up-over-50-in-just-1-month-is-it-too-late-to-buy-k/",
-        "sentiment": "Neutral"
-      },
-      {
-        "headline": "Align Technology Posts Downbeat Earnings, Joins Confluent,FormFactor And Other Big Stocks Moving Lower In Thursday Pre-Market Session - Anheuser-Busch InBev  ( NYSE:BUD ) , Align Technology  ( NASDAQ:ALGN ) ",
-        "summary": "U.S. stock futures were mixed this morning, with the Dow futures falling around 0.4% on Thursday. Shares of Align Technology, Inc. ALGN fell sharply in pre-market trading after the company missed second-quarter earnings estimates and issued soft third-quarter guidance.",
-        "source": "Alpha Vantage Europe - Benzinga",
-        "datetime": "Invalid Date",
-        "url": "https://www.benzinga.com/trading-ideas/movers/25/07/46755693/align-technology-posts-downbeat-earnings-joins-confluentformfactor-and-other-big-stocks-movi",
-        "sentiment": "Neutral"
-      },
-      {
-        "headline": "Carvana Stock Climbs To New Highs After Q2 Earnings: What's Driving The Action? - Carvana  ( NYSE:CVNA ) ",
-        "summary": "Carvana beats analyst estimates on the top and bottom lines in the second quarter. Needham analyst Chris Pierce maintains a Buy rating and raises the price target from $340 to $500. Get special access to three exclusive \"Top 10 Stocks\" power lists today, updated daily.",
-        "source": "Alpha Vantage Europe - Benzinga",
-        "datetime": "Invalid Date",
-        "url": "https://www.benzinga.com/trading-ideas/movers/25/07/46756056/carvana-stock-climbs-to-new-highs-after-q2-earnings-whats-driving-the-action",
-        "sentiment": "Somewhat-Bullish"
-      },
-      {
-        "headline": "Kinetiq Unveils Launch: The First Exchange-as-a-Service  ( EaaS )  Platform for the Hyperliquid Ecosystem",
-        "summary": "NEW YORK, July 31, 2025 ( GLOBE NEWSWIRE ) -- Kinetiq ( the \"Company\" ) is pleased to announce Launch, the first Exchange-as-a-Service ( EaaS ) platform purpose-built for the Hyperliquid ecosystem.",
-        "source": "Alpha Vantage Europe - Benzinga",
-        "datetime": "Invalid Date",
-        "url": "https://www.benzinga.com/pressreleases/25/07/g46757083/kinetiq-unveils-launch-the-first-exchange-as-a-service-eaas-platform-for-the-hyperliquid-ecosystem",
-        "sentiment": "Somewhat-Bullish"
-      },
-      {
-        "headline": "Koryx Copper Announces Closing of $25 Million Financing",
-        "summary": "Not for distribution to United States newswire services or for dissemination in the United States",
-        "source": "Alpha Vantage Europe - Benzinga",
-        "datetime": "Invalid Date",
-        "url": "https://www.benzinga.com/pressreleases/25/07/g46756365/koryx-copper-announces-closing-of-25-million-financing",
-        "sentiment": "Somewhat-Bullish"
-      },
-      {
-        "headline": "Taglich Brothers Initiates Coverage of Banzai International, Inc. - Banzai International  ( NASDAQ:BNZI ) ",
-        "summary": "NEW YORK, July 31, 2025 ( GLOBE NEWSWIRE ) -- Taglich Brothers, Inc. announces that it has initiated coverage of Banzai International, Inc. BNZI.",
-        "source": "Alpha Vantage Europe - Benzinga",
-        "datetime": "Invalid Date",
-        "url": "https://www.benzinga.com/pressreleases/25/07/g46756460/taglich-brothers-initiates-coverage-of-banzai-international-inc",
-        "sentiment": "Somewhat-Bullish"
-      },
-      {
-        "headline": "Hepsiburada Announces Second Quarter 2025 Financial Results",
-        "summary": "ISTANBUL, July 31, 2025 ( GLOBE NEWSWIRE ) -- D-MARKET Electronic Services & Trading ( d/b/a \"Hepsiburada\" ) ( NASDAQ: HEPS ) , a leading Turkish e-commerce platform ( referred to herein as \"Hepsiburada\" or the \"Company\" ) , today announces its unaudited financial results for the second quarter ...",
+        "headline": "Final Results",
+        "summary": "FORESIGHT TECHNOLOGY VCT PLCLEI: 21380013CXOR8N6OD97731 July ...",
         "source": "Alpha Vantage Europe - GlobeNewswire",
         "datetime": "Invalid Date",
-        "url": "https://www.globenewswire.com/news-release/2025/07/31/3125078/0/en/Hepsiburada-Announces-Second-Quarter-2025-Financial-Results.html",
+        "url": "https://www.globenewswire.com/news-release/2025/07/31/3125168/0/en/Final-Results.html",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Behind the Scenes of Oklo's Latest Options Trends - Oklo  ( NYSE:OKLO ) ",
+        "summary": "Deep-pocketed investors have adopted a bullish approach towards Oklo OKLO, and it's something market players shouldn't ignore. Our tracking of public options records at Benzinga unveiled this significant move today.",
+        "source": "Alpha Vantage Europe - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/insights/options/25/07/46758494/behind-the-scenes-of-oklos-latest-options-trends",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Meta Platforms's Options: A Look at What the Big Money is Thinking - Meta Platforms  ( NASDAQ:META ) ",
+        "summary": "Financial giants have made a conspicuous bullish move on Meta Platforms. Our analysis of options history for Meta Platforms META revealed 393 unusual trades. Delving into the details, we found 43% of traders were bullish, while 29% showed bearish tendencies.",
+        "source": "Alpha Vantage Europe - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/insights/options/25/07/46758482/meta-platformss-options-a-look-at-what-the-big-money-is-thinking",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "This Is What Whales Are Betting On ServiceNow - ServiceNow  ( NYSE:NOW ) ",
+        "summary": "Financial giants have made a conspicuous bullish move on ServiceNow. Our analysis of options history for ServiceNow NOW revealed 14 unusual trades. Delving into the details, we found 42% of traders were bullish, while 35% showed bearish tendencies.",
+        "source": "Alpha Vantage Europe - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/insights/options/25/07/46758498/this-is-what-whales-are-betting-on-servicenow",
         "sentiment": "Neutral"
       },
       {
-        "headline": "Koryx Copper Announces Closing of $25 Million Financing",
-        "summary": "Not for distribution to United States newswire services or for dissemination in the United States ...",
-        "source": "Alpha Vantage Europe - GlobeNewswire",
+        "headline": "Why Is Bristol Myers Stock Falling Thursday? - Bristol-Myers Squibb  ( NYSE:BMY ) ",
+        "summary": "Q2 revenue rose to $12.27 billion, beating estimates; EPS of $1.46 missed the $1.58 consensus. 2025 EPS guidance cut to $6.35-$6.65; sales outlook raised to $46.5 billion-$47.5 billion. Get special access to three exclusive \"Top 10 Stocks\" power lists today, updated daily.",
+        "source": "Alpha Vantage Europe - Benzinga",
         "datetime": "Invalid Date",
-        "url": "https://www.globenewswire.com/news-release/2025/07/31/3125095/0/en/Koryx-Copper-Announces-Closing-of-25-Million-Financing.html",
+        "url": "https://www.benzinga.com/markets/earnings/25/07/46760485/bristol-myers-cuts-earnings-outlook-as-legacy-drugs-face-generic-erosion",
+        "sentiment": "Neutral"
+      },
+      {
+        "headline": "Bitcoin Surpasses Amazon in Market Cap | How It Became a Top 5 Asset",
+        "summary": "Bitcoin's explosive July rally pushed its market cap to $2.4 trillion, overtaking Amazon, silver and Alphabet, cementing its place among the world's five most valuable assets.",
+        "source": "Alpha Vantage Europe - Cointelegraph",
+        "datetime": "Invalid Date",
+        "url": "https://cointelegraph.com/explained/bitcoin-is-now-bigger-than-amazon-heres-how-it-became-a-top-5-asset",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Willis Lease Finance Corporation Announces Quarterly Dividend - Willis Lease Finance  ( NASDAQ:WLFC ) ",
+        "summary": "COCONUT CREEK, Fla., July 31, 2025 ( GLOBE NEWSWIRE ) -- Willis Lease Finance Corporation WLFC ( \"WLFC\" or the \"Company\" ) announced a quarterly dividend of $0.25 per share on outstanding shares of WLFC common stock.",
+        "source": "Alpha Vantage Europe - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/pressreleases/25/07/g46759147/willis-lease-finance-corporation-announces-quarterly-dividend",
+        "sentiment": "Neutral"
+      },
+      {
+        "headline": "WuXi Biologics' Profit Guidance Signals Rebound In China's Drug Sector",
+        "summary": "The provider of pharmaceutical services has joined other flagship companies in the WuXi group in projecting stronger first-half earnings after a couple of lean years WuXi Biologics expects first-half revenue to rise 16% and profit to jump around 56%",
+        "source": "Alpha Vantage Europe - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/markets/asia/25/07/46759892/wuxi-biologics-profit-guidance-signals-rebound-in-chinas-drug-sector",
         "sentiment": "Somewhat-Bullish"
       }
     ],
     "geopolitical": [],
     "currencies": [
       {
-        "headline": "Up Over 50% in Just 1 Month, Is It Too Late to Buy Kohl's Stock?",
-        "summary": "Despite its recent rally, the stock is still down more than 40% from its 52-week high, at the time of this writing.",
-        "source": "Alpha Vantage FX - Motley Fool",
+        "headline": "Final Results",
+        "summary": "FORESIGHT TECHNOLOGY VCT PLCLEI: 21380013CXOR8N6OD97731 July ...",
+        "source": "Alpha Vantage FX - GlobeNewswire",
         "datetime": "Invalid Date",
-        "url": "https://www.fool.com/investing/2025/07/31/up-over-50-in-just-1-month-is-it-too-late-to-buy-k/",
+        "url": "https://www.globenewswire.com/news-release/2025/07/31/3125168/0/en/Final-Results.html",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Behind the Scenes of Oklo's Latest Options Trends - Oklo  ( NYSE:OKLO ) ",
+        "summary": "Deep-pocketed investors have adopted a bullish approach towards Oklo OKLO, and it's something market players shouldn't ignore. Our tracking of public options records at Benzinga unveiled this significant move today.",
+        "source": "Alpha Vantage FX - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/insights/options/25/07/46758494/behind-the-scenes-of-oklos-latest-options-trends",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Meta Platforms's Options: A Look at What the Big Money is Thinking - Meta Platforms  ( NASDAQ:META ) ",
+        "summary": "Financial giants have made a conspicuous bullish move on Meta Platforms. Our analysis of options history for Meta Platforms META revealed 393 unusual trades. Delving into the details, we found 43% of traders were bullish, while 29% showed bearish tendencies.",
+        "source": "Alpha Vantage FX - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/insights/options/25/07/46758482/meta-platformss-options-a-look-at-what-the-big-money-is-thinking",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "This Is What Whales Are Betting On ServiceNow - ServiceNow  ( NYSE:NOW ) ",
+        "summary": "Financial giants have made a conspicuous bullish move on ServiceNow. Our analysis of options history for ServiceNow NOW revealed 14 unusual trades. Delving into the details, we found 42% of traders were bullish, while 35% showed bearish tendencies.",
+        "source": "Alpha Vantage FX - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/insights/options/25/07/46758498/this-is-what-whales-are-betting-on-servicenow",
         "sentiment": "Neutral"
       },
       {
-        "headline": "Align Technology Posts Downbeat Earnings, Joins Confluent,FormFactor And Other Big Stocks Moving Lower In Thursday Pre-Market Session - Anheuser-Busch InBev  ( NYSE:BUD ) , Align Technology  ( NASDAQ:ALGN ) ",
-        "summary": "U.S. stock futures were mixed this morning, with the Dow futures falling around 0.4% on Thursday. Shares of Align Technology, Inc. ALGN fell sharply in pre-market trading after the company missed second-quarter earnings estimates and issued soft third-quarter guidance.",
+        "headline": "Why Is Bristol Myers Stock Falling Thursday? - Bristol-Myers Squibb  ( NYSE:BMY ) ",
+        "summary": "Q2 revenue rose to $12.27 billion, beating estimates; EPS of $1.46 missed the $1.58 consensus. 2025 EPS guidance cut to $6.35-$6.65; sales outlook raised to $46.5 billion-$47.5 billion. Get special access to three exclusive \"Top 10 Stocks\" power lists today, updated daily.",
         "source": "Alpha Vantage FX - Benzinga",
         "datetime": "Invalid Date",
-        "url": "https://www.benzinga.com/trading-ideas/movers/25/07/46755693/align-technology-posts-downbeat-earnings-joins-confluentformfactor-and-other-big-stocks-movi",
+        "url": "https://www.benzinga.com/markets/earnings/25/07/46760485/bristol-myers-cuts-earnings-outlook-as-legacy-drugs-face-generic-erosion",
         "sentiment": "Neutral"
       },
       {
-        "headline": "Carvana Stock Climbs To New Highs After Q2 Earnings: What's Driving The Action? - Carvana  ( NYSE:CVNA ) ",
-        "summary": "Carvana beats analyst estimates on the top and bottom lines in the second quarter. Needham analyst Chris Pierce maintains a Buy rating and raises the price target from $340 to $500. Get special access to three exclusive \"Top 10 Stocks\" power lists today, updated daily.",
-        "source": "Alpha Vantage FX - Benzinga",
+        "headline": "Bitcoin Surpasses Amazon in Market Cap | How It Became a Top 5 Asset",
+        "summary": "Bitcoin's explosive July rally pushed its market cap to $2.4 trillion, overtaking Amazon, silver and Alphabet, cementing its place among the world's five most valuable assets.",
+        "source": "Alpha Vantage FX - Cointelegraph",
         "datetime": "Invalid Date",
-        "url": "https://www.benzinga.com/trading-ideas/movers/25/07/46756056/carvana-stock-climbs-to-new-highs-after-q2-earnings-whats-driving-the-action",
-        "sentiment": "Somewhat-Bullish"
-      },
-      {
-        "headline": "Kinetiq Unveils Launch: The First Exchange-as-a-Service  ( EaaS )  Platform for the Hyperliquid Ecosystem",
-        "summary": "NEW YORK, July 31, 2025 ( GLOBE NEWSWIRE ) -- Kinetiq ( the \"Company\" ) is pleased to announce Launch, the first Exchange-as-a-Service ( EaaS ) platform purpose-built for the Hyperliquid ecosystem.",
-        "source": "Alpha Vantage FX - Benzinga",
-        "datetime": "Invalid Date",
-        "url": "https://www.benzinga.com/pressreleases/25/07/g46757083/kinetiq-unveils-launch-the-first-exchange-as-a-service-eaas-platform-for-the-hyperliquid-ecosystem",
-        "sentiment": "Somewhat-Bullish"
-      },
-      {
-        "headline": "Taglich Brothers Initiates Coverage of Banzai International, Inc. - Banzai International  ( NASDAQ:BNZI ) ",
-        "summary": "NEW YORK, July 31, 2025 ( GLOBE NEWSWIRE ) -- Taglich Brothers, Inc. announces that it has initiated coverage of Banzai International, Inc. BNZI.",
-        "source": "Alpha Vantage FX - Benzinga",
-        "datetime": "Invalid Date",
-        "url": "https://www.benzinga.com/pressreleases/25/07/g46756460/taglich-brothers-initiates-coverage-of-banzai-international-inc",
+        "url": "https://cointelegraph.com/explained/bitcoin-is-now-bigger-than-amazon-heres-how-it-became-a-top-5-asset",
         "sentiment": "Somewhat-Bullish"
       }
     ],
-    "commodities": [
-      {
-        "headline": "Koryx Copper Announces Closing of $25 Million Financing",
-        "summary": "Not for distribution to United States newswire services or for dissemination in the United States",
-        "source": "Alpha Vantage FX - Benzinga",
-        "datetime": "Invalid Date",
-        "url": "https://www.benzinga.com/pressreleases/25/07/g46756365/koryx-copper-announces-closing-of-25-million-financing",
-        "sentiment": "Somewhat-Bullish"
-      }
-    ],
+    "commodities": [],
     "earnings": [],
-    "research": []
+    "research": [],
+    "premarketMovers": []
   },
   "timing": {
     "lastCloseTimestamp": 1753891200,
     "lastCloseString": "7/30/2025, 12:00:00 PM",
-    "currentTime": "7/31/2025, 10:23:16 AM"
+    "currentTime": "7/31/2025, 11:02:05 AM"
   },
   "totalHeadlines": 38,
   "activeAPIs": [
@@ -336,13 +336,14 @@
     "asian": 8,
     "european": 8,
     "geopolitical": 0,
-    "currencies": 5,
-    "commodities": 1,
+    "currencies": 6,
+    "commodities": 0,
     "earnings": 0,
-    "research": 0
+    "research": 0,
+    "premarketMovers": 0
   },
   "metadata": {
-    "generatedAt": "2025-07-31T14:24:36.140Z",
+    "generatedAt": "2025-07-31T15:03:44.349Z",
     "reportType": "comprehensive-premarket-brief",
     "aiModel": "claude-sonnet-4",
     "classification": "institutional-grade"
