@@ -561,10 +561,10 @@ Please create a comprehensive professional pre-market briefing with the followin
 ## ${new Date().toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}
 
 ## AT A GLANCE
-Provide a comprehensive executive overview that synthesizes all overnight developments into key themes and market-moving events. Highlight the single most important story, identify 3-4 critical developments across regions, and note any potential market catalysts for today's trading session. This should serve as a complete summary that a busy executive could read to understand all major overnight developments in 60 seconds.
+Provide a comprehensive executive overview that synthesizes all overnight developments into key themes and market-moving events. Highlight the single most important story, identify 3-4 critical developments across regions, and note any potential market catalysts for today's trading session. This should serve as a complete summary that a busy executive could read to understand all major overnight developments in 60 seconds. **PAY SPECIAL ATTENTION TO AFTER-HOURS EARNINGS REPORTS, MAJOR CORPORATE ANNOUNCEMENTS, AND BREAKING GEOPOLITICAL/TRADE DEVELOPMENTS.**
 
 **Critical Overnight Events:**
-[List the top 5-7 most market-moving headlines from across all categories - these should be the absolute biggest stories that could impact trading today]
+[List the top 5-7 most market-moving headlines from across all categories - prioritize earnings beats, major corporate news, geopolitical developments, and any events causing significant pre-market moves - these should be the absolute biggest stories that could impact trading today]
 
 ## EXECUTIVE SUMMARY
 Provide a 3-4 sentence overview of the most market-moving developments overnight and their potential impact on today's trading session, incorporating insights from multiple data sources.
