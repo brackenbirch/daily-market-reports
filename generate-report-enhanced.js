@@ -653,7 +653,7 @@ async function sendComprehensivePreMarketReport(reportContent, dateStr, headline
     try {
         console.log('📧 Preparing comprehensive pre-market briefing email...');
         
-        const transport = nodemailer.createTransport=({
+        const transport = nodemailer.createTransport({
             service: 'gmail',
             auth: {
                 user: GMAIL_USER,
