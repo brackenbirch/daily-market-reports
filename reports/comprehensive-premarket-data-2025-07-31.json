@@ -323,7 +323,7 @@
   "timing": {
     "lastCloseTimestamp": 1753891200,
     "lastCloseString": "7/30/2025, 12:00:00 PM",
-    "currentTime": "7/31/2025, 11:02:05 AM"
+    "currentTime": "7/31/2025, 11:29:04 AM"
   },
   "totalHeadlines": 38,
   "activeAPIs": [
@@ -343,7 +343,7 @@
     "premarketMovers": 0
   },
   "metadata": {
-    "generatedAt": "2025-07-31T15:03:44.349Z",
+    "generatedAt": "2025-07-31T15:30:53.334Z",
     "reportType": "comprehensive-premarket-brief",
     "aiModel": "claude-sonnet-4",
     "classification": "institutional-grade"
