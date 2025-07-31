@@ -1,58 +1,56 @@
 {
-  "name": "verified-market-report-generator",
+  "name": "premarket-news-briefing",
   "version": "2.0.0",
-  "description": "Automated daily market report generator with accuracy verification using Claude AI",
-  "main": "generate-verified-report.js",
+  "description": "Comprehensive pre-market intelligence briefing system with API integration and web scraping",
+  "main": "generate-report-enhanced.js",
   "scripts": {
-    "start": "node generate-verified-report.js",
-    "generate": "node generate-verified-report.js",
-    "test-connection": "node -e \"console.log('Testing API connections...'); require('./generate-verified-report.js');\"",
-    "validate-env": "node -e \"console.log('Environment Check:'); console.log('ANTHROPIC_API_KEY:', process.env.ANTHROPIC_API_KEY ? '✅ Present' : '❌ Missing'); console.log('ALPHA_VANTAGE_API_KEY:', process.env.ALPHA_VANTAGE_API_KEY ? '✅ Present' : '⚠️ Optional'); console.log('EMAIL_USERNAME:', process.env.EMAIL_USERNAME ? '✅ Present' : '❌ Missing');\"",
-    "test-email": "node -e \"const nodemailer = require('nodemailer'); console.log('📧 Nodemailer loaded successfully');\"",
-    "check-reports": "node -e \"const fs = require('fs'); if(fs.existsSync('reports')) { console.log('📁 Reports found:'); fs.readdirSync('reports').forEach(f => console.log('  -', f)); } else { console.log('📁 No reports directory found'); }\"",
-    "clean-reports": "node -e \"const fs = require('fs'); const path = require('path'); if(fs.existsSync('reports')) { fs.readdirSync('reports').forEach(f => fs.unlinkSync(path.join('reports', f))); console.log('🧹 Reports cleaned'); } else { console.log('📁 No reports to clean'); }\"",
-    "install-deps": "npm install axios nodemailer",
-    "version-check": "node -e \"console.log('Node.js:', process.version); console.log('NPM:', process.env.npm_version || 'Unknown'); console.log('Platform:', process.platform);\""
-  },
-  "dependencies": {
-    "axios": "^1.6.0",
-    "nodemailer": "^6.9.0"
-  },
-  "optionalDependencies": {
-    "cheerio": "^1.0.0-rc.12"
-  },
-  "engines": {
-    "node": ">=16.0.0",
-    "npm": ">=8.0.0"
-  },
-  "repository": {
-    "type": "git",
-    "url": "your-repository-url"
+    "start": "node generate-report-enhanced.js",
+    "test": "node generate-report-enhanced.js --test-mode",
+    "quick": "node generate-report-enhanced.js --quick-mode",
+    "install-deps": "npm install",
+    "update-deps": "npm update",
+    "audit": "npm audit fix"
   },
   "keywords": [
-    "market-report",
-    "financial-analysis", 
-    "automation",
-    "claude-ai",
-    "github-actions",
-    "stock-market",
+    "financial-news",
+    "market-intelligence", 
+    "pre-market",
     "trading",
-    "investment",
-    "premarket-movers",
-    "sector-analysis",
-    "accuracy-verification"
+    "api-integration",
+    "web-scraping",
+    "automated-reporting"
   ],
   "author": "Your Name",
   "license": "MIT",
-  "private": true,
+  "dependencies": {
+    "axios": "^1.6.2",
+    "nodemailer": "^6.9.7",
+    "cheerio": "^1.0.0-rc.12",
+    "puppeteer": "^21.6.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.55.0",
+    "prettier": "^3.1.1"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/premarket-news-briefing.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/premarket-news-briefing/issues"
+  },
+  "homepage": "https://github.com/yourusername/premarket-news-briefing#readme",
   "config": {
-    "report_schedule": "12:00 PM UTC daily",
-    "accuracy_check": "enabled",
-    "email_delivery": "enabled",
-    "data_sources": ["Alpha Vantage", "Finnhub", "Claude AI"]
+    "timeout": "30000",
+    "max_headlines": "200",
+    "email_enabled": "true"
   },
   "funding": {
     "type": "individual",
-    "url": "https://your-funding-url"
+    "url": "https://github.com/sponsors/yourusername"
   }
 }
