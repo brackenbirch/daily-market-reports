@@ -2,8 +2,6 @@ const axios = require('axios');
 const fs = require('fs');
 const path = require('path');
 const nodemailer = require('nodemailer');
-const cheerio = require('cheerio'); // Add for web scraping
-const puppeteer = require('puppeteer'); // Add for dynamic content scraping
 
 // All environment variables from GitHub Secrets
 const ALPHA_VANTAGE_API_KEY = process.env.ALPHA_VANTAGE_API_KEY;
@@ -63,8 +61,7 @@ async function fetchComprehensiveNews() {
         commodities: [],
         earnings: [],
         research: [],
-        premarketMovers: [],
-        webScraped: [] // New category for web-scraped content
+        premarketMovers: []
     };
     
     console.log(`📰 Comprehensive news gathering since: ${timing.lastCloseString}`);
@@ -540,8 +537,7 @@ COMPREHENSIVE HEADLINES DATA FROM MULTIPLE SOURCES:
         { key: 'commodities', title: 'COMMODITY MARKET NEWS' },
         { key: 'earnings', title: 'EARNINGS & CORPORATE NEWS' },
         { key: 'research', title: 'RESEARCH REPORTS & ANALYST COVERAGE' },
-        { key: 'premarketMovers', title: 'PRE-MARKET MOVERS & TRADING DATA' },
-        { key: 'webScraped', title: 'SUPPLEMENTARY WEB INTELLIGENCE' }
+        { key: 'premarketMovers', title: 'PRE-MARKET MOVERS & TRADING DATA' }
     ];
 
     sections.forEach(section => {
@@ -720,7 +716,7 @@ async function generateComprehensivePreMarketReport() {
         console.log(`📅 Coverage Period: Since ${timing.lastCloseString}`);
         console.log('🔧 Using all available API keys and web search integration');
         
-        // Display available APIs and web scraping status
+        // Display available APIs
         const availableAPIs = [];
         if (ALPHA_VANTAGE_API_KEY) availableAPIs.push('Alpha Vantage');
         if (FINNHUB_API_KEY) availableAPIs.push('Finnhub');
@@ -733,16 +729,11 @@ async function generateComprehensivePreMarketReport() {
         if (TWELVE_DATA_API_KEY) availableAPIs.push('Twelve Data');
         
         console.log(`🔑 Active APIs: ${availableAPIs.join(', ')}`);
-        console.log(`🕷️ Web Scraping: Enhanced secondary intelligence layer`);
         
-        // Fetch comprehensive news (APIs + Web Scraping)
+        // Fetch comprehensive news
         const headlines = await fetchComprehensiveNews();
         const totalHeadlines = Object.values(headlines).reduce((sum, arr) => sum + arr.length, 0);
-        const webScrapedCount = headlines.webScraped ? headlines.webScraped.length : 0;
-        
         console.log(`📰 Total headlines collected: ${totalHeadlines}`);
-        console.log(`🕷️ Web scraped headlines: ${webScrapedCount}`);
-        console.log(`📊 API vs Web ratio: ${totalHeadlines - webScrapedCount}:${webScrapedCount}`);
         
         // Log breakdown by category
         Object.entries(headlines).forEach(([category, items]) => {
