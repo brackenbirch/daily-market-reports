@@ -1,72 +1,349 @@
 {
   "headlines": {
-    "general": [],
-    "us": [],
-    "asian": [],
-    "european": [],
-    "geopolitical": [],
-    "currencies": [],
-    "commodities": [],
-    "webSearch": [
+    "general": [
       {
-        "headline": "Web Search Result: breaking market news today developments overnight",
-        "summary": "Market-relevant information found via web search for breaking market news today",
-        "source": "Web Search - web-search",
-        "datetime": "8/1/2025, 7:19:12 PM",
-        "confidence": "moderate"
+        "headline": "Galaxy Digital Unusual Options Activity For August 01 - Galaxy Digital  ( NASDAQ:GLXY ) ",
+        "summary": "Deep-pocketed investors have adopted a bullish approach towards Galaxy Digital GLXY, and it's something market players shouldn't ignore. Our tracking of public options records at Benzinga unveiled this significant move today.",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/insights/options/25/08/46807317/galaxy-digital-unusual-options-activity-for-august-01",
+        "sentiment": "Somewhat-Bullish"
       },
       {
-        "headline": "Web Search Result: overnight market developments developments overnight",
-        "summary": "Market-relevant information found via web search for overnight market developments",
-        "source": "Web Search - web-search",
-        "datetime": "8/1/2025, 7:19:12 PM",
-        "confidence": "moderate"
+        "headline": "Apollo Asset Management Unusual Options Activity - Apollo Asset Management  ( NYSE:APO ) ",
+        "summary": "Whales with a lot of money to spend have taken a noticeably bullish stance on Apollo Asset Management. Looking at options history for Apollo Asset Management APO we detected 20 trades.",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/insights/options/25/08/46805166/apollo-asset-management-unusual-options-activity",
+        "sentiment": "Somewhat-Bullish"
       },
       {
-        "headline": "Web Search Result: Asian markets overnight news developments overnight",
-        "summary": "Market-relevant information found via web search for Asian markets overnight news",
-        "source": "Web Search - web-search",
-        "datetime": "8/1/2025, 7:19:13 PM",
-        "confidence": "moderate"
+        "headline": "A Closer Look at DraftKings's Options Market Dynamics - DraftKings  ( NASDAQ:DKNG ) ",
+        "summary": "Investors with a lot of money to spend have taken a bullish stance on DraftKings DKNG. We noticed this today when the positions showed up on publicly available options history that we track here at Benzinga. Whether these are institutions or just wealthy individuals, we don't know.",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/insights/options/25/08/46807313/a-closer-look-at-draftkingss-options-market-dynamics",
+        "sentiment": "Somewhat-Bullish"
       },
       {
-        "headline": "Web Search Result: European market news today developments overnight",
-        "summary": "Market-relevant information found via web search for European market news today",
-        "source": "Web Search - web-search",
-        "datetime": "8/1/2025, 7:19:13 PM",
-        "confidence": "moderate"
+        "headline": "DeFi Development Corp. to Host X Spaces Event: \"July 2025 Business Recap & AMA\"",
+        "summary": "BOCA RATON, FL, Aug. 01, 2025 ( GLOBE NEWSWIRE ) -- DeFi Development Corp. ( Nasdaq: DFDV ) ( the \"Company\" ) today announced it will host a live X Spaces conversation on Monday, August 4, 2025, at 1:30 p.m. Eastern Time, titled \"July 2025 Business Recap & AMA.\" ...",
+        "source": "Alpha Vantage - GlobeNewswire",
+        "datetime": "Invalid Date",
+        "url": "https://www.globenewswire.com/news-release/2025/08/01/3126071/0/en/DeFi-Development-Corp-to-Host-X-Spaces-Event-July-2025-Business-Recap-AMA.html",
+        "sentiment": "Neutral"
       },
       {
-        "headline": "Web Search Result: geopolitical market impact news developments overnight",
-        "summary": "Market-relevant information found via web search for geopolitical market impact news",
-        "source": "Web Search - web-search",
-        "datetime": "8/1/2025, 7:19:14 PM",
-        "confidence": "moderate"
+        "headline": "Bitcoin, Ethereum, XRP, Dogecoin Tumble As Traders Brace For Volatility",
+        "summary": "Global cryptocurrency market capitalization drops 3.2%, now at $3.8 trillion. Some traders say the Bitcoin crash has begun, while others highlight $116,000 as a key level to watch for trend Get special access to three exclusive \"Top 10 Stocks\" power lists today, updated daily.",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/crypto/cryptocurrency/25/08/46806580/bitcoin-ethereum-xrp-dogecoin-tumble-as-traders-brace-for-volatility",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "These Analysts Boost Their Forecasts On MicroStrategy Following Q2 Results - Strategy  ( NASDAQ:MSTR ) ",
+        "summary": "MicroStrategy Inc MSTR reported upbeat sales for the second quarter on Thursday. Strategy reported second-quarter revenue of $114.49 million, beating analyst estimates of $112.96 million. The company reported second-quarter adjusted earnings of $32.52 per share, according to Benzinga Pro.",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/analyst-stock-ratings/price-target/25/08/46805504/these-analysts-boost-their-forecasts-on-microstrategy-following-q2-results",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Bitcoin price dip shakes trader confidence: Is the 2025 bull run in danger?",
+        "summary": "Bitcoin derivatives data shows no evidence the 2025 bull run is over despite BTC price sliding to lower support levels below $115,000.",
+        "source": "Alpha Vantage - Cointelegraph",
+        "datetime": "Invalid Date",
+        "url": "https://cointelegraph.com/news/bitcoin-btc-price-dip-shakes-trader-confidence-is-the-2025-bull-run-in-jeopardy",
+        "sentiment": "Neutral"
+      },
+      {
+        "headline": "Dick's Sporting Goods Unusual Options Activity For August 01 - Dick's Sporting Goods  ( NYSE:DKS ) ",
+        "summary": "Whales with a lot of money to spend have taken a noticeably bearish stance on Dick's Sporting Goods. Looking at options history for Dick's Sporting Goods DKS we detected 9 trades. If we consider the specifics of each trade, it is accurate to state that 33% of the investors opened trades with ...",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/insights/options/25/08/46807322/dicks-sporting-goods-unusual-options-activity-for-august-01",
+        "sentiment": "Somewhat-Bullish"
       }
-    ]
+    ],
+    "us": [
+      {
+        "headline": "Galaxy Digital Unusual Options Activity For August 01 - Galaxy Digital  ( NASDAQ:GLXY ) ",
+        "summary": "Deep-pocketed investors have adopted a bullish approach towards Galaxy Digital GLXY, and it's something market players shouldn't ignore. Our tracking of public options records at Benzinga unveiled this significant move today.",
+        "source": "Alpha Vantage US - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/insights/options/25/08/46807317/galaxy-digital-unusual-options-activity-for-august-01",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Apollo Asset Management Unusual Options Activity - Apollo Asset Management  ( NYSE:APO ) ",
+        "summary": "Whales with a lot of money to spend have taken a noticeably bullish stance on Apollo Asset Management. Looking at options history for Apollo Asset Management APO we detected 20 trades.",
+        "source": "Alpha Vantage US - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/insights/options/25/08/46805166/apollo-asset-management-unusual-options-activity",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "A Closer Look at DraftKings's Options Market Dynamics - DraftKings  ( NASDAQ:DKNG ) ",
+        "summary": "Investors with a lot of money to spend have taken a bullish stance on DraftKings DKNG. We noticed this today when the positions showed up on publicly available options history that we track here at Benzinga. Whether these are institutions or just wealthy individuals, we don't know.",
+        "source": "Alpha Vantage US - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/insights/options/25/08/46807313/a-closer-look-at-draftkingss-options-market-dynamics",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "DeFi Development Corp. to Host X Spaces Event: \"July 2025 Business Recap & AMA\"",
+        "summary": "BOCA RATON, FL, Aug. 01, 2025 ( GLOBE NEWSWIRE ) -- DeFi Development Corp. ( Nasdaq: DFDV ) ( the \"Company\" ) today announced it will host a live X Spaces conversation on Monday, August 4, 2025, at 1:30 p.m. Eastern Time, titled \"July 2025 Business Recap & AMA.\" ...",
+        "source": "Alpha Vantage US - GlobeNewswire",
+        "datetime": "Invalid Date",
+        "url": "https://www.globenewswire.com/news-release/2025/08/01/3126071/0/en/DeFi-Development-Corp-to-Host-X-Spaces-Event-July-2025-Business-Recap-AMA.html",
+        "sentiment": "Neutral"
+      },
+      {
+        "headline": "Bitcoin, Ethereum, XRP, Dogecoin Tumble As Traders Brace For Volatility",
+        "summary": "Global cryptocurrency market capitalization drops 3.2%, now at $3.8 trillion. Some traders say the Bitcoin crash has begun, while others highlight $116,000 as a key level to watch for trend Get special access to three exclusive \"Top 10 Stocks\" power lists today, updated daily.",
+        "source": "Alpha Vantage US - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/crypto/cryptocurrency/25/08/46806580/bitcoin-ethereum-xrp-dogecoin-tumble-as-traders-brace-for-volatility",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "These Analysts Boost Their Forecasts On MicroStrategy Following Q2 Results - Strategy  ( NASDAQ:MSTR ) ",
+        "summary": "MicroStrategy Inc MSTR reported upbeat sales for the second quarter on Thursday. Strategy reported second-quarter revenue of $114.49 million, beating analyst estimates of $112.96 million. The company reported second-quarter adjusted earnings of $32.52 per share, according to Benzinga Pro.",
+        "source": "Alpha Vantage US - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/analyst-stock-ratings/price-target/25/08/46805504/these-analysts-boost-their-forecasts-on-microstrategy-following-q2-results",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Bitcoin price dip shakes trader confidence: Is the 2025 bull run in danger?",
+        "summary": "Bitcoin derivatives data shows no evidence the 2025 bull run is over despite BTC price sliding to lower support levels below $115,000.",
+        "source": "Alpha Vantage US - Cointelegraph",
+        "datetime": "Invalid Date",
+        "url": "https://cointelegraph.com/news/bitcoin-btc-price-dip-shakes-trader-confidence-is-the-2025-bull-run-in-jeopardy",
+        "sentiment": "Neutral"
+      },
+      {
+        "headline": "Dick's Sporting Goods Unusual Options Activity For August 01 - Dick's Sporting Goods  ( NYSE:DKS ) ",
+        "summary": "Whales with a lot of money to spend have taken a noticeably bearish stance on Dick's Sporting Goods. Looking at options history for Dick's Sporting Goods DKS we detected 9 trades. If we consider the specifics of each trade, it is accurate to state that 33% of the investors opened trades with ...",
+        "source": "Alpha Vantage US - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/insights/options/25/08/46807322/dicks-sporting-goods-unusual-options-activity-for-august-01",
+        "sentiment": "Somewhat-Bullish"
+      }
+    ],
+    "asian": [
+      {
+        "headline": "From Pixels To Paychecks: How Minecraft Is Launching Gen Z's Careers",
+        "summary": "Minecraft has sold over 350 million copies since its launch in 2011, making it the best-selling video game of all time, according to Business Insider. It's also raised a generation of software engineers, coders, and developers. Colin McDonald started playing the game when he was just 13.",
+        "source": "Alpha Vantage Asia - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/news/topics/25/08/46804269/from-pixels-to-paychecks-how-minecraft-is-launching-gen-zs-careers",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Gsi Technology  ( GSIT )  Q1 Sales Up 35%",
+        "summary": "Gsi Technology ( NASDAQ:GSIT ) , a designer of high-performance semiconductor memory and specialized AI chips, reported Q1 FY2026 results on July 31, 2025. The most significant news was a sharp rebound in revenue and the highest gross margin in over two years, driven by robust sales of SigmaQuad ...",
+        "source": "Alpha Vantage Asia - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/data-news/2025/08/01/gsi-technology-gsit-q1-sales-up-35/",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "IPGP Set to Report Q2 Earnings: What's in Store for the Stock?",
+        "summary": "IPG Photonics' second-quarter 2025 results are likely to benefit from improving Welding and medical markets amid tariff-related headwinds.",
+        "source": "Alpha Vantage Asia - Zacks Commentary",
+        "datetime": "Invalid Date",
+        "url": "https://www.zacks.com/stock/news/2650308/ipgp-set-to-report-q2-earnings-whats-in-store-for-the-stock",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Reddit's Q2 Earnings Beat Estimates, Revenues Up Y/Y, Shares Rise",
+        "summary": "RDDT posts a strong Q2 with EPS of 45 cents and 78% revenue growth, fueled by surging ad sales and global user expansion.",
+        "source": "Alpha Vantage Asia - Zacks Commentary",
+        "datetime": "Invalid Date",
+        "url": "https://www.zacks.com/stock/news/2650247/reddits-q2-earnings-beat-estimates-revenues-up-yy-shares-rise",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Tariffs And Soft Demand Hit Paper Mate Maker Newell Brands, Stock Tumbles - Newell Brands  ( NASDAQ:NWL ) ",
+        "summary": "Q2 sales fell 4.8% to $1.94B, missing estimates, while core sales declined 4.4% on softer demand across key segments. The market's back, and these 3 income stocks are thriving. See them here→ Newell Brands Inc. NWL shares traded lower on Friday after reporting its second-quarter earnings report.",
+        "source": "Alpha Vantage Asia - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/markets/earnings/25/08/46802470/tariffs-and-soft-demand-hit-paper-mate-maker-newell-brands-stock-tumbles",
+        "sentiment": "Neutral"
+      },
+      {
+        "headline": "Ball Corp Set to Report Q2 Earnings: What Lies Ahead for the Stock?",
+        "summary": "BALL's Q2 results may show sales growth and volume gains, but profit margins face pressure from rising costs.",
+        "source": "Alpha Vantage Asia - Zacks Commentary",
+        "datetime": "Invalid Date",
+        "url": "https://www.zacks.com/stock/news/2650412/ball-corp-set-to-report-q2-earnings-what-lies-ahead-for-the-stock",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Should You Buy, Hold, or Sell AMD Stock Ahead of Q2 Earnings?",
+        "summary": "Advanced Micro Devices' second-quarter 2025 performance is likely to have benefited from gains in data center and client segments amid headwinds from export controls.",
+        "source": "Alpha Vantage Asia - Zacks Commentary",
+        "datetime": "Invalid Date",
+        "url": "https://www.zacks.com/stock/news/2650094/should-you-buy-hold-or-sell-amd-stock-ahead-of-q2-earnings",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "HPC Server and DLC Traction Likely to Boost SMCI's Q4 Earnings",
+        "summary": "Super Micro Computer's fourth-quarter fiscal 2025 performance is likely to have benefited from booming demand for AI-servers and DLC.",
+        "source": "Alpha Vantage Asia - Zacks Commentary",
+        "datetime": "Invalid Date",
+        "url": "https://www.zacks.com/stock/news/2650035/hpc-server-and-dlc-traction-likely-to-boost-smcis-q4-earnings",
+        "sentiment": "Somewhat-Bullish"
+      }
+    ],
+    "european": [
+      {
+        "headline": "Galaxy Digital Unusual Options Activity For August 01 - Galaxy Digital  ( NASDAQ:GLXY ) ",
+        "summary": "Deep-pocketed investors have adopted a bullish approach towards Galaxy Digital GLXY, and it's something market players shouldn't ignore. Our tracking of public options records at Benzinga unveiled this significant move today.",
+        "source": "Alpha Vantage Europe - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/insights/options/25/08/46807317/galaxy-digital-unusual-options-activity-for-august-01",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Apollo Asset Management Unusual Options Activity - Apollo Asset Management  ( NYSE:APO ) ",
+        "summary": "Whales with a lot of money to spend have taken a noticeably bullish stance on Apollo Asset Management. Looking at options history for Apollo Asset Management APO we detected 20 trades.",
+        "source": "Alpha Vantage Europe - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/insights/options/25/08/46805166/apollo-asset-management-unusual-options-activity",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "A Closer Look at DraftKings's Options Market Dynamics - DraftKings  ( NASDAQ:DKNG ) ",
+        "summary": "Investors with a lot of money to spend have taken a bullish stance on DraftKings DKNG. We noticed this today when the positions showed up on publicly available options history that we track here at Benzinga. Whether these are institutions or just wealthy individuals, we don't know.",
+        "source": "Alpha Vantage Europe - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/insights/options/25/08/46807313/a-closer-look-at-draftkingss-options-market-dynamics",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "DeFi Development Corp. to Host X Spaces Event: \"July 2025 Business Recap & AMA\"",
+        "summary": "BOCA RATON, FL, Aug. 01, 2025 ( GLOBE NEWSWIRE ) -- DeFi Development Corp. ( Nasdaq: DFDV ) ( the \"Company\" ) today announced it will host a live X Spaces conversation on Monday, August 4, 2025, at 1:30 p.m. Eastern Time, titled \"July 2025 Business Recap & AMA.\" ...",
+        "source": "Alpha Vantage Europe - GlobeNewswire",
+        "datetime": "Invalid Date",
+        "url": "https://www.globenewswire.com/news-release/2025/08/01/3126071/0/en/DeFi-Development-Corp-to-Host-X-Spaces-Event-July-2025-Business-Recap-AMA.html",
+        "sentiment": "Neutral"
+      },
+      {
+        "headline": "Bitcoin, Ethereum, XRP, Dogecoin Tumble As Traders Brace For Volatility",
+        "summary": "Global cryptocurrency market capitalization drops 3.2%, now at $3.8 trillion. Some traders say the Bitcoin crash has begun, while others highlight $116,000 as a key level to watch for trend Get special access to three exclusive \"Top 10 Stocks\" power lists today, updated daily.",
+        "source": "Alpha Vantage Europe - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/crypto/cryptocurrency/25/08/46806580/bitcoin-ethereum-xrp-dogecoin-tumble-as-traders-brace-for-volatility",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "These Analysts Boost Their Forecasts On MicroStrategy Following Q2 Results - Strategy  ( NASDAQ:MSTR ) ",
+        "summary": "MicroStrategy Inc MSTR reported upbeat sales for the second quarter on Thursday. Strategy reported second-quarter revenue of $114.49 million, beating analyst estimates of $112.96 million. The company reported second-quarter adjusted earnings of $32.52 per share, according to Benzinga Pro.",
+        "source": "Alpha Vantage Europe - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/analyst-stock-ratings/price-target/25/08/46805504/these-analysts-boost-their-forecasts-on-microstrategy-following-q2-results",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Bitcoin price dip shakes trader confidence: Is the 2025 bull run in danger?",
+        "summary": "Bitcoin derivatives data shows no evidence the 2025 bull run is over despite BTC price sliding to lower support levels below $115,000.",
+        "source": "Alpha Vantage Europe - Cointelegraph",
+        "datetime": "Invalid Date",
+        "url": "https://cointelegraph.com/news/bitcoin-btc-price-dip-shakes-trader-confidence-is-the-2025-bull-run-in-jeopardy",
+        "sentiment": "Neutral"
+      },
+      {
+        "headline": "Dick's Sporting Goods Unusual Options Activity For August 01 - Dick's Sporting Goods  ( NYSE:DKS ) ",
+        "summary": "Whales with a lot of money to spend have taken a noticeably bearish stance on Dick's Sporting Goods. Looking at options history for Dick's Sporting Goods DKS we detected 9 trades. If we consider the specifics of each trade, it is accurate to state that 33% of the investors opened trades with ...",
+        "source": "Alpha Vantage Europe - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/insights/options/25/08/46807322/dicks-sporting-goods-unusual-options-activity-for-august-01",
+        "sentiment": "Somewhat-Bullish"
+      }
+    ],
+    "geopolitical": [],
+    "currencies": [
+      {
+        "headline": "Galaxy Digital Unusual Options Activity For August 01 - Galaxy Digital  ( NASDAQ:GLXY ) ",
+        "summary": "Deep-pocketed investors have adopted a bullish approach towards Galaxy Digital GLXY, and it's something market players shouldn't ignore. Our tracking of public options records at Benzinga unveiled this significant move today.",
+        "source": "Alpha Vantage FX - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/insights/options/25/08/46807317/galaxy-digital-unusual-options-activity-for-august-01",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Apollo Asset Management Unusual Options Activity - Apollo Asset Management  ( NYSE:APO ) ",
+        "summary": "Whales with a lot of money to spend have taken a noticeably bullish stance on Apollo Asset Management. Looking at options history for Apollo Asset Management APO we detected 20 trades.",
+        "source": "Alpha Vantage FX - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/insights/options/25/08/46805166/apollo-asset-management-unusual-options-activity",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "A Closer Look at DraftKings's Options Market Dynamics - DraftKings  ( NASDAQ:DKNG ) ",
+        "summary": "Investors with a lot of money to spend have taken a bullish stance on DraftKings DKNG. We noticed this today when the positions showed up on publicly available options history that we track here at Benzinga. Whether these are institutions or just wealthy individuals, we don't know.",
+        "source": "Alpha Vantage FX - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/insights/options/25/08/46807313/a-closer-look-at-draftkingss-options-market-dynamics",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "DeFi Development Corp. to Host X Spaces Event: \"July 2025 Business Recap & AMA\"",
+        "summary": "BOCA RATON, FL, Aug. 01, 2025 ( GLOBE NEWSWIRE ) -- DeFi Development Corp. ( Nasdaq: DFDV ) ( the \"Company\" ) today announced it will host a live X Spaces conversation on Monday, August 4, 2025, at 1:30 p.m. Eastern Time, titled \"July 2025 Business Recap & AMA.\" ...",
+        "source": "Alpha Vantage FX - GlobeNewswire",
+        "datetime": "Invalid Date",
+        "url": "https://www.globenewswire.com/news-release/2025/08/01/3126071/0/en/DeFi-Development-Corp-to-Host-X-Spaces-Event-July-2025-Business-Recap-AMA.html",
+        "sentiment": "Neutral"
+      },
+      {
+        "headline": "Bitcoin, Ethereum, XRP, Dogecoin Tumble As Traders Brace For Volatility",
+        "summary": "Global cryptocurrency market capitalization drops 3.2%, now at $3.8 trillion. Some traders say the Bitcoin crash has begun, while others highlight $116,000 as a key level to watch for trend Get special access to three exclusive \"Top 10 Stocks\" power lists today, updated daily.",
+        "source": "Alpha Vantage FX - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/crypto/cryptocurrency/25/08/46806580/bitcoin-ethereum-xrp-dogecoin-tumble-as-traders-brace-for-volatility",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "These Analysts Boost Their Forecasts On MicroStrategy Following Q2 Results - Strategy  ( NASDAQ:MSTR ) ",
+        "summary": "MicroStrategy Inc MSTR reported upbeat sales for the second quarter on Thursday. Strategy reported second-quarter revenue of $114.49 million, beating analyst estimates of $112.96 million. The company reported second-quarter adjusted earnings of $32.52 per share, according to Benzinga Pro.",
+        "source": "Alpha Vantage FX - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/analyst-stock-ratings/price-target/25/08/46805504/these-analysts-boost-their-forecasts-on-microstrategy-following-q2-results",
+        "sentiment": "Somewhat-Bullish"
+      }
+    ],
+    "commodities": [],
+    "earnings": [],
+    "research": [],
+    "premarketMovers": []
   },
   "timing": {
     "lastCloseTimestamp": 1754064000,
     "lastCloseString": "8/1/2025, 12:00:00 PM",
-    "currentTime": "8/1/2025, 3:19:12 PM"
+    "currentTime": "8/1/2025, 3:39:12 PM"
   },
-  "totalHeadlines": 5,
+  "totalHeadlines": 38,
   "activeAPIs": [
     "Alpha Vantage",
     "Finnhub"
   ],
   "categoryBreakdown": {
-    "general": 0,
-    "us": 0,
-    "asian": 0,
-    "european": 0,
+    "general": 8,
+    "us": 8,
+    "asian": 8,
+    "european": 8,
     "geopolitical": 0,
-    "currencies": 0,
+    "currencies": 6,
     "commodities": 0,
-    "webSearch": 5
+    "earnings": 0,
+    "research": 0,
+    "premarketMovers": 0
   },
   "metadata": {
-    "generatedAt": "2025-08-01T19:19:44.086Z",
+    "generatedAt": "2025-08-01T19:40:58.290Z",
     "reportType": "comprehensive-premarket-brief",
     "aiModel": "claude-sonnet-4",
     "classification": "institutional-grade"
