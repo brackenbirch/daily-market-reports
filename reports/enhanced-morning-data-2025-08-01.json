@@ -1,0 +1,459 @@
+{
+  "afterHoursFutures": {
+    "SPY": {
+      "01. symbol": "SPY",
+      "02. open": "639.4550",
+      "03. high": "639.8500",
+      "04. low": "630.7650",
+      "05. price": "632.0800",
+      "06. volume": "103385246",
+      "07. latest trading day": "2025-07-31",
+      "08. previous close": "634.4600",
+      "09. change": "-2.3800",
+      "10. change percent": "-0.3751%",
+      "session": "After-Hours/Extended"
+    },
+    "QQQ": {
+      "01. symbol": "QQQ",
+      "02. open": "574.5400",
+      "03. high": "574.6300",
+      "04. low": "563.8700",
+      "05. price": "565.0100",
+      "06. volume": "64613590",
+      "07. latest trading day": "2025-07-31",
+      "08. previous close": "568.0200",
+      "09. change": "-3.0100",
+      "10. change percent": "-0.5299%",
+      "session": "After-Hours/Extended"
+    },
+    "DIA": {
+      "01. symbol": "DIA",
+      "02. open": "445.2700",
+      "03. high": "446.2000",
+      "04. low": "440.5000",
+      "05. price": "441.3300",
+      "06. volume": "4223300",
+      "07. latest trading day": "2025-07-31",
+      "08. previous close": "444.7600",
+      "09. change": "-3.4300",
+      "10. change percent": "-0.7712%",
+      "session": "After-Hours/Extended"
+    }
+  },
+  "overnightSectors": {
+    "XLF": {
+      "01. symbol": "XLF",
+      "02. open": "52.4800",
+      "03. high": "52.9900",
+      "04. low": "52.2700",
+      "05. price": "52.3700",
+      "06. volume": "46179397",
+      "07. latest trading day": "2025-07-31",
+      "08. previous close": "52.7000",
+      "09. change": "-0.3300",
+      "10. change percent": "-0.6262%",
+      "name": "Financial Services",
+      "session": "Extended Hours"
+    },
+    "XLK": {
+      "01. symbol": "XLK",
+      "02. open": "268.0100",
+      "03. high": "268.0100",
+      "04. low": "261.4600",
+      "05. price": "262.7400",
+      "06. volume": "8207180",
+      "07. latest trading day": "2025-07-31",
+      "08. previous close": "264.6800",
+      "09. change": "-1.9400",
+      "10. change percent": "-0.7330%",
+      "name": "Technology",
+      "session": "Extended Hours"
+    },
+    "XLE": {
+      "01. symbol": "XLE",
+      "02. open": "86.7600",
+      "03. high": "88.2150",
+      "04. low": "86.7600",
+      "05. price": "87.2100",
+      "06. volume": "12480399",
+      "07. latest trading day": "2025-07-31",
+      "08. previous close": "87.6800",
+      "09. change": "-0.4700",
+      "10. change percent": "-0.5360%",
+      "name": "Energy",
+      "session": "Extended Hours"
+    },
+    "XLV": {
+      "01. symbol": "XLV",
+      "02. open": "133.0200",
+      "03. high": "133.7950",
+      "04. low": "129.9750",
+      "05. price": "130.4300",
+      "06. volume": "26441560",
+      "07. latest trading day": "2025-07-31",
+      "08. previous close": "134.1900",
+      "09. change": "-3.7600",
+      "10. change percent": "-2.8020%",
+      "name": "Healthcare",
+      "session": "Extended Hours"
+    },
+    "XLI": {
+      "01. symbol": "XLI",
+      "02. open": "151.5100",
+      "03. high": "153.0650",
+      "04. low": "151.5100",
+      "05. price": "152.0100",
+      "06. volume": "16520525",
+      "07. latest trading day": "2025-07-31",
+      "08. previous close": "152.0000",
+      "09. change": "0.0100",
+      "10. change percent": "0.0066%",
+      "name": "Industrials",
+      "session": "Extended Hours"
+    },
+    "XLY": {
+      "01. symbol": "XLY",
+      "02. open": "224.2800",
+      "03. high": "224.6600",
+      "04. low": "221.1300",
+      "05. price": "221.4300",
+      "06. volume": "6864312",
+      "07. latest trading day": "2025-07-31",
+      "08. previous close": "223.2000",
+      "09. change": "-1.7700",
+      "10. change percent": "-0.7930%",
+      "name": "Consumer Discretionary",
+      "session": "Extended Hours"
+    },
+    "XLP": {
+      "01. symbol": "XLP",
+      "02. open": "79.9000",
+      "03. high": "80.5550",
+      "04. low": "79.6500",
+      "05. price": "79.7800",
+      "06. volume": "18339871",
+      "07. latest trading day": "2025-07-31",
+      "08. previous close": "80.4700",
+      "09. change": "-0.6900",
+      "10. change percent": "-0.8575%",
+      "name": "Consumer Staples",
+      "session": "Extended Hours"
+    },
+    "XLU": {
+      "01. symbol": "XLU",
+      "02. open": "84.9500",
+      "03. high": "85.8000",
+      "04. low": "84.8800",
+      "05. price": "85.6700",
+      "06. volume": "15089758",
+      "07. latest trading day": "2025-07-31",
+      "08. previous close": "85.2100",
+      "09. change": "0.4600",
+      "10. change percent": "0.5398%",
+      "name": "Utilities",
+      "session": "Extended Hours"
+    },
+    "XLB": {
+      "01. symbol": "XLB",
+      "02. open": "87.8000",
+      "03. high": "88.8200",
+      "04. low": "87.6300",
+      "05. price": "87.7300",
+      "06. volume": "11615339",
+      "07. latest trading day": "2025-07-31",
+      "08. previous close": "88.8500",
+      "09. change": "-1.1200",
+      "10. change percent": "-1.2606%",
+      "name": "Materials",
+      "session": "Extended Hours"
+    }
+  },
+  "afterHoursMovers": {
+    "topGainers": [
+      {
+        "symbol": "AAPL",
+        "price": "$223.79",
+        "change": "+17.07",
+        "changePercent": "+8.26%",
+        "volume": "61K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "MSFT",
+        "price": "$111.45",
+        "change": "+13.44",
+        "changePercent": "+13.71%",
+        "volume": "110K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "GOOGL",
+        "price": "$126.71",
+        "change": "+3.09",
+        "changePercent": "+2.50%",
+        "volume": "70K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "AMZN",
+        "price": "$162.57",
+        "change": "+18.97",
+        "changePercent": "+13.21%",
+        "volume": "219K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "TSLA",
+        "price": "$116.10",
+        "change": "+13.98",
+        "changePercent": "+13.69%",
+        "volume": "81K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "NVDA",
+        "price": "$248.20",
+        "change": "+20.41",
+        "changePercent": "+8.96%",
+        "volume": "216K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "META",
+        "price": "$211.39",
+        "change": "+3.51",
+        "changePercent": "+1.69%",
+        "volume": "210K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "NFLX",
+        "price": "$248.04",
+        "change": "+31.81",
+        "changePercent": "+14.71%",
+        "volume": "198K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "AMD",
+        "price": "$82.46",
+        "change": "+1.33",
+        "changePercent": "+1.64%",
+        "volume": "165K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "CRM",
+        "price": "$73.16",
+        "change": "+8.62",
+        "changePercent": "+13.36%",
+        "volume": "92K",
+        "timeframe": "After-Hours"
+      }
+    ],
+    "topLosers": [
+      {
+        "symbol": "AAPL",
+        "price": "$136.73",
+        "change": "-12.56",
+        "changePercent": "-8.41%",
+        "volume": "104K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "MSFT",
+        "price": "$203.64",
+        "change": "-29.70",
+        "changePercent": "-12.73%",
+        "volume": "78K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "GOOGL",
+        "price": "$123.82",
+        "change": "-11.22",
+        "changePercent": "-8.31%",
+        "volume": "99K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "AMZN",
+        "price": "$60.24",
+        "change": "-9.68",
+        "changePercent": "-13.84%",
+        "volume": "207K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "TSLA",
+        "price": "$71.19",
+        "change": "-9.03",
+        "changePercent": "-11.26%",
+        "volume": "103K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "NVDA",
+        "price": "$191.62",
+        "change": "-19.69",
+        "changePercent": "-9.32%",
+        "volume": "123K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "META",
+        "price": "$167.18",
+        "change": "-1.11",
+        "changePercent": "-0.66%",
+        "volume": "208K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "NFLX",
+        "price": "$93.37",
+        "change": "-15.43",
+        "changePercent": "-14.18%",
+        "volume": "124K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "AMD",
+        "price": "$200.02",
+        "change": "-23.22",
+        "changePercent": "-10.4%",
+        "volume": "101K",
+        "timeframe": "After-Hours"
+      },
+      {
+        "symbol": "CRM",
+        "price": "$152.23",
+        "change": "-17.06",
+        "changePercent": "-10.08%",
+        "volume": "112K",
+        "timeframe": "After-Hours"
+      }
+    ]
+  },
+  "overnightNews": [
+    {
+      "category": "top news",
+      "datetime": 1754074200,
+      "headline": "Trump says he plans to fire BLS chief after poor U.S. jobs report",
+      "id": 7503070,
+      "image": "https://static2.finnhub.io/file/publicdatany/finnhubimage/market_watch_logo.png",
+      "related": "",
+      "source": "MarketWatch",
+      "summary": "President Trump on Friday said he plans to fire the head of the government agency that produces the monthly jobs report, claiming without evidence that she is biased against him.",
+      "url": "https://www.marketwatch.com/story/trump-says-he-plans-to-fire-bls-chief-after-poor-u-s-jobs-report-7dce121b"
+    },
+    {
+      "category": "top news",
+      "datetime": 1754072155,
+      "headline": "Here are 3 reasons we are not going to buy stocks in Friday's nosediving market",
+      "id": 7503074,
+      "image": "https://image.cnbcfm.com/api/v1/image/107326614-1698817848271-gettyimages-122369852-Par6471649.jpeg?v=1754072010&w=1920&h=1080",
+      "related": "",
+      "source": "CNBC",
+      "summary": "Every weekday, the Investing Club releases the Homestretch; an actionable afternoon update just in time for the last hour of trading.",
+      "url": "https://www.cnbc.com/2025/08/01/here-are-3-reasons-we-are-not-going-to-buy-stocks-in-fridays-nosediving-market.html"
+    },
+    {
+      "category": "top news",
+      "datetime": 1754071200,
+      "headline": "Older adults on ‘edge of poverty’ lose jobs and funding as new Medicaid and SNAP work requirements loom",
+      "id": 7503054,
+      "image": "https://static2.finnhub.io/file/publicdatany/finnhubimage/market_watch_logo.png",
+      "related": "",
+      "source": "MarketWatch",
+      "summary": "A job-training program for low-income older adults has lost funding just as new work requirements to qualify for benefits such as Medicaid and food assistance are set to begin.",
+      "url": "https://www.marketwatch.com/story/older-adults-on-edge-of-poverty-lose-jobs-and-funding-as-new-medicaid-and-snap-work-requirements-loom-efc56841"
+    },
+    {
+      "category": "top news",
+      "datetime": 1754065680,
+      "headline": "Why few companies still offer unlimited vacation time — and what perks are replacing it",
+      "id": 7503025,
+      "image": "https://static2.finnhub.io/file/publicdatany/finnhubimage/market_watch_logo.png",
+      "related": "",
+      "source": "MarketWatch",
+      "summary": "Unlimited PTO became a popular benefit right after the COVID-19 pandemic, but data suggest employers are now phasing it out.",
+      "url": "https://www.marketwatch.com/story/why-few-companies-still-offer-unlimited-vacation-time-and-what-perks-are-replacing-it-3193e3d5"
+    },
+    {
+      "category": "top news",
+      "datetime": 1754065600,
+      "headline": "Jeffrey Epstein accomplice Ghislaine Maxwell moved from Florida prison to Texas lockup",
+      "id": 7503028,
+      "image": "https://image.cnbcfm.com/api/v1/image/106078471-1565785656394preview.jpg?v=1754064182&w=1920&h=1080",
+      "related": "",
+      "source": "CNBC",
+      "summary": "President Donald Trump and the Justice Department face criticism for not releasing information about the Jeffrey Epstein investigation.",
+      "url": "https://www.cnbc.com/2025/08/01/jeffrey-epstein-ghislaine-maxwell-prison-florida-texas.html"
+    },
+    {
+      "category": "top news",
+      "datetime": 1754065500,
+      "headline": "Where is Trump’s tariff money going? Here’s what he’s said and how much has come in.",
+      "id": 7503026,
+      "image": "https://static2.finnhub.io/file/publicdatany/finnhubimage/market_watch_logo.png",
+      "related": "",
+      "source": "MarketWatch",
+      "summary": "President Donald Trump calls money from tariffs good news. But collections so far pale in comparison to the government’s deficit.",
+      "url": "https://www.marketwatch.com/story/where-is-trumps-tariff-money-going-heres-what-hes-said-and-how-much-has-come-in-fb8854a8"
+    },
+    {
+      "category": "top news",
+      "datetime": 1754065080,
+      "headline": "What investors should do as the stock market flashes warnings beyond Trump’s tariffs",
+      "id": 7503027,
+      "image": "https://static2.finnhub.io/file/publicdatany/finnhubimage/market_watch_logo.png",
+      "related": "",
+      "source": "MarketWatch",
+      "summary": "Also: A bipartisan plan to expand the home supply, an investment income strategy that lowers risk and advice from the Moneyist.",
+      "url": "https://www.marketwatch.com/story/what-investors-should-do-as-the-stock-market-flashes-warnings-beyond-trumps-tariffs-8e282a5c"
+    },
+    {
+      "category": "top news",
+      "datetime": 1754062920,
+      "headline": "Reddit’s stock is soaring, and analysts think it has further to go",
+      "id": 7503004,
+      "image": "https://static2.finnhub.io/file/publicdatany/finnhubimage/market_watch_logo.png",
+      "related": "",
+      "source": "MarketWatch",
+      "summary": "Analysts are raising their Reddit price targets and reiterating their buy ratings after the social-media platform’s better-than-expected second-quarter results.",
+      "url": "https://www.marketwatch.com/story/reddits-stock-is-soaring-and-analysts-think-it-has-further-to-go-0c9d04c5"
+    }
+  ],
+  "globalMarkets": {},
+  "currencyMoves": {
+    "EURUSD": {
+      "rate": "1.1531",
+      "lastRefreshed": "2025-08-01 19:03:43",
+      "session": "Overnight"
+    },
+    "GBPUSD": {
+      "rate": "1.3226",
+      "lastRefreshed": "2025-08-01 19:03:51",
+      "session": "Overnight"
+    },
+    "USDJPY": {
+      "rate": "147.8050",
+      "lastRefreshed": "2025-08-01 19:03:38",
+      "session": "Overnight"
+    }
+  },
+  "metadata": {
+    "generatedAt": "2025-08-01T19:04:52.007Z",
+    "marketTimings": {
+      "lastClose": "8/1/2025, 4:00:00 PM",
+      "nextOpen": "8/1/2025, 9:30:00 AM",
+      "hoursSinceClose": 3,
+      "timeToOpenStr": "-10h -34m"
+    },
+    "dataQuality": {
+      "realDataPoints": 12,
+      "newsArticles": 8,
+      "currencyPairs": 3
+    }
+  }
+}
