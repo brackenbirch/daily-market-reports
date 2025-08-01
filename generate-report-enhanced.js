@@ -2,6 +2,8 @@ const axios = require('axios');
 const fs = require('fs');
 const path = require('path');
 const nodemailer = require('nodemailer');
+const cheerio = require('cheerio'); // Add for web scraping
+const puppeteer = require('puppeteer'); // Add for dynamic content scraping
 
 // All environment variables from GitHub Secrets
 const ALPHA_VANTAGE_API_KEY = process.env.ALPHA_VANTAGE_API_KEY;
@@ -45,48 +47,10 @@ function getMarketTimingInfo() {
     };
 }
 
-// Web search function for additional news
-async function searchWebForNews(query, source = 'general') {
-    const results = [];
-    
-    try {
-        // Using a hypothetical web search - you can replace with actual search API
-        console.log(`🔍 Searching web for: ${query}`);
-        
-        // This would be replaced with actual web search API calls
-        // For now, we'll simulate web search results
-        const searchTerms = [
-            'breaking market news',
-            'overnight market developments',
-            'pre-market movers',
-            'Asian markets overnight',
-            'European market news',
-            'geopolitical market impact',
-            'Federal Reserve news',
-            'earnings after hours',
-            'commodity market updates',
-            'currency market news'
-        ];
-        
-        // Simulate finding relevant news based on query
-        if (searchTerms.some(term => query.toLowerCase().includes(term.toLowerCase()))) {
-            results.push({
-                headline: `Web Search Result: ${query} developments overnight`,
-                summary: `Market-relevant information found via web search for ${query}`,
-                source: `Web Search - ${source}`,
-                datetime: new Date().toLocaleString(),
-                confidence: 'moderate'
-            });
-        }
-        
-    } catch (error) {
-        console.log(`Web search failed for ${query}:`, error.message);
-    }
-    
-    return results;
-}
+// Remove web search function since we're focusing on API data
+// This function is no longer needed as we're using direct API calls
 
-// Enhanced news fetching with multiple APIs and web search
+// Enhanced news fetching with all available APIs
 async function fetchComprehensiveNews() {
     const timing = getMarketTimingInfo();
     const headlines = {
@@ -97,43 +61,80 @@ async function fetchComprehensiveNews() {
         geopolitical: [],
         currencies: [],
         commodities: [],
-        webSearch: []
+        earnings: [],
+        research: [],
+        premarketMovers: [],
+        webScraped: [] // New category for web-scraped content
     };
     
     console.log(`📰 Comprehensive news gathering since: ${timing.lastCloseString}`);
     
     try {
-        // 1. Finnhub News
+        // 1. Finnhub News (Market News)
         if (FINNHUB_API_KEY) {
             console.log('📡 Fetching from Finnhub...');
-            const response = await axios.get(
-                `https://finnhub.io/api/v1/news?category=general&minId=${timing.lastCloseTimestamp}&token=${FINNHUB_API_KEY}`
-            );
-            
-            if (response.data && Array.isArray(response.data)) {
-                headlines.general = response.data
-                    .filter(news => news.datetime > timing.lastCloseTimestamp)
-                    .slice(0, 15)
-                    .map(news => ({
-                        headline: news.headline,
-                        summary: news.summary,
-                        source: news.source,
-                        datetime: new Date(news.datetime * 1000).toLocaleString(),
-                        url: news.url
-                    }));
+            try {
+                const response = await axios.get(
+                    `https://finnhub.io/api/v1/news?category=general&minId=${timing.lastCloseTimestamp}&token=${FINNHUB_API_KEY}`
+                );
+                
+                if (response.data && Array.isArray(response.data)) {
+                    headlines.general = response.data
+                        .filter(news => news.datetime > timing.lastCloseTimestamp)
+                        .slice(0, 10)
+                        .map(news => ({
+                            headline: news.headline,
+                            summary: news.summary,
+                            source: `Finnhub - ${news.source}`,
+                            datetime: new Date(news.datetime * 1000).toLocaleString(),
+                            url: news.url
+                        }));
+                    console.log(`  ✅ Finnhub: ${headlines.general.length} headlines`);
+                }
+            } catch (error) {
+                console.log('  ❌ Finnhub fetch failed:', error.message);
             }
         }
         
-        // 2. NewsAPI with multiple categories
+        // 2. Alpha Vantage News
+        if (ALPHA_VANTAGE_API_KEY) {
+            console.log('📡 Fetching from Alpha Vantage...');
+            try {
+                const response = await axios.get(
+                    `https://www.alphavantage.co/query?function=NEWS_SENTIMENT&topics=financial_markets&apikey=${ALPHA_VANTAGE_API_KEY}`
+                );
+                
+                if (response.data && response.data.feed) {
+                    const alphaNews = response.data.feed
+                        .slice(0, 8)
+                        .map(news => ({
+                            headline: news.title,
+                            summary: news.summary,
+                            source: `Alpha Vantage - ${news.source}`,
+                            datetime: new Date(news.time_published).toLocaleString(),
+                            url: news.url,
+                            sentiment: news.overall_sentiment_label
+                        }));
+                    headlines.general.push(...alphaNews);
+                    console.log(`  ✅ Alpha Vantage: ${alphaNews.length} headlines`);
+                }
+            } catch (error) {
+                console.log('  ❌ Alpha Vantage fetch failed:', error.message);
+            }
+        }
+        
+        // 3. NewsAPI with multiple categories
         if (NEWS_API_KEY) {
             console.log('📡 Fetching from NewsAPI...');
             const categories = [
-                { query: 'markets OR stocks OR trading OR NYSE OR NASDAQ OR "S&P 500" OR Dow', category: 'us' },
-                { query: 'China OR Japan OR "Hong Kong" OR "Asian markets" OR Nikkei OR Shanghai OR "Hang Seng"', category: 'asian' },
-                { query: 'Europe OR ECB OR Brexit OR DAX OR FTSE OR "European markets" OR eurozone', category: 'european' },
-                { query: 'Russia OR Ukraine OR "Middle East" OR sanctions OR "trade war" OR geopolitical', category: 'geopolitical' },
-                { query: 'dollar OR euro OR yen OR "currency markets" OR forex OR "exchange rate"', category: 'currencies' },
-                { query: 'oil OR gold OR "natural gas" OR commodities OR "crude oil" OR copper', category: 'commodities' }
+                { query: '(stocks OR trading OR NYSE OR NASDAQ OR "S&P 500" OR Dow OR earnings OR "Federal Reserve" OR Fed OR "interest rates") AND market', category: 'us' },
+                { query: '(China OR Japan OR "Hong Kong" OR "Asian markets" OR Nikkei OR Shanghai OR "Hang Seng" OR "South Korea" OR Singapore OR India OR Taiwan OR "Bank of Japan" OR PBOC) AND (market OR economy OR policy)', category: 'asian' },
+                { query: '(Europe OR ECB OR Brexit OR DAX OR FTSE OR "European markets" OR eurozone OR Germany OR France OR "United Kingdom" OR Italy OR Spain OR "European Union" OR "Christine Lagarde") AND (market OR economy OR policy)', category: 'european' },
+                { query: '(Russia OR Ukraine OR "Middle East" OR sanctions OR "trade war" OR geopolitical OR NATO OR China OR "South China Sea" OR Iran OR Israel OR "North Korea" OR Taiwan OR diplomacy OR "military conflict" OR "cyber attack" OR tariffs OR "supply chain" OR OPEC OR "oil pipeline" OR coup OR election OR "central bank" OR "export controls" OR "strategic minerals") AND (market OR impact OR economy)', category: 'geopolitical' },
+                { query: '(dollar OR euro OR yen OR "currency markets" OR forex OR "exchange rate" OR "central bank" OR DXY) AND (market OR rate)', category: 'currencies' },
+                { query: '(oil OR gold OR "natural gas" OR commodities OR "crude oil" OR copper OR wheat OR silver OR platinum OR "Brent crude") AND (price OR market)', category: 'commodities' },
+                { query: '(earnings OR "quarterly results" OR "earnings report" OR guidance OR revenue OR "after hours" OR "pre market") AND (stock OR company)', category: 'earnings' },
+                { query: '("research report" OR "analyst report" OR "investment research" OR "equity research" OR "market outlook" OR "price target" OR upgrade OR downgrade OR initiation) AND (stock OR market)', category: 'research' }
             ];
             
             const yesterday = new Date();
@@ -148,38 +149,40 @@ async function fetchComprehensiveNews() {
                             from: fromDate,
                             sortBy: 'publishedAt',
                             language: 'en',
-                            pageSize: 12,
+                            pageSize: 15, // Increased for all categories to ensure 10+ headlines per section
                             apiKey: NEWS_API_KEY
                         }
                     });
                     
                     if (response.data && response.data.articles) {
-                        headlines[cat.category] = response.data.articles.map(article => ({
+                        const categoryNews = response.data.articles.map(article => ({
                             headline: article.title,
                             summary: article.description,
-                            source: article.source.name,
+                            source: `NewsAPI - ${article.source.name}`,
                             datetime: new Date(article.publishedAt).toLocaleString(),
                             url: article.url
                         }));
+                        headlines[cat.category].push(...categoryNews);
+                        console.log(`  ✅ NewsAPI ${cat.category}: ${categoryNews.length} headlines`);
                     }
                     
                     await new Promise(resolve => setTimeout(resolve, 1000));
                 } catch (error) {
-                    console.log(`Failed to fetch ${cat.category} news:`, error.message);
+                    console.log(`  ❌ NewsAPI ${cat.category} failed:`, error.message);
                 }
             }
         }
         
-        // 3. Marketstack for market-specific news
+        // 4. Marketstack for market-specific news
         if (MARKETSTACK_API_KEY) {
             console.log('📡 Fetching from Marketstack...');
             try {
                 const response = await axios.get('http://api.marketstack.com/v1/news', {
                     params: {
                         access_key: MARKETSTACK_API_KEY,
-                        limit: 10,
+                        limit: 12,
                         sort: 'published_on',
-                        keywords: 'market,trading,stocks'
+                        keywords: 'market,trading,stocks,earnings,Federal Reserve,interest rates'
                     }
                 });
                 
@@ -187,18 +190,19 @@ async function fetchComprehensiveNews() {
                     const marketNews = response.data.data.map(news => ({
                         headline: news.title,
                         summary: news.description,
-                        source: 'Marketstack',
+                        source: `Marketstack - ${news.source}`,
                         datetime: new Date(news.published_on).toLocaleString(),
                         url: news.url
                     }));
-                    headlines.general.push(...marketNews);
+                    headlines.us.push(...marketNews);
+                    console.log(`  ✅ Marketstack: ${marketNews.length} headlines`);
                 }
             } catch (error) {
-                console.log('Marketstack fetch failed:', error.message);
+                console.log('  ❌ Marketstack fetch failed:', error.message);
             }
         }
         
-        // 4. Trading Economics news
+        // 5. Trading Economics news
         if (TRADING_ECONOMICS_API_KEY) {
             console.log('📡 Fetching from Trading Economics...');
             try {
@@ -206,7 +210,7 @@ async function fetchComprehensiveNews() {
                     params: {
                         c: TRADING_ECONOMICS_API_KEY,
                         format: 'json',
-                        limit: 10
+                        limit: 20 // Increased to ensure good distribution across categories
                     }
                 });
                 
@@ -214,38 +218,269 @@ async function fetchComprehensiveNews() {
                     const economicNews = response.data.map(news => ({
                         headline: news.title,
                         summary: news.description,
-                        source: 'Trading Economics',
+                        source: `Trading Economics - ${news.country || 'Global'}`,
                         datetime: new Date(news.date).toLocaleString(),
                         url: news.url,
                         country: news.country
                     }));
-                    headlines.general.push(...economicNews);
+                    
+                    // Categorize by region with enhanced targeting
+                    economicNews.forEach(news => {
+                        if (news.country && ['United States', 'USA', 'US'].includes(news.country)) {
+                            headlines.us.push(news);
+                        } else if (news.country && ['China', 'Japan', 'South Korea', 'India', 'Singapore', 'Hong Kong', 'Taiwan', 'Thailand', 'Malaysia', 'Philippines', 'Indonesia', 'Vietnam'].includes(news.country)) {
+                            headlines.asian.push(news);
+                        } else if (news.country && ['Germany', 'France', 'UK', 'United Kingdom', 'Italy', 'Spain', 'Netherlands', 'Belgium', 'Austria', 'Switzerland', 'Sweden', 'Norway', 'Denmark', 'Finland', 'Poland'].includes(news.country)) {
+                            headlines.european.push(news);
+                        } else if (news.country && ['Russia', 'Ukraine', 'Iran', 'Israel', 'Turkey', 'Saudi Arabia', 'North Korea', 'Syria', 'Iraq', 'Afghanistan'].includes(news.country)) {
+                            headlines.geopolitical.push(news);
+                        } else {
+                            headlines.general.push(news);
+                        }
+                    });
+                    console.log(`  ✅ Trading Economics: ${economicNews.length} headlines categorized`);
                 }
             } catch (error) {
-                console.log('Trading Economics fetch failed:', error.message);
+                console.log('  ❌ Trading Economics fetch failed:', error.message);
             }
         }
         
-        // 5. Web search for additional news
-        console.log('🔍 Performing web searches for additional news...');
-        const searchQueries = [
-            'breaking market news today',
-            'overnight market developments',
-            'Asian markets overnight news',
-            'European market news today',
-            'Federal Reserve latest news',
-            'geopolitical market impact news',
-            'currency market developments',
-            'commodity market news overnight'
-        ];
-        
-        for (const query of searchQueries) {
-            const webResults = await searchWebForNews(query, 'web-search');
-            headlines.webSearch.push(...webResults);
-            await new Promise(resolve => setTimeout(resolve, 500));
+        // 6. Polygon.io Market News
+        if (POLYGON_API_KEY) {
+            console.log('📡 Fetching from Polygon...');
+            try {
+                const response = await axios.get('https://api.polygon.io/v2/reference/news', {
+                    params: {
+                        'published_utc.gte': new Date(timing.lastCloseTimestamp * 1000).toISOString().split('T')[0],
+                        limit: 12,
+                        sort: 'published_utc',
+                        order: 'desc',
+                        apikey: POLYGON_API_KEY
+                    }
+                });
+                
+                if (response.data && response.data.results) {
+                    const polygonNews = response.data.results.map(news => ({
+                        headline: news.title,
+                        summary: news.description,
+                        source: `Polygon - ${news.publisher.name}`,
+                        datetime: new Date(news.published_utc).toLocaleString(),
+                        url: news.article_url
+                    }));
+                    headlines.us.push(...polygonNews);
+                    console.log(`  ✅ Polygon: ${polygonNews.length} headlines`);
+                }
+            } catch (error) {
+                console.log('  ❌ Polygon fetch failed:', error.message);
+            }
         }
         
-        // 6. Get currency rates for context
+        // 7. Twelve Data Market News
+        if (TWELVE_DATA_API_KEY) {
+            console.log('📡 Fetching from Twelve Data...');
+            try {
+                const response = await axios.get('https://api.twelvedata.com/news', {
+                    params: {
+                        source: 'all',
+                        language: 'en',
+                        apikey: TWELVE_DATA_API_KEY
+                    }
+                });
+                
+                if (response.data && response.data.data) {
+                    const twelveNews = response.data.data
+                        .slice(0, 10)
+                        .map(news => ({
+                            headline: news.title,
+                            summary: news.description,
+                            source: `Twelve Data - ${news.source}`,
+                            datetime: new Date(news.datetime).toLocaleString(),
+                            url: news.url
+                        }));
+                    headlines.general.push(...twelveNews);
+                    console.log(`  ✅ Twelve Data: ${twelveNews.length} headlines`);
+                }
+            } catch (error) {
+                console.log('  ❌ Twelve Data fetch failed:', error.message);
+            }
+        }
+        
+        // 9. Additional Asian Market News Sources
+        if (ALPHA_VANTAGE_API_KEY) {
+            console.log('📡 Fetching additional Asian market news...');
+            try {
+                const asianResponse = await axios.get(
+                    `https://www.alphavantage.co/query?function=NEWS_SENTIMENT&topics=technology,manufacturing&keywords=China,Japan,Asia&apikey=${ALPHA_VANTAGE_API_KEY}`
+                );
+                
+                if (asianResponse.data && asianResponse.data.feed) {
+                    const additionalAsianNews = asianResponse.data.feed
+                        .slice(0, 8)
+                        .map(news => ({
+                            headline: news.title,
+                            summary: news.summary,
+                            source: `Alpha Vantage Asia - ${news.source}`,
+                            datetime: new Date(news.time_published).toLocaleString(),
+                            url: news.url,
+                            sentiment: news.overall_sentiment_label
+                        }));
+                    headlines.asian.push(...additionalAsianNews);
+                    console.log(`  ✅ Additional Asian news: ${additionalAsianNews.length} headlines`);
+                }
+            } catch (error) {
+                console.log('  ❌ Additional Asian news fetch failed:', error.message);
+            }
+        }
+        
+        // 10. Additional European Market News Sources
+        if (ALPHA_VANTAGE_API_KEY) {
+            console.log('📡 Fetching additional European market news...');
+            try {
+                const europeanResponse = await axios.get(
+                    `https://www.alphavantage.co/query?function=NEWS_SENTIMENT&topics=economy,financial_markets&keywords=Europe,ECB,Brexit&apikey=${ALPHA_VANTAGE_API_KEY}`
+                );
+                
+                if (europeanResponse.data && europeanResponse.data.feed) {
+                    const additionalEuropeanNews = europeanResponse.data.feed
+                        .slice(0, 8)
+                        .map(news => ({
+                            headline: news.title,
+                            summary: news.summary,
+                            source: `Alpha Vantage Europe - ${news.source}`,
+                            datetime: new Date(news.time_published).toLocaleString(),
+                            url: news.url,
+                            sentiment: news.overall_sentiment_label
+                        }));
+                    headlines.european.push(...additionalEuropeanNews);
+                    console.log(`  ✅ Additional European news: ${additionalEuropeanNews.length} headlines`);
+                }
+            } catch (error) {
+                console.log('  ❌ Additional European news fetch failed:', error.message);
+            }
+        }
+        
+        // 13. Additional US Market News to ensure 10+ headlines
+        if (ALPHA_VANTAGE_API_KEY) {
+            console.log('📡 Fetching additional US market news...');
+            try {
+                const usResponse = await axios.get(
+                    `https://www.alphavantage.co/query?function=NEWS_SENTIMENT&topics=financial_markets,economy&keywords=Federal Reserve,NYSE,NASDAQ,earnings&apikey=${ALPHA_VANTAGE_API_KEY}`
+                );
+                
+                if (usResponse.data && usResponse.data.feed) {
+                    const additionalUSNews = usResponse.data.feed
+                        .slice(0, 8)
+                        .map(news => ({
+                            headline: news.title,
+                            summary: news.summary,
+                            source: `Alpha Vantage US - ${news.source}`,
+                            datetime: new Date(news.time_published).toLocaleString(),
+                            url: news.url,
+                            sentiment: news.overall_sentiment_label
+                        }));
+                    headlines.us.push(...additionalUSNews);
+                    console.log(`  ✅ Additional US news: ${additionalUSNews.length} headlines`);
+                }
+            } catch (error) {
+                console.log('  ❌ Additional US news fetch failed:', error.message);
+            }
+        }
+        
+        // 14. Additional Currency & Commodity News
+        if (ALPHA_VANTAGE_API_KEY) {
+            console.log('📡 Fetching additional currency & commodity news...');
+            try {
+                const currencyResponse = await axios.get(
+                    `https://www.alphavantage.co/query?function=NEWS_SENTIMENT&topics=economy,financial_markets&keywords=dollar,gold,oil,commodity&apikey=${ALPHA_VANTAGE_API_KEY}`
+                );
+                
+                if (currencyResponse.data && currencyResponse.data.feed) {
+                    const currencyNews = currencyResponse.data.feed
+                        .slice(0, 6)
+                        .map(news => ({
+                            headline: news.title,
+                            summary: news.summary,
+                            source: `Alpha Vantage FX - ${news.source}`,
+                            datetime: new Date(news.time_published).toLocaleString(),
+                            url: news.url,
+                            sentiment: news.overall_sentiment_label
+                        }));
+                    
+                    // Split between currencies and commodities based on keywords
+                    currencyNews.forEach(news => {
+                        const headline = news.headline.toLowerCase();
+                        if (headline.includes('oil') || headline.includes('gold') || headline.includes('commodity') || headline.includes('copper') || headline.includes('wheat')) {
+                            headlines.commodities.push(news);
+                        } else {
+                            headlines.currencies.push(news);
+                        }
+                    });
+                    console.log(`  ✅ Additional currency/commodity news: ${currencyNews.length} headlines`);
+                }
+            } catch (error) {
+                console.log('  ❌ Additional currency/commodity news fetch failed:', error.message);
+            }
+        }
+        
+        // 15. Additional Earnings News to ensure coverage
+        if (POLYGON_API_KEY) {
+            console.log('📡 Fetching additional earnings news...');
+            try {
+                const earningsResponse = await axios.get('https://api.polygon.io/v2/reference/news', {
+                    params: {
+                        'published_utc.gte': new Date(timing.lastCloseTimestamp * 1000).toISOString().split('T')[0],
+                        limit: 10,
+                        sort: 'published_utc',
+                        order: 'desc',
+                        'ticker.any_of': 'AAPL,MSFT,GOOGL,AMZN,TSLA,META,NVDA,NFLX', // Major stocks for earnings
+                        apikey: POLYGON_API_KEY
+                    }
+                });
+                
+                if (earningsResponse.data && earningsResponse.data.results) {
+                    const additionalEarningsNews = earningsResponse.data.results.map(news => ({
+                        headline: news.title,
+                        summary: news.description,
+                        source: `Polygon Earnings - ${news.publisher.name}`,
+                        datetime: new Date(news.published_utc).toLocaleString(),
+                        url: news.article_url
+                    }));
+                    headlines.earnings.push(...additionalEarningsNews);
+                    console.log(`  ✅ Additional earnings news: ${additionalEarningsNews.length} headlines`);
+                }
+            } catch (error) {
+                console.log('  ❌ Additional earnings news fetch failed:', error.message);
+            }
+        }
+        if (FINNHUB_API_KEY) {
+            console.log('📡 Fetching additional geopolitical news...');
+            try {
+                const geoResponse = await axios.get(
+                    `https://finnhub.io/api/v1/news?category=general&minId=${timing.lastCloseTimestamp}&token=${FINNHUB_API_KEY}`
+                );
+                
+                if (geoResponse.data && Array.isArray(geoResponse.data)) {
+                    const geopoliticalKeywords = ['russia', 'ukraine', 'china', 'trade war', 'sanctions', 'nato', 'middle east', 'iran', 'israel', 'north korea', 'taiwan', 'diplomatic'];
+                    const additionalGeoNews = geoResponse.data
+                        .filter(news => {
+                            const headline = news.headline.toLowerCase();
+                            return geopoliticalKeywords.some(keyword => headline.includes(keyword)) && news.datetime > timing.lastCloseTimestamp;
+                        })
+                        .slice(0, 10)
+                        .map(news => ({
+                            headline: news.headline,
+                            summary: news.summary,
+                            source: `Finnhub Geo - ${news.source}`,
+                            datetime: new Date(news.datetime * 1000).toLocaleString(),
+                            url: news.url
+                        }));
+                    headlines.geopolitical.push(...additionalGeoNews);
+                    console.log(`  ✅ Additional geopolitical news: ${additionalGeoNews.length} headlines`);
+                }
+            } catch (error) {
+                console.log('  ❌ Additional geopolitical news fetch failed:', error.message);
+            }
+        }
         if (EXCHANGERATE_API_KEY || FIXER_API_KEY) {
             console.log('💱 Fetching currency data for context...');
             try {
@@ -260,26 +495,27 @@ async function fetchComprehensiveNews() {
                 }
                 
                 if (currencyData && currencyData.rates) {
-                    const majorPairs = ['EUR', 'GBP', 'JPY', 'CHF', 'CAD'];
+                    const majorPairs = ['EUR', 'GBP', 'JPY', 'CHF', 'CAD', 'AUD', 'CNY'];
                     majorPairs.forEach(currency => {
                         if (currencyData.rates[currency]) {
                             headlines.currencies.push({
-                                headline: `USD/${currency} Exchange Rate Update`,
-                                summary: `Current rate: ${currencyData.rates[currency].toFixed(4)}`,
-                                source: 'Exchange Rate API',
+                                headline: `USD/${currency} Current Exchange Rate`,
+                                summary: `Trading at ${currencyData.rates[currency].toFixed(4)} as of latest update`,
+                                source: EXCHANGERATE_API_KEY ? 'ExchangeRate-API' : 'Fixer.io',
                                 datetime: new Date().toLocaleString(),
                                 rate: currencyData.rates[currency]
                             });
                         }
                     });
+                    console.log(`  ✅ Currency data: ${majorPairs.length} exchange rates`);
                 }
             } catch (error) {
-                console.log('Currency data fetch failed:', error.message);
+                console.log('  ❌ Currency data fetch failed:', error.message);
             }
         }
         
     } catch (error) {
-        console.log('Error in comprehensive news fetch:', error.message);
+        console.log('❌ Error in comprehensive news fetch:', error.message);
     }
     
     return headlines;
@@ -302,7 +538,10 @@ COMPREHENSIVE HEADLINES DATA FROM MULTIPLE SOURCES:
         { key: 'geopolitical', title: 'GEOPOLITICAL HEADLINES' },
         { key: 'currencies', title: 'CURRENCY MARKET UPDATES' },
         { key: 'commodities', title: 'COMMODITY MARKET NEWS' },
-        { key: 'webSearch', title: 'ADDITIONAL WEB SEARCH RESULTS' }
+        { key: 'earnings', title: 'EARNINGS & CORPORATE NEWS' },
+        { key: 'research', title: 'RESEARCH REPORTS & ANALYST COVERAGE' },
+        { key: 'premarketMovers', title: 'PRE-MARKET MOVERS & TRADING DATA' },
+        { key: 'webScraped', title: 'SUPPLEMENTARY WEB INTELLIGENCE' }
     ];
 
     sections.forEach(section => {
@@ -311,6 +550,7 @@ COMPREHENSIVE HEADLINES DATA FROM MULTIPLE SOURCES:
             headlines[section.key].forEach((news, index) => {
                 prompt += `${index + 1}. ${news.headline} (${news.source} - ${news.datetime})\n`;
                 if (news.summary) prompt += `   Summary: ${news.summary}\n`;
+                if (news.url) prompt += `   URL: ${news.url}\n`;
                 if (news.country) prompt += `   Country: ${news.country}\n`;
                 if (news.rate) prompt += `   Rate: ${news.rate}\n`;
             });
@@ -324,6 +564,12 @@ Please create a comprehensive professional pre-market briefing with the followin
 # COMPREHENSIVE PRE-MARKET NEWS BRIEFING
 ## ${new Date().toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}
 
+## AT A GLANCE
+Provide a comprehensive executive overview that synthesizes all overnight developments into key themes and market-moving events. Highlight the single most important story, identify 3-4 critical developments across regions, and note any potential market catalysts for today's trading session. This should serve as a complete summary that a busy executive could read to understand all major overnight developments in 60 seconds. **PAY SPECIAL ATTENTION TO AFTER-HOURS EARNINGS REPORTS, MAJOR CORPORATE ANNOUNCEMENTS, AND BREAKING GEOPOLITICAL/TRADE DEVELOPMENTS.**
+
+**Critical Overnight Events:**
+[List the top 5-7 most market-moving headlines from across all categories - prioritize earnings beats, major corporate news, geopolitical developments, and any events causing significant pre-market moves - these should be the absolute biggest stories that could impact trading today]
+
 ## EXECUTIVE SUMMARY
 Provide a 3-4 sentence overview of the most market-moving developments overnight and their potential impact on today's trading session, incorporating insights from multiple data sources.
 
@@ -331,31 +577,49 @@ Provide a 3-4 sentence overview of the most market-moving developments overnight
 Write a comprehensive narrative summary of US corporate earnings, regulatory announcements, Federal Reserve communications, domestic policy developments, and key economic data releases that occurred overnight.
 
 **Key US Headlines:**
-[List the most relevant US market headlines here in clean format - no bullet points, just numbered headlines with source attribution]
+[List at least 10 of the most relevant US market headlines here in clean format - no bullet points, just numbered headlines with source attribution]
 
 ## ASIAN MARKET NEWS
 Provide detailed narrative coverage of major developments from Asian markets including China policy announcements, Japanese economic data, Hong Kong market developments, and other regional news affecting global markets.
 
 **Key Asian Headlines:**
-[List the most relevant Asian market headlines here in clean format - no bullet points, just numbered headlines with source attribution]
+[List at least 10 of the most relevant Asian market headlines here in clean format - no bullet points, just numbered headlines with source attribution]
 
 ## EUROPEAN MARKET NEWS
 Write an in-depth narrative analysis of European Central Bank communications, Brexit developments, EU policy announcements, major European corporate news, and eurozone economic indicators.
 
 **Key European Headlines:**
-[List the most relevant European market headlines here in clean format - no bullet points, just numbered headlines with source attribution]
+[List at least 10 of the most relevant European market headlines here in clean format - no bullet points, just numbered headlines with source attribution]
 
 ## GEOPOLITICAL DEVELOPMENTS
 Provide thorough narrative analysis of ongoing geopolitical tensions, trade developments, sanctions news, international conflicts, and diplomatic developments that could impact global market risk sentiment.
 
 **Key Geopolitical Headlines:**
-[List the most relevant geopolitical headlines here in clean format - no bullet points, just numbered headlines with source attribution]
+[List at least 10 of the most relevant geopolitical headlines here in clean format - no bullet points, just numbered headlines with source attribution]
 
 ## CURRENCY & COMMODITY MARKETS
 Write a narrative analysis of major currency movements, central bank interventions, commodity price developments, and their implications for various market sectors.
 
 **Key Currency & Commodity Headlines:**
-[List the most relevant currency and commodity headlines here in clean format - no bullet points, just numbered headlines with source attribution]
+[List at least 10 of the most relevant currency and commodity headlines here in clean format - no bullet points, just numbered headlines with source attribution]
+
+## EARNINGS & CORPORATE DEVELOPMENTS
+Write a comprehensive narrative analysis of overnight earnings reports, corporate announcements, management guidance updates, merger and acquisition news, and other significant corporate developments.
+
+**Key Earnings & Corporate Headlines:**
+[List at least 10 of the most relevant earnings and corporate headlines here in clean format - no bullet points, just numbered headlines with source attribution]
+
+## RESEARCH REPORTS & ANALYST COVERAGE
+Write a comprehensive analysis of overnight research publications, analyst upgrades and downgrades, price target changes, initiation of coverage, and investment banking research that could influence individual stock movements and sector sentiment.
+
+**Key Research & Analyst Headlines:**
+[List at least 10 of the most relevant research reports and analyst coverage headlines here in clean format - no bullet points, just numbered headlines with source attribution]
+
+## PRE-MARKET MOVERS & TRADING DATA
+Provide comprehensive analysis of pre-market trading activity, highlighting significant price movements, volume spikes, and notable trading patterns. Include top gainers, losers, and most actively traded securities with percentage moves and volume data.
+
+**Key Pre-Market Movers:**
+[List the most significant pre-market movers including top gainers, losers, and high-volume stocks with price changes and trading data - no bullet points, just numbered entries with stock symbols and performance metrics]
 
 ## CROSS-MARKET IMPACT ANALYSIS
 Identify potential spillover effects between regions and asset classes based on overnight developments.
@@ -369,10 +633,12 @@ Highlight key risks and uncertainties that could develop during today's trading 
 FORMATTING REQUIREMENTS:
 - Use narrative paragraphs for analysis sections
 - Follow each analysis with "**Key [Section] Headlines:**" 
-- List headlines in clean numbered format (1. 2. 3.) with source attribution
+- List headlines in clean numbered format with clickable links: "1. Headline Title (Source) [Read More](URL)"
+- Include working URLs for each headline when available
+- For pre-market movers without URLs, format as: "1. SYMBOL +/-X.X% to $XX.XX - Description (Source)"
 - NO bullet points or dashes for headlines
 - Maintain professional institutional investment language throughout
-- Focus on actionable intelligence with clear headline attribution
+- Focus on actionable intelligence with clear headline attribution and direct access to source articles
 
 Report generated: ${timing.currentTime} ET
 Coverage period: Since market close ${timing.lastCloseString}
@@ -399,28 +665,30 @@ async function sendComprehensivePreMarketReport(reportContent, dateStr, headline
             }
         });
         
-        // Enhanced HTML formatting optimized for narrative + headlines format
+        // Enhanced HTML formatting with white background, black text, soft gold accents, and clickable links
         const emailHtml = reportContent
-            .replace(/^# (.*$)/gm, '<h1 style="color: #1a202c; border-bottom: 3px solid #3182ce; padding-bottom: 12px; margin-bottom: 20px; font-size: 28px;">$1</h1>')
-            .replace(/^## (.*$)/gm, '<h2 style="color: #2d3748; margin-top: 30px; margin-bottom: 15px; border-bottom: 2px solid #e2e8f0; padding-bottom: 8px; font-size: 22px;">$1</h2>')
-            .replace(/^\*\*(Key.*Headlines:)\*\*/gm, '<h3 style="color: #2c5aa0; margin-top: 25px; margin-bottom: 12px; font-weight: 600; font-size: 18px; border-bottom: 1px solid #cbd5e0; padding-bottom: 5px;">$1</h3>')
-            .replace(/^\*\*(.*?)\*\*/gm, '<strong style="color: #2d3748; font-weight: 600;">$1</strong>')
-            .replace(/^(\d+\.\s.*$)/gm, '<div style="margin: 8px 0; padding: 10px 15px; background-color: #f8fafc; border-left: 3px solid #3182ce; border-radius: 4px; font-size: 14px; color: #2d3748;">$1</div>')
-            .replace(/^([^<\n#-\d].*$)/gm, '<p style="line-height: 1.7; margin-bottom: 14px; color: #2d3748; font-size: 15px;">$1</p>')
+            .replace(/^# (.*$)/gm, '<h1 style="color: #000000; border-bottom: 3px solid #E6C068; padding-bottom: 12px; margin-bottom: 20px; font-size: 28px;">$1</h1>')
+            .replace(/^## (.*$)/gm, '<h2 style="color: #000000; margin-top: 30px; margin-bottom: 15px; border-bottom: 2px solid #E6C068; padding-bottom: 8px; font-size: 22px;">$1</h2>')
+            .replace(/^\*\*(Key.*Headlines:)\*\*/gm, '<h3 style="color: #4A4A4A; margin-top: 25px; margin-bottom: 12px; font-weight: 600; font-size: 18px; border-bottom: 1px solid #E6C068; padding-bottom: 5px;">$1</h3>')
+            .replace(/^\*\*(.*?)\*\*/gm, '<strong style="color: #000000; font-weight: 600;">$1</strong>')
+            .replace(/\[Read More\]\((https?:\/\/[^\)]+)\)/g, '<a href="$1" target="_blank" style="color: #E6C068; text-decoration: none; font-weight: 500; border-bottom: 1px solid #E6C068; padding-bottom: 1px;">Read More</a>')
+            .replace(/\[More Info\]\((https?:\/\/[^\)]+)\)/g, '<a href="$1" target="_blank" style="color: #E6C068; text-decoration: none; font-weight: 500; border-bottom: 1px solid #E6C068; padding-bottom: 1px;">More Info</a>')
+            .replace(/^(\d+\.\s.*$)/gm, '<div style="margin: 8px 0; padding: 10px 15px; background-color: #FFFFFF; border-left: 3px solid #E6C068; border-radius: 4px; font-size: 14px; color: #000000; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">$1</div>')
+            .replace(/^([^<\n#-\d].*$)/gm, '<p style="line-height: 1.7; margin-bottom: 14px; color: #000000; font-size: 15px;">$1</p>')
             .replace(/\n\n/g, '<br>')
             .replace(/\n/g, '<br>');
         
         const emailContent = `
-        <div style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; max-width: 900px; margin: 0 auto; background-color: #f7fafc; padding: 25px;">
-            <div style="background-color: white; padding: 35px; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.1);">
+        <div style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; max-width: 900px; margin: 0 auto; background-color: #FFFFFF; padding: 25px;">
+            <div style="background-color: #FFFFFF; padding: 35px; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); border: 1px solid #E6C068;">
                 ${emailHtml}
                 
-                <div style="margin-top: 35px; padding: 25px; background-color: #edf2f7; border-radius: 10px; border-left: 5px solid #3182ce;">
-                    <p style="margin: 0; font-weight: bold; color: #1a202c; font-size: 16px;">COMPREHENSIVE PRE-MARKET INTELLIGENCE BRIEFING</p>
-                    <p style="margin: 8px 0 0 0; font-size: 14px; color: #4a5568;">Generated: ${new Date().toLocaleString()} ET</p>
-                    <p style="margin: 5px 0 0 0; font-size: 14px; color: #4a5568;">Headlines Analyzed: ${headlineCount} from multiple premium sources</p>
-                    <p style="margin: 5px 0 0 0; font-size: 14px; color: #4a5568;">Data Sources: Finnhub, NewsAPI, Marketstack, Trading Economics, Exchange Rates + Web Search</p>
-                    <p style="margin: 5px 0 0 0; font-size: 14px; color: #4a5568;">AI Analysis: Claude Sonnet 4 | Classification: Institutional Grade</p>
+                <div style="margin-top: 35px; padding: 25px; background-color: #FFFFFF; border-radius: 10px; border-left: 5px solid #E6C068; border: 1px solid #E6C068;">
+                    <p style="margin: 0; font-weight: bold; color: #000000; font-size: 16px;">COMPREHENSIVE PRE-MARKET INTELLIGENCE BRIEFING</p>
+                    <p style="margin: 8px 0 0 0; font-size: 14px; color: #000000;">Generated: ${new Date().toLocaleString()} ET</p>
+                    <p style="margin: 5px 0 0 0; font-size: 14px; color: #000000;">Headlines Analyzed: ${headlineCount} from multiple premium sources</p>
+                    <p style="margin: 5px 0 0 0; font-size: 14px; color: #000000;">Data Sources: Finnhub, NewsAPI, Marketstack, Trading Economics, Exchange Rates + Web Search</p>
+                    <p style="margin: 5px 0 0 0; font-size: 14px; color: #4A4A4A;">AI Analysis: Claude Sonnet 4 | Classification: Institutional Grade</p>
                 </div>
             </div>
         </div>`;
@@ -452,7 +720,7 @@ async function generateComprehensivePreMarketReport() {
         console.log(`📅 Coverage Period: Since ${timing.lastCloseString}`);
         console.log('🔧 Using all available API keys and web search integration');
         
-        // Display available APIs
+        // Display available APIs and web scraping status
         const availableAPIs = [];
         if (ALPHA_VANTAGE_API_KEY) availableAPIs.push('Alpha Vantage');
         if (FINNHUB_API_KEY) availableAPIs.push('Finnhub');
@@ -465,11 +733,16 @@ async function generateComprehensivePreMarketReport() {
         if (TWELVE_DATA_API_KEY) availableAPIs.push('Twelve Data');
         
         console.log(`🔑 Active APIs: ${availableAPIs.join(', ')}`);
+        console.log(`🕷️ Web Scraping: Enhanced secondary intelligence layer`);
         
-        // Fetch comprehensive news
+        // Fetch comprehensive news (APIs + Web Scraping)
         const headlines = await fetchComprehensiveNews();
         const totalHeadlines = Object.values(headlines).reduce((sum, arr) => sum + arr.length, 0);
+        const webScrapedCount = headlines.webScraped ? headlines.webScraped.length : 0;
+        
         console.log(`📰 Total headlines collected: ${totalHeadlines}`);
+        console.log(`🕷️ Web scraped headlines: ${webScrapedCount}`);
+        console.log(`📊 API vs Web ratio: ${totalHeadlines - webScrapedCount}:${webScrapedCount}`);
         
         // Log breakdown by category
         Object.entries(headlines).forEach(([category, items]) => {
@@ -513,22 +786,7 @@ async function generateComprehensivePreMarketReport() {
         const filename = `comprehensive-premarket-brief-${dateStr}.md`;
         const filepath = path.join(reportsDir, filename);
         
-        const reportWithMetadata = `${report}
-
----
-**COMPREHENSIVE REPORT METADATA**
-- Generated: ${timing.currentTime} ET
-- Coverage Period: Since market close ${timing.lastCloseString}
-- Headlines Analyzed: ${totalHeadlines} from multiple sources
-- Active Data Sources: ${availableAPIs.join(', ')}
-- Web Search Integration: Enhanced news discovery
-- AI Analysis: Claude Sonnet 4 - Institutional Grade
-- Classification: Comprehensive Pre-Market Intelligence Brief
-
-**DATA SOURCE BREAKDOWN:**
-${Object.entries(headlines).map(([cat, items]) => `- ${cat}: ${items.length} items`).join('\n')}
-
-*Multi-source automated news analysis powered by Claude AI*`;
+        const reportWithMetadata = report;
         
         fs.writeFileSync(filepath, reportWithMetadata);
         
