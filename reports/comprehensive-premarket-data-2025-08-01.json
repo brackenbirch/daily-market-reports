@@ -1,0 +1,351 @@
+{
+  "headlines": {
+    "general": [
+      {
+        "headline": "IES Holdings Reports Fiscal 2025 Third Quarter Results",
+        "summary": "HOUSTON, Aug. 01, 2025 ( GLOBE NEWSWIRE ) -- IES Holdings, Inc. ( or \"IES\" or the \"Company\" ) ( NASDAQ: IESC ) today announced financial results for the quarter ended June 30, 2025.",
+        "source": "Alpha Vantage - GlobeNewswire",
+        "datetime": "Invalid Date",
+        "url": "https://www.globenewswire.com/news-release/2025/08/01/3125724/29106/en/IES-Holdings-Reports-Fiscal-2025-Third-Quarter-Results.html",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "TransAlta Reports Strong Second Quarter 2025 Results, Advancement of Strategic Priorities and Reaffirms Guidance - TransAlta  ( NYSE:TAC ) ",
+        "summary": "CALGARY, Alberta, Aug. 01, 2025 ( GLOBE NEWSWIRE ) -- TransAlta Corporation ( TransAlta or the Company ) TA TAC today reported its financial results for the second quarter ended June 30, 2025. \"Our strong second quarter results illustrate the value of our diversified fleet and exceptional ...",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/pressreleases/25/08/g46789351/transalta-reports-strong-second-quarter-2025-results-advancement-of-strategic-priorities-and-reaff",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "TransAlta Reports Strong Second Quarter 2025 Results, Advancement of Strategic Priorities and Reaffirms Guidance",
+        "summary": "CALGARY, Alberta, Aug. 01, 2025 ( GLOBE NEWSWIRE ) -- TransAlta Corporation ( TransAlta or the Company ) ( TSX: TA ) ( NYSE: TAC ) today reported its financial results for the second quarter ended June 30, 2025.",
+        "source": "Alpha Vantage - GlobeNewswire",
+        "datetime": "Invalid Date",
+        "url": "https://www.globenewswire.com/news-release/2025/08/01/3125708/0/en/TransAlta-Reports-Strong-Second-Quarter-2025-Results-Advancement-of-Strategic-Priorities-and-Reaffirms-Guidance.html",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Kayne Anderson Energy Infrastructure Fund Announces Distribution of $0.08 per Share for August 2025 - Kayne Anderson Energy  ( NYSE:KYN ) ",
+        "summary": "HOUSTON, Aug. 01, 2025 ( GLOBE NEWSWIRE ) -- Kayne Anderson Energy Infrastructure Fund, Inc. ( the \"Company\" ) announced today a monthly distribution of $0.08 per share for August 2025. This distribution is payable to common stockholders on August 29, 2025 ( as outlined in the table below ) .",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/pressreleases/25/08/g46789951/kayne-anderson-energy-infrastructure-fund-announces-distribution-of-0-08-per-share-for-august-2025",
+        "sentiment": "Neutral"
+      },
+      {
+        "headline": "The $100 Billion Bitcoin Bet: How Treasury Companies Are Fueling The Crypto Run",
+        "summary": "Regulatory arbitrage is a key driver, allowing institutional allocators to gain compliant crypto exposure through public equities. Galaxy warns that a collapse in premiums could disrupt the accumulation loop and introduce net selling into crypto markets.",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/crypto/cryptocurrency/25/08/46789395/the-100-billion-bitcoin-bet-how-treasury-companies-are-fueling-the-crypto-run",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "NANO Nuclear Selected for Inclusion in the Solactive Global Uranium & Nuclear Components Total Return Index, Qualifying It for Inclusion in the Prominent Global X Uranium ETF  ( \"URA\" ) ",
+        "summary": "With over $4 billion in net assets, the Global X Uranium ETF is the world's preeminent ETF providing investors broad exposure to companies involved in uranium mining and the production of nuclear components ...",
+        "source": "Alpha Vantage - GlobeNewswire",
+        "datetime": "Invalid Date",
+        "url": "https://www.globenewswire.com/news-release/2025/08/01/3125706/0/en/NANO-Nuclear-Selected-for-Inclusion-in-the-Solactive-Global-Uranium-Nuclear-Components-Total-Return-Index-Qualifying-It-for-Inclusion-in-the-Prominent-Global-X-Uranium-ETF-URA.html",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Orchestra BioMed Announces Pricing of $40 Million Public Offering - Orchestra BioMed Hldgs  ( NASDAQ:OBIO ) ",
+        "summary": "NEW HOPE, Pa., Aug. 01, 2025 ( GLOBE NEWSWIRE ) -- Orchestra BioMed Holdings, Inc.",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/pressreleases/25/08/g46790291/orchestra-biomed-announces-pricing-of-40-million-public-offering",
+        "sentiment": "Neutral"
+      },
+      {
+        "headline": "Kayne Anderson Energy Infrastructure Fund Announces Distribution of $0.08 per Share for August 2025",
+        "summary": "HOUSTON, Aug. 01, 2025 ( GLOBE NEWSWIRE ) -- Kayne Anderson Energy Infrastructure Fund, Inc. ( the \"Company\" ) announced today a monthly distribution of $0.08 per share for August 2025. This distribution is payable to common stockholders on August 29, 2025 ( as outlined in the table below ) .",
+        "source": "Alpha Vantage - GlobeNewswire",
+        "datetime": "Invalid Date",
+        "url": "https://www.globenewswire.com/news-release/2025/08/01/3125728/0/en/Kayne-Anderson-Energy-Infrastructure-Fund-Announces-Distribution-of-0-08-per-Share-for-August-2025.html",
+        "sentiment": "Neutral"
+      }
+    ],
+    "us": [
+      {
+        "headline": "IES Holdings Reports Fiscal 2025 Third Quarter Results",
+        "summary": "HOUSTON, Aug. 01, 2025 ( GLOBE NEWSWIRE ) -- IES Holdings, Inc. ( or \"IES\" or the \"Company\" ) ( NASDAQ: IESC ) today announced financial results for the quarter ended June 30, 2025.",
+        "source": "Alpha Vantage US - GlobeNewswire",
+        "datetime": "Invalid Date",
+        "url": "https://www.globenewswire.com/news-release/2025/08/01/3125724/29106/en/IES-Holdings-Reports-Fiscal-2025-Third-Quarter-Results.html",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "TransAlta Reports Strong Second Quarter 2025 Results, Advancement of Strategic Priorities and Reaffirms Guidance - TransAlta  ( NYSE:TAC ) ",
+        "summary": "CALGARY, Alberta, Aug. 01, 2025 ( GLOBE NEWSWIRE ) -- TransAlta Corporation ( TransAlta or the Company ) TA TAC today reported its financial results for the second quarter ended June 30, 2025. \"Our strong second quarter results illustrate the value of our diversified fleet and exceptional ...",
+        "source": "Alpha Vantage US - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/pressreleases/25/08/g46789351/transalta-reports-strong-second-quarter-2025-results-advancement-of-strategic-priorities-and-reaff",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "TransAlta Reports Strong Second Quarter 2025 Results, Advancement of Strategic Priorities and Reaffirms Guidance",
+        "summary": "CALGARY, Alberta, Aug. 01, 2025 ( GLOBE NEWSWIRE ) -- TransAlta Corporation ( TransAlta or the Company ) ( TSX: TA ) ( NYSE: TAC ) today reported its financial results for the second quarter ended June 30, 2025.",
+        "source": "Alpha Vantage US - GlobeNewswire",
+        "datetime": "Invalid Date",
+        "url": "https://www.globenewswire.com/news-release/2025/08/01/3125708/0/en/TransAlta-Reports-Strong-Second-Quarter-2025-Results-Advancement-of-Strategic-Priorities-and-Reaffirms-Guidance.html",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Kayne Anderson Energy Infrastructure Fund Announces Distribution of $0.08 per Share for August 2025 - Kayne Anderson Energy  ( NYSE:KYN ) ",
+        "summary": "HOUSTON, Aug. 01, 2025 ( GLOBE NEWSWIRE ) -- Kayne Anderson Energy Infrastructure Fund, Inc. ( the \"Company\" ) announced today a monthly distribution of $0.08 per share for August 2025. This distribution is payable to common stockholders on August 29, 2025 ( as outlined in the table below ) .",
+        "source": "Alpha Vantage US - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/pressreleases/25/08/g46789951/kayne-anderson-energy-infrastructure-fund-announces-distribution-of-0-08-per-share-for-august-2025",
+        "sentiment": "Neutral"
+      },
+      {
+        "headline": "The $100 Billion Bitcoin Bet: How Treasury Companies Are Fueling The Crypto Run",
+        "summary": "Regulatory arbitrage is a key driver, allowing institutional allocators to gain compliant crypto exposure through public equities. Galaxy warns that a collapse in premiums could disrupt the accumulation loop and introduce net selling into crypto markets.",
+        "source": "Alpha Vantage US - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/crypto/cryptocurrency/25/08/46789395/the-100-billion-bitcoin-bet-how-treasury-companies-are-fueling-the-crypto-run",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "NANO Nuclear Selected for Inclusion in the Solactive Global Uranium & Nuclear Components Total Return Index, Qualifying It for Inclusion in the Prominent Global X Uranium ETF  ( \"URA\" ) ",
+        "summary": "With over $4 billion in net assets, the Global X Uranium ETF is the world's preeminent ETF providing investors broad exposure to companies involved in uranium mining and the production of nuclear components ...",
+        "source": "Alpha Vantage US - GlobeNewswire",
+        "datetime": "Invalid Date",
+        "url": "https://www.globenewswire.com/news-release/2025/08/01/3125706/0/en/NANO-Nuclear-Selected-for-Inclusion-in-the-Solactive-Global-Uranium-Nuclear-Components-Total-Return-Index-Qualifying-It-for-Inclusion-in-the-Prominent-Global-X-Uranium-ETF-URA.html",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Orchestra BioMed Announces Pricing of $40 Million Public Offering - Orchestra BioMed Hldgs  ( NASDAQ:OBIO ) ",
+        "summary": "NEW HOPE, Pa., Aug. 01, 2025 ( GLOBE NEWSWIRE ) -- Orchestra BioMed Holdings, Inc.",
+        "source": "Alpha Vantage US - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/pressreleases/25/08/g46790291/orchestra-biomed-announces-pricing-of-40-million-public-offering",
+        "sentiment": "Neutral"
+      },
+      {
+        "headline": "Kayne Anderson Energy Infrastructure Fund Announces Distribution of $0.08 per Share for August 2025",
+        "summary": "HOUSTON, Aug. 01, 2025 ( GLOBE NEWSWIRE ) -- Kayne Anderson Energy Infrastructure Fund, Inc. ( the \"Company\" ) announced today a monthly distribution of $0.08 per share for August 2025. This distribution is payable to common stockholders on August 29, 2025 ( as outlined in the table below ) .",
+        "source": "Alpha Vantage US - GlobeNewswire",
+        "datetime": "Invalid Date",
+        "url": "https://www.globenewswire.com/news-release/2025/08/01/3125728/0/en/Kayne-Anderson-Energy-Infrastructure-Fund-Announces-Distribution-of-0-08-per-Share-for-August-2025.html",
+        "sentiment": "Neutral"
+      }
+    ],
+    "asian": [
+      {
+        "headline": "1 Absurdly Cheap Artificial Intelligence Stock to Buy Right Now",
+        "summary": "Alphabet recently posted some solid earnings numbers, and artificial intelligence isn't hurting its business, as some investors feared it might.",
+        "source": "Alpha Vantage Asia - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/08/01/1-absurdly-cheap-artificial-intelligence-stock-to/",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Big Tech Roars on AI Frenzy: ETFs to Play",
+        "summary": "MSFT and META soared on blowout earnings, with MSFT joining the $4-trillion market-cap and fueling ETF plays like XLK, VGT, MAGS and FNGS.",
+        "source": "Alpha Vantage Asia - Zacks Commentary",
+        "datetime": "Invalid Date",
+        "url": "https://www.zacks.com/stock/news/2648013/big-tech-roars-on-ai-frenzy-etfs-to-play",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Meta Platforms, Microsoft, and Vertiv Announced Amazing News for Nvidia Stock Investors",
+        "summary": "The demand for AI compute continues to grow dramatically.",
+        "source": "Alpha Vantage Asia - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/08/01/meta-platforms-microsoft-and-vertiv-announced-amaz/",
+        "sentiment": "Neutral"
+      },
+      {
+        "headline": "Alphabet CEO Sundar Pichai Just Delivered Incredible News for Nvidia Stock Investors",
+        "summary": "Google parent Alphabet just raised its 2025 capex forecast by $10 billion, which could flow to AI hardware suppliers like Nvidia.",
+        "source": "Alpha Vantage Asia - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/08/01/alphabet-sundar-pichai-news-nvidia-stock-investors/",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "MICRON INVESTIGATION ALERT: Bragar Eagel & Squire, P.C. is Investigating Micron Technology, Inc. on Behalf of Long-Term Stockholders and Encourages Investors to Contact the Firm - Micron Technology  ( NASDAQ:MU ) ",
+        "summary": "Bragar Eagel & Squire, P.C. Litigation Partner Brandon Walker Encourages Investors Who Suffered Losses In Micron ( MU ) To Contact Him Directly To Discuss Their Options",
+        "source": "Alpha Vantage Asia - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/pressreleases/25/07/g46779089/micron-investigation-alert-bragar-eagel-squire-p-c-is-investigating-micron-technology-inc-on-behal",
+        "sentiment": "Neutral"
+      },
+      {
+        "headline": "Standex International  ( SXI )  Beats Q4 Earnings and Revenue Estimates",
+        "summary": "Standex (SXI) delivered earnings and revenue surprises of +8.57% and +3.55%, respectively, for the quarter ended June 2025. Do the numbers hold clues to what lies ahead for the stock?",
+        "source": "Alpha Vantage Asia - Zacks Commentary",
+        "datetime": "Invalid Date",
+        "url": "https://www.zacks.com/stock/news/2646053/standex-international-sxi-beats-q4-earnings-and-revenue-estimates",
+        "sentiment": "Neutral"
+      },
+      {
+        "headline": "Cable One  ( CABO )  Lags Q2 Earnings Estimates",
+        "summary": "Cable One (CABO) delivered earnings and revenue surprises of -60.75% and +0.08%, respectively, for the quarter ended June 2025. Do the numbers hold clues to what lies ahead for the stock?",
+        "source": "Alpha Vantage Asia - Zacks Commentary",
+        "datetime": "Invalid Date",
+        "url": "https://www.zacks.com/stock/news/2645996/cable-one-cabo-lags-q2-earnings-estimates",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "SHAREHOLDER INVESTIGATION: Halper Sadeh LLC Investigates CYBR, GTLS, CCRD on Behalf of Shareholders - CyberArk Software  ( NASDAQ:CYBR ) , CoreCard  ( NYSE:CCRD ) ",
+        "summary": "NEW YORK, July 31, 2025 ( GLOBE NEWSWIRE ) -- Halper Sadeh LLC, an investor rights law firm, is investigating the following companies for potential violations of the federal securities laws and/or breaches of fiduciary duties to shareholders relating to: CyberArk Software Ltd.",
+        "source": "Alpha Vantage Asia - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/pressreleases/25/07/g46778503/shareholder-investigation-halper-sadeh-llc-investigates-cybr-gtls-ccrd-on-behalf-of-shareholders",
+        "sentiment": "Neutral"
+      }
+    ],
+    "european": [
+      {
+        "headline": "IES Holdings Reports Fiscal 2025 Third Quarter Results",
+        "summary": "HOUSTON, Aug. 01, 2025 ( GLOBE NEWSWIRE ) -- IES Holdings, Inc. ( or \"IES\" or the \"Company\" ) ( NASDAQ: IESC ) today announced financial results for the quarter ended June 30, 2025.",
+        "source": "Alpha Vantage Europe - GlobeNewswire",
+        "datetime": "Invalid Date",
+        "url": "https://www.globenewswire.com/news-release/2025/08/01/3125724/29106/en/IES-Holdings-Reports-Fiscal-2025-Third-Quarter-Results.html",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "TransAlta Reports Strong Second Quarter 2025 Results, Advancement of Strategic Priorities and Reaffirms Guidance - TransAlta  ( NYSE:TAC ) ",
+        "summary": "CALGARY, Alberta, Aug. 01, 2025 ( GLOBE NEWSWIRE ) -- TransAlta Corporation ( TransAlta or the Company ) TA TAC today reported its financial results for the second quarter ended June 30, 2025. \"Our strong second quarter results illustrate the value of our diversified fleet and exceptional ...",
+        "source": "Alpha Vantage Europe - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/pressreleases/25/08/g46789351/transalta-reports-strong-second-quarter-2025-results-advancement-of-strategic-priorities-and-reaff",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "TransAlta Reports Strong Second Quarter 2025 Results, Advancement of Strategic Priorities and Reaffirms Guidance",
+        "summary": "CALGARY, Alberta, Aug. 01, 2025 ( GLOBE NEWSWIRE ) -- TransAlta Corporation ( TransAlta or the Company ) ( TSX: TA ) ( NYSE: TAC ) today reported its financial results for the second quarter ended June 30, 2025.",
+        "source": "Alpha Vantage Europe - GlobeNewswire",
+        "datetime": "Invalid Date",
+        "url": "https://www.globenewswire.com/news-release/2025/08/01/3125708/0/en/TransAlta-Reports-Strong-Second-Quarter-2025-Results-Advancement-of-Strategic-Priorities-and-Reaffirms-Guidance.html",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Kayne Anderson Energy Infrastructure Fund Announces Distribution of $0.08 per Share for August 2025 - Kayne Anderson Energy  ( NYSE:KYN ) ",
+        "summary": "HOUSTON, Aug. 01, 2025 ( GLOBE NEWSWIRE ) -- Kayne Anderson Energy Infrastructure Fund, Inc. ( the \"Company\" ) announced today a monthly distribution of $0.08 per share for August 2025. This distribution is payable to common stockholders on August 29, 2025 ( as outlined in the table below ) .",
+        "source": "Alpha Vantage Europe - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/pressreleases/25/08/g46789951/kayne-anderson-energy-infrastructure-fund-announces-distribution-of-0-08-per-share-for-august-2025",
+        "sentiment": "Neutral"
+      },
+      {
+        "headline": "The $100 Billion Bitcoin Bet: How Treasury Companies Are Fueling The Crypto Run",
+        "summary": "Regulatory arbitrage is a key driver, allowing institutional allocators to gain compliant crypto exposure through public equities. Galaxy warns that a collapse in premiums could disrupt the accumulation loop and introduce net selling into crypto markets.",
+        "source": "Alpha Vantage Europe - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/crypto/cryptocurrency/25/08/46789395/the-100-billion-bitcoin-bet-how-treasury-companies-are-fueling-the-crypto-run",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "NANO Nuclear Selected for Inclusion in the Solactive Global Uranium & Nuclear Components Total Return Index, Qualifying It for Inclusion in the Prominent Global X Uranium ETF  ( \"URA\" ) ",
+        "summary": "With over $4 billion in net assets, the Global X Uranium ETF is the world's preeminent ETF providing investors broad exposure to companies involved in uranium mining and the production of nuclear components ...",
+        "source": "Alpha Vantage Europe - GlobeNewswire",
+        "datetime": "Invalid Date",
+        "url": "https://www.globenewswire.com/news-release/2025/08/01/3125706/0/en/NANO-Nuclear-Selected-for-Inclusion-in-the-Solactive-Global-Uranium-Nuclear-Components-Total-Return-Index-Qualifying-It-for-Inclusion-in-the-Prominent-Global-X-Uranium-ETF-URA.html",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Orchestra BioMed Announces Pricing of $40 Million Public Offering - Orchestra BioMed Hldgs  ( NASDAQ:OBIO ) ",
+        "summary": "NEW HOPE, Pa., Aug. 01, 2025 ( GLOBE NEWSWIRE ) -- Orchestra BioMed Holdings, Inc.",
+        "source": "Alpha Vantage Europe - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/pressreleases/25/08/g46790291/orchestra-biomed-announces-pricing-of-40-million-public-offering",
+        "sentiment": "Neutral"
+      },
+      {
+        "headline": "Kayne Anderson Energy Infrastructure Fund Announces Distribution of $0.08 per Share for August 2025",
+        "summary": "HOUSTON, Aug. 01, 2025 ( GLOBE NEWSWIRE ) -- Kayne Anderson Energy Infrastructure Fund, Inc. ( the \"Company\" ) announced today a monthly distribution of $0.08 per share for August 2025. This distribution is payable to common stockholders on August 29, 2025 ( as outlined in the table below ) .",
+        "source": "Alpha Vantage Europe - GlobeNewswire",
+        "datetime": "Invalid Date",
+        "url": "https://www.globenewswire.com/news-release/2025/08/01/3125728/0/en/Kayne-Anderson-Energy-Infrastructure-Fund-Announces-Distribution-of-0-08-per-Share-for-August-2025.html",
+        "sentiment": "Neutral"
+      }
+    ],
+    "geopolitical": [],
+    "currencies": [
+      {
+        "headline": "IES Holdings Reports Fiscal 2025 Third Quarter Results",
+        "summary": "HOUSTON, Aug. 01, 2025 ( GLOBE NEWSWIRE ) -- IES Holdings, Inc. ( or \"IES\" or the \"Company\" ) ( NASDAQ: IESC ) today announced financial results for the quarter ended June 30, 2025.",
+        "source": "Alpha Vantage FX - GlobeNewswire",
+        "datetime": "Invalid Date",
+        "url": "https://www.globenewswire.com/news-release/2025/08/01/3125724/29106/en/IES-Holdings-Reports-Fiscal-2025-Third-Quarter-Results.html",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "TransAlta Reports Strong Second Quarter 2025 Results, Advancement of Strategic Priorities and Reaffirms Guidance - TransAlta  ( NYSE:TAC ) ",
+        "summary": "CALGARY, Alberta, Aug. 01, 2025 ( GLOBE NEWSWIRE ) -- TransAlta Corporation ( TransAlta or the Company ) TA TAC today reported its financial results for the second quarter ended June 30, 2025. \"Our strong second quarter results illustrate the value of our diversified fleet and exceptional ...",
+        "source": "Alpha Vantage FX - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/pressreleases/25/08/g46789351/transalta-reports-strong-second-quarter-2025-results-advancement-of-strategic-priorities-and-reaff",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "TransAlta Reports Strong Second Quarter 2025 Results, Advancement of Strategic Priorities and Reaffirms Guidance",
+        "summary": "CALGARY, Alberta, Aug. 01, 2025 ( GLOBE NEWSWIRE ) -- TransAlta Corporation ( TransAlta or the Company ) ( TSX: TA ) ( NYSE: TAC ) today reported its financial results for the second quarter ended June 30, 2025.",
+        "source": "Alpha Vantage FX - GlobeNewswire",
+        "datetime": "Invalid Date",
+        "url": "https://www.globenewswire.com/news-release/2025/08/01/3125708/0/en/TransAlta-Reports-Strong-Second-Quarter-2025-Results-Advancement-of-Strategic-Priorities-and-Reaffirms-Guidance.html",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Kayne Anderson Energy Infrastructure Fund Announces Distribution of $0.08 per Share for August 2025 - Kayne Anderson Energy  ( NYSE:KYN ) ",
+        "summary": "HOUSTON, Aug. 01, 2025 ( GLOBE NEWSWIRE ) -- Kayne Anderson Energy Infrastructure Fund, Inc. ( the \"Company\" ) announced today a monthly distribution of $0.08 per share for August 2025. This distribution is payable to common stockholders on August 29, 2025 ( as outlined in the table below ) .",
+        "source": "Alpha Vantage FX - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/pressreleases/25/08/g46789951/kayne-anderson-energy-infrastructure-fund-announces-distribution-of-0-08-per-share-for-august-2025",
+        "sentiment": "Neutral"
+      },
+      {
+        "headline": "The $100 Billion Bitcoin Bet: How Treasury Companies Are Fueling The Crypto Run",
+        "summary": "Regulatory arbitrage is a key driver, allowing institutional allocators to gain compliant crypto exposure through public equities. Galaxy warns that a collapse in premiums could disrupt the accumulation loop and introduce net selling into crypto markets.",
+        "source": "Alpha Vantage FX - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/crypto/cryptocurrency/25/08/46789395/the-100-billion-bitcoin-bet-how-treasury-companies-are-fueling-the-crypto-run",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "NANO Nuclear Selected for Inclusion in the Solactive Global Uranium & Nuclear Components Total Return Index, Qualifying It for Inclusion in the Prominent Global X Uranium ETF  ( \"URA\" ) ",
+        "summary": "With over $4 billion in net assets, the Global X Uranium ETF is the world's preeminent ETF providing investors broad exposure to companies involved in uranium mining and the production of nuclear components ...",
+        "source": "Alpha Vantage FX - GlobeNewswire",
+        "datetime": "Invalid Date",
+        "url": "https://www.globenewswire.com/news-release/2025/08/01/3125706/0/en/NANO-Nuclear-Selected-for-Inclusion-in-the-Solactive-Global-Uranium-Nuclear-Components-Total-Return-Index-Qualifying-It-for-Inclusion-in-the-Prominent-Global-X-Uranium-ETF-URA.html",
+        "sentiment": "Somewhat-Bullish"
+      }
+    ],
+    "commodities": [],
+    "earnings": [],
+    "research": [],
+    "premarketMovers": []
+  },
+  "timing": {
+    "lastCloseTimestamp": 1753977600,
+    "lastCloseString": "7/31/2025, 12:00:00 PM",
+    "currentTime": "8/1/2025, 8:31:50 AM"
+  },
+  "totalHeadlines": 38,
+  "activeAPIs": [
+    "Alpha Vantage",
+    "Finnhub"
+  ],
+  "categoryBreakdown": {
+    "general": 8,
+    "us": 8,
+    "asian": 8,
+    "european": 8,
+    "geopolitical": 0,
+    "currencies": 6,
+    "commodities": 0,
+    "earnings": 0,
+    "research": 0,
+    "premarketMovers": 0
+  },
+  "metadata": {
+    "generatedAt": "2025-08-01T12:33:19.389Z",
+    "reportType": "comprehensive-premarket-brief",
+    "aiModel": "claude-sonnet-4",
+    "classification": "institutional-grade"
+  }
+}
