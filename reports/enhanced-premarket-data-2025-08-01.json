@@ -1,0 +1,112 @@
+{
+  "headlines": {
+    "general": [
+      {
+        "headline": "Bank of America Stock Slides Amid Dual Shocks Of Recession Fears And Geopolitical Threats - Bank of America  ( NYSE:BAC ) ",
+        "summary": "Shares of Bank of America are falling Friday afternoon. The stock is caught in a market sell-off driven by alarming U.S. economic data and an escalation in geopolitical tensions. Get special access to three exclusive \"Top 10 Stocks\" power lists today, updated daily.",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/trading-ideas/movers/25/08/46808469/bank-of-america-stock-slides-amid-dual-shocks-of-recession-fears-and-geopolitical-threats",
+        "sentiment": "Neutral"
+      },
+      {
+        "headline": "2 Big Reasons Plug Power Stock Is Dropping Friday - Plug Power  ( NASDAQ:PLUG ) ",
+        "summary": "Shares of Plug Power are plunging Friday afternoon. The stock is caught in a market-wide rout driven by a dual shock of dire economic data and escalating geopolitical conflict. Get special access to three exclusive \"Top 10 Stocks\" power lists today, updated daily.",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/trading-ideas/movers/25/08/46808345/2-big-reasons-plug-power-stock-is-dropping-friday",
+        "sentiment": "Neutral"
+      },
+      {
+        "headline": "Galaxy Digital Unusual Options Activity For August 01 - Galaxy Digital  ( NASDAQ:GLXY ) ",
+        "summary": "Deep-pocketed investors have adopted a bullish approach towards Galaxy Digital GLXY, and it's something market players shouldn't ignore. Our tracking of public options records at Benzinga unveiled this significant move today.",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/insights/options/25/08/46807317/galaxy-digital-unusual-options-activity-for-august-01",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "A Closer Look at DraftKings's Options Market Dynamics - DraftKings  ( NASDAQ:DKNG ) ",
+        "summary": "Investors with a lot of money to spend have taken a bullish stance on DraftKings DKNG. We noticed this today when the positions showed up on publicly available options history that we track here at Benzinga. Whether these are institutions or just wealthy individuals, we don't know.",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/insights/options/25/08/46807313/a-closer-look-at-draftkingss-options-market-dynamics",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "DeFi Development Corp. to Host X Spaces Event: \"July 2025 Business Recap & AMA\"",
+        "summary": "BOCA RATON, FL, Aug. 01, 2025 ( GLOBE NEWSWIRE ) -- DeFi Development Corp. ( Nasdaq: DFDV ) ( the \"Company\" ) today announced it will host a live X Spaces conversation on Monday, August 4, 2025, at 1:30 p.m. Eastern Time, titled \"July 2025 Business Recap & AMA.\" ...",
+        "source": "Alpha Vantage - GlobeNewswire",
+        "datetime": "Invalid Date",
+        "url": "https://www.globenewswire.com/news-release/2025/08/01/3126071/0/en/DeFi-Development-Corp-to-Host-X-Spaces-Event-July-2025-Business-Recap-AMA.html",
+        "sentiment": "Neutral"
+      },
+      {
+        "headline": "ProShares UltraPro Short QQQ  ( SQQQ )  Is Surging Friday: What's Driving The Action? - ProShares UltraPro Short QQQ  ( NASDAQ:SQQQ ) ",
+        "summary": "ProShares UltraPro Short QQQ is soaring in Friday afternoon trading. A perfect storm of severe geopolitical threats and dismal economic data sends investors fleeing from technology stocks. Get special access to three exclusive \"Top 10 Stocks\" power lists today, updated daily.",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/trading-ideas/movers/25/08/46808293/proshares-ultrapro-short-qqq-sqqq-is-surging-friday-whats-driving-the-action",
+        "sentiment": "Neutral"
+      },
+      {
+        "headline": "Bitcoin, Ethereum, XRP, Dogecoin Tumble As Traders Brace For Volatility",
+        "summary": "Global cryptocurrency market capitalization drops 3.2%, now at $3.8 trillion. Some traders say the Bitcoin crash has begun, while others highlight $116,000 as a key level to watch for trend Get special access to three exclusive \"Top 10 Stocks\" power lists today, updated daily.",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/crypto/cryptocurrency/25/08/46806580/bitcoin-ethereum-xrp-dogecoin-tumble-as-traders-brace-for-volatility",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "These Analysts Boost Their Forecasts On MicroStrategy Following Q2 Results - Strategy  ( NASDAQ:MSTR ) ",
+        "summary": "MicroStrategy Inc MSTR reported upbeat sales for the second quarter on Thursday. Strategy reported second-quarter revenue of $114.49 million, beating analyst estimates of $112.96 million. The company reported second-quarter adjusted earnings of $32.52 per share, according to Benzinga Pro.",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/analyst-stock-ratings/price-target/25/08/46805504/these-analysts-boost-their-forecasts-on-microstrategy-following-q2-results",
+        "sentiment": "Somewhat-Bullish"
+      }
+    ],
+    "us": [],
+    "asian": [],
+    "european": [],
+    "geopolitical": [],
+    "currencies": [],
+    "commodities": [],
+    "earnings": [],
+    "research": [],
+    "premarketMovers": [],
+    "webSearchResults": {}
+  },
+  "timing": {
+    "lastCloseTimestamp": 1754064000,
+    "lastCloseString": "8/1/2025, 12:00:00 PM",
+    "currentTime": "8/1/2025, 4:11:46 PM"
+  },
+  "totalHeadlines": 8,
+  "webSearchCount": 0,
+  "apiHeadlines": 8,
+  "categoryBreakdown": {
+    "general": 8,
+    "us": 0,
+    "asian": 0,
+    "european": 0,
+    "geopolitical": 0,
+    "currencies": 0,
+    "commodities": 0,
+    "earnings": 0,
+    "research": 0,
+    "premarketMovers": 0
+  },
+  "webSearchBreakdown": {},
+  "metadata": {
+    "generatedAt": "2025-08-01T20:13:09.493Z",
+    "reportType": "enhanced-premarket-brief-with-web-search",
+    "aiModel": "claude-sonnet-4",
+    "classification": "enhanced-institutional-grade",
+    "features": [
+      "traditional-apis",
+      "web-search-intelligence",
+      "cross-source-validation"
+    ]
+  }
+}
