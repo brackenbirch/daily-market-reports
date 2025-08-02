@@ -1,0 +1,112 @@
+{
+  "headlines": {
+    "general": [
+      {
+        "headline": "Federated Hermes  ( FHI )  Q2 EPS Jumps 480%",
+        "summary": "Federated Hermes ( NYSE:FHI ) , a leading active asset manager known for its broad range of investment products, released its Q2 2025 earnings on July 31, 2025. The most significant news was that earnings per share ( EPS ) reached $1.16 ( GAAP ) , outpacing the analyst consensus of $1.03 GAAP EPS ...",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/data-news/2025/08/02/federated-hermes-fhi-q2-eps-jumps-480/",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Here's How Investing $300 Per Month in This Unstoppable Vanguard ETF Can Create $1 Million by Retirement",
+        "summary": "Continually investing in growth stocks can be a great way to set yourself up for some incredible gains.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/08/02/heres-how-investing-300-per-month-in-this-unstoppa/",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Rocket  ( RKT )  Q2 Revenue Beats by 5%",
+        "summary": "Rocket Companies ( NYSE:RKT ) , a major U.S. financial technology and mortgage platform, released its second quarter 2025 earnings on July 31, 2025. The most notable headline: it delivered higher-than-expected adjusted revenue and non-GAAP earnings per share ( EPS ) for Q2 2025, while also ...",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/data-news/2025/08/02/rocket-rkt-q2-revenue-beats-by-5/",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "3 High-Yielding Dividend Stocks That Are Trading Near Their 52-Week Lows",
+        "summary": "If you are looking for dividend stocks, a good place to start is with unloved stocks like these, with yields of up to 6.4%.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/08/02/3-high-yielding-dividend-stocks-that-are-trading-n/",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Should You Invest $10,000 in Palantir Stock Right Now?",
+        "summary": "Palantir's stock has more than doubled in value so far in 2025.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/08/02/should-you-invest-10000-in-palantir-stock-right-no/",
+        "sentiment": "Neutral"
+      },
+      {
+        "headline": "Omega Healthcare  ( OHI )  Q2 Revenue Up 12%",
+        "summary": "Omega Healthcare Investors ( NYSE:OHI ) is a real estate investment trust specializing in senior care facilities, particularly skilled nursing and assisted living properties. On July 31, 2025, the company reported financial results, marking a period of notable growth in both GAAP earnings and ...",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/data-news/2025/08/02/omega-healthcare-ohi-q2-revenue-up-12/",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Is Tesla Stock a Bad News Buy?",
+        "summary": "Tesla missed expectations in its latest quarter, and the stock is down big this year.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/08/02/is-tesla-stock-a-bad-news-buy/",
+        "sentiment": "Neutral"
+      },
+      {
+        "headline": "Arbor Realty  ( ABR )  Q2 EPS Beats by 9%",
+        "summary": "Arbor Realty Trust ( NYSE:ABR ) , a real estate investment trust specializing in multifamily and commercial real estate lending, reported its latest quarterly earnings on August 1, 2025, covering results for the second quarter.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/data-news/2025/08/02/arbor-realty-abr-q2-eps-beats-by-9/",
+        "sentiment": "Somewhat-Bullish"
+      }
+    ],
+    "us": [],
+    "asian": [],
+    "european": [],
+    "geopolitical": [],
+    "currencies": [],
+    "commodities": [],
+    "earnings": [],
+    "research": [],
+    "premarketMovers": [],
+    "webSearchResults": {}
+  },
+  "timing": {
+    "lastCloseTimestamp": 1754064000,
+    "lastCloseString": "8/1/2025, 12:00:00 PM",
+    "currentTime": "8/2/2025, 8:29:13 AM"
+  },
+  "totalHeadlines": 8,
+  "webSearchCount": 0,
+  "apiHeadlines": 8,
+  "categoryBreakdown": {
+    "general": 8,
+    "us": 0,
+    "asian": 0,
+    "european": 0,
+    "geopolitical": 0,
+    "currencies": 0,
+    "commodities": 0,
+    "earnings": 0,
+    "research": 0,
+    "premarketMovers": 0
+  },
+  "webSearchBreakdown": {},
+  "metadata": {
+    "generatedAt": "2025-08-02T12:30:35.278Z",
+    "reportType": "enhanced-premarket-brief-with-web-search",
+    "aiModel": "claude-sonnet-4",
+    "classification": "enhanced-institutional-grade",
+    "features": [
+      "traditional-apis",
+      "web-search-intelligence",
+      "cross-source-validation"
+    ]
+  }
+}
