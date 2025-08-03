@@ -1,0 +1,112 @@
+{
+  "headlines": {
+    "general": [
+      {
+        "headline": "The Best Vanguard ETF to Invest $1,000 in Right Now",
+        "summary": "You can't go wrong with this ETF -- it's always a good time to buy.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/08/03/the-best-vanguard-etf-to-invest-1000-in-right-now/",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Illumina  ( ILMN )  Q2 2025 Earnings Call Transcript",
+        "summary": "Image source: The Motley Fool.Thursday, July 31, 2025 at 8:30 p.m. ETChief Executive Officer - Jacob ThaysenContinue reading ...",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/earnings/call-transcripts/2025/08/03/illumina-ilmn-q2-2025-earnings-call-transcript/",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Is Archer Aviation Stock Due to Take Off After Aug. 11?",
+        "summary": "The eVTOL company reports its latest earnings numbers later this month.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/08/03/is-archer-aviation-stock-due-to-take-off-after-aug/",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "3 Top Dividend Stocks to Buy in August",
+        "summary": "These stocks offer great dividends and more.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/08/03/3-top-dividend-stocks-to-buy-in-august/",
+        "sentiment": "Bullish"
+      },
+      {
+        "headline": "Could Opendoor Technologies Be a Millionaire-Maker Stock?",
+        "summary": "Shares of Opendoor Technologies have skyrocketed, but be careful what you read into that price advance.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/08/03/could-opendoor-technologies-be-a-millionaire-maker/",
+        "sentiment": "Neutral"
+      },
+      {
+        "headline": "Is UPS's 7.5%-Yielding Dividend Still Safe?",
+        "summary": "UPS recently reported underwhelming earnings numbers, and things could get worse for its business in the near future.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/08/03/is-ups-7-yielding-dividend-still-safe/",
+        "sentiment": "Neutral"
+      },
+      {
+        "headline": "Take-Two Interactive Stock Is Beating the Market in 2025. Could a New Game Release Next Year Propel It to Even Greater Heights?",
+        "summary": "Are sales of \"Grand Theft Auto VI\" already priced in, or is there room for the stock to run?",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/08/03/take-two-stock-beating-market-2025-new-game/",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "This Super Streaming Stock Plunged 18% in July. Is It a Buy, Sell, or Hold for the Rest of 2025?",
+        "summary": "The world's leading music streaming company just hit a rare speed bump.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/08/03/this-stock-plunged-by-18-july-buy-sell-hold-2025/",
+        "sentiment": "Somewhat-Bullish"
+      }
+    ],
+    "us": [],
+    "asian": [],
+    "european": [],
+    "geopolitical": [],
+    "currencies": [],
+    "commodities": [],
+    "earnings": [],
+    "research": [],
+    "premarketMovers": [],
+    "webSearchResults": {}
+  },
+  "timing": {
+    "lastCloseTimestamp": 1754064000,
+    "lastCloseString": "8/1/2025, 12:00:00 PM",
+    "currentTime": "8/3/2025, 8:29:47 AM"
+  },
+  "totalHeadlines": 8,
+  "webSearchCount": 0,
+  "apiHeadlines": 8,
+  "categoryBreakdown": {
+    "general": 8,
+    "us": 0,
+    "asian": 0,
+    "european": 0,
+    "geopolitical": 0,
+    "currencies": 0,
+    "commodities": 0,
+    "earnings": 0,
+    "research": 0,
+    "premarketMovers": 0
+  },
+  "webSearchBreakdown": {},
+  "metadata": {
+    "generatedAt": "2025-08-03T12:31:16.407Z",
+    "reportType": "enhanced-premarket-brief-with-web-search",
+    "aiModel": "claude-sonnet-4",
+    "classification": "enhanced-institutional-grade",
+    "features": [
+      "traditional-apis",
+      "web-search-intelligence",
+      "cross-source-validation"
+    ]
+  }
+}
