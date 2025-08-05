@@ -1,0 +1,112 @@
+{
+  "headlines": {
+    "general": [
+      {
+        "headline": "CORRECTING and REPLACING \"Bank of the James Announces Second Quarter, First Half of 2025 Financial Results\"; Corrects Typos in Narrative Related to Total Assets and Loan Balances",
+        "summary": "Loan Growth, Asset Quality, Declaration of Quarterly Dividend Loan Growth, Asset Quality, Declaration of Quarterly Dividend ...",
+        "source": "Alpha Vantage - GlobeNewswire",
+        "datetime": "Invalid Date",
+        "url": "https://www.globenewswire.com/news-release/2025/08/05/3127351/18728/en/CORRECTING-and-REPLACING-Bank-of-the-James-Announces-Second-Quarter-First-Half-of-2025-Financial-Results-Corrects-Typos-in-Narrative-Related-to-Total-Assets-and-Loan-Balances.html",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "FOX REPORTS FOURTH QUARTER FISCAL 2025 REVENUES OF $3.29 BILLION, NET INCOME OF $719 MILLION, AND ADJUSTED EBITDA OF $939 MILLION - Fox  ( NASDAQ:FOXA ) , Fox  ( NASDAQ:FOX ) ",
+        "summary": "FOX REPORTS FULL YEAR FISCAL 2025 REVENUES OF $16.30 BILLION, NET INCOME OF $2.29 BILLION, AND ADJUSTED EBITDA OF $3.62 BILLION NEW YORK, Aug. 5, 2025 /PRNewswire/ -- Fox Corporation FOXA FOX ) ) ( \"FOX\" or the \"Company\" ) today reported financial results for the three and twelve months ended ...",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/pressreleases/25/08/n46854153/fox-reports-fourth-quarter-fiscal-2025-revenues-of-3-29-billion-net-income-of-719-million-and-adju",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "IMUNON Reports Second Quarter 2025 Financial Results and Provides Business Update",
+        "summary": "Stock dividend issued to IMUNON shareholders reflects confidence in clinical programs, long-term growth strategy and dedication to rewarding shareholders ...",
+        "source": "Alpha Vantage - GlobeNewswire",
+        "datetime": "Invalid Date",
+        "url": "https://www.globenewswire.com/news-release/2025/08/05/3127264/0/en/IMUNON-Reports-Second-Quarter-2025-Financial-Results-and-Provides-Business-Update.html",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Uniti Group Inc. Reports Second Quarter 2025 Results",
+        "summary": "Completes Previously Announced Merger with Windstream ...",
+        "source": "Alpha Vantage - GlobeNewswire",
+        "datetime": "Invalid Date",
+        "url": "https://www.globenewswire.com/news-release/2025/08/05/3127325/35697/en/Uniti-Group-Inc-Reports-Second-Quarter-2025-Results.html",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Mesa Labs Announces First Quarter Results",
+        "summary": "LAKEWOOD, Colo., Aug. 05, 2025 ( GLOBE NEWSWIRE ) -- Mesa Laboratories, Inc. ( NASDAQ:MLAB ) , a global leader in the design and manufacture of life science tools and critical quality control solutions, today announced results for its first fiscal quarter ( \"1Q26\" ) ended June 30, 2025 ( amounts ...",
+        "source": "Alpha Vantage - GlobeNewswire",
+        "datetime": "Invalid Date",
+        "url": "https://www.globenewswire.com/news-release/2025/08/05/3127271/30771/en/Mesa-Labs-Announces-First-Quarter-Results.html",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Arax Investment Partners Acquires Summit Wealth Strategies, Broadening Reach in Midwest",
+        "summary": "NEW YORK, Aug. 05, 2025 ( GLOBE NEWSWIRE ) -- Arax Investment Partners ( \"Arax\" ) , a premier wealth and asset management platform company backed by RedBird Capital Partners ( \"RedBird\" ) , today announced that it has acquired Summit Wealth Strategies ( \"Summit\" ) , a boutique registered ...",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/pressreleases/25/08/g46854187/arax-investment-partners-acquires-summit-wealth-strategies-broadening-reach-in-midwest",
+        "sentiment": "Bullish"
+      },
+      {
+        "headline": "Entrée Resources Provides Corporate Update - Entree Resources  ( OTC:ERLFF ) ",
+        "summary": "VANCOUVER, British Columbia, Aug. 05, 2025 ( GLOBE NEWSWIRE ) -- Entrée Resources Ltd. ( TSX:ETG. OTCQB:ERLFF - the \"Company\" or \"Entrée\" ) , ( TSX:ETG.",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/pressreleases/25/08/g46854195/entr-e-resources-provides-corporate-update",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Coinbase to Raise $2B in Convertible Notes as COIN Sags in Pre-Market Trading",
+        "summary": "Centralized crypto exchange Coinbase is set to raise $2 billion in convertible senior notes, as COIN sagged in pre-market trading.",
+        "source": "Alpha Vantage - Decrypt.co",
+        "datetime": "Invalid Date",
+        "url": "https://decrypt.co/333558/coinbase-to-raise-2b-in-convertible-notes-as-coin-sags-in-pre-market",
+        "sentiment": "Neutral"
+      }
+    ],
+    "us": [],
+    "asian": [],
+    "european": [],
+    "geopolitical": [],
+    "currencies": [],
+    "commodities": [],
+    "earnings": [],
+    "research": [],
+    "premarketMovers": [],
+    "webSearchResults": {}
+  },
+  "timing": {
+    "lastCloseTimestamp": 1754323200,
+    "lastCloseString": "8/4/2025, 12:00:00 PM",
+    "currentTime": "8/5/2025, 8:33:32 AM"
+  },
+  "totalHeadlines": 8,
+  "webSearchCount": 0,
+  "apiHeadlines": 8,
+  "categoryBreakdown": {
+    "general": 8,
+    "us": 0,
+    "asian": 0,
+    "european": 0,
+    "geopolitical": 0,
+    "currencies": 0,
+    "commodities": 0,
+    "earnings": 0,
+    "research": 0,
+    "premarketMovers": 0
+  },
+  "webSearchBreakdown": {},
+  "metadata": {
+    "generatedAt": "2025-08-05T12:34:55.509Z",
+    "reportType": "enhanced-premarket-brief-with-web-search",
+    "aiModel": "claude-sonnet-4",
+    "classification": "enhanced-institutional-grade",
+    "features": [
+      "traditional-apis",
+      "web-search-intelligence",
+      "cross-source-validation"
+    ]
+  }
+}
