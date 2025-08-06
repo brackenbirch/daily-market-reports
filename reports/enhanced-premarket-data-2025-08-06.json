@@ -1,0 +1,112 @@
+{
+  "headlines": {
+    "general": [
+      {
+        "headline": "United Maritime Reports Second Quarter and First Half Financial Results for the Periods Ended June 30, 2025",
+        "summary": "Declares Quarterly Cash Dividend of $0.03 Per Share ...",
+        "source": "Alpha Vantage - GlobeNewswire",
+        "datetime": "Invalid Date",
+        "url": "https://www.globenewswire.com/news-release/2025/08/06/3128313/0/en/United-Maritime-Reports-Second-Quarter-and-First-Half-Financial-Results-for-the-Periods-Ended-June-30-2025.html",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "FTAI Infrastructure Inc. Announces Agreement to Acquire the Wheeling & Lake Erie Railway Company - FTAI Infrastructure  ( NASDAQ:FIP ) ",
+        "summary": "NEW YORK, Aug. 06, 2025 ( GLOBE NEWSWIRE ) -- FTAI Infrastructure Inc. FIP ( the \"Company\" or \"FIP\" ) announced today that it has agreed to purchase The Wheeling Corporation, owner of the Wheeling & Lake Erie Railway Company ( the \"W&LE\" ) , for cash consideration of $1.05 billion from an entity ...",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/pressreleases/25/08/g46895710/ftai-infrastructure-inc-announces-agreement-to-acquire-the-wheeling-lake-erie-railway-company",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Coffee, Chips, and Credit Cards",
+        "summary": "Reports from Starbucks, Visa, and Spotify give us a read on the consumer, and Samsung takes a big chip order from Tesla.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/08/06/coffee-chips-and-credit-cards/",
+        "sentiment": "Neutral"
+      },
+      {
+        "headline": "Regency Centers Declares Quarterly Dividends",
+        "summary": "JACKSONVILLE, Fla., Aug. 06, 2025 ( GLOBE NEWSWIRE ) -- Regency Centers Corporation ( \"Regency Centers,\" \"Regency\" or the \"Company\" ) ( NASDAQ: REG ) announced today that the Company's Board of Directors ( the \"Board\" ) declared quarterly cash dividends on Regency's common stock, Series A ...",
+        "source": "Alpha Vantage - GlobeNewswire",
+        "datetime": "Invalid Date",
+        "url": "https://www.globenewswire.com/news-release/2025/08/06/3128316/37116/en/Regency-Centers-Declares-Quarterly-Dividends.html",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Direxion's DFEN ETF Soars On The Other Robust But Controversial Bull Market - Direxion Daily Aerospace & Defense Bull 3X Shares  ( ARCA:DFEN ) ",
+        "summary": "While hot tech sectors like generative AI garner the spotlight, growth investors may also consider the defense industry. Direxion's ultra-leveraged DFEN ETF allows speculators to bet on the sector without the complexities of options. Get special access to three exclusive \"Top 10 Stocks\" power ...",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/etfs/specialty-etfs/25/08/46896250/direxions-dfen-etf-soars-on-the-other-robust-but-controversial-bull-market",
+        "sentiment": "Neutral"
+      },
+      {
+        "headline": "PowerBank  ( SUUN )  Begins Installation of First Battery Energy Storage System in Ontario - PowerBank  ( NASDAQ:SUUN ) ",
+        "summary": "TORONTO, Aug. 6, 2025 /PRNewswire/ - PowerBank Corporation SUUN ( Cboe CA: SUNN ) ( FSE: 103 ) , a leading North American energy infrastructure developer and asset owner, proudly announces the installation of its cutting-edge 4.99 MW Battery Energy Storage System ( BESS ) in Cramahe, Ontario, at ...",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/pressreleases/25/08/n46894893/powerbank-suun-begins-installation-of-first-battery-energy-storage-system-in-ontario",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "U Power Partners with Chia Tai and ICBC Thai to Advance Use of Intelligent and Battery-Swapping Compatible Agricultural Drones in Thailand - U Power  ( NASDAQ:UCAR ) ",
+        "summary": "SHANGHAI, Aug. 6, 2025 /PRNewswire/ -- U Power Limited UCAR ( the \"Company\" or \"U Power\" ) , a provider of AI-powered solutions for next-generation energy grids and intelligent transportation systems, building on its proprietary UOTTATM electric vehicle ( EV ) battery-swapping technology, today ...",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/pressreleases/25/08/n46895016/u-power-partners-with-chia-tai-and-icbc-thai-to-advance-use-of-intelligent-and-battery-swapping-co",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "SHAREHOLDER INVESTIGATION: Halper Sadeh LLC Investigates SCS, HLVX, BSGM, TTNP on Behalf of Shareholders - HilleVax  ( NASDAQ:HLVX ) , BioSig Technologies  ( NASDAQ:BSGM ) ",
+        "summary": "NEW YORK, Aug. 06, 2025 ( GLOBE NEWSWIRE ) -- Halper Sadeh LLC, an investor rights law firm, is investigating the following companies for potential violations of the federal securities laws and/or breaches of fiduciary duties to shareholders relating to: Steelcase Inc.",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/pressreleases/25/08/g46895435/shareholder-investigation-halper-sadeh-llc-investigates-scs-hlvx-bsgm-ttnp-on-behalf-of-shareholde",
+        "sentiment": "Somewhat-Bullish"
+      }
+    ],
+    "us": [],
+    "asian": [],
+    "european": [],
+    "geopolitical": [],
+    "currencies": [],
+    "commodities": [],
+    "earnings": [],
+    "research": [],
+    "premarketMovers": [],
+    "webSearchResults": {}
+  },
+  "timing": {
+    "lastCloseTimestamp": 1754409600,
+    "lastCloseString": "8/5/2025, 12:00:00 PM",
+    "currentTime": "8/6/2025, 8:33:26 AM"
+  },
+  "totalHeadlines": 8,
+  "webSearchCount": 0,
+  "apiHeadlines": 8,
+  "categoryBreakdown": {
+    "general": 8,
+    "us": 0,
+    "asian": 0,
+    "european": 0,
+    "geopolitical": 0,
+    "currencies": 0,
+    "commodities": 0,
+    "earnings": 0,
+    "research": 0,
+    "premarketMovers": 0
+  },
+  "webSearchBreakdown": {},
+  "metadata": {
+    "generatedAt": "2025-08-06T12:35:11.457Z",
+    "reportType": "enhanced-premarket-brief-with-web-search",
+    "aiModel": "claude-sonnet-4",
+    "classification": "enhanced-institutional-grade",
+    "features": [
+      "traditional-apis",
+      "web-search-intelligence",
+      "cross-source-validation"
+    ]
+  }
+}
