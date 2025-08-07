@@ -1,0 +1,112 @@
+{
+  "headlines": {
+    "general": [
+      {
+        "headline": "Greystone Housing Impact Investors Reports Second Quarter 2025 Financial Results",
+        "summary": "OMAHA, Neb., Aug. 07, 2025 ( GLOBE NEWSWIRE ) -- On August 7, 2025, Greystone Housing Impact Investors LP ( NYSE: GHI ) ( the \"Partnership\" ) announced financial results for the three months ended June 30, 2025. The Partnership will host a call today at 4:30 p.m.",
+        "source": "Alpha Vantage - GlobeNewswire",
+        "datetime": "Invalid Date",
+        "url": "https://www.globenewswire.com/news-release/2025/08/07/3129240/10410/en/Greystone-Housing-Impact-Investors-Reports-Second-Quarter-2025-Financial-Results.html",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Bad Credit Personal Loans Guaranteed Approval Market Reaches $253 Billion as GreendayOnline Expands No Credit Check Loan Options",
+        "summary": "DALLAS, TX, Aug. 07, 2025 ( GLOBE NEWSWIRE ) -- The bad credit personal loan market has reached an unprecedented $253 billion in 2025, serving 24.6 million Americans who require alternative lending solutions beyond traditional banking channels.",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/pressreleases/25/08/g46959533/bad-credit-personal-loans-guaranteed-approval-market-reaches-253-billion-as-greendayonline-expands",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Corpay  ( CPAY )  Q2 2025 Earnings Call Transcript",
+        "summary": "Image source: The Motley Fool.Wednesday, Aug. 6, 2025, at 5:30 p.m. ETNeed a quote from a Motley Fool analyst? Email pr@fool.comContinue reading ...",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/earnings/call-transcripts/2025/08/07/corpay-cpay-q2-2025-earnings-call-transcript/",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "eToro Leverages AI to Redefine Social Investing - Etoro Group  ( NASDAQ:ETOR ) ",
+        "summary": "AI-powered tools and APIs, enabling users to create AI powered strategies and dashboards. Open-garden marketplace will allow users to build, publish and access customized tools. AI Companion, Tori, answering questions, surfacing personalized insights and guiding users.",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/pressreleases/25/08/g46958868/etoro-leverages-ai-to-redefine-social-investing",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "eToro Leverages AI to Redefine Social Investing",
+        "summary": "• AI-powered tools and APIs, enabling users to create AI powered strategies and dashboards. • Open-garden marketplace will allow users to build, publish and access customized tools.",
+        "source": "Alpha Vantage - GlobeNewswire",
+        "datetime": "Invalid Date",
+        "url": "https://www.globenewswire.com/news-release/2025/08/07/3129203/0/en/eToro-Leverages-AI-to-Redefine-Social-Investing.html",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Applovin Stock Rises 3.5% After Key Trading Signal - AppLovin  ( NASDAQ:APP ) ",
+        "summary": "APP reverses early decline after the alert AppLovin Corp. APP experienced a Power Inflow today, a significant event for those who follow where smart money goes and value order flow analytics in their trading decisions.",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/markets/equities/25/08/46959664/applovin-stock-rises-3-5-after-key-trading-signal",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "MarketWise Reports Net Revenue of $80.0 Million for Second Quarter 2025 and Net Income of $15.3 Million; Second Quarter Billings of $58.2 Million Increased 10% YoY, on an Adjusted Basis; Cash From Operating Activities were $17.8 Million, a YoY Improvement of Over $20 Million; Announced Quarterly and Special Dividend Totaling $0.40 per Class A Share",
+        "summary": "BALTIMORE, Aug. 07, 2025 ( GLOBE NEWSWIRE ) -- MarketWise, Inc. ( NASDAQ: MKTW ) ( \"MarketWise\" or the \"Company\" ) , a leading multi-brand digital subscription services platform that provides premium financial research, software, education, and tools for self-directed investors, today reported ...",
+        "source": "Alpha Vantage - GlobeNewswire",
+        "datetime": "Invalid Date",
+        "url": "https://www.globenewswire.com/news-release/2025/08/07/3129220/0/en/MarketWise-Reports-Net-Revenue-of-80-0-Million-for-Second-Quarter-2025-and-Net-Income-of-15-3-Million-Second-Quarter-Billings-of-58-2-Million-Increased-10-YoY-on-an-Adjusted-Basis-.html",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "2 Simple ETFs to Buy With $1,000 and Hold for a Lifetime",
+        "summary": "Exchange-traded funds (ETFs) take a lot of the legwork out of investing.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/08/07/2-simple-etfs-to-buy-with-1000-and-hold-for-a-life/",
+        "sentiment": "Somewhat-Bullish"
+      }
+    ],
+    "us": [],
+    "asian": [],
+    "european": [],
+    "geopolitical": [],
+    "currencies": [],
+    "commodities": [],
+    "earnings": [],
+    "research": [],
+    "premarketMovers": [],
+    "webSearchResults": {}
+  },
+  "timing": {
+    "lastCloseTimestamp": 1754496000,
+    "lastCloseString": "8/6/2025, 12:00:00 PM",
+    "currentTime": "8/7/2025, 8:33:31 AM"
+  },
+  "totalHeadlines": 8,
+  "webSearchCount": 0,
+  "apiHeadlines": 8,
+  "categoryBreakdown": {
+    "general": 8,
+    "us": 0,
+    "asian": 0,
+    "european": 0,
+    "geopolitical": 0,
+    "currencies": 0,
+    "commodities": 0,
+    "earnings": 0,
+    "research": 0,
+    "premarketMovers": 0
+  },
+  "webSearchBreakdown": {},
+  "metadata": {
+    "generatedAt": "2025-08-07T12:34:59.570Z",
+    "reportType": "enhanced-premarket-brief-with-web-search",
+    "aiModel": "claude-sonnet-4",
+    "classification": "enhanced-institutional-grade",
+    "features": [
+      "traditional-apis",
+      "web-search-intelligence",
+      "cross-source-validation"
+    ]
+  }
+}
