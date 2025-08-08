@@ -1,0 +1,112 @@
+{
+  "headlines": {
+    "general": [
+      {
+        "headline": "Flutter  ( FLUT )  Q2 2025 Earnings Call Transcript",
+        "summary": "Image source: The Motley Fool.Thursday, Aug. 7, 2025, at 4:30 p.m. ETNeed a quote from a Motley Fool analyst? Email pr@fool.comContinue reading ...",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/earnings/call-transcripts/2025/08/08/flutter-flut-q2-2025-earnings-call-transcript/",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Pinterest To Rally More Than 12%? Here Are 10 Top Analyst Forecasts For Friday - Crocs  ( NASDAQ:CROX ) , Doximity  ( NYSE:DOCS ) ",
+        "summary": "Top Wall Street analysts changed their outlook on these top names. For a complete view of all analyst rating changes, including upgrades and downgrades, please see our analyst ratings page. Keefe, Bruyette & Woods raised Block Inc XYZ price target from $80 to $95.",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/analyst-stock-ratings/price-target/25/08/46994691/pinterest-to-rally-more-than-12-here-are-10-top-analyst-forecasts-for-friday",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Exodus Announces Plan to Expand Blockchains for its Common Stock Tokens with Superstate",
+        "summary": "OMAHA, Neb., Aug. 08, 2025 ( GLOBE NEWSWIRE ) -- Exodus Movement, Inc. ( NYSE American: EXOD ) ( \"Exodus\" ) , a leading self-custodial cryptocurrency platform, today announced a partnership with Superstate to create common stock tokens to digitally represent Exodus' Class A shares on additional ...",
+        "source": "Alpha Vantage - GlobeNewswire",
+        "datetime": "Invalid Date",
+        "url": "https://www.globenewswire.com/news-release/2025/08/08/3130074/0/en/Exodus-Announces-Plan-to-Expand-Blockchains-for-its-Common-Stock-Tokens-with-Superstate.html",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Plains All American Reports Second-Quarter 2025 Results",
+        "summary": "HOUSTON, Aug. 08, 2025 ( GLOBE NEWSWIRE ) -- Plains All American Pipeline, L.P. ( Nasdaq: PAA ) and Plains GP Holdings ( Nasdaq: PAGP ) today reported solid second-quarter 2025 results and provided the following highlights: ...",
+        "source": "Alpha Vantage - GlobeNewswire",
+        "datetime": "Invalid Date",
+        "url": "https://www.globenewswire.com/news-release/2025/08/08/3130083/0/en/Plains-All-American-Reports-Second-Quarter-2025-Results.html",
+        "sentiment": "Neutral"
+      },
+      {
+        "headline": "Oxford Lane Capital Corp. Provides July 2025 Net Asset Value Update",
+        "summary": "GREENWICH, Conn, Aug. 08, 2025 ( GLOBE NEWSWIRE ) -- Oxford Lane Capital Corp. ( NasdaqGS: OXLC ) ( NasdaqGS: OXLCP ) ( NasdaqGS: OXLCL ) ( NasdaqGS: OXLCO ) ( NasdaqGS: OXLCZ ) ( NasdaqGS: OXLCN ) ( NasdaqGS: OXLCI ) ( NasdaqGS: OXLCG ) ( the \"Company,\" \"we,\" or \"our\" ) today announced the ...",
+        "source": "Alpha Vantage - GlobeNewswire",
+        "datetime": "Invalid Date",
+        "url": "https://www.globenewswire.com/news-release/2025/08/08/3130096/0/en/Oxford-Lane-Capital-Corp-Provides-July-2025-Net-Asset-Value-Update.html",
+        "sentiment": "Neutral"
+      },
+      {
+        "headline": "AbCellera Biologics  ( ABCL )  Q2 2025 Earnings Call Transcript",
+        "summary": "Image source: The Motley Fool.Thursday, August 7, 2025, at 5 p.m. ETNeed a quote from a Motley Fool analyst? Email pr@fool.comContinue reading ...",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/earnings/call-transcripts/2025/08/08/abcellera-abcl-q2-2025-earnings-call-transcript/",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "DatChat Rebrands to Myseum, Inc. to Align with Primary Strategic Focus on Social Group Media Sharing and Content Preservation",
+        "summary": "Myseum, Inc.'s common stock and Series A warrants to begin trading on Nasdaq under the new trading symbols \"MYSE\" and \"MYSEW\", respectively, effective August ...",
+        "source": "Alpha Vantage - GlobeNewswire",
+        "datetime": "Invalid Date",
+        "url": "https://www.globenewswire.com/news-release/2025/08/08/3130123/0/en/DatChat-Rebrands-to-Myseum-Inc-to-Align-with-Primary-Strategic-Focus-on-Social-Group-Media-Sharing-and-Content-Preservation.html",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Why Is Sonder Holdings Stock Gaining Friday? - Sonder Holdings  ( NASDAQ:SOND ) ",
+        "summary": "Sonder raises $24.54M and restructures Marriott obligations into long-term secured notes. Company ends SVB loan agreement and gains shareholder support for upcoming warrant-related approvals. Get special access to three exclusive \"Top 10 Stocks\" power lists today, updated daily.",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/trading-ideas/movers/25/08/46994702/sonder-secures-new-funding-amends-marriott-agreement",
+        "sentiment": "Bullish"
+      }
+    ],
+    "us": [],
+    "asian": [],
+    "european": [],
+    "geopolitical": [],
+    "currencies": [],
+    "commodities": [],
+    "earnings": [],
+    "research": [],
+    "premarketMovers": [],
+    "webSearchResults": {}
+  },
+  "timing": {
+    "lastCloseTimestamp": 1754582400,
+    "lastCloseString": "8/7/2025, 12:00:00 PM",
+    "currentTime": "8/8/2025, 8:32:27 AM"
+  },
+  "totalHeadlines": 8,
+  "webSearchCount": 0,
+  "apiHeadlines": 8,
+  "categoryBreakdown": {
+    "general": 8,
+    "us": 0,
+    "asian": 0,
+    "european": 0,
+    "geopolitical": 0,
+    "currencies": 0,
+    "commodities": 0,
+    "earnings": 0,
+    "research": 0,
+    "premarketMovers": 0
+  },
+  "webSearchBreakdown": {},
+  "metadata": {
+    "generatedAt": "2025-08-08T12:33:40.027Z",
+    "reportType": "enhanced-premarket-brief-with-web-search",
+    "aiModel": "claude-sonnet-4",
+    "classification": "enhanced-institutional-grade",
+    "features": [
+      "traditional-apis",
+      "web-search-intelligence",
+      "cross-source-validation"
+    ]
+  }
+}
