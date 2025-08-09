@@ -1,0 +1,112 @@
+{
+  "headlines": {
+    "general": [
+      {
+        "headline": "2 High-Yielding ETFs That You Can Rely on for Recurring Income",
+        "summary": "The funds listed here offer a good mix of safety, diversification, and dividends.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/08/09/2-high-yielding-etfs-you-can-rely-on-for-recurring/",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Is the Vanguard Value ETF the Simplest Way to Consistently Collect More Passive Income Than the S&P 500?",
+        "summary": "This ultra-low-cost ETF is an excellent way to invest in large-cap value stocks, many of which pay dividends.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/08/09/is-the-vanguard-value-etf-the-simplest-way-to-cons/",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "This Is the Net Worth You Need to Be \"Financially Comfortable\" in 2025, According to the Average American",
+        "summary": "With the right investments, it's simpler than you might think to accumulate $1 million or more over time.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/08/09/this-is-the-net-worth-you-need-to-be-financially-c/",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Is Annaly Capital Management Stock a Millionaire Maker?",
+        "summary": "Annaly Capital Management has a shockingly large dividend yield of 13%, but that's not why you should buy it.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/08/09/is-annaly-capital-management-stock-a-millionaire-m/",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Here's the Smartest Way to Invest in the S&P 500 in August",
+        "summary": "The popular index has generated impressive returns in the past decade.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/08/09/smartest-way-to-invest-sp-500-august/",
+        "sentiment": "Bullish"
+      },
+      {
+        "headline": "Space Stocks Are Hot Again. Will This Space IPO Go to the Moon?",
+        "summary": "iRocket stock looks like a risky IPO, and investors should be cautious.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/08/09/space-stocks-are-hot-will-this-space-ipo-moon/",
+        "sentiment": "Neutral"
+      },
+      {
+        "headline": "3 Stocks Retirees Should Absolutely Love",
+        "summary": "These stocks check off all the boxes for investors no longer receiving a paycheck.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/08/09/3-stocks-retirees-should-absolutely-love/",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Warren Buffett Just Took a Multi-Billion-Dollar Writedown on One of Berkshire Hathaway's Longtime Holdings and Is Now Piling Into a Deep Value Opportunity With a 5% Yield",
+        "summary": "Buffett and Berkshire Hathaway seem ready to exit one turnaround story, but are loading up on another.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/08/09/warren-buffett-just-took-a-multi-billion-dollar-wr/",
+        "sentiment": "Neutral"
+      }
+    ],
+    "us": [],
+    "asian": [],
+    "european": [],
+    "geopolitical": [],
+    "currencies": [],
+    "commodities": [],
+    "earnings": [],
+    "research": [],
+    "premarketMovers": [],
+    "webSearchResults": {}
+  },
+  "timing": {
+    "lastCloseTimestamp": 1754668800,
+    "lastCloseString": "8/8/2025, 12:00:00 PM",
+    "currentTime": "8/9/2025, 8:28:37 AM"
+  },
+  "totalHeadlines": 8,
+  "webSearchCount": 0,
+  "apiHeadlines": 8,
+  "categoryBreakdown": {
+    "general": 8,
+    "us": 0,
+    "asian": 0,
+    "european": 0,
+    "geopolitical": 0,
+    "currencies": 0,
+    "commodities": 0,
+    "earnings": 0,
+    "research": 0,
+    "premarketMovers": 0
+  },
+  "webSearchBreakdown": {},
+  "metadata": {
+    "generatedAt": "2025-08-09T12:29:34.695Z",
+    "reportType": "enhanced-premarket-brief-with-web-search",
+    "aiModel": "claude-sonnet-4",
+    "classification": "enhanced-institutional-grade",
+    "features": [
+      "traditional-apis",
+      "web-search-intelligence",
+      "cross-source-validation"
+    ]
+  }
+}
