@@ -1,0 +1,112 @@
+{
+  "headlines": {
+    "general": [
+      {
+        "headline": "2 Dividend ETFs to Buy With $1,000 and Hold Forever",
+        "summary": "Investing in quality dividend ETFs can offer a great way to boost your portfolio returns.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/08/10/2-dividend-etfs-to-buy-with-500-and-hold-forever/",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "1 Top Vanguard Fund That Could Turn $270 a Month Into $1 Million",
+        "summary": "If you want long-term growth, your best bet is to target top-performing growth stocks.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/08/10/1-top-vanguard-fund-that-could-turn-270-a-month-in/",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "3 Undervalued Dividend Stocks for Passive Income Investors to Buy in August",
+        "summary": "These dividend stocks are coiled springs for an economic recovery across key industries.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/08/10/buy-undervalued-dividend-stocks-passive-income/",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Billionaire Bill Gates Has 67% of His Foundation's $45 Billion Portfolio Invested in 3 Marvelous Stocks",
+        "summary": "The tech billionaire turned philanthropist has taken a cue from his longtime friend Warren Buffett.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/08/10/billionaire-bill-gates-has-67-of-his-foundations-4/",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "2 High-Yield Dividend Stocks You Can Buy With $100 Now and Hold at Least a Decade",
+        "summary": "These two underappreciated dividend payers offer above-average yields and relatively rapid payout growth.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/08/10/2-high-yield-dividend-stocks-you-can-buy-with-100/",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "2 Magnificent Stocks to Buy That Are Near 52-Week Lows",
+        "summary": "These two reliable and high-yielding dividend payers from the healthcare sector should be on your buy list today.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/08/10/2-magnificent-stocks-to-buy-that-are-near-52-week/",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "The Market's Hidden Gem: Discovering the ETF Set to Soar 50%",
+        "summary": "Small-cap stocks have been largely overlooked for a long time, but that could be about to change.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/08/10/the-markets-hidden-gem-discovering-the-etf-set-to/",
+        "sentiment": "Neutral"
+      },
+      {
+        "headline": "With the Red Hot IPO Market Raging, Will This Crypto Exchange Backed by Peter Thiel and Cathie Wood Be Wall Street's Next Moon Shot?",
+        "summary": "Several initial public offerings have popped big out of the gate.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/08/10/with-the-red-hot-ipo-market-raging-will-this-crypt/",
+        "sentiment": "Bullish"
+      }
+    ],
+    "us": [],
+    "asian": [],
+    "european": [],
+    "geopolitical": [],
+    "currencies": [],
+    "commodities": [],
+    "earnings": [],
+    "research": [],
+    "premarketMovers": [],
+    "webSearchResults": {}
+  },
+  "timing": {
+    "lastCloseTimestamp": 1754668800,
+    "lastCloseString": "8/8/2025, 12:00:00 PM",
+    "currentTime": "8/10/2025, 8:29:07 AM"
+  },
+  "totalHeadlines": 8,
+  "webSearchCount": 0,
+  "apiHeadlines": 8,
+  "categoryBreakdown": {
+    "general": 8,
+    "us": 0,
+    "asian": 0,
+    "european": 0,
+    "geopolitical": 0,
+    "currencies": 0,
+    "commodities": 0,
+    "earnings": 0,
+    "research": 0,
+    "premarketMovers": 0
+  },
+  "webSearchBreakdown": {},
+  "metadata": {
+    "generatedAt": "2025-08-10T12:30:16.411Z",
+    "reportType": "enhanced-premarket-brief-with-web-search",
+    "aiModel": "claude-sonnet-4",
+    "classification": "enhanced-institutional-grade",
+    "features": [
+      "traditional-apis",
+      "web-search-intelligence",
+      "cross-source-validation"
+    ]
+  }
+}
