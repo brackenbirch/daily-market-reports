@@ -1,0 +1,112 @@
+{
+  "headlines": {
+    "general": [
+      {
+        "headline": "Purpose Investments Announces Filing of Preliminary Prospectus for 15 New Canadian Yield Shares ETFs",
+        "summary": "TORONTO, Aug. 12, 2025 ( GLOBE NEWSWIRE ) -- Purpose Investments Inc. ( \"Purpose\" ) is pleased to announce it has filed a preliminary prospectus with Canadian securities regulators for 15 new Canadian Yield Shares exchange-traded funds ( \"ETFs\" ) .",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/pressreleases/25/08/g47055015/purpose-investments-announces-filing-of-preliminary-prospectus-for-15-new-canadian-yield-shares-et",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "eToro Reports Second Quarter 2025 Results - Etoro Group  ( NASDAQ:ETOR ) ",
+        "summary": "Net Contribution grew by 26% year-over-year to $210 million Assets Under Administration grew by 54% year-over-year to $17.5 billion Funded accounts grew by 14% year-over-year to 3.63 million",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/pressreleases/25/08/g47054396/etoro-reports-second-quarter-2025-results",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Rogers Sugar Reports Strong Third Quarter Results with Robust Demand from Sugar and Maple Segments",
+        "summary": "VANCOUVER, British Columbia, Aug. 12, 2025 ( GLOBE NEWSWIRE ) -- Rogers Sugar Inc. ( the \"Company\", \"Rogers\", \"RSI\" or \"our,\" \"we\", \"us\" ) ( TSX: RSI ) today reported results for the third quarter and first nine months of fiscal 2025. Consolidated adjusted EBITDA for the quarter rose to $36.6 ...",
+        "source": "Alpha Vantage - GlobeNewswire",
+        "datetime": "Invalid Date",
+        "url": "https://www.globenewswire.com/news-release/2025/08/12/3131570/0/en/Rogers-Sugar-Reports-Strong-Third-Quarter-Results-with-Robust-Demand-from-Sugar-and-Maple-Segments.html",
+        "sentiment": "Neutral"
+      },
+      {
+        "headline": "X4 Pharmaceuticals Announces $60 Million Equity Financing with Concurrent Changes in Management and Board Leadership - X4 Pharmaceuticals  ( NASDAQ:XFOR ) ",
+        "summary": "$60 million PIPE financing led by Coastlands Capital, Bain Capital Life Sciences and New Enterprise Associates Newly appointed board and management team includes Dr. Adam Craig as Executive Chairman, John Volpone as President and David Kirske as Chief Financial Officer",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/pressreleases/25/08/g47054389/x4-pharmaceuticals-announces-60-million-equity-financing-with-concurrent-changes-in-management-and",
+        "sentiment": "Neutral"
+      },
+      {
+        "headline": "X4 Pharmaceuticals Announces $60 Million Equity Financing with Concurrent Changes in Management and Board Leadership - X4 Pharmaceuticals  ( NASDAQ:XFOR ) ",
+        "summary": "$60 million PIPE financing led by Coastlands Capital, Bain Capital Life Sciences and New Enterprise Associates Newly appointed board and management team includes Dr. Adam Craig as Executive Chairman, John Volpone as President and David Kirske as Chief Financial Officer",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/pressreleases/25/08/g47054388/x4-pharmaceuticals-announces-60-million-equity-financing-with-concurrent-changes-in-management-and",
+        "sentiment": "Neutral"
+      },
+      {
+        "headline": "X4 Pharmaceuticals Announces $60 Million Equity Financing with Concurrent Changes in Management and Board Leadership",
+        "summary": "$60 million PIPE financing led by Coastlands Capital, Bain Capital Life Sciences and New Enterprise Associates ...",
+        "source": "Alpha Vantage - GlobeNewswire",
+        "datetime": "Invalid Date",
+        "url": "https://www.globenewswire.com/news-release/2025/08/12/3131563/0/en/X4-Pharmaceuticals-Announces-60-Million-Equity-Financing-with-Concurrent-Changes-in-Management-and-Board-Leadership.html",
+        "sentiment": "Neutral"
+      },
+      {
+        "headline": "Intensity Therapeutics, Inc. Regains Compliance with Nasdaq's Minimum Stockholders' Equity Requirement - Intensity Therapeutics  ( NASDAQ:INTS ) ",
+        "summary": "SHELTON, Conn., Aug. 12, 2025 /PRNewswire/ -- Intensity Therapeutics, Inc.",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/pressreleases/25/08/n47055441/intensity-therapeutics-inc-regains-compliance-with-nasdaqs-minimum-stockholders-equity-requirement",
+        "sentiment": "Neutral"
+      },
+      {
+        "headline": "OTC Markets Group Welcomes First Phosphate Corp. to OTCQX",
+        "summary": "NEW YORK, Aug. 12, 2025 ( GLOBE NEWSWIRE ) -- OTC Markets Group Inc. ( OTCQX: OTCM ) , operator of regulated markets for trading 12,000 U.S. and international securities, today announced First Phosphate Corp. ( CSE: PHOS. OTCQX: FRSPF ) , an igneous phosphate mineral development company for the ...",
+        "source": "Alpha Vantage - GlobeNewswire",
+        "datetime": "Invalid Date",
+        "url": "https://www.globenewswire.com/news-release/2025/08/12/3131534/0/en/OTC-Markets-Group-Welcomes-First-Phosphate-Corp-to-OTCQX.html",
+        "sentiment": "Somewhat-Bullish"
+      }
+    ],
+    "us": [],
+    "asian": [],
+    "european": [],
+    "geopolitical": [],
+    "currencies": [],
+    "commodities": [],
+    "earnings": [],
+    "research": [],
+    "premarketMovers": [],
+    "webSearchResults": {}
+  },
+  "timing": {
+    "lastCloseTimestamp": 1754928000,
+    "lastCloseString": "8/11/2025, 12:00:00 PM",
+    "currentTime": "8/12/2025, 8:30:59 AM"
+  },
+  "totalHeadlines": 8,
+  "webSearchCount": 0,
+  "apiHeadlines": 8,
+  "categoryBreakdown": {
+    "general": 8,
+    "us": 0,
+    "asian": 0,
+    "european": 0,
+    "geopolitical": 0,
+    "currencies": 0,
+    "commodities": 0,
+    "earnings": 0,
+    "research": 0,
+    "premarketMovers": 0
+  },
+  "webSearchBreakdown": {},
+  "metadata": {
+    "generatedAt": "2025-08-12T12:32:09.331Z",
+    "reportType": "enhanced-premarket-brief-with-web-search",
+    "aiModel": "claude-sonnet-4",
+    "classification": "enhanced-institutional-grade",
+    "features": [
+      "traditional-apis",
+      "web-search-intelligence",
+      "cross-source-validation"
+    ]
+  }
+}
