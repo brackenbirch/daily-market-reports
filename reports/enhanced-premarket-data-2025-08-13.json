@@ -1,0 +1,112 @@
+{
+  "headlines": {
+    "general": [
+      {
+        "headline": "Nexxen Reports Second Quarter 2025 Financial Results",
+        "summary": "Generated record Q2 Contribution ex-TAC, programmatic revenue and CTV revenue ...",
+        "source": "Alpha Vantage - GlobeNewswire",
+        "datetime": "Invalid Date",
+        "url": "https://www.globenewswire.com/news-release/2025/08/13/3132484/0/en/Nexxen-Reports-Second-Quarter-2025-Financial-Results.html",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "CIBC Asset Management Inc. announces termination of the CIBC 2025 Investment Grade Bond Funds - Canadian Imperial Bank  ( NYSE:CM ) ",
+        "summary": "TORONTO, Aug. 13, 2025 /CNW/ - CIBC CM CM -- CIBC Asset Management Inc. ( CAM ) today announced that it will terminate the CIBC 2025 Investment Grade Bond Fund and the CIBC 2025 U.S. Investment Grade Bond Fund ( the \"Funds\" ) on November 28, 2025 ( the \"Termination Date\" ) , in accordance with ...",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/pressreleases/25/08/n47086374/cibc-asset-management-inc-announces-termination-of-the-cibc-2025-investment-grade-bond-funds",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "FOXO TECHNOLOGIES INC. ANNOUNCES THAT ITS COMMON STOCK CAN BE QUOTED AND TRADED ON THE OVER THE COUNTER MARKET FROM AUGUST 13, 2025.",
+        "summary": "WEST PALM BEACH, FLORIDA, Aug. 13, 2025 ( GLOBE NEWSWIRE ) -- FOXO Technologies Inc. ( \"FOXO\" or the \"Company\" ) announces that it has received a letter from NYSE on August 12, 2025 confirming that NYSE Regulation has determined to commence proceedings to delist the Class A common stock of FOXO ...",
+        "source": "Alpha Vantage - GlobeNewswire",
+        "datetime": "Invalid Date",
+        "url": "https://www.globenewswire.com/news-release/2025/08/13/3132492/0/en/FOXO-TECHNOLOGIES-INC-ANNOUNCES-THAT-ITS-COMMON-STOCK-CAN-BE-QUOTED-AND-TRADED-ON-THE-OVER-THE-COUNTER-MARKET-FROM-AUGUST-13-2025.html",
+        "sentiment": "Neutral"
+      },
+      {
+        "headline": "Jeffs' Brands: Fort Technology Announces a CAD 5 Million Private Placement of Convertible Debenture Representing a Valuation of Approximately CAD 27 million",
+        "summary": "Tel Aviv, Israel, Aug. 13, 2025 ( GLOBE NEWSWIRE ) -- Jeffs' Brands Ltd ( \"Jeffs' Brands\" or the \"Company\" ) ( Nasdaq: JFBR, JFBRW ) , a data-driven e-commerce company operating on the Amazon Marketplace, today announced that on August 12, 2025, Fort Technology Inc. ( \"Fort\" ) ( TSXV: FORT ) , a ...",
+        "source": "Alpha Vantage - GlobeNewswire",
+        "datetime": "Invalid Date",
+        "url": "https://www.globenewswire.com/news-release/2025/08/13/3132567/0/en/Jeffs-Brands-Fort-Technology-Announces-a-CAD-5-Million-Private-Placement-of-Convertible-Debenture-Representing-a-Valuation-of-Approximately-CAD-27-million.html",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "XOMA Royalty Reports Second Quarter and Year to Date 2025 Financial Results and Highlights Recent Business Achievements",
+        "summary": "Business development: Purchased mezagitamab royalty and milestone rights held by BioInvent International and will secure royalty economic interests in two early-stage partnered assets through XOMA Royalty's recently announced acquisition of LAVA Therapeutics.",
+        "source": "Alpha Vantage - GlobeNewswire",
+        "datetime": "Invalid Date",
+        "url": "https://www.globenewswire.com/news-release/2025/08/13/3132477/7281/en/XOMA-Royalty-Reports-Second-Quarter-and-Year-to-Date-2025-Financial-Results-and-Highlights-Recent-Business-Achievements.html",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "[Latest] Global AI in Synthetic Biology Market Size/Share Worth USD 192.95 Billion by 2034 at a 28.63% CAGR: Custom Market Insights  ( Analysis, Outlook, Leaders, Report, Trends, Forecast, Segmentation, Growth Rate, Value, SWOT Analysis ) ",
+        "summary": "Austin, TX, USA, Aug. 13, 2025 ( GLOBE NEWSWIRE ) -- Custom Market Insights has published a new research report titled \"AI in Synthetic Biology Market Size, Trends and Insights By Technology ( Gene Synthesis, Genome Editing, Synthetic Biology Tools, Bioinformatics ) , By Application ( Healthcare ...",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/pressreleases/25/08/g47086338/latest-global-ai-in-synthetic-biology-market-sizeshare-worth-usd-192-95-billion-by-2034-at-a-28-63",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Dave Inc. Expands Share Repurchase Authorization to $125 Million Following Strong Buyback Activity - Dave  ( NASDAQ:DAVE ) ",
+        "summary": "Los Angeles, Aug. 13, 2025 ( GLOBE NEWSWIRE ) -- Dave Inc. ( \"Dave\" or the \"Company\" ) DAVE today announced that its Board of Directors has approved an increase in the Company's share repurchase authorization to $125 million, which replaces the previous $50 million authorization announced on ...",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/pressreleases/25/08/g47086947/dave-inc-expands-share-repurchase-authorization-to-125-million-following-strong-buyback-activity",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "BitGo backs Central Asia's first spot Bitcoin ETF in Kazakhstan",
+        "summary": "The growing role of platforms like BitGo in spot Bitcoin products worldwide is a double-edged sword, according to market observers.",
+        "source": "Alpha Vantage - Cointelegraph",
+        "datetime": "Invalid Date",
+        "url": "https://cointelegraph.com/news/bitgo-spot-bitcoin-etf-kazakhstan-launch",
+        "sentiment": "Somewhat-Bullish"
+      }
+    ],
+    "us": [],
+    "asian": [],
+    "european": [],
+    "geopolitical": [],
+    "currencies": [],
+    "commodities": [],
+    "earnings": [],
+    "research": [],
+    "premarketMovers": [],
+    "webSearchResults": {}
+  },
+  "timing": {
+    "lastCloseTimestamp": 1755014400,
+    "lastCloseString": "8/12/2025, 12:00:00 PM",
+    "currentTime": "8/13/2025, 8:31:06 AM"
+  },
+  "totalHeadlines": 8,
+  "webSearchCount": 0,
+  "apiHeadlines": 8,
+  "categoryBreakdown": {
+    "general": 8,
+    "us": 0,
+    "asian": 0,
+    "european": 0,
+    "geopolitical": 0,
+    "currencies": 0,
+    "commodities": 0,
+    "earnings": 0,
+    "research": 0,
+    "premarketMovers": 0
+  },
+  "webSearchBreakdown": {},
+  "metadata": {
+    "generatedAt": "2025-08-13T12:33:01.027Z",
+    "reportType": "enhanced-premarket-brief-with-web-search",
+    "aiModel": "claude-sonnet-4",
+    "classification": "enhanced-institutional-grade",
+    "features": [
+      "traditional-apis",
+      "web-search-intelligence",
+      "cross-source-validation"
+    ]
+  }
+}
