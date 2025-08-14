@@ -1,0 +1,112 @@
+{
+  "headlines": {
+    "general": [
+      {
+        "headline": "Tradr ETFs Surpasses $1 Billion in Assets Under Management",
+        "summary": "Milestone Reflects Growing Demand for High-Conviction, Tactical Exposure to the Innovation Economy.",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/pressreleases/25/08/n47119063/tradr-etfs-surpasses-1-billion-in-assets-under-management",
+        "sentiment": "Neutral"
+      },
+      {
+        "headline": "Why the Highest-Yielding Vanguard ETF Might Not Be the Best one to Own",
+        "summary": "Vanguard has 97 ETFs, most of which pay dividends. Which is best for you?",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/08/14/why-the-highest-yielding-vanguard-etf-might-not-be/",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "TransUnion Finds U.S. Consumer Credit Market Showing Signs of Stability and Measured Growth at Mid-Point of 2025",
+        "summary": "Q2 2025 TransUnion Credit Industry Insights Report explores the latest credit trends Q2 2025 TransUnion Credit Industry Insights Report explores the latest credit trends ...",
+        "source": "Alpha Vantage - GlobeNewswire",
+        "datetime": "Invalid Date",
+        "url": "https://www.globenewswire.com/news-release/2025/08/14/3133396/0/en/TransUnion-Finds-U-S-Consumer-Credit-Market-Showing-Signs-of-Stability-and-Measured-Growth-at-Mid-Point-of-2025.html",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Advanced Flower Capital Inc. Announces Financial Results for the Second Quarter 2025",
+        "summary": "Second quarter 2025 GAAP net loss of $ ( 13.2 ) million or $ ( 0.60 ) per basic weighted average common share and Distributable Earnings ( 1 ) of $3.4 million or $0.15 per basic weighted average common share ...",
+        "source": "Alpha Vantage - GlobeNewswire",
+        "datetime": "Invalid Date",
+        "url": "https://www.globenewswire.com/news-release/2025/08/14/3133368/0/en/Advanced-Flower-Capital-Inc-Announces-Financial-Results-for-the-Second-Quarter-2025.html",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Gaming and Leisure Properties Announces Pricing of $600,000,000 of 5.250% Senior Notes Due 2033 and $700,000,000 of 5.750% Senior Notes Due 2037 - Gaming and Leisure Props  ( NASDAQ:GLPI ) ",
+        "summary": "WYOMISSING, Pa., Aug. 14, 2025 ( GLOBE NEWSWIRE ) -- Gaming and Leisure Properties, Inc. ( \"GLPI\" ) GLPI announced the pricing of a public offering of $1,300,000,000 aggregate principal amount of Notes ( as defined below ) , to be issued by its operating partnership, GLP Capital, L.P. ( the ...",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/pressreleases/25/08/g47118097/gaming-and-leisure-properties-announces-pricing-of-600-000-000-of-5-250-senior-notes-due-2033-and-",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Evaxion announces business update and second quarter 2025 financial results",
+        "summary": "COPENHAGEN, Denmark, August 14, 2025 - Evaxion A/S ( NASDAQ: EVAX ) ( \"Evaxion\" ) , a clinical-stage TechBio company specializing in developing AI-Immunology™ powered vaccines, provides business update and announces second quarter 2025 financial results.",
+        "source": "Alpha Vantage - GlobeNewswire",
+        "datetime": "Invalid Date",
+        "url": "https://www.globenewswire.com/news-release/2025/08/14/3133366/0/en/Evaxion-announces-business-update-and-second-quarter-2025-financial-results.html",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "BOTH LEADING INDEPENDENT PROXY ADVISORS ISS AND GLASS LEWIS RECOMMEND INTERRENT REIT UNITHOLDERS VOTE FOR THE ARRANGEMENT WITH CLV GROUP AND GIC",
+        "summary": "Institutional Shareholder Services Inc. ( \"ISS\" ) highlighted the \"premium to the trust's unit price on the unaffected date, providing both certain and immediate value\"1",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/pressreleases/25/08/n47118135/both-leading-independent-proxy-advisors-iss-and-glass-lewis-recommend-interrent-reit-unitholders-v",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "reAlpha Tech Sales Jump 1,909 Percent",
+        "summary": "reAlpha Tech ( NASDAQ:AIRE ) , a real estate technology company focused on AI-driven mortgage and property services, posted its fiscal second quarter 2025 earnings on August 14, 2025. Driven by rapid scaling of its real estate and mortgage services, however, the company's net loss deepened to ...",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/data-news/2025/08/14/realpha-tech-sales-jump-1909-percent/",
+        "sentiment": "Somewhat-Bullish"
+      }
+    ],
+    "us": [],
+    "asian": [],
+    "european": [],
+    "geopolitical": [],
+    "currencies": [],
+    "commodities": [],
+    "earnings": [],
+    "research": [],
+    "premarketMovers": [],
+    "webSearchResults": {}
+  },
+  "timing": {
+    "lastCloseTimestamp": 1755100800,
+    "lastCloseString": "8/13/2025, 12:00:00 PM",
+    "currentTime": "8/14/2025, 8:31:48 AM"
+  },
+  "totalHeadlines": 8,
+  "webSearchCount": 0,
+  "apiHeadlines": 8,
+  "categoryBreakdown": {
+    "general": 8,
+    "us": 0,
+    "asian": 0,
+    "european": 0,
+    "geopolitical": 0,
+    "currencies": 0,
+    "commodities": 0,
+    "earnings": 0,
+    "research": 0,
+    "premarketMovers": 0
+  },
+  "webSearchBreakdown": {},
+  "metadata": {
+    "generatedAt": "2025-08-14T12:33:06.497Z",
+    "reportType": "enhanced-premarket-brief-with-web-search",
+    "aiModel": "claude-sonnet-4",
+    "classification": "enhanced-institutional-grade",
+    "features": [
+      "traditional-apis",
+      "web-search-intelligence",
+      "cross-source-validation"
+    ]
+  }
+}
