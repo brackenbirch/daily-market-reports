@@ -1,0 +1,112 @@
+{
+  "headlines": {
+    "general": [
+      {
+        "headline": "Partners Value Investments L.P. Announces Q2 2025 Interim Results",
+        "summary": "TORONTO, Aug. 15, 2025 ( GLOBE NEWSWIRE ) -- Partners Value Investments L.P. ( the \"Partnership\", TSX: PVF.UN TSX: PVF.PR.U ) announced today its financial results for the six months ended June 30, 2025. All amounts are stated in U.S. dollars.",
+        "source": "Alpha Vantage - GlobeNewswire",
+        "datetime": "Invalid Date",
+        "url": "https://www.globenewswire.com/news-release/2025/08/15/3134177/0/en/Partners-Value-Investments-L-P-Announces-Q2-2025-Interim-Results.html",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "United Community Banks, Inc. Announces Redemption of All Oustanding Shares of 6.875% Series I Non-Cumulative Perpetual Preferred Stock",
+        "summary": "GREENVILLE, S.C., Aug. 15, 2025 ( GLOBE NEWSWIRE ) -- United Community Banks, Inc. ( NYSE: UCB ) ( \"United\", the \"Company\" ) , is redeeming all outstanding shares of the Company's 6.875% Series I Non-Cumulative Perpetual Preferred Stock ( the \"Preferred Stock\" ) on September 15, 2025 ( the ...",
+        "source": "Alpha Vantage - GlobeNewswire",
+        "datetime": "Invalid Date",
+        "url": "https://www.globenewswire.com/news-release/2025/08/15/3134171/34434/en/United-Community-Banks-Inc-Announces-Redemption-of-All-Oustanding-Shares-of-6-875-Series-I-Non-Cumulative-Perpetual-Preferred-Stock.html",
+        "sentiment": "Bullish"
+      },
+      {
+        "headline": "LanzaTech Announces Reverse Stock Split as Part of Nasdaq Compliance Plan",
+        "summary": "CHICAGO, Aug. 15, 2025 ( GLOBE NEWSWIRE ) -- LanzaTech Global, Inc. ( \"LanzaTech\" or the \"Company\" ) ( NASDAQ: LNZA ) , a leading carbon capture and transformation company, today announced that it will implement a 1-for-100 reverse stock split ( the \"Reverse Stock Split\" ) of its issued and ...",
+        "source": "Alpha Vantage - GlobeNewswire",
+        "datetime": "Invalid Date",
+        "url": "https://www.globenewswire.com/news-release/2025/08/15/3134166/0/en/LanzaTech-Announces-Reverse-Stock-Split-as-Part-of-Nasdaq-Compliance-Plan.html",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Abaxx Provides Q2 2025 Corporate Update",
+        "summary": "TORONTO, Aug. 15, 2025 ( GLOBE NEWSWIRE ) -- Abaxx Technologies Inc. ( CBOE:ABXX ) ( OTCQX:ABXXF ) ( \"Abaxx\" or the \"Company\" ) , a financial software and market infrastructure company, majority shareholder of Abaxx Singapore Pte Ltd., the owner of Abaxx Commodity Exchange and Clearinghouse ( ...",
+        "source": "Alpha Vantage - GlobeNewswire",
+        "datetime": "Invalid Date",
+        "url": "https://www.globenewswire.com/news-release/2025/08/15/3134162/0/en/Abaxx-Provides-Q2-2025-Corporate-Update.html",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Brookfield Business Partners Announces Renewal of Normal Course Issuer Bids for Units and Exchangeable Shares",
+        "summary": "BROOKFIELD, News, Aug. 15, 2025 ( GLOBE NEWSWIRE ) -- Brookfield Business Partners ( NYSE: BBU, BBUC. TSX: BBU.UN, BBUC ) today announced that the Toronto Stock Exchange ( \"TSX\" ) has accepted a notice filed by Brookfield Business Partners L.P. of its intention to renew its normal course issuer ...",
+        "source": "Alpha Vantage - GlobeNewswire",
+        "datetime": "Invalid Date",
+        "url": "https://www.globenewswire.com/news-release/2025/08/15/3134155/0/en/Brookfield-Business-Partners-Announces-Renewal-of-Normal-Course-Issuer-Bids-for-Units-and-Exchangeable-Shares.html",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Should SPDR S&P 600 Small Cap Value ETF  ( SLYV )  Be on Your Investing Radar?",
+        "summary": "Style Box ETF report for ...",
+        "source": "Alpha Vantage - Zacks Commentary",
+        "datetime": "Invalid Date",
+        "url": "https://www.zacks.com/stock/news/2716148/should-spdr-sp-600-small-cap-value-etf-slyv-be-on-your-investing-radar",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Should SPDR S&P 400 Mid Cap Value ETF  ( MDYV )  Be on Your Investing Radar?",
+        "summary": "Style Box ETF report for ...",
+        "source": "Alpha Vantage - Zacks Commentary",
+        "datetime": "Invalid Date",
+        "url": "https://www.zacks.com/stock/news/2716181/should-spdr-sp-400-mid-cap-value-etf-mdyv-be-on-your-investing-radar",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Should Janus Henderson Small Cap Growth Alpha ETF  ( JSML )  Be on Your Investing Radar?",
+        "summary": "Style Box ETF report for ...",
+        "source": "Alpha Vantage - Zacks Commentary",
+        "datetime": "Invalid Date",
+        "url": "https://www.zacks.com/stock/news/2716180/should-janus-henderson-small-cap-growth-alpha-etf-jsml-be-on-your-investing-radar",
+        "sentiment": "Somewhat-Bullish"
+      }
+    ],
+    "us": [],
+    "asian": [],
+    "european": [],
+    "geopolitical": [],
+    "currencies": [],
+    "commodities": [],
+    "earnings": [],
+    "research": [],
+    "premarketMovers": [],
+    "webSearchResults": {}
+  },
+  "timing": {
+    "lastCloseTimestamp": 1755187200,
+    "lastCloseString": "8/14/2025, 12:00:00 PM",
+    "currentTime": "8/15/2025, 8:29:51 AM"
+  },
+  "totalHeadlines": 8,
+  "webSearchCount": 0,
+  "apiHeadlines": 8,
+  "categoryBreakdown": {
+    "general": 8,
+    "us": 0,
+    "asian": 0,
+    "european": 0,
+    "geopolitical": 0,
+    "currencies": 0,
+    "commodities": 0,
+    "earnings": 0,
+    "research": 0,
+    "premarketMovers": 0
+  },
+  "webSearchBreakdown": {},
+  "metadata": {
+    "generatedAt": "2025-08-15T12:31:02.121Z",
+    "reportType": "enhanced-premarket-brief-with-web-search",
+    "aiModel": "claude-sonnet-4",
+    "classification": "enhanced-institutional-grade",
+    "features": [
+      "traditional-apis",
+      "web-search-intelligence",
+      "cross-source-validation"
+    ]
+  }
+}
