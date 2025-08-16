@@ -1,0 +1,112 @@
+{
+  "headlines": {
+    "general": [
+      {
+        "headline": "This Red-Hot Vanguard ETF Just Hit an All-Time High. Here's Why It's Still Worth Buying in August.",
+        "summary": "The Vanguard Dividend Appreciation ETF has an excellent balance of growth, income, and value stocks.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/08/16/red-hot-vanguard-etf-all-time-high-buy-august/",
+        "sentiment": "Bullish"
+      },
+      {
+        "headline": "REGISTRATION OF THE COMBINATION OF SHARES OF DIGITALIST GROUP PLC, AND ADJUSTMENT OF THE MAXIMUM NUMBERS OF SHARES AVAILABLE FOR SUBSCRIPTION UNDER THE COMPANY'S CONVERTIBLE LOANS AND 2021 STOCK OPTION PROGRAM, AND THE SUBSCRIPTION PRICES",
+        "summary": "REGISTRATION OF THE COMBINATION OF SHARES OF DIGITALIST GROUP PLC, AND ADJUSTMENT OF THE MAXIMUM NUMBERS OF SHARES IN THE COMPANY AVAILABLE FOR SUBSCRIPTION UNDER THE COMPANY'S CONVERTIBLE LOAN INSTRUMENTS AND THE 2021 STOCK OPTION PROGRAM, AS WELL AS THE SUBSCRIPTION PRICES ...",
+        "source": "Alpha Vantage - GlobeNewswire",
+        "datetime": "Invalid Date",
+        "url": "https://www.globenewswire.com/news-release/2025/08/16/3134524/0/en/REGISTRATION-OF-THE-COMBINATION-OF-SHARES-OF-DIGITALIST-GROUP-PLC-AND-ADJUSTMENT-OF-THE-MAXIMUM-NUMBERS-OF-SHARES-AVAILABLE-FOR-SUBSCRIPTION-UNDER-THE-COMPANY-S-CONVERTIBLE-LOANS-A.html",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Reddit Stock Rises 4.4% After Key Trading Signal",
+        "summary": "RDDT reverses early weakness after alert and rises over 10 points Reddit Inc. ( RDDT ) experienced a Power Inflow today, a significant event for those who follow where smart money goes and value order flow analytics in their trading decisions.",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/markets/equities/25/08/47172307/reddit-stock-rises-4-4-after-key-trading-signal",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "3 ETFs That Could Generate $1 Million in Passive Income",
+        "summary": "Getting $1 million in passive income is a tall order, but possible. Getting a smaller, still-useful sum is much more achievable.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/08/16/three-etfs-could-generate-million-passive-income/",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Don't Make This Common Investing Mistake When Buying S&P 500 Stocks at All-Time Highs",
+        "summary": "With the S&P 500 near an all-time high, it's more important than ever to invest in quality companies.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/08/16/common-investing-mistake-buy-sp-500-all-time-high/",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "3 Dirt Cheap Stocks to Buy With $1,000 Right Now",
+        "summary": "These stocks look attractive in an increasingly expensive market.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/08/16/3-dirt-cheap-stocks-to-buy-with-1000-right-now1/",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Forget President Donald Trump's Tariffs! There's a Far More Sinister Worry for Wall Street.",
+        "summary": "Although President Trump's tariff and trade policy is headline news, another factor is of far greater importance to the stock market.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/08/16/forget-trump-tariffs-more-sinister-worry-wall-st/",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Can a $10,000 Investment in Palantir Make You a Millionaire in a Decade?",
+        "summary": "Palatnir's run has already been quite impressive.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/08/16/can-a-10000-investment-in-palantir-make-you-a-mill/",
+        "sentiment": "Somewhat-Bullish"
+      }
+    ],
+    "us": [],
+    "asian": [],
+    "european": [],
+    "geopolitical": [],
+    "currencies": [],
+    "commodities": [],
+    "earnings": [],
+    "research": [],
+    "premarketMovers": [],
+    "webSearchResults": {}
+  },
+  "timing": {
+    "lastCloseTimestamp": 1755273600,
+    "lastCloseString": "8/15/2025, 12:00:00 PM",
+    "currentTime": "8/16/2025, 8:27:25 AM"
+  },
+  "totalHeadlines": 8,
+  "webSearchCount": 0,
+  "apiHeadlines": 8,
+  "categoryBreakdown": {
+    "general": 8,
+    "us": 0,
+    "asian": 0,
+    "european": 0,
+    "geopolitical": 0,
+    "currencies": 0,
+    "commodities": 0,
+    "earnings": 0,
+    "research": 0,
+    "premarketMovers": 0
+  },
+  "webSearchBreakdown": {},
+  "metadata": {
+    "generatedAt": "2025-08-16T12:28:36.821Z",
+    "reportType": "enhanced-premarket-brief-with-web-search",
+    "aiModel": "claude-sonnet-4",
+    "classification": "enhanced-institutional-grade",
+    "features": [
+      "traditional-apis",
+      "web-search-intelligence",
+      "cross-source-validation"
+    ]
+  }
+}
