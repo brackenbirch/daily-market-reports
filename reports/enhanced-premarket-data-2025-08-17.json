@@ -1,0 +1,112 @@
+{
+  "headlines": {
+    "general": [
+      {
+        "headline": "Stock-Split Watch: Is Nvidia Next?",
+        "summary": "Nvidia has conducted several stock splits in the past.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/08/17/stock-split-watch-is-nvidia-next/",
+        "sentiment": "Neutral"
+      },
+      {
+        "headline": "Warren Buffett's Mystery Stock Is Revealed, and It Comes as a Big Surprise to Wall Street",
+        "summary": "The Oracle of Omaha loaded up on shares of an industry leader in an unlikely sector.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/08/17/warren-buffett-mystery-stock-revealed-wall-street/",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Got $500? 2 Cryptocurrencies to Buy and Hold for Decades",
+        "summary": "For just $500, it's possible to put together a diversified crypto portfolio.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/08/17/got-500-2-cryptocurrencies-to-buy-and-hold-for-dec/",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Where Will Realty Income Stock Be in 1 Year?",
+        "summary": "The lending environment should soon become more favorable for Realty Income.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/08/17/where-will-realty-income-stock-be-in-1-year/",
+        "sentiment": "Neutral"
+      },
+      {
+        "headline": "Meet the Marvelous Vanguard ETF With 57.7% of Its Portfolio Invested in the \"Magnificent Seven\" Stocks",
+        "summary": "This Vanguard exchange-traded fund can help investors beat the S&P 500, but it comes with risks.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/08/17/meet-vanguard-etf-577-in-magnificent-seven-stocks/",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Is This the Best Dividend King Stock to Buy Right Now?",
+        "summary": "While it's been a consistent performer for decades, this company still has a massive growth opportunity.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/08/17/is-this-the-best-dividend-king-stock-to-buy-right/",
+        "sentiment": "Bullish"
+      },
+      {
+        "headline": "The Stock Market Flashes a Warning Seen During the Dot-Com Bubble. History Says the S&P 500 Will Do This Next.",
+        "summary": "The S&P 500 trades at an expensive valuation that has historically preceded negative returns over the next one, two, and three years.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/08/17/stock-market-warning-dot-com-bubble-do-this-next/",
+        "sentiment": "Neutral"
+      },
+      {
+        "headline": "3 Dividend Stocks to Hold for the Next 5 Years",
+        "summary": "Sometimes it makes sense to first rent income-producing investments with the option to buy them later.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/08/17/3-dividend-stocks-to-hold-for-the-next-5-years/",
+        "sentiment": "Somewhat-Bullish"
+      }
+    ],
+    "us": [],
+    "asian": [],
+    "european": [],
+    "geopolitical": [],
+    "currencies": [],
+    "commodities": [],
+    "earnings": [],
+    "research": [],
+    "premarketMovers": [],
+    "webSearchResults": {}
+  },
+  "timing": {
+    "lastCloseTimestamp": 1755273600,
+    "lastCloseString": "8/15/2025, 12:00:00 PM",
+    "currentTime": "8/17/2025, 8:28:18 AM"
+  },
+  "totalHeadlines": 8,
+  "webSearchCount": 0,
+  "apiHeadlines": 8,
+  "categoryBreakdown": {
+    "general": 8,
+    "us": 0,
+    "asian": 0,
+    "european": 0,
+    "geopolitical": 0,
+    "currencies": 0,
+    "commodities": 0,
+    "earnings": 0,
+    "research": 0,
+    "premarketMovers": 0
+  },
+  "webSearchBreakdown": {},
+  "metadata": {
+    "generatedAt": "2025-08-17T12:29:26.737Z",
+    "reportType": "enhanced-premarket-brief-with-web-search",
+    "aiModel": "claude-sonnet-4",
+    "classification": "enhanced-institutional-grade",
+    "features": [
+      "traditional-apis",
+      "web-search-intelligence",
+      "cross-source-validation"
+    ]
+  }
+}
