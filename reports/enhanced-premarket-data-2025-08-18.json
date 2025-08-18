@@ -1,0 +1,112 @@
+{
+  "headlines": {
+    "general": [
+      {
+        "headline": "Home Depot: How To Earn $500 A Month Ahead Of Q2 Earnings - Home Depot  ( NYSE:HD ) ",
+        "summary": "A more conservative goal of $100 monthly dividend income would require 130 shares of Home Depot. An investor would need to own $260,396 worth of Home Depot to generate a monthly dividend income of $500. Get the exact trades and sectors to target before August's biggest earnings-driven market ...",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/trading-ideas/dividends/25/08/47182913/how-to-earn-500-a-month-from-home-depot-stock-ahead-of-q2-earnings",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "DallasNews Corporation Files Definitive Proxy Statement and Issues Letter to Shareholders - DallasNews  ( NASDAQ:DALN ) ",
+        "summary": "Shareholders to Receive All-Cash Consideration of $15 Per Share, a 242% Premium Over the Closing Price Per Share of Series A Common Stock on July 9, 2025",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/pressreleases/25/08/g47182068/dallasnews-corporation-files-definitive-proxy-statement-and-issues-letter-to-shareholders",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "180 Degree Capital Corp. and Mount Logan Capital Inc. Announce Revised Terms of Business Combination in Response to Constructive Conversations with Shareholders",
+        "summary": "180 Degree Capital's shareholders to receive shares of New Mount Logan based on 110% of Net Asset Value ( \"NAV\" ) of 180 Degree Capital at closing, an increase from 100% of NAV ...",
+        "source": "Alpha Vantage - GlobeNewswire",
+        "datetime": "Invalid Date",
+        "url": "https://www.globenewswire.com/news-release/2025/08/18/3134931/0/en/180-Degree-Capital-Corp-and-Mount-Logan-Capital-Inc-Announce-Revised-Terms-of-Business-Combination-in-Response-to-Constructive-Conversations-with-Shareholders.html",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "DallasNews Corporation Files Definitive Proxy Statement and Issues Letter to Shareholders",
+        "summary": "Shareholders to Receive All-Cash Consideration of $15 Per Share, a 242% Premium Over the Closing Price Per Share of Series A Common Stock on July 9, 2025 Hearst Merger Provides Accelerated ROI and Immediate Liquidity, While Eliminating Company Ownership Risks for Shareholders",
+        "source": "Alpha Vantage - GlobeNewswire",
+        "datetime": "Invalid Date",
+        "url": "https://www.globenewswire.com/news-release/2025/08/18/3134928/0/en/DallasNews-Corporation-Files-Definitive-Proxy-Statement-and-Issues-Letter-to-Shareholders.html",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Alpha Modus Agrees to Preferred Stock Exchange to Eliminate ~$41 Million in Mezzanine Equity, Strengthening Balance Sheet, and Fully Aligning Insider Interests - Alpha Modus Holdings  ( NASDAQ:AMODW ) , Alpha Modus Holdings  ( NASDAQ:AMOD ) ",
+        "summary": "CHARLOTTE, N.C., Aug. 18, 2025 ( GLOBE NEWSWIRE ) -- Alpha Modus Holdings, Inc.",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/pressreleases/25/08/g47182510/alpha-modus-agrees-to-preferred-stock-exchange-to-eliminate-41-million-in-mezzanine-equity-strengt",
+        "sentiment": "Bullish"
+      },
+      {
+        "headline": "CarMax, Uber, IBM And A Real Estate Stock On CNBC's 'Final Trades' - Alexandria Real Estate  ( NYSE:ARE ) , IBM  ( NYSE:IBM ) ",
+        "summary": "Brenda Vingiello says Alexandria Real Estate Equities has a 7% dividend yield. Rob Sechan says IBM is 20% off its recent highs. Get the latest proven ETF strategies to target and profit from summer volatility before the next big market swing.",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/analyst-stock-ratings/analyst-color/25/08/47182845/carmax-ibm-uber-real-estate-stock-on-cnbcs-final-trades",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Cuprina Reaffirms Commitment to Shareholders and Patients Following Recent Stock Market Activity - Cuprina Holdings  ( Cayman )   ( NASDAQ:CUPR ) ",
+        "summary": "Singapore, Aug. 18, 2025 ( GLOBE NEWSWIRE ) -- Cuprina Holdings ( Cayman ) Limited ( NASDAQ:CUPR ) ( \"Cuprina\" or \"the Company\" ) issued the following statement in response to recent unusual trading activity and speculation surrounding the Company.",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/pressreleases/25/08/g47182536/cuprina-reaffirms-commitment-to-shareholders-and-patients-following-recent-stock-market-activity",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Why Is Soho House Stock Soaring Monday? - Soho House  ( NYSE:SHCO ) ",
+        "summary": "Soho House agreed to a $2.7 billion take-private deal led by MCR and Apollo. Neil Thomson named new CFO amid buyout transition. See what Wall Street is buying with instant access to ratings on 1,000 top stocks, including Goldman Sachs, Morgan Stanley, and more. Unlock all ratings now.",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/trading-ideas/movers/25/08/47182786/soho-house-strikes-deal-to-go-private-with-2-7-billion-offer",
+        "sentiment": "Somewhat-Bullish"
+      }
+    ],
+    "us": [],
+    "asian": [],
+    "european": [],
+    "geopolitical": [],
+    "currencies": [],
+    "commodities": [],
+    "earnings": [],
+    "research": [],
+    "premarketMovers": [],
+    "webSearchResults": {}
+  },
+  "timing": {
+    "lastCloseTimestamp": 1755273600,
+    "lastCloseString": "8/15/2025, 12:00:00 PM",
+    "currentTime": "8/18/2025, 8:31:57 AM"
+  },
+  "totalHeadlines": 8,
+  "webSearchCount": 0,
+  "apiHeadlines": 8,
+  "categoryBreakdown": {
+    "general": 8,
+    "us": 0,
+    "asian": 0,
+    "european": 0,
+    "geopolitical": 0,
+    "currencies": 0,
+    "commodities": 0,
+    "earnings": 0,
+    "research": 0,
+    "premarketMovers": 0
+  },
+  "webSearchBreakdown": {},
+  "metadata": {
+    "generatedAt": "2025-08-18T12:33:14.549Z",
+    "reportType": "enhanced-premarket-brief-with-web-search",
+    "aiModel": "claude-sonnet-4",
+    "classification": "enhanced-institutional-grade",
+    "features": [
+      "traditional-apis",
+      "web-search-intelligence",
+      "cross-source-validation"
+    ]
+  }
+}
