@@ -1,0 +1,112 @@
+{
+  "headlines": {
+    "general": [
+      {
+        "headline": "Mackenzie Investments Launches New ETFs to Help Investors Increase Exposure to U.S. Equities",
+        "summary": "Mackenzie GQE US Alpha Extension ETF and Mackenzie NASDAQ 100 Index ETF offer innovative investment solutions to capitalize on growth potential in the U.S. equity market TORONTO, Aug. 19, 2025 /CNW/ - Mackenzie Investments ( \"Mackenzie\" ) today announced the launch of two new exchange traded ...",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/pressreleases/25/08/n47205209/mackenzie-investments-launches-new-etfs-to-help-investors-increase-exposure-to-u-s-equities",
+        "sentiment": "Bullish"
+      },
+      {
+        "headline": "Black Hills Corp. and NorthWestern Energy to Combine in All-Stock Merger to Create a Premier Regional Regulated Electric and Natural Gas Utility Company - NorthWestern Energy Group  ( NASDAQ:NWE ) , Black Hills  ( NYSE:BKH ) ",
+        "summary": "Increased scale and business line diversity to result in a stronger, more resilient platform to safely, reliably, and cost-effectively meet customers' rising energy needs Merger expected to be accretive to each company's EPS in the first year following the close of transaction",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/pressreleases/25/08/g47204331/black-hills-corp-and-northwestern-energy-to-combine-in-all-stock-merger-to-create-a-premier-region",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Defiance ETFs Launches Leveraged + Income ETFs for Palantir  ( PLT ) , Hims & Hers Health  ( HIMY ) , and Robinhood Markets  ( HOOI ) ",
+        "summary": "MIAMI, Aug. 19, 2025 ( GLOBE NEWSWIRE ) -- Defiance ETFs, a leading innovator in thematic and leveraged exchange-traded funds, today announced the launch of three new single-stock leveraged ETFs with income strategies: Defiance Leveraged Long + Income PLTR ETF PLT - providing leveraged ...",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/pressreleases/25/08/g47204428/defiance-etfs-launches-leveraged-income-etfs-for-palantir-plt-hims-hers-health-himy-and-robinhood-",
+        "sentiment": "Neutral"
+      },
+      {
+        "headline": "Formula Systems Reports Second Quarter and First Half 2025 Financial Results",
+        "summary": "Revenues for the second quarter increased by 11.3% year over year, reaching a second quarter all-time high of $743.4 million Revenues for the second quarter increased by 11.3% year over year, reaching a second quarter all-time high of $743.4 million ...",
+        "source": "Alpha Vantage - GlobeNewswire",
+        "datetime": "Invalid Date",
+        "url": "https://www.globenewswire.com/news-release/2025/08/19/3135593/0/en/Formula-Systems-Reports-Second-Quarter-and-First-Half-2025-Financial-Results.html",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "OTC Markets Group Welcomes Southern Cross Gold Consolidated Ltd. to OTCQX",
+        "summary": "NEW YORK, Aug. 19, 2025 ( GLOBE NEWSWIRE ) -- OTC Markets Group Inc. ( OTCQX: OTCM ) , operator of regulated markets for trading 12,000 U.S. and international securities, today announced Southern Cross Gold Consolidated Ltd. ( TSX: SXGC. ASX: SX2.",
+        "source": "Alpha Vantage - GlobeNewswire",
+        "datetime": "Invalid Date",
+        "url": "https://www.globenewswire.com/news-release/2025/08/19/3135571/0/en/OTC-Markets-Group-Welcomes-Southern-Cross-Gold-Consolidated-Ltd-to-OTCQX.html",
+        "sentiment": "Bullish"
+      },
+      {
+        "headline": "Short Seller Andrew Left Says 'OpenAI At $500 Billion Puts Palantir At $40' - And That's Generous - Invesco QQQ Trust, Series 1  ( NASDAQ:QQQ ) , Palantir Technologies  ( NASDAQ:PLTR ) ",
+        "summary": "Renowned short-seller Andrew Left's Citron Research has issued a bearish report on Palantir Technologies Inc. PLTR, arguing the stock is significantly overvalued and its price is \"detached from fundamentals and analysis\".",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/markets/equities/25/08/47204445/short-seller-andrew-left-says-openai-at-500-billion-puts-palantir-at-40-and-thats-generous",
+        "sentiment": "Neutral"
+      },
+      {
+        "headline": "FirstService Announces Normal Course Issuer Bid",
+        "summary": "TORONTO, Aug. 19, 2025 ( GLOBE NEWSWIRE ) -- FirstService Corporation ( TSX and NASDAQ: FSV ) ( \"FirstService\" ) announced today that the Toronto Stock Exchange ( the \"TSX\" ) has accepted a notice filed by FirstService of its intention to make a normal course issuer bid ( the \"NCIB\" ) with ...",
+        "source": "Alpha Vantage - GlobeNewswire",
+        "datetime": "Invalid Date",
+        "url": "https://www.globenewswire.com/news-release/2025/08/19/3135611/36351/en/FirstService-Announces-Normal-Course-Issuer-Bid.html",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "First Quantum Minerals Announces Results of Cash Tender Offer to Purchase Any and All of Its Outstanding 6.875% Senior Notes Due 2027",
+        "summary": "( In United States dollars, except where noted otherwise )",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/pressreleases/25/08/g47204130/first-quantum-minerals-announces-results-of-cash-tender-offer-to-purchase-any-and-all-of-its-outst",
+        "sentiment": "Somewhat-Bullish"
+      }
+    ],
+    "us": [],
+    "asian": [],
+    "european": [],
+    "geopolitical": [],
+    "currencies": [],
+    "commodities": [],
+    "earnings": [],
+    "research": [],
+    "premarketMovers": [],
+    "webSearchResults": {}
+  },
+  "timing": {
+    "lastCloseTimestamp": 1755532800,
+    "lastCloseString": "8/18/2025, 12:00:00 PM",
+    "currentTime": "8/19/2025, 8:29:56 AM"
+  },
+  "totalHeadlines": 8,
+  "webSearchCount": 0,
+  "apiHeadlines": 8,
+  "categoryBreakdown": {
+    "general": 8,
+    "us": 0,
+    "asian": 0,
+    "european": 0,
+    "geopolitical": 0,
+    "currencies": 0,
+    "commodities": 0,
+    "earnings": 0,
+    "research": 0,
+    "premarketMovers": 0
+  },
+  "webSearchBreakdown": {},
+  "metadata": {
+    "generatedAt": "2025-08-19T12:31:20.925Z",
+    "reportType": "enhanced-premarket-brief-with-web-search",
+    "aiModel": "claude-sonnet-4",
+    "classification": "enhanced-institutional-grade",
+    "features": [
+      "traditional-apis",
+      "web-search-intelligence",
+      "cross-source-validation"
+    ]
+  }
+}
