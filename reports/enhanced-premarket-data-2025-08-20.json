@@ -1,0 +1,112 @@
+{
+  "headlines": {
+    "general": [
+      {
+        "headline": "Why Rocket Pharmaceuticals Shares Are Trading Higher By Over 15%; Here Are 20 Stocks Moving Premarket - Color Star Tech  ( NASDAQ:ADD ) , Aspen Insurance Hldgs  ( NYSE:AHL ) ",
+        "summary": "Shares of Rocket Pharmaceuticals, Inc. RCKT rose sharply in pre-market trading after the company disclosed that the FDA has lifted the clinical hold on the pivotal Phase 2 trial of RP-A501 for the treatment of Danon disease. Rocket Pharmaceuticals shares jumped 15.8% to $3.37 in the pre-market ...",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/trading-ideas/movers/25/08/47230474/why-rocket-pharmaceuticals-shares-are-trading-higher-by-over-15-here-are-20-stocks-moving-pr",
+        "sentiment": "Neutral"
+      },
+      {
+        "headline": "YieldMax® ETFs Announces Distributions on FIAT, ULTY, AMDY, CVNY, HOOY, and Others",
+        "summary": "CHICAGO, MILWAUKEE and NEW YORK, Aug. 20, 2025 ( GLOBE NEWSWIRE ) -- YieldMax® today announced distributions for the YieldMax® Weekly Payers and Group C ETFs listed in the table below. Performance data quoted represents past performance and is no guarantee of future results.",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/pressreleases/25/08/g47230360/yieldmax-etfs-announces-distributions-on-fiat-ulty-amdy-cvny-hooy-and-others",
+        "sentiment": "Neutral"
+      },
+      {
+        "headline": "GDS Reports Second Quarter 2025 Results",
+        "summary": "SHANGHAI, China, Aug. 20, 2025 ( GLOBE NEWSWIRE ) -- GDS Holdings Limited ( \"GDS Holdings\", \"GDS\" or the \"Company\" ) ( NASDAQ: GDS. HKEX: 9698 ) , a leading developer and operator of high-performance data centers in China, today announced its unaudited financial results for the second quarter ...",
+        "source": "Alpha Vantage - GlobeNewswire",
+        "datetime": "Invalid Date",
+        "url": "https://www.globenewswire.com/news-release/2025/08/20/3136302/0/en/GDS-Reports-Second-Quarter-2025-Results.html",
+        "sentiment": "Neutral"
+      },
+      {
+        "headline": "Where Will Spotify Technology Stock Be in 5 Years?",
+        "summary": "Spotify has been a great investment, but will it continue to deliver going forward?",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/08/20/where-will-spotify-technology-stock-be-in-5-years/",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Brookfield Corporation Announces Renewal of Normal Course Issuer Bid for Preferred Shares",
+        "summary": "BROOKFIELD, NEWS, Aug. 20, 2025 ( GLOBE NEWSWIRE ) -- Brookfield Corporation ( TSX: BN, NYSE: BN ) ( \"Brookfield\" or \"the Company\" ) today announced it has received approval from the Toronto Stock Exchange ( \"TSX\" ) for the renewal of its normal course issuer bid to purchase up to 10% of the ...",
+        "source": "Alpha Vantage - GlobeNewswire",
+        "datetime": "Invalid Date",
+        "url": "https://www.globenewswire.com/news-release/2025/08/20/3136278/0/en/Brookfield-Corporation-Announces-Renewal-of-Normal-Course-Issuer-Bid-for-Preferred-Shares.html",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Bitget Debuts First-Ever RWA Index Perpetuals Featuring Major Real-World Assets",
+        "summary": "VICTORIA, Seychelles, Aug. 20, 2025 ( GLOBE NEWSWIRE ) -- Bitget, the leading cryptocurrency exchange and Web3 company, today announced the launch of the industry's first RWA ( Real-World Asset ) Index Perpetual Contract.",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/pressreleases/25/08/g47229952/bitget-debuts-first-ever-rwa-index-perpetuals-featuring-major-real-world-assets",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Dycom Industries, Inc. Reports Fiscal 2026 Second Quarter Results",
+        "summary": "Second Quarter Highlights ( All metrics compared to the second quarter of fiscal ...",
+        "source": "Alpha Vantage - GlobeNewswire",
+        "datetime": "Invalid Date",
+        "url": "https://www.globenewswire.com/news-release/2025/08/20/3136291/0/en/Dycom-Industries-Inc-Reports-Fiscal-2026-Second-Quarter-Results.html",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Stock yards Bancorp Increases Quarterly Cash Dividend to $0.32 Per Common Share - Stock Yards Bancorp  ( NASDAQ:SYBT ) ",
+        "summary": "LOUISVILLE, Ky., Aug. 20, 2025 ( GLOBE NEWSWIRE ) -- Stock Yards Bancorp, Inc.",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/pressreleases/25/08/g47230544/stock-yards-bancorp-increases-quarterly-cash-dividend-to-0-32-per-common-share",
+        "sentiment": "Somewhat-Bullish"
+      }
+    ],
+    "us": [],
+    "asian": [],
+    "european": [],
+    "geopolitical": [],
+    "currencies": [],
+    "commodities": [],
+    "earnings": [],
+    "research": [],
+    "premarketMovers": [],
+    "webSearchResults": {}
+  },
+  "timing": {
+    "lastCloseTimestamp": 1755619200,
+    "lastCloseString": "8/19/2025, 12:00:00 PM",
+    "currentTime": "8/20/2025, 8:29:41 AM"
+  },
+  "totalHeadlines": 8,
+  "webSearchCount": 0,
+  "apiHeadlines": 8,
+  "categoryBreakdown": {
+    "general": 8,
+    "us": 0,
+    "asian": 0,
+    "european": 0,
+    "geopolitical": 0,
+    "currencies": 0,
+    "commodities": 0,
+    "earnings": 0,
+    "research": 0,
+    "premarketMovers": 0
+  },
+  "webSearchBreakdown": {},
+  "metadata": {
+    "generatedAt": "2025-08-20T12:31:13.184Z",
+    "reportType": "enhanced-premarket-brief-with-web-search",
+    "aiModel": "claude-sonnet-4",
+    "classification": "enhanced-institutional-grade",
+    "features": [
+      "traditional-apis",
+      "web-search-intelligence",
+      "cross-source-validation"
+    ]
+  }
+}
