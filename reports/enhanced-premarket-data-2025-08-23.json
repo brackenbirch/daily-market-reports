@@ -1,0 +1,112 @@
+{
+  "headlines": {
+    "general": [
+      {
+        "headline": "Want an Extra $1,000 in Annual Dividend Payments? Invest $9,700 in These 2 Ultra-High-Yield Stocks.",
+        "summary": "With an average yield above 10%, these stocks could help you produce a much larger stream of passive income.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/08/23/want-an-extra-1000-in-annual-dividend-payments-inv/",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Not Sure What to Invest In? This Low-Cost ETF Is a No-Brainer Buy",
+        "summary": "Tracking the S&P 500 can be a surefire way to grow your portfolio's balance in the long run.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/08/23/not-sure-what-to-invest-in-this-low-cost-etf-is-a/",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Could This Dividend King Double Your Money in 5 Years?",
+        "summary": "Doubling an investment in that time frame is a tough ask, but it's far from impossible.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/08/23/could-this-dividend-king-double-your-money-in-x-ye/",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "2 No-Brainer Dividend Stocks to Buy With $500 Right Now",
+        "summary": "Brookfield Asset Management and Ares Capital are both reliable income stocks.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/08/23/2-no-brainer-dividend-stocks-to-buy-with-500-right/",
+        "sentiment": "Bullish"
+      },
+      {
+        "headline": "1 Magnificent Industrial Stock Down 60% to Buy and Hold Forever",
+        "summary": "This company is in the middle of a major business transformation, but its services are vital to modern society.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/08/23/magnificent-industrial-stock-down-buy-and-hold/",
+        "sentiment": "Neutral"
+      },
+      {
+        "headline": "This Artificial Intelligence  ( AI )  Stock Has Doubled in 2025 -- Can It Keep Climbing?",
+        "summary": "Palantir's stock has had an impressive 2025 overall, but it has been a bit weak lately.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/08/23/this-artificial-intelligence-ai-stock-has-doubled/",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Nvidia Stock Is Poised to Benefit From Rising Use of AI in Defense Systems and Global Surge in Defense Spending",
+        "summary": "While not a pure play, Nvidia stock has traits of a \"defense tech\" stock.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/08/23/nvidia-defense-government-military-work-ai-defense/",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Billionaire Stanley Druckenmiller Just Bought More of My Favorite Artificial Intelligence  ( AI )  Pick",
+        "summary": "Taiwan Semiconductor is a smart investment to make in the AI realm.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/08/23/billionaire-stanley-druckenmiller-just-bought-more/",
+        "sentiment": "Somewhat-Bullish"
+      }
+    ],
+    "us": [],
+    "asian": [],
+    "european": [],
+    "geopolitical": [],
+    "currencies": [],
+    "commodities": [],
+    "earnings": [],
+    "research": [],
+    "premarketMovers": [],
+    "webSearchResults": {}
+  },
+  "timing": {
+    "lastCloseTimestamp": 1755878400,
+    "lastCloseString": "8/22/2025, 12:00:00 PM",
+    "currentTime": "8/23/2025, 8:26:26 AM"
+  },
+  "totalHeadlines": 8,
+  "webSearchCount": 0,
+  "apiHeadlines": 8,
+  "categoryBreakdown": {
+    "general": 8,
+    "us": 0,
+    "asian": 0,
+    "european": 0,
+    "geopolitical": 0,
+    "currencies": 0,
+    "commodities": 0,
+    "earnings": 0,
+    "research": 0,
+    "premarketMovers": 0
+  },
+  "webSearchBreakdown": {},
+  "metadata": {
+    "generatedAt": "2025-08-23T12:27:33.785Z",
+    "reportType": "enhanced-premarket-brief-with-web-search",
+    "aiModel": "claude-sonnet-4",
+    "classification": "enhanced-institutional-grade",
+    "features": [
+      "traditional-apis",
+      "web-search-intelligence",
+      "cross-source-validation"
+    ]
+  }
+}
