@@ -1,0 +1,112 @@
+{
+  "headlines": {
+    "general": [
+      {
+        "headline": "Warren Buffett's Portfolio Includes 8 High-Yield Dividend Stocks -- Here's My Top Pick",
+        "summary": "Despite its challenges, Constellation Brands may be the greatest opportunity among Berkshire's high-yield dividend holdings.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/08/24/warren-buffetts-8-dividend-stocks-my-pick/",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Warren Buffett Sends Investors a $344 Billion Warning. History Says the Stock Market Will Do This Next.",
+        "summary": "The Oracle of Omaha is speaking volumes with his actions.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/08/24/warren-buffett-sends-investors-a-344-billion-warni/",
+        "sentiment": "Neutral"
+      },
+      {
+        "headline": "These 3 Hot Tech Stocks Are Table-Pounding Buys After Their Recent Dips",
+        "summary": "Volatility isn't fun, but it's normal. Buying the dip on high-quality stocks often works out well in the long run.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/08/24/these-3-hot-tech-stocks-are-table-pounding-buys-af/",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "The Best Stocks to Invest $50,000 in Right Now",
+        "summary": "There are four names on this list, but the last one may come as a surprise.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/08/24/the-best-stocks-to-invest-50000-in-right-now/",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Why Is Warren Buffett Dumping Apple Stock Right Now?",
+        "summary": "Berkshire Hathaway has been rapidly reducing its Apple stock holdings. What's going on?",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/08/24/why-is-warren-buffett-dumping-apple-stock-right-no/",
+        "sentiment": "Neutral"
+      },
+      {
+        "headline": "3 Magnificent S&P 500 Dividend Stocks Down Over 30% to Buy and Hold Forever",
+        "summary": "Good businesses backing big dividends make these down-and-out high-yield stocks attractive for the long term.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/08/24/magnificent-sp-500-dividend-stocks-down-buy/",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "3 Brilliant Growth Stocks to Buy Now and Hold for the Long Term",
+        "summary": "These three companies leverage technology and market trends to capture long-term growth opportunities.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/08/24/3-brilliant-growth-stocks-to-buy-now-and-hold-for/",
+        "sentiment": "Bullish"
+      },
+      {
+        "headline": "Investing $1,000 in Each of These Growth Stocks Could Go a Long Way for Patient Investors",
+        "summary": "These companies have exposure to exciting growth industries, including artificial intelligence (AI).",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/08/24/buy-growth-stocks-long-way-patient-investors/",
+        "sentiment": "Somewhat-Bullish"
+      }
+    ],
+    "us": [],
+    "asian": [],
+    "european": [],
+    "geopolitical": [],
+    "currencies": [],
+    "commodities": [],
+    "earnings": [],
+    "research": [],
+    "premarketMovers": [],
+    "webSearchResults": {}
+  },
+  "timing": {
+    "lastCloseTimestamp": 1755878400,
+    "lastCloseString": "8/22/2025, 12:00:00 PM",
+    "currentTime": "8/24/2025, 8:27:09 AM"
+  },
+  "totalHeadlines": 8,
+  "webSearchCount": 0,
+  "apiHeadlines": 8,
+  "categoryBreakdown": {
+    "general": 8,
+    "us": 0,
+    "asian": 0,
+    "european": 0,
+    "geopolitical": 0,
+    "currencies": 0,
+    "commodities": 0,
+    "earnings": 0,
+    "research": 0,
+    "premarketMovers": 0
+  },
+  "webSearchBreakdown": {},
+  "metadata": {
+    "generatedAt": "2025-08-24T12:28:41.779Z",
+    "reportType": "enhanced-premarket-brief-with-web-search",
+    "aiModel": "claude-sonnet-4",
+    "classification": "enhanced-institutional-grade",
+    "features": [
+      "traditional-apis",
+      "web-search-intelligence",
+      "cross-source-validation"
+    ]
+  }
+}
