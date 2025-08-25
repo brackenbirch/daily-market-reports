@@ -1,0 +1,112 @@
+{
+  "headlines": {
+    "general": [
+      {
+        "headline": "Tom Lee's Fundstrat Capital Files Preliminary Prospectus for Two New ETFs - Fundstrat Granny Shots US Large Cap ETF  ( ARCA:GRNY ) ",
+        "summary": "NEW YORK, Aug. 25, 2025 /PRNewswire/ -- Fundstrat Capital announced that it has filed a preliminary prospectus with the U.S. Securities and Exchange Commission ( \"SEC\" ) for two new exchange-traded funds ( ETFs ) : Fundstrat Granny Shots U.S.",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/pressreleases/25/08/n47304663/tom-lees-fundstrat-capital-files-preliminary-prospectus-for-two-new-etfs",
+        "sentiment": "Neutral"
+      },
+      {
+        "headline": "Mackenzie Investments Announces August 2025 Distributions for its Exchange Traded Funds",
+        "summary": "TORONTO, Aug. 25, 2025 /CNW/ - Mackenzie Investments ( \"Mackenzie\" ) today announced the August 2025 monthly cash distributions for its Exchange Traded Funds ( \"ETFs\" ) listed below that trade on the Toronto Stock Exchange ( \"TSX\" ) and Cboe Canada.",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/pressreleases/25/08/n47304669/mackenzie-investments-announces-august-2025-distributions-for-its-exchange-traded-funds",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "JPMorgan Announces Cash Distributions for the JPMorgan ETFs",
+        "summary": "TORONTO, Aug. 25, 2025 ( GLOBE NEWSWIRE ) -- J. P. Morgan Asset Management ( JPMAM ) * today announced the final August 2025 cash distributions for the below listed JPMorgan ETFs. The JPMorgan ETFs trade on the Toronto Stock Exchange ( TSX ) .",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/pressreleases/25/08/g47304182/jpmorgan-announces-cash-distributions-for-the-jpmorgan-etfs",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "JPMorgan Announces Cash Distributions for the JPMorgan ETFs",
+        "summary": "TORONTO, Aug. 25, 2025 ( GLOBE NEWSWIRE ) -- J. P. Morgan Asset Management ( JPMAM ) * today announced the final August 2025 cash distributions for the below listed JPMorgan ETFs. The JPMorgan ETFs trade on the Toronto Stock Exchange ( TSX ) .",
+        "source": "Alpha Vantage - GlobeNewswire",
+        "datetime": "Invalid Date",
+        "url": "https://www.globenewswire.com/news-release/2025/08/25/3138340/0/en/JPMorgan-Announces-Cash-Distributions-for-the-JPMorgan-ETFs.html",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Grayscale seeks SEC approval for Spot Avalanche ETF under AVAX ticker",
+        "summary": "The Avalanche ETF filing marks another step in Grayscale's expanding suite of crypto investment products, following XRP and DOGE filings earlier this year.",
+        "source": "Alpha Vantage - Cointelegraph",
+        "datetime": "Invalid Date",
+        "url": "https://cointelegraph.com/news/grayscale-files-spot-avalanche-etf-ticker-avax",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "MannKind to Acquire scPharmaceuticals, Accelerating Revenue Growth and Emerging as a Patient-Centric Leader in Cardiometabolic and Lung Diseases - MannKind  ( NASDAQ:MNKD ) , scPharmaceuticals  ( NASDAQ:SCPH ) ",
+        "summary": "Acquisition expected to diversify and accelerate double-digit revenue growth with FUROSCIX®, an innovative treatment for edema due to chronic heart failure and chronic kidney disease, addressing significant unmet need",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/pressreleases/25/08/g47304654/mannkind-to-acquire-scpharmaceuticals-accelerating-revenue-growth-and-emerging-as-a-patient-centri",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Erdene Provides Update on Share Consolidation",
+        "summary": "HALIFAX, Nova Scotia, Aug. 25, 2025 ( GLOBE NEWSWIRE ) -- Erdene Resource Development Corp. ( TSX: ERD. MSE: ERDN. OTCQB: ERDCF ) ( \"Erdene\" or the \"Company\" ) is pleased to provide an update on the proposed consolidation ( the \"Consolidation\" ) of Company's issued and outstanding common shares ( ...",
+        "source": "Alpha Vantage - GlobeNewswire",
+        "datetime": "Invalid Date",
+        "url": "https://www.globenewswire.com/news-release/2025/08/25/3138335/0/en/Erdene-Provides-Update-on-Share-Consolidation.html",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Maoyan Entertainment Announces 2025 Interim Results",
+        "summary": "BEIJING, Aug. 25, 2025 /PRNewswire/ -- Maoyan Entertainment ( \"Maoyan\" or the \"Company\", 1896.HK ) , a leading platform providing innovative Internet empowered entertainment services in China, today announced its audited consolidated results for the six months ended June 30, 2025.",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/pressreleases/25/08/n47304251/maoyan-entertainment-announces-2025-interim-results",
+        "sentiment": "Somewhat-Bullish"
+      }
+    ],
+    "us": [],
+    "asian": [],
+    "european": [],
+    "geopolitical": [],
+    "currencies": [],
+    "commodities": [],
+    "earnings": [],
+    "research": [],
+    "premarketMovers": [],
+    "webSearchResults": {}
+  },
+  "timing": {
+    "lastCloseTimestamp": 1755878400,
+    "lastCloseString": "8/22/2025, 12:00:00 PM",
+    "currentTime": "8/25/2025, 8:30:09 AM"
+  },
+  "totalHeadlines": 8,
+  "webSearchCount": 0,
+  "apiHeadlines": 8,
+  "categoryBreakdown": {
+    "general": 8,
+    "us": 0,
+    "asian": 0,
+    "european": 0,
+    "geopolitical": 0,
+    "currencies": 0,
+    "commodities": 0,
+    "earnings": 0,
+    "research": 0,
+    "premarketMovers": 0
+  },
+  "webSearchBreakdown": {},
+  "metadata": {
+    "generatedAt": "2025-08-25T12:31:44.974Z",
+    "reportType": "enhanced-premarket-brief-with-web-search",
+    "aiModel": "claude-sonnet-4",
+    "classification": "enhanced-institutional-grade",
+    "features": [
+      "traditional-apis",
+      "web-search-intelligence",
+      "cross-source-validation"
+    ]
+  }
+}
