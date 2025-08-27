@@ -1,0 +1,112 @@
+{
+  "headlines": {
+    "general": [
+      {
+        "headline": "Valour Launches Eight New ETPs on Spotlight Stock Market, Including Shiba Inu  ( SHIB ) , Pi  ( PI ) , Ondo  ( ONDO ) , Cronos  ( CRO ) , Mantle  ( MNT ) , VeChain  ( VET ) , Ethena  ( ENA ) , and Celestia  ( TIA )  - DeFi Technologies  ( NASDAQ:DEFT ) , DeFi Technologies Inc  ( OTC:DEFTF ) ",
+        "summary": "Valour Launches Eight New ETPs on Spotlight Stock Market: Valour has introduced SEK-denominated ETPs for Shiba Inu ( SHIB ) , Pi ( PI ) , Ondo ( ONDO ) , Cronos ( CRO ) , Mantle ( MNT ) , VeChain ( VET ) , Ethena ( ENA ) , and Celestia ( TIA ) , expanding its Nordic product suite.",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/pressreleases/25/08/g47353961/valour-launches-eight-new-etps-on-spotlight-stock-market-including-shiba-inu-shib-pi-pi-ondo-ondo-",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Voyageur Mineral Explorers Corp. and Evolve Strategic Element Royalties Ltd. Enter into Definitive Agreement to Complete Reverse Take-Over",
+        "summary": "Not for distribution to United States newswire services or for release publication, distribution or dissemination, directly or indirectly, in whole or in part, in or into the United States. TORONTO, Aug. 27, 2025 ( GLOBE NEWSWIRE ) -- Voyageur Mineral Explorers Corp.",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/pressreleases/25/08/g47353540/voyageur-mineral-explorers-corp-and-evolve-strategic-element-royalties-ltd-enter-into-definitive-a",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "GAMCO Natural Resources, Gold & Income Trust Declares Monthly Distributions of $0.05 Per Share - GAMCO Investors  ( OTC:GAMI ) , GAMCO Natural Resources  ( NYSE:GNT ) ",
+        "summary": "RYE, N.Y., Aug. 27, 2025 ( GLOBE NEWSWIRE ) -- The Board of Trustees of GAMCO Natural Resources, Gold & Income Trust GNT ( the \"Fund\" ) approved the continuation of its policy of paying monthly cash distributions.",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/pressreleases/25/08/g47353950/gamco-natural-resources-gold-income-trust-declares-monthly-distributions-of-0-05-per-share",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Bancroft Fund Ltd. Declares Distribution of $0.32 per Share",
+        "summary": "RYE, N.Y., Aug. 27, 2025 ( GLOBE NEWSWIRE ) -- The Board of Trustees of Bancroft Fund Ltd. ( NYSE American: BCV ) ( the \"Fund\" ) declared a $0.32 per share cash distribution payable on September 23, 2025 to common shareholders of record on September 16, 2025.",
+        "source": "Alpha Vantage - GlobeNewswire",
+        "datetime": "Invalid Date",
+        "url": "https://www.globenewswire.com/news-release/2025/08/27/3139906/0/en/Bancroft-Fund-Ltd-Declares-Distribution-of-0-32-per-Share.html",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Top 3 Industrials Stocks That May Explode This Month - FiscalNote Holdings  ( NYSE:NOTE ) , CSX  ( NASDAQ:CSX ) ",
+        "summary": "The most oversold stocks in the industrials sector presents an opportunity to buy into undervalued companies. The RSI is a momentum indicator, which compares a stock's strength on days when prices go up to its strength on days when prices go down.",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/trading-ideas/long-ideas/25/08/47353890/top-3-industrials-stocks-that-may-explode-this-month-2",
+        "sentiment": "Neutral"
+      },
+      {
+        "headline": "DallasNews Rejects Revised Non-Binding Proposal from Affiliate of Alden Global Capital - DallasNews  ( NASDAQ:DALN ) ",
+        "summary": "DALLAS, Aug. 27, 2025 ( GLOBE NEWSWIRE ) -- DallasNews Corporation DALN ( the \"Company\" or \"DallasNews\" ) , the holding company of The Dallas Morning News and Medium Giant, announced today that its Board of Directors ( the \"Board\" ) , following consultation with the Company's legal and financial ...",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/pressreleases/25/08/g47353937/dallasnews-rejects-revised-non-binding-proposal-from-affiliate-of-alden-global-capital",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "DallasNews Rejects Revised Non-Binding Proposal from Affiliate of Alden Global Capital",
+        "summary": "DALLAS, Aug. 27, 2025 ( GLOBE NEWSWIRE ) -- DallasNews Corporation ( Nasdaq: DALN ) ( the \"Company\" or \"DallasNews\" ) , the holding company of The Dallas Morning News and Medium Giant, announced today that its Board of Directors ( the \"Board\" ) , following consultation with the Company's legal ...",
+        "source": "Alpha Vantage - GlobeNewswire",
+        "datetime": "Invalid Date",
+        "url": "https://www.globenewswire.com/news-release/2025/08/27/3139907/0/en/DallasNews-Rejects-Revised-Non-Binding-Proposal-from-Affiliate-of-Alden-Global-Capital.html",
+        "sentiment": "Bullish"
+      },
+      {
+        "headline": "Mortgage demand and interest rates remain stuck at low levels",
+        "summary": "Mortgage demand barely moved last week. With no real change in mortgage interest rates, consumers have little incentive to refinance.",
+        "source": "Alpha Vantage - CNBC",
+        "datetime": "Invalid Date",
+        "url": "https://www.cnbc.com/2025/08/27/mortgage-demand-and-interest-rates-remain-stuck-at-low-levels.html",
+        "sentiment": "Neutral"
+      }
+    ],
+    "us": [],
+    "asian": [],
+    "european": [],
+    "geopolitical": [],
+    "currencies": [],
+    "commodities": [],
+    "earnings": [],
+    "research": [],
+    "premarketMovers": [],
+    "webSearchResults": {}
+  },
+  "timing": {
+    "lastCloseTimestamp": 1756224000,
+    "lastCloseString": "8/26/2025, 12:00:00 PM",
+    "currentTime": "8/27/2025, 8:29:05 AM"
+  },
+  "totalHeadlines": 8,
+  "webSearchCount": 0,
+  "apiHeadlines": 8,
+  "categoryBreakdown": {
+    "general": 8,
+    "us": 0,
+    "asian": 0,
+    "european": 0,
+    "geopolitical": 0,
+    "currencies": 0,
+    "commodities": 0,
+    "earnings": 0,
+    "research": 0,
+    "premarketMovers": 0
+  },
+  "webSearchBreakdown": {},
+  "metadata": {
+    "generatedAt": "2025-08-27T12:30:11.601Z",
+    "reportType": "enhanced-premarket-brief-with-web-search",
+    "aiModel": "claude-sonnet-4",
+    "classification": "enhanced-institutional-grade",
+    "features": [
+      "traditional-apis",
+      "web-search-intelligence",
+      "cross-source-validation"
+    ]
+  }
+}
