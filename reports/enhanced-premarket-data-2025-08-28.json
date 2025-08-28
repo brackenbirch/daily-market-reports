@@ -1,0 +1,112 @@
+{
+  "headlines": {
+    "general": [
+      {
+        "headline": "Top 5 Biotech Stocks With Strong Momentum - ADC Therapeutics  ( NYSE:ADCT ) , Arcutis Biotherapeutics  ( NASDAQ:ARQT ) ",
+        "summary": "Among biotechnology stocks, several names have hovered around the top momentum percentile this week, signaling robust bullish activity and potential for short-term gains.",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/markets/equities/25/08/47380690/top-5-biotech-stocks-with-strong-momentum",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "High Arctic Overseas Announces 2025 Second Quarter Results",
+        "summary": "NOT FOR DISTRIBUTION TO U.S. NEWSWIRE SERVICES OR FOR DISSEMINATION IN THE UNITED STATES. ANY FAILURE TO COMPLY WITH THIS RESTRICTION MAY CONSTITUTE A VIOLATION OF U.S. SECURITIES LAW",
+        "source": "Alpha Vantage - GlobeNewswire",
+        "datetime": "Invalid Date",
+        "url": "https://www.globenewswire.com/news-release/2025/08/28/3140649/0/en/High-Arctic-Overseas-Announces-2025-Second-Quarter-Results.html",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Caliber Establishes LINK Token Digital Asset Treasury",
+        "summary": "Strategy Merges Digital and Real World Assets, Investing in the Infrastructure Layer of Blockchain Technology ...",
+        "source": "Alpha Vantage - GlobeNewswire",
+        "datetime": "Invalid Date",
+        "url": "https://www.globenewswire.com/news-release/2025/08/28/3140686/0/en/Caliber-Establishes-LINK-Token-Digital-Asset-Treasury.html",
+        "sentiment": "Bullish"
+      },
+      {
+        "headline": "Ollie's Bargain Outlet Holdings, Inc. Announces Second Quarter Fiscal 2025 Results",
+        "summary": "Store Openings, Sales, and Earnings Ahead of Expectations ...",
+        "source": "Alpha Vantage - GlobeNewswire",
+        "datetime": "Invalid Date",
+        "url": "https://www.globenewswire.com/news-release/2025/08/28/3140695/36273/en/Ollie-s-Bargain-Outlet-Holdings-Inc-Announces-Second-Quarter-Fiscal-2025-Results.html",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Gabelli Funds to Host 3rd Annual PFAS Symposium at The Harvard Club, New York, NY - AECOM  ( NYSE:ACM ) , Aduro Clean Technologies  ( NASDAQ:ADUR ) ",
+        "summary": "GREENWICH, Conn., Aug. 28, 2025 ( GLOBE NEWSWIRE ) -- Gabelli Funds, LLC, a leader in value-oriented and research-driven investment management, is excited to announce its third annual PFAS Symposium, scheduled for Wednesday, September 17, 2025, at The Harvard Club in New York City.",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/pressreleases/25/08/g47382755/gabelli-funds-to-host-3rd-annual-pfas-symposium-at-the-harvard-club-new-york-ny",
+        "sentiment": "Neutral"
+      },
+      {
+        "headline": "Whitestone REIT Declares Fourth Quarter 2025 Dividend",
+        "summary": "HOUSTON, Aug. 28, 2025 ( GLOBE NEWSWIRE ) -- Whitestone REIT ( NYSE: WSR ) ( \"Whitestone\" or the \"Company\" ) today announced that its Board of Trustees has declared a monthly cash dividend of $0.045 per share on the Company's common shares and operating partnership units for the fourth quarter ...",
+        "source": "Alpha Vantage - GlobeNewswire",
+        "datetime": "Invalid Date",
+        "url": "https://www.globenewswire.com/news-release/2025/08/28/3140657/7647/en/Whitestone-REIT-Declares-Fourth-Quarter-2025-Dividend.html",
+        "sentiment": "Neutral"
+      },
+      {
+        "headline": "MAAS Announces Strategic Expansion into Healthcare and Wellness with Acquisition of Carve Group Ltd",
+        "summary": "CHENGDU, China, Aug. 28, 2025 ( GLOBE NEWSWIRE ) -- Maase Inc. ( NASDAQ: MAAS ) ( \"MAAS\" or the \"Company\" ) today announced the successful completion of its strategic acquisition of 100% equity interests in Carve Group Ltd ( the \"Target Company\" or the \"Carve Group\" ) .",
+        "source": "Alpha Vantage - GlobeNewswire",
+        "datetime": "Invalid Date",
+        "url": "https://www.globenewswire.com/news-release/2025/08/28/3140651/0/en/MAAS-Announces-Strategic-Expansion-into-Healthcare-and-Wellness-with-Acquisition-of-Carve-Group-Ltd.html",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Stock Yards Bancorp to Participate in the Raymond James 2025 U.S. Bank and Banking on Tech Conferences",
+        "summary": "LOUISVILLE, Ky., Aug. 28, 2025 ( GLOBE NEWSWIRE ) -- Stock Yards Bancorp, Inc. ( NASDAQ: SYBT ) , parent company of Stock Yards Bank & Trust Company, with offices in Louisville, central, eastern and northern Kentucky, as well as the Indianapolis, Indiana and Cincinnati, Ohio metropolitan ...",
+        "source": "Alpha Vantage - GlobeNewswire",
+        "datetime": "Invalid Date",
+        "url": "https://www.globenewswire.com/news-release/2025/08/28/3140698/0/en/Stock-Yards-Bancorp-to-Participate-in-the-Raymond-James-2025-U-S-Bank-and-Banking-on-Tech-Conferences.html",
+        "sentiment": "Somewhat-Bullish"
+      }
+    ],
+    "us": [],
+    "asian": [],
+    "european": [],
+    "geopolitical": [],
+    "currencies": [],
+    "commodities": [],
+    "earnings": [],
+    "research": [],
+    "premarketMovers": [],
+    "webSearchResults": {}
+  },
+  "timing": {
+    "lastCloseTimestamp": 1756310400,
+    "lastCloseString": "8/27/2025, 12:00:00 PM",
+    "currentTime": "8/28/2025, 8:29:03 AM"
+  },
+  "totalHeadlines": 8,
+  "webSearchCount": 0,
+  "apiHeadlines": 8,
+  "categoryBreakdown": {
+    "general": 8,
+    "us": 0,
+    "asian": 0,
+    "european": 0,
+    "geopolitical": 0,
+    "currencies": 0,
+    "commodities": 0,
+    "earnings": 0,
+    "research": 0,
+    "premarketMovers": 0
+  },
+  "webSearchBreakdown": {},
+  "metadata": {
+    "generatedAt": "2025-08-28T12:30:53.969Z",
+    "reportType": "enhanced-premarket-brief-with-web-search",
+    "aiModel": "claude-sonnet-4",
+    "classification": "enhanced-institutional-grade",
+    "features": [
+      "traditional-apis",
+      "web-search-intelligence",
+      "cross-source-validation"
+    ]
+  }
+}
