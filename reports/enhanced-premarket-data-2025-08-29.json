@@ -1,0 +1,112 @@
+{
+  "headlines": {
+    "general": [
+      {
+        "headline": "MONEFI Launches European Fixed Income Investment Hub Amid Attractive Bond Market Conditions",
+        "summary": "LONDON, Aug. 29, 2025 ( GLOBE NEWSWIRE ) -- MONEFI today announced the launch of its new European Fixed Income Investment Hub, a strategic initiative designed to help global investors take advantage of the most attractive bond yields seen in over a decade across the UK and European markets.",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/pressreleases/25/08/g47409374/monefi-launches-european-fixed-income-investment-hub-amid-attractive-bond-market-conditions",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Montfort Capital Announces Second Quarter 2025 Financial Results - Montfort Capital  ( OTC:MONTF ) ",
+        "summary": "TORONTO, Aug. 29, 2025 /CNW/ - Montfort Capital Corp. ( \"Montfort\" or the \"Company\" ) MONT, today announced financial results for the six months ended June 30, 2025. All figures are reported in Canadian dollars unless otherwise noted.",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/pressreleases/25/08/n47408972/montfort-capital-announces-second-quarter-2025-financial-results",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Why Is Alibaba Stock Soaring Friday? - Alibaba Gr Hldgs  ( NYSE:BABA ) ",
+        "summary": "Alibaba beat revenue estimates with $34.57B, up 2% Y/Y, as China e-commerce, cloud, and AI drove double-digit segment growth. AI chip push, quick commerce bets, and $53B AI-cloud investment plan fueled optimism; stock rose premarket Friday. Get a Year of Fast, Actionable Trade Alerts for 60% Off ...",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/markets/earnings/25/08/47409158/alibaba-sees-historic-opportunities-as-ceo-points-to-ai-and-quick-commerce-wins",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Top 3 Materials Stocks That Are Set To Fly This Month - Harmony Gold Mining Co  ( NYSE:HMY ) , Bioceres Crop Solutions  ( NASDAQ:BIOX ) ",
+        "summary": "The most oversold stocks in the materials sector presents an opportunity to buy into undervalued companies. The RSI is a momentum indicator, which compares a stock's strength on days when prices go up to its strength on days when prices go down.",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/trading-ideas/long-ideas/25/08/47409438/top-3-materials-stocks-that-are-set-to-fly-this-month-2",
+        "sentiment": "Neutral"
+      },
+      {
+        "headline": "4 Consumer Cyclical Stocks That Are Flashing Strong Fundamental Signals - Dream Finders Homes  ( NYSE:DFH ) , Buckle  ( NYSE:BKE ) ",
+        "summary": "Four notable companies in the consumer cyclical sector have recently ascended into the top 10th percentile of Benzinga Edge Ratings' growth rankings, reflecting robust improvements in their earnings and revenue trajectories alongside healthy operational metrics.",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/markets/equities/25/08/47409549/4-consumer-cyclical-stocks-that-are-flashing-strong-fundamental-signals",
+        "sentiment": "Bullish"
+      },
+      {
+        "headline": "Gaming and Leisure Properties, Inc. Declares Third Quarter 2025 Cash Dividend of $0.78 Per Share - Gaming and Leisure Props  ( NASDAQ:GLPI ) ",
+        "summary": "WYOMISSING, Pa., Aug. 29, 2025 ( GLOBE NEWSWIRE ) -- Gaming and Leisure Properties, Inc. GLPI ( the \"Company\" ) , announced today that the Company's Board of Directors has declared the third quarter 2025 cash dividend of $0.78 per share of its common stock.",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/pressreleases/25/08/g47408955/gaming-and-leisure-properties-inc-declares-third-quarter-2025-cash-dividend-of-0-78-per-share",
+        "sentiment": "Neutral"
+      },
+      {
+        "headline": "Aduro Clean Technologies Initiates Marketing Campaign - Aduro Clean Technologies  ( NASDAQ:ADUR ) ",
+        "summary": "LONDON, Ontario, Aug. 29, 2025 ( GLOBE NEWSWIRE ) -- Aduro Clean Technologies Inc. ( \"Aduro\" or the \"Company\" ) ADUR ( CSE: ACT ) 9D5, a clean technology company using the power of chemistry to transform lower-value feedstocks, like waste plastics, heavy bitumen, and renewable oils, into ...",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/pressreleases/25/08/g47408948/aduro-clean-technologies-initiates-marketing-campaign",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Fairfax Announces Intention to Redeem Cumulative Preferred Shares, Series G & H",
+        "summary": "TORONTO, Aug. 29, 2025 ( GLOBE NEWSWIRE ) -- Fairfax Financial Holdings Limited ( \"Fairfax\" ) FFH today announced its intention to redeem ( i ) all of its 7,719,843 outstanding Cumulative 5-Year Rate Reset Preferred Shares, Series G ( the \"Series G Shares\" ) , and ( ii ) all of its 2,280,157 ...",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/pressreleases/25/08/g47408951/fairfax-announces-intention-to-redeem-cumulative-preferred-shares-series-g-h",
+        "sentiment": "Neutral"
+      }
+    ],
+    "us": [],
+    "asian": [],
+    "european": [],
+    "geopolitical": [],
+    "currencies": [],
+    "commodities": [],
+    "earnings": [],
+    "research": [],
+    "premarketMovers": [],
+    "webSearchResults": {}
+  },
+  "timing": {
+    "lastCloseTimestamp": 1756396800,
+    "lastCloseString": "8/28/2025, 12:00:00 PM",
+    "currentTime": "8/29/2025, 8:28:16 AM"
+  },
+  "totalHeadlines": 8,
+  "webSearchCount": 0,
+  "apiHeadlines": 8,
+  "categoryBreakdown": {
+    "general": 8,
+    "us": 0,
+    "asian": 0,
+    "european": 0,
+    "geopolitical": 0,
+    "currencies": 0,
+    "commodities": 0,
+    "earnings": 0,
+    "research": 0,
+    "premarketMovers": 0
+  },
+  "webSearchBreakdown": {},
+  "metadata": {
+    "generatedAt": "2025-08-29T12:29:50.827Z",
+    "reportType": "enhanced-premarket-brief-with-web-search",
+    "aiModel": "claude-sonnet-4",
+    "classification": "enhanced-institutional-grade",
+    "features": [
+      "traditional-apis",
+      "web-search-intelligence",
+      "cross-source-validation"
+    ]
+  }
+}
