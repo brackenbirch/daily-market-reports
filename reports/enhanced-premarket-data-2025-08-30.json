@@ -1,0 +1,112 @@
+{
+  "headlines": {
+    "general": [
+      {
+        "headline": "Should You Buy the Schwab US Dividend Equity ETF Instead of Picking Individual Stocks?",
+        "summary": "If you are a dividend investor, you can buy this exchange-traded fund and let someone else do all the hard work of stock picking for you.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/08/30/should-you-buy-schwab-us-dividend-equity-etf-inste/",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Celebrates Warren Buffett on His 95th Birthday!",
+        "summary": "Making the world smarter, happier, and richer is what it's all about.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/08/30/motley-fool-celebrates-buffett-95th-birthday/",
+        "sentiment": "Bullish"
+      },
+      {
+        "headline": "Warren Buffett Just Sold $4 Billion of Apple Stock. He Used $1.5 Billion of the Money to Buy This Beaten-Down Stock.",
+        "summary": "The \"Oracle of Omaha\" swapped iPhones for insurance in the latest quarter.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/08/30/warren-buffett-just-sold-4-billion-of-apple-stock/",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "These Were the 5 Top-Performing Stocks in the S&P 500 in July 2025",
+        "summary": "Investors should embrace uncertainty and focus on the right things.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/08/30/top-performing-stocks-in-sp-500-july/",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Should You Consider Vanguard S&P 500 ETF  ( VOO )  Before the Next Market Shift?",
+        "summary": "This classic ETF is still a solid long-term investment.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/08/30/consider-vanguard-etf-voo-before-market-shift/",
+        "sentiment": "Neutral"
+      },
+      {
+        "headline": "Macroscope | Stock prices are at bubble heights. Who's sounding the alarm?",
+        "summary": "How do we know when a stock market boom is about to end in a bust, or when an asset bubble is about to burst? There is little point in looking to market practitioners or analysts for objective answers as they are generally too anxious to preserve their market-linked bonuses.",
+        "source": "Alpha Vantage - South China Morning Post",
+        "datetime": "Invalid Date",
+        "url": "https://www.scmp.com/opinion/world-opinion/article/3323518/stock-prices-are-bubble-heights-whos-sounding-alarm",
+        "sentiment": "Neutral"
+      },
+      {
+        "headline": "3 Things Investors Should Know as the Crypto Treasury Trend Continues",
+        "summary": "These players are getting a lot of attention, but they're questionable as investments.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/08/30/3-things-investors-should-know-as-the-crypto-treas/",
+        "sentiment": "Neutral"
+      },
+      {
+        "headline": "Better High-Yielding Dividend Stock: Realty Income vs. Pfizer",
+        "summary": "Dividend stocks are a great way for investors to generate passive income.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/08/30/better-ultra-high-yielding-dividend-stock-realty-i/",
+        "sentiment": "Somewhat-Bullish"
+      }
+    ],
+    "us": [],
+    "asian": [],
+    "european": [],
+    "geopolitical": [],
+    "currencies": [],
+    "commodities": [],
+    "earnings": [],
+    "research": [],
+    "premarketMovers": [],
+    "webSearchResults": {}
+  },
+  "timing": {
+    "lastCloseTimestamp": 1756483200,
+    "lastCloseString": "8/29/2025, 12:00:00 PM",
+    "currentTime": "8/30/2025, 8:25:49 AM"
+  },
+  "totalHeadlines": 8,
+  "webSearchCount": 0,
+  "apiHeadlines": 8,
+  "categoryBreakdown": {
+    "general": 8,
+    "us": 0,
+    "asian": 0,
+    "european": 0,
+    "geopolitical": 0,
+    "currencies": 0,
+    "commodities": 0,
+    "earnings": 0,
+    "research": 0,
+    "premarketMovers": 0
+  },
+  "webSearchBreakdown": {},
+  "metadata": {
+    "generatedAt": "2025-08-30T12:26:55.335Z",
+    "reportType": "enhanced-premarket-brief-with-web-search",
+    "aiModel": "claude-sonnet-4",
+    "classification": "enhanced-institutional-grade",
+    "features": [
+      "traditional-apis",
+      "web-search-intelligence",
+      "cross-source-validation"
+    ]
+  }
+}
