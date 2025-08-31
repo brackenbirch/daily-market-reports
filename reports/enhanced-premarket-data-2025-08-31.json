@@ -1,0 +1,112 @@
+{
+  "headlines": {
+    "general": [
+      {
+        "headline": "5 Top Stocks to Buy in September",
+        "summary": "Even with the S&P 500 hovering around an all-time high, there are still plenty of dividend stocks worth buying now.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/08/31/5-top-stocks-to-buy-in-september/",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "We're Closing in on the 2nd Priciest Stock Market in 154 Years -- and History Offers an Ominous Warning of What Comes Next",
+        "summary": "When things seem too good to be true on Wall Street, they usually are.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/08/31/2nd-priciest-stock-market-154-year-history-warning/",
+        "sentiment": "Neutral"
+      },
+      {
+        "headline": "Is Vanguard Value Index the Right ETF for Today's Market Environment?",
+        "summary": "The stock market is near all-time highs and valuations look stretched -- it might be time to start adding a little more value to your portfolio.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/08/31/is-vanguard-value-index-the-right-etf-for-todays/",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Could These 2 Stocks Surge 33% by 2026? A Deep Dive for Value Investors",
+        "summary": "Wall Street analysts see upside for these discounted growth stocks.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/08/31/2-stocks-surge-33-2026-deep-dive-value-investors/",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Billionaires Buy 2 Magnificent Index Funds That a Wall Street Analyst Says Could Soar 132%",
+        "summary": "Several billionaire fund managers recently bought shares of S&P 500 index funds, which could more than double in value by the end of the decade.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/08/31/billionaires-buy-index-funds-wall-street-soar-132/",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Don't Want to Overthink AI? Just Buy This ETF and Hold It.",
+        "summary": "With so many artificial intelligence (AI) stocks to consider, investors seeking simplicity may find this ETF to be a more comforting option.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/08/31/dont-want-overthink-ai-just-buy-etf-hold-qqq/",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "3 No-Brainer Stocks to Buy Right Now",
+        "summary": "Investing in these pharmaceutical stocks is an easy decision.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/08/31/3-no-brainer-stocks-to-buy-right-now/",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "With the S&P 500 at Historically High Levels, This ETF Could Be the Best Way to Invest in the Index",
+        "summary": "The index has been on a roll, but will the party continue for much longer?",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/08/31/with-the-sp-500-at-historically-high-levels-this/",
+        "sentiment": "Somewhat-Bullish"
+      }
+    ],
+    "us": [],
+    "asian": [],
+    "european": [],
+    "geopolitical": [],
+    "currencies": [],
+    "commodities": [],
+    "earnings": [],
+    "research": [],
+    "premarketMovers": [],
+    "webSearchResults": {}
+  },
+  "timing": {
+    "lastCloseTimestamp": 1756483200,
+    "lastCloseString": "8/29/2025, 12:00:00 PM",
+    "currentTime": "8/31/2025, 8:26:28 AM"
+  },
+  "totalHeadlines": 8,
+  "webSearchCount": 0,
+  "apiHeadlines": 8,
+  "categoryBreakdown": {
+    "general": 8,
+    "us": 0,
+    "asian": 0,
+    "european": 0,
+    "geopolitical": 0,
+    "currencies": 0,
+    "commodities": 0,
+    "earnings": 0,
+    "research": 0,
+    "premarketMovers": 0
+  },
+  "webSearchBreakdown": {},
+  "metadata": {
+    "generatedAt": "2025-08-31T12:27:49.373Z",
+    "reportType": "enhanced-premarket-brief-with-web-search",
+    "aiModel": "claude-sonnet-4",
+    "classification": "enhanced-institutional-grade",
+    "features": [
+      "traditional-apis",
+      "web-search-intelligence",
+      "cross-source-validation"
+    ]
+  }
+}
