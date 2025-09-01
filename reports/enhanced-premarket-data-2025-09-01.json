@@ -1,0 +1,112 @@
+{
+  "headlines": {
+    "general": [
+      {
+        "headline": "Should Vanguard Mega Cap Growth ETF  ( MGK )  Be on Your Investing Radar?",
+        "summary": "Style Box ETF report for ...",
+        "source": "Alpha Vantage - Zacks Commentary",
+        "datetime": "Invalid Date",
+        "url": "https://www.zacks.com/stock/news/2745239/should-vanguard-mega-cap-growth-etf-mgk-be-on-your-investing-radar",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Should ProShares S&P 500 Ex-Technology ETF  ( SPXT )  Be on Your Investing Radar?",
+        "summary": "Style Box ETF report for ...",
+        "source": "Alpha Vantage - Zacks Commentary",
+        "datetime": "Invalid Date",
+        "url": "https://www.zacks.com/stock/news/2745240/should-proshares-sp-500-ex-technology-etf-spxt-be-on-your-investing-radar",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Should iShares Core High Dividend ETF  ( HDV )  Be on Your Investing Radar?",
+        "summary": "Style Box ETF report for ...",
+        "source": "Alpha Vantage - Zacks Commentary",
+        "datetime": "Invalid Date",
+        "url": "https://www.zacks.com/stock/news/2745246/should-ishares-core-high-dividend-etf-hdv-be-on-your-investing-radar",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Should You Invest in the SPDR S&P Insurance ETF  ( KIE ) ?",
+        "summary": "Sector ETF report for KIE ...",
+        "source": "Alpha Vantage - Zacks Commentary",
+        "datetime": "Invalid Date",
+        "url": "https://www.zacks.com/stock/news/2745250/should-you-invest-in-the-spdr-sp-insurance-etf-kie",
+        "sentiment": "Neutral"
+      },
+      {
+        "headline": "Should Vanguard S&P Mid-Cap 400 ETF  ( IVOO )  Be on Your Investing Radar?",
+        "summary": "Style Box ETF report for ...",
+        "source": "Alpha Vantage - Zacks Commentary",
+        "datetime": "Invalid Date",
+        "url": "https://www.zacks.com/stock/news/2745247/should-vanguard-sp-mid-cap-400-etf-ivoo-be-on-your-investing-radar",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Should You Invest in the VanEck Biotech ETF  ( BBH ) ?",
+        "summary": "Sector ETF report for ...",
+        "source": "Alpha Vantage - Zacks Commentary",
+        "datetime": "Invalid Date",
+        "url": "https://www.zacks.com/stock/news/2745248/should-you-invest-in-the-vaneck-biotech-etf-bbh",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Is Goldman Sachs ActiveBeta World Low Vol Plus Equity ETF  ( GLOV )  a Strong ETF Right Now?",
+        "summary": "Smart Beta ETF report for ...",
+        "source": "Alpha Vantage - Zacks Commentary",
+        "datetime": "Invalid Date",
+        "url": "https://www.zacks.com/stock/news/2745253/is-goldman-sachs-activebeta-world-low-vol-plus-equity-etf-glov-a-strong-etf-right-now",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Should WisdomTree U.S. SmallCap Dividend ETF  ( DES )  Be on Your Investing Radar?",
+        "summary": "Style Box ETF report for DES ...",
+        "source": "Alpha Vantage - Zacks Commentary",
+        "datetime": "Invalid Date",
+        "url": "https://www.zacks.com/stock/news/2745245/should-wisdomtree-us-smallcap-dividend-etf-des-be-on-your-investing-radar",
+        "sentiment": "Somewhat-Bullish"
+      }
+    ],
+    "us": [],
+    "asian": [],
+    "european": [],
+    "geopolitical": [],
+    "currencies": [],
+    "commodities": [],
+    "earnings": [],
+    "research": [],
+    "premarketMovers": [],
+    "webSearchResults": {}
+  },
+  "timing": {
+    "lastCloseTimestamp": 1756483200,
+    "lastCloseString": "8/29/2025, 12:00:00 PM",
+    "currentTime": "9/1/2025, 8:30:05 AM"
+  },
+  "totalHeadlines": 8,
+  "webSearchCount": 0,
+  "apiHeadlines": 8,
+  "categoryBreakdown": {
+    "general": 8,
+    "us": 0,
+    "asian": 0,
+    "european": 0,
+    "geopolitical": 0,
+    "currencies": 0,
+    "commodities": 0,
+    "earnings": 0,
+    "research": 0,
+    "premarketMovers": 0
+  },
+  "webSearchBreakdown": {},
+  "metadata": {
+    "generatedAt": "2025-09-01T12:31:22.160Z",
+    "reportType": "enhanced-premarket-brief-with-web-search",
+    "aiModel": "claude-sonnet-4",
+    "classification": "enhanced-institutional-grade",
+    "features": [
+      "traditional-apis",
+      "web-search-intelligence",
+      "cross-source-validation"
+    ]
+  }
+}
