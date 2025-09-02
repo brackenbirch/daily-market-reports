@@ -1,0 +1,112 @@
+{
+  "headlines": {
+    "general": [
+      {
+        "headline": "5 Stock Picks Last Month From Wall Street's Most Accurate Analysts - eBay  ( NASDAQ:EBAY ) , Domo  ( NASDAQ:DOMO ) ",
+        "summary": "U.S. stocks settled lower on Friday, with the Nasdaq Composite falling more than 1% during the session. However, all major indices recorded gains for August. The 30-stock Dow gained more than 3% in August, while the S&P 500 recorded around 2% surge. The tech-heavy Nasdaq also gained around 1.6% ...",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/analyst-stock-ratings/price-target/25/09/47445274/5-stock-picks-last-month-from-wall-streets-most-accurate-analysts-3",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Constellation Brands Updates Fiscal 2026 Outlook - Constellation Brands  ( NYSE:STZ ) ",
+        "summary": "Updates reported EPS guidance to $10.77 - $11.07 and comparable EPS guidance to $11.30 - $11.60 ( 1 ) Updates Enterprise organic net sales to decline ( 6 ) % - ( 4 ) %, reported operating income to grow 666% - 686% and comparable operating income to decline ( 11 ) % - ( 9 ) %",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/pressreleases/25/09/g47445377/constellation-brands-updates-fiscal-2026-outlook",
+        "sentiment": "Neutral"
+      },
+      {
+        "headline": "Kayne Anderson Energy Infrastructure Fund Announces Distribution of $0.08 per Share for September 2025",
+        "summary": "HOUSTON, Sept. 02, 2025 ( GLOBE NEWSWIRE ) -- Kayne Anderson Energy Infrastructure Fund, Inc. ( the \"Company\" ) announced today a monthly distribution of $0.08 per share for September 2025. This distribution is payable to common stockholders on September 30, 2025 ( as outlined in the table below ...",
+        "source": "Alpha Vantage - GlobeNewswire",
+        "datetime": "Invalid Date",
+        "url": "https://www.globenewswire.com/news-release/2025/09/02/3142563/0/en/Kayne-Anderson-Energy-Infrastructure-Fund-Announces-Distribution-of-0-08-per-Share-for-September-2025.html",
+        "sentiment": "Neutral"
+      },
+      {
+        "headline": "Constellation Brands Updates Fiscal 2026 Outlook",
+        "summary": "Updates reported EPS guidance to $10.77 - $11.07 and comparable EPS guidance to ...",
+        "source": "Alpha Vantage - GlobeNewswire",
+        "datetime": "Invalid Date",
+        "url": "https://www.globenewswire.com/news-release/2025/09/02/3142554/0/en/Constellation-Brands-Updates-Fiscal-2026-Outlook.html",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Caliber Appoints Michael Trzupek to Lead Governance on Crypto Advisory Board",
+        "summary": "Bringing Finance and Blockchain Infrastructure Experience as Caliber Moves Toward LINK Digital Asset Treasury Implementation Bringing Finance and Blockchain Infrastructure Experience as Caliber Moves Toward LINK Digital Asset Treasury Implementation ...",
+        "source": "Alpha Vantage - GlobeNewswire",
+        "datetime": "Invalid Date",
+        "url": "https://www.globenewswire.com/news-release/2025/09/02/3142544/0/en/Caliber-Appoints-Michael-Trzupek-to-Lead-Governance-on-Crypto-Advisory-Board.html",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Glass Lewis Recommends Shareholders Vote FOR DallasNews' Merger with Hearst",
+        "summary": "Independent Proxy Advisor Confirms Hearst Merger Delivers Certain and Immediate Value for Shareholders at a Substantial Premium Glass Lewis Believes Proposed Terms of Hearst Merger Approximate the Maximum Value Available",
+        "source": "Alpha Vantage - GlobeNewswire",
+        "datetime": "Invalid Date",
+        "url": "https://www.globenewswire.com/news-release/2025/09/02/3142537/0/en/Glass-Lewis-Recommends-Shareholders-Vote-FOR-DallasNews-Merger-with-Hearst.html",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "LINE COURT NOTICE: Did Lineage, Inc. Mislead Investors? Contact BFA Law about the Securities Class Action before September 30 Deadline - Lineage  ( NASDAQ:LINE ) ",
+        "summary": "NEW YORK, Sept. 02, 2025 ( GLOBE NEWSWIRE ) -- Leading securities law firm Bleichmar Fonti & Auld LLP announces that a lawsuit has been filed against Lineage, Inc. LINE and certain of the Company's senior executives and directors for potential violations of the federal securities laws.",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/pressreleases/25/09/g47445204/line-court-notice-did-lineage-inc-mislead-investors-contact-bfa-law-about-the-securities-class-act",
+        "sentiment": "Neutral"
+      },
+      {
+        "headline": "CorMedix Completes Acquisition of Melinta Therapeutics, Raises Financial Guidance and Announces New Leadership Team - Cormedix  ( NASDAQ:CRMD ) ",
+        "summary": "- Transformational deal for CorMedix that expands and diversifies company's commercial product portfolio, with seven innovative drug products and a pipeline expansion indication with near-term revenue growth potential -",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/pressreleases/25/09/g47445357/cormedix-completes-acquisition-of-melinta-therapeutics-raises-financial-guidance-and-announces-new",
+        "sentiment": "Somewhat-Bullish"
+      }
+    ],
+    "us": [],
+    "asian": [],
+    "european": [],
+    "geopolitical": [],
+    "currencies": [],
+    "commodities": [],
+    "earnings": [],
+    "research": [],
+    "premarketMovers": [],
+    "webSearchResults": {}
+  },
+  "timing": {
+    "lastCloseTimestamp": 1756742400,
+    "lastCloseString": "9/1/2025, 12:00:00 PM",
+    "currentTime": "9/2/2025, 8:29:47 AM"
+  },
+  "totalHeadlines": 8,
+  "webSearchCount": 0,
+  "apiHeadlines": 8,
+  "categoryBreakdown": {
+    "general": 8,
+    "us": 0,
+    "asian": 0,
+    "european": 0,
+    "geopolitical": 0,
+    "currencies": 0,
+    "commodities": 0,
+    "earnings": 0,
+    "research": 0,
+    "premarketMovers": 0
+  },
+  "webSearchBreakdown": {},
+  "metadata": {
+    "generatedAt": "2025-09-02T12:31:23.377Z",
+    "reportType": "enhanced-premarket-brief-with-web-search",
+    "aiModel": "claude-sonnet-4",
+    "classification": "enhanced-institutional-grade",
+    "features": [
+      "traditional-apis",
+      "web-search-intelligence",
+      "cross-source-validation"
+    ]
+  }
+}
