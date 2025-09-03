@@ -1,0 +1,112 @@
+{
+  "headlines": {
+    "general": [
+      {
+        "headline": "OTC Markets Group Welcomes Bonvenu Bancorp, Inc. to OTCQX - Bonvenu Bancorp  ( OTC:BBNA ) , OTC Markets Gr  ( OTC:OTCM ) ",
+        "summary": "NEW YORK, Sept. 03, 2025 ( GLOBE NEWSWIRE ) -- OTC Markets Group Inc. OTCM, operator of regulated markets for trading 12,000 U.S. and international securities, today announced Bonvenu Bancorp, Inc. BBNA, the holding company for Bonvenu Bank, has qualified to trade on the OTCQX® Best Market.",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/pressreleases/25/09/g47468708/otc-markets-group-welcomes-bonvenu-bancorp-inc-to-otcqx",
+        "sentiment": "Bullish"
+      },
+      {
+        "headline": "Mortgage demand from homebuyers pulls back, after four weeks of gains",
+        "summary": "Lower mortgage rates did very little to move mortgage demand out of a rut it's been in for weeks. Potential buyers need much lower rates to make a difference.",
+        "source": "Alpha Vantage - CNBC",
+        "datetime": "Invalid Date",
+        "url": "https://www.cnbc.com/2025/09/03/mortgage-demand-from-homebuyers-pulls-back-after-four-weeks-of-gains.html",
+        "sentiment": "Neutral"
+      },
+      {
+        "headline": "Is Rivian Stock a Millionaire Maker?",
+        "summary": "The company is trying to expand its manufacturing capacity while its stock is down 90% from highs.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/09/03/is-rivian-stock-a-millionaire-maker/",
+        "sentiment": "Neutral"
+      },
+      {
+        "headline": "Smithfield Foods Announces Launch of Secondary Offering of Common Stock - Smithfield Foods  ( NASDAQ:SFD ) ",
+        "summary": "SMITHFIELD, Va., Sept. 03, 2025 ( GLOBE NEWSWIRE ) -- Smithfield Foods, Inc.",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/pressreleases/25/09/g47469163/smithfield-foods-announces-launch-of-secondary-offering-of-common-stock",
+        "sentiment": "Neutral"
+      },
+      {
+        "headline": "Quipt Home Medical Completes Strategic Acquisition of Hart Medical Adding $60 Million in Revenue - Quipt Home Medical  ( NASDAQ:QIPT ) ",
+        "summary": "CINCINNATI, Sept. 03, 2025 ( GLOBE NEWSWIRE ) -- Quipt Home Medical Corp. ( \"Quipt\" or the \"Company\" ) QIPTQIPT, a U.S. based home medical equipment provider, focused on end-to-end respiratory care, today announced the closing of its previously announced joint venture transaction with three ...",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/pressreleases/25/09/g47469263/quipt-home-medical-completes-strategic-acquisition-of-hart-medical-adding-60-million-in-revenue",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Hong Kong crypto exchange OSL starts trading of Binance-backed BNB tokens",
+        "summary": "OSL Group, operator of Hong Kong's first listed and licensed virtual asset trading platform, on Wednesday also became the first exchange in the city to support professional trading of BNB, the cryptocurrency backed by Binance founder Zhao Changpeng.",
+        "source": "Alpha Vantage - South China Morning Post",
+        "datetime": "Invalid Date",
+        "url": "https://www.scmp.com/tech/blockchain/article/3324218/hong-kong-crypto-exchange-osl-starts-institutional-trading-binance-backed-bnb-tokens",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "3 Oil & Gas Stocks Too Cheap To Ignore - Plains All American  ( NASDAQ:PAA ) , Crescent Energy  ( NYSE:CRGY ) ",
+        "summary": "As trade markets near all-time highs, savvy investors searching for undervalued opportunities should turn their attention to the oil and gas sector. Recent value ranking data highlights three standout companies that have surged into the top 10th percentile of value performers this week.",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/markets/equities/25/09/47468876/3-oil-gas-stocks-too-cheap-to-ignore",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Smithfield Foods Announces Launch of Secondary Offering of Common Stock",
+        "summary": "SMITHFIELD, Va., Sept. 03, 2025 ( GLOBE NEWSWIRE ) -- Smithfield Foods, Inc. ( Nasdaq: SFD ) ( the \"Company\" ) , an American food company and an industry leader in value-added packaged meats and fresh pork, today announced the launch of a secondary public offering of 16,000,000 shares of common ...",
+        "source": "Alpha Vantage - GlobeNewswire",
+        "datetime": "Invalid Date",
+        "url": "https://www.globenewswire.com/news-release/2025/09/03/3143462/12889/en/Smithfield-Foods-Announces-Launch-of-Secondary-Offering-of-Common-Stock.html",
+        "sentiment": "Neutral"
+      }
+    ],
+    "us": [],
+    "asian": [],
+    "european": [],
+    "geopolitical": [],
+    "currencies": [],
+    "commodities": [],
+    "earnings": [],
+    "research": [],
+    "premarketMovers": [],
+    "webSearchResults": {}
+  },
+  "timing": {
+    "lastCloseTimestamp": 1756828800,
+    "lastCloseString": "9/2/2025, 12:00:00 PM",
+    "currentTime": "9/3/2025, 8:28:32 AM"
+  },
+  "totalHeadlines": 8,
+  "webSearchCount": 0,
+  "apiHeadlines": 8,
+  "categoryBreakdown": {
+    "general": 8,
+    "us": 0,
+    "asian": 0,
+    "european": 0,
+    "geopolitical": 0,
+    "currencies": 0,
+    "commodities": 0,
+    "earnings": 0,
+    "research": 0,
+    "premarketMovers": 0
+  },
+  "webSearchBreakdown": {},
+  "metadata": {
+    "generatedAt": "2025-09-03T12:30:10.981Z",
+    "reportType": "enhanced-premarket-brief-with-web-search",
+    "aiModel": "claude-sonnet-4",
+    "classification": "enhanced-institutional-grade",
+    "features": [
+      "traditional-apis",
+      "web-search-intelligence",
+      "cross-source-validation"
+    ]
+  }
+}
