@@ -1,0 +1,112 @@
+{
+  "headlines": {
+    "general": [
+      {
+        "headline": "TappAlpha Expands ETF Lineup with the Innovation 100 Growth & Daily Income ETF  ( TDAQ )  - TappAlpha SPY Growth & Daily Income ETF  ( NASDAQ:TSPY ) ",
+        "summary": "As TSPY surpasses $69 million in AUM, TappAlpha launches TDAQ to bring its daily income strategy to the NASDAQ-100.",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/pressreleases/25/09/g47494237/tappalpha-expands-etf-lineup-with-the-innovation-100-growth-daily-income-etf-tdaq",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "TappAlpha Expands ETF Lineup with the Innovation 100 Growth & Daily Income ETF  ( TDAQ ) ",
+        "summary": "As TSPY surpasses $69 million in AUM, TappAlpha launches TDAQ to bring its daily income strategy to the NASDAQ-100.",
+        "source": "Alpha Vantage - GlobeNewswire",
+        "datetime": "Invalid Date",
+        "url": "https://www.globenewswire.com/news-release/2025/09/04/3144317/0/en/TappAlpha-Expands-ETF-Lineup-with-the-Innovation-100-Growth-Daily-Income-ETF-TDAQ.html",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "China eyes honing its bond issuance mechanism to boost yuan's global role",
+        "summary": "China's central bank and finance ministry have discussed creating a better mechanism for issuing sovereign debt overseas, as Beijing eyes a greater global role for the yuan amid wavering confidence in the US dollar. Beijing has been upping efforts to increase the use of its currency in ...",
+        "source": "Alpha Vantage - South China Morning Post",
+        "datetime": "Invalid Date",
+        "url": "https://www.scmp.com/economy/china-economy/article/3324341/china-eyes-honing-its-bond-issuance-mechanism-boost-yuans-global-role",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "OTC Markets Group Welcomes Verusa Holding Anonim Sirketi to OTCQX",
+        "summary": "NEW YORK, Sept. 04, 2025 ( GLOBE NEWSWIRE ) -- OTC Markets Group Inc. ( OTCQX: OTCM ) , operator of regulated markets for trading 12,000 U.S. and international securities, today announced Verusa Holding Anonim Sirketi ( Borsa Istanbul: VERUS.",
+        "source": "Alpha Vantage - GlobeNewswire",
+        "datetime": "Invalid Date",
+        "url": "https://www.globenewswire.com/news-release/2025/09/04/3144310/0/en/OTC-Markets-Group-Welcomes-Verusa-Holding-Anonim-Sirketi-to-OTCQX.html",
+        "sentiment": "Bullish"
+      },
+      {
+        "headline": "3 Things You Need to Know if You Buy Pfizer Today",
+        "summary": "Pfizer has a lofty 6.9% dividend yield, but is it the only or best choice for investors interested in the pharma space?",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/09/04/3-things-you-need-to-know-if-you-buy-pfizer-today/",
+        "sentiment": "Neutral"
+      },
+      {
+        "headline": "World Gold Council Proposes Digital Gold Overhaul - GraniteShares Gold Trust Shares of Beneficial Interest  ( ARCA:BAR ) , VanEck Gold Miners ETF  ( ARCA:GDX ) ",
+        "summary": "WGC proposes a digital ecosystem with pooled gold interests, enhancing ownership certainty and liquidity for investors. Standard Gold Unit aims to unify global markets, enabling collateral use and fractional ownership of bars. Get a Year of Fast, Actionable Trade Alerts for 60% Off This Labor Day",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/markets/commodities/25/09/47493917/world-gold-council-proposes-digital-gold-overhaul",
+        "sentiment": "Bullish"
+      },
+      {
+        "headline": "AstraZeneca, Corning And More On CNBC's 'Final Trades' - AstraZeneca  ( NASDAQ:AZN ) ",
+        "summary": "Joe Terranova names Corning as his final trade. Stephen Weiss says Bitcoin has bounced off the lows. Get Discounted Real-Time Trade Alerts For a Volatile Market ( Labor Day Special ) On CNBC's \"Halftime Report Final Trades,\" Jim Lebenthal, partner at Cerity Partners, named AstraZeneca PLC ...",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/analyst-stock-ratings/analyst-color/25/09/47494375/astrazeneca-corning-and-more-on-cnbcs-final-trades",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Brady Corporation Reports Record Adjusted EPS in its Fiscal 2025 Fourth Quarter and Announces its Fiscal 2026 EPS Guidance",
+        "summary": "MILWAUKEE, Sept. 04, 2025 ( GLOBE NEWSWIRE ) -- Brady Corporation ( NYSE: BRC ) ( \"Brady\" or \"Company\" ) , a world leader in identification solutions, today reported its financial results for its fiscal 2025 fourth quarter ended July 31, 2025.",
+        "source": "Alpha Vantage - GlobeNewswire",
+        "datetime": "Invalid Date",
+        "url": "https://www.globenewswire.com/news-release/2025/09/04/3144355/0/en/Brady-Corporation-Reports-Record-Adjusted-EPS-in-its-Fiscal-2025-Fourth-Quarter-and-Announces-its-Fiscal-2026-EPS-Guidance.html",
+        "sentiment": "Somewhat-Bullish"
+      }
+    ],
+    "us": [],
+    "asian": [],
+    "european": [],
+    "geopolitical": [],
+    "currencies": [],
+    "commodities": [],
+    "earnings": [],
+    "research": [],
+    "premarketMovers": [],
+    "webSearchResults": {}
+  },
+  "timing": {
+    "lastCloseTimestamp": 1756915200,
+    "lastCloseString": "9/3/2025, 12:00:00 PM",
+    "currentTime": "9/4/2025, 8:29:15 AM"
+  },
+  "totalHeadlines": 8,
+  "webSearchCount": 0,
+  "apiHeadlines": 8,
+  "categoryBreakdown": {
+    "general": 8,
+    "us": 0,
+    "asian": 0,
+    "european": 0,
+    "geopolitical": 0,
+    "currencies": 0,
+    "commodities": 0,
+    "earnings": 0,
+    "research": 0,
+    "premarketMovers": 0
+  },
+  "webSearchBreakdown": {},
+  "metadata": {
+    "generatedAt": "2025-09-04T12:30:53.912Z",
+    "reportType": "enhanced-premarket-brief-with-web-search",
+    "aiModel": "claude-sonnet-4",
+    "classification": "enhanced-institutional-grade",
+    "features": [
+      "traditional-apis",
+      "web-search-intelligence",
+      "cross-source-validation"
+    ]
+  }
+}
