@@ -1,0 +1,112 @@
+{
+  "headlines": {
+    "general": [
+      {
+        "headline": "What Is Momentum Investing?",
+        "summary": "In the fast-moving environment of stock trading, momentum investing can provide a way to capitalize on short-term opportunities.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/retirement/2025/09/06/what-is-momentum-investing/",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "The Father of the 4% Rule Says Retirees Can Withdraw Much More",
+        "summary": "Are you ready to retire?",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/retirement/2025/09/06/the-father-of-the-4-rule-says-retirees-can-withdra/",
+        "sentiment": "Neutral"
+      },
+      {
+        "headline": "3.5 Reasons to Buy High-Yield Realty Income Stock Like There's No Tomorrow",
+        "summary": "Realty Income is a reliable dividend stock with an attractive yield that even the most conservative investors will love.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/09/06/35-reasons-to-buy-high-yield-realty-income-stock-l/",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "A Look at Non-Traditional Indexes and Funds That Track Them",
+        "summary": "Non-traditional indexes can provide investors with an expanded set of investment opportunities -- but they can also create additional complexities and risks.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/retirement/2025/09/06/a-look-at-non-traditional-indexes-and-funds-that-t/",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Real Estate Expert Julie P. Tuggle Explains Why You Don't Need 20% Down to Buy a Home in HelloNation",
+        "summary": "CHARLOTTE, N.C., Sept. 06, 2025 ( GLOBE NEWSWIRE ) -- Do you really need 20% down to buy a home? Many buyers in Charlotte still believe they must save that much before entering the market, but today's loan programs and assistance options prove otherwise.",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/pressreleases/25/09/g47536023/real-estate-expert-julie-p-tuggle-explains-why-you-dont-need-20-down-to-buy-a-home-in-hellonation",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Can Buying SoundHound AI Stock Today Set You Up for Life?",
+        "summary": "SoundHound AI tripled its revenue during Q2.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/09/06/can-buying-soundhound-ai-stock-today-set-you-up-fo/",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "The People Who Know Nvidia Best Are Sounding a Warning -- but Is Anyone Listening?",
+        "summary": "Nvidia's insider trading activity paints a picture worth a thousand words.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/09/06/people-who-know-nvidia-best-are-sounding-a-warning/",
+        "sentiment": "Neutral"
+      },
+      {
+        "headline": "The S&P 500 Is Roaring by Record Highs. History Says the Stock Market Will Do This Next.",
+        "summary": "The U.S. stock market has delivered surprisingly strong returns in 2025, but history and Wall Street say the index will trade sideways in the remaining months of the year.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/09/06/sp-500-record-highs-stock-market-will-do-this-next/",
+        "sentiment": "Neutral"
+      }
+    ],
+    "us": [],
+    "asian": [],
+    "european": [],
+    "geopolitical": [],
+    "currencies": [],
+    "commodities": [],
+    "earnings": [],
+    "research": [],
+    "premarketMovers": [],
+    "webSearchResults": {}
+  },
+  "timing": {
+    "lastCloseTimestamp": 1757088000,
+    "lastCloseString": "9/5/2025, 12:00:00 PM",
+    "currentTime": "9/6/2025, 8:25:12 AM"
+  },
+  "totalHeadlines": 8,
+  "webSearchCount": 0,
+  "apiHeadlines": 8,
+  "categoryBreakdown": {
+    "general": 8,
+    "us": 0,
+    "asian": 0,
+    "european": 0,
+    "geopolitical": 0,
+    "currencies": 0,
+    "commodities": 0,
+    "earnings": 0,
+    "research": 0,
+    "premarketMovers": 0
+  },
+  "webSearchBreakdown": {},
+  "metadata": {
+    "generatedAt": "2025-09-06T12:26:47.629Z",
+    "reportType": "enhanced-premarket-brief-with-web-search",
+    "aiModel": "claude-sonnet-4",
+    "classification": "enhanced-institutional-grade",
+    "features": [
+      "traditional-apis",
+      "web-search-intelligence",
+      "cross-source-validation"
+    ]
+  }
+}
