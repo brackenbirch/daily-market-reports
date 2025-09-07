@@ -1,0 +1,112 @@
+{
+  "headlines": {
+    "general": [
+      {
+        "headline": "3 Beaten-Down High-Yield Dividend Stocks to Double Up on and Buy in September",
+        "summary": "Power your passive income stream with dividend stocks that yield over 3%.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/09/07/3-high-yield-dividend-stocks-to-buy-september/",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "The Best Growth ETF to Invest $2,000 in Right Now",
+        "summary": "This ETF has shown long-term market-beating ability.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/09/07/the-best-growth-etf-to-invest-2000-in-right-now/",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Palantir Technologies: 3 Motley Fool Contributors Weigh In",
+        "summary": "Investing perspectives vary on the current state of this artificial intelligence stock.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/09/07/palantir-technologies-stock-3-motley-fool-contribu/",
+        "sentiment": "Neutral"
+      },
+      {
+        "headline": "The Best Vanguard ETF to Invest $1,000 in Right Now",
+        "summary": "The Vanguard Growth ETF is a great investment choice to ride the AI wave.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/09/07/the-best-vanguard-etf-to-invest-1000-in-right-now/",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "President Donald Trump Just Made Stock Market History by Doing Something No Other President Has in 75 Years",
+        "summary": "The S&P 500 did something in August that hasn't occurred under any second-term president since 1950.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/09/07/donald-trump-made-stock-market-history-75-years/",
+        "sentiment": "Neutral"
+      },
+      {
+        "headline": "Lucid Group Just Executed a 1-for-10 Reverse Stock Split. Is This the Catalyst the EV Maker Has Been Waiting for?",
+        "summary": "A stock split -- one way or the other -- artificially changes a company's stock price and outstanding share count.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/09/07/lucid-group-just-executed-a-1-for-10-reverse-stock/",
+        "sentiment": "Neutral"
+      },
+      {
+        "headline": "3 Dividend Stocks to Double Up on Right Now",
+        "summary": "Investors can feel good about upping their bets on these great dividend stocks.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/09/07/3-dividend-stocks-to-double-up-on-right-now/",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "If You'd Invested $1,000 in the SPDR S&P 500 ETF Trust  ( SPY )  10 Years Ago, Here's How Much You'd Have Today",
+        "summary": "Focusing on passive strategies can work out extremely well for patient investors.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/09/07/invest-1000-spdr-sp-500-etf-trust-10-years/",
+        "sentiment": "Bullish"
+      }
+    ],
+    "us": [],
+    "asian": [],
+    "european": [],
+    "geopolitical": [],
+    "currencies": [],
+    "commodities": [],
+    "earnings": [],
+    "research": [],
+    "premarketMovers": [],
+    "webSearchResults": {}
+  },
+  "timing": {
+    "lastCloseTimestamp": 1757088000,
+    "lastCloseString": "9/5/2025, 12:00:00 PM",
+    "currentTime": "9/7/2025, 8:26:14 AM"
+  },
+  "totalHeadlines": 8,
+  "webSearchCount": 0,
+  "apiHeadlines": 8,
+  "categoryBreakdown": {
+    "general": 8,
+    "us": 0,
+    "asian": 0,
+    "european": 0,
+    "geopolitical": 0,
+    "currencies": 0,
+    "commodities": 0,
+    "earnings": 0,
+    "research": 0,
+    "premarketMovers": 0
+  },
+  "webSearchBreakdown": {},
+  "metadata": {
+    "generatedAt": "2025-09-07T12:27:46.649Z",
+    "reportType": "enhanced-premarket-brief-with-web-search",
+    "aiModel": "claude-sonnet-4",
+    "classification": "enhanced-institutional-grade",
+    "features": [
+      "traditional-apis",
+      "web-search-intelligence",
+      "cross-source-validation"
+    ]
+  }
+}
