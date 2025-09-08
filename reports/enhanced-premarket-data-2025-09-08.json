@@ -1,0 +1,112 @@
+{
+  "headlines": {
+    "general": [
+      {
+        "headline": "CoinShares proposes to change listing venue to a public stock market or other exchange in the US through a joint merger plan with Vine Hill Capital, Odysseus Holdings and others, and to carry out a private placement of approximately USD 50M",
+        "summary": "Jersey, Sept. 08, 2025 ( GLOBE NEWSWIRE ) --",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/pressreleases/25/09/g47543941/coinshares-proposes-to-change-listing-venue-to-a-public-stock-market-or-other-exchange-in-the-us-t",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Exodus Movement, Inc. August 2025 Treasury Update and Monthly Metrics - Exodus Movement  ( AMEX:EXOD ) ",
+        "summary": "Company exploring potential quarterly Bitcoin dividend to shareholders; Treasury contains 2,116 BTC OMAHA, Neb., Sept. 08, 2025 ( GLOBE NEWSWIRE ) -- Exodus Movement, Inc.",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/pressreleases/25/09/g47543479/exodus-movement-inc-august-2025-treasury-update-and-monthly-metrics",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "SINTX Technologies Announces Successful Exercise of Warrants for $3.8 Million Gross Proceeds",
+        "summary": "SALT LAKE CITY, Utah, Sept. 08, 2025 ( GLOBE NEWSWIRE ) -- SINTX Technologies, Inc. ( NASDAQ: SINT ) ( \"SINTX\" or the \"Company\" ) , an advanced ceramics innovator specializing in biomedical applications of silicon nitride ( Si₃N₄ ) , today announced the entry into definitive agreements for the ...",
+        "source": "Alpha Vantage - GlobeNewswire",
+        "datetime": "Invalid Date",
+        "url": "https://www.globenewswire.com/news-release/2025/09/08/3146027/30038/en/SINTX-Technologies-Announces-Successful-Exercise-of-Warrants-for-3-8-Million-Gross-Proceeds.html",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Sonoco to Sell Temperature-Assured Packaging Business to Arsenal Capital Partners - Sonoco Prods  ( NYSE:SON ) ",
+        "summary": "ThermoSafe Sale Completes Company's Transformation into a Global Metal and Fiber Packaging Leader Net Proceeds to be Used to Reduce Debt",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/pressreleases/25/09/g47543182/sonoco-to-sell-temperature-assured-packaging-business-to-arsenal-capital-partners",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "AI Isn't The Next Dot-Com Bubble - Here's Why",
+        "summary": "The air crackles with an almost palpable energy. Every venture capitalist's inbox is overflowing with pitches, every tech conference features a sprawling AI pavilion, and the stock market, despite recent jitters, seems to be holding its breath, anticipating the next quantum leap.",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/opinion/25/09/47543386/ai-isnt-the-next-dot-com-bubble-heres-why",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Prospect Capital Corporation and Affiliate Complete $18 Million Investment in The Ridge - Prospect Capital  ( NASDAQ:PSEC ) ",
+        "summary": "NEW YORK, Sept. 08, 2025 ( GLOBE NEWSWIRE ) -- Prospect Capital Corporation ( \"Prospect\" ) PSEC and an affiliate have provided a first lien senior secured term loan, a first lien senior secured revolving credit facility, and an equity investment to TCSPV Holdings IV, LLC ( \"The Ridge\" or ...",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/pressreleases/25/09/g47543293/prospect-capital-corporation-and-affiliate-complete-18-million-investment-in-the-ridge",
+        "sentiment": "Bullish"
+      },
+      {
+        "headline": "Exodus Movement, Inc. August 2025 Treasury Update and Monthly Metrics",
+        "summary": "Company exploring potential quarterly Bitcoin dividend to shareholders. Treasury contains 2,116 BTCOMAHA, Neb., Sept. 08, 2025 ( GLOBE NEWSWIRE ) -- Exodus Movement, Inc. ( NYSE American: EXOD ) ( \"Exodus\" or \"the company\" ) , a leading self-custodial cryptocurrency platform, today announced an ...",
+        "source": "Alpha Vantage - GlobeNewswire",
+        "datetime": "Invalid Date",
+        "url": "https://www.globenewswire.com/news-release/2025/09/08/3146006/0/en/Exodus-Movement-Inc-August-2025-Treasury-Update-and-Monthly-Metrics.html",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "This Veeva Systems Analyst Turns Bullish; Here Are Top 5 Upgrades For Monday - Afya  ( NASDAQ:AFYA ) , Sanofi  ( NASDAQ:SNY ) ",
+        "summary": "Top Wall Street analysts changed their outlook on these top names. For a complete view of all analyst rating changes, including upgrades, downgrades and initiations, please see our analyst ratings page. JP Morgan analyst Alexei Gogolev upgraded Veeva Systems Inc.",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/analyst-stock-ratings/upgrades/25/09/47543825/this-veeva-systems-analyst-turns-bullish-here-are-top-5-upgrades-for-monday",
+        "sentiment": "Somewhat-Bullish"
+      }
+    ],
+    "us": [],
+    "asian": [],
+    "european": [],
+    "geopolitical": [],
+    "currencies": [],
+    "commodities": [],
+    "earnings": [],
+    "research": [],
+    "premarketMovers": [],
+    "webSearchResults": {}
+  },
+  "timing": {
+    "lastCloseTimestamp": 1757088000,
+    "lastCloseString": "9/5/2025, 12:00:00 PM",
+    "currentTime": "9/8/2025, 8:30:20 AM"
+  },
+  "totalHeadlines": 8,
+  "webSearchCount": 0,
+  "apiHeadlines": 8,
+  "categoryBreakdown": {
+    "general": 8,
+    "us": 0,
+    "asian": 0,
+    "european": 0,
+    "geopolitical": 0,
+    "currencies": 0,
+    "commodities": 0,
+    "earnings": 0,
+    "research": 0,
+    "premarketMovers": 0
+  },
+  "webSearchBreakdown": {},
+  "metadata": {
+    "generatedAt": "2025-09-08T12:32:42.080Z",
+    "reportType": "enhanced-premarket-brief-with-web-search",
+    "aiModel": "claude-sonnet-4",
+    "classification": "enhanced-institutional-grade",
+    "features": [
+      "traditional-apis",
+      "web-search-intelligence",
+      "cross-source-validation"
+    ]
+  }
+}
