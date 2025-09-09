@@ -1,0 +1,112 @@
+{
+  "headlines": {
+    "general": [
+      {
+        "headline": "Why Nebius Group Shares Are Trading Higher By Around 50%; Here Are 20 Stocks Moving Premarket - Brighthouse Finl  ( NASDAQ:BHF ) , AIRO Group Holdings  ( NASDAQ:AIRO ) ",
+        "summary": "Shares of Nebius Group N.V. NBIS rose sharply in pre-market trading after the company announced it secured up to $19.4 billion 5-year GPU infrastructure contract with Microsoft.",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/trading-ideas/movers/25/09/47565596/why-nebius-group-shares-are-trading-higher-by-around-50-here-are-20-stocks-moving-premarket",
+        "sentiment": "Neutral"
+      },
+      {
+        "headline": "Gary Black Says This Could Spark Strong Rally In Tech And Growth Stocks If Recession Risks Stay Low - First Trust DJ Internet Index Fund  ( ARCA:FDN ) , Fidelity MSCI Information Technology Index ETF  ( ARCA:FTEC ) ",
+        "summary": "A drop in the 10-year U.S. Treasury yield below the key 4% level could ignite a significant rally in technology and other growth stocks, according to prominent investor Gary Black.",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/markets/bonds/25/09/47566081/gary-black-says-this-could-spark-strong-rally-in-tech-and-growth-stocks-if-recession-risks-stay-low",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Accrual Equity Partners Adds James \"JT\" Taylor, Former Head of Automotive Retail Investment Banking at Truist Securities, as Managing Partner",
+        "summary": "With four decades in automotive sales and manufacturing -- including helping to plan Lexus for Toyota -- dealership management, and investment banking, Taylor will collaborate with private equity firm's portfolio companies to drive growth and value",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/pressreleases/25/09/g47565852/accrual-equity-partners-adds-james-jt-taylor-former-head-of-automotive-retail-investment-banking-a",
+        "sentiment": "Bullish"
+      },
+      {
+        "headline": "Lululemon Athletica Stock Closes Near Day's High After Key Trading Signal - Lululemon Athletica  ( NASDAQ:LULU ) ",
+        "summary": "LULU recovers almost all of the decline after the alert Lululemon LULU today experienced a Power Inflow, a significant event for those who follow where smart money goes and value order flow analytics in their trading decisions.",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/markets/equities/25/09/47565522/lululemon-athletica-stock-closes-near-days-high-after-key-trading-signal",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Forge First Announces Acquisition by CI Global Asset Management",
+        "summary": "TORONTO, Sept. 09, 2025 ( GLOBE NEWSWIRE ) -- Forge First Asset Management Inc. ( \"Forge First\" ) today announced that it has agreed to be acquired by CI Global Asset Management ( \"CI GAM\" ) *.",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/pressreleases/25/09/g47566100/forge-first-announces-acquisition-by-ci-global-asset-management",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Eric Trump Touts Crypto As 'Greatest Hedge To Real Estate' As His Bitcoin Mining Company Makes An Impressive Wall Street Debut - American Bitcoin  ( NASDAQ:ABTC ) ",
+        "summary": "Eric Trump, co-founder and chief strategy officer at American Bitcoin Corp. ABTC, deemed cryptocurrency as the \"greatest hedge\" to real estate and a rapidly growing industry unlike any other. During an interview with Fox Business on Monday, Trump stated that he hasn't seen a more dynamic and ...",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/crypto/cryptocurrency/25/09/47565262/eric-trump-touts-crypto-as-greatest-hedge-to-real-estate-as-his-bitcoin-mining-company-make",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Pet Valu Completes Supply Chain Transformation with Official Opening of Calgary Distribution Centre",
+        "summary": "MARKHAM, Ontario, Sept. 09, 2025 ( GLOBE NEWSWIRE ) -- Pet Valu Holdings Ltd. ( \"Pet Valu\" or \"the Company\" ) , the leading Canadian specialty retailer of pet food and pet-related supplies, announced today the completion of its four-year supply chain transformation with the official opening of ...",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/pressreleases/25/09/g47565948/pet-valu-completes-supply-chain-transformation-with-official-opening-of-calgary-distribution-centr",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Is Meta Platforms the Best AI Stock to Buy Now?",
+        "summary": "Meta is building Manhattan-sized data centers and trades at a 33% discount to Nvidia, despite spending more on artificial intelligence (AI) infrastructure.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/09/09/is-meta-platforms-the-best-ai-stock-to-buy-now/",
+        "sentiment": "Somewhat-Bullish"
+      }
+    ],
+    "us": [],
+    "asian": [],
+    "european": [],
+    "geopolitical": [],
+    "currencies": [],
+    "commodities": [],
+    "earnings": [],
+    "research": [],
+    "premarketMovers": [],
+    "webSearchResults": {}
+  },
+  "timing": {
+    "lastCloseTimestamp": 1757347200,
+    "lastCloseString": "9/8/2025, 12:00:00 PM",
+    "currentTime": "9/9/2025, 8:30:43 AM"
+  },
+  "totalHeadlines": 8,
+  "webSearchCount": 0,
+  "apiHeadlines": 8,
+  "categoryBreakdown": {
+    "general": 8,
+    "us": 0,
+    "asian": 0,
+    "european": 0,
+    "geopolitical": 0,
+    "currencies": 0,
+    "commodities": 0,
+    "earnings": 0,
+    "research": 0,
+    "premarketMovers": 0
+  },
+  "webSearchBreakdown": {},
+  "metadata": {
+    "generatedAt": "2025-09-09T12:31:58.992Z",
+    "reportType": "enhanced-premarket-brief-with-web-search",
+    "aiModel": "claude-sonnet-4",
+    "classification": "enhanced-institutional-grade",
+    "features": [
+      "traditional-apis",
+      "web-search-intelligence",
+      "cross-source-validation"
+    ]
+  }
+}
