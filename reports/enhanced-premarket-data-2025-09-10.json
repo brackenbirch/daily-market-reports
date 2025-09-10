@@ -1,0 +1,112 @@
+{
+  "headlines": {
+    "general": [
+      {
+        "headline": "CAMP4 Announces an Oversubscribed Private Placement of up to $100 Million to Advance First-in-Class Treatment for SYNGAP1-Related Disorders",
+        "summary": "Oversubscribed Financing led by Coastlands Capital with participation from new and existing investors ...",
+        "source": "Alpha Vantage - GlobeNewswire",
+        "datetime": "Invalid Date",
+        "url": "https://www.globenewswire.com/news-release/2025/09/10/3147616/0/en/CAMP4-Announces-an-Oversubscribed-Private-Placement-of-up-to-100-Million-to-Advance-First-in-Class-Treatment-for-SYNGAP1-Related-Disorders.html",
+        "sentiment": "Neutral"
+      },
+      {
+        "headline": "YieldMax® ETFs Announces Distributions on ULTY, MARO, SLTY, BABO, DIPS and Others",
+        "summary": "CHICAGO and MILWAUKEE and NEW YORK, Sept. 10, 2025 ( GLOBE NEWSWIRE ) -- YieldMax® today announced distributions for the YieldMax® Weekly Payers and Group B ETFs listed in the table below. Note: CRSH, DIPS, FIAT, SLTY, WNTR and YQQQ are hereinafter referred to as the \"Short ETFs.\"",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/pressreleases/25/09/g47590529/yieldmax-etfs-announces-distributions-on-ulty-maro-slty-babo-dips-and-others",
+        "sentiment": "Neutral"
+      },
+      {
+        "headline": "2 Dividend ETFs to Buy Hand Over Fist and 1 to Avoid",
+        "summary": "Most of them have at least one very redeeming quality at this point, but one has proverbially painted itself into a corner.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/09/10/2-dividend-etfs-to-buy-hand-over-fist-1-to-avoid/",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "UnitedHealth Stock Rises 6.2% After Key Trading Signal",
+        "summary": "UNH rises over 20 points after alert at 10:12 am EDT UnitedHealth Inc. ( UNH ) today experienced a Power Inflow, a significant event for those who follow where smart money goes and value order flow analytics in their trading decisions.",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/markets/equities/25/09/47590484/unitedhealth-stock-rises-6-2-after-key-trading-signal",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Kingswood Capital Partners Initiates Analyst Coverage on Quantum BioPharma with a BUY Rating and US$45 Price Target - Quantum BioPharma  ( NASDAQ:QNTM ) ",
+        "summary": "TORONTO, Sept. 10, 2025 ( GLOBE NEWSWIRE ) -- Quantum BioPharma Ltd.",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/pressreleases/25/09/g47590576/kingswood-capital-partners-initiates-analyst-coverage-on-quantum-biopharma-with-a-buy-rating-and-u",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Kingswood Capital Partners Initiates Analyst Coverage on Quantum BioPharma with a BUY Rating and US$45 Price Target",
+        "summary": "This was unpaid research with no consideration given This was unpaid research with no consideration given ...",
+        "source": "Alpha Vantage - GlobeNewswire",
+        "datetime": "Invalid Date",
+        "url": "https://www.globenewswire.com/news-release/2025/09/10/3147623/0/en/Kingswood-Capital-Partners-Initiates-Analyst-Coverage-on-Quantum-BioPharma-with-a-BUY-Rating-and-US-45-Price-Target.html",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Mortgage demand jumps to the highest level in three years, as interest rates drop sharply",
+        "summary": "A sharp drop in mortgage rates to the lowest level since last year caused a spike in mortgage demand.",
+        "source": "Alpha Vantage - CNBC",
+        "datetime": "Invalid Date",
+        "url": "https://www.cnbc.com/2025/09/10/mortgage-demand-jumps-to-the-highest-level-in-three-years.html",
+        "sentiment": "Neutral"
+      },
+      {
+        "headline": "Kraken Lets Europeans Trade Tokenized US Stocks Without Brokers Or Extra Fees",
+        "summary": "Kraken launches xStocks in EU, letting investors trade tokenized U.S. stocks and ETFs without brokers or high fees EU clients gain 24/5 access to tokenized equities via Kraken app, with assets usable across DeFi and self-custody Up Next: Get 5 Dark Horse Stocks Wall Street Is Quietly Loading Up On",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/crypto/cryptocurrency/25/09/47590941/kraken-lets-europeans-trade-tokenized-us-stocks-without-brokers-or-extra-fees",
+        "sentiment": "Somewhat-Bullish"
+      }
+    ],
+    "us": [],
+    "asian": [],
+    "european": [],
+    "geopolitical": [],
+    "currencies": [],
+    "commodities": [],
+    "earnings": [],
+    "research": [],
+    "premarketMovers": [],
+    "webSearchResults": {}
+  },
+  "timing": {
+    "lastCloseTimestamp": 1757433600,
+    "lastCloseString": "9/9/2025, 12:00:00 PM",
+    "currentTime": "9/10/2025, 8:28:01 AM"
+  },
+  "totalHeadlines": 8,
+  "webSearchCount": 0,
+  "apiHeadlines": 8,
+  "categoryBreakdown": {
+    "general": 8,
+    "us": 0,
+    "asian": 0,
+    "european": 0,
+    "geopolitical": 0,
+    "currencies": 0,
+    "commodities": 0,
+    "earnings": 0,
+    "research": 0,
+    "premarketMovers": 0
+  },
+  "webSearchBreakdown": {},
+  "metadata": {
+    "generatedAt": "2025-09-10T12:29:16.906Z",
+    "reportType": "enhanced-premarket-brief-with-web-search",
+    "aiModel": "claude-sonnet-4",
+    "classification": "enhanced-institutional-grade",
+    "features": [
+      "traditional-apis",
+      "web-search-intelligence",
+      "cross-source-validation"
+    ]
+  }
+}
