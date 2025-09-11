@@ -1,0 +1,112 @@
+{
+  "headlines": {
+    "general": [
+      {
+        "headline": "Enovix Announces Pricing of $300.0 Million Offering of 4.75% Convertible Senior Notes Due 2030",
+        "summary": "FREMONT, Calif., Sept. 11, 2025 ( GLOBE NEWSWIRE ) -- Enovix Corporation ( Nasdaq: ENVX, ENVXW ) ( the \"Company\" or \"Enovix\" ) , a leader in advanced silicon battery technology, today announced the pricing of $300.0 million aggregate principal amount of 4.75% Convertible Senior Notes due 2030 ( ...",
+        "source": "Alpha Vantage - GlobeNewswire",
+        "datetime": "Invalid Date",
+        "url": "https://www.globenewswire.com/news-release/2025/09/11/3148438/0/en/Enovix-Announces-Pricing-of-300-0-Million-Offering-of-4-75-Convertible-Senior-Notes-Due-2030.html",
+        "sentiment": "Neutral"
+      },
+      {
+        "headline": "The Lovesac Company Reports Second Quarter Fiscal 2026 Financial Results",
+        "summary": "Q2 FY26 Net Sales Increased 2.5% to $160.5 Million vs. Q2 FY25 Q2 FY26 Net Sales Increased 2.5% to $160.5 Million vs. ...",
+        "source": "Alpha Vantage - GlobeNewswire",
+        "datetime": "Invalid Date",
+        "url": "https://www.globenewswire.com/news-release/2025/09/11/3148434/0/en/The-Lovesac-Company-Reports-Second-Quarter-Fiscal-2026-Financial-Results.html",
+        "sentiment": "Neutral"
+      },
+      {
+        "headline": "Royalty Pharma Investor Day Highlights Strong Growth Outlook and Company's Plans to Drive Value Creation - Royalty Pharma  ( NASDAQ:RPRX ) ",
+        "summary": "On track to deliver Portfolio Receipts of $4.7 billion or more by 2030, significantly ahead of consensus Goal to achieve at least mid-teens average annual total shareholder return over next 5 years with significant upside potential from recognition for Royalty Pharma's platform value",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/pressreleases/25/09/g47616190/royalty-pharma-investor-day-highlights-strong-growth-outlook-and-companys-plans-to-drive-value-cre",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Royalty Pharma Investor Day Highlights Strong Growth Outlook and Company's Plans to Drive Value Creation",
+        "summary": "NEW YORK, Sept. 11, 2025 ( GLOBE NEWSWIRE ) -- Royalty Pharma plc ( Nasdaq: RPRX ) will host an Investor Day in New York City today. Senior executives will provide an update on the company's plans to drive shareholder value creation through its unique business model and capabilities in the large ...",
+        "source": "Alpha Vantage - GlobeNewswire",
+        "datetime": "Invalid Date",
+        "url": "https://www.globenewswire.com/news-release/2025/09/11/3148439/0/en/Royalty-Pharma-Investor-Day-Highlights-Strong-Growth-Outlook-and-Company-s-Plans-to-Drive-Value-Creation.html",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "OR Royalties Announces More Positive Developments on Select Assets",
+        "summary": "MONTRÉAL, Sept. 11, 2025 ( GLOBE NEWSWIRE ) -- OR Royalties Inc. ( \"OR Royalties\" or the \"Company\" ) ( OR: TSX & NYSE ) is pleased to provide the following select asset updates. Amounts presented are in United States dollars, except where otherwise noted.",
+        "source": "Alpha Vantage - GlobeNewswire",
+        "datetime": "Invalid Date",
+        "url": "https://www.globenewswire.com/news-release/2025/09/11/3148436/0/en/OR-Royalties-Announces-More-Positive-Developments-on-Select-Assets.html",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Rising Industrial Metal Demand Sets The Stage For Sprott's Latest METL Fund - Sprott  ( NYSE:SII ) , Sprott Active Metals & Miners ETF  ( NASDAQ:METL ) ",
+        "summary": "Soaring demand for critical resources has created a unique opportunity for commodity investors. Financial services provider Sprott's recently launched METL ETF has witnessed a strong technical debut. Get the strategy to turn September's volatility into 10x trades →",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/etfs/specialty-etfs/25/09/47616605/rising-industrial-metal-demand-sets-the-stage-for-sprotts-latest-metl-fund",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Mobix Labs Advances Toward Peraso Acquisition After Positive Meeting with Management - Peraso  ( NASDAQ:PRSO ) , Mobix Labs  ( NASDAQ:MOBX ) ",
+        "summary": "IRVINE, Calif., Sept. 11, 2025 ( GLOBE NEWSWIRE ) -- Mobix Labs, Inc. MOBX, a fast-growing provider of advanced connectivity and defense technology solutions, today announced that it held a constructive meeting with Peraso, Inc. PRSO regarding Mobix Labs enhanced cash-and-stock proposal to ...",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/pressreleases/25/09/g47616195/mobix-labs-advances-toward-peraso-acquisition-after-positive-meeting-with-management",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Premier American Uranium and Nuclear Fuels Provide Closing Update - Nuclear Fuels  ( OTC:NFUNF ) ",
+        "summary": "TORONTO, Sept. 11, 2025 ( GLOBE NEWSWIRE ) -- Premier American Uranium Inc. ( \"PUR\" or \"Premier American Uranium\" ) PURPAUIF and Nuclear Fuels Inc. ( \"NF\" or \"Nuclear Fuels\" ) NFNFUNF announce that in connection with the statutory plan of arrangement ( the \"Plan of Arrangement\" ) and further to ...",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/pressreleases/25/09/g47616200/premier-american-uranium-and-nuclear-fuels-provide-closing-update",
+        "sentiment": "Somewhat-Bullish"
+      }
+    ],
+    "us": [],
+    "asian": [],
+    "european": [],
+    "geopolitical": [],
+    "currencies": [],
+    "commodities": [],
+    "earnings": [],
+    "research": [],
+    "premarketMovers": [],
+    "webSearchResults": {}
+  },
+  "timing": {
+    "lastCloseTimestamp": 1757520000,
+    "lastCloseString": "9/10/2025, 12:00:00 PM",
+    "currentTime": "9/11/2025, 8:27:53 AM"
+  },
+  "totalHeadlines": 8,
+  "webSearchCount": 0,
+  "apiHeadlines": 8,
+  "categoryBreakdown": {
+    "general": 8,
+    "us": 0,
+    "asian": 0,
+    "european": 0,
+    "geopolitical": 0,
+    "currencies": 0,
+    "commodities": 0,
+    "earnings": 0,
+    "research": 0,
+    "premarketMovers": 0
+  },
+  "webSearchBreakdown": {},
+  "metadata": {
+    "generatedAt": "2025-09-11T12:29:24.276Z",
+    "reportType": "enhanced-premarket-brief-with-web-search",
+    "aiModel": "claude-sonnet-4",
+    "classification": "enhanced-institutional-grade",
+    "features": [
+      "traditional-apis",
+      "web-search-intelligence",
+      "cross-source-validation"
+    ]
+  }
+}
