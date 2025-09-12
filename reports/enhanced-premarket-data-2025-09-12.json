@@ -1,0 +1,112 @@
+{
+  "headlines": {
+    "general": [
+      {
+        "headline": "Should Invesco Large Cap Value ETF  ( PWV )  Be on Your Investing Radar?",
+        "summary": "Style Box ETF report for ...",
+        "source": "Alpha Vantage - Zacks Commentary",
+        "datetime": "Invalid Date",
+        "url": "https://www.zacks.com/stock/news/2750501/should-invesco-large-cap-value-etf-pwv-be-on-your-investing-radar",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Is iShares MSCI USA Quality Factor ETF  ( QUAL )  a Strong ETF Right Now?",
+        "summary": "Smart Beta ETF report for QUAL ...",
+        "source": "Alpha Vantage - Zacks Commentary",
+        "datetime": "Invalid Date",
+        "url": "https://www.zacks.com/stock/news/2750506/is-ishares-msci-usa-quality-factor-etf-qual-a-strong-etf-right-now",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Should First Trust Large Cap Core AlphaDEX ETF  ( FEX )  Be on Your Investing Radar?",
+        "summary": "Style Box ETF report for ...",
+        "source": "Alpha Vantage - Zacks Commentary",
+        "datetime": "Invalid Date",
+        "url": "https://www.zacks.com/stock/news/2750500/should-first-trust-large-cap-core-alphadex-etf-fex-be-on-your-investing-radar",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Should ALPS Equal Sector Weight ETF  ( EQL )  Be on Your Investing Radar?",
+        "summary": "Style Box ETF report for ...",
+        "source": "Alpha Vantage - Zacks Commentary",
+        "datetime": "Invalid Date",
+        "url": "https://www.zacks.com/stock/news/2750507/should-alps-equal-sector-weight-etf-eql-be-on-your-investing-radar",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Is SPDR Russell 1000 Yield Focus ETF  ( ONEY )  a Strong ETF Right Now?",
+        "summary": "Smart Beta ETF report for ONEY ...",
+        "source": "Alpha Vantage - Zacks Commentary",
+        "datetime": "Invalid Date",
+        "url": "https://www.zacks.com/stock/news/2750505/is-spdr-russell-1000-yield-focus-etf-oney-a-strong-etf-right-now",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "2 Vanguard ETFs to Buy With $500 and Hold Forever",
+        "summary": "These ETFs can be complementary pieces in many investors' portfolios.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/09/12/2-vanguard-etfs-to-buy-with-500-and-hold-forever/",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Should Vanguard S&P 500 Growth ETF  ( VOOG )  Be on Your Investing Radar?",
+        "summary": "Style Box ETF report for ...",
+        "source": "Alpha Vantage - Zacks Commentary",
+        "datetime": "Invalid Date",
+        "url": "https://www.zacks.com/stock/news/2750502/should-vanguard-sp-500-growth-etf-voog-be-on-your-investing-radar",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Fairfax India Announces Sale of Equity Interest in Saurashtra Freight Private Limited",
+        "summary": "NOT FOR DISTRIBUTION TO U.S. NEWS WIRE SERVICES OR DISSEMINATION IN THE UNITED STATES ...",
+        "source": "Alpha Vantage - GlobeNewswire",
+        "datetime": "Invalid Date",
+        "url": "https://www.globenewswire.com/news-release/2025/09/12/3149149/0/en/Fairfax-India-Announces-Sale-of-Equity-Interest-in-Saurashtra-Freight-Private-Limited.html",
+        "sentiment": "Somewhat-Bullish"
+      }
+    ],
+    "us": [],
+    "asian": [],
+    "european": [],
+    "geopolitical": [],
+    "currencies": [],
+    "commodities": [],
+    "earnings": [],
+    "research": [],
+    "premarketMovers": [],
+    "webSearchResults": {}
+  },
+  "timing": {
+    "lastCloseTimestamp": 1757606400,
+    "lastCloseString": "9/11/2025, 12:00:00 PM",
+    "currentTime": "9/12/2025, 8:28:12 AM"
+  },
+  "totalHeadlines": 8,
+  "webSearchCount": 0,
+  "apiHeadlines": 8,
+  "categoryBreakdown": {
+    "general": 8,
+    "us": 0,
+    "asian": 0,
+    "european": 0,
+    "geopolitical": 0,
+    "currencies": 0,
+    "commodities": 0,
+    "earnings": 0,
+    "research": 0,
+    "premarketMovers": 0
+  },
+  "webSearchBreakdown": {},
+  "metadata": {
+    "generatedAt": "2025-09-12T12:29:33.029Z",
+    "reportType": "enhanced-premarket-brief-with-web-search",
+    "aiModel": "claude-sonnet-4",
+    "classification": "enhanced-institutional-grade",
+    "features": [
+      "traditional-apis",
+      "web-search-intelligence",
+      "cross-source-validation"
+    ]
+  }
+}
