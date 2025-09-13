@@ -1,0 +1,112 @@
+{
+  "headlines": {
+    "general": [
+      {
+        "headline": "The 2 Best Vanguard Index Funds to Buy Now With $700 and Hold Forever",
+        "summary": "These Vanguard index funds provide quick and easy exposure to the most important stocks in the world.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/09/13/2-best-vanguard-index-funds-buy-700-hold-forever/",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "This Vanguard ETF Makes It Easy to Invest in the \"Magnificent Seven\"",
+        "summary": "The \"Magnificent Seven\" stocks have done incredibly well over the past five years, with six of them more than doubling in value during that time frame.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/09/13/this-vanguard-etf-makes-it-easy-to-invest-in-the/",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Is Robinhood Stock a Buy Now?",
+        "summary": "The trading platform has come a long way.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/09/13/is-hood-stock-a-buy-now/",
+        "sentiment": "Neutral"
+      },
+      {
+        "headline": "CEO Ryan Cohen Is Turning GameStop Around, But Does That Make the Stock a Buy?",
+        "summary": "GameStop is sitting on a lot of cash, waiting to make its next move.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/09/13/is-gamestop-a-buy-in-ceo-ryan-cohen-turnaround/",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Here's Why October Will Be Critical for XRP",
+        "summary": "A slew of catalysts await.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/09/13/heres-why-october-will-be-critical-for-xrp/",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "How to Turn $100,000 Into $1 Million for Retirement: 3 Smart Investment Strategies",
+        "summary": "These three moves can make it much easier for you to retire as a millionaire.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/retirement/2025/09/13/how-to-turn-100000-into-1-million-for-retirement-3/",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Pay Attention! Nvidia and Palantir Have Served Up a $12.5 Billion Warning for Wall Street.",
+        "summary": "The stock market's leading artificial intelligence (AI) stocks are giving investors a clear reason to be cautious.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/09/13/nvidia-palantir-125-billion-warning-wall-street/",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "2 AI Growth Stocks That Could Soar for the Next 3 Years",
+        "summary": "These companies are set to thrive from the AI boom.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/09/13/2-ai-growth-stocks-soar-next-3-years/",
+        "sentiment": "Somewhat-Bullish"
+      }
+    ],
+    "us": [],
+    "asian": [],
+    "european": [],
+    "geopolitical": [],
+    "currencies": [],
+    "commodities": [],
+    "earnings": [],
+    "research": [],
+    "premarketMovers": [],
+    "webSearchResults": {}
+  },
+  "timing": {
+    "lastCloseTimestamp": 1757692800,
+    "lastCloseString": "9/12/2025, 12:00:00 PM",
+    "currentTime": "9/13/2025, 8:25:55 AM"
+  },
+  "totalHeadlines": 8,
+  "webSearchCount": 0,
+  "apiHeadlines": 8,
+  "categoryBreakdown": {
+    "general": 8,
+    "us": 0,
+    "asian": 0,
+    "european": 0,
+    "geopolitical": 0,
+    "currencies": 0,
+    "commodities": 0,
+    "earnings": 0,
+    "research": 0,
+    "premarketMovers": 0
+  },
+  "webSearchBreakdown": {},
+  "metadata": {
+    "generatedAt": "2025-09-13T12:27:02.621Z",
+    "reportType": "enhanced-premarket-brief-with-web-search",
+    "aiModel": "claude-sonnet-4",
+    "classification": "enhanced-institutional-grade",
+    "features": [
+      "traditional-apis",
+      "web-search-intelligence",
+      "cross-source-validation"
+    ]
+  }
+}
