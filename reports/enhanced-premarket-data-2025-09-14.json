@@ -1,0 +1,112 @@
+{
+  "headlines": {
+    "general": [
+      {
+        "headline": "3 Top AI Stocks to Buy for the Rest of 2025",
+        "summary": "The market's AI movement may be feeling a bit long in the tooth, but these three AI stocks pack plenty of momentum for the remainder of this year.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/09/14/3-top-ai-stocks-to-buy-for-the-rest-of-2025/",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Billionaire Warren Buffett Has Always Recommended Investing in the S&P 500. However, the Current S&P 500 May Make This Advice Tricky to Follow.",
+        "summary": "This advice was more relevant in a time when top companies didn't have outsized valuations.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/09/14/billionaire-warren-buffett-has-always-recommended/",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "The Newest Stock in the S&P 500 Has Soared 237% Since Its 2021 IPO, and It's a Buy Right Now, According to Wall Street",
+        "summary": "This company is leveraging its digital-native roots to attract the next generation of users.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/09/14/the-newest-stock-in-the-sp-500-has-soared-237-sinc/",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Prediction: Lyft Will Crush the Market in 2026. Here's Why.",
+        "summary": "And it's suddenly crushing the market here in 2025 as well.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/09/14/prediction-lyft-will-crush-the-market-in-2026-here/",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Warren Buffett's $344 Billion Warning That Wall Street  ( and Many Investors )  Are Blissfully Ignoring",
+        "summary": "The legendary investor's warning is silent but unmistakable.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/09/14/warren-buffetts-344-billion-warning-that-wall-stre/",
+        "sentiment": "Neutral"
+      },
+      {
+        "headline": "Forget President Donald Trump's Tariffs and Their Inflationary Impact -- This Is Wall Street's Ticking Time Bomb, Based on What History Tells Us",
+        "summary": "When things seem too good to be true for the stock market, they usually are.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/retirement/2025/09/14/forget-trump-tariffs-wall-street-ticking-time-bomb/",
+        "sentiment": "Neutral"
+      },
+      {
+        "headline": "Broadcom and Oracle's Blowout Earnings Just Proved Why It's Time to Forget the \"Magnificent Seven\"",
+        "summary": "Without Broadcom and Oracle, the \"Magnificent Seven\" is no longer a good representation of the market's leading growth stocks.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/09/14/broadcom-oracle-ten-titans-magnificent-seven/",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "I Plan to Invest in Real Estate in Retirement -- but Not the Way You Think",
+        "summary": "I'm aiming for a way to dabble in real estate without undue risk or too much work.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/retirement/2025/09/14/i-plan-to-invest-in-real-estate-in-retirement-but/",
+        "sentiment": "Somewhat-Bullish"
+      }
+    ],
+    "us": [],
+    "asian": [],
+    "european": [],
+    "geopolitical": [],
+    "currencies": [],
+    "commodities": [],
+    "earnings": [],
+    "research": [],
+    "premarketMovers": [],
+    "webSearchResults": {}
+  },
+  "timing": {
+    "lastCloseTimestamp": 1757692800,
+    "lastCloseString": "9/12/2025, 12:00:00 PM",
+    "currentTime": "9/14/2025, 8:25:26 AM"
+  },
+  "totalHeadlines": 8,
+  "webSearchCount": 0,
+  "apiHeadlines": 8,
+  "categoryBreakdown": {
+    "general": 8,
+    "us": 0,
+    "asian": 0,
+    "european": 0,
+    "geopolitical": 0,
+    "currencies": 0,
+    "commodities": 0,
+    "earnings": 0,
+    "research": 0,
+    "premarketMovers": 0
+  },
+  "webSearchBreakdown": {},
+  "metadata": {
+    "generatedAt": "2025-09-14T12:26:35.636Z",
+    "reportType": "enhanced-premarket-brief-with-web-search",
+    "aiModel": "claude-sonnet-4",
+    "classification": "enhanced-institutional-grade",
+    "features": [
+      "traditional-apis",
+      "web-search-intelligence",
+      "cross-source-validation"
+    ]
+  }
+}
