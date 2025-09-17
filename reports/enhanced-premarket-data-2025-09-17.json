@@ -1,0 +1,112 @@
+{
+  "headlines": {
+    "general": [
+      {
+        "headline": "Caliber Announces Sale of $15.9 Million Perpetual Convertible Preferred and Activation of ATM Program - CaliberCos  ( NASDAQ:CWD ) ",
+        "summary": "Access to additional capital further strengthens Digital Asset Treasury execution strategy Preferred converts to common stock at $250 per Caliber share",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/pressreleases/25/09/g47710967/caliber-announces-sale-of-15-9-million-perpetual-convertible-preferred-and-activation-of-atm-progr",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "WISDOMTREE MULTI ASSET ISSUER PUBLIC LIMITED COMPANY  ( a public company incorporated with limited liability in Ireland )  WISDOMTREE S&P 500 3X Daily Short SECURITIES ISIN: IE00B8K7KM88",
+        "summary": "17 September ...",
+        "source": "Alpha Vantage - GlobeNewswire",
+        "datetime": "Invalid Date",
+        "url": "https://www.globenewswire.com/news-release/2025/09/17/3151529/0/en/WISDOMTREE-MULTI-ASSET-ISSUER-PUBLIC-LIMITED-COMPANY-a-public-company-incorporated-with-limited-liability-in-Ireland-WISDOMTREE-S-P-500-3X-Daily-Short-SECURITIES-ISIN-IE00B8K7KM88.html",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Humanoid Global Announces Closing of Strategic Investment in Agility Robotics",
+        "summary": "- NOT FOR DISSEMINATION IN THE UNITED STATES OR THROUGH U.S. NEWSWIRE SERVICES - - NOT FOR DISSEMINATION IN THE UNITED STATES OR THROUGH U.S. NEWSWIRE SERVICES ...",
+        "source": "Alpha Vantage - GlobeNewswire",
+        "datetime": "Invalid Date",
+        "url": "https://www.globenewswire.com/news-release/2025/09/17/3151539/0/en/Humanoid-Global-Announces-Closing-of-Strategic-Investment-in-Agility-Robotics.html",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "QNB Group, Standard Chartered and DMZ Finance Launch Dubai International Financial Centre's First Tokenized Money Market Fund",
+        "summary": "DUBAI, United Arab Emirates, Sept. 17, 2025 ( GLOBE NEWSWIRE ) -- QNB Group , Standard Chartered and DMZ Finance jointly announced that the Dubai International Financial Centre's ( DIFC ) first regulated tokenized money market fund, the QCD Money Market Fund ( units in QCDT ) , has been ...",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/pressreleases/25/09/g47710946/qnb-group-standard-chartered-and-dmz-finance-launch-dubai-international-financial-centres-first-to",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Mortgage refinance demand spikes nearly 60%, as interest rates drop sharply",
+        "summary": "Mortgage refinance demand surged higher after interest rates dropped to the lowest level since last October. Adjustable-rate loans were also in high demand.",
+        "source": "Alpha Vantage - CNBC",
+        "datetime": "Invalid Date",
+        "url": "https://www.cnbc.com/2025/09/17/mortgage-refinance-demand-spikes-nearly-60percent-as-interest-rates-drop-sharply.html",
+        "sentiment": "Neutral"
+      },
+      {
+        "headline": "Brooge Energy Limited Announces Extraordinary Meeting of Shareholders",
+        "summary": "DUBAI, Sept. 17, 2025 ( GLOBE NEWSWIRE ) -- Brooge Energy Limited ( \"BEL\" or the \"Company\" ) , a Cayman Islands-based infrastructure provider, which is engaged in Clean Petroleum Products and Biofuels and Crude Oil storage and related services, has separately announced to its shareholders an ...",
+        "source": "Alpha Vantage - GlobeNewswire",
+        "datetime": "Invalid Date",
+        "url": "https://www.globenewswire.com/news-release/2025/09/17/3151527/0/en/Brooge-Energy-Limited-Announces-Extraordinary-Meeting-of-Shareholders.html",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "TWC Enterprises Limited Announces Renewal of Normal Course Issuer Bid",
+        "summary": "KING CITY, Ontario, Sept. 17, 2025 ( GLOBE NEWSWIRE ) -- TWC Enterprises Limited ( \"TWC\" ) today announced that the Toronto Stock Exchange ( the \"TSX\" ) has accepted a notice filed by TWC of its intention to make a normal course issuer bid through the facilities of the TSX or alternative ...",
+        "source": "Alpha Vantage - GlobeNewswire",
+        "datetime": "Invalid Date",
+        "url": "https://www.globenewswire.com/news-release/2025/09/17/3151552/0/en/TWC-Enterprises-Limited-Announces-Renewal-of-Normal-Course-Issuer-Bid.html",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Alibaba enters robotaxi market with investment in Ant Group-backed Hello",
+        "summary": "Alibaba Group Holding has jumped into the burgeoning robotaxi market - which is a promising and profitable area for artificial intelligence applications - by investing in Hello, a ride-hailing business backed by its fintech affiliate Ant Group.",
+        "source": "Alpha Vantage - South China Morning Post",
+        "datetime": "Invalid Date",
+        "url": "https://www.scmp.com/tech/big-tech/article/3325867/alibaba-enters-robotaxi-market-investment-ant-group-backed-hello",
+        "sentiment": "Somewhat-Bullish"
+      }
+    ],
+    "us": [],
+    "asian": [],
+    "european": [],
+    "geopolitical": [],
+    "currencies": [],
+    "commodities": [],
+    "earnings": [],
+    "research": [],
+    "premarketMovers": [],
+    "webSearchResults": {}
+  },
+  "timing": {
+    "lastCloseTimestamp": 1758038400,
+    "lastCloseString": "9/16/2025, 12:00:00 PM",
+    "currentTime": "9/17/2025, 8:30:16 AM"
+  },
+  "totalHeadlines": 8,
+  "webSearchCount": 0,
+  "apiHeadlines": 8,
+  "categoryBreakdown": {
+    "general": 8,
+    "us": 0,
+    "asian": 0,
+    "european": 0,
+    "geopolitical": 0,
+    "currencies": 0,
+    "commodities": 0,
+    "earnings": 0,
+    "research": 0,
+    "premarketMovers": 0
+  },
+  "webSearchBreakdown": {},
+  "metadata": {
+    "generatedAt": "2025-09-17T12:31:50.283Z",
+    "reportType": "enhanced-premarket-brief-with-web-search",
+    "aiModel": "claude-sonnet-4",
+    "classification": "enhanced-institutional-grade",
+    "features": [
+      "traditional-apis",
+      "web-search-intelligence",
+      "cross-source-validation"
+    ]
+  }
+}
