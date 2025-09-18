@@ -1,0 +1,112 @@
+{
+  "headlines": {
+    "general": [
+      {
+        "headline": "Should Invesco Russell 1000 Dynamic Multifactor ETF  ( OMFL )  Be on Your Investing Radar?",
+        "summary": "Style Box ETF report for ...",
+        "source": "Alpha Vantage - Zacks Commentary",
+        "datetime": "Invalid Date",
+        "url": "https://www.zacks.com/stock/news/2753167/should-invesco-russell-1000-dynamic-multifactor-etf-omfl-be-on-your-investing-radar",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Should Invesco RAFI US 1000 ETF  ( PRF )  Be on Your Investing Radar?",
+        "summary": "Style Box ETF report for PRF ...",
+        "source": "Alpha Vantage - Zacks Commentary",
+        "datetime": "Invalid Date",
+        "url": "https://www.zacks.com/stock/news/2753168/should-invesco-rafi-us-1000-etf-prf-be-on-your-investing-radar",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Should First Trust Capital Strength ETF  ( FTCS )  Be on Your Investing Radar?",
+        "summary": "Style Box ETF report for ...",
+        "source": "Alpha Vantage - Zacks Commentary",
+        "datetime": "Invalid Date",
+        "url": "https://www.zacks.com/stock/news/2753172/should-first-trust-capital-strength-etf-ftcs-be-on-your-investing-radar",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "NVIDIA and Intel to Develop AI Infrastructure and Personal Computing Products - NVIDIA  ( NASDAQ:NVDA ) , Intel  ( NASDAQ:INTC ) ",
+        "summary": "SANTA CLARA, Calif., Sept. 18, 2025 ( GLOBE NEWSWIRE ) -- NVIDIA NVDA and Intel Corporation INTC today announced a collaboration to jointly develop multiple generations of custom data center and PC products that accelerate applications and workloads across hyperscale, enterprise and consumer ...",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/pressreleases/25/09/g47734276/nvidia-and-intel-to-develop-ai-infrastructure-and-personal-computing-products",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Is Invesco S&P 100 Equal Weight ETF  ( EQWL )  a Strong ETF Right Now?",
+        "summary": "Smart Beta ETF report for ...",
+        "source": "Alpha Vantage - Zacks Commentary",
+        "datetime": "Invalid Date",
+        "url": "https://www.zacks.com/stock/news/2753175/is-invesco-sp-100-equal-weight-etf-eqwl-a-strong-etf-right-now",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "DallasNews Board Reiterates Recommendation that Shareholders Vote FOR the Hearst Merger",
+        "summary": "Hearst's $16.50 All-Cash Offer Provides Certain Value and a 276% Premium Over the Closing Price Per Share of Series A Common Stock on July 9, 2025 DallasNews' Largest Shareholder Reiterates Support for the Hearst Merger, Highlighting Exceptional Premium for Shareholders",
+        "source": "Alpha Vantage - GlobeNewswire",
+        "datetime": "Invalid Date",
+        "url": "https://www.globenewswire.com/news-release/2025/09/18/3152254/0/en/DallasNews-Board-Reiterates-Recommendation-that-Shareholders-Vote-FOR-the-Hearst-Merger.html",
+        "sentiment": "Bullish"
+      },
+      {
+        "headline": "Is Fidelity Value Factor ETF  ( FVAL )  a Strong ETF Right Now?",
+        "summary": "Smart Beta ETF report for ...",
+        "source": "Alpha Vantage - Zacks Commentary",
+        "datetime": "Invalid Date",
+        "url": "https://www.zacks.com/stock/news/2753176/is-fidelity-value-factor-etf-fval-a-strong-etf-right-now",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Is SPDR S&P Semiconductor ETF  ( XSD )  a Strong ETF Right Now?",
+        "summary": "Smart Beta ETF report for ...",
+        "source": "Alpha Vantage - Zacks Commentary",
+        "datetime": "Invalid Date",
+        "url": "https://www.zacks.com/stock/news/2753170/is-spdr-sp-semiconductor-etf-xsd-a-strong-etf-right-now",
+        "sentiment": "Somewhat-Bullish"
+      }
+    ],
+    "us": [],
+    "asian": [],
+    "european": [],
+    "geopolitical": [],
+    "currencies": [],
+    "commodities": [],
+    "earnings": [],
+    "research": [],
+    "premarketMovers": [],
+    "webSearchResults": {}
+  },
+  "timing": {
+    "lastCloseTimestamp": 1758124800,
+    "lastCloseString": "9/17/2025, 12:00:00 PM",
+    "currentTime": "9/18/2025, 8:28:14 AM"
+  },
+  "totalHeadlines": 8,
+  "webSearchCount": 0,
+  "apiHeadlines": 8,
+  "categoryBreakdown": {
+    "general": 8,
+    "us": 0,
+    "asian": 0,
+    "european": 0,
+    "geopolitical": 0,
+    "currencies": 0,
+    "commodities": 0,
+    "earnings": 0,
+    "research": 0,
+    "premarketMovers": 0
+  },
+  "webSearchBreakdown": {},
+  "metadata": {
+    "generatedAt": "2025-09-18T12:29:30.027Z",
+    "reportType": "enhanced-premarket-brief-with-web-search",
+    "aiModel": "claude-sonnet-4",
+    "classification": "enhanced-institutional-grade",
+    "features": [
+      "traditional-apis",
+      "web-search-intelligence",
+      "cross-source-validation"
+    ]
+  }
+}
