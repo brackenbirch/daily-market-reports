@@ -1,0 +1,112 @@
+{
+  "headlines": {
+    "general": [
+      {
+        "headline": "5 Stocks That Dominated Investor Buzz This Week - How OPEN, NVDA, TSLA And Others Performed - CoreWeave  ( NASDAQ:CRWV ) , Intel  ( NASDAQ:INTC ) ",
+        "summary": "Retail investors buzzed about five stocks this week, from Sept. 15 to 19, on platforms like X and Reddit's r/WallStreetBets, amid market AI enthusiasm and the Federal Reserve rate cuts. The stocks, Opendoor Technologies Inc. OPEN, IonQ Inc. IONQ, CoreWeave Inc. CRWV, Nvidia Corp. NVDA, and Tesla ...",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/markets/equities/25/09/47758752/5-stocks-that-dominated-investor-buzz-this-week-how-open-nvda-tsla-and-others-performed",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Is FlexShares Quality Dividend Defensive ETF  ( QDEF )  a Strong ETF Right Now?",
+        "summary": "Smart Beta ETF report for ...",
+        "source": "Alpha Vantage - Zacks Commentary",
+        "datetime": "Invalid Date",
+        "url": "https://www.zacks.com/stock/news/2753778/is-flexshares-quality-dividend-defensive-etf-qdef-a-strong-etf-right-now",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "SIMA responds to AMF consultation on fee recalibration",
+        "summary": "MONTREAL, Sept. 19, 2025 /CNW/ - The Securities and Investment Management Association ( SIMA ) has submitted its response to the Autorité des marchés financiers' ( AMF ) consultation on the recalibration of regulatory fees.",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/pressreleases/25/09/n47758661/sima-responds-to-amf-consultation-on-fee-recalibration",
+        "sentiment": "Bullish"
+      },
+      {
+        "headline": "Is Nuveen ESG Large-Cap Growth ETF  ( NULG )  a Strong ETF Right Now?",
+        "summary": "Smart Beta ETF report for ...",
+        "source": "Alpha Vantage - Zacks Commentary",
+        "datetime": "Invalid Date",
+        "url": "https://www.zacks.com/stock/news/2753777/is-nuveen-esg-large-cap-growth-etf-nulg-a-strong-etf-right-now",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Nvidia's $5 Billion Intel Bet Could Shape AI PC Era, Says Ming-Chi Kuo, As Gene Munster Calls 20% INTC Stock Surge 'Overreaction' - Broadcom  ( NASDAQ:AVGO ) , Advanced Micro Devices  ( NASDAQ:AMD ) ",
+        "summary": "Analysts offered sharply different takes on Nvidia Corp.'s NVDA $5 billion investment in Intel Corp. INTC, with TF Securities' Ming-Chi Kuo touting the partnership's potential to reshape the AI PC landscape while Deepwater Asset Management's Gene Munster cautioned that Intel's soaring stock ...",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/markets/tech/25/09/47758197/nvidias-5-billion-intel-bet-could-shape-ai-pc-era-says-ming-chi-kuo-as-gene-munster-calls-20-intc-st",
+        "sentiment": "Neutral"
+      },
+      {
+        "headline": "SL Green Realty Corp. Announces Common Stock and Preferred Stock Dividends - SL Green Realty  ( NYSE:SLG ) ",
+        "summary": "NEW YORK, Sept. 19, 2025 ( GLOBE NEWSWIRE ) -- SL Green Realty Corp. SLG, Manhattan's largest office landlord, today announced that its board of directors has declared a monthly ordinary dividend of $0.2575 per share of common stock, which is the equivalent of an annualized dividend of $3.09 per ...",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/pressreleases/25/09/g47758652/sl-green-realty-corp-announces-common-stock-and-preferred-stock-dividends",
+        "sentiment": "Neutral"
+      },
+      {
+        "headline": "Hong Kong homebuyers snap up the city's first sale after rate cuts",
+        "summary": "Hong Kong's homebuyers defied a No 3 typhoon signal to snap up apartments during two property sales on Friday, entering the market after commercial banks lowered their prime lending rates a day earlier following the first rate cut by the local monetary authority.",
+        "source": "Alpha Vantage - South China Morning Post",
+        "datetime": "Invalid Date",
+        "url": "https://www.scmp.com/business/article/3326182/hong-kongs-homebuyers-brave-storm-signal-citys-first-post-rate-cut-property-sales",
+        "sentiment": "Neutral"
+      },
+      {
+        "headline": "Nuvini Group CEO Pierre Schurmann to Participate in Keynote Presentation at Brazil Investment Week in London on September 30, 2025 - Nvni Group  ( NASDAQ:NVNI ) ",
+        "summary": "NEW YORK, Sept. 19, 2025 ( GLOBE NEWSWIRE ) -- Nuvini Group Limited NVNI ( \"Nuvini\" or the \"Company\" ) , a leading technology conglomerate in the Latin American SaaS sector, today announced that Chief Executive Officer Pierre Schurmann will participate in the keynote presentation titled \"LatAm ...",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/pressreleases/25/09/g47759043/nuvini-group-ceo-pierre-schurmann-to-participate-in-keynote-presentation-at-brazil-investment-week",
+        "sentiment": "Somewhat-Bullish"
+      }
+    ],
+    "us": [],
+    "asian": [],
+    "european": [],
+    "geopolitical": [],
+    "currencies": [],
+    "commodities": [],
+    "earnings": [],
+    "research": [],
+    "premarketMovers": [],
+    "webSearchResults": {}
+  },
+  "timing": {
+    "lastCloseTimestamp": 1758211200,
+    "lastCloseString": "9/18/2025, 12:00:00 PM",
+    "currentTime": "9/19/2025, 8:29:12 AM"
+  },
+  "totalHeadlines": 8,
+  "webSearchCount": 0,
+  "apiHeadlines": 8,
+  "categoryBreakdown": {
+    "general": 8,
+    "us": 0,
+    "asian": 0,
+    "european": 0,
+    "geopolitical": 0,
+    "currencies": 0,
+    "commodities": 0,
+    "earnings": 0,
+    "research": 0,
+    "premarketMovers": 0
+  },
+  "webSearchBreakdown": {},
+  "metadata": {
+    "generatedAt": "2025-09-19T12:31:25.418Z",
+    "reportType": "enhanced-premarket-brief-with-web-search",
+    "aiModel": "claude-sonnet-4",
+    "classification": "enhanced-institutional-grade",
+    "features": [
+      "traditional-apis",
+      "web-search-intelligence",
+      "cross-source-validation"
+    ]
+  }
+}
