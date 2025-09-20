@@ -1,0 +1,112 @@
+{
+  "headlines": {
+    "general": [
+      {
+        "headline": "24/7 Trading Is Coming. But Is It a Good Thing?",
+        "summary": "This time next year, extended trading hours could be normal.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/09/20/247-trading-is-coming-but-is-it-a-good-thing/",
+        "sentiment": "Neutral"
+      },
+      {
+        "headline": "All It Takes Is $7,000 Invested in Each of These 5 High-Yield ETFs to Help Generate Over $2,000 in Passive Income Per Year",
+        "summary": "Boost your passive income from a diversified portfolio of stocks using ETFs.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/09/20/generate-passive-dividend-income-stock-etf/",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "This No-Brainer ETF Can Turn $500 Per Month Into $20,000 in Annual Dividend Income",
+        "summary": "This ETF offers high-quality dividend stocks without the high fees.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/09/20/etf-turn-500-month-20k-dividend-income-schd/",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Macroscope | Beware of rising bond yields and falling markets",
+        "summary": "The tsunami of liquidity washing through financial markets now threatens to drown us all in a destructive wave. Markets are not directing this excess liquidity in any meaningful way. That much is obvious from their antics in recent days.",
+        "source": "Alpha Vantage - South China Morning Post",
+        "datetime": "Invalid Date",
+        "url": "https://www.scmp.com/opinion/world-opinion/article/3325992/beware-rising-bond-yields-and-falling-markets",
+        "sentiment": "Neutral"
+      },
+      {
+        "headline": "This Recession-Forecasting Algorithm Hasn't Been Wrong in 65 Years -- and It Has an Ominous Message for Wall Street",
+        "summary": "Though everything appears to be going swimmingly for the U.S. economy and stock market, looks can be deceiving.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/09/20/recession-forecast-algorithm-not-wrong-in-65-years/",
+        "sentiment": "Neutral"
+      },
+      {
+        "headline": "Meet the Vanguard ETF That Can Turn $350 Per Month Into $1 Million With Minimal Risk",
+        "summary": "This fund charges minimal fees while giving you access to the best stocks in the world, positioning you for great long-term growth.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/09/20/vanguard-etf-turn-350-into-1-million-voo/",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Is Constellation Energy Stock a Buy Now?",
+        "summary": "Constellation Energy is the largest nuclear power provider in the United States, but that isn't enough to make the stock worth buying.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/09/20/is-constellation-energy-stock-a-buy-now/",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "3 Dividend Stocks Perfect for Gen Z Investors",
+        "summary": "These REITs are ideal for those in Gen Z.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/09/20/3-dividend-stocks-perfect-for-gen-z-investors/",
+        "sentiment": "Bullish"
+      }
+    ],
+    "us": [],
+    "asian": [],
+    "european": [],
+    "geopolitical": [],
+    "currencies": [],
+    "commodities": [],
+    "earnings": [],
+    "research": [],
+    "premarketMovers": [],
+    "webSearchResults": {}
+  },
+  "timing": {
+    "lastCloseTimestamp": 1758297600,
+    "lastCloseString": "9/19/2025, 12:00:00 PM",
+    "currentTime": "9/20/2025, 8:26:14 AM"
+  },
+  "totalHeadlines": 8,
+  "webSearchCount": 0,
+  "apiHeadlines": 8,
+  "categoryBreakdown": {
+    "general": 8,
+    "us": 0,
+    "asian": 0,
+    "european": 0,
+    "geopolitical": 0,
+    "currencies": 0,
+    "commodities": 0,
+    "earnings": 0,
+    "research": 0,
+    "premarketMovers": 0
+  },
+  "webSearchBreakdown": {},
+  "metadata": {
+    "generatedAt": "2025-09-20T12:27:24.927Z",
+    "reportType": "enhanced-premarket-brief-with-web-search",
+    "aiModel": "claude-sonnet-4",
+    "classification": "enhanced-institutional-grade",
+    "features": [
+      "traditional-apis",
+      "web-search-intelligence",
+      "cross-source-validation"
+    ]
+  }
+}
