@@ -1,0 +1,112 @@
+{
+  "headlines": {
+    "general": [
+      {
+        "headline": "The Best ETFs to Invest in Right Now",
+        "summary": "These ETFs can be great complementary pieces in a portfolio.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/09/21/the-best-etfs-to-invest-in-right-now/",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "3 Stocks That Cut You a Check Each Month",
+        "summary": "Yes, you can collect investment income at the same cadence you incur and pay most of your bills.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/09/21/3-stocks-that-cut-you-a-check-each-month/",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "1 Dividend Stock Down 32% You'll Regret Not Buying on the Dip",
+        "summary": "This company has a solid turnaround plan in place.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/09/21/dividend-stock-down-regret-not-buying-dip-unh/",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "The Best Warren Buffett Stocks to Buy With $3,000 Right Now",
+        "summary": "Most of the Oracle of Omaha's picks are also good prospects for ordinary investors.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/09/21/the-best-warren-buffett-stocks-to-buy-with-3000-ri/",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Billionaire Bill Gates Has 68% of His Foundation's $48 billion Portfolio Invested in 3 Remarkable Stocks",
+        "summary": "The Microsoft founder plans to give away virtually all of his wealth by 2045.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/09/21/billionaire-bill-gates-has-68-of-his-foundations-4/",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "5 Ways the Fed's Interest Rate Cut Will Boost Robinhood's Stock",
+        "summary": "The online brokerage firm's headwinds are dissipating as fresh tailwinds kick in.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/09/21/ways-fed-interest-rate-cut-boost-robinhood-stock/",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "The Fed Just Cut Interest Rates for the First Time Since December 2024, and Here's What It Means for the Stock Market",
+        "summary": "There could be two more interest rate cuts before 2025 is over, which might trigger some volatility in the stock market.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/09/21/fed-cut-interest-rates-december-2024-stock-market/",
+        "sentiment": "Neutral"
+      },
+      {
+        "headline": "3 Bargain Stocks for Investors on a Budget",
+        "summary": "If every one of your dollars counts, make sure you're getting the biggest possible bang for your buck.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/09/21/3-bargain-stocks-for-investors-on-a-budget/",
+        "sentiment": "Neutral"
+      }
+    ],
+    "us": [],
+    "asian": [],
+    "european": [],
+    "geopolitical": [],
+    "currencies": [],
+    "commodities": [],
+    "earnings": [],
+    "research": [],
+    "premarketMovers": [],
+    "webSearchResults": {}
+  },
+  "timing": {
+    "lastCloseTimestamp": 1758297600,
+    "lastCloseString": "9/19/2025, 12:00:00 PM",
+    "currentTime": "9/21/2025, 8:26:30 AM"
+  },
+  "totalHeadlines": 8,
+  "webSearchCount": 0,
+  "apiHeadlines": 8,
+  "categoryBreakdown": {
+    "general": 8,
+    "us": 0,
+    "asian": 0,
+    "european": 0,
+    "geopolitical": 0,
+    "currencies": 0,
+    "commodities": 0,
+    "earnings": 0,
+    "research": 0,
+    "premarketMovers": 0
+  },
+  "webSearchBreakdown": {},
+  "metadata": {
+    "generatedAt": "2025-09-21T12:27:35.725Z",
+    "reportType": "enhanced-premarket-brief-with-web-search",
+    "aiModel": "claude-sonnet-4",
+    "classification": "enhanced-institutional-grade",
+    "features": [
+      "traditional-apis",
+      "web-search-intelligence",
+      "cross-source-validation"
+    ]
+  }
+}
