@@ -1,0 +1,112 @@
+{
+  "headlines": {
+    "general": [
+      {
+        "headline": "JPMorgan Announces Cash Distributions for the JPMorgan ETFs",
+        "summary": "TORONTO, Sept. 23, 2025 ( GLOBE NEWSWIRE ) -- J. P. Morgan Asset Management ( JPMAM ) * today announced the final September 2025 cash distributions for the below listed JPMorgan ETFs. The JPMorgan ETFs trade on the Toronto Stock Exchange ( TSX ) .",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/pressreleases/25/09/g47813857/jpmorgan-announces-cash-distributions-for-the-jpmorgan-etfs",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Caliber Selects Coinbase Prime to Power Trading and Custody for LINK Treasury",
+        "summary": "Caliber announced it has selected Coinbase Prime as its institutional platform for trading and custody in support of Caliber's Digital Asset Treasury (DAT) ...",
+        "source": "Alpha Vantage - GlobeNewswire",
+        "datetime": "Invalid Date",
+        "url": "https://www.globenewswire.com/news-release/2025/09/23/3154556/0/en/Caliber-Selects-Coinbase-Prime-to-Power-Trading-and-Custody-for-LINK-Treasury.html",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Super Typhoon Ragasa to delay the close of Zijin Gold's IPO",
+        "summary": "Super Typhoon Ragasa is expected to force Zijin Gold International, which launched Hong Kong's second-biggest initial public offering (IPO) this year, to delay the book close offering for its retail investors from tomorrow, according to its listing prospectus.",
+        "source": "Alpha Vantage - South China Morning Post",
+        "datetime": "Invalid Date",
+        "url": "https://www.scmp.com/business/companies/article/3326576/super-typhoon-ragasa-delay-close-zijin-golds-ipo",
+        "sentiment": "Neutral"
+      },
+      {
+        "headline": "reAlpha Regains Compliance With Nasdaq Minimum Market Value of Listed Securities Requirement",
+        "summary": "DUBLIN, Ohio, Sept. 23, 2025 ( GLOBE NEWSWIRE ) -- reAlpha Tech Corp. ( Nasdaq: AIRE ) ( \"reAlpha\" or the \"Company\" ) , an AI-powered real estate technology company, today announced that on September 22, 2025, it received a letter from the Listing Qualifications Department ( the \"Staff\" ) of ...",
+        "source": "Alpha Vantage - GlobeNewswire",
+        "datetime": "Invalid Date",
+        "url": "https://www.globenewswire.com/news-release/2025/09/23/3154572/0/en/reAlpha-Regains-Compliance-With-Nasdaq-Minimum-Market-Value-of-Listed-Securities-Requirement.html",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Down 42%, Should You Buy This Top Growth Stock With $10,000 Right Now?",
+        "summary": "Even with the stock market hitting record highs, investors can still find buying opportunities.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/09/23/down-42-buy-top-growth-stock-10000-right-now/",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Inventus Reports 4.0 gpt Gold and 1.50 Metre Average for Trench 1 North Grade-Control Drilling and Provides Bulk Sample Update at the Pardo Gold Project",
+        "summary": "TORONTO, Sept. 23, 2025 ( GLOBE NEWSWIRE ) -- Inventus Mining Corp. ( TSXV: IVS ) ( \"Inventus\" or the \"Company\" ) is pleased to report final results from grade-control drilling at its Trench 1 North Bulk Sample Site and provide an update on its bulk sampling at the 100%-owned Pardo Gold Project, ...",
+        "source": "Alpha Vantage - GlobeNewswire",
+        "datetime": "Invalid Date",
+        "url": "https://www.globenewswire.com/news-release/2025/09/23/3154531/0/en/Inventus-Reports-4-0-gpt-Gold-and-1-50-Metre-Average-for-Trench-1-North-Grade-Control-Drilling-and-Provides-Bulk-Sample-Update-at-the-Pardo-Gold-Project.html",
+        "sentiment": "Neutral"
+      },
+      {
+        "headline": "Is OpenDoor Technologies a Millionaire-Maker Stock?",
+        "summary": "This left-for-dead real estate technology stock is surging. But should you take the bait?",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/09/23/is-opendoor-technologies-a-millionaire-maker-stock/",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Trident Reports First Half 2025 Unaudited Financial Results",
+        "summary": "SINGAPORE, Sept. 23, 2025 ( GLOBE NEWSWIRE ) -- Trident Digital Tech Holdings Ltd ( \"Trident\" or the \"Company,\" NASDAQ: TDTH ) , a Singapore-based catalyst for digital transformation and Web 3.0 activation, today announced its unaudited financial results for the six months ended June 30, 2025.",
+        "source": "Alpha Vantage - GlobeNewswire",
+        "datetime": "Invalid Date",
+        "url": "https://www.globenewswire.com/news-release/2025/09/23/3154535/0/en/Trident-Reports-First-Half-2025-Unaudited-Financial-Results.html",
+        "sentiment": "Somewhat-Bullish"
+      }
+    ],
+    "us": [],
+    "asian": [],
+    "european": [],
+    "geopolitical": [],
+    "currencies": [],
+    "commodities": [],
+    "earnings": [],
+    "research": [],
+    "premarketMovers": [],
+    "webSearchResults": {}
+  },
+  "timing": {
+    "lastCloseTimestamp": 1758556800,
+    "lastCloseString": "9/22/2025, 12:00:00 PM",
+    "currentTime": "9/23/2025, 8:29:08 AM"
+  },
+  "totalHeadlines": 8,
+  "webSearchCount": 0,
+  "apiHeadlines": 8,
+  "categoryBreakdown": {
+    "general": 8,
+    "us": 0,
+    "asian": 0,
+    "european": 0,
+    "geopolitical": 0,
+    "currencies": 0,
+    "commodities": 0,
+    "earnings": 0,
+    "research": 0,
+    "premarketMovers": 0
+  },
+  "webSearchBreakdown": {},
+  "metadata": {
+    "generatedAt": "2025-09-23T12:30:18.933Z",
+    "reportType": "enhanced-premarket-brief-with-web-search",
+    "aiModel": "claude-sonnet-4",
+    "classification": "enhanced-institutional-grade",
+    "features": [
+      "traditional-apis",
+      "web-search-intelligence",
+      "cross-source-validation"
+    ]
+  }
+}
