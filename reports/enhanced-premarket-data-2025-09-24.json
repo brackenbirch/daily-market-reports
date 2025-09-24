@@ -1,0 +1,112 @@
+{
+  "headlines": {
+    "general": [
+      {
+        "headline": "Delisting of Securities from The Nasdaq Stock Market",
+        "summary": "NEW YORK, Sept. 24, 2025 ( GLOBE NEWSWIRE ) -- The Nasdaq Stock Market announced today that it will delist the warrants of Digital Brands Group, Inc. Digital Brands Group, Inc.'s warrants were suspended on December 18, 2024 and have not traded on Nasdaq since that time.",
+        "source": "Alpha Vantage - GlobeNewswire",
+        "datetime": "Invalid Date",
+        "url": "https://www.globenewswire.com/news-release/2025/09/24/3155360/6948/en/Delisting-of-Securities-from-The-Nasdaq-Stock-Market.html",
+        "sentiment": "Neutral"
+      },
+      {
+        "headline": "Amplify ETFs Files for Solana & XRP Option Income ETFs",
+        "summary": "CHICAGO, Sept. 24, 2025 ( GLOBE NEWSWIRE ) -- Amplify ETFs, a leading provider of breakthrough ETF solutions, announces the filings for the Amplify Solana [ ]% Monthly Option Income ETF and Amplify XRP [ ]% Monthly Option Income ETF.",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/pressreleases/25/09/g47837645/amplify-etfs-files-for-solana-xrp-option-income-etfs",
+        "sentiment": "Neutral"
+      },
+      {
+        "headline": "CTO Realty Growth Completes $5 Million Share Repurchase Program and Board Approves New $10 Million Authorization",
+        "summary": "WINTER PARK, Fla., Sept. 24, 2025 ( GLOBE NEWSWIRE ) -- CTO Realty Growth, Inc. ( NYSE: CTO ) ( the \"Company\" or \"CTO\" ) today announced the approval by its Board of Directors of a new $10 million common stock repurchase program. Additionally, the Company concluded its previous $5 million common ...",
+        "source": "Alpha Vantage - GlobeNewswire",
+        "datetime": "Invalid Date",
+        "url": "https://www.globenewswire.com/news-release/2025/09/24/3155344/0/en/CTO-Realty-Growth-Completes-5-Million-Share-Repurchase-Program-and-Board-Approves-New-10-Million-Authorization.html",
+        "sentiment": "Neutral"
+      },
+      {
+        "headline": "AGF Management Limited Reports Third Quarter 2025 Financial Results",
+        "summary": "TORONTO, Sept. 24, 2025 ( GLOBE NEWSWIRE ) -- Reported quarterly adjusted diluted earnings per share of $0.46 Total assets under management and fee-earning assets of $56.8 billion Declared quarterly dividend per share to 12.5 cents",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/pressreleases/25/09/g47837538/agf-management-limited-reports-third-quarter-2025-financial-results",
+        "sentiment": "Neutral"
+      },
+      {
+        "headline": "AGF Management Limited Reports Third Quarter 2025 Financial Results",
+        "summary": "TORONTO, Sept. 24, 2025 ( GLOBE NEWSWIRE ) -- AGF Management Limited ( AGF or the Company ) ( TSX: AGF.B ) today announced financial results for the third quarter ended August 31, 2025.",
+        "source": "Alpha Vantage - GlobeNewswire",
+        "datetime": "Invalid Date",
+        "url": "https://www.globenewswire.com/news-release/2025/09/24/3155343/0/en/AGF-Management-Limited-Reports-Third-Quarter-2025-Financial-Results.html",
+        "sentiment": "Neutral"
+      },
+      {
+        "headline": "YieldMax® ETFs Announces Distributions on WNTR, MSTY, ULTY, SLTY, SMCY, and Others",
+        "summary": "CHICAGO and MILWAUKEE and NEW YORK, Sept. 24, 2025 ( GLOBE NEWSWIRE ) -- YieldMax® today announced distributions for the YieldMax® Weekly Payers and Group D ETFs listed in the table below. Note: CRSH, DIPS, FIAT, SLTY, WNTR and YQQQ are hereinafter referred to as the \"Short ETFs.\"",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/pressreleases/25/09/g47837249/yieldmax-etfs-announces-distributions-on-wntr-msty-ulty-slty-smcy-and-others",
+        "sentiment": "Neutral"
+      },
+      {
+        "headline": "Mortgage demand stalls after mini refinance boom",
+        "summary": "After a massive 58% weekly surge in refinance demand the week before, mortgage demand stalled again last week, even though interest rates fell further.",
+        "source": "Alpha Vantage - CNBC",
+        "datetime": "Invalid Date",
+        "url": "https://www.cnbc.com/2025/09/24/mortgage-demand-stalls-after-mini-refinance-boom.html",
+        "sentiment": "Neutral"
+      },
+      {
+        "headline": "uniQure Announces Refinancing of Existing $50 Million Debt and Securing Up to an Additional $125 Million in Non-Dilutive Funding - uniQure  ( NASDAQ:QURE ) , Hercules Capital  ( NYSE:HTGC ) ",
+        "summary": "~ Term of current $50 million debt outstanding extended from January 2027 to October 2030 ~ ~ Additional $100 million available subject to regulatory and financial milestones ~ ~ Additional $25 million available subject to Hercules' approval ~",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/pressreleases/25/09/g47837697/uniqure-announces-refinancing-of-existing-50-million-debt-and-securing-up-to-an-additional-125-mil",
+        "sentiment": "Somewhat-Bullish"
+      }
+    ],
+    "us": [],
+    "asian": [],
+    "european": [],
+    "geopolitical": [],
+    "currencies": [],
+    "commodities": [],
+    "earnings": [],
+    "research": [],
+    "premarketMovers": [],
+    "webSearchResults": {}
+  },
+  "timing": {
+    "lastCloseTimestamp": 1758643200,
+    "lastCloseString": "9/23/2025, 12:00:00 PM",
+    "currentTime": "9/24/2025, 8:29:29 AM"
+  },
+  "totalHeadlines": 8,
+  "webSearchCount": 0,
+  "apiHeadlines": 8,
+  "categoryBreakdown": {
+    "general": 8,
+    "us": 0,
+    "asian": 0,
+    "european": 0,
+    "geopolitical": 0,
+    "currencies": 0,
+    "commodities": 0,
+    "earnings": 0,
+    "research": 0,
+    "premarketMovers": 0
+  },
+  "webSearchBreakdown": {},
+  "metadata": {
+    "generatedAt": "2025-09-24T12:30:36.689Z",
+    "reportType": "enhanced-premarket-brief-with-web-search",
+    "aiModel": "claude-sonnet-4",
+    "classification": "enhanced-institutional-grade",
+    "features": [
+      "traditional-apis",
+      "web-search-intelligence",
+      "cross-source-validation"
+    ]
+  }
+}
