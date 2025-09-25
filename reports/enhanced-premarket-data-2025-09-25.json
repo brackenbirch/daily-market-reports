@@ -1,0 +1,112 @@
+{
+  "headlines": {
+    "general": [
+      {
+        "headline": "Cipher Mining Announces Proposed Private Offering of $800 Million of 0.00% Convertible Senior Notes",
+        "summary": "NEW YORK, Sept. 25, 2025 ( GLOBE NEWSWIRE ) -- Cipher Mining Inc. ( NASDAQ:CIFR ) ( \"Cipher\" or the \"Company\" ) , a leading developer and operator of industrial-scale data centers, today announced its intention to offer, subject to market and other conditions, $800 million aggregate principal ...",
+        "source": "Alpha Vantage - GlobeNewswire",
+        "datetime": "Invalid Date",
+        "url": "https://www.globenewswire.com/news-release/2025/09/25/3156127/0/en/Cipher-Mining-Announces-Proposed-Private-Offering-of-800-Million-of-0-00-Convertible-Senior-Notes.html",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Should You Invest in the First Trust Water ETF  ( FIW ) ?",
+        "summary": "Sector ETF report for ...",
+        "source": "Alpha Vantage - Zacks Commentary",
+        "datetime": "Invalid Date",
+        "url": "https://www.zacks.com/stock/news/2756782/should-you-invest-in-the-first-trust-water-etf-fiw",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "3 Top-Ranked Municipal Bond Funds for Steady Income",
+        "summary": "Below, we share with you three top-ranked municipal bond funds. Each has a Zacks Mutual Fund Rank #1 (Strong Buy).",
+        "source": "Alpha Vantage - Zacks Commentary",
+        "datetime": "Invalid Date",
+        "url": "https://www.zacks.com/stock/news/2756813/3-top-ranked-municipal-bond-funds-for-steady-income",
+        "sentiment": "Bullish"
+      },
+      {
+        "headline": "What's Going On With HSBC Stock Thursday? - HSBC Holdings  ( NYSE:HSBC ) ",
+        "summary": "HSBC Holdings plc HSBC announced on Thursday that it has produced the world's first empirical evidence showing quantum computers can add measurable value in real-world financial markets. Partnering with International Business Machines Corp.",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/markets/tech/25/09/47860609/hsbc-and-ibm-put-quantum-computing-to-work-in-real-financial-markets",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Stock Market Today: S&P 500, Nasdaq And Dow Jones Futures Flat, As Investors Brace For Multiple Fed Official Remarks - Costco Earnings In Focus - Apple  ( NASDAQ:AAPL ) , Accenture  ( NYSE:ACN ) ",
+        "summary": "U.S. stock futures are trading mixed on Thursday following a decline on Wednesday, with no significant movements across major benchmark indices.",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/markets/market-summary/25/09/47860816/stock-market-today-sp-500-nasdaq-and-dow-jones-futures-flat-as-investors-brace-for-multipl",
+        "sentiment": "Neutral"
+      },
+      {
+        "headline": "Guardian Capital Group Limited Files Management Information Circular for Special Meeting of Shareholders and Confirms Receipt of Interim Order for Previously Announced Plan of Arrangement",
+        "summary": "● The Board of Directors of Guardian ( with interested directors abstaining from voting ) , acting on the unanimous recommendation of the Independent Committee, unanimously recommends that Shareholders ( other than Rollover Shareholders ) vote FOR the Transaction.● Shareholders are encouraged to ...",
+        "source": "Alpha Vantage - GlobeNewswire",
+        "datetime": "Invalid Date",
+        "url": "https://www.globenewswire.com/news-release/2025/09/25/3156143/0/en/Guardian-Capital-Group-Limited-Files-Management-Information-Circular-for-Special-Meeting-of-Shareholders-and-Confirms-Receipt-of-Interim-Order-for-Previously-Announced-Plan-of-Arra.html",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Cathie Wood Makes Trading Blitz: Buys Alibaba Stock Worth $11 Million, Dumps AMD And This AI Stock  ( CORRECTED )  - Alibaba Gr Hldgs  ( NYSE:BABA ) ",
+        "summary": "Editor's Note: The story's headline has been updated to correct a typo. On Wednesday, Cathie Wood-led Ark Invest executed significant trades involving Alibaba Group Holding Ltd BABA, Advanced Micro Devices Inc. AMD, and Tempus AI Inc. TEM. ARK Innovation ETF ARKK fund purchased 63,231 shares of ...",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/etfs/broad-u-s-equity-etfs/25/09/47856853/cathie-wood-makes-trading-blitz-buys-alibaba-stock-woth-11-million-dumps-amd-and-this-",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "OTC Markets Group Welcomes Radisson Mining Resources Inc. to OTCQX",
+        "summary": "NEW YORK, Sept. 25, 2025 ( GLOBE NEWSWIRE ) -- OTC Markets Group Inc. ( OTCQX: OTCM ) , operator of regulated markets for trading 12,000 U.S. and international securities, today announced Radisson Mining Resources Inc. ( TSX-V: RDS.",
+        "source": "Alpha Vantage - GlobeNewswire",
+        "datetime": "Invalid Date",
+        "url": "https://www.globenewswire.com/news-release/2025/09/25/3156136/0/en/OTC-Markets-Group-Welcomes-Radisson-Mining-Resources-Inc-to-OTCQX.html",
+        "sentiment": "Somewhat-Bullish"
+      }
+    ],
+    "us": [],
+    "asian": [],
+    "european": [],
+    "geopolitical": [],
+    "currencies": [],
+    "commodities": [],
+    "earnings": [],
+    "research": [],
+    "premarketMovers": [],
+    "webSearchResults": {}
+  },
+  "timing": {
+    "lastCloseTimestamp": 1758729600,
+    "lastCloseString": "9/24/2025, 12:00:00 PM",
+    "currentTime": "9/25/2025, 8:30:19 AM"
+  },
+  "totalHeadlines": 8,
+  "webSearchCount": 0,
+  "apiHeadlines": 8,
+  "categoryBreakdown": {
+    "general": 8,
+    "us": 0,
+    "asian": 0,
+    "european": 0,
+    "geopolitical": 0,
+    "currencies": 0,
+    "commodities": 0,
+    "earnings": 0,
+    "research": 0,
+    "premarketMovers": 0
+  },
+  "webSearchBreakdown": {},
+  "metadata": {
+    "generatedAt": "2025-09-25T12:32:03.486Z",
+    "reportType": "enhanced-premarket-brief-with-web-search",
+    "aiModel": "claude-sonnet-4",
+    "classification": "enhanced-institutional-grade",
+    "features": [
+      "traditional-apis",
+      "web-search-intelligence",
+      "cross-source-validation"
+    ]
+  }
+}
