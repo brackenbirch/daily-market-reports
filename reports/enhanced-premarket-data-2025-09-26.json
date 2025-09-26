@@ -1,0 +1,112 @@
+{
+  "headlines": {
+    "general": [
+      {
+        "headline": "1 High-Yield Vanguard Dividend Fund to Buy Hand Over Fist",
+        "summary": "This could be a big winner of Federal Reserve rate cuts.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/09/26/1-high-yield-vanguard-dividend-fund-to-buy-hand-ov/",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Fairfax India Announces Intention to Make a Normal Course Issuer Bid",
+        "summary": "NOT FOR DISTRIBUTION TO U.S. NEWSWIRE SERVICES OR FOR DISSEMINATION IN THE UNITED STATES ...",
+        "source": "Alpha Vantage - GlobeNewswire",
+        "datetime": "Invalid Date",
+        "url": "https://www.globenewswire.com/news-release/2025/09/26/3156969/0/en/Fairfax-India-Announces-Intention-to-Make-a-Normal-Course-Issuer-Bid.html",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "OTC Markets Group Welcomes Capstone Green Energy Holdings, Inc. to OTCQX",
+        "summary": "NEW YORK, Sept. 26, 2025 ( GLOBE NEWSWIRE ) -- OTC Markets Group Inc. ( OTCQX: OTCM ) , operator of regulated markets for trading 12,000 U.S. and international securities, today announced Capstone Green Energy Holdings, Inc. ( OTCQX: CGEH ) , a leader in clean technology, has qualified to trade ...",
+        "source": "Alpha Vantage - GlobeNewswire",
+        "datetime": "Invalid Date",
+        "url": "https://www.globenewswire.com/news-release/2025/09/26/3156938/0/en/OTC-Markets-Group-Welcomes-Capstone-Green-Energy-Holdings-Inc-to-OTCQX.html",
+        "sentiment": "Bullish"
+      },
+      {
+        "headline": "Intention to Make a Normal Course Issuer Bid for Subordinate Voting Shares and Preferred Shares",
+        "summary": "TORONTO, Sept. 26, 2025 ( GLOBE NEWSWIRE ) -- Fairfax Financial Holdings Limited ( \"Fairfax\" ) ( TSX: FFH and FFH.U ) announces that the Toronto Stock Exchange ( the \"TSX\" ) has accepted a notice filed by Fairfax of its intention to commence a Normal Course Issuer Bid ( \"NCIB\" ) through the ...",
+        "source": "Alpha Vantage - GlobeNewswire",
+        "datetime": "Invalid Date",
+        "url": "https://www.globenewswire.com/news-release/2025/09/26/3156967/0/en/Intention-to-Make-a-Normal-Course-Issuer-Bid-for-Subordinate-Voting-Shares-and-Preferred-Shares.html",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Cre8 Enterprise Limited Participates in the Second Largest IPO in the World This Year - Cre8 Enterprise  ( NASDAQ:CRE ) ",
+        "summary": "Hong Kong, Sept. 26, 2025 ( GLOBE NEWSWIRE ) -- Cre8 Enterprise Limited ( NASDAQ: CRE ) ( \"Cre8\" or the \"Company\" ) , a Hong Kong-based integrated financial printing service provider, announced today that Cre8 is proud to be the sole financial printing service provider for Zijin Gold ...",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/pressreleases/25/09/g47886309/cre8-enterprise-limited-participates-in-the-second-largest-ipo-in-the-world-this-year",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "The AI Stock Market Bubble: Why It Hasn't Burst Yet and What's Keeping Valuations High - NVIDIA  ( NASDAQ:NVDA ) ",
+        "summary": "As AI stocks continue to defy gravity, investors are grappling with a fundamental question: Is this another dot-com bubble waiting to burst, or are we witnessing the birth of a new market paradigm? The answer, according to market analysts, lies somewhere in between. The case for an AI bubble is ...",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/opinion/25/09/47885908/the-ai-stock-market-bubble-why-it-hasnt-burst-yet-and-whats-keeping-valuations-high",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "IBM Just Made a Quantum Computing Breakthrough",
+        "summary": "IBM and HSBC used a quantum system to improve a complex process.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/09/26/ibm-just-made-a-quantum-computing-breakthrough/",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Cre8 Enterprise Limited Participates in the Second Largest IPO in the World This Year",
+        "summary": "Hong Kong, Sept. 26, 2025 ( GLOBE NEWSWIRE ) -- Cre8 Enterprise Limited ( Nasdaq: CRE ) ( \"Cre8\" or the \"Company\" ) , a Hong Kong-based integrated financial printing service provider, announced today that Cre8 is proud to be the sole financial printing service provider for Zijin Gold ...",
+        "source": "Alpha Vantage - GlobeNewswire",
+        "datetime": "Invalid Date",
+        "url": "https://www.globenewswire.com/news-release/2025/09/26/3156970/0/en/Cre8-Enterprise-Limited-Participates-in-the-Second-Largest-IPO-in-the-World-This-Year.html",
+        "sentiment": "Somewhat-Bullish"
+      }
+    ],
+    "us": [],
+    "asian": [],
+    "european": [],
+    "geopolitical": [],
+    "currencies": [],
+    "commodities": [],
+    "earnings": [],
+    "research": [],
+    "premarketMovers": [],
+    "webSearchResults": {}
+  },
+  "timing": {
+    "lastCloseTimestamp": 1758816000,
+    "lastCloseString": "9/25/2025, 12:00:00 PM",
+    "currentTime": "9/26/2025, 8:29:07 AM"
+  },
+  "totalHeadlines": 8,
+  "webSearchCount": 0,
+  "apiHeadlines": 8,
+  "categoryBreakdown": {
+    "general": 8,
+    "us": 0,
+    "asian": 0,
+    "european": 0,
+    "geopolitical": 0,
+    "currencies": 0,
+    "commodities": 0,
+    "earnings": 0,
+    "research": 0,
+    "premarketMovers": 0
+  },
+  "webSearchBreakdown": {},
+  "metadata": {
+    "generatedAt": "2025-09-26T12:30:35.411Z",
+    "reportType": "enhanced-premarket-brief-with-web-search",
+    "aiModel": "claude-sonnet-4",
+    "classification": "enhanced-institutional-grade",
+    "features": [
+      "traditional-apis",
+      "web-search-intelligence",
+      "cross-source-validation"
+    ]
+  }
+}
