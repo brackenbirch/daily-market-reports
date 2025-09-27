@@ -1,0 +1,112 @@
+{
+  "headlines": {
+    "general": [
+      {
+        "headline": "Is The Vanguard Total Stock Market Index Fund a Buy?",
+        "summary": "With a 0.03% expense ratio and broad exposure to the full U.S. market, this boring fund keeps beating flashier alternatives by doing absolutely nothing special.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/09/27/is-the-vanguard-total-stock-market-index-fund-a-bu/",
+        "sentiment": "Neutral"
+      },
+      {
+        "headline": "The Stock Market May Have a Serious Problem -- 2 Brilliant Index Funds to Buy to Hedge Against the Risk",
+        "summary": "These equal-weight S&P 500 index funds can help investors hedge against concentration risk in the stock market.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/09/27/the-stock-market-may-have-a-serious-problem-2-bril/",
+        "sentiment": "Neutral"
+      },
+      {
+        "headline": "These 3 ETFs Could Shine as Interest Rates Fall",
+        "summary": "These ETFs hold dividend-paying stocks that should do well with interest rates dropping.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/09/27/these-3-etfs-could-shine-as-interest-rates-fall/",
+        "sentiment": "Neutral"
+      },
+      {
+        "headline": "Stock-Split Watch: Is BigBear.ai Next?",
+        "summary": "BigBear.ai has taken investors on a wild ride.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/09/27/stock-split-watch-is-bigbearai-next/",
+        "sentiment": "Neutral"
+      },
+      {
+        "headline": "Should You Buy Berkshire Hathaway  ( BRK.B )  While It's Hovering Around $500?",
+        "summary": "The answer could depend on your investing time horizon.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/09/27/should-you-buy-berkshire-hathaway-brkb-while-its-b/",
+        "sentiment": "Neutral"
+      },
+      {
+        "headline": "3 Dirt Cheap Stocks to Buy With $1,000 Right Now",
+        "summary": "After material sell-offs, this trio of reliable dividend stocks is worth a close look for investors of all stripes.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/09/27/3-dirt-cheap-stocks-to-buy-with-1000-right-now/",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "For Nvidia Investors, CoreWeave Could Become a Hidden Profit Engine",
+        "summary": "Nvidia CEO Jensen Huang is investing where he thinks the growth is headed.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/09/27/nvda-investors-coreweave-could-juice-profits/",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "3 Ultra-High-Yield Dividend Stocks That Won't Keep You Up at Night",
+        "summary": "Income investors can sleep soundly knowing these stocks are likely to pay reliable and growing dividends.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/09/27/3-ultra-high-yield-dividend-stocks-that-wont-keep/",
+        "sentiment": "Somewhat-Bullish"
+      }
+    ],
+    "us": [],
+    "asian": [],
+    "european": [],
+    "geopolitical": [],
+    "currencies": [],
+    "commodities": [],
+    "earnings": [],
+    "research": [],
+    "premarketMovers": [],
+    "webSearchResults": {}
+  },
+  "timing": {
+    "lastCloseTimestamp": 1758902400,
+    "lastCloseString": "9/26/2025, 12:00:00 PM",
+    "currentTime": "9/27/2025, 8:25:32 AM"
+  },
+  "totalHeadlines": 8,
+  "webSearchCount": 0,
+  "apiHeadlines": 8,
+  "categoryBreakdown": {
+    "general": 8,
+    "us": 0,
+    "asian": 0,
+    "european": 0,
+    "geopolitical": 0,
+    "currencies": 0,
+    "commodities": 0,
+    "earnings": 0,
+    "research": 0,
+    "premarketMovers": 0
+  },
+  "webSearchBreakdown": {},
+  "metadata": {
+    "generatedAt": "2025-09-27T12:26:59.818Z",
+    "reportType": "enhanced-premarket-brief-with-web-search",
+    "aiModel": "claude-sonnet-4",
+    "classification": "enhanced-institutional-grade",
+    "features": [
+      "traditional-apis",
+      "web-search-intelligence",
+      "cross-source-validation"
+    ]
+  }
+}
