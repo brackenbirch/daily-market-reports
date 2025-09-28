@@ -1,0 +1,112 @@
+{
+  "headlines": {
+    "general": [
+      {
+        "headline": "All It Takes Is $28,000 Invested in These 2 High-Yield Dividend Stocks and 1 ETF to Help Generate Over $1,000 in Passive Income Per Year",
+        "summary": "Generating dividend income from stocks is a great way to stay invested in the market while boosting your passive income stream.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/09/28/buy-high-yield-stock-etf-passive-income/",
+        "sentiment": "Bullish"
+      },
+      {
+        "headline": "What's Next for These 3 Artificial Intelligence  ( AI )  Stocks?",
+        "summary": "These stocks have reacted to AI in surprising ways, but investors should also consider their future prospects.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/09/28/whats-next-for-these-3-ai-stocks/",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "If I Could Buy Only 1 High-Yield Dividend ETF for Passive Income in September, This Would Be It",
+        "summary": "The SPDR Portfolio S&P 500 High Dividend ETF should top the list for dividend-seeking investors.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/09/28/if-i-could-buy-only-1-high-yield-dividend-etf-for/",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "5 Top Stocks to Buy in October",
+        "summary": "These five stocks are underperforming the S&P 500 in 2025, but have what it takes to reward investors over the long term.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/09/28/5-top-stocks-to-buy-in-october/",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Should You Buy AGNC Stock While It's Below a $10.50 Price Target?",
+        "summary": "Is this mortgage REIT a high-yield trap or a hidden gem?",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/09/28/should-you-buy-agnc-stock-while-its-below-10/",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "3 Vanguard ETFs to Buy With $1,000 and Hold Forever",
+        "summary": "With a variety of low-cost funds to choose from, there's likely a Vanguard ETF that fits your investment goals.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/09/28/3-vanguard-etfs-to-buy-with-1000-and-hold-forever/",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Why AST SpaceMobile Stock Soared This Week",
+        "summary": "AST SpaceMobile managed to defy stock market gravity this week.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/09/28/why-ast-spacemobile-stock-soared-this-week/",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "5 Things Investors Need to Know About Costco This Week",
+        "summary": "It's thriving right now, but the market didn't like its fourth-quarter report.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/09/28/5-things-investors-need-to-know-about-costco-this/",
+        "sentiment": "Somewhat-Bullish"
+      }
+    ],
+    "us": [],
+    "asian": [],
+    "european": [],
+    "geopolitical": [],
+    "currencies": [],
+    "commodities": [],
+    "earnings": [],
+    "research": [],
+    "premarketMovers": [],
+    "webSearchResults": {}
+  },
+  "timing": {
+    "lastCloseTimestamp": 1758902400,
+    "lastCloseString": "9/26/2025, 12:00:00 PM",
+    "currentTime": "9/28/2025, 8:26:23 AM"
+  },
+  "totalHeadlines": 8,
+  "webSearchCount": 0,
+  "apiHeadlines": 8,
+  "categoryBreakdown": {
+    "general": 8,
+    "us": 0,
+    "asian": 0,
+    "european": 0,
+    "geopolitical": 0,
+    "currencies": 0,
+    "commodities": 0,
+    "earnings": 0,
+    "research": 0,
+    "premarketMovers": 0
+  },
+  "webSearchBreakdown": {},
+  "metadata": {
+    "generatedAt": "2025-09-28T12:27:39.621Z",
+    "reportType": "enhanced-premarket-brief-with-web-search",
+    "aiModel": "claude-sonnet-4",
+    "classification": "enhanced-institutional-grade",
+    "features": [
+      "traditional-apis",
+      "web-search-intelligence",
+      "cross-source-validation"
+    ]
+  }
+}
