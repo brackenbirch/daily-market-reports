@@ -1,0 +1,112 @@
+{
+  "headlines": {
+    "general": [
+      {
+        "headline": "5 Stock Picks Last Week From Wall Street's Most Accurate Analysts - Ciena  ( NYSE:CIEN ) , CrowdStrike Holdings  ( NASDAQ:CRWD ) ",
+        "summary": "U.S. stocks settled higher on Friday, with the Dow Jones index gaining around 300 points during the session following the release of inflation data. Major indices, however, recorded losses last week, with the Nasdaq Composite falling 0.7% and S&P 500 losing 0.3%. The Dow also fell 0.2% during the ...",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/analyst-stock-ratings/price-target/25/09/47912174/5-stock-picks-last-week-from-wall-streets-most-accurate-analysts-11",
+        "sentiment": "Neutral"
+      },
+      {
+        "headline": "Dogwood Therapeutics Secures Exclusive Worldwide, Royalty Free License to Develop and Commercialize SP16 as a Treatment for Cancer Related Pain in an All-Stock Transaction Underscoring the Company's Dedication to Improving the Lives of Cancer Patients",
+        "summary": "-A first-in-class LRP1 agonist, SP16 phase 1b Chemotherapy Induced Neuropathy ( CIPN ) Study fully funded by the National Cancer Institute, with projected patient enrollment beginning in the first half of ...",
+        "source": "Alpha Vantage - GlobeNewswire",
+        "datetime": "Invalid Date",
+        "url": "https://www.globenewswire.com/news-release/2025/09/29/3157595/0/en/Dogwood-Therapeutics-Secures-Exclusive-Worldwide-Royalty-Free-License-to-Develop-and-Commercialize-SP16-as-a-Treatment-for-Cancer-Related-Pain-in-an-All-Stock-Transaction-Underscor.html",
+        "sentiment": "Neutral"
+      },
+      {
+        "headline": "What's Going On With Taiwan Semiconductor Stock Monday? - Taiwan Semiconductor  ( NYSE:TSM ) ",
+        "summary": "Taiwan Semiconductor Manufacturing Co. ( NYSE: TSM ) reiterated last week that it has not discussed potential investments or partnerships with any company, ending rumours regarding Intel ( NASDAQ: INTC ) linkups.",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/markets/tech/25/09/47912153/taiwan-semiconductor-shuts-down-rumors-of-intel-deal",
+        "sentiment": "Neutral"
+      },
+      {
+        "headline": "Altimmune Appoints Industry Veteran Christophe Arbet-Engels, M.D., PhD as Chief Medical Officer to Drive Next Phase of Clinical Development of Pemvidutide",
+        "summary": "Seasoned clinical leader to oversee Phase 3 development of pemvidutide in MASH ...",
+        "source": "Alpha Vantage - GlobeNewswire",
+        "datetime": "Invalid Date",
+        "url": "https://www.globenewswire.com/news-release/2025/09/29/3157611/0/en/Altimmune-Appoints-Industry-Veteran-Christophe-Arbet-Engels-M-D-PhD-as-Chief-Medical-Officer-to-Drive-Next-Phase-of-Clinical-Development-of-Pemvidutide.html",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Altimmune Appoints Industry Veteran Christophe Arbet-Engels, M.D., PhD as Chief Medical Officer to Drive Next Phase of Clinical Development of Pemvidutide - X4 Pharmaceuticals  ( NASDAQ:XFOR ) , Altimmune  ( NASDAQ:ALT ) ",
+        "summary": "Seasoned clinical leader to oversee Phase 3 development of pemvidutide in MASH Dr. Arbet-Engels has led late-stage development, regulatory approvals and commercial launches for multiple successful franchises",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/pressreleases/25/09/g47912260/altimmune-appoints-industry-veteran-christophe-arbet-engels-m-d-phd-as-chief-medical-officer-to-dr",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "4 Biotechnology Stocks That Outshine In Momentum Amid Strong Technicals - Arrowhead Pharma  ( NASDAQ:ARWR ) , Assembly Biosciences  ( NASDAQ:ASMB ) ",
+        "summary": "Four biotechnology stocks have surged into the top 10th percentile for momentum ranking, demonstrating remarkable week-on-week technical strength and strong price action.",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/markets/equities/25/09/47912014/4-biotechnology-stocks-that-outshine-in-momentum-amid-strong-technicals",
+        "sentiment": "Bullish"
+      },
+      {
+        "headline": "Costamare Bulkers Holdings Limited Announces Strategic Cooperation Agreement with Cargill International SA",
+        "summary": "MONACO, Sept. 29, 2025 ( GLOBE NEWSWIRE ) -- Costamare Bulkers Holdings Limited ( \"Costamare Bulkers\" or the \"Company\" ) ( NYSE: CMDB ) announced today that it has signed a Strategic Cooperation Agreement ( the \"Agreement\" ) with Cargill International S.A. ( \"Cargill\" ) .",
+        "source": "Alpha Vantage - GlobeNewswire",
+        "datetime": "Invalid Date",
+        "url": "https://www.globenewswire.com/news-release/2025/09/29/3157596/0/en/Costamare-Bulkers-Holdings-Limited-Announces-Strategic-Cooperation-Agreement-with-Cargill-International-SA.html",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Short Term Installment Loans: RadCred Launches User-Friendly Platform for Quick Approval Bad Credit Loans in 2025",
+        "summary": "Glendale, CA, Sept. 29, 2025 ( GLOBE NEWSWIRE ) -- RadCred, a US-based loan matching platform, today announced the launch of its revolutionary, user-friendly platform, specifically engineered for quick approval installment loans targeting borrowers with bad credit across the United States.",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/pressreleases/25/09/g47912713/short-term-installment-loans-radcred-launches-user-friendly-platform-for-quick-approval-bad-credit",
+        "sentiment": "Bullish"
+      }
+    ],
+    "us": [],
+    "asian": [],
+    "european": [],
+    "geopolitical": [],
+    "currencies": [],
+    "commodities": [],
+    "earnings": [],
+    "research": [],
+    "premarketMovers": [],
+    "webSearchResults": {}
+  },
+  "timing": {
+    "lastCloseTimestamp": 1758902400,
+    "lastCloseString": "9/26/2025, 12:00:00 PM",
+    "currentTime": "9/29/2025, 8:30:15 AM"
+  },
+  "totalHeadlines": 8,
+  "webSearchCount": 0,
+  "apiHeadlines": 8,
+  "categoryBreakdown": {
+    "general": 8,
+    "us": 0,
+    "asian": 0,
+    "european": 0,
+    "geopolitical": 0,
+    "currencies": 0,
+    "commodities": 0,
+    "earnings": 0,
+    "research": 0,
+    "premarketMovers": 0
+  },
+  "webSearchBreakdown": {},
+  "metadata": {
+    "generatedAt": "2025-09-29T12:32:04.909Z",
+    "reportType": "enhanced-premarket-brief-with-web-search",
+    "aiModel": "claude-sonnet-4",
+    "classification": "enhanced-institutional-grade",
+    "features": [
+      "traditional-apis",
+      "web-search-intelligence",
+      "cross-source-validation"
+    ]
+  }
+}
