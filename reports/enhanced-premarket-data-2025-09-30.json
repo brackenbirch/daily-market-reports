@@ -1,0 +1,112 @@
+{
+  "headlines": {
+    "general": [
+      {
+        "headline": "The Best ETFs to Invest in Right Now",
+        "summary": "These three ETFs can be great pieces of a well-rounded portfolio.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/09/30/the-best-etfs-to-invest-in-right-now/",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Should You Buy Shopify Stock Now or Wait for a Dip?",
+        "summary": "Shares of the e-commerce company are trading at around their all-time highs.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/09/30/should-you-buy-shopify-stock-now-or-wait-for-a-dip/",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Alibaba Stock Breaks Past 52-Week High As AI Frenzy Heats Up - Alibaba Gr Hldgs  ( NYSE:BABA ) ",
+        "summary": "Alibaba Group ( NYSE:BABA ) stock closed approximately 5% higher on Monday, a surge driven by growing investor confidence in the company's aggressive push into cloud computing and artificial intelligence. This rally positioned Alibaba as the best-performing Chinese tech stock in September, ...",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/markets/tech/25/09/47937173/alibaba-stock-breaks-past-52-week-high-as-ai-frenzy-heats-up",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Abaxx Announces $30.7 Million Strategic Financing",
+        "summary": "TORONTO, Sept. 30, 2025 ( GLOBE NEWSWIRE ) -- Abaxx Technologies Inc. ( CBOE:ABXX ) ( \"Abaxx\" or the \"Company\" ) , a financial software and market infrastructure company, majority shareholder of Abaxx Singapore Pte Ltd., the owner of Abaxx Commodity Exchange and Clearinghouse ( individually, ...",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/pressreleases/25/09/g47936872/abaxx-announces-30-7-million-strategic-financing",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Same Day Payday Loan No Credit Check: RadCred Launches AI-Powered Platform for Instant Payday Loan Online for Bad Credit 2025",
+        "summary": "Glendale, CA, Sept. 30, 2025 ( GLOBE NEWSWIRE ) -- RadCred, a well-known loan matching platform, today announced the launch of its groundbreaking AI-based same day payday loan service designed specifically for borrowers with challenging credit histories.",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/pressreleases/25/09/g47937504/same-day-payday-loan-no-credit-check-radcred-launches-ai-powered-platform-for-instant-payday-loan-",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Qualigen Therapeutics Announces Successful Closing of $41 Million PIPE Financing Led by Faraday Future, Accelerating New Business Transformation into Crypto",
+        "summary": "Carlsbad, CA, Sept. 30, 2025 ( GLOBE NEWSWIRE ) -- Qualigen Therapeutics, Inc. ( NASDAQ: QLGN ) ( \"Qualigen\" or \"the Company\" ) today announced the successful closing of a $41 million private investment in public equity ( PIPE ) financing led by Faraday Future Intelligent Electric Inc. ( NASDAQ: ...",
+        "source": "Alpha Vantage - GlobeNewswire",
+        "datetime": "Invalid Date",
+        "url": "https://www.globenewswire.com/news-release/2025/09/30/3158446/0/en/Qualigen-Therapeutics-Announces-Successful-Closing-of-41-Million-PIPE-Financing-Led-by-Faraday-Future-Accelerating-New-Business-Transformation-into-Crypto.html",
+        "sentiment": "Neutral"
+      },
+      {
+        "headline": "Willis Lease Finance Corporation Welcomes Pascal Picano as SVP, Aircraft Leasing & Trading - Willis Lease Finance  ( NASDAQ:WLFC ) ",
+        "summary": "COCONUT CREEK, Fla., Sept. 30, 2025 ( GLOBE NEWSWIRE ) -- Willis Lease Finance Corporation ( NASDAQ:WLFC ) ( \"WLFC\" or the \"Company\" ) , the leading lessor of commercial aircraft engines and global provider of aviation services, today announced the appointment of Pascal Picano as Senior Vice ...",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/pressreleases/25/09/g47937279/willis-lease-finance-corporation-welcomes-pascal-picano-as-svp-aircraft-leasing-trading",
+        "sentiment": "Neutral"
+      },
+      {
+        "headline": "Ocular Therapeutix™ Announces Pricing of Underwritten Offering of Common Stock",
+        "summary": "BEDFORD, Mass., Sept. 30, 2025 ( GLOBE NEWSWIRE ) -- Ocular Therapeutix, Inc. ( Nasdaq: OCUL ) ( \"Ocular\", the \"Company\" ) , an integrated biopharmaceutical company committed to redefining the retina experience, today announced the pricing of an underwritten offering of 37,909,018 shares of its ...",
+        "source": "Alpha Vantage - GlobeNewswire",
+        "datetime": "Invalid Date",
+        "url": "https://www.globenewswire.com/news-release/2025/09/30/3158447/0/en/Ocular-Therapeutix-Announces-Pricing-of-Underwritten-Offering-of-Common-Stock.html",
+        "sentiment": "Neutral"
+      }
+    ],
+    "us": [],
+    "asian": [],
+    "european": [],
+    "geopolitical": [],
+    "currencies": [],
+    "commodities": [],
+    "earnings": [],
+    "research": [],
+    "premarketMovers": [],
+    "webSearchResults": {}
+  },
+  "timing": {
+    "lastCloseTimestamp": 1759161600,
+    "lastCloseString": "9/29/2025, 12:00:00 PM",
+    "currentTime": "9/30/2025, 8:30:15 AM"
+  },
+  "totalHeadlines": 8,
+  "webSearchCount": 0,
+  "apiHeadlines": 8,
+  "categoryBreakdown": {
+    "general": 8,
+    "us": 0,
+    "asian": 0,
+    "european": 0,
+    "geopolitical": 0,
+    "currencies": 0,
+    "commodities": 0,
+    "earnings": 0,
+    "research": 0,
+    "premarketMovers": 0
+  },
+  "webSearchBreakdown": {},
+  "metadata": {
+    "generatedAt": "2025-09-30T12:32:30.558Z",
+    "reportType": "enhanced-premarket-brief-with-web-search",
+    "aiModel": "claude-sonnet-4",
+    "classification": "enhanced-institutional-grade",
+    "features": [
+      "traditional-apis",
+      "web-search-intelligence",
+      "cross-source-validation"
+    ]
+  }
+}
