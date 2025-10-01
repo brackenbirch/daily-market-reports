@@ -1,0 +1,112 @@
+{
+  "headlines": {
+    "general": [
+      {
+        "headline": "5 Stock Picks For September From Wall Street's Most Accurate Analysts - Axon Enterprise  ( NASDAQ:AXON ) , Electronic Arts  ( NASDAQ:EA ) ",
+        "summary": "U.S. stocks settled higher on Tuesday, with the Nasdaq Composite gaining around 0.3% during the session. The Dow Jones also surged to a new closing high. Major indices recorded gains last month, with the S&P 500 gaining more than 3% in September, and the Dow adding almost 2%.",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/analyst-stock-ratings/price-target/25/10/47964197/5-stock-picks-for-september-from-wall-streets-most-accurate-analysts",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "LiveOne  ( Nasdaq: LVO )  Issues Stockholder Letter",
+        "summary": "Reiterates Commitment to Creating Value for All Stockholders Reiterates Commitment to Creating Value for All Stockholders ...",
+        "source": "Alpha Vantage - GlobeNewswire",
+        "datetime": "Invalid Date",
+        "url": "https://www.globenewswire.com/news-release/2025/10/01/3159407/0/en/LiveOne-Nasdaq-LVO-Issues-Stockholder-Letter.html",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Kayne Anderson Energy Infrastructure Fund Announces Distribution of $0.08 per Share for October 2025 - Kayne Anderson Energy  ( NYSE:KYN ) ",
+        "summary": "HOUSTON, Oct. 01, 2025 ( GLOBE NEWSWIRE ) -- Kayne Anderson Energy Infrastructure Fund, Inc. ( the \"Company\" ) announced today a monthly distribution of $0.08 per share for October 2025. This distribution is payable to common stockholders on October 31, 2025 ( as outlined in the table below ) .",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/pressreleases/25/10/g47964860/kayne-anderson-energy-infrastructure-fund-announces-distribution-of-0-08-per-share-for-october-202",
+        "sentiment": "Neutral"
+      },
+      {
+        "headline": "Kayne Anderson Energy Infrastructure Fund Announces Distribution of $0.08 per Share for October 2025",
+        "summary": "HOUSTON, Oct. 01, 2025 ( GLOBE NEWSWIRE ) -- Kayne Anderson Energy Infrastructure Fund, Inc. ( the \"Company\" ) announced today a monthly distribution of $0.08 per share for October 2025. This distribution is payable to common stockholders on October 31, 2025 ( as outlined in the table below ) .",
+        "source": "Alpha Vantage - GlobeNewswire",
+        "datetime": "Invalid Date",
+        "url": "https://www.globenewswire.com/news-release/2025/10/01/3159410/0/en/Kayne-Anderson-Energy-Infrastructure-Fund-Announces-Distribution-of-0-08-per-Share-for-October-2025.html",
+        "sentiment": "Neutral"
+      },
+      {
+        "headline": "Genco Shipping & Trading Limited Adopts Limited Duration Shareholder Rights Plan to Protect the Best Interests of Shareholders",
+        "summary": "NEW YORK, Oct. 01, 2025 ( GLOBE NEWSWIRE ) -- Genco Shipping & Trading Limited ( NYSE:GNK ) ( \"Genco\" or the \"Company\" ) , the largest U.S. headquartered drybulk shipowner focused on the global transportation of commodities, today announced that its Board of Directors ( the \"Board\" ) has adopted ...",
+        "source": "Alpha Vantage - GlobeNewswire",
+        "datetime": "Invalid Date",
+        "url": "https://www.globenewswire.com/news-release/2025/10/01/3159399/37397/en/Genco-Shipping-Trading-Limited-Adopts-Limited-Duration-Shareholder-Rights-Plan-to-Protect-the-Best-Interests-of-Shareholders.html",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "LXP Industrial Trust Announces Cash Tender Offer for up to a Maximum Aggregate Purchase Price of $150,000,000 of its 6.750% Notes due 2028",
+        "summary": "WEST PALM BEACH, Fla., Oct. 01, 2025 ( GLOBE NEWSWIRE ) -- LXP Industrial Trust ( NYSE: LXP ) ( the \"Company\" ) , a real estate investment trust ( REIT ) focused on Class A warehouse and distribution real estate investments, announced today that it has commenced a tender offer ( the \"Offer\" ) to ...",
+        "source": "Alpha Vantage - GlobeNewswire",
+        "datetime": "Invalid Date",
+        "url": "https://www.globenewswire.com/news-release/2025/10/01/3159405/19004/en/LXP-Industrial-Trust-Announces-Cash-Tender-Offer-for-up-to-a-Maximum-Aggregate-Purchase-Price-of-150-000-000-of-its-6-750-Notes-due-2028.html",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "XRP Tundra Confirms Phase 4 Presale Bonuses and Free Governance Token Allocation",
+        "summary": "LISBON, Portugal, Oct. 01, 2025 ( GLOBE NEWSWIRE ) -- XRP Tundra has confirmed the continuation of its presale in Phase 4, pricing TUNDRA-S at $0.068 with a 16% bonus and free allocations of TUNDRA-X valued at $0.034.",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/pressreleases/25/10/g47964128/xrp-tundra-confirms-phase-4-presale-bonuses-and-free-governance-token-allocation",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Meet the Monster Chip Stock Crushing Nvidia on the Market  ( Hint: It's Not Broadcom ) ",
+        "summary": "The improving demand for chipmaking equipment has given this semiconductor company's business a nice shot in the arm.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/10/01/meet-the-monster-chip-stock-crushing-nvidia-on-the/",
+        "sentiment": "Bullish"
+      }
+    ],
+    "us": [],
+    "asian": [],
+    "european": [],
+    "geopolitical": [],
+    "currencies": [],
+    "commodities": [],
+    "earnings": [],
+    "research": [],
+    "premarketMovers": [],
+    "webSearchResults": {}
+  },
+  "timing": {
+    "lastCloseTimestamp": 1759248000,
+    "lastCloseString": "9/30/2025, 12:00:00 PM",
+    "currentTime": "10/1/2025, 8:30:45 AM"
+  },
+  "totalHeadlines": 8,
+  "webSearchCount": 0,
+  "apiHeadlines": 8,
+  "categoryBreakdown": {
+    "general": 8,
+    "us": 0,
+    "asian": 0,
+    "european": 0,
+    "geopolitical": 0,
+    "currencies": 0,
+    "commodities": 0,
+    "earnings": 0,
+    "research": 0,
+    "premarketMovers": 0
+  },
+  "webSearchBreakdown": {},
+  "metadata": {
+    "generatedAt": "2025-10-01T12:32:06.766Z",
+    "reportType": "enhanced-premarket-brief-with-web-search",
+    "aiModel": "claude-sonnet-4",
+    "classification": "enhanced-institutional-grade",
+    "features": [
+      "traditional-apis",
+      "web-search-intelligence",
+      "cross-source-validation"
+    ]
+  }
+}
