@@ -1,0 +1,112 @@
+{
+  "headlines": {
+    "general": [
+      {
+        "headline": "Sprott Active Gold & Silver Miners ETF Reaches $100 Million in Assets - Sprott  ( NYSE:SII ) , Sprott Active Gold & Silver Miners ETF  ( NASDAQ:GBUG ) ",
+        "summary": "NEW YORK, Oct. 02, 2025 ( GLOBE NEWSWIRE ) -- Sprott Asset Management USA, Inc. today announced that its Sprott Active Gold & Silver Miners ETF ( NASDAQ:GBUG ) ( \"GBUG\" ) reached $100 million in assets under management as of September 22, 2025.",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/pressreleases/25/10/g47990515/sprott-active-gold-silver-miners-etf-reaches-100-million-in-assets",
+        "sentiment": "Bullish"
+      },
+      {
+        "headline": "Sprott Active Gold & Silver Miners ETF Reaches $100 Million in Assets",
+        "summary": "The Only* Active ETF Focused on Gold and Silver Miners Rapidly Gains Assets The Only* Active ETF Focused on Gold and Silver Miners Rapidly Gains Assets ...",
+        "source": "Alpha Vantage - GlobeNewswire",
+        "datetime": "Invalid Date",
+        "url": "https://www.globenewswire.com/news-release/2025/10/02/3160285/35395/en/Sprott-Active-Gold-Silver-Miners-ETF-Reaches-100-Million-in-Assets.html",
+        "sentiment": "Bullish"
+      },
+      {
+        "headline": "nCino advances AI for mortgage lending with powerful new capabilities - Ncino  ( NASDAQ:NCNO ) ",
+        "summary": "WILMINGTON, N.C., Oct. 02, 2025 ( GLOBE NEWSWIRE ) -- nCino, Inc. ( NASDAQ:NCNO ) , the leading provider of intelligent, best-in-class banking solutions, today announced a new wave of mortgage-focused AI innovations designed to accelerate loan origination, reduce underwriting touches and deliver ...",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/pressreleases/25/10/g47990378/ncino-advances-ai-for-mortgage-lending-with-powerful-new-capabilities",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Costamare Inc. Declares Quarterly Dividend on Its Preferred and Common Stock",
+        "summary": "MONACO, Oct. 02, 2025 ( GLOBE NEWSWIRE ) -- Costamare Inc. ( the \"Company\" ) ( NYSE: CMRE ) has declared cash dividends of US $0.476563 per share on its 7.625% Series B Cumulative Redeemable Perpetual Preferred Stock ( the \"Series B Preferred Stock\" ) ( NYSE: CMRE PR B ) , US $0.531250 per share ...",
+        "source": "Alpha Vantage - GlobeNewswire",
+        "datetime": "Invalid Date",
+        "url": "https://www.globenewswire.com/news-release/2025/10/02/3160256/0/en/Costamare-Inc-Declares-Quarterly-Dividend-on-Its-Preferred-and-Common-Stock.html",
+        "sentiment": "Neutral"
+      },
+      {
+        "headline": "TappAlpha's Flagship ETF, TSPY, Surpasses $100 Million in AUM - TappAlpha SPY Growth & Daily Income ETF  ( NASDAQ:TSPY ) ",
+        "summary": "SEATTLE, Wash., Oct. 02, 2025 ( GLOBE NEWSWIRE ) -- TappAlpha, a fintech-powered ETF issuer focused on making advanced investing strategies accessible, today announced that its flagship fund, the TappAlpha SPY Growth & Daily Income ETF ( NASDAQ:TSPY ) , has surpassed $100 million in assets under ...",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/pressreleases/25/10/g47990414/tappalphas-flagship-etf-tspy-surpasses-100-million-in-aum",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "TappAlpha's Flagship ETF, TSPY, Surpasses $100 Million in AUM",
+        "summary": "TSPY has surpassed $100 million in assets under management. More than a number, this moment reflects something much deeper - a growing community of ...",
+        "source": "Alpha Vantage - GlobeNewswire",
+        "datetime": "Invalid Date",
+        "url": "https://www.globenewswire.com/news-release/2025/10/02/3160276/0/en/TappAlpha-s-Flagship-ETF-TSPY-Surpasses-100-Million-in-AUM.html",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "nCino advances AI for mortgage lending with powerful new capabilities",
+        "summary": "New and expanded AI-driven features deliver faster borrower feedback, cleaner loan files and more capacity for loan officers New and expanded AI-driven features deliver faster borrower feedback, cleaner loan files and more capacity for loan officers ...",
+        "source": "Alpha Vantage - GlobeNewswire",
+        "datetime": "Invalid Date",
+        "url": "https://www.globenewswire.com/news-release/2025/10/02/3160274/0/en/nCino-advances-AI-for-mortgage-lending-with-powerful-new-capabilities.html",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Costamare Inc. Announces Election of Class III Directors at 2025 Annual Meeting of Stockholders - Costamare  ( NYSE:CMRE ) ",
+        "summary": "MONACO, Oct. 02, 2025 ( GLOBE NEWSWIRE ) -- Costamare Inc. ( the \"Company\" ) ( NYSE:CMRE ) , an international owner and provider of containerships for charter, announced the election of two Class III directors at the Company's virtual annual meeting of stockholders held today.",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/pressreleases/25/10/g47990424/costamare-inc-announces-election-of-class-iii-directors-at-2025-annual-meeting-of-stockholders",
+        "sentiment": "Neutral"
+      }
+    ],
+    "us": [],
+    "asian": [],
+    "european": [],
+    "geopolitical": [],
+    "currencies": [],
+    "commodities": [],
+    "earnings": [],
+    "research": [],
+    "premarketMovers": [],
+    "webSearchResults": {}
+  },
+  "timing": {
+    "lastCloseTimestamp": 1759334400,
+    "lastCloseString": "10/1/2025, 12:00:00 PM",
+    "currentTime": "10/2/2025, 8:27:54 AM"
+  },
+  "totalHeadlines": 8,
+  "webSearchCount": 0,
+  "apiHeadlines": 8,
+  "categoryBreakdown": {
+    "general": 8,
+    "us": 0,
+    "asian": 0,
+    "european": 0,
+    "geopolitical": 0,
+    "currencies": 0,
+    "commodities": 0,
+    "earnings": 0,
+    "research": 0,
+    "premarketMovers": 0
+  },
+  "webSearchBreakdown": {},
+  "metadata": {
+    "generatedAt": "2025-10-02T12:29:04.294Z",
+    "reportType": "enhanced-premarket-brief-with-web-search",
+    "aiModel": "claude-sonnet-4",
+    "classification": "enhanced-institutional-grade",
+    "features": [
+      "traditional-apis",
+      "web-search-intelligence",
+      "cross-source-validation"
+    ]
+  }
+}
