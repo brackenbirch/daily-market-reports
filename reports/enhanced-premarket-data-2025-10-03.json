@@ -1,0 +1,112 @@
+{
+  "headlines": {
+    "general": [
+      {
+        "headline": "Ovid Therapeutics Announces Pricing of Private Placement Totaling up to $175 Million in Gross Proceeds",
+        "summary": "Initial closing of approximately $81 million expected to fund current operating plan and clinical pipeline into 2028, with potential for up to $94 million in additional proceeds upon exercise of issued warrants Initial closing of approximately $81 million expected to fund current operating plan ...",
+        "source": "Alpha Vantage - GlobeNewswire",
+        "datetime": "Invalid Date",
+        "url": "https://www.globenewswire.com/news-release/2025/10/03/3160890/0/en/Ovid-Therapeutics-Announces-Pricing-of-Private-Placement-Totaling-up-to-175-Million-in-Gross-Proceeds.html",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Ovid Therapeutics Announces Pricing of Private Placement Totaling up to $175 Million in Gross Proceeds - Ovid Therapeutics  ( NASDAQ:OVID ) ",
+        "summary": "NEW YORK, Oct. 03, 2025 ( GLOBE NEWSWIRE ) -- Ovid Therapeutics Inc. ( NASDAQ:OVID ) , a biopharmaceutical company dedicated to developing small molecule medicines for brain conditions with significant unmet need, today announced that it has entered into a securities purchase agreement for a ...",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/pressreleases/25/10/g48013257/ovid-therapeutics-announces-pricing-of-private-placement-totaling-up-to-175-million-in-gross-proce",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Hong Kong stands as key beneficiary of China's continued opening up efforts",
+        "summary": "Hong Kong's strength as an asset and wealth management hub stems from its role as the gateway to mainland China, according to panellists at a forum on Friday, citing the city's deep connection to a vast pool of Chinese resources, capital flows and entrepreneurial innovation.",
+        "source": "Alpha Vantage - South China Morning Post",
+        "datetime": "Invalid Date",
+        "url": "https://www.scmp.com/business/banking-finance/article/3327817/redefining-hong-kong-city-remains-key-beneficiary-chinas-continued-opening-efforts",
+        "sentiment": "Bullish"
+      },
+      {
+        "headline": "1 No-Brainer Warren Buffett Stock to Buy Right Now",
+        "summary": "This is at least one stock Buffett and the investing community agree on.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/10/03/1-no-brainer-warren-buffett-stocks-to-buy-now/",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Wall Street's next crypto play may be IPO-ready crypto firms, not altcoins",
+        "summary": "Wall Street capital is flowing into late-stage, IPO-ready crypto firms, signaling new dynamics at play for the incoming altcoin season.",
+        "source": "Alpha Vantage - Cointelegraph",
+        "datetime": "Invalid Date",
+        "url": "https://cointelegraph.com/news/wall-street-crypto-play-ipo-crypto-firms-not-altcoins",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "OTC Markets Group Welcomes Mineros S.A. to OTCQX",
+        "summary": "NEW YORK, Oct. 03, 2025 ( GLOBE NEWSWIRE ) -- OTC Markets Group Inc. ( OTCQX: OTCM ) , operator of regulated markets for trading 12,000 U.S. and international securities, today announced Mineros S.A. ( TSX: MSA. OTCQX: MNSAF ) , a Latin American gold mining company, has qualified to trade on the ...",
+        "source": "Alpha Vantage - GlobeNewswire",
+        "datetime": "Invalid Date",
+        "url": "https://www.globenewswire.com/news-release/2025/10/03/3160880/0/en/OTC-Markets-Group-Welcomes-Mineros-S-A-to-OTCQX.html",
+        "sentiment": "Bullish"
+      },
+      {
+        "headline": "BioCryst Reports Inducement Grants Under Nasdaq Listing Rule 5635 ( c )  ( 4 ) ",
+        "summary": "RESEARCH TRIANGLE PARK, N.C., Oct. 03, 2025 ( GLOBE NEWSWIRE ) -- BioCryst Pharmaceuticals, Inc. ( Nasdaq: BCRX ) today announced that the compensation committee of BioCryst's board of directors granted eight newly-hired employees stock options to purchase an aggregate of 115,000 shares, and ...",
+        "source": "Alpha Vantage - GlobeNewswire",
+        "datetime": "Invalid Date",
+        "url": "https://www.globenewswire.com/news-release/2025/10/03/3160881/29446/en/BioCryst-Reports-Inducement-Grants-Under-Nasdaq-Listing-Rule-5635-c-4.html",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Kura Oncology Reports Inducement Grants Under Nasdaq Listing Rule 5635 ( c )  ( 4 ) ",
+        "summary": "SAN DIEGO, Oct. 03, 2025 ( GLOBE NEWSWIRE ) -- Kura Oncology, Inc. ( the \"Company\" ) ( Nasdaq: KURA ) , a clinical-stage biopharmaceutical company committed to realizing the promise of precision medicines for the treatment of cancer, today announced that on October 1, 2025, the Compensation ...",
+        "source": "Alpha Vantage - GlobeNewswire",
+        "datetime": "Invalid Date",
+        "url": "https://www.globenewswire.com/news-release/2025/10/03/3160899/35186/en/Kura-Oncology-Reports-Inducement-Grants-Under-Nasdaq-Listing-Rule-5635-c-4.html",
+        "sentiment": "Neutral"
+      }
+    ],
+    "us": [],
+    "asian": [],
+    "european": [],
+    "geopolitical": [],
+    "currencies": [],
+    "commodities": [],
+    "earnings": [],
+    "research": [],
+    "premarketMovers": [],
+    "webSearchResults": {}
+  },
+  "timing": {
+    "lastCloseTimestamp": 1759420800,
+    "lastCloseString": "10/2/2025, 12:00:00 PM",
+    "currentTime": "10/3/2025, 8:28:42 AM"
+  },
+  "totalHeadlines": 8,
+  "webSearchCount": 0,
+  "apiHeadlines": 8,
+  "categoryBreakdown": {
+    "general": 8,
+    "us": 0,
+    "asian": 0,
+    "european": 0,
+    "geopolitical": 0,
+    "currencies": 0,
+    "commodities": 0,
+    "earnings": 0,
+    "research": 0,
+    "premarketMovers": 0
+  },
+  "webSearchBreakdown": {},
+  "metadata": {
+    "generatedAt": "2025-10-03T12:29:53.603Z",
+    "reportType": "enhanced-premarket-brief-with-web-search",
+    "aiModel": "claude-sonnet-4",
+    "classification": "enhanced-institutional-grade",
+    "features": [
+      "traditional-apis",
+      "web-search-intelligence",
+      "cross-source-validation"
+    ]
+  }
+}
