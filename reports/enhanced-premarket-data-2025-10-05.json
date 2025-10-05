@@ -1,0 +1,112 @@
+{
+  "headlines": {
+    "general": [
+      {
+        "headline": "Top Wall Street analysts recommend these 3 dividend stocks for stable returns",
+        "summary": "TipRanks' ranking service discusses three dividend-paying stocks, including Brookfield Infrastructure Partners and Ares Capital.",
+        "source": "Alpha Vantage - CNBC",
+        "datetime": "Invalid Date",
+        "url": "https://www.cnbc.com/2025/10/05/top-wall-street-analysts-recommend-these-3-dividend-stocks-for-stable-returns.html",
+        "sentiment": "Bullish"
+      },
+      {
+        "headline": "Here's the Smartest Way to Invest in the S&P 500 in October",
+        "summary": "The best S&P 500 ETF to buy is probably from Vanguard, but the smartest choice could be this slight twist on the S&P 500 theme from Invesco.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/10/05/heres-the-smartest-way-to-invest-in-the-sp-500-in/",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Stock-Split Watch: Is Quantum Computing Next?",
+        "summary": "The share price is up big, but Quantum Computing is still a highly speculative investment.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/10/05/stock-split-watch-is-quantum-computing-next/",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "1 Magnificent Real Estate Stock Down 58% to Buy and Hold Forever",
+        "summary": "Following some strategic acquisitions during the past year, this mortgage company looks like an attractive investment opportunity.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/10/05/1-magnificent-real-estate-stock-down-58-to-buy-and/",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Warren Buffett Is Sending Investors a $340 Billion Warning. History Says the Stock Market Will Do This Next.",
+        "summary": "Warren Buffett's growing cash pile speaks volumes about the current state of the stock market.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/10/05/warren-buffett-is-sending-investors-a-340-billion/",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Can This Unstoppable Vanguard ETF Make You a Millionaire?",
+        "summary": "Every investor wants to see their portfolio increase substantially in value over time.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/10/05/unstoppable-vanguard-etf-make-you-a-millionaire/",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Even at $2,200 Per Share, Here's Why MercadoLibre Stock Is Still a Bargain for Long-Term Investors",
+        "summary": "Investors can't make good investment decisions by only looking at a stock's price.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/10/05/even-at-2200-per-share-heres-why-mercadolibre-stoc/",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "While Nvidia and SoftBank Invest Billions in Intel, You Should Consider Buying This Rival Semiconductor Stock Instead",
+        "summary": "The backing of big tech investment won't be enough to overcome this challenge facing Intel.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/10/05/nvidia-softbank-invest-intel-buy-semiconductor/",
+        "sentiment": "Somewhat-Bullish"
+      }
+    ],
+    "us": [],
+    "asian": [],
+    "european": [],
+    "geopolitical": [],
+    "currencies": [],
+    "commodities": [],
+    "earnings": [],
+    "research": [],
+    "premarketMovers": [],
+    "webSearchResults": {}
+  },
+  "timing": {
+    "lastCloseTimestamp": 1759507200,
+    "lastCloseString": "10/3/2025, 12:00:00 PM",
+    "currentTime": "10/5/2025, 8:26:01 AM"
+  },
+  "totalHeadlines": 8,
+  "webSearchCount": 0,
+  "apiHeadlines": 8,
+  "categoryBreakdown": {
+    "general": 8,
+    "us": 0,
+    "asian": 0,
+    "european": 0,
+    "geopolitical": 0,
+    "currencies": 0,
+    "commodities": 0,
+    "earnings": 0,
+    "research": 0,
+    "premarketMovers": 0
+  },
+  "webSearchBreakdown": {},
+  "metadata": {
+    "generatedAt": "2025-10-05T12:27:48.495Z",
+    "reportType": "enhanced-premarket-brief-with-web-search",
+    "aiModel": "claude-sonnet-4",
+    "classification": "enhanced-institutional-grade",
+    "features": [
+      "traditional-apis",
+      "web-search-intelligence",
+      "cross-source-validation"
+    ]
+  }
+}
