@@ -1,0 +1,112 @@
+{
+  "headlines": {
+    "general": [
+      {
+        "headline": "AllianceBernstein Finalizes New Municipal ETF Conversion - AllianceBernstein Holding  ( NYSE:AB ) ",
+        "summary": "NASHVILLE, Tenn., Oct. 6, 2025 /PRNewswire/ -- AllianceBernstein Holding L.P. ( NYSE:AB ) and AllianceBernstein L.P. ( \"AB\" ) , a leading global investment management firm, announced today the launch of AB California Intermediate Municipal ETF ( \"CAM\" ) as an actively managed exchange-traded ...",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/pressreleases/25/10/n48038093/alliancebernstein-finalizes-new-municipal-etf-conversion",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Brompton Announces the Launch of Brompton Wellington Square Investment Grade CLO ETF",
+        "summary": "TORONTO, Oct. 06, 2025 ( GLOBE NEWSWIRE ) -- ( TSX: BBBB. BBBB.U ) Brompton Funds Limited ( the \"Manager\" ) is pleased to announce that Brompton Wellington Square Investment Grade CLO ETF ( \"BBBB\" ) will commence trading on the Toronto Stock Exchange ( the \"TSX\" ) today.",
+        "source": "Alpha Vantage - GlobeNewswire",
+        "datetime": "Invalid Date",
+        "url": "https://www.globenewswire.com/news-release/2025/10/06/3161608/0/en/Brompton-Announces-the-Launch-of-Brompton-Wellington-Square-Investment-Grade-CLO-ETF.html",
+        "sentiment": "Neutral"
+      },
+      {
+        "headline": "Dragonfly Energy Announces Pricing of $25.0 Million Underwritten Offering of Common Stock",
+        "summary": "RENO, Nev., Oct. 06, 2025 ( GLOBE NEWSWIRE ) -- Dragonfly Energy Holdings Corp. ( \"Dragonfly Energy\" or the \"Company\" ) ( Nasdaq: DFLI ) , an industry leader in energy storage and battery technology, today announced the pricing of an underwritten offering of 20,000,000 shares of common stock at ...",
+        "source": "Alpha Vantage - GlobeNewswire",
+        "datetime": "Invalid Date",
+        "url": "https://www.globenewswire.com/news-release/2025/10/06/3161606/0/en/Dragonfly-Energy-Announces-Pricing-of-25-0-Million-Underwritten-Offering-of-Common-Stock.html",
+        "sentiment": "Neutral"
+      },
+      {
+        "headline": "BRT Apartments Corp. Announces the Acquisition of Apartment Complex in Savannah, Georgia",
+        "summary": "GREAT NECK, N.Y., Oct. 06, 2025 ( GLOBE NEWSWIRE ) -- BRT APARTMENTS CORP. ( NYSE:BRT ) , a real estate investment trust, today announced the acquisition of Oaks at Victory, formerly known as Ascend Midtown, a 150-unit garden style apartment complex in Savannah, Georgia.",
+        "source": "Alpha Vantage - GlobeNewswire",
+        "datetime": "Invalid Date",
+        "url": "https://www.globenewswire.com/news-release/2025/10/06/3161564/0/en/BRT-Apartments-Corp-Announces-the-Acquisition-of-Apartment-Complex-in-Savannah-Georgia.html",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Ascendiant Capital Markets: Society Pass Inc  ( Nasdaq: SOPA )  Reports Strong 2Q 2025 Revenue Growth of 46% Year on Year; IPOs Drive SOPA Valuation",
+        "summary": "NEW YORK, Oct. 06, 2025 ( GLOBE NEWSWIRE ) -- Ascendiant Capital Markets LLC ( \"Ascendiant\" ) issues equity research report on Society Pass Inc. ( Nasdaq: SOPA ) ( the \"Company\" ) , Southeast Asia's ( SEA ) next generation e-commerce ecosystem.",
+        "source": "Alpha Vantage - GlobeNewswire",
+        "datetime": "Invalid Date",
+        "url": "https://www.globenewswire.com/news-release/2025/10/06/3161614/0/en/Ascendiant-Capital-Markets-Society-Pass-Inc-Nasdaq-SOPA-Reports-Strong-2Q-2025-Revenue-Growth-of-46-Year-on-Year-IPOs-Drive-SOPA-Valuation.html",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Galaxy Debuts Crypto Platform for Individuals to Rival Robinhood, Kraken",
+        "summary": "The firm has a history of servicing financial institutions.",
+        "source": "Alpha Vantage - Decrypt.co",
+        "datetime": "Invalid Date",
+        "url": "https://decrypt.co/342919/galaxy-debuts-crypto-platform-individuals-rival-robinhood-kraken",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Crypto funds smash records with $5.95B inflows amid shutdown concerns",
+        "summary": "Crypto ETPs posted a record $5.95 billion of inflows last week, with Bitcoin leading the gains, recording a record $3.6 billion in inflows amid concerns about a US government shutdown.",
+        "source": "Alpha Vantage - Cointelegraph",
+        "datetime": "Invalid Date",
+        "url": "https://cointelegraph.com/news/crypto-funds-record-5-95-billion-inflows-amid-shutdown-concerns",
+        "sentiment": "Neutral"
+      },
+      {
+        "headline": "Nvidia's Sky-High AI Ambitions Under Fire: Goldman Sachs Flags 'Circular Revenue' Risk As Wall Street Questions 'Jensen's Math' - NVIDIA  ( NASDAQ:NVDA ) ",
+        "summary": "Goldman Sachs has issued a warning regarding potential \"circular revenue\" for Nvidia Corp. ( NASDAQ:NVDA ) stemming from its strategic investments and partnerships, even as the investment bank raised its price target for the semiconductor giant.",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/markets/equities/25/10/48037892/nvidias-sky-high-ai-ambitions-under-fire-goldman-sachs-flags-circular-revenue-risk-as-wall-stree",
+        "sentiment": "Neutral"
+      }
+    ],
+    "us": [],
+    "asian": [],
+    "european": [],
+    "geopolitical": [],
+    "currencies": [],
+    "commodities": [],
+    "earnings": [],
+    "research": [],
+    "premarketMovers": [],
+    "webSearchResults": {}
+  },
+  "timing": {
+    "lastCloseTimestamp": 1759507200,
+    "lastCloseString": "10/3/2025, 12:00:00 PM",
+    "currentTime": "10/6/2025, 8:30:03 AM"
+  },
+  "totalHeadlines": 8,
+  "webSearchCount": 0,
+  "apiHeadlines": 8,
+  "categoryBreakdown": {
+    "general": 8,
+    "us": 0,
+    "asian": 0,
+    "european": 0,
+    "geopolitical": 0,
+    "currencies": 0,
+    "commodities": 0,
+    "earnings": 0,
+    "research": 0,
+    "premarketMovers": 0
+  },
+  "webSearchBreakdown": {},
+  "metadata": {
+    "generatedAt": "2025-10-06T12:31:36.363Z",
+    "reportType": "enhanced-premarket-brief-with-web-search",
+    "aiModel": "claude-sonnet-4",
+    "classification": "enhanced-institutional-grade",
+    "features": [
+      "traditional-apis",
+      "web-search-intelligence",
+      "cross-source-validation"
+    ]
+  }
+}
