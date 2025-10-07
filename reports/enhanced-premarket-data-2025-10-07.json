@@ -1,0 +1,112 @@
+{
+  "headlines": {
+    "general": [
+      {
+        "headline": "The Case for NCIQ ETF: A Rules-Based Approach To Multi-Asset Crypto Investing - Hashdex Nasdaq Crypto Index US ETF - Hashdex Nasdaq Crypto Index US ETF  ( NASDAQ:NCIQ ) ",
+        "summary": "For years, U.S. investors looking to gain crypto exposure have faced an unenviable dilemma: either go all-in on a single-asset ETF or wrestle with the complexities of managing wallets, exchanges, and private keys.",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/Opinion/25/10/48071326/the-case-for-nciq-etf-a-rules-based-approach-to-multi-asset-crypto-investing",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Jade Biosciences Announces $135 Million Private Placement",
+        "summary": "SAN FRANCISCO and VANCOUVER, British Columbia, Oct. 07, 2025 ( GLOBE NEWSWIRE ) -- Jade Biosciences, Inc. ( \"the Company\" or \"Jade\" ) , ( Nasdaq: JBIO ) , a clinical-stage biotechnology company focused on developing best-in-class therapies for autoimmune diseases, today announced that it has ...",
+        "source": "Alpha Vantage - GlobeNewswire",
+        "datetime": "Invalid Date",
+        "url": "https://www.globenewswire.com/news-release/2025/10/07/3162342/0/en/Jade-Biosciences-Announces-135-Million-Private-Placement.html",
+        "sentiment": "Neutral"
+      },
+      {
+        "headline": "SFC CEO Julia Leung to remain in office for another two years: sources",
+        "summary": "The Hong Kong government is expected to renew the contract of Julia Leung Fung-yee as the CEO of market regulator Securities and Futures Commission (SFC) for another two years, according to two separate sources. Leung, a former journalist at The Asian Wall Street Journal, started her term as the ...",
+        "source": "Alpha Vantage - South China Morning Post",
+        "datetime": "Invalid Date",
+        "url": "https://www.scmp.com/business/markets/article/3328137/hong-kong-renew-contract-sfc-ceo-julia-leung-another-two-years-sources",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Is USA Rare Earth Stock a Buy?",
+        "summary": "A transformative acquisition and White House discussions are fueling triple-digit gains, but execution risk remains a significant concern.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/10/07/is-usa-rare-earth-stock-a-buy/",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Current Powers Commercial Real Estate and Rideshare Growth at Caliber Properties by Expanding Access to InCharge Energy Electric Vehicle  ( EV )  Charging Infrastructure and Charger Service Solutions - CaliberCos  ( NASDAQ:CWD ) ",
+        "summary": "SCOTTSDALE, Ariz., Oct. 07, 2025 ( GLOBE NEWSWIRE ) -- Caliber ( NASDAQ:CWD ) , a diversified alternative real estate and digital asset platform, today announced a partnership to deploy EV charging infrastructure, advancing sustainable asset enhancements across its portfolio.",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/pressreleases/25/10/g48070517/current-powers-commercial-real-estate-and-rideshare-growth-at-caliber-properties-by-expanding-acce",
+        "sentiment": "Bullish"
+      },
+      {
+        "headline": "Current Powers Commercial Real Estate and Rideshare Growth at Caliber Properties by Expanding Access to InCharge Energy Electric Vehicle  ( EV )  Charging Infrastructure and Charger Service Solutions",
+        "summary": "Caliber Drives Forward Asset Performance with Innovation Caliber Drives Forward Asset Performance with Innovation ...",
+        "source": "Alpha Vantage - GlobeNewswire",
+        "datetime": "Invalid Date",
+        "url": "https://www.globenewswire.com/news-release/2025/10/07/3162352/0/en/Current-Powers-Commercial-Real-Estate-and-Rideshare-Growth-at-Caliber-Properties-by-Expanding-Access-to-InCharge-Energy-Electric-Vehicle-EV-Charging-Infrastructure-and-Charger-Serv.html",
+        "sentiment": "Bullish"
+      },
+      {
+        "headline": "Prediction: This Trend Could Help Spark PepsiCo's Turnaround",
+        "summary": "Dirty soda is helping boost soda sales.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/10/07/this-trend-could-help-spark-pepsicos-turnaround/",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "NeoVolta Enters Into Asset Purchase Agreement for Neubau Energy's Next-Generation Battery Platform; Expects Transaction to Be Immediately Accretive to Revenues and Gross Margins - NeoVolta  ( NASDAQ:NEOV ) ",
+        "summary": "SAN DIEGO, Oct. 07, 2025 ( GLOBE NEWSWIRE ) -- NeoVolta Inc. ( NASDAQ:NEOV ) entered into on October 1, 2025 an asset purchase agreement for the purchase of strategic assets of Neubau Energy pursuant to its letter of intent announced on September 10, 2025 [link].",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/pressreleases/25/10/g48070657/neovolta-enters-into-asset-purchase-agreement-for-neubau-energys-next-generation-battery-platform-",
+        "sentiment": "Bullish"
+      }
+    ],
+    "us": [],
+    "asian": [],
+    "european": [],
+    "geopolitical": [],
+    "currencies": [],
+    "commodities": [],
+    "earnings": [],
+    "research": [],
+    "premarketMovers": [],
+    "webSearchResults": {}
+  },
+  "timing": {
+    "lastCloseTimestamp": 1759766400,
+    "lastCloseString": "10/6/2025, 12:00:00 PM",
+    "currentTime": "10/7/2025, 8:30:00 AM"
+  },
+  "totalHeadlines": 8,
+  "webSearchCount": 0,
+  "apiHeadlines": 8,
+  "categoryBreakdown": {
+    "general": 8,
+    "us": 0,
+    "asian": 0,
+    "european": 0,
+    "geopolitical": 0,
+    "currencies": 0,
+    "commodities": 0,
+    "earnings": 0,
+    "research": 0,
+    "premarketMovers": 0
+  },
+  "webSearchBreakdown": {},
+  "metadata": {
+    "generatedAt": "2025-10-07T12:31:43.637Z",
+    "reportType": "enhanced-premarket-brief-with-web-search",
+    "aiModel": "claude-sonnet-4",
+    "classification": "enhanced-institutional-grade",
+    "features": [
+      "traditional-apis",
+      "web-search-intelligence",
+      "cross-source-validation"
+    ]
+  }
+}
