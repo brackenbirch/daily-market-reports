@@ -1,0 +1,112 @@
+{
+  "headlines": {
+    "general": [
+      {
+        "headline": "Lithium Americas Stock Climbs Nearly 5% In Thursday Pre-Market: What's Going On? - Bank of Montreal  ( NYSE:BMO ) , General Motors  ( NYSE:GM ) ",
+        "summary": "Shares of Lithium Americas Corp ( NYSE:LAC ) climbed 4.6% in pre-market trading on Thursday, as company initiated a $250 million at-the-market equity program. The company's equity program will be managed by Goldman Sachs ( NYSE:GS ) , BMO Capital Markets ( TSE: BMO ) and RBC Capital Markets ( ...",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/markets/commodities/25/10/48120732/lithium-americas-stock-climbs-nearly-5-in-thursday-pre-market-whats-going-on",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Hadrian Capital Partners Inc. Provides Update on its Beneficial Ownership of Common Shares of Capstone Copper Corp.",
+        "summary": "VANCOUVER, British Columbia, Oct. 09, 2025 ( GLOBE NEWSWIRE ) -- Hadrian Capital Partners Inc. announced today that it and its affiliate Hadrian Capital Partners ( No. 1 ) Inc. ( collectively, \"Hadrian\" ) entered into a block trade agreement with Macquarie Capital ( Australia ) Limited and ...",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/pressreleases/25/10/g48120324/hadrian-capital-partners-inc-provides-update-on-its-beneficial-ownership-of-common-shares-of-capst",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Exodus Movement, Inc. September 2025 Treasury Update and Monthly Metrics - Exodus Movement  ( AMEX:EXOD ) ",
+        "summary": "OMAHA, Neb., Oct. 09, 2025 ( GLOBE NEWSWIRE ) -- Exodus Movement, Inc. ( NYSE:EXOD ) ( \"Exodus\" or \"the company\" ) , a leading self-custodial cryptocurrency platform, today announced an update to selected digital asset holdings of Exodus' corporate treasury, as well as updated user and exchange ...",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/pressreleases/25/10/g48120265/exodus-movement-inc-september-2025-treasury-update-and-monthly-metrics",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "This Oracle Analyst Begins Coverage On A Bearish Note; Here Are Top 5 Initiations For Thursday - Popular  ( NASDAQ:BPOP ) , Evercore  ( NYSE:EVR ) ",
+        "summary": "Top Wall Street analysts changed their outlook on these top names. For a complete view of all analyst rating changes, including upgrades, downgrades and initiations, please see our analyst ratings page.",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/analyst-stock-ratings/initiation/25/10/48120798/this-oracle-analyst-begins-coverage-on-a-bearish-note-here-are-top-5-initiations",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "This Tractor Supply Analyst Turns Bullish; Here Are Top 5 Upgrades For Thursday - Citizens Financial Group  ( NYSE:CFG ) , Harmony Gold Mining Co  ( NYSE:HMY ) ",
+        "summary": "Top Wall Street analysts changed their outlook on these top names. For a complete view of all analyst rating changes, including upgrades, downgrades and initiations, please see our analyst ratings page. HSBC analyst Rajesh Kumar upgraded Iqvia Holdings Inc ( NYSE:IQV ) from Hold to Buy and raised ...",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/analyst-stock-ratings/upgrades/25/10/48120722/this-tractor-supply-analyst-turns-bullish-here-are-top-5-upgrades-for-thursday",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Exodus Movement, Inc. September 2025 Treasury Update and Monthly Metrics",
+        "summary": "Operations continue to generate Bitcoin. Treasury grows to 2,123 BTC Operations continue to generate Bitcoin. Treasury grows to ...",
+        "source": "Alpha Vantage - GlobeNewswire",
+        "datetime": "Invalid Date",
+        "url": "https://www.globenewswire.com/news-release/2025/10/09/3164028/0/en/Exodus-Movement-Inc-September-2025-Treasury-Update-and-Monthly-Metrics.html",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Talen Energy Announces Launch of Proposed Senior Notes Offerings - Talen Energy  ( NASDAQ:TLN ) ",
+        "summary": "HOUSTON, Oct. 09, 2025 ( GLOBE NEWSWIRE ) -- Talen Energy Corporation ( \"TEC,\" \"we\" or \"our\" ) ( NASDAQ:TLN ) announced today that Talen Energy Supply, LLC ( \"TES\" or the \"Company\" ) , a direct wholly owned subsidiary of TEC, is proposing to offer and sell, subject to market and other ...",
+        "source": "Alpha Vantage - Benzinga",
+        "datetime": "Invalid Date",
+        "url": "https://www.benzinga.com/pressreleases/25/10/g48120413/talen-energy-announces-launch-of-proposed-senior-notes-offerings",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "ARKO Corp. Appoints Jordan Mann as Interim Chief Financial Officer",
+        "summary": "RICHMOND, Va., Oct. 09, 2025 ( GLOBE NEWSWIRE ) -- ARKO Corp. ( Nasdaq: ARKO ) ( \"ARKO\" or the \"Company\" ) , a Fortune 500 company and one of the largest convenience store operators in the United States, today announced that Jordan Mann, the Company's Senior Vice President of Corporate Strategy, ...",
+        "source": "Alpha Vantage - GlobeNewswire",
+        "datetime": "Invalid Date",
+        "url": "https://www.globenewswire.com/news-release/2025/10/09/3164020/0/en/ARKO-Corp-Appoints-Jordan-Mann-as-Interim-Chief-Financial-Officer.html",
+        "sentiment": "Somewhat-Bullish"
+      }
+    ],
+    "us": [],
+    "asian": [],
+    "european": [],
+    "geopolitical": [],
+    "currencies": [],
+    "commodities": [],
+    "earnings": [],
+    "research": [],
+    "premarketMovers": [],
+    "webSearchResults": {}
+  },
+  "timing": {
+    "lastCloseTimestamp": 1759939200,
+    "lastCloseString": "10/8/2025, 12:00:00 PM",
+    "currentTime": "10/9/2025, 8:29:20 AM"
+  },
+  "totalHeadlines": 8,
+  "webSearchCount": 0,
+  "apiHeadlines": 8,
+  "categoryBreakdown": {
+    "general": 8,
+    "us": 0,
+    "asian": 0,
+    "european": 0,
+    "geopolitical": 0,
+    "currencies": 0,
+    "commodities": 0,
+    "earnings": 0,
+    "research": 0,
+    "premarketMovers": 0
+  },
+  "webSearchBreakdown": {},
+  "metadata": {
+    "generatedAt": "2025-10-09T12:30:27.575Z",
+    "reportType": "enhanced-premarket-brief-with-web-search",
+    "aiModel": "claude-sonnet-4",
+    "classification": "enhanced-institutional-grade",
+    "features": [
+      "traditional-apis",
+      "web-search-intelligence",
+      "cross-source-validation"
+    ]
+  }
+}
