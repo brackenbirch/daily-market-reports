@@ -1,0 +1,112 @@
+{
+  "headlines": {
+    "general": [
+      {
+        "headline": "1 Vanguard ETF to Invest In That Can Turn $500 Monthly Into $800,000",
+        "summary": "This ETF has shown market-beating potential since its inception.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/10/10/1-vanguard-etf-to-invest-in-that-can-turn-500/",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Should SPDR S&P 600 Small Cap Growth ETF  ( SLYG )  Be on Your Investing Radar?",
+        "summary": "Style Box ETF report for ...",
+        "source": "Alpha Vantage - Zacks Commentary",
+        "datetime": "Invalid Date",
+        "url": "https://www.zacks.com/stock/news/2765973/should-spdr-sp-600-small-cap-growth-etf-slyg-be-on-your-investing-radar",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Is iShares MSCI USA Equal Weighted ETF  ( EUSA )  a Strong ETF Right Now?",
+        "summary": "Smart Beta ETF report for ...",
+        "source": "Alpha Vantage - Zacks Commentary",
+        "datetime": "Invalid Date",
+        "url": "https://www.zacks.com/stock/news/2765976/is-ishares-msci-usa-equal-weighted-etf-eusa-a-strong-etf-right-now",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Should Vanguard High Dividend Yield ETF  ( VYM )  Be on Your Investing Radar?",
+        "summary": "Style Box ETF report for ...",
+        "source": "Alpha Vantage - Zacks Commentary",
+        "datetime": "Invalid Date",
+        "url": "https://www.zacks.com/stock/news/2765975/should-vanguard-high-dividend-yield-etf-vym-be-on-your-investing-radar",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Should Vanguard S&P Small-Cap 600 Growth ETF  ( VIOG )  Be on Your Investing Radar?",
+        "summary": "Style Box ETF report for ...",
+        "source": "Alpha Vantage - Zacks Commentary",
+        "datetime": "Invalid Date",
+        "url": "https://www.zacks.com/stock/news/2765974/should-vanguard-sp-small-cap-600-growth-etf-viog-be-on-your-investing-radar",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Should iShares Nasdaq Top 30 Stocks ETF  ( QTOP )  Be on Your Investing Radar?",
+        "summary": "Style Box ETF report for ...",
+        "source": "Alpha Vantage - Zacks Commentary",
+        "datetime": "Invalid Date",
+        "url": "https://www.zacks.com/stock/news/2765972/should-ishares-nasdaq-top-30-stocks-etf-qtop-be-on-your-investing-radar",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Is ProShares Russell 2000 Dividend Growers ETF  ( SMDV )  a Strong ETF Right Now?",
+        "summary": "Smart Beta ETF report for ...",
+        "source": "Alpha Vantage - Zacks Commentary",
+        "datetime": "Invalid Date",
+        "url": "https://www.zacks.com/stock/news/2765980/is-proshares-russell-2000-dividend-growers-etf-smdv-a-strong-etf-right-now",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Is First Trust Cloud Computing ETF  ( SKYY )  a Strong ETF Right Now?",
+        "summary": "Smart Beta ETF report for ...",
+        "source": "Alpha Vantage - Zacks Commentary",
+        "datetime": "Invalid Date",
+        "url": "https://www.zacks.com/stock/news/2765979/is-first-trust-cloud-computing-etf-skyy-a-strong-etf-right-now",
+        "sentiment": "Neutral"
+      }
+    ],
+    "us": [],
+    "asian": [],
+    "european": [],
+    "geopolitical": [],
+    "currencies": [],
+    "commodities": [],
+    "earnings": [],
+    "research": [],
+    "premarketMovers": [],
+    "webSearchResults": {}
+  },
+  "timing": {
+    "lastCloseTimestamp": 1760025600,
+    "lastCloseString": "10/9/2025, 12:00:00 PM",
+    "currentTime": "10/10/2025, 8:30:13 AM"
+  },
+  "totalHeadlines": 8,
+  "webSearchCount": 0,
+  "apiHeadlines": 8,
+  "categoryBreakdown": {
+    "general": 8,
+    "us": 0,
+    "asian": 0,
+    "european": 0,
+    "geopolitical": 0,
+    "currencies": 0,
+    "commodities": 0,
+    "earnings": 0,
+    "research": 0,
+    "premarketMovers": 0
+  },
+  "webSearchBreakdown": {},
+  "metadata": {
+    "generatedAt": "2025-10-10T12:31:46.994Z",
+    "reportType": "enhanced-premarket-brief-with-web-search",
+    "aiModel": "claude-sonnet-4",
+    "classification": "enhanced-institutional-grade",
+    "features": [
+      "traditional-apis",
+      "web-search-intelligence",
+      "cross-source-validation"
+    ]
+  }
+}
