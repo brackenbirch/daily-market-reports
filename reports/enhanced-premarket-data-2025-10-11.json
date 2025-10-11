@@ -1,0 +1,112 @@
+{
+  "headlines": {
+    "general": [
+      {
+        "headline": "1 Growth-Focused Vanguard ETF That Can Turn $36,000 Into Over $1 Million",
+        "summary": "The Vanguard Growth Index Fund ETF has outperformed the S&P 500 over the past decade by a wide margin.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/10/11/1-growth-focused-vanguard-etf-that-can-turn-36000/",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Did Fed Chair Jerome Powell Drive a Dagger Through the Stock Market's Heart With These 6 Words? Historical Data Backs Up His Claim.",
+        "summary": "Jerome Powell's observation regarding equity valuations hits the nail on the head.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/10/11/fed-chair-jerome-powell-6-word-dagger-stock-market/",
+        "sentiment": "Neutral"
+      },
+      {
+        "headline": "The Smartest Dividend Stocks to Buy With $10,000 Right Now",
+        "summary": "An eclectic mix of stocks that allows for monthly income, solid dividend yield, and capital appreciation.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/10/11/the-smartest-dividend-stocks-to-buy-with-10000-rig/",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "The Best Dividend ETF to Buy as Washington Stalls",
+        "summary": "Shutdowns happen, but markets hold up. This ETF will help you ride it out.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/10/11/the-best-dividend-etf-to-buy-as-washington-stalls/",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "3 Top Dividend Stocks to Buy in October",
+        "summary": "Now may be the right time to scale back your exposure to growth stocks and increase your exposure to income-producing value names.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/10/11/3-top-dividend-stocks-to-buy-in-october/",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Does Billionaire Ken Griffin Know Something Wall Street Doesn't? The Citadel Chief Sold More than 80% of His Broadcom Stock and Is Piling Into Another Artificial Intelligence  ( AI )  Stock-Split Stock Instead",
+        "summary": "Ken Griffin runs one of the biggest hedge funds in the world.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/10/11/billionaire-ken-griffin-citadel-broadcom-stock-ai/",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Has Rocket Lab's Stock Peaked?",
+        "summary": "The aerospace company now trades at close to 60 times its trailing revenue.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/10/11/has-rocket-labs-stock-peaked/",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "The Best Cryptocurrency to Buy With $500 Right Now",
+        "summary": "This under-the-radar cryptocurrency could be the next Ethereum.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/10/11/the-best-cryptocurrency-to-buy-with-500-right-now/",
+        "sentiment": "Somewhat-Bullish"
+      }
+    ],
+    "us": [],
+    "asian": [],
+    "european": [],
+    "geopolitical": [],
+    "currencies": [],
+    "commodities": [],
+    "earnings": [],
+    "research": [],
+    "premarketMovers": [],
+    "webSearchResults": {}
+  },
+  "timing": {
+    "lastCloseTimestamp": 1760112000,
+    "lastCloseString": "10/10/2025, 12:00:00 PM",
+    "currentTime": "10/11/2025, 8:25:59 AM"
+  },
+  "totalHeadlines": 8,
+  "webSearchCount": 0,
+  "apiHeadlines": 8,
+  "categoryBreakdown": {
+    "general": 8,
+    "us": 0,
+    "asian": 0,
+    "european": 0,
+    "geopolitical": 0,
+    "currencies": 0,
+    "commodities": 0,
+    "earnings": 0,
+    "research": 0,
+    "premarketMovers": 0
+  },
+  "webSearchBreakdown": {},
+  "metadata": {
+    "generatedAt": "2025-10-11T12:27:29.781Z",
+    "reportType": "enhanced-premarket-brief-with-web-search",
+    "aiModel": "claude-sonnet-4",
+    "classification": "enhanced-institutional-grade",
+    "features": [
+      "traditional-apis",
+      "web-search-intelligence",
+      "cross-source-validation"
+    ]
+  }
+}
