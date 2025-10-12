@@ -1,0 +1,112 @@
+{
+  "headlines": {
+    "general": [
+      {
+        "headline": "Does Warren Buffett Know Something Wall Street Doesn't? The Billionaire Legend Dumps $122 Billion of This Key Holding While Buying $4 Billion of These Out-of-Favor Stocks.",
+        "summary": "Buffett loves these companies with wide moats but beaten-down stock prices.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/10/12/does-warren-buffett-know-something-wall-street-doe/",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Want $1 Million in Retirement? 2 Simple Index Funds to Buy and Hold for Decades.",
+        "summary": "Achieving $1 million by retirement is possible with these two stellar Vanguard index funds.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/10/12/want-1-million-in-retirement-2-simple-index-funds/",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "Billionaires Warren Buffett, Israel Englander, and Steven Cohen Are Piling Into Wall Street's Most Popular Reverse Stock Split of 2025",
+        "summary": "Reverse stock splits allow companies to artificially increase their stock price and lower their outstanding share count without changing the market cap.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/10/12/billionaires-warren-buffett-israel-englander-and-s/",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "3 Dividend Champion Stocks I'm Watching in 2025",
+        "summary": "These three reliable dividend payers are struggling mightily right now, which makes them interesting long-term buys.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/10/12/3-dividend-champion-stocks-im-watching-in-2025/",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "1 Growth Stock Down 62% to Buy Right Now",
+        "summary": "After the pullback, an investment case has emerged for Cava Group stock.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/10/12/1-growth-stock-down-62-to-buy-right-now/",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "United Parcel Service, Inc.: Bull vs. Bear",
+        "summary": "The company is at risk of cutting its dividend.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/10/12/united-parcel-service-inc-stock-bull-vs-bear/",
+        "sentiment": "Neutral"
+      },
+      {
+        "headline": "Here's How Much You Should Aim to Invest Every Year if You Want to Retire Comfortably",
+        "summary": "Investing in top growth stocks can be a great way to increase the value of your portfolio at a high rate.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/10/12/heres-how-much-you-should-aim-to-invest-every-year/",
+        "sentiment": "Somewhat-Bullish"
+      },
+      {
+        "headline": "If I Could Only Buy and Hold a Single Stock, This Would Be It",
+        "summary": "This contrarian pick has richly rewarded shareholders over the years.",
+        "source": "Alpha Vantage - Motley Fool",
+        "datetime": "Invalid Date",
+        "url": "https://www.fool.com/investing/2025/10/12/if-i-could-only-buy-and-hold-a-single-stock-this-w/",
+        "sentiment": "Somewhat-Bullish"
+      }
+    ],
+    "us": [],
+    "asian": [],
+    "european": [],
+    "geopolitical": [],
+    "currencies": [],
+    "commodities": [],
+    "earnings": [],
+    "research": [],
+    "premarketMovers": [],
+    "webSearchResults": {}
+  },
+  "timing": {
+    "lastCloseTimestamp": 1760112000,
+    "lastCloseString": "10/10/2025, 12:00:00 PM",
+    "currentTime": "10/12/2025, 8:26:09 AM"
+  },
+  "totalHeadlines": 8,
+  "webSearchCount": 0,
+  "apiHeadlines": 8,
+  "categoryBreakdown": {
+    "general": 8,
+    "us": 0,
+    "asian": 0,
+    "european": 0,
+    "geopolitical": 0,
+    "currencies": 0,
+    "commodities": 0,
+    "earnings": 0,
+    "research": 0,
+    "premarketMovers": 0
+  },
+  "webSearchBreakdown": {},
+  "metadata": {
+    "generatedAt": "2025-10-12T12:27:45.643Z",
+    "reportType": "enhanced-premarket-brief-with-web-search",
+    "aiModel": "claude-sonnet-4",
+    "classification": "enhanced-institutional-grade",
+    "features": [
+      "traditional-apis",
+      "web-search-intelligence",
+      "cross-source-validation"
+    ]
+  }
+}
